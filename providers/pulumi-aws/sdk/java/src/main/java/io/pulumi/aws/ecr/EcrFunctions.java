@@ -25,18 +25,18 @@ public final class EcrFunctions {
      * 
      */
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {
-        return getAuthorizationToken(io.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAuthorizationToken(GetAuthorizationTokenArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(io.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs args) {
-        return getAuthorizationToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
+        return getAuthorizationToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(io.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetCredentialsResult> getCredentials(io.pulumi.aws.ecr.inputs.GetCredentialsArgs args) {
-        return getCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCredentialsResult> getCredentials(GetCredentialsArgs args) {
+        return getCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCredentialsResult> getCredentials(io.pulumi.aws.ecr.inputs.GetCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCredentialsResult> getCredentials(GetCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getCredentials:getCredentials", TypeShape.of(GetCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class EcrFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.ecr.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.ecr.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -57,10 +57,10 @@ public final class EcrFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.aws.ecr.inputs.GetRepositoryArgs args) {
-        return getRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+        return getRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.aws.ecr.inputs.GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

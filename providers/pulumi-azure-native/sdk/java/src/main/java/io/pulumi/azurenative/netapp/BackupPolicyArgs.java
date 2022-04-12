@@ -6,6 +6,7 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupPolicyName;
 
     public Output<String> getBackupPolicyName() {
-        return this.backupPolicyName == null ? Output.empty() : this.backupPolicyName;
+        return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> dailyBackupsToKeep;
 
     public Output<Integer> getDailyBackupsToKeep() {
-        return this.dailyBackupsToKeep == null ? Output.empty() : this.dailyBackupsToKeep;
+        return this.dailyBackupsToKeep == null ? Codegen.empty() : this.dailyBackupsToKeep;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> monthlyBackupsToKeep;
 
     public Output<Integer> getMonthlyBackupsToKeep() {
-        return this.monthlyBackupsToKeep == null ? Output.empty() : this.monthlyBackupsToKeep;
+        return this.monthlyBackupsToKeep == null ? Codegen.empty() : this.monthlyBackupsToKeep;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
 
     public Output<List<VolumeBackupsArgs>> getVolumeBackups() {
-        return this.volumeBackups == null ? Output.empty() : this.volumeBackups;
+        return this.volumeBackups == null ? Codegen.empty() : this.volumeBackups;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> volumesAssigned;
 
     public Output<Integer> getVolumesAssigned() {
-        return this.volumesAssigned == null ? Output.empty() : this.volumesAssigned;
+        return this.volumesAssigned == null ? Codegen.empty() : this.volumesAssigned;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> weeklyBackupsToKeep;
 
     public Output<Integer> getWeeklyBackupsToKeep() {
-        return this.weeklyBackupsToKeep == null ? Output.empty() : this.weeklyBackupsToKeep;
+        return this.weeklyBackupsToKeep == null ? Codegen.empty() : this.weeklyBackupsToKeep;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> yearlyBackupsToKeep;
 
     public Output<Integer> getYearlyBackupsToKeep() {
-        return this.yearlyBackupsToKeep == null ? Output.empty() : this.yearlyBackupsToKeep;
+        return this.yearlyBackupsToKeep == null ? Codegen.empty() : this.yearlyBackupsToKeep;
     }
 
     public BackupPolicyArgs(
@@ -179,18 +180,18 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.accountName = Output.empty();
-        this.backupPolicyName = Output.empty();
-        this.dailyBackupsToKeep = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.monthlyBackupsToKeep = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.volumeBackups = Output.empty();
-        this.volumesAssigned = Output.empty();
-        this.weeklyBackupsToKeep = Output.empty();
-        this.yearlyBackupsToKeep = Output.empty();
+        this.accountName = Codegen.empty();
+        this.backupPolicyName = Codegen.empty();
+        this.dailyBackupsToKeep = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.monthlyBackupsToKeep = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.volumeBackups = Codegen.empty();
+        this.volumesAssigned = Codegen.empty();
+        this.weeklyBackupsToKeep = Codegen.empty();
+        this.yearlyBackupsToKeep = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Output.ofNullable(backupPolicyName);
+            this.backupPolicyName = Codegen.ofNullable(backupPolicyName);
             return this;
         }
         public Builder dailyBackupsToKeep(@Nullable Output<Integer> dailyBackupsToKeep) {
@@ -256,7 +257,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
-            this.dailyBackupsToKeep = Output.ofNullable(dailyBackupsToKeep);
+            this.dailyBackupsToKeep = Codegen.ofNullable(dailyBackupsToKeep);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -264,7 +265,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -272,7 +273,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder monthlyBackupsToKeep(@Nullable Output<Integer> monthlyBackupsToKeep) {
@@ -280,7 +281,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
-            this.monthlyBackupsToKeep = Output.ofNullable(monthlyBackupsToKeep);
+            this.monthlyBackupsToKeep = Codegen.ofNullable(monthlyBackupsToKeep);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -296,7 +297,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder volumeBackups(@Nullable Output<List<VolumeBackupsArgs>> volumeBackups) {
@@ -304,7 +305,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeBackups(@Nullable List<VolumeBackupsArgs> volumeBackups) {
-            this.volumeBackups = Output.ofNullable(volumeBackups);
+            this.volumeBackups = Codegen.ofNullable(volumeBackups);
             return this;
         }
         public Builder volumeBackups(VolumeBackupsArgs... volumeBackups) {
@@ -315,7 +316,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
-            this.volumesAssigned = Output.ofNullable(volumesAssigned);
+            this.volumesAssigned = Codegen.ofNullable(volumesAssigned);
             return this;
         }
         public Builder weeklyBackupsToKeep(@Nullable Output<Integer> weeklyBackupsToKeep) {
@@ -323,7 +324,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
-            this.weeklyBackupsToKeep = Output.ofNullable(weeklyBackupsToKeep);
+            this.weeklyBackupsToKeep = Codegen.ofNullable(weeklyBackupsToKeep);
             return this;
         }
         public Builder yearlyBackupsToKeep(@Nullable Output<Integer> yearlyBackupsToKeep) {
@@ -331,7 +332,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
-            this.yearlyBackupsToKeep = Output.ofNullable(yearlyBackupsToKeep);
+            this.yearlyBackupsToKeep = Codegen.ofNullable(yearlyBackupsToKeep);
             return this;
         }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(accountName, backupPolicyName, dailyBackupsToKeep, enabled, location, monthlyBackupsToKeep, resourceGroupName, tags, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);

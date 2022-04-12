@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateDiskArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
       private final @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
     public Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public RegionPerInstanceConfigPreservedStateArgs(
@@ -48,8 +49,8 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
     }
 
     private RegionPerInstanceConfigPreservedStateArgs() {
-        this.disks = Output.empty();
-        this.metadata = Output.empty();
+        this.disks = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
             return this;
         }
         public Builder disks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(RegionPerInstanceConfigPreservedStateDiskArgs... disks) {
@@ -90,7 +91,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public RegionPerInstanceConfigPreservedStateArgs build() {
             return new RegionPerInstanceConfigPreservedStateArgs(disks, metadata);

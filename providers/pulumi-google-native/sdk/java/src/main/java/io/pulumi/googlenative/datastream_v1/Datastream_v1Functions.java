@@ -22,40 +22,40 @@ public final class Datastream_v1Functions {
      * Use this method to get details about a connection profile.
      * 
      */
-    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(io.pulumi.googlenative.datastream_v1.inputs.GetConnectionProfileArgs args) {
-        return getConnectionProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args) {
+        return getConnectionProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(io.pulumi.googlenative.datastream_v1.inputs.GetConnectionProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a private connectivity configuration.
      * 
      */
-    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(io.pulumi.googlenative.datastream_v1.inputs.GetPrivateConnectionArgs args) {
-        return getPrivateConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(GetPrivateConnectionArgs args) {
+        return getPrivateConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(io.pulumi.googlenative.datastream_v1.inputs.GetPrivateConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnection(GetPrivateConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a route.
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.googlenative.datastream_v1.inputs.GetRouteArgs args) {
-        return getRoute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+        return getRoute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.googlenative.datastream_v1.inputs.GetRouteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a stream.
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.googlenative.datastream_v1.inputs.GetStreamArgs args) {
-        return getStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+        return getStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.googlenative.datastream_v1.inputs.GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

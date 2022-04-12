@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
       private final @Nullable Output<Integer> markdownSource;
 
     public Output<Integer> getMarkdownSource() {
-        return this.markdownSource == null ? Output.empty() : this.markdownSource;
+        return this.markdownSource == null ? Codegen.empty() : this.markdownSource;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
       private final @Nullable Output<String> markdownUri;
 
     public Output<String> getMarkdownUri() {
-        return this.markdownUri == null ? Output.empty() : this.markdownUri;
+        return this.markdownUri == null ? Codegen.empty() : this.markdownUri;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public MarkdownPartMetadataSettingsSettingsArgs(
@@ -88,11 +89,11 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
     }
 
     private MarkdownPartMetadataSettingsSettingsArgs() {
-        this.content = Output.empty();
-        this.markdownSource = Output.empty();
-        this.markdownUri = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.content = Codegen.empty();
+        this.markdownSource = Codegen.empty();
+        this.markdownUri = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder markdownSource(@Nullable Output<Integer> markdownSource) {
@@ -136,7 +137,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder markdownSource(@Nullable Integer markdownSource) {
-            this.markdownSource = Output.ofNullable(markdownSource);
+            this.markdownSource = Codegen.ofNullable(markdownSource);
             return this;
         }
         public Builder markdownUri(@Nullable Output<String> markdownUri) {
@@ -144,7 +145,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder markdownUri(@Nullable String markdownUri) {
-            this.markdownUri = Output.ofNullable(markdownUri);
+            this.markdownUri = Codegen.ofNullable(markdownUri);
             return this;
         }
         public Builder subtitle(@Nullable Output<String> subtitle) {
@@ -152,7 +153,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -160,7 +161,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public MarkdownPartMetadataSettingsSettingsArgs build() {
             return new MarkdownPartMetadataSettingsSettingsArgs(content, markdownSource, markdownUri, subtitle, title);

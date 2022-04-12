@@ -29,10 +29,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.netapp.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.netapp.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.azurenative.netapp.inputs.GetBackupArgs args) {
-        return getBackup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
+        return getBackup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.azurenative.netapp.inputs.GetBackupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(io.pulumi.azurenative.netapp.inputs.GetBackupPolicyArgs args) {
-        return getBackupPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args) {
+        return getBackupPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(io.pulumi.azurenative.netapp.inputs.GetBackupPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(io.pulumi.azurenative.netapp.inputs.GetPoolArgs args) {
-        return getPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
+        return getPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPoolResult> getPool(io.pulumi.azurenative.netapp.inputs.GetPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.azurenative.netapp.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.azurenative.netapp.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(io.pulumi.azurenative.netapp.inputs.GetSnapshotPolicyArgs args) {
-        return getSnapshotPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args) {
+        return getSnapshotPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(io.pulumi.azurenative.netapp.inputs.GetSnapshotPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotPolicyResult> getSnapshotPolicy(GetSnapshotPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getSnapshotPolicy", TypeShape.of(GetSnapshotPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class NetappFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.azurenative.netapp.inputs.GetVolumeArgs args) {
-        return getVolume(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+        return getVolume(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.azurenative.netapp.inputs.GetVolumeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -19,10 +19,10 @@ public final class RamFunctions {
      * ## Search by filters
      * 
      */
-    public static CompletableFuture<GetResourceShareResult> getResourceShare(io.pulumi.aws.ram.inputs.GetResourceShareArgs args) {
-        return getResourceShare(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args) {
+        return getResourceShare(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceShareResult> getResourceShare(io.pulumi.aws.ram.inputs.GetResourceShareArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ram/getResourceShare:getResourceShare", TypeShape.of(GetResourceShareResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsArgs;
@@ -28,7 +29,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<H264CodecSettingsArgs> h264;
 
     public Output<H264CodecSettingsArgs> getH264() {
-        return this.h264 == null ? Output.empty() : this.h264;
+        return this.h264 == null ? Codegen.empty() : this.h264;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<H265CodecSettingsArgs> h265;
 
     public Output<H265CodecSettingsArgs> getH265() {
-        return this.h265 == null ? Output.empty() : this.h265;
+        return this.h265 == null ? Codegen.empty() : this.h265;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Vp9CodecSettingsArgs> vp9;
 
     public Output<Vp9CodecSettingsArgs> getVp9() {
-        return this.vp9 == null ? Output.empty() : this.vp9;
+        return this.vp9 == null ? Codegen.empty() : this.vp9;
     }
 
     public VideoStreamArgs(
@@ -63,9 +64,9 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoStreamArgs() {
-        this.h264 = Output.empty();
-        this.h265 = Output.empty();
-        this.vp9 = Output.empty();
+        this.h264 = Codegen.empty();
+        this.h265 = Codegen.empty();
+        this.vp9 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder h264(@Nullable H264CodecSettingsArgs h264) {
-            this.h264 = Output.ofNullable(h264);
+            this.h264 = Codegen.ofNullable(h264);
             return this;
         }
         public Builder h265(@Nullable Output<H265CodecSettingsArgs> h265) {
@@ -105,7 +106,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder h265(@Nullable H265CodecSettingsArgs h265) {
-            this.h265 = Output.ofNullable(h265);
+            this.h265 = Codegen.ofNullable(h265);
             return this;
         }
         public Builder vp9(@Nullable Output<Vp9CodecSettingsArgs> vp9) {
@@ -113,7 +114,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vp9(@Nullable Vp9CodecSettingsArgs vp9) {
-            this.vp9 = Output.ofNullable(vp9);
+            this.vp9 = Codegen.ofNullable(vp9);
             return this;
         }        public VideoStreamArgs build() {
             return new VideoStreamArgs(h264, h265, vp9);

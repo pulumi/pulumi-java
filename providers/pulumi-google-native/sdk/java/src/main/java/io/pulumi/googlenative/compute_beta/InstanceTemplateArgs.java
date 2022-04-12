@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.InstancePropertiesArgs;
 import io.pulumi.googlenative.compute_beta.inputs.SourceInstanceParamsArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -53,14 +54,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<InstancePropertiesArgs> properties;
 
     public Output<InstancePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sourceInstance;
 
     public Output<String> getSourceInstance() {
-        return this.sourceInstance == null ? Output.empty() : this.sourceInstance;
+        return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
 
     public Output<SourceInstanceParamsArgs> getSourceInstanceParams() {
-        return this.sourceInstanceParams == null ? Output.empty() : this.sourceInstanceParams;
+        return this.sourceInstanceParams == null ? Codegen.empty() : this.sourceInstanceParams;
     }
 
     public InstanceTemplateArgs(
@@ -103,13 +104,13 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceTemplateArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.properties = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceInstance = Output.empty();
-        this.sourceInstanceParams = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceInstance = Codegen.empty();
+        this.sourceInstanceParams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -157,7 +158,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -165,7 +166,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder properties(@Nullable Output<InstancePropertiesArgs> properties) {
@@ -173,7 +174,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable InstancePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -181,7 +182,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
@@ -189,7 +190,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceInstance(@Nullable String sourceInstance) {
-            this.sourceInstance = Output.ofNullable(sourceInstance);
+            this.sourceInstance = Codegen.ofNullable(sourceInstance);
             return this;
         }
         public Builder sourceInstanceParams(@Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
@@ -197,7 +198,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceInstanceParams(@Nullable SourceInstanceParamsArgs sourceInstanceParams) {
-            this.sourceInstanceParams = Output.ofNullable(sourceInstanceParams);
+            this.sourceInstanceParams = Codegen.ofNullable(sourceInstanceParams);
             return this;
         }        public InstanceTemplateArgs build() {
             return new InstanceTemplateArgs(description, name, project, properties, requestId, sourceInstance, sourceInstanceParams);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.ResourceAttributesArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,List<String>>> extra;
 
     public Output<Map<String,List<String>>> getExtra() {
-        return this.extra == null ? Output.empty() : this.extra;
+        return this.extra == null ? Codegen.empty() : this.extra;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> group;
 
     public Output<List<String>> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Output.empty() : this.nonResourceAttributes;
+        return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
     public Output<ResourceAttributesArgs> getResourceAttributes() {
-        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
+        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public SubjectAccessReviewSpecArgs(
@@ -104,12 +105,12 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     }
 
     private SubjectAccessReviewSpecArgs() {
-        this.extra = Output.empty();
-        this.group = Output.empty();
-        this.nonResourceAttributes = Output.empty();
-        this.resourceAttributes = Output.empty();
-        this.uid = Output.empty();
-        this.user = Output.empty();
+        this.extra = Codegen.empty();
+        this.group = Codegen.empty();
+        this.nonResourceAttributes = Codegen.empty();
+        this.resourceAttributes = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Output.ofNullable(extra);
+            this.extra = Codegen.ofNullable(extra);
             return this;
         }
         public Builder group(@Nullable Output<List<String>> group) {
@@ -155,7 +156,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder group(@Nullable List<String> group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder group(String... group) {
@@ -166,7 +167,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Output.ofNullable(nonResourceAttributes);
+            this.nonResourceAttributes = Codegen.ofNullable(nonResourceAttributes);
             return this;
         }
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
@@ -174,7 +175,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Output.ofNullable(resourceAttributes);
+            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -182,7 +183,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -190,7 +191,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public SubjectAccessReviewSpecArgs build() {
             return new SubjectAccessReviewSpecArgs(extra, group, nonResourceAttributes, resourceAttributes, uid, user);

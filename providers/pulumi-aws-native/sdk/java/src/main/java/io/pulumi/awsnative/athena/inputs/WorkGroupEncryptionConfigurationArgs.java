@@ -6,6 +6,7 @@ package io.pulumi.awsnative.athena.inputs;
 import io.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public WorkGroupEncryptionConfigurationArgs(
@@ -41,8 +42,8 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     }
 
     private WorkGroupEncryptionConfigurationArgs() {
-        this.encryptionOption = Output.empty();
-        this.kmsKey = Output.empty();
+        this.encryptionOption = Codegen.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public WorkGroupEncryptionConfigurationArgs build() {
             return new WorkGroupEncryptionConfigurationArgs(encryptionOption, kmsKey);

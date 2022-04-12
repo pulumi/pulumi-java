@@ -16,10 +16,10 @@ public final class SyntheticsFunctions {
      * Resource Type definition for AWS::Synthetics::Canary
      * 
      */
-    public static CompletableFuture<GetCanaryResult> getCanary(io.pulumi.awsnative.synthetics.inputs.GetCanaryArgs args) {
-        return getCanary(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCanaryResult> getCanary(GetCanaryArgs args) {
+        return getCanary(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCanaryResult> getCanary(io.pulumi.awsnative.synthetics.inputs.GetCanaryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCanaryResult> getCanary(GetCanaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:synthetics:getCanary", TypeShape.of(GetCanaryResult.class), args, Utilities.withVersion(options));
     }
 }

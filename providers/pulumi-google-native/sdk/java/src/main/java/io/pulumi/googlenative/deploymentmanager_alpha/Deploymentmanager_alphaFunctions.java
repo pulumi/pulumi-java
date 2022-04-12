@@ -22,40 +22,40 @@ public final class Deploymentmanager_alphaFunctions {
      * Gets information about a specific composite type.
      * 
      */
-    public static CompletableFuture<GetCompositeTypeResult> getCompositeType(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetCompositeTypeArgs args) {
-        return getCompositeType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCompositeTypeResult> getCompositeType(GetCompositeTypeArgs args) {
+        return getCompositeType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCompositeTypeResult> getCompositeType(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetCompositeTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompositeTypeResult> getCompositeType(GetCompositeTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/alpha:getCompositeType", TypeShape.of(GetCompositeTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a specific deployment.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetDeploymentArgs args) {
-        return getDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+        return getDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/alpha:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetDeploymentIamPolicyResult> getDeploymentIamPolicy(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetDeploymentIamPolicyArgs args) {
-        return getDeploymentIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentIamPolicyResult> getDeploymentIamPolicy(GetDeploymentIamPolicyArgs args) {
+        return getDeploymentIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentIamPolicyResult> getDeploymentIamPolicy(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetDeploymentIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentIamPolicyResult> getDeploymentIamPolicy(GetDeploymentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/alpha:getDeploymentIamPolicy", TypeShape.of(GetDeploymentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a specific type provider.
      * 
      */
-    public static CompletableFuture<GetTypeProviderResult> getTypeProvider(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetTypeProviderArgs args) {
-        return getTypeProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTypeProviderResult> getTypeProvider(GetTypeProviderArgs args) {
+        return getTypeProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTypeProviderResult> getTypeProvider(io.pulumi.googlenative.deploymentmanager_alpha.inputs.GetTypeProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTypeProviderResult> getTypeProvider(GetTypeProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/alpha:getTypeProvider", TypeShape.of(GetTypeProviderResult.class), args, Utilities.withVersion(options));
     }
 }

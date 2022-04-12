@@ -23,10 +23,10 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwin(io.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinArgs args) {
-        return getDigitalTwin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwin(GetDigitalTwinArgs args) {
+        return getDigitalTwin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwin(io.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwin(GetDigitalTwinArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwin", TypeShape.of(GetDigitalTwinResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpoint(io.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinsEndpointArgs args) {
-        return getDigitalTwinsEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpoint(GetDigitalTwinsEndpointArgs args) {
+        return getDigitalTwinsEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpoint(io.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinsEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpoint(GetDigitalTwinsEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwinsEndpoint", TypeShape.of(GetDigitalTwinsEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.digitaltwins.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.digitaltwins.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class DigitaltwinsFunctions {
      * API Version: 2021-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnection(io.pulumi.azurenative.digitaltwins.inputs.GetTimeSeriesDatabaseConnectionArgs args) {
-        return getTimeSeriesDatabaseConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnection(GetTimeSeriesDatabaseConnectionArgs args) {
+        return getTimeSeriesDatabaseConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnection(io.pulumi.azurenative.digitaltwins.inputs.GetTimeSeriesDatabaseConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnection(GetTimeSeriesDatabaseConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getTimeSeriesDatabaseConnection", TypeShape.of(GetTimeSeriesDatabaseConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

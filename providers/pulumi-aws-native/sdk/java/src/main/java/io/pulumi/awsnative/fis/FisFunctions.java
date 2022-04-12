@@ -16,10 +16,10 @@ public final class FisFunctions {
      * Resource schema for AWS::FIS::ExperimentTemplate
      * 
      */
-    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(io.pulumi.awsnative.fis.inputs.GetExperimentTemplateArgs args) {
-        return getExperimentTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args) {
+        return getExperimentTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(io.pulumi.awsnative.fis.inputs.GetExperimentTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExperimentTemplateResult> getExperimentTemplate(GetExperimentTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fis:getExperimentTemplate", TypeShape.of(GetExperimentTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

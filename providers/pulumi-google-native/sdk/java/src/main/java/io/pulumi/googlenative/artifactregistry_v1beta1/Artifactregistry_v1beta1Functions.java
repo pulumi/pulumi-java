@@ -20,30 +20,30 @@ public final class Artifactregistry_v1beta1Functions {
      * Gets a repository.
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetRepositoryArgs args) {
-        return getRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+        return getRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta1:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM policy for a given resource.
      * 
      */
-    public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetRepositoryIamPolicyArgs args) {
-        return getRepositoryIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(GetRepositoryIamPolicyArgs args) {
+        return getRepositoryIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetRepositoryIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryIamPolicyResult> getRepositoryIamPolicy(GetRepositoryIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta1:getRepositoryIamPolicy", TypeShape.of(GetRepositoryIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a tag.
      * 
      */
-    public static CompletableFuture<GetTagResult> getTag(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetTagArgs args) {
-        return getTag(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args) {
+        return getTag(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagResult> getTag(io.pulumi.googlenative.artifactregistry_v1beta1.inputs.GetTagArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta1:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }
 }

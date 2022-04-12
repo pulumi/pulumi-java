@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.MetadataFilterFilterMatchCriteria;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataFilterLabelMatchArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
     public Output<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
-        return this.filterLabels == null ? Output.empty() : this.filterLabels;
+        return this.filterLabels == null ? Codegen.empty() : this.filterLabels;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
     public Output<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {
-        return this.filterMatchCriteria == null ? Output.empty() : this.filterMatchCriteria;
+        return this.filterMatchCriteria == null ? Codegen.empty() : this.filterMatchCriteria;
     }
 
     public MetadataFilterArgs(
@@ -50,8 +51,8 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataFilterArgs() {
-        this.filterLabels = Output.empty();
-        this.filterMatchCriteria = Output.empty();
+        this.filterLabels = Codegen.empty();
+        this.filterMatchCriteria = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterLabels(@Nullable List<MetadataFilterLabelMatchArgs> filterLabels) {
-            this.filterLabels = Output.ofNullable(filterLabels);
+            this.filterLabels = Codegen.ofNullable(filterLabels);
             return this;
         }
         public Builder filterLabels(MetadataFilterLabelMatchArgs... filterLabels) {
@@ -92,7 +93,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterMatchCriteria(@Nullable MetadataFilterFilterMatchCriteria filterMatchCriteria) {
-            this.filterMatchCriteria = Output.ofNullable(filterMatchCriteria);
+            this.filterMatchCriteria = Codegen.ofNullable(filterMatchCriteria);
             return this;
         }        public MetadataFilterArgs build() {
             return new MetadataFilterArgs(filterLabels, filterMatchCriteria);

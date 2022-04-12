@@ -22,10 +22,10 @@ public final class ElasticbeanstalkFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.aws.elasticbeanstalk.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.aws.elasticbeanstalk.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,12 +35,12 @@ public final class ElasticbeanstalkFunctions {
      * 
      */
     public static CompletableFuture<GetHostedZoneResult> getHostedZone() {
-        return getHostedZone(io.pulumi.aws.elasticbeanstalk.inputs.GetHostedZoneArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getHostedZone(GetHostedZoneArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(io.pulumi.aws.elasticbeanstalk.inputs.GetHostedZoneArgs args) {
-        return getHostedZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args) {
+        return getHostedZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(io.pulumi.aws.elasticbeanstalk.inputs.GetHostedZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getHostedZone:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class ElasticbeanstalkFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(io.pulumi.aws.elasticbeanstalk.inputs.GetSolutionStackArgs args) {
-        return getSolutionStack(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args) {
+        return getSolutionStack(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(io.pulumi.aws.elasticbeanstalk.inputs.GetSolutionStackArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSolutionStackResult> getSolutionStack(GetSolutionStackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getSolutionStack:getSolutionStack", TypeShape.of(GetSolutionStackResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> columnNames;
 
     public Output<List<String>> getColumnNames() {
-        return this.columnNames == null ? Output.empty() : this.columnNames;
+        return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
     @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
     public Output<List<String>> getPrincipals() {
-        return this.principals == null ? Output.empty() : this.principals;
+        return this.principals == null ? Codegen.empty() : this.principals;
     }
 
     public DataSetColumnLevelPermissionRuleArgs(
@@ -37,8 +38,8 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
     }
 
     private DataSetColumnLevelPermissionRuleArgs() {
-        this.columnNames = Output.empty();
-        this.principals = Output.empty();
+        this.columnNames = Codegen.empty();
+        this.principals = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = Output.ofNullable(columnNames);
+            this.columnNames = Codegen.ofNullable(columnNames);
             return this;
         }
         public Builder columnNames(String... columnNames) {
@@ -79,7 +80,7 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Output.ofNullable(principals);
+            this.principals = Codegen.ofNullable(principals);
             return this;
         }
         public Builder principals(String... principals) {

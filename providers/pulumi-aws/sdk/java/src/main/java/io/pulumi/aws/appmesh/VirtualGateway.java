@@ -10,6 +10,7 @@ import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpec;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -195,7 +196,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualGateway(String name, VirtualGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appmesh/virtualGateway:VirtualGateway", name, args == null ? VirtualGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appmesh/virtualGateway:VirtualGateway", name, args == null ? VirtualGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualGateway(String name, Output<String> id, @Nullable VirtualGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

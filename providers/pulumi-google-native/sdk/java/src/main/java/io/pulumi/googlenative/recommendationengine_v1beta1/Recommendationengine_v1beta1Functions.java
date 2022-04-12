@@ -16,10 +16,10 @@ public final class Recommendationengine_v1beta1Functions {
      * Gets a specific catalog item.
      * 
      */
-    public static CompletableFuture<GetCatalogItemResult> getCatalogItem(io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GetCatalogItemArgs args) {
-        return getCatalogItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCatalogItemResult> getCatalogItem(GetCatalogItemArgs args) {
+        return getCatalogItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCatalogItemResult> getCatalogItem(io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GetCatalogItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCatalogItemResult> getCatalogItem(GetCatalogItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:recommendationengine/v1beta1:getCatalogItem", TypeShape.of(GetCatalogItemResult.class), args, Utilities.withVersion(options));
     }
 }

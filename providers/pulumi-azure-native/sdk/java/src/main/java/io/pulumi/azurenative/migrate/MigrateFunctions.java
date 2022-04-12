@@ -43,10 +43,10 @@ public final class MigrateFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetAssessmentResult> getAssessment(io.pulumi.azurenative.migrate.inputs.GetAssessmentArgs args) {
-        return getAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args) {
+        return getAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssessmentResult> getAssessment(io.pulumi.azurenative.migrate.inputs.GetAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -54,30 +54,30 @@ public final class MigrateFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.azurenative.migrate.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.azurenative.migrate.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetHyperVCollectorResult> getHyperVCollector(io.pulumi.azurenative.migrate.inputs.GetHyperVCollectorArgs args) {
-        return getHyperVCollector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHyperVCollectorResult> getHyperVCollector(GetHyperVCollectorArgs args) {
+        return getHyperVCollector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHyperVCollectorResult> getHyperVCollector(io.pulumi.azurenative.migrate.inputs.GetHyperVCollectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHyperVCollectorResult> getHyperVCollector(GetHyperVCollectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getHyperVCollector", TypeShape.of(GetHyperVCollectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetImportCollectorResult> getImportCollector(io.pulumi.azurenative.migrate.inputs.GetImportCollectorArgs args) {
-        return getImportCollector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImportCollectorResult> getImportCollector(GetImportCollectorArgs args) {
+        return getImportCollector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImportCollectorResult> getImportCollector(io.pulumi.azurenative.migrate.inputs.GetImportCollectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImportCollectorResult> getImportCollector(GetImportCollectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getImportCollector", TypeShape.of(GetImportCollectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,10 +85,10 @@ public final class MigrateFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetMigrateProjectResult> getMigrateProject(io.pulumi.azurenative.migrate.inputs.GetMigrateProjectArgs args) {
-        return getMigrateProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMigrateProjectResult> getMigrateProject(GetMigrateProjectArgs args) {
+        return getMigrateProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMigrateProjectResult> getMigrateProject(io.pulumi.azurenative.migrate.inputs.GetMigrateProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMigrateProjectResult> getMigrateProject(GetMigrateProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMigrateProject", TypeShape.of(GetMigrateProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class MigrateFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetMoveCollectionResult> getMoveCollection(io.pulumi.azurenative.migrate.inputs.GetMoveCollectionArgs args) {
-        return getMoveCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMoveCollectionResult> getMoveCollection(GetMoveCollectionArgs args) {
+        return getMoveCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMoveCollectionResult> getMoveCollection(io.pulumi.azurenative.migrate.inputs.GetMoveCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMoveCollectionResult> getMoveCollection(GetMoveCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveCollection", TypeShape.of(GetMoveCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class MigrateFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetMoveResourceResult> getMoveResource(io.pulumi.azurenative.migrate.inputs.GetMoveResourceArgs args) {
-        return getMoveResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMoveResourceResult> getMoveResource(GetMoveResourceArgs args) {
+        return getMoveResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMoveResourceResult> getMoveResource(io.pulumi.azurenative.migrate.inputs.GetMoveResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMoveResourceResult> getMoveResource(GetMoveResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveResource", TypeShape.of(GetMoveResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,10 +118,10 @@ public final class MigrateFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.migrate.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.migrate.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,10 +129,10 @@ public final class MigrateFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.azurenative.migrate.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.azurenative.migrate.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,20 +140,20 @@ public final class MigrateFunctions {
      * API Version: 2018-02-02.
      * 
      */
-    public static CompletableFuture<GetProjectKeysResult> getProjectKeys(io.pulumi.azurenative.migrate.inputs.GetProjectKeysArgs args) {
-        return getProjectKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectKeysResult> getProjectKeys(GetProjectKeysArgs args) {
+        return getProjectKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectKeysResult> getProjectKeys(io.pulumi.azurenative.migrate.inputs.GetProjectKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectKeysResult> getProjectKeys(GetProjectKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getProjectKeys", TypeShape.of(GetProjectKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetServerCollectorResult> getServerCollector(io.pulumi.azurenative.migrate.inputs.GetServerCollectorArgs args) {
-        return getServerCollector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerCollectorResult> getServerCollector(GetServerCollectorArgs args) {
+        return getServerCollector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerCollectorResult> getServerCollector(io.pulumi.azurenative.migrate.inputs.GetServerCollectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerCollectorResult> getServerCollector(GetServerCollectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getServerCollector", TypeShape.of(GetServerCollectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -161,10 +161,10 @@ public final class MigrateFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetSolutionResult> getSolution(io.pulumi.azurenative.migrate.inputs.GetSolutionArgs args) {
-        return getSolution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args) {
+        return getSolution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSolutionResult> getSolution(io.pulumi.azurenative.migrate.inputs.GetSolutionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,20 +172,20 @@ public final class MigrateFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetSolutionConfigResult> getSolutionConfig(io.pulumi.azurenative.migrate.inputs.GetSolutionConfigArgs args) {
-        return getSolutionConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSolutionConfigResult> getSolutionConfig(GetSolutionConfigArgs args) {
+        return getSolutionConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSolutionConfigResult> getSolutionConfig(io.pulumi.azurenative.migrate.inputs.GetSolutionConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSolutionConfigResult> getSolutionConfig(GetSolutionConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getSolutionConfig", TypeShape.of(GetSolutionConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetVMwareCollectorResult> getVMwareCollector(io.pulumi.azurenative.migrate.inputs.GetVMwareCollectorArgs args) {
-        return getVMwareCollector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVMwareCollectorResult> getVMwareCollector(GetVMwareCollectorArgs args) {
+        return getVMwareCollector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVMwareCollectorResult> getVMwareCollector(io.pulumi.azurenative.migrate.inputs.GetVMwareCollectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVMwareCollectorResult> getVMwareCollector(GetVMwareCollectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getVMwareCollector", TypeShape.of(GetVMwareCollectorResult.class), args, Utilities.withVersion(options));
     }
 }

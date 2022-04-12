@@ -5,6 +5,7 @@ package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CertificateOptionsGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> certificateTransparencyLoggingPreference;
 
     public Output<String> getCertificateTransparencyLoggingPreference() {
-        return this.certificateTransparencyLoggingPreference == null ? Output.empty() : this.certificateTransparencyLoggingPreference;
+        return this.certificateTransparencyLoggingPreference == null ? Codegen.empty() : this.certificateTransparencyLoggingPreference;
     }
 
     public CertificateOptionsGetArgs(@Nullable Output<String> certificateTransparencyLoggingPreference) {
@@ -30,7 +31,7 @@ public final class CertificateOptionsGetArgs extends io.pulumi.resources.Resourc
     }
 
     private CertificateOptionsGetArgs() {
-        this.certificateTransparencyLoggingPreference = Output.empty();
+        this.certificateTransparencyLoggingPreference = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CertificateOptionsGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
-            this.certificateTransparencyLoggingPreference = Output.ofNullable(certificateTransparencyLoggingPreference);
+            this.certificateTransparencyLoggingPreference = Codegen.ofNullable(certificateTransparencyLoggingPreference);
             return this;
         }        public CertificateOptionsGetArgs build() {
             return new CertificateOptionsGetArgs(certificateTransparencyLoggingPreference);

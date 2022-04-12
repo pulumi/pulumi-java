@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
       private final @Nullable Output<Boolean> allRegions;
 
     public Output<Boolean> getAllRegions() {
-        return this.allRegions == null ? Output.empty() : this.allRegions;
+        return this.allRegions == null ? Codegen.empty() : this.allRegions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     }
 
     private ConfigurationAggregatorOrganizationAggregationSourceArgs() {
-        this.allRegions = Output.empty();
-        this.regions = Output.empty();
-        this.roleArn = Output.empty();
+        this.allRegions = Codegen.empty();
+        this.regions = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             return this;
         }
         public Builder allRegions(@Nullable Boolean allRegions) {
-            this.allRegions = Output.ofNullable(allRegions);
+            this.allRegions = Codegen.ofNullable(allRegions);
             return this;
         }
         public Builder regions(@Nullable Output<List<String>> regions) {
@@ -101,7 +102,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {

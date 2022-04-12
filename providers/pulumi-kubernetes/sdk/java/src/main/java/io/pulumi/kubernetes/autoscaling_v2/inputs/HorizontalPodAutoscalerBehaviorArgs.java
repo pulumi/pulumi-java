@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.HPAScalingRulesArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
       private final @Nullable Output<HPAScalingRulesArgs> scaleDown;
 
     public Output<HPAScalingRulesArgs> getScaleDown() {
-        return this.scaleDown == null ? Output.empty() : this.scaleDown;
+        return this.scaleDown == null ? Codegen.empty() : this.scaleDown;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
       private final @Nullable Output<HPAScalingRulesArgs> scaleUp;
 
     public Output<HPAScalingRulesArgs> getScaleUp() {
-        return this.scaleUp == null ? Output.empty() : this.scaleUp;
+        return this.scaleUp == null ? Codegen.empty() : this.scaleUp;
     }
 
     public HorizontalPodAutoscalerBehaviorArgs(
@@ -51,8 +52,8 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
     }
 
     private HorizontalPodAutoscalerBehaviorArgs() {
-        this.scaleDown = Output.empty();
-        this.scaleUp = Output.empty();
+        this.scaleDown = Codegen.empty();
+        this.scaleUp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
             return this;
         }
         public Builder scaleDown(@Nullable HPAScalingRulesArgs scaleDown) {
-            this.scaleDown = Output.ofNullable(scaleDown);
+            this.scaleDown = Codegen.ofNullable(scaleDown);
             return this;
         }
         public Builder scaleUp(@Nullable Output<HPAScalingRulesArgs> scaleUp) {
@@ -90,7 +91,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
             return this;
         }
         public Builder scaleUp(@Nullable HPAScalingRulesArgs scaleUp) {
-            this.scaleUp = Output.ofNullable(scaleUp);
+            this.scaleUp = Codegen.ofNullable(scaleUp);
             return this;
         }        public HorizontalPodAutoscalerBehaviorArgs build() {
             return new HorizontalPodAutoscalerBehaviorArgs(scaleDown, scaleUp);

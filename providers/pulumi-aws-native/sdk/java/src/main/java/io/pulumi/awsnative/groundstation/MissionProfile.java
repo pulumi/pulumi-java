@@ -10,6 +10,7 @@ import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -132,7 +133,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MissionProfile(String name, MissionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:groundstation:MissionProfile", name, args == null ? MissionProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:groundstation:MissionProfile", name, args == null ? MissionProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MissionProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

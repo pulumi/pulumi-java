@@ -68,10 +68,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(io.pulumi.azurenative.containerregistry.inputs.GetAgentPoolArgs args) {
-        return getAgentPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args) {
+        return getAgentPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAgentPoolResult> getAgentPool(io.pulumi.azurenative.containerregistry.inputs.GetAgentPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAgentPoolResult> getAgentPool(GetAgentPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -79,10 +79,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(io.pulumi.azurenative.containerregistry.inputs.GetBuildLogLinkArgs args) {
-        return getBuildLogLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args) {
+        return getBuildLogLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(io.pulumi.azurenative.containerregistry.inputs.GetBuildLogLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildLogLinkResult> getBuildLogLink(GetBuildLogLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getBuildLogLink", TypeShape.of(GetBuildLogLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(io.pulumi.azurenative.containerregistry.inputs.GetConnectedRegistryArgs args) {
-        return getConnectedRegistry(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args) {
+        return getConnectedRegistry(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(io.pulumi.azurenative.containerregistry.inputs.GetConnectedRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectedRegistryResult> getConnectedRegistry(GetConnectedRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getConnectedRegistry", TypeShape.of(GetConnectedRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,10 +101,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(io.pulumi.azurenative.containerregistry.inputs.GetExportPipelineArgs args) {
-        return getExportPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args) {
+        return getExportPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(io.pulumi.azurenative.containerregistry.inputs.GetExportPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExportPipelineResult> getExportPipeline(GetExportPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getExportPipeline", TypeShape.of(GetExportPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -112,10 +112,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(io.pulumi.azurenative.containerregistry.inputs.GetImportPipelineArgs args) {
-        return getImportPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args) {
+        return getImportPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(io.pulumi.azurenative.containerregistry.inputs.GetImportPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImportPipelineResult> getImportPipeline(GetImportPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getImportPipeline", TypeShape.of(GetImportPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -123,10 +123,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(io.pulumi.azurenative.containerregistry.inputs.GetPipelineRunArgs args) {
-        return getPipelineRun(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args) {
+        return getPipelineRun(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(io.pulumi.azurenative.containerregistry.inputs.GetPipelineRunArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineRunResult> getPipelineRun(GetPipelineRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getPipelineRun", TypeShape.of(GetPipelineRunResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -134,10 +134,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.containerregistry.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.containerregistry.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -145,10 +145,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(io.pulumi.azurenative.containerregistry.inputs.GetRegistryArgs args) {
-        return getRegistry(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args) {
+        return getRegistry(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryResult> getRegistry(io.pulumi.azurenative.containerregistry.inputs.GetRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -156,10 +156,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(io.pulumi.azurenative.containerregistry.inputs.GetRegistryBuildSourceUploadUrlArgs args) {
-        return getRegistryBuildSourceUploadUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args) {
+        return getRegistryBuildSourceUploadUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(io.pulumi.azurenative.containerregistry.inputs.GetRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryBuildSourceUploadUrlResult> getRegistryBuildSourceUploadUrl(GetRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryBuildSourceUploadUrl", TypeShape.of(GetRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -167,10 +167,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2016-06-27-preview.
      * 
      */
-    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(io.pulumi.azurenative.containerregistry.inputs.GetRegistryCredentialsArgs args) {
-        return getRegistryCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args) {
+        return getRegistryCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(io.pulumi.azurenative.containerregistry.inputs.GetRegistryCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryCredentialsResult> getRegistryCredentials(GetRegistryCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistryCredentials", TypeShape.of(GetRegistryCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -178,10 +178,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetReplicationResult> getReplication(io.pulumi.azurenative.containerregistry.inputs.GetReplicationArgs args) {
-        return getReplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationResult> getReplication(GetReplicationArgs args) {
+        return getReplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationResult> getReplication(io.pulumi.azurenative.containerregistry.inputs.GetReplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationResult> getReplication(GetReplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getReplication", TypeShape.of(GetReplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,10 +189,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeMapResult> getScopeMap(io.pulumi.azurenative.containerregistry.inputs.GetScopeMapArgs args) {
-        return getScopeMap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScopeMapResult> getScopeMap(GetScopeMapArgs args) {
+        return getScopeMap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScopeMapResult> getScopeMap(io.pulumi.azurenative.containerregistry.inputs.GetScopeMapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScopeMapResult> getScopeMap(GetScopeMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getScopeMap", TypeShape.of(GetScopeMapResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,10 +201,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.azurenative.containerregistry.inputs.GetTaskArgs args) {
-        return getTask(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
+        return getTask(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.azurenative.containerregistry.inputs.GetTaskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -213,10 +213,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetTaskRunResult> getTaskRun(io.pulumi.azurenative.containerregistry.inputs.GetTaskRunArgs args) {
-        return getTaskRun(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskRunResult> getTaskRun(GetTaskRunArgs args) {
+        return getTaskRun(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskRunResult> getTaskRun(io.pulumi.azurenative.containerregistry.inputs.GetTaskRunArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskRunResult> getTaskRun(GetTaskRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getTaskRun", TypeShape.of(GetTaskRunResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -224,10 +224,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTokenResult> getToken(io.pulumi.azurenative.containerregistry.inputs.GetTokenArgs args) {
-        return getToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTokenResult> getToken(GetTokenArgs args) {
+        return getToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTokenResult> getToken(io.pulumi.azurenative.containerregistry.inputs.GetTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTokenResult> getToken(GetTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getToken", TypeShape.of(GetTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -235,10 +235,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.azurenative.containerregistry.inputs.GetWebhookArgs args) {
-        return getWebhook(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
+        return getWebhook(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.azurenative.containerregistry.inputs.GetWebhookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -246,10 +246,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(io.pulumi.azurenative.containerregistry.inputs.GetWebhookCallbackConfigArgs args) {
-        return getWebhookCallbackConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args) {
+        return getWebhookCallbackConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(io.pulumi.azurenative.containerregistry.inputs.GetWebhookCallbackConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebhookCallbackConfigResult> getWebhookCallbackConfig(GetWebhookCallbackConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhookCallbackConfig", TypeShape.of(GetWebhookCallbackConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -257,10 +257,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(io.pulumi.azurenative.containerregistry.inputs.ListAgentPoolQueueStatusArgs args) {
-        return listAgentPoolQueueStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args) {
+        return listAgentPoolQueueStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(io.pulumi.azurenative.containerregistry.inputs.ListAgentPoolQueueStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAgentPoolQueueStatusResult> listAgentPoolQueueStatus(ListAgentPoolQueueStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listAgentPoolQueueStatus", TypeShape.of(ListAgentPoolQueueStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -268,10 +268,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(io.pulumi.azurenative.containerregistry.inputs.ListBuildStepBuildArgumentsArgs args) {
-        return listBuildStepBuildArguments(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args) {
+        return listBuildStepBuildArguments(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(io.pulumi.azurenative.containerregistry.inputs.ListBuildStepBuildArgumentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBuildStepBuildArgumentsResult> listBuildStepBuildArguments(ListBuildStepBuildArgumentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildStepBuildArguments", TypeShape.of(ListBuildStepBuildArgumentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -279,10 +279,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2018-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(io.pulumi.azurenative.containerregistry.inputs.ListBuildTaskSourceRepositoryPropertiesArgs args) {
-        return listBuildTaskSourceRepositoryProperties(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args) {
+        return listBuildTaskSourceRepositoryProperties(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(io.pulumi.azurenative.containerregistry.inputs.ListBuildTaskSourceRepositoryPropertiesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBuildTaskSourceRepositoryPropertiesResult> listBuildTaskSourceRepositoryProperties(ListBuildTaskSourceRepositoryPropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildTaskSourceRepositoryProperties", TypeShape.of(ListBuildTaskSourceRepositoryPropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -290,10 +290,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(io.pulumi.azurenative.containerregistry.inputs.ListRegistryBuildSourceUploadUrlArgs args) {
-        return listRegistryBuildSourceUploadUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args) {
+        return listRegistryBuildSourceUploadUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(io.pulumi.azurenative.containerregistry.inputs.ListRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListRegistryBuildSourceUploadUrlResult> listRegistryBuildSourceUploadUrl(ListRegistryBuildSourceUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryBuildSourceUploadUrl", TypeShape.of(ListRegistryBuildSourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -301,10 +301,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(io.pulumi.azurenative.containerregistry.inputs.ListRegistryCredentialsArgs args) {
-        return listRegistryCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args) {
+        return listRegistryCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(io.pulumi.azurenative.containerregistry.inputs.ListRegistryCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListRegistryCredentialsResult> listRegistryCredentials(ListRegistryCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRegistryCredentials", TypeShape.of(ListRegistryCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -312,10 +312,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(io.pulumi.azurenative.containerregistry.inputs.ListRunLogSasUrlArgs args) {
-        return listRunLogSasUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args) {
+        return listRunLogSasUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(io.pulumi.azurenative.containerregistry.inputs.ListRunLogSasUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListRunLogSasUrlResult> listRunLogSasUrl(ListRunLogSasUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listRunLogSasUrl", TypeShape.of(ListRunLogSasUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -324,10 +324,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(io.pulumi.azurenative.containerregistry.inputs.ListTaskDetailsArgs args) {
-        return listTaskDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args) {
+        return listTaskDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(io.pulumi.azurenative.containerregistry.inputs.ListTaskDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTaskDetailsResult> listTaskDetails(ListTaskDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listTaskDetails", TypeShape.of(ListTaskDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -336,10 +336,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(io.pulumi.azurenative.containerregistry.inputs.ListTaskRunDetailsArgs args) {
-        return listTaskRunDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args) {
+        return listTaskRunDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(io.pulumi.azurenative.containerregistry.inputs.ListTaskRunDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTaskRunDetailsResult> listTaskRunDetails(ListTaskRunDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listTaskRunDetails", TypeShape.of(ListTaskRunDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -347,10 +347,10 @@ public final class ContainerregistryFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(io.pulumi.azurenative.containerregistry.inputs.ListWebhookEventsArgs args) {
-        return listWebhookEvents(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args) {
+        return listWebhookEvents(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(io.pulumi.azurenative.containerregistry.inputs.ListWebhookEventsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebhookEventsResult> listWebhookEvents(ListWebhookEventsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listWebhookEvents", TypeShape.of(ListWebhookEventsResult.class), args, Utilities.withVersion(options));
     }
 }

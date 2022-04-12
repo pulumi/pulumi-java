@@ -16,10 +16,10 @@ public final class BudgetsFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(io.pulumi.awsnative.budgets.inputs.GetBudgetsActionArgs args) {
-        return getBudgetsAction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args) {
+        return getBudgetsAction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(io.pulumi.awsnative.budgets.inputs.GetBudgetsActionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args, Utilities.withVersion(options));
     }
 }

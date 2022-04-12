@@ -5,6 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VaultNotificationsArgs() {
-        this.backupVaultEvents = Output.empty();
-        this.backupVaultName = Output.empty();
-        this.snsTopicArn = Output.empty();
+        this.backupVaultEvents = Codegen.empty();
+        this.backupVaultName = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {

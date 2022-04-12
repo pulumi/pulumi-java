@@ -18,20 +18,20 @@ public final class Osconfig_v1betaFunctions {
      * Get an OS Config guest policy.
      * 
      */
-    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(io.pulumi.googlenative.osconfig_v1beta.inputs.GetGuestPolicyArgs args) {
-        return getGuestPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args) {
+        return getGuestPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(io.pulumi.googlenative.osconfig_v1beta.inputs.GetGuestPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGuestPolicyResult> getGuestPolicy(GetGuestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getGuestPolicy", TypeShape.of(GetGuestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an OS Config patch deployment.
      * 
      */
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(io.pulumi.googlenative.osconfig_v1beta.inputs.GetPatchDeploymentArgs args) {
-        return getPatchDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args) {
+        return getPatchDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(io.pulumi.googlenative.osconfig_v1beta.inputs.GetPatchDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1beta:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,6 +8,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationGetArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> airflowConfigurationOptions;
 
     public Output<Map<String,String>> getAirflowConfigurationOptions() {
-        return this.airflowConfigurationOptions == null ? Output.empty() : this.airflowConfigurationOptions;
+        return this.airflowConfigurationOptions == null ? Codegen.empty() : this.airflowConfigurationOptions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> airflowVersion;
 
     public Output<String> getAirflowVersion() {
-        return this.airflowVersion == null ? Output.empty() : this.airflowVersion;
+        return this.airflowVersion == null ? Codegen.empty() : this.airflowVersion;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dagS3Path;
 
     public Output<String> getDagS3Path() {
-        return this.dagS3Path == null ? Output.empty() : this.dagS3Path;
+        return this.dagS3Path == null ? Codegen.empty() : this.dagS3Path;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> environmentClass;
 
     public Output<String> getEnvironmentClass() {
-        return this.environmentClass == null ? Output.empty() : this.environmentClass;
+        return this.environmentClass == null ? Codegen.empty() : this.environmentClass;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
+        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     /**
@@ -106,14 +107,14 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     @Import(name="lastUpdateds")
       private final @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
 
     public Output<List<EnvironmentLastUpdatedGetArgs>> getLastUpdateds() {
-        return this.lastUpdateds == null ? Output.empty() : this.lastUpdateds;
+        return this.lastUpdateds == null ? Codegen.empty() : this.lastUpdateds;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
 
     public Output<EnvironmentLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
+        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxWorkers;
 
     public Output<Integer> getMaxWorkers() {
-        return this.maxWorkers == null ? Output.empty() : this.maxWorkers;
+        return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minWorkers;
 
     public Output<Integer> getMinWorkers() {
-        return this.minWorkers == null ? Output.empty() : this.minWorkers;
+        return this.minWorkers == null ? Codegen.empty() : this.minWorkers;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
 
     public Output<EnvironmentNetworkConfigurationGetArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pluginsS3ObjectVersion;
 
     public Output<String> getPluginsS3ObjectVersion() {
-        return this.pluginsS3ObjectVersion == null ? Output.empty() : this.pluginsS3ObjectVersion;
+        return this.pluginsS3ObjectVersion == null ? Codegen.empty() : this.pluginsS3ObjectVersion;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pluginsS3Path;
 
     public Output<String> getPluginsS3Path() {
-        return this.pluginsS3Path == null ? Output.empty() : this.pluginsS3Path;
+        return this.pluginsS3Path == null ? Codegen.empty() : this.pluginsS3Path;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requirementsS3ObjectVersion;
 
     public Output<String> getRequirementsS3ObjectVersion() {
-        return this.requirementsS3ObjectVersion == null ? Output.empty() : this.requirementsS3ObjectVersion;
+        return this.requirementsS3ObjectVersion == null ? Codegen.empty() : this.requirementsS3ObjectVersion;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requirementsS3Path;
 
     public Output<String> getRequirementsS3Path() {
-        return this.requirementsS3Path == null ? Output.empty() : this.requirementsS3Path;
+        return this.requirementsS3Path == null ? Codegen.empty() : this.requirementsS3Path;
     }
 
     /**
@@ -223,7 +224,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
-        return this.serviceRoleArn == null ? Output.empty() : this.serviceRoleArn;
+        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
     /**
@@ -234,7 +235,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceBucketArn;
 
     public Output<String> getSourceBucketArn() {
-        return this.sourceBucketArn == null ? Output.empty() : this.sourceBucketArn;
+        return this.sourceBucketArn == null ? Codegen.empty() : this.sourceBucketArn;
     }
 
     /**
@@ -245,7 +246,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -256,7 +257,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -267,7 +268,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -278,7 +279,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> webserverAccessMode;
 
     public Output<String> getWebserverAccessMode() {
-        return this.webserverAccessMode == null ? Output.empty() : this.webserverAccessMode;
+        return this.webserverAccessMode == null ? Codegen.empty() : this.webserverAccessMode;
     }
 
     /**
@@ -289,7 +290,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> webserverUrl;
 
     public Output<String> getWebserverUrl() {
-        return this.webserverUrl == null ? Output.empty() : this.webserverUrl;
+        return this.webserverUrl == null ? Codegen.empty() : this.webserverUrl;
     }
 
     /**
@@ -300,7 +301,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> weeklyMaintenanceWindowStart;
 
     public Output<String> getWeeklyMaintenanceWindowStart() {
-        return this.weeklyMaintenanceWindowStart == null ? Output.empty() : this.weeklyMaintenanceWindowStart;
+        return this.weeklyMaintenanceWindowStart == null ? Codegen.empty() : this.weeklyMaintenanceWindowStart;
     }
 
     public EnvironmentState(
@@ -359,32 +360,32 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.airflowConfigurationOptions = Output.empty();
-        this.airflowVersion = Output.empty();
-        this.arn = Output.empty();
-        this.createdAt = Output.empty();
-        this.dagS3Path = Output.empty();
-        this.environmentClass = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.kmsKey = Output.empty();
-        this.lastUpdateds = Output.empty();
-        this.loggingConfiguration = Output.empty();
-        this.maxWorkers = Output.empty();
-        this.minWorkers = Output.empty();
-        this.name = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.pluginsS3ObjectVersion = Output.empty();
-        this.pluginsS3Path = Output.empty();
-        this.requirementsS3ObjectVersion = Output.empty();
-        this.requirementsS3Path = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.sourceBucketArn = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.webserverAccessMode = Output.empty();
-        this.webserverUrl = Output.empty();
-        this.weeklyMaintenanceWindowStart = Output.empty();
+        this.airflowConfigurationOptions = Codegen.empty();
+        this.airflowVersion = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.dagS3Path = Codegen.empty();
+        this.environmentClass = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.kmsKey = Codegen.empty();
+        this.lastUpdateds = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
+        this.maxWorkers = Codegen.empty();
+        this.minWorkers = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.pluginsS3ObjectVersion = Codegen.empty();
+        this.pluginsS3Path = Codegen.empty();
+        this.requirementsS3ObjectVersion = Codegen.empty();
+        this.requirementsS3Path = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.sourceBucketArn = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.webserverAccessMode = Codegen.empty();
+        this.webserverUrl = Codegen.empty();
+        this.weeklyMaintenanceWindowStart = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -462,7 +463,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder airflowConfigurationOptions(@Nullable Map<String,String> airflowConfigurationOptions) {
-            this.airflowConfigurationOptions = Output.ofNullable(airflowConfigurationOptions);
+            this.airflowConfigurationOptions = Codegen.ofNullable(airflowConfigurationOptions);
             return this;
         }
         public Builder airflowVersion(@Nullable Output<String> airflowVersion) {
@@ -470,7 +471,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder airflowVersion(@Nullable String airflowVersion) {
-            this.airflowVersion = Output.ofNullable(airflowVersion);
+            this.airflowVersion = Codegen.ofNullable(airflowVersion);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -478,7 +479,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -486,7 +487,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder dagS3Path(@Nullable Output<String> dagS3Path) {
@@ -494,7 +495,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dagS3Path(@Nullable String dagS3Path) {
-            this.dagS3Path = Output.ofNullable(dagS3Path);
+            this.dagS3Path = Codegen.ofNullable(dagS3Path);
             return this;
         }
         public Builder environmentClass(@Nullable Output<String> environmentClass) {
@@ -502,7 +503,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentClass(@Nullable String environmentClass) {
-            this.environmentClass = Output.ofNullable(environmentClass);
+            this.environmentClass = Codegen.ofNullable(environmentClass);
             return this;
         }
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
@@ -510,7 +511,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Output.ofNullable(executionRoleArn);
+            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
             return this;
         }
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
@@ -518,7 +519,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }
         public Builder lastUpdateds(@Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds) {
@@ -526,7 +527,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdateds(@Nullable List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
-            this.lastUpdateds = Output.ofNullable(lastUpdateds);
+            this.lastUpdateds = Codegen.ofNullable(lastUpdateds);
             return this;
         }
         public Builder lastUpdateds(EnvironmentLastUpdatedGetArgs... lastUpdateds) {
@@ -537,7 +538,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
             return this;
         }
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
@@ -545,7 +546,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Output.ofNullable(maxWorkers);
+            this.maxWorkers = Codegen.ofNullable(maxWorkers);
             return this;
         }
         public Builder minWorkers(@Nullable Output<Integer> minWorkers) {
@@ -553,7 +554,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minWorkers(@Nullable Integer minWorkers) {
-            this.minWorkers = Output.ofNullable(minWorkers);
+            this.minWorkers = Codegen.ofNullable(minWorkers);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -561,7 +562,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
@@ -569,7 +570,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfiguration(@Nullable EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder pluginsS3ObjectVersion(@Nullable Output<String> pluginsS3ObjectVersion) {
@@ -577,7 +578,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
-            this.pluginsS3ObjectVersion = Output.ofNullable(pluginsS3ObjectVersion);
+            this.pluginsS3ObjectVersion = Codegen.ofNullable(pluginsS3ObjectVersion);
             return this;
         }
         public Builder pluginsS3Path(@Nullable Output<String> pluginsS3Path) {
@@ -585,7 +586,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
-            this.pluginsS3Path = Output.ofNullable(pluginsS3Path);
+            this.pluginsS3Path = Codegen.ofNullable(pluginsS3Path);
             return this;
         }
         public Builder requirementsS3ObjectVersion(@Nullable Output<String> requirementsS3ObjectVersion) {
@@ -593,7 +594,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
-            this.requirementsS3ObjectVersion = Output.ofNullable(requirementsS3ObjectVersion);
+            this.requirementsS3ObjectVersion = Codegen.ofNullable(requirementsS3ObjectVersion);
             return this;
         }
         public Builder requirementsS3Path(@Nullable Output<String> requirementsS3Path) {
@@ -601,7 +602,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
-            this.requirementsS3Path = Output.ofNullable(requirementsS3Path);
+            this.requirementsS3Path = Codegen.ofNullable(requirementsS3Path);
             return this;
         }
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
@@ -609,7 +610,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
+            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
             return this;
         }
         public Builder sourceBucketArn(@Nullable Output<String> sourceBucketArn) {
@@ -617,7 +618,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
-            this.sourceBucketArn = Output.ofNullable(sourceBucketArn);
+            this.sourceBucketArn = Codegen.ofNullable(sourceBucketArn);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -625,7 +626,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -633,7 +634,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -641,7 +642,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder webserverAccessMode(@Nullable Output<String> webserverAccessMode) {
@@ -649,7 +650,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webserverAccessMode(@Nullable String webserverAccessMode) {
-            this.webserverAccessMode = Output.ofNullable(webserverAccessMode);
+            this.webserverAccessMode = Codegen.ofNullable(webserverAccessMode);
             return this;
         }
         public Builder webserverUrl(@Nullable Output<String> webserverUrl) {
@@ -657,7 +658,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webserverUrl(@Nullable String webserverUrl) {
-            this.webserverUrl = Output.ofNullable(webserverUrl);
+            this.webserverUrl = Codegen.ofNullable(webserverUrl);
             return this;
         }
         public Builder weeklyMaintenanceWindowStart(@Nullable Output<String> weeklyMaintenanceWindowStart) {
@@ -665,7 +666,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
-            this.weeklyMaintenanceWindowStart = Output.ofNullable(weeklyMaintenanceWindowStart);
+            this.weeklyMaintenanceWindowStart = Codegen.ofNullable(weeklyMaintenanceWindowStart);
             return this;
         }        public EnvironmentState build() {
             return new EnvironmentState(airflowConfigurationOptions, airflowVersion, arn, createdAt, dagS3Path, environmentClass, executionRoleArn, kmsKey, lastUpdateds, loggingConfiguration, maxWorkers, minWorkers, name, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, serviceRoleArn, sourceBucketArn, status, tags, tagsAll, webserverAccessMode, webserverUrl, weeklyMaintenanceWindowStart);

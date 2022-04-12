@@ -16,10 +16,10 @@ public final class PinpointFunctions {
      * Resource Type definition for AWS::Pinpoint::InAppTemplate
      * 
      */
-    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(io.pulumi.awsnative.pinpoint.inputs.GetInAppTemplateArgs args) {
-        return getInAppTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args) {
+        return getInAppTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(io.pulumi.awsnative.pinpoint.inputs.GetInAppTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInAppTemplateResult> getInAppTemplate(GetInAppTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:pinpoint:getInAppTemplate", TypeShape.of(GetInAppTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -141,7 +142,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Destination(String name, DestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotwireless:Destination", name, args == null ? DestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotwireless:Destination", name, args == null ? DestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Destination(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

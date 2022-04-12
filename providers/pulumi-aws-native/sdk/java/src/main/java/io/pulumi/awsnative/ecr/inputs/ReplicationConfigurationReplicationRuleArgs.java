@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestina
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
       private final @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
     public Output<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
-        return this.repositoryFilters == null ? Output.empty() : this.repositoryFilters;
+        return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
     }
 
     public ReplicationConfigurationReplicationRuleArgs(
@@ -50,8 +51,8 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
     }
 
     private ReplicationConfigurationReplicationRuleArgs() {
-        this.destinations = Output.empty();
-        this.repositoryFilters = Output.empty();
+        this.destinations = Codegen.empty();
+        this.repositoryFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
             return this;
         }
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
-            this.repositoryFilters = Output.ofNullable(repositoryFilters);
+            this.repositoryFilters = Codegen.ofNullable(repositoryFilters);
             return this;
         }
         public Builder repositoryFilters(ReplicationConfigurationRepositoryFilterArgs... repositoryFilters) {

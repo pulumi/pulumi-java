@@ -26,60 +26,60 @@ public final class Apigateway_v1betaFunctions {
      * Gets details of a single Api.
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiArgs args) {
-        return getApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args) {
+        return getApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiResult> getApi(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetApiConfigIamPolicyResult> getApiConfigIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiConfigIamPolicyArgs args) {
-        return getApiConfigIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiConfigIamPolicyResult> getApiConfigIamPolicy(GetApiConfigIamPolicyArgs args) {
+        return getApiConfigIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiConfigIamPolicyResult> getApiConfigIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiConfigIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiConfigIamPolicyResult> getApiConfigIamPolicy(GetApiConfigIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getApiConfigIamPolicy", TypeShape.of(GetApiConfigIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetApiIamPolicyResult> getApiIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiIamPolicyArgs args) {
-        return getApiIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiIamPolicyResult> getApiIamPolicy(GetApiIamPolicyArgs args) {
+        return getApiIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiIamPolicyResult> getApiIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetApiIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiIamPolicyResult> getApiIamPolicy(GetApiIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getApiIamPolicy", TypeShape.of(GetApiIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single ApiConfig.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.googlenative.apigateway_v1beta.inputs.GetConfigArgs args) {
-        return getConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+        return getConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.googlenative.apigateway_v1beta.inputs.GetConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Gateway.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.googlenative.apigateway_v1beta.inputs.GetGatewayArgs args) {
-        return getGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+        return getGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.googlenative.apigateway_v1beta.inputs.GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetGatewayIamPolicyArgs args) {
-        return getGatewayIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args) {
+        return getGatewayIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(io.pulumi.googlenative.apigateway_v1beta.inputs.GetGatewayIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayIamPolicyResult> getGatewayIamPolicy(GetGatewayIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getGatewayIamPolicy", TypeShape.of(GetGatewayIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

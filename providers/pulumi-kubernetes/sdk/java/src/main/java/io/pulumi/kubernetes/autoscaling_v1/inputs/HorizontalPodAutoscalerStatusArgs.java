@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> currentCPUUtilizationPercentage;
 
     public Output<Integer> getCurrentCPUUtilizationPercentage() {
-        return this.currentCPUUtilizationPercentage == null ? Output.empty() : this.currentCPUUtilizationPercentage;
+        return this.currentCPUUtilizationPercentage == null ? Codegen.empty() : this.currentCPUUtilizationPercentage;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<String> lastScaleTime;
 
     public Output<String> getLastScaleTime() {
-        return this.lastScaleTime == null ? Output.empty() : this.lastScaleTime;
+        return this.lastScaleTime == null ? Codegen.empty() : this.lastScaleTime;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     public HorizontalPodAutoscalerStatusArgs(
@@ -88,11 +89,11 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     private HorizontalPodAutoscalerStatusArgs() {
-        this.currentCPUUtilizationPercentage = Output.empty();
-        this.currentReplicas = Output.empty();
-        this.desiredReplicas = Output.empty();
-        this.lastScaleTime = Output.empty();
-        this.observedGeneration = Output.empty();
+        this.currentCPUUtilizationPercentage = Codegen.empty();
+        this.currentReplicas = Codegen.empty();
+        this.desiredReplicas = Codegen.empty();
+        this.lastScaleTime = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder currentCPUUtilizationPercentage(@Nullable Integer currentCPUUtilizationPercentage) {
-            this.currentCPUUtilizationPercentage = Output.ofNullable(currentCPUUtilizationPercentage);
+            this.currentCPUUtilizationPercentage = Codegen.ofNullable(currentCPUUtilizationPercentage);
             return this;
         }
         public Builder currentReplicas(Output<Integer> currentReplicas) {
@@ -152,7 +153,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
-            this.lastScaleTime = Output.ofNullable(lastScaleTime);
+            this.lastScaleTime = Codegen.ofNullable(lastScaleTime);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -160,7 +161,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }        public HorizontalPodAutoscalerStatusArgs build() {
             return new HorizontalPodAutoscalerStatusArgs(currentCPUUtilizationPercentage, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);

@@ -26,60 +26,60 @@ public final class LocationFunctions {
      * Definition of AWS::Location::GeofenceCollection Resource Type
      * 
      */
-    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollection(io.pulumi.awsnative.location.inputs.GetGeofenceCollectionArgs args) {
-        return getGeofenceCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollection(GetGeofenceCollectionArgs args) {
+        return getGeofenceCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollection(io.pulumi.awsnative.location.inputs.GetGeofenceCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollection(GetGeofenceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getGeofenceCollection", TypeShape.of(GetGeofenceCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::Map Resource Type
      * 
      */
-    public static CompletableFuture<GetMapResult> getMap(io.pulumi.awsnative.location.inputs.GetMapArgs args) {
-        return getMap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMapResult> getMap(GetMapArgs args) {
+        return getMap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMapResult> getMap(io.pulumi.awsnative.location.inputs.GetMapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMapResult> getMap(GetMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getMap", TypeShape.of(GetMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::PlaceIndex Resource Type
      * 
      */
-    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndex(io.pulumi.awsnative.location.inputs.GetPlaceIndexArgs args) {
-        return getPlaceIndex(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndex(GetPlaceIndexArgs args) {
+        return getPlaceIndex(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndex(io.pulumi.awsnative.location.inputs.GetPlaceIndexArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndex(GetPlaceIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getPlaceIndex", TypeShape.of(GetPlaceIndexResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::RouteCalculator Resource Type
      * 
      */
-    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculator(io.pulumi.awsnative.location.inputs.GetRouteCalculatorArgs args) {
-        return getRouteCalculator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculator(GetRouteCalculatorArgs args) {
+        return getRouteCalculator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculator(io.pulumi.awsnative.location.inputs.GetRouteCalculatorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculator(GetRouteCalculatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getRouteCalculator", TypeShape.of(GetRouteCalculatorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::Tracker Resource Type
      * 
      */
-    public static CompletableFuture<GetTrackerResult> getTracker(io.pulumi.awsnative.location.inputs.GetTrackerArgs args) {
-        return getTracker(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTrackerResult> getTracker(GetTrackerArgs args) {
+        return getTracker(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrackerResult> getTracker(io.pulumi.awsnative.location.inputs.GetTrackerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrackerResult> getTracker(GetTrackerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getTracker", TypeShape.of(GetTrackerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::TrackerConsumer Resource Type
      * 
      */
-    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumer(io.pulumi.awsnative.location.inputs.GetTrackerConsumerArgs args) {
-        return getTrackerConsumer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumer(GetTrackerConsumerArgs args) {
+        return getTrackerConsumer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumer(io.pulumi.awsnative.location.inputs.GetTrackerConsumerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumer(GetTrackerConsumerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:location:getTrackerConsumer", TypeShape.of(GetTrackerConsumerResult.class), args, Utilities.withVersion(options));
     }
 }

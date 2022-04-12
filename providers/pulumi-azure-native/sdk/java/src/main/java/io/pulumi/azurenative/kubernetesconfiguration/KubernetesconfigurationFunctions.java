@@ -21,10 +21,10 @@ public final class KubernetesconfigurationFunctions {
      * API Version: 2020-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetExtensionArgs args) {
-        return getExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+        return getExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class KubernetesconfigurationFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetFluxConfigurationArgs args) {
-        return getFluxConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(GetFluxConfigurationArgs args) {
+        return getFluxConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetFluxConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFluxConfigurationResult> getFluxConfiguration(GetFluxConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getFluxConfiguration", TypeShape.of(GetFluxConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class KubernetesconfigurationFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetSourceControlConfigurationArgs args) {
-        return getSourceControlConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(GetSourceControlConfigurationArgs args) {
+        return getSourceControlConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(io.pulumi.azurenative.kubernetesconfiguration.inputs.GetSourceControlConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSourceControlConfigurationResult> getSourceControlConfiguration(GetSourceControlConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getSourceControlConfiguration", TypeShape.of(GetSourceControlConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

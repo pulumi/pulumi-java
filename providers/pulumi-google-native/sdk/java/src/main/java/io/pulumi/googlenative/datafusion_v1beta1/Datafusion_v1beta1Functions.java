@@ -20,30 +20,30 @@ public final class Datafusion_v1beta1Functions {
      * Gets details of a single Data Fusion instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datafusion/v1beta1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceIamPolicyArgs args) {
-        return getInstanceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args) {
+        return getInstanceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datafusion/v1beta1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInstanceNamespaceIamPolicyResult> getInstanceNamespaceIamPolicy(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceNamespaceIamPolicyArgs args) {
-        return getInstanceNamespaceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceNamespaceIamPolicyResult> getInstanceNamespaceIamPolicy(GetInstanceNamespaceIamPolicyArgs args) {
+        return getInstanceNamespaceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceNamespaceIamPolicyResult> getInstanceNamespaceIamPolicy(io.pulumi.googlenative.datafusion_v1beta1.inputs.GetInstanceNamespaceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceNamespaceIamPolicyResult> getInstanceNamespaceIamPolicy(GetInstanceNamespaceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datafusion/v1beta1:getInstanceNamespaceIamPolicy", TypeShape.of(GetInstanceNamespaceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

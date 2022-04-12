@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class RuleGroupImmunityTimePropertyArgs extends io.pulumi.resources
     }
 
     private RuleGroupImmunityTimePropertyArgs() {
-        this.immunityTime = Output.empty();
+        this.immunityTime = Codegen.empty();
     }
 
     public static Builder builder() {

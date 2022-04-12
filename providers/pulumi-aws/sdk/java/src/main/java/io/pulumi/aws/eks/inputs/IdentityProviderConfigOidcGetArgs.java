@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> groupsClaim;
 
     public Output<String> getGroupsClaim() {
-        return this.groupsClaim == null ? Output.empty() : this.groupsClaim;
+        return this.groupsClaim == null ? Codegen.empty() : this.groupsClaim;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> groupsPrefix;
 
     public Output<String> getGroupsPrefix() {
-        return this.groupsPrefix == null ? Output.empty() : this.groupsPrefix;
+        return this.groupsPrefix == null ? Codegen.empty() : this.groupsPrefix;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> requiredClaims;
 
     public Output<Map<String,String>> getRequiredClaims() {
-        return this.requiredClaims == null ? Output.empty() : this.requiredClaims;
+        return this.requiredClaims == null ? Codegen.empty() : this.requiredClaims;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> usernameClaim;
 
     public Output<String> getUsernameClaim() {
-        return this.usernameClaim == null ? Output.empty() : this.usernameClaim;
+        return this.usernameClaim == null ? Codegen.empty() : this.usernameClaim;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> usernamePrefix;
 
     public Output<String> getUsernamePrefix() {
-        return this.usernamePrefix == null ? Output.empty() : this.usernamePrefix;
+        return this.usernamePrefix == null ? Codegen.empty() : this.usernamePrefix;
     }
 
     public IdentityProviderConfigOidcGetArgs(
@@ -123,14 +124,14 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
     }
 
     private IdentityProviderConfigOidcGetArgs() {
-        this.clientId = Output.empty();
-        this.groupsClaim = Output.empty();
-        this.groupsPrefix = Output.empty();
-        this.identityProviderConfigName = Output.empty();
-        this.issuerUrl = Output.empty();
-        this.requiredClaims = Output.empty();
-        this.usernameClaim = Output.empty();
-        this.usernamePrefix = Output.empty();
+        this.clientId = Codegen.empty();
+        this.groupsClaim = Codegen.empty();
+        this.groupsPrefix = Codegen.empty();
+        this.identityProviderConfigName = Codegen.empty();
+        this.issuerUrl = Codegen.empty();
+        this.requiredClaims = Codegen.empty();
+        this.usernameClaim = Codegen.empty();
+        this.usernamePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder groupsClaim(@Nullable String groupsClaim) {
-            this.groupsClaim = Output.ofNullable(groupsClaim);
+            this.groupsClaim = Codegen.ofNullable(groupsClaim);
             return this;
         }
         public Builder groupsPrefix(@Nullable Output<String> groupsPrefix) {
@@ -188,7 +189,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder groupsPrefix(@Nullable String groupsPrefix) {
-            this.groupsPrefix = Output.ofNullable(groupsPrefix);
+            this.groupsPrefix = Codegen.ofNullable(groupsPrefix);
             return this;
         }
         public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
@@ -212,7 +213,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
-            this.requiredClaims = Output.ofNullable(requiredClaims);
+            this.requiredClaims = Codegen.ofNullable(requiredClaims);
             return this;
         }
         public Builder usernameClaim(@Nullable Output<String> usernameClaim) {
@@ -220,7 +221,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder usernameClaim(@Nullable String usernameClaim) {
-            this.usernameClaim = Output.ofNullable(usernameClaim);
+            this.usernameClaim = Codegen.ofNullable(usernameClaim);
             return this;
         }
         public Builder usernamePrefix(@Nullable Output<String> usernamePrefix) {
@@ -228,7 +229,7 @@ public final class IdentityProviderConfigOidcGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder usernamePrefix(@Nullable String usernamePrefix) {
-            this.usernamePrefix = Output.ofNullable(usernamePrefix);
+            this.usernamePrefix = Codegen.ofNullable(usernamePrefix);
             return this;
         }        public IdentityProviderConfigOidcGetArgs build() {
             return new IdentityProviderConfigOidcGetArgs(clientId, groupsClaim, groupsPrefix, identityProviderConfigName, issuerUrl, requiredClaims, usernameClaim, usernamePrefix);

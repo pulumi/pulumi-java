@@ -21,10 +21,10 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.automanage.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.automanage.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(io.pulumi.azurenative.automanage.inputs.GetConfigurationProfileAssignmentArgs args) {
-        return getConfigurationProfileAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args) {
+        return getConfigurationProfileAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(io.pulumi.azurenative.automanage.inputs.GetConfigurationProfileAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getConfigurationProfileAssignment", TypeShape.of(GetConfigurationProfileAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(io.pulumi.azurenative.automanage.inputs.GetConfigurationProfilePreferenceArgs args) {
-        return getConfigurationProfilePreference(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args) {
+        return getConfigurationProfilePreference(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(io.pulumi.azurenative.automanage.inputs.GetConfigurationProfilePreferenceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getConfigurationProfilePreference", TypeShape.of(GetConfigurationProfilePreferenceResult.class), args, Utilities.withVersion(options));
     }
 }

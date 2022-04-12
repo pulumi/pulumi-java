@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedIntegrationRuntimeRbacAuth
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
     public Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> getLinkedInfo() {
-        return this.linkedInfo == null ? Output.empty() : this.linkedInfo;
+        return this.linkedInfo == null ? Codegen.empty() : this.linkedInfo;
     }
 
     /**
@@ -65,9 +66,9 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
     }
 
     private SelfHostedIntegrationRuntimeArgs() {
-        this.description = Output.empty();
-        this.linkedInfo = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.linkedInfo = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder linkedInfo(@Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
@@ -107,7 +108,7 @@ public final class SelfHostedIntegrationRuntimeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
-            this.linkedInfo = Output.ofNullable(linkedInfo);
+            this.linkedInfo = Codegen.ofNullable(linkedInfo);
             return this;
         }
         public Builder type(Output<String> type) {

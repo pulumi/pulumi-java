@@ -17,10 +17,10 @@ public final class SoftwareplanFunctions {
      * API Version: 2019-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(io.pulumi.azurenative.softwareplan.inputs.GetHybridUseBenefitArgs args) {
-        return getHybridUseBenefit(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args) {
+        return getHybridUseBenefit(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(io.pulumi.azurenative.softwareplan.inputs.GetHybridUseBenefitArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridUseBenefitResult> getHybridUseBenefit(GetHybridUseBenefitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:softwareplan:getHybridUseBenefit", TypeShape.of(GetHybridUseBenefitResult.class), args, Utilities.withVersion(options));
     }
 }

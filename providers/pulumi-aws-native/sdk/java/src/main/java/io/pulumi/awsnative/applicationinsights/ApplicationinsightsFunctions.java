@@ -16,10 +16,10 @@ public final class ApplicationinsightsFunctions {
      * Resource schema for AWS::ApplicationInsights::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.applicationinsights.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.applicationinsights.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:applicationinsights:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

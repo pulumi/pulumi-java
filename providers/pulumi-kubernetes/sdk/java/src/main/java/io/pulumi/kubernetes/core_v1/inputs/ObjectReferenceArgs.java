@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> fieldPath;
 
     public Output<String> getFieldPath() {
-        return this.fieldPath == null ? Output.empty() : this.fieldPath;
+        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
-        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
+        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public ObjectReferenceArgs(
@@ -113,13 +114,13 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ObjectReferenceArgs() {
-        this.apiVersion = Output.empty();
-        this.fieldPath = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.resourceVersion = Output.empty();
-        this.uid = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.fieldPath = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resourceVersion = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
@@ -167,7 +168,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Output.ofNullable(fieldPath);
+            this.fieldPath = Codegen.ofNullable(fieldPath);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -175,7 +176,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -183,7 +184,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -191,7 +192,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
@@ -199,7 +200,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Output.ofNullable(resourceVersion);
+            this.resourceVersion = Codegen.ofNullable(resourceVersion);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -207,7 +208,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public ObjectReferenceArgs build() {
             return new ObjectReferenceArgs(apiVersion, fieldPath, kind, name, namespace, resourceVersion, uid);

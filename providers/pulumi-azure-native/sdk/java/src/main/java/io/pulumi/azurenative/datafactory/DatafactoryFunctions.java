@@ -51,10 +51,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetDataFlowResult> getDataFlow(io.pulumi.azurenative.datafactory.inputs.GetDataFlowArgs args) {
-        return getDataFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataFlowResult> getDataFlow(GetDataFlowArgs args) {
+        return getDataFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataFlowResult> getDataFlow(io.pulumi.azurenative.datafactory.inputs.GetDataFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataFlowResult> getDataFlow(GetDataFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataFlow", TypeShape.of(GetDataFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.azurenative.datafactory.inputs.GetDatasetArgs args) {
-        return getDataset(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+        return getDataset(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.azurenative.datafactory.inputs.GetDatasetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValue(io.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueArgs args) {
-        return getExposureControlFeatureValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValue(GetExposureControlFeatureValueArgs args) {
+        return getExposureControlFeatureValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValue(io.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValue(GetExposureControlFeatureValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValue", TypeShape.of(GetExposureControlFeatureValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactory(io.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueByFactoryArgs args) {
-        return getExposureControlFeatureValueByFactory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactory(GetExposureControlFeatureValueByFactoryArgs args) {
+        return getExposureControlFeatureValueByFactory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactory(io.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueByFactoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactory(GetExposureControlFeatureValueByFactoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValueByFactory", TypeShape.of(GetExposureControlFeatureValueByFactoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetFactoryResult> getFactory(io.pulumi.azurenative.datafactory.inputs.GetFactoryArgs args) {
-        return getFactory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args) {
+        return getFactory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFactoryResult> getFactory(io.pulumi.azurenative.datafactory.inputs.GetFactoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFactoryResult> getFactory(GetFactoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,10 +106,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccess(io.pulumi.azurenative.datafactory.inputs.GetFactoryDataPlaneAccessArgs args) {
-        return getFactoryDataPlaneAccess(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccess(GetFactoryDataPlaneAccessArgs args) {
+        return getFactoryDataPlaneAccess(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccess(io.pulumi.azurenative.datafactory.inputs.GetFactoryDataPlaneAccessArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccess(GetFactoryDataPlaneAccessArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryDataPlaneAccess", TypeShape.of(GetFactoryDataPlaneAccessResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -117,10 +117,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessToken(io.pulumi.azurenative.datafactory.inputs.GetFactoryGitHubAccessTokenArgs args) {
-        return getFactoryGitHubAccessToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessToken(GetFactoryGitHubAccessTokenArgs args) {
+        return getFactoryGitHubAccessToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessToken(io.pulumi.azurenative.datafactory.inputs.GetFactoryGitHubAccessTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessToken(GetFactoryGitHubAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryGitHubAccessToken", TypeShape.of(GetFactoryGitHubAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -128,10 +128,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeArgs args) {
-        return getIntegrationRuntime(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args) {
+        return getIntegrationRuntime(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -139,10 +139,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeConnectionInfoArgs args) {
-        return getIntegrationRuntimeConnectionInfo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args) {
+        return getIntegrationRuntimeConnectionInfo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -150,10 +150,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeObjectMetadatumArgs args) {
-        return getIntegrationRuntimeObjectMetadatum(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args) {
+        return getIntegrationRuntimeObjectMetadatum(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -161,10 +161,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeStatusArgs args) {
-        return getIntegrationRuntimeStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args) {
+        return getIntegrationRuntimeStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(io.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,10 +172,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(io.pulumi.azurenative.datafactory.inputs.GetLinkedServiceArgs args) {
-        return getLinkedService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
+        return getLinkedService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(io.pulumi.azurenative.datafactory.inputs.GetLinkedServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -183,10 +183,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(io.pulumi.azurenative.datafactory.inputs.GetManagedPrivateEndpointArgs args) {
-        return getManagedPrivateEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args) {
+        return getManagedPrivateEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(io.pulumi.azurenative.datafactory.inputs.GetManagedPrivateEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -194,10 +194,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.azurenative.datafactory.inputs.GetPipelineArgs args) {
-        return getPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+        return getPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.azurenative.datafactory.inputs.GetPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -205,10 +205,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.datafactory.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.datafactory.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -216,10 +216,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.azurenative.datafactory.inputs.GetTriggerArgs args) {
-        return getTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+        return getTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.azurenative.datafactory.inputs.GetTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -227,10 +227,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatus(io.pulumi.azurenative.datafactory.inputs.GetTriggerEventSubscriptionStatusArgs args) {
-        return getTriggerEventSubscriptionStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatus(GetTriggerEventSubscriptionStatusArgs args) {
+        return getTriggerEventSubscriptionStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatus(io.pulumi.azurenative.datafactory.inputs.GetTriggerEventSubscriptionStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatus(GetTriggerEventSubscriptionStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTriggerEventSubscriptionStatus", TypeShape.of(GetTriggerEventSubscriptionStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -238,10 +238,10 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeys(io.pulumi.azurenative.datafactory.inputs.ListIntegrationRuntimeAuthKeysArgs args) {
-        return listIntegrationRuntimeAuthKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeys(ListIntegrationRuntimeAuthKeysArgs args) {
+        return listIntegrationRuntimeAuthKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeys(io.pulumi.azurenative.datafactory.inputs.ListIntegrationRuntimeAuthKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeys(ListIntegrationRuntimeAuthKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:listIntegrationRuntimeAuthKeys", TypeShape.of(ListIntegrationRuntimeAuthKeysResult.class), args, Utilities.withVersion(options));
     }
 }

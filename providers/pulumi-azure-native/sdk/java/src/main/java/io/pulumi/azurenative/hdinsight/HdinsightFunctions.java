@@ -23,10 +23,10 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.hdinsight.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.hdinsight.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.hdinsight.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.hdinsight.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(io.pulumi.azurenative.hdinsight.inputs.GetClusterGatewaySettingsArgs args) {
-        return getClusterGatewaySettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(GetClusterGatewaySettingsArgs args) {
+        return getClusterGatewaySettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(io.pulumi.azurenative.hdinsight.inputs.GetClusterGatewaySettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettings(GetClusterGatewaySettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class HdinsightFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.hdinsight.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.hdinsight.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

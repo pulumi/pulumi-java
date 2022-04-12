@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class AzureNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resou
     }
 
     private AzureNodePoolMaxPodsConstraintGetArgs() {
-        this.maxPodsPerNode = Output.empty();
+        this.maxPodsPerNode = Codegen.empty();
     }
 
     public static Builder builder() {

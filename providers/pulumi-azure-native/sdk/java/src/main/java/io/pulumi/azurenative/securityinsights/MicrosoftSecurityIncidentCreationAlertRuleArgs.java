@@ -8,6 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.MicrosoftSecurityProductName
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<String> alertRuleTemplateName;
 
     public Output<String> getAlertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Output.empty() : this.alertRuleTemplateName;
+        return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<List<String>> displayNamesExcludeFilter;
 
     public Output<List<String>> getDisplayNamesExcludeFilter() {
-        return this.displayNamesExcludeFilter == null ? Output.empty() : this.displayNamesExcludeFilter;
+        return this.displayNamesExcludeFilter == null ? Codegen.empty() : this.displayNamesExcludeFilter;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<List<String>> displayNamesFilter;
 
     public Output<List<String>> getDisplayNamesFilter() {
-        return this.displayNamesFilter == null ? Output.empty() : this.displayNamesFilter;
+        return this.displayNamesFilter == null ? Codegen.empty() : this.displayNamesFilter;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
       private final @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
 
     public Output<List<Either<String,AlertSeverity>>> getSeveritiesFilter() {
-        return this.severitiesFilter == null ? Output.empty() : this.severitiesFilter;
+        return this.severitiesFilter == null ? Codegen.empty() : this.severitiesFilter;
     }
 
     /**
@@ -180,18 +181,18 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     }
 
     private MicrosoftSecurityIncidentCreationAlertRuleArgs() {
-        this.alertRuleTemplateName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.displayNamesExcludeFilter = Output.empty();
-        this.displayNamesFilter = Output.empty();
-        this.enabled = Output.empty();
-        this.kind = Output.empty();
-        this.productFilter = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.severitiesFilter = Output.empty();
-        this.workspaceName = Output.empty();
+        this.alertRuleTemplateName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.displayNamesExcludeFilter = Codegen.empty();
+        this.displayNamesFilter = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.productFilter = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.severitiesFilter = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Output.ofNullable(alertRuleTemplateName);
+            this.alertRuleTemplateName = Codegen.ofNullable(alertRuleTemplateName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -249,7 +250,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -265,7 +266,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder displayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
-            this.displayNamesExcludeFilter = Output.ofNullable(displayNamesExcludeFilter);
+            this.displayNamesExcludeFilter = Codegen.ofNullable(displayNamesExcludeFilter);
             return this;
         }
         public Builder displayNamesExcludeFilter(String... displayNamesExcludeFilter) {
@@ -276,7 +277,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder displayNamesFilter(@Nullable List<String> displayNamesFilter) {
-            this.displayNamesFilter = Output.ofNullable(displayNamesFilter);
+            this.displayNamesFilter = Codegen.ofNullable(displayNamesFilter);
             return this;
         }
         public Builder displayNamesFilter(String... displayNamesFilter) {
@@ -319,7 +320,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder severitiesFilter(@Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter) {
@@ -327,7 +328,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             return this;
         }
         public Builder severitiesFilter(@Nullable List<Either<String,AlertSeverity>> severitiesFilter) {
-            this.severitiesFilter = Output.ofNullable(severitiesFilter);
+            this.severitiesFilter = Codegen.ofNullable(severitiesFilter);
             return this;
         }
         public Builder severitiesFilter(Either<String,AlertSeverity>... severitiesFilter) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
     }
 
     private InstanceGroupManagerNamedPortArgs() {
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

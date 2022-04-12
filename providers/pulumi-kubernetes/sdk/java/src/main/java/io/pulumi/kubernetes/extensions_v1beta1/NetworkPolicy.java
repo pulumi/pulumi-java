@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.extensions_v1beta1.NetworkPolicyArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicySpec;
@@ -100,7 +101,7 @@ public class NetworkPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkPolicy(String name, @Nullable NetworkPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:extensions/v1beta1:NetworkPolicy", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:extensions/v1beta1:NetworkPolicy", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

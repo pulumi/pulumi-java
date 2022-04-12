@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> settingName;
 
     public Output<String> getSettingName() {
-        return this.settingName == null ? Output.empty() : this.settingName;
+        return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 
     public AdvancedThreatProtectionArgs(
@@ -58,9 +59,9 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
     }
 
     private AdvancedThreatProtectionArgs() {
-        this.isEnabled = Output.empty();
-        this.resourceId = Output.empty();
-        this.settingName = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.settingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {
@@ -108,7 +109,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder settingName(@Nullable String settingName) {
-            this.settingName = Output.ofNullable(settingName);
+            this.settingName = Codegen.ofNullable(settingName);
             return this;
         }        public AdvancedThreatProtectionArgs build() {
             return new AdvancedThreatProtectionArgs(isEnabled, resourceId, settingName);

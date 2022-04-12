@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,10 +76,10 @@ public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resour
     }
 
     private AddRemoveReplicaScalingMechanismArgs() {
-        this.kind = Output.empty();
-        this.maxCount = Output.empty();
-        this.minCount = Output.empty();
-        this.scaleIncrement = Output.empty();
+        this.kind = Codegen.empty();
+        this.maxCount = Codegen.empty();
+        this.minCount = Codegen.empty();
+        this.scaleIncrement = Codegen.empty();
     }
 
     public static Builder builder() {

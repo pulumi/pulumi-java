@@ -51,10 +51,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(io.pulumi.azurenative.kusto.inputs.GetAttachedDatabaseConfigurationArgs args) {
-        return getAttachedDatabaseConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args) {
+        return getAttachedDatabaseConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(io.pulumi.azurenative.kusto.inputs.GetAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttachedDatabaseConfigurationResult> getAttachedDatabaseConfiguration(GetAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getAttachedDatabaseConfiguration", TypeShape.of(GetAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.kusto.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.kusto.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(io.pulumi.azurenative.kusto.inputs.GetClusterPrincipalAssignmentArgs args) {
-        return getClusterPrincipalAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args) {
+        return getClusterPrincipalAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(io.pulumi.azurenative.kusto.inputs.GetClusterPrincipalAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterPrincipalAssignmentResult> getClusterPrincipalAssignment(GetClusterPrincipalAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getClusterPrincipalAssignment", TypeShape.of(GetClusterPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(io.pulumi.azurenative.kusto.inputs.GetDataConnectionArgs args) {
-        return getDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
+        return getDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(io.pulumi.azurenative.kusto.inputs.GetDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -103,10 +103,10 @@ public final class KustoFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.kusto.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.kusto.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -114,10 +114,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(io.pulumi.azurenative.kusto.inputs.GetDatabasePrincipalAssignmentArgs args) {
-        return getDatabasePrincipalAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
+        return getDatabasePrincipalAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(io.pulumi.azurenative.kusto.inputs.GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -125,10 +125,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(io.pulumi.azurenative.kusto.inputs.GetEventGridDataConnectionArgs args) {
-        return getEventGridDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
+        return getEventGridDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(io.pulumi.azurenative.kusto.inputs.GetEventGridDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -136,10 +136,10 @@ public final class KustoFunctions {
      * API Version: 2018-09-07-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(io.pulumi.azurenative.kusto.inputs.GetEventHubConnectionArgs args) {
-        return getEventHubConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args) {
+        return getEventHubConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(io.pulumi.azurenative.kusto.inputs.GetEventHubConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubConnectionResult> getEventHubConnection(GetEventHubConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubConnection", TypeShape.of(GetEventHubConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,10 +147,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(io.pulumi.azurenative.kusto.inputs.GetEventHubDataConnectionArgs args) {
-        return getEventHubDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
+        return getEventHubDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(io.pulumi.azurenative.kusto.inputs.GetEventHubDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -158,10 +158,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(io.pulumi.azurenative.kusto.inputs.GetIotHubDataConnectionArgs args) {
-        return getIotHubDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
+        return getIotHubDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(io.pulumi.azurenative.kusto.inputs.GetIotHubDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -169,10 +169,10 @@ public final class KustoFunctions {
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(io.pulumi.azurenative.kusto.inputs.GetManagedPrivateEndpointArgs args) {
-        return getManagedPrivateEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args) {
+        return getManagedPrivateEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(io.pulumi.azurenative.kusto.inputs.GetManagedPrivateEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -180,10 +180,10 @@ public final class KustoFunctions {
      * API Version: 2021-08-27.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.kusto.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.kusto.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -191,10 +191,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(io.pulumi.azurenative.kusto.inputs.GetReadOnlyFollowingDatabaseArgs args) {
-        return getReadOnlyFollowingDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args) {
+        return getReadOnlyFollowingDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(io.pulumi.azurenative.kusto.inputs.GetReadOnlyFollowingDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> getReadOnlyFollowingDatabase(GetReadOnlyFollowingDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadOnlyFollowingDatabase", TypeShape.of(GetReadOnlyFollowingDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -202,10 +202,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(io.pulumi.azurenative.kusto.inputs.GetReadWriteDatabaseArgs args) {
-        return getReadWriteDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
+        return getReadWriteDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(io.pulumi.azurenative.kusto.inputs.GetReadWriteDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -213,10 +213,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(io.pulumi.azurenative.kusto.inputs.GetScriptArgs args) {
-        return getScript(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
+        return getScript(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScriptResult> getScript(io.pulumi.azurenative.kusto.inputs.GetScriptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -224,10 +224,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(io.pulumi.azurenative.kusto.inputs.ListClusterFollowerDatabasesArgs args) {
-        return listClusterFollowerDatabases(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args) {
+        return listClusterFollowerDatabases(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(io.pulumi.azurenative.kusto.inputs.ListClusterFollowerDatabasesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListClusterFollowerDatabasesResult> listClusterFollowerDatabases(ListClusterFollowerDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterFollowerDatabases", TypeShape.of(ListClusterFollowerDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -235,10 +235,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(io.pulumi.azurenative.kusto.inputs.ListClusterLanguageExtensionsArgs args) {
-        return listClusterLanguageExtensions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args) {
+        return listClusterLanguageExtensions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(io.pulumi.azurenative.kusto.inputs.ListClusterLanguageExtensionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListClusterLanguageExtensionsResult> listClusterLanguageExtensions(ListClusterLanguageExtensionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterLanguageExtensions", TypeShape.of(ListClusterLanguageExtensionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -246,10 +246,10 @@ public final class KustoFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(io.pulumi.azurenative.kusto.inputs.ListDatabasePrincipalsArgs args) {
-        return listDatabasePrincipals(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args) {
+        return listDatabasePrincipals(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(io.pulumi.azurenative.kusto.inputs.ListDatabasePrincipalsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDatabasePrincipalsResult> listDatabasePrincipals(ListDatabasePrincipalsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:listDatabasePrincipals", TypeShape.of(ListDatabasePrincipalsResult.class), args, Utilities.withVersion(options));
     }
 }

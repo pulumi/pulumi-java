@@ -6,6 +6,7 @@ package io.pulumi.googlenative.monitoring_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.AlertPolicyArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.AlertStrategyResponse;
@@ -216,7 +217,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AlertPolicy(String name, @Nullable AlertPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:monitoring/v3:AlertPolicy", name, args == null ? AlertPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:monitoring/v3:AlertPolicy", name, args == null ? AlertPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AlertPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

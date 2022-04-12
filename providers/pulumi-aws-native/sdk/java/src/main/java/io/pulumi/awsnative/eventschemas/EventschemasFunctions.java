@@ -16,10 +16,10 @@ public final class EventschemasFunctions {
      * Resource Type definition for AWS::EventSchemas::RegistryPolicy
      * 
      */
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(io.pulumi.awsnative.eventschemas.inputs.GetRegistryPolicyArgs args) {
-        return getRegistryPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args) {
+        return getRegistryPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(io.pulumi.awsnative.eventschemas.inputs.GetRegistryPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eventschemas:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

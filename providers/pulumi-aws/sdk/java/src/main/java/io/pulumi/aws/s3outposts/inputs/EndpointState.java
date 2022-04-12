@@ -6,6 +6,7 @@ package io.pulumi.aws.s3outposts.inputs;
 import io.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Output<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> outpostId;
 
     public Output<String> getOutpostId() {
-        return this.outpostId == null ? Output.empty() : this.outpostId;
+        return this.outpostId == null ? Codegen.empty() : this.outpostId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
+        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public EndpointState(
@@ -111,13 +112,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointState() {
-        this.arn = Output.empty();
-        this.cidrBlock = Output.empty();
-        this.creationTime = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.outpostId = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.subnetId = Output.empty();
+        this.arn = Codegen.empty();
+        this.cidrBlock = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.outpostId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
@@ -165,7 +166,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder creationTime(@Nullable Output<String> creationTime) {
@@ -173,7 +174,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
@@ -181,7 +182,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(EndpointNetworkInterfaceGetArgs... networkInterfaces) {
@@ -192,7 +193,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Output.ofNullable(outpostId);
+            this.outpostId = Codegen.ofNullable(outpostId);
             return this;
         }
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
@@ -200,7 +201,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Output.ofNullable(securityGroupId);
+            this.securityGroupId = Codegen.ofNullable(securityGroupId);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -208,7 +209,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public EndpointState build() {
             return new EndpointState(arn, cidrBlock, creationTime, networkInterfaces, outpostId, securityGroupId, subnetId);

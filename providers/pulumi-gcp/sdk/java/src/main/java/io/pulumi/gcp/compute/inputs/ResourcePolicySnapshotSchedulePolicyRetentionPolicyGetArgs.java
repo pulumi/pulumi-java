@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
       private final @Nullable Output<String> onSourceDiskDelete;
 
     public Output<String> getOnSourceDiskDelete() {
-        return this.onSourceDiskDelete == null ? Output.empty() : this.onSourceDiskDelete;
+        return this.onSourceDiskDelete == null ? Codegen.empty() : this.onSourceDiskDelete;
     }
 
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs(
@@ -48,8 +49,8 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
     }
 
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs() {
-        this.maxRetentionDays = Output.empty();
-        this.onSourceDiskDelete = Output.empty();
+        this.maxRetentionDays = Codegen.empty();
+        this.onSourceDiskDelete = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs ex
             return this;
         }
         public Builder onSourceDiskDelete(@Nullable String onSourceDiskDelete) {
-            this.onSourceDiskDelete = Output.ofNullable(onSourceDiskDelete);
+            this.onSourceDiskDelete = Codegen.ofNullable(onSourceDiskDelete);
             return this;
         }        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs(maxRetentionDays, onSourceDiskDelete);

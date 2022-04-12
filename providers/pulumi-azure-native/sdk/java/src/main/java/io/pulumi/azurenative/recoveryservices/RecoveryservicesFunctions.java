@@ -51,10 +51,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.recoveryservices.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.recoveryservices.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetProtectedItemResult> getProtectedItem(io.pulumi.azurenative.recoveryservices.inputs.GetProtectedItemArgs args) {
-        return getProtectedItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProtectedItemResult> getProtectedItem(GetProtectedItemArgs args) {
+        return getProtectedItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProtectedItemResult> getProtectedItem(io.pulumi.azurenative.recoveryservices.inputs.GetProtectedItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProtectedItemResult> getProtectedItem(GetProtectedItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectedItem", TypeShape.of(GetProtectedItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionContainerArgs args) {
-        return getProtectionContainer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args) {
+        return getProtectionContainer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProtectionContainerResult> getProtectionContainer(GetProtectionContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetProtectionIntentResult> getProtectionIntent(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionIntentArgs args) {
-        return getProtectionIntent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProtectionIntentResult> getProtectionIntent(GetProtectionIntentArgs args) {
+        return getProtectionIntent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProtectionIntentResult> getProtectionIntent(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionIntentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProtectionIntentResult> getProtectionIntent(GetProtectionIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionIntent", TypeShape.of(GetProtectionIntentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,20 +95,20 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetProtectionPolicyResult> getProtectionPolicy(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionPolicyArgs args) {
-        return getProtectionPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProtectionPolicyResult> getProtectionPolicy(GetProtectionPolicyArgs args) {
+        return getProtectionPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProtectionPolicyResult> getProtectionPolicy(io.pulumi.azurenative.recoveryservices.inputs.GetProtectionPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProtectionPolicyResult> getProtectionPolicy(GetProtectionPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionPolicy", TypeShape.of(GetProtectionPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2018-12-20.
      * 
      */
-    public static CompletableFuture<GetRecoveryPointAccessTokenResult> getRecoveryPointAccessToken(io.pulumi.azurenative.recoveryservices.inputs.GetRecoveryPointAccessTokenArgs args) {
-        return getRecoveryPointAccessToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRecoveryPointAccessTokenResult> getRecoveryPointAccessToken(GetRecoveryPointAccessTokenArgs args) {
+        return getRecoveryPointAccessToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRecoveryPointAccessTokenResult> getRecoveryPointAccessToken(io.pulumi.azurenative.recoveryservices.inputs.GetRecoveryPointAccessTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRecoveryPointAccessTokenResult> getRecoveryPointAccessToken(GetRecoveryPointAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getRecoveryPointAccessToken", TypeShape.of(GetRecoveryPointAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -116,10 +116,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationFabricResult> getReplicationFabric(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationFabricArgs args) {
-        return getReplicationFabric(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationFabricResult> getReplicationFabric(GetReplicationFabricArgs args) {
+        return getReplicationFabric(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationFabricResult> getReplicationFabric(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationFabricArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationFabricResult> getReplicationFabric(GetReplicationFabricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationFabric", TypeShape.of(GetReplicationFabricResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -127,10 +127,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationMigrationItemResult> getReplicationMigrationItem(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationMigrationItemArgs args) {
-        return getReplicationMigrationItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationMigrationItemResult> getReplicationMigrationItem(GetReplicationMigrationItemArgs args) {
+        return getReplicationMigrationItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationMigrationItemResult> getReplicationMigrationItem(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationMigrationItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationMigrationItemResult> getReplicationMigrationItem(GetReplicationMigrationItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationMigrationItem", TypeShape.of(GetReplicationMigrationItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -138,10 +138,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationNetworkMappingResult> getReplicationNetworkMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationNetworkMappingArgs args) {
-        return getReplicationNetworkMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationNetworkMappingResult> getReplicationNetworkMapping(GetReplicationNetworkMappingArgs args) {
+        return getReplicationNetworkMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationNetworkMappingResult> getReplicationNetworkMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationNetworkMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationNetworkMappingResult> getReplicationNetworkMapping(GetReplicationNetworkMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationNetworkMapping", TypeShape.of(GetReplicationNetworkMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -149,10 +149,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationPolicyArgs args) {
-        return getReplicationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args) {
+        return getReplicationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationPolicyResult> getReplicationPolicy(GetReplicationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -160,10 +160,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationProtectedItemResult> getReplicationProtectedItem(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationProtectedItemArgs args) {
-        return getReplicationProtectedItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationProtectedItemResult> getReplicationProtectedItem(GetReplicationProtectedItemArgs args) {
+        return getReplicationProtectedItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationProtectedItemResult> getReplicationProtectedItem(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationProtectedItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationProtectedItemResult> getReplicationProtectedItem(GetReplicationProtectedItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationProtectedItem", TypeShape.of(GetReplicationProtectedItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -171,10 +171,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationProtectionContainerMappingResult> getReplicationProtectionContainerMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationProtectionContainerMappingArgs args) {
-        return getReplicationProtectionContainerMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationProtectionContainerMappingResult> getReplicationProtectionContainerMapping(GetReplicationProtectionContainerMappingArgs args) {
+        return getReplicationProtectionContainerMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationProtectionContainerMappingResult> getReplicationProtectionContainerMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationProtectionContainerMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationProtectionContainerMappingResult> getReplicationProtectionContainerMapping(GetReplicationProtectionContainerMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationProtectionContainerMapping", TypeShape.of(GetReplicationProtectionContainerMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -182,10 +182,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationRecoveryPlanResult> getReplicationRecoveryPlan(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationRecoveryPlanArgs args) {
-        return getReplicationRecoveryPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationRecoveryPlanResult> getReplicationRecoveryPlan(GetReplicationRecoveryPlanArgs args) {
+        return getReplicationRecoveryPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationRecoveryPlanResult> getReplicationRecoveryPlan(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationRecoveryPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationRecoveryPlanResult> getReplicationRecoveryPlan(GetReplicationRecoveryPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationRecoveryPlan", TypeShape.of(GetReplicationRecoveryPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -193,10 +193,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> getReplicationRecoveryServicesProvider(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationRecoveryServicesProviderArgs args) {
-        return getReplicationRecoveryServicesProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> getReplicationRecoveryServicesProvider(GetReplicationRecoveryServicesProviderArgs args) {
+        return getReplicationRecoveryServicesProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> getReplicationRecoveryServicesProvider(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationRecoveryServicesProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> getReplicationRecoveryServicesProvider(GetReplicationRecoveryServicesProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationRecoveryServicesProvider", TypeShape.of(GetReplicationRecoveryServicesProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -204,10 +204,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationStorageClassificationMappingResult> getReplicationStorageClassificationMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationStorageClassificationMappingArgs args) {
-        return getReplicationStorageClassificationMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationStorageClassificationMappingResult> getReplicationStorageClassificationMapping(GetReplicationStorageClassificationMappingArgs args) {
+        return getReplicationStorageClassificationMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationStorageClassificationMappingResult> getReplicationStorageClassificationMapping(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationStorageClassificationMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationStorageClassificationMappingResult> getReplicationStorageClassificationMapping(GetReplicationStorageClassificationMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationStorageClassificationMapping", TypeShape.of(GetReplicationStorageClassificationMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -215,20 +215,20 @@ public final class RecoveryservicesFunctions {
      * API Version: 2018-07-10.
      * 
      */
-    public static CompletableFuture<GetReplicationvCenterResult> getReplicationvCenter(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationvCenterArgs args) {
-        return getReplicationvCenter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationvCenterResult> getReplicationvCenter(GetReplicationvCenterArgs args) {
+        return getReplicationvCenter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationvCenterResult> getReplicationvCenter(io.pulumi.azurenative.recoveryservices.inputs.GetReplicationvCenterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationvCenterResult> getReplicationvCenter(GetReplicationvCenterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationvCenter", TypeShape.of(GetReplicationvCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourceGuardProxyResult> getResourceGuardProxy(io.pulumi.azurenative.recoveryservices.inputs.GetResourceGuardProxyArgs args) {
-        return getResourceGuardProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceGuardProxyResult> getResourceGuardProxy(GetResourceGuardProxyArgs args) {
+        return getResourceGuardProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceGuardProxyResult> getResourceGuardProxy(io.pulumi.azurenative.recoveryservices.inputs.GetResourceGuardProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceGuardProxyResult> getResourceGuardProxy(GetResourceGuardProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getResourceGuardProxy", TypeShape.of(GetResourceGuardProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -236,10 +236,10 @@ public final class RecoveryservicesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(io.pulumi.azurenative.recoveryservices.inputs.GetVaultArgs args) {
-        return getVault(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+        return getVault(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVaultResult> getVault(io.pulumi.azurenative.recoveryservices.inputs.GetVaultArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
 }

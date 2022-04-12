@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -55,7 +56,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public ApplicationPackageArgs(
@@ -70,10 +71,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationPackageArgs() {
-        this.accountName = Output.empty();
-        this.applicationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.versionName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.applicationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public ApplicationPackageArgs build() {
             return new ApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);

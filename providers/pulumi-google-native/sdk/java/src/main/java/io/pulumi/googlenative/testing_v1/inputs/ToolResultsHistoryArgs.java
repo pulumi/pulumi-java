@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ToolResultsHistoryArgs() {
-        this.historyId = Output.empty();
-        this.project = Output.empty();
+        this.historyId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {

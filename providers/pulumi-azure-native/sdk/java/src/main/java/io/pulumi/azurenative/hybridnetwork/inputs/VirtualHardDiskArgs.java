@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualHardDiskArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public VirtualHardDiskArgs(@Nullable Output<String> uri) {
@@ -34,7 +35,7 @@ public final class VirtualHardDiskArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VirtualHardDiskArgs() {
-        this.uri = Output.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VirtualHardDiskArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public VirtualHardDiskArgs build() {
             return new VirtualHardDiskArgs(uri);

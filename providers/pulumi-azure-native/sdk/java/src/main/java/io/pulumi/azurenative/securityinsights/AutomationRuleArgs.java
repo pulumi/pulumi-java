@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleTriggeringLog
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> automationRuleId;
 
     public Output<String> getAutomationRuleId() {
-        return this.automationRuleId == null ? Output.empty() : this.automationRuleId;
+        return this.automationRuleId == null ? Codegen.empty() : this.automationRuleId;
     }
 
     /**
@@ -128,14 +129,14 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutomationRuleArgs() {
-        this.actions = Output.empty();
-        this.automationRuleId = Output.empty();
-        this.displayName = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.order = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.triggeringLogic = Output.empty();
-        this.workspaceName = Output.empty();
+        this.actions = Codegen.empty();
+        this.automationRuleId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.order = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.triggeringLogic = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automationRuleId(@Nullable String automationRuleId) {
-            this.automationRuleId = Output.ofNullable(automationRuleId);
+            this.automationRuleId = Codegen.ofNullable(automationRuleId);
             return this;
         }
         public Builder displayName(Output<String> displayName) {

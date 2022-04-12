@@ -18,20 +18,20 @@ public final class Dataflow_v1b3Functions {
      * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in `us-central1`.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.dataflow_v1b3.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.dataflow_v1b3.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataflow/v1b3:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the template associated with a template.
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.googlenative.dataflow_v1b3.inputs.GetTemplateArgs args) {
-        return getTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
+        return getTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.googlenative.dataflow_v1b3.inputs.GetTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataflow/v1b3:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

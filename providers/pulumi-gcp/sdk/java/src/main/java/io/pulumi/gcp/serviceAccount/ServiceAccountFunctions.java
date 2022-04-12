@@ -25,10 +25,10 @@ public final class ServiceAccountFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.gcp.serviceAccount.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.gcp.serviceAccount.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccount:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class ServiceAccountFunctions {
      * [the official documentation](https://cloud.google.com/iam/docs/creating-short-lived-service-account-credentials) as well as [iamcredentials.generateAccessToken()](https://cloud.google.com/iam/credentials/reference/rest/v1/projects.serviceAccounts/generateAccessToken)
      * 
      */
-    public static CompletableFuture<GetAccountAccessTokenResult> getAccountAccessToken(io.pulumi.gcp.serviceAccount.inputs.GetAccountAccessTokenArgs args) {
-        return getAccountAccessToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountAccessTokenResult> getAccountAccessToken(GetAccountAccessTokenArgs args) {
+        return getAccountAccessToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountAccessTokenResult> getAccountAccessToken(io.pulumi.gcp.serviceAccount.inputs.GetAccountAccessTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountAccessTokenResult> getAccountAccessToken(GetAccountAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccountAccessToken:getAccountAccessToken", TypeShape.of(GetAccountAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class ServiceAccountFunctions {
      *   `roles/iam.serviceAccountTokenCreator` role on itself.
      * 
      */
-    public static CompletableFuture<GetAccountIdTokenResult> getAccountIdToken(io.pulumi.gcp.serviceAccount.inputs.GetAccountIdTokenArgs args) {
-        return getAccountIdToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountIdTokenResult> getAccountIdToken(GetAccountIdTokenArgs args) {
+        return getAccountIdToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountIdTokenResult> getAccountIdToken(io.pulumi.gcp.serviceAccount.inputs.GetAccountIdTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountIdTokenResult> getAccountIdToken(GetAccountIdTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccountIdToken:getAccountIdToken", TypeShape.of(GetAccountIdTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,10 +74,10 @@ public final class ServiceAccountFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccountKeyResult> getAccountKey(io.pulumi.gcp.serviceAccount.inputs.GetAccountKeyArgs args) {
-        return getAccountKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountKeyResult> getAccountKey(GetAccountKeyArgs args) {
+        return getAccountKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountKeyResult> getAccountKey(io.pulumi.gcp.serviceAccount.inputs.GetAccountKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountKeyResult> getAccountKey(GetAccountKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:serviceAccount/getAccountKey:getAccountKey", TypeShape.of(GetAccountKeyResult.class), args, Utilities.withVersion(options));
     }
 }

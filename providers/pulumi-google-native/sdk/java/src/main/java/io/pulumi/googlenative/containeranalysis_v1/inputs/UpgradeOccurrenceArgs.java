@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateArgs;
@@ -29,7 +30,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<UpgradeDistributionArgs> distribution;
 
     public Output<UpgradeDistributionArgs> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> package_;
 
     public Output<String> getPackage_() {
-        return this.package_ == null ? Output.empty() : this.package_;
+        return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<VersionArgs> parsedVersion;
 
     public Output<VersionArgs> getParsedVersion() {
-        return this.parsedVersion == null ? Output.empty() : this.parsedVersion;
+        return this.parsedVersion == null ? Codegen.empty() : this.parsedVersion;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
     public Output<WindowsUpdateArgs> getWindowsUpdate() {
-        return this.windowsUpdate == null ? Output.empty() : this.windowsUpdate;
+        return this.windowsUpdate == null ? Codegen.empty() : this.windowsUpdate;
     }
 
     public UpgradeOccurrenceArgs(
@@ -77,10 +78,10 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UpgradeOccurrenceArgs() {
-        this.distribution = Output.empty();
-        this.package_ = Output.empty();
-        this.parsedVersion = Output.empty();
-        this.windowsUpdate = Output.empty();
+        this.distribution = Codegen.empty();
+        this.package_ = Codegen.empty();
+        this.parsedVersion = Codegen.empty();
+        this.windowsUpdate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder distribution(@Nullable UpgradeDistributionArgs distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder package_(@Nullable Output<String> package_) {
@@ -122,7 +123,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder package_(@Nullable String package_) {
-            this.package_ = Output.ofNullable(package_);
+            this.package_ = Codegen.ofNullable(package_);
             return this;
         }
         public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
@@ -130,7 +131,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parsedVersion(@Nullable VersionArgs parsedVersion) {
-            this.parsedVersion = Output.ofNullable(parsedVersion);
+            this.parsedVersion = Codegen.ofNullable(parsedVersion);
             return this;
         }
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateArgs> windowsUpdate) {
@@ -138,7 +139,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder windowsUpdate(@Nullable WindowsUpdateArgs windowsUpdate) {
-            this.windowsUpdate = Output.ofNullable(windowsUpdate);
+            this.windowsUpdate = Codegen.ofNullable(windowsUpdate);
             return this;
         }        public UpgradeOccurrenceArgs build() {
             return new UpgradeOccurrenceArgs(distribution, package_, parsedVersion, windowsUpdate);

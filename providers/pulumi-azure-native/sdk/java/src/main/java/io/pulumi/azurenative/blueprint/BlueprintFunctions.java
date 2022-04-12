@@ -33,10 +33,10 @@ public final class BlueprintFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: PolicyAssignmentArtifact, RoleAssignmentArtifact, TemplateArtifact. */
-    public static CompletableFuture<GetArtifactResult> getArtifact(io.pulumi.azurenative.blueprint.inputs.GetArtifactArgs args) {
-        return getArtifact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArtifactResult> getArtifact(GetArtifactArgs args) {
+        return getArtifact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArtifactResult> getArtifact(io.pulumi.azurenative.blueprint.inputs.GetArtifactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArtifactResult> getArtifact(GetArtifactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getArtifact", TypeShape.of(GetArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,10 +44,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(io.pulumi.azurenative.blueprint.inputs.GetAssignmentArgs args) {
-        return getAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
+        return getAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssignmentResult> getAssignment(io.pulumi.azurenative.blueprint.inputs.GetAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,10 +55,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetBlueprintResult> getBlueprint(io.pulumi.azurenative.blueprint.inputs.GetBlueprintArgs args) {
-        return getBlueprint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBlueprintResult> getBlueprint(GetBlueprintArgs args) {
+        return getBlueprint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBlueprintResult> getBlueprint(io.pulumi.azurenative.blueprint.inputs.GetBlueprintArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBlueprintResult> getBlueprint(GetBlueprintArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getBlueprint", TypeShape.of(GetBlueprintResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(io.pulumi.azurenative.blueprint.inputs.GetPolicyAssignmentArtifactArgs args) {
-        return getPolicyAssignmentArtifact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args) {
+        return getPolicyAssignmentArtifact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(io.pulumi.azurenative.blueprint.inputs.GetPolicyAssignmentArtifactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyAssignmentArtifactResult> getPolicyAssignmentArtifact(GetPolicyAssignmentArtifactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPolicyAssignmentArtifact", TypeShape.of(GetPolicyAssignmentArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,10 +77,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(io.pulumi.azurenative.blueprint.inputs.GetPublishedBlueprintArgs args) {
-        return getPublishedBlueprint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args) {
+        return getPublishedBlueprint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(io.pulumi.azurenative.blueprint.inputs.GetPublishedBlueprintArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublishedBlueprintResult> getPublishedBlueprint(GetPublishedBlueprintArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPublishedBlueprint", TypeShape.of(GetPublishedBlueprintResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(io.pulumi.azurenative.blueprint.inputs.GetRoleAssignmentArtifactArgs args) {
-        return getRoleAssignmentArtifact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args) {
+        return getRoleAssignmentArtifact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(io.pulumi.azurenative.blueprint.inputs.GetRoleAssignmentArtifactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleAssignmentArtifactResult> getRoleAssignmentArtifact(GetRoleAssignmentArtifactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getRoleAssignmentArtifact", TypeShape.of(GetRoleAssignmentArtifactResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class BlueprintFunctions {
      * API Version: 2018-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(io.pulumi.azurenative.blueprint.inputs.GetTemplateArtifactArgs args) {
-        return getTemplateArtifact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args) {
+        return getTemplateArtifact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(io.pulumi.azurenative.blueprint.inputs.GetTemplateArtifactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateArtifactResult> getTemplateArtifact(GetTemplateArtifactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getTemplateArtifact", TypeShape.of(GetTemplateArtifactResult.class), args, Utilities.withVersion(options));
     }
 }

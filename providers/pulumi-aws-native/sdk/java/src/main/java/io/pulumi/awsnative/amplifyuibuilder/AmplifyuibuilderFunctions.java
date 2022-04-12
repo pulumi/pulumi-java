@@ -18,20 +18,20 @@ public final class AmplifyuibuilderFunctions {
      * Definition of AWS::AmplifyUIBuilder::Component Resource Type
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(io.pulumi.awsnative.amplifyuibuilder.inputs.GetComponentArgs args) {
-        return getComponent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+        return getComponent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComponentResult> getComponent(io.pulumi.awsnative.amplifyuibuilder.inputs.GetComponentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
      * 
      */
-    public static CompletableFuture<GetThemeResult> getTheme(io.pulumi.awsnative.amplifyuibuilder.inputs.GetThemeArgs args) {
-        return getTheme(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args) {
+        return getTheme(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetThemeResult> getTheme(io.pulumi.awsnative.amplifyuibuilder.inputs.GetThemeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }
 }

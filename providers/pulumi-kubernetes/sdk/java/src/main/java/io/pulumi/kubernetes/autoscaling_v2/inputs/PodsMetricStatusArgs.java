@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class PodsMetricStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PodsMetricStatusArgs() {
-        this.current = Output.empty();
-        this.metric = Output.empty();
+        this.current = Codegen.empty();
+        this.metric = Codegen.empty();
     }
 
     public static Builder builder() {

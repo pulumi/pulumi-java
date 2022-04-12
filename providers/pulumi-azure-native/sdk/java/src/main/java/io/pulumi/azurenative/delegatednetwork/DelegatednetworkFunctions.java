@@ -21,10 +21,10 @@ public final class DelegatednetworkFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetControllerDetailsArgs args) {
-        return getControllerDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(GetControllerDetailsArgs args) {
+        return getControllerDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetControllerDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetControllerDetailsResult> getControllerDetails(GetControllerDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getControllerDetails", TypeShape.of(GetControllerDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class DelegatednetworkFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetDelegatedSubnetServiceDetailsArgs args) {
-        return getDelegatedSubnetServiceDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(GetDelegatedSubnetServiceDetailsArgs args) {
+        return getDelegatedSubnetServiceDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetDelegatedSubnetServiceDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDelegatedSubnetServiceDetailsResult> getDelegatedSubnetServiceDetails(GetDelegatedSubnetServiceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getDelegatedSubnetServiceDetails", TypeShape.of(GetDelegatedSubnetServiceDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class DelegatednetworkFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetOrchestratorInstanceServiceDetailsArgs args) {
-        return getOrchestratorInstanceServiceDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(GetOrchestratorInstanceServiceDetailsArgs args) {
+        return getOrchestratorInstanceServiceDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(io.pulumi.azurenative.delegatednetwork.inputs.GetOrchestratorInstanceServiceDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrchestratorInstanceServiceDetailsResult> getOrchestratorInstanceServiceDetails(GetOrchestratorInstanceServiceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getOrchestratorInstanceServiceDetails", TypeShape.of(GetOrchestratorInstanceServiceDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

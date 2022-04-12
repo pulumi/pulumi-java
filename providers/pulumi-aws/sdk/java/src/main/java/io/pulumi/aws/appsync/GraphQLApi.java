@@ -14,6 +14,7 @@ import io.pulumi.aws.appsync.outputs.GraphQLApiUserPoolConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -241,7 +242,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GraphQLApi(String name, GraphQLApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/graphQLApi:GraphQLApi", name, args == null ? GraphQLApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/graphQLApi:GraphQLApi", name, args == null ? GraphQLApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GraphQLApi(String name, Output<String> id, @Nullable GraphQLApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

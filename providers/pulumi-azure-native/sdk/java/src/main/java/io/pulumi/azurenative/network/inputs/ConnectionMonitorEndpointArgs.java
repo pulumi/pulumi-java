@@ -10,6 +10,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
 
     public Output<Either<String,CoverageLevel>> getCoverageLevel() {
-        return this.coverageLevel == null ? Output.empty() : this.coverageLevel;
+        return this.coverageLevel == null ? Codegen.empty() : this.coverageLevel;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
 
     public Output<ConnectionMonitorEndpointFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
 
     public Output<ConnectionMonitorEndpointScopeArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,EndpointType>> type;
 
     public Output<Either<String,EndpointType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConnectionMonitorEndpointArgs(
@@ -118,13 +119,13 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     }
 
     private ConnectionMonitorEndpointArgs() {
-        this.address = Output.empty();
-        this.coverageLevel = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.resourceId = Output.empty();
-        this.scope = Output.empty();
-        this.type = Output.empty();
+        this.address = Codegen.empty();
+        this.coverageLevel = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder coverageLevel(@Nullable Output<Either<String,CoverageLevel>> coverageLevel) {
@@ -172,7 +173,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder coverageLevel(@Nullable Either<String,CoverageLevel> coverageLevel) {
-            this.coverageLevel = Output.ofNullable(coverageLevel);
+            this.coverageLevel = Codegen.ofNullable(coverageLevel);
             return this;
         }
         public Builder filter(@Nullable Output<ConnectionMonitorEndpointFilterArgs> filter) {
@@ -180,7 +181,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder filter(@Nullable ConnectionMonitorEndpointFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -196,7 +197,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder scope(@Nullable Output<ConnectionMonitorEndpointScopeArgs> scope) {
@@ -204,7 +205,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder scope(@Nullable ConnectionMonitorEndpointScopeArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,EndpointType>> type) {
@@ -212,7 +213,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable Either<String,EndpointType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConnectionMonitorEndpointArgs build() {
             return new ConnectionMonitorEndpointArgs(address, coverageLevel, filter, name, resourceId, scope, type);

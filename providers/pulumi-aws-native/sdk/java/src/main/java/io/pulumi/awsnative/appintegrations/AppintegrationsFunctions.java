@@ -18,20 +18,20 @@ public final class AppintegrationsFunctions {
      * Resource Type definition for AWS::AppIntegrations::DataIntegration
      * 
      */
-    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(io.pulumi.awsnative.appintegrations.inputs.GetDataIntegrationArgs args) {
-        return getDataIntegration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args) {
+        return getDataIntegration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(io.pulumi.awsnative.appintegrations.inputs.GetDataIntegrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getDataIntegration", TypeShape.of(GetDataIntegrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppIntegrations::EventIntegration
      * 
      */
-    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(io.pulumi.awsnative.appintegrations.inputs.GetEventIntegrationArgs args) {
-        return getEventIntegration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args) {
+        return getEventIntegration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(io.pulumi.awsnative.appintegrations.inputs.GetEventIntegrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getEventIntegration", TypeShape.of(GetEventIntegrationResult.class), args, Utilities.withVersion(options));
     }
 }

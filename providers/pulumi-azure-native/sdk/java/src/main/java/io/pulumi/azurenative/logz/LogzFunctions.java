@@ -36,10 +36,10 @@ public final class LogzFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(io.pulumi.azurenative.logz.inputs.GetMetricsSourceArgs args) {
-        return getMetricsSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args) {
+        return getMetricsSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(io.pulumi.azurenative.logz.inputs.GetMetricsSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetricsSourceResult> getMetricsSource(GetMetricsSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSource", TypeShape.of(GetMetricsSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,30 +47,30 @@ public final class LogzFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(io.pulumi.azurenative.logz.inputs.GetMetricsSourceTagRuleArgs args) {
-        return getMetricsSourceTagRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args) {
+        return getMetricsSourceTagRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(io.pulumi.azurenative.logz.inputs.GetMetricsSourceTagRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetricsSourceTagRuleResult> getMetricsSourceTagRule(GetMetricsSourceTagRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMetricsSourceTagRule", TypeShape.of(GetMetricsSourceTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(io.pulumi.azurenative.logz.inputs.GetMonitorArgs args) {
-        return getMonitor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+        return getMonitor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMonitorResult> getMonitor(io.pulumi.azurenative.logz.inputs.GetMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountResult> getSubAccount(io.pulumi.azurenative.logz.inputs.GetSubAccountArgs args) {
-        return getSubAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubAccountResult> getSubAccount(GetSubAccountArgs args) {
+        return getSubAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubAccountResult> getSubAccount(io.pulumi.azurenative.logz.inputs.GetSubAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubAccountResult> getSubAccount(GetSubAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccount", TypeShape.of(GetSubAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -78,10 +78,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(io.pulumi.azurenative.logz.inputs.GetSubAccountTagRuleArgs args) {
-        return getSubAccountTagRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args) {
+        return getSubAccountTagRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(io.pulumi.azurenative.logz.inputs.GetSubAccountTagRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubAccountTagRuleResult> getSubAccountTagRule(GetSubAccountTagRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccountTagRule", TypeShape.of(GetSubAccountTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,10 +89,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetTagRuleResult> getTagRule(io.pulumi.azurenative.logz.inputs.GetTagRuleArgs args) {
-        return getTagRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args) {
+        return getTagRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagRuleResult> getTagRule(io.pulumi.azurenative.logz.inputs.GetTagRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getTagRule", TypeShape.of(GetTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -100,10 +100,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(io.pulumi.azurenative.logz.inputs.ListMonitorMonitoredResourcesArgs args) {
-        return listMonitorMonitoredResources(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
+        return listMonitorMonitoredResources(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(io.pulumi.azurenative.logz.inputs.ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -111,10 +111,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(io.pulumi.azurenative.logz.inputs.ListMonitorUserRolesArgs args) {
-        return listMonitorUserRoles(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args) {
+        return listMonitorUserRoles(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(io.pulumi.azurenative.logz.inputs.ListMonitorUserRolesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorUserRolesResult> listMonitorUserRoles(ListMonitorUserRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorUserRoles", TypeShape.of(ListMonitorUserRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -122,10 +122,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(io.pulumi.azurenative.logz.inputs.ListMonitorVMHostsArgs args) {
-        return listMonitorVMHosts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args) {
+        return listMonitorVMHosts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(io.pulumi.azurenative.logz.inputs.ListMonitorVMHostsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorVMHostsResult> listMonitorVMHosts(ListMonitorVMHostsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorVMHosts", TypeShape.of(ListMonitorVMHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,10 +133,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(io.pulumi.azurenative.logz.inputs.ListSubAccountMonitoredResourcesArgs args) {
-        return listSubAccountMonitoredResources(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args) {
+        return listSubAccountMonitoredResources(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(io.pulumi.azurenative.logz.inputs.ListSubAccountMonitoredResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSubAccountMonitoredResourcesResult> listSubAccountMonitoredResources(ListSubAccountMonitoredResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountMonitoredResources", TypeShape.of(ListSubAccountMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -144,10 +144,10 @@ public final class LogzFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(io.pulumi.azurenative.logz.inputs.ListSubAccountVMHostsArgs args) {
-        return listSubAccountVMHosts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args) {
+        return listSubAccountVMHosts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(io.pulumi.azurenative.logz.inputs.ListSubAccountVMHostsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSubAccountVMHostsResult> listSubAccountVMHosts(ListSubAccountVMHostsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listSubAccountVMHosts", TypeShape.of(ListSubAccountVMHostsResult.class), args, Utilities.withVersion(options));
     }
 }

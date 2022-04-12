@@ -121,10 +121,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(io.pulumi.azurenative.apimanagement.inputs.GetApiArgs args) {
-        return getApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args) {
+        return getApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiResult> getApi(io.pulumi.azurenative.apimanagement.inputs.GetApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,10 +132,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnostic(io.pulumi.azurenative.apimanagement.inputs.GetApiDiagnosticArgs args) {
-        return getApiDiagnostic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnostic(GetApiDiagnosticArgs args) {
+        return getApiDiagnostic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnostic(io.pulumi.azurenative.apimanagement.inputs.GetApiDiagnosticArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnostic(GetApiDiagnosticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiDiagnostic", TypeShape.of(GetApiDiagnosticResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,10 +143,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiIssueResult> getApiIssue(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueArgs args) {
-        return getApiIssue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiIssueResult> getApiIssue(GetApiIssueArgs args) {
+        return getApiIssue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiIssueResult> getApiIssue(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiIssueResult> getApiIssue(GetApiIssueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssue", TypeShape.of(GetApiIssueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,10 +154,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachment(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueAttachmentArgs args) {
-        return getApiIssueAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachment(GetApiIssueAttachmentArgs args) {
+        return getApiIssueAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachment(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachment(GetApiIssueAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssueAttachment", TypeShape.of(GetApiIssueAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,10 +165,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueComment(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueCommentArgs args) {
-        return getApiIssueComment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueComment(GetApiIssueCommentArgs args) {
+        return getApiIssueComment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueComment(io.pulumi.azurenative.apimanagement.inputs.GetApiIssueCommentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueComment(GetApiIssueCommentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssueComment", TypeShape.of(GetApiIssueCommentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -176,10 +176,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementService(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceArgs args) {
-        return getApiManagementService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementService(GetApiManagementServiceArgs args) {
+        return getApiManagementService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementService(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementService(GetApiManagementServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementService", TypeShape.of(GetApiManagementServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -188,12 +188,12 @@ public final class ApimanagementFunctions {
      * 
      */
     public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier() {
-        return getApiManagementServiceDomainOwnershipIdentifier(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceDomainOwnershipIdentifierArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getApiManagementServiceDomainOwnershipIdentifier(GetApiManagementServiceDomainOwnershipIdentifierArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceDomainOwnershipIdentifierArgs args) {
-        return getApiManagementServiceDomainOwnershipIdentifier(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(GetApiManagementServiceDomainOwnershipIdentifierArgs args) {
+        return getApiManagementServiceDomainOwnershipIdentifier(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceDomainOwnershipIdentifierArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(GetApiManagementServiceDomainOwnershipIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceDomainOwnershipIdentifier", TypeShape.of(GetApiManagementServiceDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,10 +201,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoToken(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceSsoTokenArgs args) {
-        return getApiManagementServiceSsoToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoToken(GetApiManagementServiceSsoTokenArgs args) {
+        return getApiManagementServiceSsoToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoToken(io.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceSsoTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoToken(GetApiManagementServiceSsoTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceSsoToken", TypeShape.of(GetApiManagementServiceSsoTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -212,10 +212,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiOperationResult> getApiOperation(io.pulumi.azurenative.apimanagement.inputs.GetApiOperationArgs args) {
-        return getApiOperation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiOperationResult> getApiOperation(GetApiOperationArgs args) {
+        return getApiOperation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiOperationResult> getApiOperation(io.pulumi.azurenative.apimanagement.inputs.GetApiOperationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiOperationResult> getApiOperation(GetApiOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperation", TypeShape.of(GetApiOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -223,10 +223,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicy(io.pulumi.azurenative.apimanagement.inputs.GetApiOperationPolicyArgs args) {
-        return getApiOperationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicy(GetApiOperationPolicyArgs args) {
+        return getApiOperationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicy(io.pulumi.azurenative.apimanagement.inputs.GetApiOperationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicy(GetApiOperationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperationPolicy", TypeShape.of(GetApiOperationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -234,10 +234,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiPolicyResult> getApiPolicy(io.pulumi.azurenative.apimanagement.inputs.GetApiPolicyArgs args) {
-        return getApiPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiPolicyResult> getApiPolicy(GetApiPolicyArgs args) {
+        return getApiPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiPolicyResult> getApiPolicy(io.pulumi.azurenative.apimanagement.inputs.GetApiPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiPolicyResult> getApiPolicy(GetApiPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiPolicy", TypeShape.of(GetApiPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -245,10 +245,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiReleaseResult> getApiRelease(io.pulumi.azurenative.apimanagement.inputs.GetApiReleaseArgs args) {
-        return getApiRelease(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiReleaseResult> getApiRelease(GetApiReleaseArgs args) {
+        return getApiRelease(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiReleaseResult> getApiRelease(io.pulumi.azurenative.apimanagement.inputs.GetApiReleaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiReleaseResult> getApiRelease(GetApiReleaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiRelease", TypeShape.of(GetApiReleaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -256,10 +256,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiSchemaResult> getApiSchema(io.pulumi.azurenative.apimanagement.inputs.GetApiSchemaArgs args) {
-        return getApiSchema(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiSchemaResult> getApiSchema(GetApiSchemaArgs args) {
+        return getApiSchema(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiSchemaResult> getApiSchema(io.pulumi.azurenative.apimanagement.inputs.GetApiSchemaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiSchemaResult> getApiSchema(GetApiSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiSchema", TypeShape.of(GetApiSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -267,10 +267,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescription(io.pulumi.azurenative.apimanagement.inputs.GetApiTagDescriptionArgs args) {
-        return getApiTagDescription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescription(GetApiTagDescriptionArgs args) {
+        return getApiTagDescription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescription(io.pulumi.azurenative.apimanagement.inputs.GetApiTagDescriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescription(GetApiTagDescriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiTagDescription", TypeShape.of(GetApiTagDescriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -278,10 +278,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(io.pulumi.azurenative.apimanagement.inputs.GetApiVersionSetArgs args) {
-        return getApiVersionSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args) {
+        return getApiVersionSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(io.pulumi.azurenative.apimanagement.inputs.GetApiVersionSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -289,10 +289,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServer(io.pulumi.azurenative.apimanagement.inputs.GetAuthorizationServerArgs args) {
-        return getAuthorizationServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServer(GetAuthorizationServerArgs args) {
+        return getAuthorizationServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServer(io.pulumi.azurenative.apimanagement.inputs.GetAuthorizationServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServer(GetAuthorizationServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getAuthorizationServer", TypeShape.of(GetAuthorizationServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -300,10 +300,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetBackendResult> getBackend(io.pulumi.azurenative.apimanagement.inputs.GetBackendArgs args) {
-        return getBackend(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackendResult> getBackend(GetBackendArgs args) {
+        return getBackend(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendResult> getBackend(io.pulumi.azurenative.apimanagement.inputs.GetBackendArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackendResult> getBackend(GetBackendArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getBackend", TypeShape.of(GetBackendResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -311,10 +311,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(io.pulumi.azurenative.apimanagement.inputs.GetCacheArgs args) {
-        return getCache(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
+        return getCache(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCacheResult> getCache(io.pulumi.azurenative.apimanagement.inputs.GetCacheArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -322,10 +322,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.apimanagement.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.apimanagement.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -333,10 +333,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetContentItemResult> getContentItem(io.pulumi.azurenative.apimanagement.inputs.GetContentItemArgs args) {
-        return getContentItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContentItemResult> getContentItem(GetContentItemArgs args) {
+        return getContentItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContentItemResult> getContentItem(io.pulumi.azurenative.apimanagement.inputs.GetContentItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContentItemResult> getContentItem(GetContentItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentItem", TypeShape.of(GetContentItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -344,10 +344,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetContentTypeResult> getContentType(io.pulumi.azurenative.apimanagement.inputs.GetContentTypeArgs args) {
-        return getContentType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContentTypeResult> getContentType(GetContentTypeArgs args) {
+        return getContentType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContentTypeResult> getContentType(io.pulumi.azurenative.apimanagement.inputs.GetContentTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContentTypeResult> getContentType(GetContentTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentType", TypeShape.of(GetContentTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -355,10 +355,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDiagnosticResult> getDiagnostic(io.pulumi.azurenative.apimanagement.inputs.GetDiagnosticArgs args) {
-        return getDiagnostic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiagnosticResult> getDiagnostic(GetDiagnosticArgs args) {
+        return getDiagnostic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiagnosticResult> getDiagnostic(io.pulumi.azurenative.apimanagement.inputs.GetDiagnosticArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiagnosticResult> getDiagnostic(GetDiagnosticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getDiagnostic", TypeShape.of(GetDiagnosticResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -366,10 +366,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplate(io.pulumi.azurenative.apimanagement.inputs.GetEmailTemplateArgs args) {
-        return getEmailTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplate(GetEmailTemplateArgs args) {
+        return getEmailTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplate(io.pulumi.azurenative.apimanagement.inputs.GetEmailTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplate(GetEmailTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getEmailTemplate", TypeShape.of(GetEmailTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -377,10 +377,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.apimanagement.inputs.GetGatewayArgs args) {
-        return getGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+        return getGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.apimanagement.inputs.GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -388,10 +388,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthority(io.pulumi.azurenative.apimanagement.inputs.GetGatewayCertificateAuthorityArgs args) {
-        return getGatewayCertificateAuthority(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthority(GetGatewayCertificateAuthorityArgs args) {
+        return getGatewayCertificateAuthority(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthority(io.pulumi.azurenative.apimanagement.inputs.GetGatewayCertificateAuthorityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthority(GetGatewayCertificateAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayCertificateAuthority", TypeShape.of(GetGatewayCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -399,10 +399,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfiguration(io.pulumi.azurenative.apimanagement.inputs.GetGatewayHostnameConfigurationArgs args) {
-        return getGatewayHostnameConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfiguration(GetGatewayHostnameConfigurationArgs args) {
+        return getGatewayHostnameConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfiguration(io.pulumi.azurenative.apimanagement.inputs.GetGatewayHostnameConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfiguration(GetGatewayHostnameConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayHostnameConfiguration", TypeShape.of(GetGatewayHostnameConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -410,10 +410,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.azurenative.apimanagement.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.azurenative.apimanagement.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -421,10 +421,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetIdentityProviderResult> getIdentityProvider(io.pulumi.azurenative.apimanagement.inputs.GetIdentityProviderArgs args) {
-        return getIdentityProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIdentityProviderResult> getIdentityProvider(GetIdentityProviderArgs args) {
+        return getIdentityProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIdentityProviderResult> getIdentityProvider(io.pulumi.azurenative.apimanagement.inputs.GetIdentityProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIdentityProviderResult> getIdentityProvider(GetIdentityProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getIdentityProvider", TypeShape.of(GetIdentityProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -432,10 +432,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetLoggerResult> getLogger(io.pulumi.azurenative.apimanagement.inputs.GetLoggerArgs args) {
-        return getLogger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoggerResult> getLogger(GetLoggerArgs args) {
+        return getLogger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoggerResult> getLogger(io.pulumi.azurenative.apimanagement.inputs.GetLoggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoggerResult> getLogger(GetLoggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getLogger", TypeShape.of(GetLoggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -443,10 +443,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetNamedValueResult> getNamedValue(io.pulumi.azurenative.apimanagement.inputs.GetNamedValueArgs args) {
-        return getNamedValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamedValueResult> getNamedValue(GetNamedValueArgs args) {
+        return getNamedValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamedValueResult> getNamedValue(io.pulumi.azurenative.apimanagement.inputs.GetNamedValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamedValueResult> getNamedValue(GetNamedValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getNamedValue", TypeShape.of(GetNamedValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -454,10 +454,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProvider(io.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderArgs args) {
-        return getOpenIdConnectProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProvider(GetOpenIdConnectProviderArgs args) {
+        return getOpenIdConnectProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProvider(io.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProvider(GetOpenIdConnectProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getOpenIdConnectProvider", TypeShape.of(GetOpenIdConnectProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -465,10 +465,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.apimanagement.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.apimanagement.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -476,10 +476,10 @@ public final class ApimanagementFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByName(io.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNameArgs args) {
-        return getPrivateEndpointConnectionByName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByName(GetPrivateEndpointConnectionByNameArgs args) {
+        return getPrivateEndpointConnectionByName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByName(io.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByName(GetPrivateEndpointConnectionByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPrivateEndpointConnectionByName", TypeShape.of(GetPrivateEndpointConnectionByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -487,10 +487,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.azurenative.apimanagement.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.azurenative.apimanagement.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -498,10 +498,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetProductPolicyResult> getProductPolicy(io.pulumi.azurenative.apimanagement.inputs.GetProductPolicyArgs args) {
-        return getProductPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductPolicyResult> getProductPolicy(GetProductPolicyArgs args) {
+        return getProductPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductPolicyResult> getProductPolicy(io.pulumi.azurenative.apimanagement.inputs.GetProductPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductPolicyResult> getProductPolicy(GetProductPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProductPolicy", TypeShape.of(GetProductPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -509,10 +509,10 @@ public final class ApimanagementFunctions {
      * API Version: 2019-01-01.
      * 
      */
-    public static CompletableFuture<GetPropertyResult> getProperty(io.pulumi.azurenative.apimanagement.inputs.GetPropertyArgs args) {
-        return getProperty(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPropertyResult> getProperty(GetPropertyArgs args) {
+        return getProperty(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPropertyResult> getProperty(io.pulumi.azurenative.apimanagement.inputs.GetPropertyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPropertyResult> getProperty(GetPropertyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -520,10 +520,10 @@ public final class ApimanagementFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSchemaResult> getSchema(io.pulumi.azurenative.apimanagement.inputs.GetSchemaArgs args) {
-        return getSchema(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args) {
+        return getSchema(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSchemaResult> getSchema(io.pulumi.azurenative.apimanagement.inputs.GetSchemaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -531,10 +531,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.azurenative.apimanagement.inputs.GetSubscriptionArgs args) {
-        return getSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+        return getSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.azurenative.apimanagement.inputs.GetSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -542,10 +542,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetTagResult> getTag(io.pulumi.azurenative.apimanagement.inputs.GetTagArgs args) {
-        return getTag(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args) {
+        return getTag(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagResult> getTag(io.pulumi.azurenative.apimanagement.inputs.GetTagArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -553,10 +553,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetTagByApiResult> getTagByApi(io.pulumi.azurenative.apimanagement.inputs.GetTagByApiArgs args) {
-        return getTagByApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagByApiResult> getTagByApi(GetTagByApiArgs args) {
+        return getTagByApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagByApiResult> getTagByApi(io.pulumi.azurenative.apimanagement.inputs.GetTagByApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagByApiResult> getTagByApi(GetTagByApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByApi", TypeShape.of(GetTagByApiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -564,10 +564,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetTagByOperationResult> getTagByOperation(io.pulumi.azurenative.apimanagement.inputs.GetTagByOperationArgs args) {
-        return getTagByOperation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagByOperationResult> getTagByOperation(GetTagByOperationArgs args) {
+        return getTagByOperation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagByOperationResult> getTagByOperation(io.pulumi.azurenative.apimanagement.inputs.GetTagByOperationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagByOperationResult> getTagByOperation(GetTagByOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByOperation", TypeShape.of(GetTagByOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -575,10 +575,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetTagByProductResult> getTagByProduct(io.pulumi.azurenative.apimanagement.inputs.GetTagByProductArgs args) {
-        return getTagByProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagByProductResult> getTagByProduct(GetTagByProductArgs args) {
+        return getTagByProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagByProductResult> getTagByProduct(io.pulumi.azurenative.apimanagement.inputs.GetTagByProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagByProductResult> getTagByProduct(GetTagByProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByProduct", TypeShape.of(GetTagByProductResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -586,10 +586,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.apimanagement.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.apimanagement.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -597,10 +597,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessToken(io.pulumi.azurenative.apimanagement.inputs.GetUserSharedAccessTokenArgs args) {
-        return getUserSharedAccessToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessToken(GetUserSharedAccessTokenArgs args) {
+        return getUserSharedAccessToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessToken(io.pulumi.azurenative.apimanagement.inputs.GetUserSharedAccessTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessToken(GetUserSharedAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUserSharedAccessToken", TypeShape.of(GetUserSharedAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -608,10 +608,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecrets(io.pulumi.azurenative.apimanagement.inputs.ListAuthorizationServerSecretsArgs args) {
-        return listAuthorizationServerSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecrets(ListAuthorizationServerSecretsArgs args) {
+        return listAuthorizationServerSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecrets(io.pulumi.azurenative.apimanagement.inputs.ListAuthorizationServerSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecrets(ListAuthorizationServerSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listAuthorizationServerSecrets", TypeShape.of(ListAuthorizationServerSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -619,10 +619,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecrets(io.pulumi.azurenative.apimanagement.inputs.ListDelegationSettingSecretsArgs args) {
-        return listDelegationSettingSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecrets(ListDelegationSettingSecretsArgs args) {
+        return listDelegationSettingSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecrets(io.pulumi.azurenative.apimanagement.inputs.ListDelegationSettingSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecrets(ListDelegationSettingSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listDelegationSettingSecrets", TypeShape.of(ListDelegationSettingSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -630,10 +630,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeys(io.pulumi.azurenative.apimanagement.inputs.ListGatewayKeysArgs args) {
-        return listGatewayKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeys(ListGatewayKeysArgs args) {
+        return listGatewayKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeys(io.pulumi.azurenative.apimanagement.inputs.ListGatewayKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeys(ListGatewayKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listGatewayKeys", TypeShape.of(ListGatewayKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -641,10 +641,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecrets(io.pulumi.azurenative.apimanagement.inputs.ListIdentityProviderSecretsArgs args) {
-        return listIdentityProviderSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecrets(ListIdentityProviderSecretsArgs args) {
+        return listIdentityProviderSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecrets(io.pulumi.azurenative.apimanagement.inputs.ListIdentityProviderSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecrets(ListIdentityProviderSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listIdentityProviderSecrets", TypeShape.of(ListIdentityProviderSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -652,10 +652,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListNamedValueResult> listNamedValue(io.pulumi.azurenative.apimanagement.inputs.ListNamedValueArgs args) {
-        return listNamedValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNamedValueResult> listNamedValue(ListNamedValueArgs args) {
+        return listNamedValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNamedValueResult> listNamedValue(io.pulumi.azurenative.apimanagement.inputs.ListNamedValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNamedValueResult> listNamedValue(ListNamedValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listNamedValue", TypeShape.of(ListNamedValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -663,10 +663,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(io.pulumi.azurenative.apimanagement.inputs.ListOpenIdConnectProviderSecretsArgs args) {
-        return listOpenIdConnectProviderSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(ListOpenIdConnectProviderSecretsArgs args) {
+        return listOpenIdConnectProviderSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(io.pulumi.azurenative.apimanagement.inputs.ListOpenIdConnectProviderSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(ListOpenIdConnectProviderSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listOpenIdConnectProviderSecrets", TypeShape.of(ListOpenIdConnectProviderSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -674,10 +674,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecrets(io.pulumi.azurenative.apimanagement.inputs.ListSubscriptionSecretsArgs args) {
-        return listSubscriptionSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecrets(ListSubscriptionSecretsArgs args) {
+        return listSubscriptionSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecrets(io.pulumi.azurenative.apimanagement.inputs.ListSubscriptionSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecrets(ListSubscriptionSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listSubscriptionSecrets", TypeShape.of(ListSubscriptionSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -685,10 +685,10 @@ public final class ApimanagementFunctions {
      * API Version: 2019-12-01.
      * 
      */
-    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecrets(io.pulumi.azurenative.apimanagement.inputs.ListTenantAccessGitSecretsArgs args) {
-        return listTenantAccessGitSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecrets(ListTenantAccessGitSecretsArgs args) {
+        return listTenantAccessGitSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecrets(io.pulumi.azurenative.apimanagement.inputs.ListTenantAccessGitSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecrets(ListTenantAccessGitSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessGitSecrets", TypeShape.of(ListTenantAccessGitSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -696,10 +696,10 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecrets(io.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsArgs args) {
-        return listTenantAccessSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecrets(ListTenantAccessSecretsArgs args) {
+        return listTenantAccessSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecrets(io.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecrets(ListTenantAccessSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessSecrets", TypeShape.of(ListTenantAccessSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> resourceLink;
 
     public Output<String> getResourceLink() {
-        return this.resourceLink == null ? Output.empty() : this.resourceLink;
+        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
     }
 
     public MultiCloudClusterArgs(@Nullable Output<String> resourceLink) {
@@ -34,7 +35,7 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MultiCloudClusterArgs() {
-        this.resourceLink = Output.empty();
+        this.resourceLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Output.ofNullable(resourceLink);
+            this.resourceLink = Codegen.ofNullable(resourceLink);
             return this;
         }        public MultiCloudClusterArgs build() {
             return new MultiCloudClusterArgs(resourceLink);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> kustomizationName;
 
     public Output<String> getKustomizationName() {
-        return this.kustomizationName == null ? Output.empty() : this.kustomizationName;
+        return this.kustomizationName == null ? Codegen.empty() : this.kustomizationName;
     }
 
     public DependsOnDefinitionArgs(@Nullable Output<String> kustomizationName) {
@@ -34,7 +35,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private DependsOnDefinitionArgs() {
-        this.kustomizationName = Output.empty();
+        this.kustomizationName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kustomizationName(@Nullable String kustomizationName) {
-            this.kustomizationName = Output.ofNullable(kustomizationName);
+            this.kustomizationName = Codegen.ofNullable(kustomizationName);
             return this;
         }        public DependsOnDefinitionArgs build() {
             return new DependsOnDefinitionArgs(kustomizationName);

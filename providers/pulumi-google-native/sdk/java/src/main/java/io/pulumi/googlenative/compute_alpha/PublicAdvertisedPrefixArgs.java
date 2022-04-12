@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixStatus;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> dnsVerificationIp;
 
     public Output<String> getDnsVerificationIp() {
-        return this.dnsVerificationIp == null ? Output.empty() : this.dnsVerificationIp;
+        return this.dnsVerificationIp == null ? Codegen.empty() : this.dnsVerificationIp;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
+        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
     }
 
     /**
@@ -56,21 +57,21 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PublicAdvertisedPrefixStatus> status;
 
     public Output<PublicAdvertisedPrefixStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public PublicAdvertisedPrefixArgs(
@@ -102,13 +103,13 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
     }
 
     private PublicAdvertisedPrefixArgs() {
-        this.description = Output.empty();
-        this.dnsVerificationIp = Output.empty();
-        this.ipCidrRange = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.dnsVerificationIp = Codegen.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dnsVerificationIp(@Nullable Output<String> dnsVerificationIp) {
@@ -156,7 +157,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dnsVerificationIp(@Nullable String dnsVerificationIp) {
-            this.dnsVerificationIp = Output.ofNullable(dnsVerificationIp);
+            this.dnsVerificationIp = Codegen.ofNullable(dnsVerificationIp);
             return this;
         }
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
@@ -164,7 +165,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Output.ofNullable(ipCidrRange);
+            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -172,7 +173,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -180,7 +181,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -188,7 +189,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder status(@Nullable Output<PublicAdvertisedPrefixStatus> status) {
@@ -196,7 +197,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder status(@Nullable PublicAdvertisedPrefixStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public PublicAdvertisedPrefixArgs build() {
             return new PublicAdvertisedPrefixArgs(description, dnsVerificationIp, ipCidrRange, name, project, requestId, status);

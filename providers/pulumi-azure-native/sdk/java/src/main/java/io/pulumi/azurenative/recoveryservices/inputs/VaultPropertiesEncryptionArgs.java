@@ -9,6 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.CmkKeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
     public Output<Either<String,InfrastructureEncryptionState>> getInfrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Output.empty() : this.infrastructureEncryption;
+        return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<CmkKekIdentityArgs> kekIdentity;
 
     public Output<CmkKekIdentityArgs> getKekIdentity() {
-        return this.kekIdentity == null ? Output.empty() : this.kekIdentity;
+        return this.kekIdentity == null ? Codegen.empty() : this.kekIdentity;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<CmkKeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     public VaultPropertiesEncryptionArgs(
@@ -65,9 +66,9 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     }
 
     private VaultPropertiesEncryptionArgs() {
-        this.infrastructureEncryption = Output.empty();
-        this.kekIdentity = Output.empty();
-        this.keyVaultProperties = Output.empty();
+        this.infrastructureEncryption = Codegen.empty();
+        this.kekIdentity = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
-            this.infrastructureEncryption = Output.ofNullable(infrastructureEncryption);
+            this.infrastructureEncryption = Codegen.ofNullable(infrastructureEncryption);
             return this;
         }
         public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
@@ -107,7 +108,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
-            this.kekIdentity = Output.ofNullable(kekIdentity);
+            this.kekIdentity = Codegen.ofNullable(kekIdentity);
             return this;
         }
         public Builder keyVaultProperties(@Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
@@ -115,7 +116,7 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }        public VaultPropertiesEncryptionArgs build() {
             return new VaultPropertiesEncryptionArgs(infrastructureEncryption, kekIdentity, keyVaultProperties);

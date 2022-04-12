@@ -25,10 +25,10 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.search.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.search.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.search.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.search.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(io.pulumi.azurenative.search.inputs.GetSharedPrivateLinkResourceArgs args) {
-        return getSharedPrivateLinkResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args) {
+        return getSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(io.pulumi.azurenative.search.inputs.GetSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSharedPrivateLinkResourceResult> getSharedPrivateLinkResource(GetSharedPrivateLinkResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getSharedPrivateLinkResource", TypeShape.of(GetSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListAdminKeyResult> listAdminKey(io.pulumi.azurenative.search.inputs.ListAdminKeyArgs args) {
-        return listAdminKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args) {
+        return listAdminKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAdminKeyResult> listAdminKey(io.pulumi.azurenative.search.inputs.ListAdminKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAdminKeyResult> listAdminKey(ListAdminKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:listAdminKey", TypeShape.of(ListAdminKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class SearchFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(io.pulumi.azurenative.search.inputs.ListQueryKeyBySearchServiceArgs args) {
-        return listQueryKeyBySearchService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args) {
+        return listQueryKeyBySearchService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(io.pulumi.azurenative.search.inputs.ListQueryKeyBySearchServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListQueryKeyBySearchServiceResult> listQueryKeyBySearchService(ListQueryKeyBySearchServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:listQueryKeyBySearchService", TypeShape.of(ListQueryKeyBySearchServiceResult.class), args, Utilities.withVersion(options));
     }
 }

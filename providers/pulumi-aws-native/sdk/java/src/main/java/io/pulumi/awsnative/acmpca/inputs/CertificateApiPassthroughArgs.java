@@ -7,6 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateExtensionsArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,14 +24,14 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
       private final @Nullable Output<CertificateExtensionsArgs> extensions;
 
     public Output<CertificateExtensionsArgs> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="subject")
       private final @Nullable Output<CertificateSubjectArgs> subject;
 
     public Output<CertificateSubjectArgs> getSubject() {
-        return this.subject == null ? Output.empty() : this.subject;
+        return this.subject == null ? Codegen.empty() : this.subject;
     }
 
     public CertificateApiPassthroughArgs(
@@ -41,8 +42,8 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     }
 
     private CertificateApiPassthroughArgs() {
-        this.extensions = Output.empty();
-        this.subject = Output.empty();
+        this.extensions = Codegen.empty();
+        this.subject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder extensions(@Nullable CertificateExtensionsArgs extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder subject(@Nullable Output<CertificateSubjectArgs> subject) {
@@ -80,7 +81,7 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subject(@Nullable CertificateSubjectArgs subject) {
-            this.subject = Output.ofNullable(subject);
+            this.subject = Codegen.ofNullable(subject);
             return this;
         }        public CertificateApiPassthroughArgs build() {
             return new CertificateApiPassthroughArgs(extensions, subject);

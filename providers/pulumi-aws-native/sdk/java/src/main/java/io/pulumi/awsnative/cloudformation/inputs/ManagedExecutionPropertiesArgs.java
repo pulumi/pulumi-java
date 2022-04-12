@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     public ManagedExecutionPropertiesArgs(@Nullable Output<Boolean> active) {
@@ -30,7 +31,7 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private ManagedExecutionPropertiesArgs() {
-        this.active = Output.empty();
+        this.active = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ManagedExecutionPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder active(@Nullable Boolean active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }        public ManagedExecutionPropertiesArgs build() {
             return new ManagedExecutionPropertiesArgs(active);

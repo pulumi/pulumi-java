@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
       private final @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
-        return this.targetNameServers == null ? Output.empty() : this.targetNameServers;
+        return this.targetNameServers == null ? Codegen.empty() : this.targetNameServers;
     }
 
     public PolicyAlternativeNameServerConfigArgs(
@@ -42,8 +43,8 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     }
 
     private PolicyAlternativeNameServerConfigArgs() {
-        this.kind = Output.empty();
-        this.targetNameServers = Output.empty();
+        this.kind = Codegen.empty();
+        this.targetNameServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder targetNameServers(@Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
@@ -81,7 +82,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder targetNameServers(@Nullable List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
-            this.targetNameServers = Output.ofNullable(targetNameServers);
+            this.targetNameServers = Codegen.ofNullable(targetNameServers);
             return this;
         }
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {

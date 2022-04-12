@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> daily;
 
     public Output<Integer> getDaily() {
-        return this.daily == null ? Output.empty() : this.daily;
+        return this.daily == null ? Codegen.empty() : this.daily;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maximumDuration;
 
     public Output<Integer> getMaximumDuration() {
-        return this.maximumDuration == null ? Output.empty() : this.maximumDuration;
+        return this.maximumDuration == null ? Codegen.empty() : this.maximumDuration;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> messagesPerSecond;
 
     public Output<Integer> getMessagesPerSecond() {
-        return this.messagesPerSecond == null ? Output.empty() : this.messagesPerSecond;
+        return this.messagesPerSecond == null ? Codegen.empty() : this.messagesPerSecond;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> total;
 
     public Output<Integer> getTotal() {
-        return this.total == null ? Output.empty() : this.total;
+        return this.total == null ? Codegen.empty() : this.total;
     }
 
     public AppLimitsArgs(
@@ -70,10 +71,10 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppLimitsArgs() {
-        this.daily = Output.empty();
-        this.maximumDuration = Output.empty();
-        this.messagesPerSecond = Output.empty();
-        this.total = Output.empty();
+        this.daily = Codegen.empty();
+        this.maximumDuration = Codegen.empty();
+        this.messagesPerSecond = Codegen.empty();
+        this.total = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder daily(@Nullable Integer daily) {
-            this.daily = Output.ofNullable(daily);
+            this.daily = Codegen.ofNullable(daily);
             return this;
         }
         public Builder maximumDuration(@Nullable Output<Integer> maximumDuration) {
@@ -115,7 +116,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximumDuration(@Nullable Integer maximumDuration) {
-            this.maximumDuration = Output.ofNullable(maximumDuration);
+            this.maximumDuration = Codegen.ofNullable(maximumDuration);
             return this;
         }
         public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
@@ -123,7 +124,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
-            this.messagesPerSecond = Output.ofNullable(messagesPerSecond);
+            this.messagesPerSecond = Codegen.ofNullable(messagesPerSecond);
             return this;
         }
         public Builder total(@Nullable Output<Integer> total) {
@@ -131,7 +132,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder total(@Nullable Integer total) {
-            this.total = Output.ofNullable(total);
+            this.total = Codegen.ofNullable(total);
             return this;
         }        public AppLimitsArgs build() {
             return new AppLimitsArgs(daily, maximumDuration, messagesPerSecond, total);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.SubnetRouteTableAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -52,7 +53,7 @@ public class SubnetRouteTableAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public SubnetRouteTableAssociation(String name, SubnetRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:SubnetRouteTableAssociation", name, args == null ? SubnetRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:SubnetRouteTableAssociation", name, args == null ? SubnetRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubnetRouteTableAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

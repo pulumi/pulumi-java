@@ -20,30 +20,30 @@ public final class Gkehub_v1betaFunctions {
      * Gets details of a single Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(io.pulumi.googlenative.gkehub_v1beta.inputs.GetFeatureArgs args) {
-        return getFeature(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
+        return getFeature(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeatureResult> getFeature(io.pulumi.googlenative.gkehub_v1beta.inputs.GetFeatureArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(io.pulumi.googlenative.gkehub_v1beta.inputs.GetFeatureIamPolicyArgs args) {
-        return getFeatureIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args) {
+        return getFeatureIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(io.pulumi.googlenative.gkehub_v1beta.inputs.GetFeatureIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(io.pulumi.googlenative.gkehub_v1beta.inputs.GetMembershipIamPolicyArgs args) {
-        return getMembershipIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
+        return getMembershipIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(io.pulumi.googlenative.gkehub_v1beta.inputs.GetMembershipIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

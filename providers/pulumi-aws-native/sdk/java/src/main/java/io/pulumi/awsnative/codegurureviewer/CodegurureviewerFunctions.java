@@ -16,10 +16,10 @@ public final class CodegurureviewerFunctions {
      * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
      * 
      */
-    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(io.pulumi.awsnative.codegurureviewer.inputs.GetRepositoryAssociationArgs args) {
-        return getRepositoryAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args) {
+        return getRepositoryAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(io.pulumi.awsnative.codegurureviewer.inputs.GetRepositoryAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codegurureviewer:getRepositoryAssociation", TypeShape.of(GetRepositoryAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

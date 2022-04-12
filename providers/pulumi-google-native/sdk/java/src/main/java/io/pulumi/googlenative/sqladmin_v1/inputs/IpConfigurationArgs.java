@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1.inputs.AclEntryArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> allocatedIpRange;
 
     public Output<String> getAllocatedIpRange() {
-        return this.allocatedIpRange == null ? Output.empty() : this.allocatedIpRange;
+        return this.allocatedIpRange == null ? Codegen.empty() : this.allocatedIpRange;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<AclEntryArgs>> authorizedNetworks;
 
     public Output<List<AclEntryArgs>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
+        return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> ipv4Enabled;
 
     public Output<Boolean> getIpv4Enabled() {
-        return this.ipv4Enabled == null ? Output.empty() : this.ipv4Enabled;
+        return this.ipv4Enabled == null ? Codegen.empty() : this.ipv4Enabled;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> privateNetwork;
 
     public Output<String> getPrivateNetwork() {
-        return this.privateNetwork == null ? Output.empty() : this.privateNetwork;
+        return this.privateNetwork == null ? Codegen.empty() : this.privateNetwork;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> requireSsl;
 
     public Output<Boolean> getRequireSsl() {
-        return this.requireSsl == null ? Output.empty() : this.requireSsl;
+        return this.requireSsl == null ? Codegen.empty() : this.requireSsl;
     }
 
     public IpConfigurationArgs(
@@ -90,11 +91,11 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IpConfigurationArgs() {
-        this.allocatedIpRange = Output.empty();
-        this.authorizedNetworks = Output.empty();
-        this.ipv4Enabled = Output.empty();
-        this.privateNetwork = Output.empty();
-        this.requireSsl = Output.empty();
+        this.allocatedIpRange = Codegen.empty();
+        this.authorizedNetworks = Codegen.empty();
+        this.ipv4Enabled = Codegen.empty();
+        this.privateNetwork = Codegen.empty();
+        this.requireSsl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
-            this.allocatedIpRange = Output.ofNullable(allocatedIpRange);
+            this.allocatedIpRange = Codegen.ofNullable(allocatedIpRange);
             return this;
         }
         public Builder authorizedNetworks(@Nullable Output<List<AclEntryArgs>> authorizedNetworks) {
@@ -138,7 +139,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder authorizedNetworks(@Nullable List<AclEntryArgs> authorizedNetworks) {
-            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Codegen.ofNullable(authorizedNetworks);
             return this;
         }
         public Builder authorizedNetworks(AclEntryArgs... authorizedNetworks) {
@@ -149,7 +150,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
-            this.ipv4Enabled = Output.ofNullable(ipv4Enabled);
+            this.ipv4Enabled = Codegen.ofNullable(ipv4Enabled);
             return this;
         }
         public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
@@ -157,7 +158,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateNetwork(@Nullable String privateNetwork) {
-            this.privateNetwork = Output.ofNullable(privateNetwork);
+            this.privateNetwork = Codegen.ofNullable(privateNetwork);
             return this;
         }
         public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
@@ -165,7 +166,7 @@ public final class IpConfigurationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder requireSsl(@Nullable Boolean requireSsl) {
-            this.requireSsl = Output.ofNullable(requireSsl);
+            this.requireSsl = Codegen.ofNullable(requireSsl);
             return this;
         }        public IpConfigurationArgs build() {
             return new IpConfigurationArgs(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);

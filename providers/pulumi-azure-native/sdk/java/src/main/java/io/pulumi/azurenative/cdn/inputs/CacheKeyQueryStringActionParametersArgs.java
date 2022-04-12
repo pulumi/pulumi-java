@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.enums.QueryStringBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
       private final @Nullable Output<String> queryParameters;
 
     public Output<String> getQueryParameters() {
-        return this.queryParameters == null ? Output.empty() : this.queryParameters;
+        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     }
 
     private CacheKeyQueryStringActionParametersArgs() {
-        this.odataType = Output.empty();
-        this.queryParameters = Output.empty();
-        this.queryStringBehavior = Output.empty();
+        this.odataType = Codegen.empty();
+        this.queryParameters = Codegen.empty();
+        this.queryStringBehavior = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
             return this;
         }
         public Builder queryParameters(@Nullable String queryParameters) {
-            this.queryParameters = Output.ofNullable(queryParameters);
+            this.queryParameters = Codegen.ofNullable(queryParameters);
             return this;
         }
         public Builder queryStringBehavior(Output<Either<String,QueryStringBehavior>> queryStringBehavior) {

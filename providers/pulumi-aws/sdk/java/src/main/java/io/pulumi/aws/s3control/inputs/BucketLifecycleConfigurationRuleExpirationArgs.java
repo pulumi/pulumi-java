@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
       private final @Nullable Output<String> date;
 
     public Output<String> getDate() {
-        return this.date == null ? Output.empty() : this.date;
+        return this.date == null ? Codegen.empty() : this.date;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
       private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
     public Output<Boolean> getExpiredObjectDeleteMarker() {
-        return this.expiredObjectDeleteMarker == null ? Output.empty() : this.expiredObjectDeleteMarker;
+        return this.expiredObjectDeleteMarker == null ? Codegen.empty() : this.expiredObjectDeleteMarker;
     }
 
     public BucketLifecycleConfigurationRuleExpirationArgs(
@@ -59,9 +60,9 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
     }
 
     private BucketLifecycleConfigurationRuleExpirationArgs() {
-        this.date = Output.empty();
-        this.days = Output.empty();
-        this.expiredObjectDeleteMarker = Output.empty();
+        this.date = Codegen.empty();
+        this.days = Codegen.empty();
+        this.expiredObjectDeleteMarker = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
             return this;
         }
         public Builder date(@Nullable String date) {
-            this.date = Output.ofNullable(date);
+            this.date = Codegen.ofNullable(date);
             return this;
         }
         public Builder days(@Nullable Output<Integer> days) {
@@ -101,7 +102,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
@@ -109,7 +110,7 @@ public final class BucketLifecycleConfigurationRuleExpirationArgs extends io.pul
             return this;
         }
         public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
-            this.expiredObjectDeleteMarker = Output.ofNullable(expiredObjectDeleteMarker);
+            this.expiredObjectDeleteMarker = Codegen.ofNullable(expiredObjectDeleteMarker);
             return this;
         }        public BucketLifecycleConfigurationRuleExpirationArgs build() {
             return new BucketLifecycleConfigurationRuleExpirationArgs(date, days, expiredObjectDeleteMarker);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends io.pulumi.
     }
 
     private ApiConfigGatewayConfigBackendConfigGetArgs() {
-        this.googleServiceAccount = Output.empty();
+        this.googleServiceAccount = Codegen.empty();
     }
 
     public static Builder builder() {

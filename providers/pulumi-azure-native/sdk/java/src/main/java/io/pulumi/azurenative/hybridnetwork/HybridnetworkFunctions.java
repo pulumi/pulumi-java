@@ -27,10 +27,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.azurenative.hybridnetwork.inputs.GetDeviceArgs args) {
-        return getDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.azurenative.hybridnetwork.inputs.GetDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunction(io.pulumi.azurenative.hybridnetwork.inputs.GetNetworkFunctionArgs args) {
-        return getNetworkFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunction(GetNetworkFunctionArgs args) {
+        return getNetworkFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunction(io.pulumi.azurenative.hybridnetwork.inputs.GetNetworkFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunction(GetNetworkFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getNetworkFunction", TypeShape.of(GetNetworkFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetVendorResult> getVendor(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorArgs args) {
-        return getVendor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVendorResult> getVendor(GetVendorArgs args) {
+        return getVendor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVendorResult> getVendor(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVendorResult> getVendor(GetVendorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendor", TypeShape.of(GetVendorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreview(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkuPreviewArgs args) {
-        return getVendorSkuPreview(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreview(GetVendorSkuPreviewArgs args) {
+        return getVendorSkuPreview(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreview(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkuPreviewArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreview(GetVendorSkuPreviewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkuPreview", TypeShape.of(GetVendorSkuPreviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,10 +71,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetVendorSkusResult> getVendorSkus(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkusArgs args) {
-        return getVendorSkus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVendorSkusResult> getVendorSkus(GetVendorSkusArgs args) {
+        return getVendorSkus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVendorSkusResult> getVendorSkus(io.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVendorSkusResult> getVendorSkus(GetVendorSkusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkus", TypeShape.of(GetVendorSkusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,10 +82,10 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(io.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyArgs args) {
-        return listDeviceRegistrationKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(ListDeviceRegistrationKeyArgs args) {
+        return listDeviceRegistrationKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(io.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(ListDeviceRegistrationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args, Utilities.withVersion(options));
     }
 }

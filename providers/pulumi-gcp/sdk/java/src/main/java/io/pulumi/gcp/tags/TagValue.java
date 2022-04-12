@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueArgs;
 import io.pulumi.gcp.tags.inputs.TagValueState;
@@ -165,7 +166,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagValue(String name, TagValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagValue:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagValue:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagValue(String name, Output<String> id, @Nullable TagValueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

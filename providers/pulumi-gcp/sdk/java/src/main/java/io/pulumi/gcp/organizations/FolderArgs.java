@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,8 +46,8 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderArgs() {
-        this.displayName = Output.empty();
-        this.parent = Output.empty();
+        this.displayName = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {

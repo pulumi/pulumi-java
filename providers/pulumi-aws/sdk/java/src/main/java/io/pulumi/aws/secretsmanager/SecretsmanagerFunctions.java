@@ -23,12 +23,12 @@ public final class SecretsmanagerFunctions {
      * 
      */
     public static CompletableFuture<GetSecretResult> getSecret() {
-        return getSecret(io.pulumi.aws.secretsmanager.inputs.GetSecretArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSecret(GetSecretArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.aws.secretsmanager.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.aws.secretsmanager.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,10 +37,10 @@ public final class SecretsmanagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(io.pulumi.aws.secretsmanager.inputs.GetSecretRotationArgs args) {
-        return getSecretRotation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args) {
+        return getSecretRotation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(io.pulumi.aws.secretsmanager.inputs.GetSecretRotationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretRotationResult> getSecretRotation(GetSecretRotationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecretRotation:getSecretRotation", TypeShape.of(GetSecretRotationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class SecretsmanagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.aws.secretsmanager.inputs.GetSecretVersionArgs args) {
-        return getSecretVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+        return getSecretVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.aws.secretsmanager.inputs.GetSecretVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
 }

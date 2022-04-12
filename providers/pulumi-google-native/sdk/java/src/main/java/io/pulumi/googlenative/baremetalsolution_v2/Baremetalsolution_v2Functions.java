@@ -18,20 +18,20 @@ public final class Baremetalsolution_v2Functions {
      * Get details of a single storage volume snapshot.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get details of a single snapshot schedule policy.
      * 
      */
-    public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(io.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotSchedulePolicyArgs args) {
-        return getSnapshotSchedulePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(GetSnapshotSchedulePolicyArgs args) {
+        return getSnapshotSchedulePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(io.pulumi.googlenative.baremetalsolution_v2.inputs.GetSnapshotSchedulePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotSchedulePolicyResult> getSnapshotSchedulePolicy(GetSnapshotSchedulePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:baremetalsolution/v2:getSnapshotSchedulePolicy", TypeShape.of(GetSnapshotSchedulePolicyResult.class), args, Utilities.withVersion(options));
     }
 }

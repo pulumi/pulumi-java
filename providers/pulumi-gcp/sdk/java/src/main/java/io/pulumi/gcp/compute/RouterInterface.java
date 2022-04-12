@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterInterfaceArgs;
 import io.pulumi.gcp.compute.inputs.RouterInterfaceState;
@@ -174,7 +175,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouterInterface(String name, RouterInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/routerInterface:RouterInterface", name, args == null ? RouterInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/routerInterface:RouterInterface", name, args == null ? RouterInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouterInterface(String name, Output<String> id, @Nullable RouterInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

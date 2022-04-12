@@ -17,10 +17,10 @@ public final class QuantumFunctions {
      * API Version: 2019-11-04-preview.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.quantum.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.quantum.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:quantum:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

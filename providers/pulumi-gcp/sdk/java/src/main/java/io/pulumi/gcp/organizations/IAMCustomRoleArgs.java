@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     /**
@@ -99,12 +100,12 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMCustomRoleArgs() {
-        this.description = Output.empty();
-        this.orgId = Output.empty();
-        this.permissions = Output.empty();
-        this.roleId = Output.empty();
-        this.stage = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.roleId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder orgId(Output<String> orgId) {
@@ -177,7 +178,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable String stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder title(Output<String> title) {

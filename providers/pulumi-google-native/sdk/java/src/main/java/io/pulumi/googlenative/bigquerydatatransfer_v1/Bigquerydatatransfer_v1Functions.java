@@ -16,10 +16,10 @@ public final class Bigquerydatatransfer_v1Functions {
      * Returns information about a data transfer config.
      * 
      */
-    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.GetTransferConfigArgs args) {
-        return getTransferConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args) {
+        return getTransferConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.GetTransferConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args, Utilities.withVersion(options));
     }
 }

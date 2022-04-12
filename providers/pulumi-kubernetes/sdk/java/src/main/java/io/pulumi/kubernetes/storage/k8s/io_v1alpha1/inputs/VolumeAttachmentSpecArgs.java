@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeAttachmentSourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
     }
 
     private VolumeAttachmentSpecArgs() {
-        this.attacher = Output.empty();
-        this.nodeName = Output.empty();
-        this.source = Output.empty();
+        this.attacher = Codegen.empty();
+        this.nodeName = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {

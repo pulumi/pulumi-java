@@ -21,10 +21,10 @@ public final class AzurestackhciFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetArcSettingResult> getArcSetting(io.pulumi.azurenative.azurestackhci.inputs.GetArcSettingArgs args) {
-        return getArcSetting(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArcSettingResult> getArcSetting(GetArcSettingArgs args) {
+        return getArcSetting(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArcSettingResult> getArcSetting(io.pulumi.azurenative.azurestackhci.inputs.GetArcSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArcSettingResult> getArcSetting(GetArcSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getArcSetting", TypeShape.of(GetArcSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class AzurestackhciFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.azurestackhci.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.azurestackhci.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class AzurestackhciFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.azurestackhci.inputs.GetExtensionArgs args) {
-        return getExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+        return getExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.azurestackhci.inputs.GetExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
 }

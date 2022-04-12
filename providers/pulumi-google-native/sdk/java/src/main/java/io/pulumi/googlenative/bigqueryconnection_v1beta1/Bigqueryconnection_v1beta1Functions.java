@@ -18,20 +18,20 @@ public final class Bigqueryconnection_v1beta1Functions {
      * Returns specified connection.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryconnection/v1beta1:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.GetConnectionIamPolicyArgs args) {
-        return getConnectionIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args) {
+        return getConnectionIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.GetConnectionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryconnection/v1beta1:getConnectionIamPolicy", TypeShape.of(GetConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ public final class SqsFunctions {
      * Resource Type definition for AWS::SQS::Queue
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.awsnative.sqs.inputs.GetQueueArgs args) {
-        return getQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.awsnative.sqs.inputs.GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sqs:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
 }

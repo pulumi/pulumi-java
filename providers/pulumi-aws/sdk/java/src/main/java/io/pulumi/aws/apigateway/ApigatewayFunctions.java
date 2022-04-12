@@ -30,20 +30,20 @@ public final class ApigatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(io.pulumi.aws.apigateway.inputs.GetDomainNameArgs args) {
-        return getDomainName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
+        return getDomainName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainNameResult> getDomainName(io.pulumi.aws.apigateway.inputs.GetDomainNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getDomainName:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(io.pulumi.aws.apigateway.inputs.GetExportArgs args) {
-        return getExport(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+        return getExport(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExportResult> getExport(io.pulumi.aws.apigateway.inputs.GetExportArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class ApigatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.aws.apigateway.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.aws.apigateway.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class ApigatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.apigateway.inputs.GetResourceArgs args) {
-        return getResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+        return getResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.apigateway.inputs.GetResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,20 +81,20 @@ public final class ApigatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRestApiResult> getRestApi(io.pulumi.aws.apigateway.inputs.GetRestApiArgs args) {
-        return getRestApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRestApiResult> getRestApi(GetRestApiArgs args) {
+        return getRestApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRestApiResult> getRestApi(io.pulumi.aws.apigateway.inputs.GetRestApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRestApiResult> getRestApi(GetRestApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getRestApi:getRestApi", TypeShape.of(GetRestApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSdkResult> getSdk(io.pulumi.aws.apigateway.inputs.GetSdkArgs args) {
-        return getSdk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSdkResult> getSdk(GetSdkArgs args) {
+        return getSdk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSdkResult> getSdk(io.pulumi.aws.apigateway.inputs.GetSdkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSdkResult> getSdk(GetSdkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getSdk:getSdk", TypeShape.of(GetSdkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,10 +106,10 @@ public final class ApigatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVpcLinkResult> getVpcLink(io.pulumi.aws.apigateway.inputs.GetVpcLinkArgs args) {
-        return getVpcLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args) {
+        return getVpcLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcLinkResult> getVpcLink(io.pulumi.aws.apigateway.inputs.GetVpcLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getVpcLink:getVpcLink", TypeShape.of(GetVpcLinkResult.class), args, Utilities.withVersion(options));
     }
 }

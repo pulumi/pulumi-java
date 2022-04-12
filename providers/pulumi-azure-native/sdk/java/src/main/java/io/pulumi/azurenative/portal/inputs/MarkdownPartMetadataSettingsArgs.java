@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataContentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<MarkdownPartMetadataContentArgs> content;
 
     public Output<MarkdownPartMetadataContentArgs> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     public MarkdownPartMetadataSettingsArgs(@Nullable Output<MarkdownPartMetadataContentArgs> content) {
@@ -34,7 +35,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
     }
 
     private MarkdownPartMetadataSettingsArgs() {
-        this.content = Output.empty();
+        this.content = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder content(@Nullable MarkdownPartMetadataContentArgs content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }        public MarkdownPartMetadataSettingsArgs build() {
             return new MarkdownPartMetadataSettingsArgs(content);

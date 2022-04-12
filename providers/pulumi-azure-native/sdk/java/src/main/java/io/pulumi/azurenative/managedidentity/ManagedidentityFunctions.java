@@ -17,10 +17,10 @@ public final class ManagedidentityFunctions {
      * API Version: 2018-11-30.
      * 
      */
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(io.pulumi.azurenative.managedidentity.inputs.GetUserAssignedIdentityArgs args) {
-        return getUserAssignedIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args) {
+        return getUserAssignedIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(io.pulumi.azurenative.managedidentity.inputs.GetUserAssignedIdentityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedidentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +25,14 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> domainFileUrl;
 
     public Output<String> getDomainFileUrl() {
-        return this.domainFileUrl == null ? Output.empty() : this.domainFileUrl;
+        return this.domainFileUrl == null ? Codegen.empty() : this.domainFileUrl;
     }
 
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
-        return this.domains == null ? Output.empty() : this.domains;
+        return this.domains == null ? Codegen.empty() : this.domains;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
     public Output<List<FirewallDomainListTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FirewallDomainListArgs(
@@ -68,10 +69,10 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FirewallDomainListArgs() {
-        this.domainFileUrl = Output.empty();
-        this.domains = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.domainFileUrl = Codegen.empty();
+        this.domains = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domainFileUrl(@Nullable String domainFileUrl) {
-            this.domainFileUrl = Output.ofNullable(domainFileUrl);
+            this.domainFileUrl = Codegen.ofNullable(domainFileUrl);
             return this;
         }
         public Builder domains(@Nullable Output<List<String>> domains) {
@@ -113,7 +114,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Output.ofNullable(domains);
+            this.domains = Codegen.ofNullable(domains);
             return this;
         }
         public Builder domains(String... domains) {
@@ -124,7 +125,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<FirewallDomainListTagArgs>> tags) {
@@ -132,7 +133,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable List<FirewallDomainListTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FirewallDomainListTagArgs... tags) {

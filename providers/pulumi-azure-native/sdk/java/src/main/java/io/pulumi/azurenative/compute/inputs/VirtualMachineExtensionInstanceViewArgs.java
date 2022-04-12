@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
       private final @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
     public Output<List<InstanceViewStatusArgs>> getStatuses() {
-        return this.statuses == null ? Output.empty() : this.statuses;
+        return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
       private final @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
     public Output<List<InstanceViewStatusArgs>> getSubstatuses() {
-        return this.substatuses == null ? Output.empty() : this.substatuses;
+        return this.substatuses == null ? Codegen.empty() : this.substatuses;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
       private final @Nullable Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
+        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 
     public VirtualMachineExtensionInstanceViewArgs(
@@ -89,11 +90,11 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
     }
 
     private VirtualMachineExtensionInstanceViewArgs() {
-        this.name = Output.empty();
-        this.statuses = Output.empty();
-        this.substatuses = Output.empty();
-        this.type = Output.empty();
-        this.typeHandlerVersion = Output.empty();
+        this.name = Codegen.empty();
+        this.statuses = Codegen.empty();
+        this.substatuses = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeHandlerVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder statuses(@Nullable Output<List<InstanceViewStatusArgs>> statuses) {
@@ -137,7 +138,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             return this;
         }
         public Builder statuses(@Nullable List<InstanceViewStatusArgs> statuses) {
-            this.statuses = Output.ofNullable(statuses);
+            this.statuses = Codegen.ofNullable(statuses);
             return this;
         }
         public Builder statuses(InstanceViewStatusArgs... statuses) {
@@ -148,7 +149,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             return this;
         }
         public Builder substatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
-            this.substatuses = Output.ofNullable(substatuses);
+            this.substatuses = Codegen.ofNullable(substatuses);
             return this;
         }
         public Builder substatuses(InstanceViewStatusArgs... substatuses) {
@@ -159,7 +160,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
@@ -167,7 +168,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
             return this;
         }
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
             return this;
         }        public VirtualMachineExtensionInstanceViewArgs build() {
             return new VirtualMachineExtensionInstanceViewArgs(name, statuses, substatuses, type, typeHandlerVersion);

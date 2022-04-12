@@ -7,6 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
-        return this.computePlatform == null ? Output.empty() : this.computePlatform;
+        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
 
     public Output<DeploymentConfigMinimumHealthyHostsArgs> getMinimumHealthyHosts() {
-        return this.minimumHealthyHosts == null ? Output.empty() : this.minimumHealthyHosts;
+        return this.minimumHealthyHosts == null ? Codegen.empty() : this.minimumHealthyHosts;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
 
     public Output<DeploymentConfigTrafficRoutingConfigArgs> getTrafficRoutingConfig() {
-        return this.trafficRoutingConfig == null ? Output.empty() : this.trafficRoutingConfig;
+        return this.trafficRoutingConfig == null ? Codegen.empty() : this.trafficRoutingConfig;
     }
 
     public DeploymentConfigArgs(
@@ -72,10 +73,10 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentConfigArgs() {
-        this.computePlatform = Output.empty();
-        this.deploymentConfigName = Output.empty();
-        this.minimumHealthyHosts = Output.empty();
-        this.trafficRoutingConfig = Output.empty();
+        this.computePlatform = Codegen.empty();
+        this.deploymentConfigName = Codegen.empty();
+        this.minimumHealthyHosts = Codegen.empty();
+        this.trafficRoutingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Output.ofNullable(computePlatform);
+            this.computePlatform = Codegen.ofNullable(computePlatform);
             return this;
         }
         public Builder deploymentConfigName(Output<String> deploymentConfigName) {
@@ -125,7 +126,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsArgs minimumHealthyHosts) {
-            this.minimumHealthyHosts = Output.ofNullable(minimumHealthyHosts);
+            this.minimumHealthyHosts = Codegen.ofNullable(minimumHealthyHosts);
             return this;
         }
         public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig) {
@@ -133,7 +134,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigArgs trafficRoutingConfig) {
-            this.trafficRoutingConfig = Output.ofNullable(trafficRoutingConfig);
+            this.trafficRoutingConfig = Codegen.ofNullable(trafficRoutingConfig);
             return this;
         }        public DeploymentConfigArgs build() {
             return new DeploymentConfigArgs(computePlatform, deploymentConfigName, minimumHealthyHosts, trafficRoutingConfig);

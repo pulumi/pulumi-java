@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
+        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
 
     public Output<Boolean> getEnableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade == null ? Output.empty() : this.enableAutomaticUpgrade;
+        return this.enableAutomaticUpgrade == null ? Codegen.empty() : this.enableAutomaticUpgrade;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
     public Output<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
-        return this.instanceView == null ? Output.empty() : this.instanceView;
+        return this.instanceView == null ? Codegen.empty() : this.instanceView;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> protectedSettings;
 
     public Output<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
+        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> settings;
 
     public Output<Object> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
+        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> vmExtensionName;
 
     public Output<String> getVmExtensionName() {
-        return this.vmExtensionName == null ? Output.empty() : this.vmExtensionName;
+        return this.vmExtensionName == null ? Codegen.empty() : this.vmExtensionName;
     }
 
     /**
@@ -204,20 +205,20 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
     }
 
     private VirtualMachineExtensionArgs() {
-        this.autoUpgradeMinorVersion = Output.empty();
-        this.enableAutomaticUpgrade = Output.empty();
-        this.forceUpdateTag = Output.empty();
-        this.instanceView = Output.empty();
-        this.location = Output.empty();
-        this.protectedSettings = Output.empty();
-        this.publisher = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.settings = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
-        this.typeHandlerVersion = Output.empty();
-        this.vmExtensionName = Output.empty();
-        this.vmName = Output.empty();
+        this.autoUpgradeMinorVersion = Codegen.empty();
+        this.enableAutomaticUpgrade = Codegen.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.instanceView = Codegen.empty();
+        this.location = Codegen.empty();
+        this.protectedSettings = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeHandlerVersion = Codegen.empty();
+        this.vmExtensionName = Codegen.empty();
+        this.vmName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
         public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
@@ -279,7 +280,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = Output.ofNullable(enableAutomaticUpgrade);
+            this.enableAutomaticUpgrade = Codegen.ofNullable(enableAutomaticUpgrade);
             return this;
         }
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
@@ -287,7 +288,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder instanceView(@Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView) {
@@ -295,7 +296,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
-            this.instanceView = Output.ofNullable(instanceView);
+            this.instanceView = Codegen.ofNullable(instanceView);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -303,7 +304,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
@@ -311,7 +312,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Output.ofNullable(protectedSettings);
+            this.protectedSettings = Codegen.ofNullable(protectedSettings);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -319,7 +320,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -335,7 +336,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder settings(@Nullable Object settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -343,7 +344,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -351,7 +352,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
@@ -359,7 +360,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
             return this;
         }
         public Builder vmExtensionName(@Nullable Output<String> vmExtensionName) {
@@ -367,7 +368,7 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder vmExtensionName(@Nullable String vmExtensionName) {
-            this.vmExtensionName = Output.ofNullable(vmExtensionName);
+            this.vmExtensionName = Codegen.ofNullable(vmExtensionName);
             return this;
         }
         public Builder vmName(Output<String> vmName) {

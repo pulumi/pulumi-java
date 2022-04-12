@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> authentication;
 
     public Output<Object> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> existingClusterId;
 
     public Output<Object> getExistingClusterId() {
-        return this.existingClusterId == null ? Output.empty() : this.existingClusterId;
+        return this.existingClusterId == null ? Codegen.empty() : this.existingClusterId;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> instancePoolId;
 
     public Output<Object> getInstancePoolId() {
-        return this.instancePoolId == null ? Output.empty() : this.instancePoolId;
+        return this.instancePoolId == null ? Codegen.empty() : this.instancePoolId;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,Object>> newClusterCustomTags;
 
     public Output<Map<String,Object>> getNewClusterCustomTags() {
-        return this.newClusterCustomTags == null ? Output.empty() : this.newClusterCustomTags;
+        return this.newClusterCustomTags == null ? Codegen.empty() : this.newClusterCustomTags;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterDriverNodeType;
 
     public Output<Object> getNewClusterDriverNodeType() {
-        return this.newClusterDriverNodeType == null ? Output.empty() : this.newClusterDriverNodeType;
+        return this.newClusterDriverNodeType == null ? Codegen.empty() : this.newClusterDriverNodeType;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterEnableElasticDisk;
 
     public Output<Object> getNewClusterEnableElasticDisk() {
-        return this.newClusterEnableElasticDisk == null ? Output.empty() : this.newClusterEnableElasticDisk;
+        return this.newClusterEnableElasticDisk == null ? Codegen.empty() : this.newClusterEnableElasticDisk;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterInitScripts;
 
     public Output<Object> getNewClusterInitScripts() {
-        return this.newClusterInitScripts == null ? Output.empty() : this.newClusterInitScripts;
+        return this.newClusterInitScripts == null ? Codegen.empty() : this.newClusterInitScripts;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterLogDestination;
 
     public Output<Object> getNewClusterLogDestination() {
-        return this.newClusterLogDestination == null ? Output.empty() : this.newClusterLogDestination;
+        return this.newClusterLogDestination == null ? Codegen.empty() : this.newClusterLogDestination;
     }
 
     /**
@@ -200,7 +201,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterNodeType;
 
     public Output<Object> getNewClusterNodeType() {
-        return this.newClusterNodeType == null ? Output.empty() : this.newClusterNodeType;
+        return this.newClusterNodeType == null ? Codegen.empty() : this.newClusterNodeType;
     }
 
     /**
@@ -211,7 +212,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterNumOfWorker;
 
     public Output<Object> getNewClusterNumOfWorker() {
-        return this.newClusterNumOfWorker == null ? Output.empty() : this.newClusterNumOfWorker;
+        return this.newClusterNumOfWorker == null ? Codegen.empty() : this.newClusterNumOfWorker;
     }
 
     /**
@@ -222,7 +223,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,Object>> newClusterSparkConf;
 
     public Output<Map<String,Object>> getNewClusterSparkConf() {
-        return this.newClusterSparkConf == null ? Output.empty() : this.newClusterSparkConf;
+        return this.newClusterSparkConf == null ? Codegen.empty() : this.newClusterSparkConf;
     }
 
     /**
@@ -233,7 +234,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,Object>> newClusterSparkEnvVars;
 
     public Output<Map<String,Object>> getNewClusterSparkEnvVars() {
-        return this.newClusterSparkEnvVars == null ? Output.empty() : this.newClusterSparkEnvVars;
+        return this.newClusterSparkEnvVars == null ? Codegen.empty() : this.newClusterSparkEnvVars;
     }
 
     /**
@@ -244,7 +245,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> newClusterVersion;
 
     public Output<Object> getNewClusterVersion() {
-        return this.newClusterVersion == null ? Output.empty() : this.newClusterVersion;
+        return this.newClusterVersion == null ? Codegen.empty() : this.newClusterVersion;
     }
 
     /**
@@ -255,7 +256,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -266,7 +267,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> policyId;
 
     public Output<Object> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -289,7 +290,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> workspaceResourceId;
 
     public Output<Object> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public AzureDatabricksLinkedServiceArgs(
@@ -344,30 +345,30 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
     }
 
     private AzureDatabricksLinkedServiceArgs() {
-        this.accessToken = Output.empty();
-        this.annotations = Output.empty();
-        this.authentication = Output.empty();
-        this.connectVia = Output.empty();
-        this.credential = Output.empty();
-        this.description = Output.empty();
-        this.domain = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.existingClusterId = Output.empty();
-        this.instancePoolId = Output.empty();
-        this.newClusterCustomTags = Output.empty();
-        this.newClusterDriverNodeType = Output.empty();
-        this.newClusterEnableElasticDisk = Output.empty();
-        this.newClusterInitScripts = Output.empty();
-        this.newClusterLogDestination = Output.empty();
-        this.newClusterNodeType = Output.empty();
-        this.newClusterNumOfWorker = Output.empty();
-        this.newClusterSparkConf = Output.empty();
-        this.newClusterSparkEnvVars = Output.empty();
-        this.newClusterVersion = Output.empty();
-        this.parameters = Output.empty();
-        this.policyId = Output.empty();
-        this.type = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.description = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.existingClusterId = Codegen.empty();
+        this.instancePoolId = Codegen.empty();
+        this.newClusterCustomTags = Codegen.empty();
+        this.newClusterDriverNodeType = Codegen.empty();
+        this.newClusterEnableElasticDisk = Codegen.empty();
+        this.newClusterInitScripts = Codegen.empty();
+        this.newClusterLogDestination = Codegen.empty();
+        this.newClusterNodeType = Codegen.empty();
+        this.newClusterNumOfWorker = Codegen.empty();
+        this.newClusterSparkConf = Codegen.empty();
+        this.newClusterSparkEnvVars = Codegen.empty();
+        this.newClusterVersion = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -441,7 +442,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -449,7 +450,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -460,7 +461,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -468,7 +469,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -476,7 +477,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -484,7 +485,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder domain(Output<Object> domain) {
@@ -500,7 +501,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder existingClusterId(@Nullable Output<Object> existingClusterId) {
@@ -508,7 +509,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder existingClusterId(@Nullable Object existingClusterId) {
-            this.existingClusterId = Output.ofNullable(existingClusterId);
+            this.existingClusterId = Codegen.ofNullable(existingClusterId);
             return this;
         }
         public Builder instancePoolId(@Nullable Output<Object> instancePoolId) {
@@ -516,7 +517,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder instancePoolId(@Nullable Object instancePoolId) {
-            this.instancePoolId = Output.ofNullable(instancePoolId);
+            this.instancePoolId = Codegen.ofNullable(instancePoolId);
             return this;
         }
         public Builder newClusterCustomTags(@Nullable Output<Map<String,Object>> newClusterCustomTags) {
@@ -524,7 +525,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
-            this.newClusterCustomTags = Output.ofNullable(newClusterCustomTags);
+            this.newClusterCustomTags = Codegen.ofNullable(newClusterCustomTags);
             return this;
         }
         public Builder newClusterDriverNodeType(@Nullable Output<Object> newClusterDriverNodeType) {
@@ -532,7 +533,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
-            this.newClusterDriverNodeType = Output.ofNullable(newClusterDriverNodeType);
+            this.newClusterDriverNodeType = Codegen.ofNullable(newClusterDriverNodeType);
             return this;
         }
         public Builder newClusterEnableElasticDisk(@Nullable Output<Object> newClusterEnableElasticDisk) {
@@ -540,7 +541,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
-            this.newClusterEnableElasticDisk = Output.ofNullable(newClusterEnableElasticDisk);
+            this.newClusterEnableElasticDisk = Codegen.ofNullable(newClusterEnableElasticDisk);
             return this;
         }
         public Builder newClusterInitScripts(@Nullable Output<Object> newClusterInitScripts) {
@@ -548,7 +549,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterInitScripts(@Nullable Object newClusterInitScripts) {
-            this.newClusterInitScripts = Output.ofNullable(newClusterInitScripts);
+            this.newClusterInitScripts = Codegen.ofNullable(newClusterInitScripts);
             return this;
         }
         public Builder newClusterLogDestination(@Nullable Output<Object> newClusterLogDestination) {
@@ -556,7 +557,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterLogDestination(@Nullable Object newClusterLogDestination) {
-            this.newClusterLogDestination = Output.ofNullable(newClusterLogDestination);
+            this.newClusterLogDestination = Codegen.ofNullable(newClusterLogDestination);
             return this;
         }
         public Builder newClusterNodeType(@Nullable Output<Object> newClusterNodeType) {
@@ -564,7 +565,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterNodeType(@Nullable Object newClusterNodeType) {
-            this.newClusterNodeType = Output.ofNullable(newClusterNodeType);
+            this.newClusterNodeType = Codegen.ofNullable(newClusterNodeType);
             return this;
         }
         public Builder newClusterNumOfWorker(@Nullable Output<Object> newClusterNumOfWorker) {
@@ -572,7 +573,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
-            this.newClusterNumOfWorker = Output.ofNullable(newClusterNumOfWorker);
+            this.newClusterNumOfWorker = Codegen.ofNullable(newClusterNumOfWorker);
             return this;
         }
         public Builder newClusterSparkConf(@Nullable Output<Map<String,Object>> newClusterSparkConf) {
@@ -580,7 +581,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
-            this.newClusterSparkConf = Output.ofNullable(newClusterSparkConf);
+            this.newClusterSparkConf = Codegen.ofNullable(newClusterSparkConf);
             return this;
         }
         public Builder newClusterSparkEnvVars(@Nullable Output<Map<String,Object>> newClusterSparkEnvVars) {
@@ -588,7 +589,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
-            this.newClusterSparkEnvVars = Output.ofNullable(newClusterSparkEnvVars);
+            this.newClusterSparkEnvVars = Codegen.ofNullable(newClusterSparkEnvVars);
             return this;
         }
         public Builder newClusterVersion(@Nullable Output<Object> newClusterVersion) {
@@ -596,7 +597,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder newClusterVersion(@Nullable Object newClusterVersion) {
-            this.newClusterVersion = Output.ofNullable(newClusterVersion);
+            this.newClusterVersion = Codegen.ofNullable(newClusterVersion);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -604,7 +605,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyId(@Nullable Output<Object> policyId) {
@@ -612,7 +613,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder policyId(@Nullable Object policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -628,7 +629,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public AzureDatabricksLinkedServiceArgs build() {
             return new AzureDatabricksLinkedServiceArgs(accessToken, annotations, authentication, connectVia, credential, description, domain, encryptedCredential, existingClusterId, instancePoolId, newClusterCustomTags, newClusterDriverNodeType, newClusterEnableElasticDisk, newClusterInitScripts, newClusterLogDestination, newClusterNodeType, newClusterNumOfWorker, newClusterSparkConf, newClusterSparkEnvVars, newClusterVersion, parameters, policyId, type, workspaceResourceId);

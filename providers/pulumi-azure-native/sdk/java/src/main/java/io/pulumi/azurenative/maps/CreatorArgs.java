@@ -5,6 +5,7 @@ package io.pulumi.azurenative.maps;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creatorName;
 
     public Output<String> getCreatorName() {
-        return this.creatorName == null ? Output.empty() : this.creatorName;
+        return this.creatorName == null ? Codegen.empty() : this.creatorName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CreatorArgs(
@@ -84,11 +85,11 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CreatorArgs() {
-        this.accountName = Output.empty();
-        this.creatorName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.creatorName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creatorName(@Nullable String creatorName) {
-            this.creatorName = Output.ofNullable(creatorName);
+            this.creatorName = Codegen.ofNullable(creatorName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -140,7 +141,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class CreatorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CreatorArgs build() {
             return new CreatorArgs(accountName, creatorName, location, resourceGroupName, tags);

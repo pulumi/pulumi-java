@@ -31,10 +31,10 @@ public final class ProviderhubFunctions {
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetDefaultRolloutResult> getDefaultRollout(io.pulumi.azurenative.providerhub.inputs.GetDefaultRolloutArgs args) {
-        return getDefaultRollout(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultRolloutResult> getDefaultRollout(GetDefaultRolloutArgs args) {
+        return getDefaultRollout(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultRolloutResult> getDefaultRollout(io.pulumi.azurenative.providerhub.inputs.GetDefaultRolloutArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultRolloutResult> getDefaultRollout(GetDefaultRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getDefaultRollout", TypeShape.of(GetDefaultRolloutResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,70 +42,70 @@ public final class ProviderhubFunctions {
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetNotificationRegistrationResult> getNotificationRegistration(io.pulumi.azurenative.providerhub.inputs.GetNotificationRegistrationArgs args) {
-        return getNotificationRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationRegistrationResult> getNotificationRegistration(GetNotificationRegistrationArgs args) {
+        return getNotificationRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationRegistrationResult> getNotificationRegistration(io.pulumi.azurenative.providerhub.inputs.GetNotificationRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationRegistrationResult> getNotificationRegistration(GetNotificationRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getNotificationRegistration", TypeShape.of(GetNotificationRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetProviderRegistrationResult> getProviderRegistration(io.pulumi.azurenative.providerhub.inputs.GetProviderRegistrationArgs args) {
-        return getProviderRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProviderRegistrationResult> getProviderRegistration(GetProviderRegistrationArgs args) {
+        return getProviderRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProviderRegistrationResult> getProviderRegistration(io.pulumi.azurenative.providerhub.inputs.GetProviderRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProviderRegistrationResult> getProviderRegistration(GetProviderRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getProviderRegistration", TypeShape.of(GetProviderRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetResourceTypeRegistrationResult> getResourceTypeRegistration(io.pulumi.azurenative.providerhub.inputs.GetResourceTypeRegistrationArgs args) {
-        return getResourceTypeRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceTypeRegistrationResult> getResourceTypeRegistration(GetResourceTypeRegistrationArgs args) {
+        return getResourceTypeRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceTypeRegistrationResult> getResourceTypeRegistration(io.pulumi.azurenative.providerhub.inputs.GetResourceTypeRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceTypeRegistrationResult> getResourceTypeRegistration(GetResourceTypeRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getResourceTypeRegistration", TypeShape.of(GetResourceTypeRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetSkusResult> getSkus(io.pulumi.azurenative.providerhub.inputs.GetSkusArgs args) {
-        return getSkus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSkusResult> getSkus(GetSkusArgs args) {
+        return getSkus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSkusResult> getSkus(io.pulumi.azurenative.providerhub.inputs.GetSkusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSkusResult> getSkus(GetSkusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkus", TypeShape.of(GetSkusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetSkusNestedResourceTypeFirstResult> getSkusNestedResourceTypeFirst(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeFirstArgs args) {
-        return getSkusNestedResourceTypeFirst(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSkusNestedResourceTypeFirstResult> getSkusNestedResourceTypeFirst(GetSkusNestedResourceTypeFirstArgs args) {
+        return getSkusNestedResourceTypeFirst(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSkusNestedResourceTypeFirstResult> getSkusNestedResourceTypeFirst(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeFirstArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSkusNestedResourceTypeFirstResult> getSkusNestedResourceTypeFirst(GetSkusNestedResourceTypeFirstArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkusNestedResourceTypeFirst", TypeShape.of(GetSkusNestedResourceTypeFirstResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetSkusNestedResourceTypeSecondResult> getSkusNestedResourceTypeSecond(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeSecondArgs args) {
-        return getSkusNestedResourceTypeSecond(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSkusNestedResourceTypeSecondResult> getSkusNestedResourceTypeSecond(GetSkusNestedResourceTypeSecondArgs args) {
+        return getSkusNestedResourceTypeSecond(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSkusNestedResourceTypeSecondResult> getSkusNestedResourceTypeSecond(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeSecondArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSkusNestedResourceTypeSecondResult> getSkusNestedResourceTypeSecond(GetSkusNestedResourceTypeSecondArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkusNestedResourceTypeSecond", TypeShape.of(GetSkusNestedResourceTypeSecondResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-11-20.
      * 
      */
-    public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> getSkusNestedResourceTypeThird(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeThirdArgs args) {
-        return getSkusNestedResourceTypeThird(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> getSkusNestedResourceTypeThird(GetSkusNestedResourceTypeThirdArgs args) {
+        return getSkusNestedResourceTypeThird(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> getSkusNestedResourceTypeThird(io.pulumi.azurenative.providerhub.inputs.GetSkusNestedResourceTypeThirdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> getSkusNestedResourceTypeThird(GetSkusNestedResourceTypeThirdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkusNestedResourceTypeThird", TypeShape.of(GetSkusNestedResourceTypeThirdResult.class), args, Utilities.withVersion(options));
     }
 }

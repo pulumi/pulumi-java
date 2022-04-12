@@ -5,6 +5,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> ignoreCoordinates;
 
     public Output<List<String>> getIgnoreCoordinates() {
-        return this.ignoreCoordinates == null ? Output.empty() : this.ignoreCoordinates;
+        return this.ignoreCoordinates == null ? Codegen.empty() : this.ignoreCoordinates;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
     }
 
     private CanaryBaseScreenshotArgs() {
-        this.ignoreCoordinates = Output.empty();
-        this.screenshotName = Output.empty();
+        this.ignoreCoordinates = Codegen.empty();
+        this.screenshotName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CanaryBaseScreenshotArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
-            this.ignoreCoordinates = Output.ofNullable(ignoreCoordinates);
+            this.ignoreCoordinates = Codegen.ofNullable(ignoreCoordinates);
             return this;
         }
         public Builder ignoreCoordinates(String... ignoreCoordinates) {

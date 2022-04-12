@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> kmsKeyVersionName;
 
     public Output<String> getKmsKeyVersionName() {
-        return this.kmsKeyVersionName == null ? Output.empty() : this.kmsKeyVersionName;
+        return this.kmsKeyVersionName == null ? Codegen.empty() : this.kmsKeyVersionName;
     }
 
     public DiskEncryptionStatusArgs(
@@ -48,8 +49,8 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
     }
 
     private DiskEncryptionStatusArgs() {
-        this.kind = Output.empty();
-        this.kmsKeyVersionName = Output.empty();
+        this.kind = Codegen.empty();
+        this.kmsKeyVersionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder kmsKeyVersionName(@Nullable Output<String> kmsKeyVersionName) {
@@ -87,7 +88,7 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kmsKeyVersionName(@Nullable String kmsKeyVersionName) {
-            this.kmsKeyVersionName = Output.ofNullable(kmsKeyVersionName);
+            this.kmsKeyVersionName = Codegen.ofNullable(kmsKeyVersionName);
             return this;
         }        public DiskEncryptionStatusArgs build() {
             return new DiskEncryptionStatusArgs(kind, kmsKeyVersionName);

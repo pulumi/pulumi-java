@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class DataSourceParametersServiceNowArgs extends io.pulumi.resource
     }
 
     private DataSourceParametersServiceNowArgs() {
-        this.siteBaseUrl = Output.empty();
+        this.siteBaseUrl = Codegen.empty();
     }
 
     public static Builder builder() {

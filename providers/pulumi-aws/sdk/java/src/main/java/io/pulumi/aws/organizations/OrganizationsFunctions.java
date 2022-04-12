@@ -27,12 +27,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators() {
-        return getDelegatedAdministrators(io.pulumi.aws.organizations.inputs.GetDelegatedAdministratorsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDelegatedAdministrators(GetDelegatedAdministratorsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(io.pulumi.aws.organizations.inputs.GetDelegatedAdministratorsArgs args) {
-        return getDelegatedAdministrators(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args) {
+        return getDelegatedAdministrators(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(io.pulumi.aws.organizations.inputs.GetDelegatedAdministratorsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDelegatedAdministratorsResult> getDelegatedAdministrators(GetDelegatedAdministratorsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getDelegatedAdministrators:getDelegatedAdministrators", TypeShape.of(GetDelegatedAdministratorsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -41,10 +41,10 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(io.pulumi.aws.organizations.inputs.GetDelegatedServicesArgs args) {
-        return getDelegatedServices(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args) {
+        return getDelegatedServices(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(io.pulumi.aws.organizations.inputs.GetDelegatedServicesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDelegatedServicesResult> getDelegatedServices(GetDelegatedServicesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getDelegatedServices:getDelegatedServices", TypeShape.of(GetDelegatedServicesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -54,12 +54,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetOrganizationResult> getOrganization() {
-        return getOrganization(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOrganization(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.resources.InvokeArgs args) {
-        return getOrganization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationResult> getOrganization(InvokeArgs args) {
+        return getOrganization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationResult> getOrganization(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,10 +68,10 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(io.pulumi.aws.organizations.inputs.GetOrganizationalUnitsArgs args) {
-        return getOrganizationalUnits(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args) {
+        return getOrganizationalUnits(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(io.pulumi.aws.organizations.inputs.GetOrganizationalUnitsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationalUnitsResult> getOrganizationalUnits(GetOrganizationalUnitsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getOrganizationalUnits:getOrganizationalUnits", TypeShape.of(GetOrganizationalUnitsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceTagsResult> getResourceTags(io.pulumi.aws.organizations.inputs.GetResourceTagsArgs args) {
-        return getResourceTags(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args) {
+        return getResourceTags(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceTagsResult> getResourceTags(io.pulumi.aws.organizations.inputs.GetResourceTagsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceTagsResult> getResourceTags(GetResourceTagsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getResourceTags:getResourceTags", TypeShape.of(GetResourceTagsResult.class), args, Utilities.withVersion(options));
     }
 }

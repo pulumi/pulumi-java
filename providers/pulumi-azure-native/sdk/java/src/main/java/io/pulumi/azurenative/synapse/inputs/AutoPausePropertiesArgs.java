@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> delayInMinutes;
 
     public Output<Integer> getDelayInMinutes() {
-        return this.delayInMinutes == null ? Output.empty() : this.delayInMinutes;
+        return this.delayInMinutes == null ? Codegen.empty() : this.delayInMinutes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public AutoPausePropertiesArgs(
@@ -49,8 +50,8 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private AutoPausePropertiesArgs() {
-        this.delayInMinutes = Output.empty();
-        this.enabled = Output.empty();
+        this.delayInMinutes = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
-            this.delayInMinutes = Output.ofNullable(delayInMinutes);
+            this.delayInMinutes = Codegen.ofNullable(delayInMinutes);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -88,7 +89,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public AutoPausePropertiesArgs build() {
             return new AutoPausePropertiesArgs(delayInMinutes, enabled);

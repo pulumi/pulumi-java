@@ -20,30 +20,30 @@ public final class PanoramaFunctions {
      * Schema for ApplicationInstance CloudFormation Resource
      * 
      */
-    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(io.pulumi.awsnative.panorama.inputs.GetApplicationInstanceArgs args) {
-        return getApplicationInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(GetApplicationInstanceArgs args) {
+        return getApplicationInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(io.pulumi.awsnative.panorama.inputs.GetApplicationInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstance(GetApplicationInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getApplicationInstance", TypeShape.of(GetApplicationInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema for Package CloudFormation Resource
      * 
      */
-    public static CompletableFuture<GetPackageResult> getPackage(io.pulumi.awsnative.panorama.inputs.GetPackageArgs args) {
-        return getPackage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args) {
+        return getPackage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackageResult> getPackage(io.pulumi.awsnative.panorama.inputs.GetPackageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema for PackageVersion Resource Type
      * 
      */
-    public static CompletableFuture<GetPackageVersionResult> getPackageVersion(io.pulumi.awsnative.panorama.inputs.GetPackageVersionArgs args) {
-        return getPackageVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackageVersionResult> getPackageVersion(GetPackageVersionArgs args) {
+        return getPackageVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackageVersionResult> getPackageVersion(io.pulumi.awsnative.panorama.inputs.GetPackageVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackageVersionResult> getPackageVersion(GetPackageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args, Utilities.withVersion(options));
     }
 }

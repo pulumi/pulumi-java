@@ -53,10 +53,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.azurenative.avs.inputs.GetAddonArgs args) {
-        return getAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+        return getAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.azurenative.avs.inputs.GetAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class AvsFunctions {
      * API Version: 2020-03-20.
      * 
      */
-    public static CompletableFuture<GetAuthorizationResult> getAuthorization(io.pulumi.azurenative.avs.inputs.GetAuthorizationArgs args) {
-        return getAuthorization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizationResult> getAuthorization(GetAuthorizationArgs args) {
+        return getAuthorization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizationResult> getAuthorization(io.pulumi.azurenative.avs.inputs.GetAuthorizationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizationResult> getAuthorization(GetAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAuthorization", TypeShape.of(GetAuthorizationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,10 +75,10 @@ public final class AvsFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetCloudLinkResult> getCloudLink(io.pulumi.azurenative.avs.inputs.GetCloudLinkArgs args) {
-        return getCloudLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudLinkResult> getCloudLink(GetCloudLinkArgs args) {
+        return getCloudLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudLinkResult> getCloudLink(io.pulumi.azurenative.avs.inputs.GetCloudLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudLinkResult> getCloudLink(GetCloudLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getCloudLink", TypeShape.of(GetCloudLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,10 +86,10 @@ public final class AvsFunctions {
      * API Version: 2020-03-20.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.avs.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.avs.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -97,10 +97,10 @@ public final class AvsFunctions {
      * API Version: 2021-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatastoreResult> getDatastore(io.pulumi.azurenative.avs.inputs.GetDatastoreArgs args) {
-        return getDatastore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args) {
+        return getDatastore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatastoreResult> getDatastore(io.pulumi.azurenative.avs.inputs.GetDatastoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,10 +108,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(io.pulumi.azurenative.avs.inputs.GetGlobalReachConnectionArgs args) {
-        return getGlobalReachConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(GetGlobalReachConnectionArgs args) {
+        return getGlobalReachConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(io.pulumi.azurenative.avs.inputs.GetGlobalReachConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalReachConnectionResult> getGlobalReachConnection(GetGlobalReachConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getGlobalReachConnection", TypeShape.of(GetGlobalReachConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -119,10 +119,10 @@ public final class AvsFunctions {
      * API Version: 2020-03-20.
      * 
      */
-    public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(io.pulumi.azurenative.avs.inputs.GetHcxEnterpriseSiteArgs args) {
-        return getHcxEnterpriseSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(GetHcxEnterpriseSiteArgs args) {
+        return getHcxEnterpriseSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(io.pulumi.azurenative.avs.inputs.GetHcxEnterpriseSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHcxEnterpriseSiteResult> getHcxEnterpriseSite(GetHcxEnterpriseSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getHcxEnterpriseSite", TypeShape.of(GetHcxEnterpriseSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -130,10 +130,10 @@ public final class AvsFunctions {
      * API Version: 2021-12-01.
      * 
      */
-    public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(io.pulumi.azurenative.avs.inputs.GetPlacementPolicyArgs args) {
-        return getPlacementPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(GetPlacementPolicyArgs args) {
+        return getPlacementPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(io.pulumi.azurenative.avs.inputs.GetPlacementPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPlacementPolicyResult> getPlacementPolicy(GetPlacementPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPlacementPolicy", TypeShape.of(GetPlacementPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,10 +141,10 @@ public final class AvsFunctions {
      * API Version: 2020-03-20.
      * 
      */
-    public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(io.pulumi.azurenative.avs.inputs.GetPrivateCloudArgs args) {
-        return getPrivateCloud(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(GetPrivateCloudArgs args) {
+        return getPrivateCloud(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(io.pulumi.azurenative.avs.inputs.GetPrivateCloudArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateCloudResult> getPrivateCloud(GetPrivateCloudArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPrivateCloud", TypeShape.of(GetPrivateCloudResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -152,10 +152,10 @@ public final class AvsFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(io.pulumi.azurenative.avs.inputs.GetScriptExecutionArgs args) {
-        return getScriptExecution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(GetScriptExecutionArgs args) {
+        return getScriptExecution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(io.pulumi.azurenative.avs.inputs.GetScriptExecutionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScriptExecutionResult> getScriptExecution(GetScriptExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getScriptExecution", TypeShape.of(GetScriptExecutionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -163,10 +163,10 @@ public final class AvsFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(io.pulumi.azurenative.avs.inputs.GetScriptExecutionLogsArgs args) {
-        return getScriptExecutionLogs(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(GetScriptExecutionLogsArgs args) {
+        return getScriptExecutionLogs(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(io.pulumi.azurenative.avs.inputs.GetScriptExecutionLogsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScriptExecutionLogsResult> getScriptExecutionLogs(GetScriptExecutionLogsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getScriptExecutionLogs", TypeShape.of(GetScriptExecutionLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -174,10 +174,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDhcpArgs args) {
-        return getWorkloadNetworkDhcp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(GetWorkloadNetworkDhcpArgs args) {
+        return getWorkloadNetworkDhcp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDhcpArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkDhcpResult> getWorkloadNetworkDhcp(GetWorkloadNetworkDhcpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDhcp", TypeShape.of(GetWorkloadNetworkDhcpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -185,10 +185,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDnsServiceArgs args) {
-        return getWorkloadNetworkDnsService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(GetWorkloadNetworkDnsServiceArgs args) {
+        return getWorkloadNetworkDnsService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDnsServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> getWorkloadNetworkDnsService(GetWorkloadNetworkDnsServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsService", TypeShape.of(GetWorkloadNetworkDnsServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -196,10 +196,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDnsZoneArgs args) {
-        return getWorkloadNetworkDnsZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(GetWorkloadNetworkDnsZoneArgs args) {
+        return getWorkloadNetworkDnsZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkDnsZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> getWorkloadNetworkDnsZone(GetWorkloadNetworkDnsZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsZone", TypeShape.of(GetWorkloadNetworkDnsZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -207,10 +207,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkPortMirroringArgs args) {
-        return getWorkloadNetworkPortMirroring(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(GetWorkloadNetworkPortMirroringArgs args) {
+        return getWorkloadNetworkPortMirroring(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkPortMirroringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkPortMirroringResult> getWorkloadNetworkPortMirroring(GetWorkloadNetworkPortMirroringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkPortMirroring", TypeShape.of(GetWorkloadNetworkPortMirroringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -218,10 +218,10 @@ public final class AvsFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkPublicIPArgs args) {
-        return getWorkloadNetworkPublicIP(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(GetWorkloadNetworkPublicIPArgs args) {
+        return getWorkloadNetworkPublicIP(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkPublicIPArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> getWorkloadNetworkPublicIP(GetWorkloadNetworkPublicIPArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkPublicIP", TypeShape.of(GetWorkloadNetworkPublicIPResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -229,10 +229,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkSegmentArgs args) {
-        return getWorkloadNetworkSegment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(GetWorkloadNetworkSegmentArgs args) {
+        return getWorkloadNetworkSegment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkSegmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkSegmentResult> getWorkloadNetworkSegment(GetWorkloadNetworkSegmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkSegment", TypeShape.of(GetWorkloadNetworkSegmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -240,10 +240,10 @@ public final class AvsFunctions {
      * API Version: 2020-07-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkVMGroupArgs args) {
-        return getWorkloadNetworkVMGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(GetWorkloadNetworkVMGroupArgs args) {
+        return getWorkloadNetworkVMGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(io.pulumi.azurenative.avs.inputs.GetWorkloadNetworkVMGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadNetworkVMGroupResult> getWorkloadNetworkVMGroup(GetWorkloadNetworkVMGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkVMGroup", TypeShape.of(GetWorkloadNetworkVMGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -251,10 +251,10 @@ public final class AvsFunctions {
      * API Version: 2020-03-20.
      * 
      */
-    public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(io.pulumi.azurenative.avs.inputs.ListPrivateCloudAdminCredentialsArgs args) {
-        return listPrivateCloudAdminCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(ListPrivateCloudAdminCredentialsArgs args) {
+        return listPrivateCloudAdminCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(io.pulumi.azurenative.avs.inputs.ListPrivateCloudAdminCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListPrivateCloudAdminCredentialsResult> listPrivateCloudAdminCredentials(ListPrivateCloudAdminCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:listPrivateCloudAdminCredentials", TypeShape.of(ListPrivateCloudAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

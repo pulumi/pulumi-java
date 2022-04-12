@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
     }
 
     private ResponseHeadersPolicyContentSecurityPolicyArgs() {
-        this.contentSecurityPolicy = Output.empty();
-        this.override = Output.empty();
+        this.contentSecurityPolicy = Codegen.empty();
+        this.override = Codegen.empty();
     }
 
     public static Builder builder() {

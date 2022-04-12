@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> raidLevel;
 
     public Output<String> getRaidLevel() {
-        return this.raidLevel == null ? Output.empty() : this.raidLevel;
+        return this.raidLevel == null ? Codegen.empty() : this.raidLevel;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public MysqlLayerEbsVolumeArgs(
@@ -107,13 +108,13 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
     }
 
     private MysqlLayerEbsVolumeArgs() {
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.mountPoint = Output.empty();
-        this.numberOfDisks = Output.empty();
-        this.raidLevel = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.mountPoint = Codegen.empty();
+        this.numberOfDisks = Codegen.empty();
+        this.raidLevel = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -161,7 +162,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder mountPoint(Output<String> mountPoint) {
@@ -185,7 +186,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder raidLevel(@Nullable String raidLevel) {
-            this.raidLevel = Output.ofNullable(raidLevel);
+            this.raidLevel = Codegen.ofNullable(raidLevel);
             return this;
         }
         public Builder size(Output<Integer> size) {
@@ -201,7 +202,7 @@ public final class MysqlLayerEbsVolumeArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public MysqlLayerEbsVolumeArgs build() {
             return new MysqlLayerEbsVolumeArgs(encrypted, iops, mountPoint, numberOfDisks, raidLevel, size, type);

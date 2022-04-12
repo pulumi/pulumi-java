@@ -16,10 +16,10 @@ public final class Translate_v3beta1Functions {
      * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
      * 
      */
-    public static CompletableFuture<GetGlossaryResult> getGlossary(io.pulumi.googlenative.translate_v3beta1.inputs.GetGlossaryArgs args) {
-        return getGlossary(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlossaryResult> getGlossary(GetGlossaryArgs args) {
+        return getGlossary(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlossaryResult> getGlossary(io.pulumi.googlenative.translate_v3beta1.inputs.GetGlossaryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlossaryResult> getGlossary(GetGlossaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:translate/v3beta1:getGlossary", TypeShape.of(GetGlossaryResult.class), args, Utilities.withVersion(options));
     }
 }

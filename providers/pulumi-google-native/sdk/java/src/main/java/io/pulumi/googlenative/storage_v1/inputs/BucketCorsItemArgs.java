@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxAgeSeconds;
 
     public Output<Integer> getMaxAgeSeconds() {
-        return this.maxAgeSeconds == null ? Output.empty() : this.maxAgeSeconds;
+        return this.maxAgeSeconds == null ? Codegen.empty() : this.maxAgeSeconds;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> method;
 
     public Output<List<String>> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> origin;
 
     public Output<List<String>> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> responseHeader;
 
     public Output<List<String>> getResponseHeader() {
-        return this.responseHeader == null ? Output.empty() : this.responseHeader;
+        return this.responseHeader == null ? Codegen.empty() : this.responseHeader;
     }
 
     public BucketCorsItemArgs(
@@ -72,10 +73,10 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketCorsItemArgs() {
-        this.maxAgeSeconds = Output.empty();
-        this.method = Output.empty();
-        this.origin = Output.empty();
-        this.responseHeader = Output.empty();
+        this.maxAgeSeconds = Codegen.empty();
+        this.method = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.responseHeader = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
-            this.maxAgeSeconds = Output.ofNullable(maxAgeSeconds);
+            this.maxAgeSeconds = Codegen.ofNullable(maxAgeSeconds);
             return this;
         }
         public Builder method(@Nullable Output<List<String>> method) {
@@ -117,7 +118,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder method(@Nullable List<String> method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder method(String... method) {
@@ -128,7 +129,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder origin(@Nullable List<String> origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder origin(String... origin) {
@@ -139,7 +140,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseHeader(@Nullable List<String> responseHeader) {
-            this.responseHeader = Output.ofNullable(responseHeader);
+            this.responseHeader = Codegen.ofNullable(responseHeader);
             return this;
         }
         public Builder responseHeader(String... responseHeader) {

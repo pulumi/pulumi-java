@@ -20,30 +20,30 @@ public final class Iap_v1Functions {
      * Retrieves the OAuth brand of the project.
      * 
      */
-    public static CompletableFuture<GetBrandResult> getBrand(io.pulumi.googlenative.iap_v1.inputs.GetBrandArgs args) {
-        return getBrand(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBrandResult> getBrand(GetBrandArgs args) {
+        return getBrand(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBrandResult> getBrand(io.pulumi.googlenative.iap_v1.inputs.GetBrandArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBrandResult> getBrand(GetBrandArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getBrand", TypeShape.of(GetBrandResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
      * 
      */
-    public static CompletableFuture<GetIdentityAwareProxyClientResult> getIdentityAwareProxyClient(io.pulumi.googlenative.iap_v1.inputs.GetIdentityAwareProxyClientArgs args) {
-        return getIdentityAwareProxyClient(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIdentityAwareProxyClientResult> getIdentityAwareProxyClient(GetIdentityAwareProxyClientArgs args) {
+        return getIdentityAwareProxyClient(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIdentityAwareProxyClientResult> getIdentityAwareProxyClient(io.pulumi.googlenative.iap_v1.inputs.GetIdentityAwareProxyClientArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIdentityAwareProxyClientResult> getIdentityAwareProxyClient(GetIdentityAwareProxyClientArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getIdentityAwareProxyClient", TypeShape.of(GetIdentityAwareProxyClientResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
      * 
      */
-    public static CompletableFuture<GetV1IamPolicyResult> getV1IamPolicy(io.pulumi.googlenative.iap_v1.inputs.GetV1IamPolicyArgs args) {
-        return getV1IamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetV1IamPolicyResult> getV1IamPolicy(GetV1IamPolicyArgs args) {
+        return getV1IamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetV1IamPolicyResult> getV1IamPolicy(io.pulumi.googlenative.iap_v1.inputs.GetV1IamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetV1IamPolicyResult> getV1IamPolicy(GetV1IamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getV1IamPolicy", TypeShape.of(GetV1IamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

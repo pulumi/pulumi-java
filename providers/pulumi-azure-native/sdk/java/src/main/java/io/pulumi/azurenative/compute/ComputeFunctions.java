@@ -77,10 +77,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(io.pulumi.azurenative.compute.inputs.GetAvailabilitySetArgs args) {
-        return getAvailabilitySet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args) {
+        return getAvailabilitySet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(io.pulumi.azurenative.compute.inputs.GetAvailabilitySetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAvailabilitySetResult> getAvailabilitySet(GetAvailabilitySetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getAvailabilitySet", TypeShape.of(GetAvailabilitySetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class ComputeFunctions {
      * API Version: 2021-04-01.
      * 
      */
-    public static CompletableFuture<GetCapacityReservationResult> getCapacityReservation(io.pulumi.azurenative.compute.inputs.GetCapacityReservationArgs args) {
-        return getCapacityReservation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapacityReservationResult> getCapacityReservation(GetCapacityReservationArgs args) {
+        return getCapacityReservation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapacityReservationResult> getCapacityReservation(io.pulumi.azurenative.compute.inputs.GetCapacityReservationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapacityReservationResult> getCapacityReservation(GetCapacityReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCapacityReservation", TypeShape.of(GetCapacityReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class ComputeFunctions {
      * API Version: 2021-04-01.
      * 
      */
-    public static CompletableFuture<GetCapacityReservationGroupResult> getCapacityReservationGroup(io.pulumi.azurenative.compute.inputs.GetCapacityReservationGroupArgs args) {
-        return getCapacityReservationGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapacityReservationGroupResult> getCapacityReservationGroup(GetCapacityReservationGroupArgs args) {
+        return getCapacityReservationGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapacityReservationGroupResult> getCapacityReservationGroup(io.pulumi.azurenative.compute.inputs.GetCapacityReservationGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapacityReservationGroupResult> getCapacityReservationGroup(GetCapacityReservationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCapacityReservationGroup", TypeShape.of(GetCapacityReservationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetCloudServiceResult> getCloudService(io.pulumi.azurenative.compute.inputs.GetCloudServiceArgs args) {
-        return getCloudService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudServiceResult> getCloudService(GetCloudServiceArgs args) {
+        return getCloudService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudServiceResult> getCloudService(io.pulumi.azurenative.compute.inputs.GetCloudServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudServiceResult> getCloudService(GetCloudServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCloudService", TypeShape.of(GetCloudServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,10 +121,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(io.pulumi.azurenative.compute.inputs.GetDedicatedHostArgs args) {
-        return getDedicatedHost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
+        return getDedicatedHost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(io.pulumi.azurenative.compute.inputs.GetDedicatedHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,10 +132,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(io.pulumi.azurenative.compute.inputs.GetDedicatedHostGroupArgs args) {
-        return getDedicatedHostGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args) {
+        return getDedicatedHostGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(io.pulumi.azurenative.compute.inputs.GetDedicatedHostGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDedicatedHostGroupResult> getDedicatedHostGroup(GetDedicatedHostGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDedicatedHostGroup", TypeShape.of(GetDedicatedHostGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,10 +143,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.azurenative.compute.inputs.GetDiskArgs args) {
-        return getDisk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
+        return getDisk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.azurenative.compute.inputs.GetDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,10 +154,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(io.pulumi.azurenative.compute.inputs.GetDiskAccessArgs args) {
-        return getDiskAccess(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args) {
+        return getDiskAccess(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(io.pulumi.azurenative.compute.inputs.GetDiskAccessArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskAccessResult> getDiskAccess(GetDiskAccessArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskAccess", TypeShape.of(GetDiskAccessResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,10 +165,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> getDiskAccessAPrivateEndpointConnection(io.pulumi.azurenative.compute.inputs.GetDiskAccessAPrivateEndpointConnectionArgs args) {
-        return getDiskAccessAPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> getDiskAccessAPrivateEndpointConnection(GetDiskAccessAPrivateEndpointConnectionArgs args) {
+        return getDiskAccessAPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> getDiskAccessAPrivateEndpointConnection(io.pulumi.azurenative.compute.inputs.GetDiskAccessAPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> getDiskAccessAPrivateEndpointConnection(GetDiskAccessAPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskAccessAPrivateEndpointConnection", TypeShape.of(GetDiskAccessAPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -176,10 +176,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(io.pulumi.azurenative.compute.inputs.GetDiskEncryptionSetArgs args) {
-        return getDiskEncryptionSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args) {
+        return getDiskEncryptionSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(io.pulumi.azurenative.compute.inputs.GetDiskEncryptionSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskEncryptionSetResult> getDiskEncryptionSet(GetDiskEncryptionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskEncryptionSet", TypeShape.of(GetDiskEncryptionSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -187,10 +187,10 @@ public final class ComputeFunctions {
      * API Version: 2020-09-30.
      * 
      */
-    public static CompletableFuture<GetGalleryResult> getGallery(io.pulumi.azurenative.compute.inputs.GetGalleryArgs args) {
-        return getGallery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGalleryResult> getGallery(GetGalleryArgs args) {
+        return getGallery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGalleryResult> getGallery(io.pulumi.azurenative.compute.inputs.GetGalleryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGalleryResult> getGallery(GetGalleryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGallery", TypeShape.of(GetGalleryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -198,10 +198,10 @@ public final class ComputeFunctions {
      * API Version: 2020-09-30.
      * 
      */
-    public static CompletableFuture<GetGalleryApplicationResult> getGalleryApplication(io.pulumi.azurenative.compute.inputs.GetGalleryApplicationArgs args) {
-        return getGalleryApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGalleryApplicationResult> getGalleryApplication(GetGalleryApplicationArgs args) {
+        return getGalleryApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGalleryApplicationResult> getGalleryApplication(io.pulumi.azurenative.compute.inputs.GetGalleryApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGalleryApplicationResult> getGalleryApplication(GetGalleryApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplication", TypeShape.of(GetGalleryApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -209,10 +209,10 @@ public final class ComputeFunctions {
      * API Version: 2020-09-30.
      * 
      */
-    public static CompletableFuture<GetGalleryApplicationVersionResult> getGalleryApplicationVersion(io.pulumi.azurenative.compute.inputs.GetGalleryApplicationVersionArgs args) {
-        return getGalleryApplicationVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGalleryApplicationVersionResult> getGalleryApplicationVersion(GetGalleryApplicationVersionArgs args) {
+        return getGalleryApplicationVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGalleryApplicationVersionResult> getGalleryApplicationVersion(io.pulumi.azurenative.compute.inputs.GetGalleryApplicationVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGalleryApplicationVersionResult> getGalleryApplicationVersion(GetGalleryApplicationVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplicationVersion", TypeShape.of(GetGalleryApplicationVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -220,10 +220,10 @@ public final class ComputeFunctions {
      * API Version: 2020-09-30.
      * 
      */
-    public static CompletableFuture<GetGalleryImageResult> getGalleryImage(io.pulumi.azurenative.compute.inputs.GetGalleryImageArgs args) {
-        return getGalleryImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGalleryImageResult> getGalleryImage(GetGalleryImageArgs args) {
+        return getGalleryImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGalleryImageResult> getGalleryImage(io.pulumi.azurenative.compute.inputs.GetGalleryImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGalleryImageResult> getGalleryImage(GetGalleryImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryImage", TypeShape.of(GetGalleryImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -231,10 +231,10 @@ public final class ComputeFunctions {
      * API Version: 2020-09-30.
      * 
      */
-    public static CompletableFuture<GetGalleryImageVersionResult> getGalleryImageVersion(io.pulumi.azurenative.compute.inputs.GetGalleryImageVersionArgs args) {
-        return getGalleryImageVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGalleryImageVersionResult> getGalleryImageVersion(GetGalleryImageVersionArgs args) {
+        return getGalleryImageVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGalleryImageVersionResult> getGalleryImageVersion(io.pulumi.azurenative.compute.inputs.GetGalleryImageVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGalleryImageVersionResult> getGalleryImageVersion(GetGalleryImageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryImageVersion", TypeShape.of(GetGalleryImageVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -242,10 +242,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.azurenative.compute.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.azurenative.compute.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -253,10 +253,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> getLogAnalyticExportRequestRateByInterval(io.pulumi.azurenative.compute.inputs.GetLogAnalyticExportRequestRateByIntervalArgs args) {
-        return getLogAnalyticExportRequestRateByInterval(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> getLogAnalyticExportRequestRateByInterval(GetLogAnalyticExportRequestRateByIntervalArgs args) {
+        return getLogAnalyticExportRequestRateByInterval(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> getLogAnalyticExportRequestRateByInterval(io.pulumi.azurenative.compute.inputs.GetLogAnalyticExportRequestRateByIntervalArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> getLogAnalyticExportRequestRateByInterval(GetLogAnalyticExportRequestRateByIntervalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getLogAnalyticExportRequestRateByInterval", TypeShape.of(GetLogAnalyticExportRequestRateByIntervalResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -264,10 +264,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> getLogAnalyticExportThrottledRequests(io.pulumi.azurenative.compute.inputs.GetLogAnalyticExportThrottledRequestsArgs args) {
-        return getLogAnalyticExportThrottledRequests(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> getLogAnalyticExportThrottledRequests(GetLogAnalyticExportThrottledRequestsArgs args) {
+        return getLogAnalyticExportThrottledRequests(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> getLogAnalyticExportThrottledRequests(io.pulumi.azurenative.compute.inputs.GetLogAnalyticExportThrottledRequestsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> getLogAnalyticExportThrottledRequests(GetLogAnalyticExportThrottledRequestsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getLogAnalyticExportThrottledRequests", TypeShape.of(GetLogAnalyticExportThrottledRequestsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -275,10 +275,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetProximityPlacementGroupResult> getProximityPlacementGroup(io.pulumi.azurenative.compute.inputs.GetProximityPlacementGroupArgs args) {
-        return getProximityPlacementGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProximityPlacementGroupResult> getProximityPlacementGroup(GetProximityPlacementGroupArgs args) {
+        return getProximityPlacementGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProximityPlacementGroupResult> getProximityPlacementGroup(io.pulumi.azurenative.compute.inputs.GetProximityPlacementGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProximityPlacementGroupResult> getProximityPlacementGroup(GetProximityPlacementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getProximityPlacementGroup", TypeShape.of(GetProximityPlacementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -286,10 +286,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetRestorePointResult> getRestorePoint(io.pulumi.azurenative.compute.inputs.GetRestorePointArgs args) {
-        return getRestorePoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRestorePointResult> getRestorePoint(GetRestorePointArgs args) {
+        return getRestorePoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRestorePointResult> getRestorePoint(io.pulumi.azurenative.compute.inputs.GetRestorePointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRestorePointResult> getRestorePoint(GetRestorePointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getRestorePoint", TypeShape.of(GetRestorePointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -297,10 +297,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetRestorePointCollectionResult> getRestorePointCollection(io.pulumi.azurenative.compute.inputs.GetRestorePointCollectionArgs args) {
-        return getRestorePointCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRestorePointCollectionResult> getRestorePointCollection(GetRestorePointCollectionArgs args) {
+        return getRestorePointCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRestorePointCollectionResult> getRestorePointCollection(io.pulumi.azurenative.compute.inputs.GetRestorePointCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRestorePointCollectionResult> getRestorePointCollection(GetRestorePointCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getRestorePointCollection", TypeShape.of(GetRestorePointCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -308,10 +308,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.azurenative.compute.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.azurenative.compute.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -319,10 +319,10 @@ public final class ComputeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(io.pulumi.azurenative.compute.inputs.GetSshPublicKeyArgs args) {
-        return getSshPublicKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args) {
+        return getSshPublicKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(io.pulumi.azurenative.compute.inputs.GetSshPublicKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -330,10 +330,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.compute.inputs.GetVirtualMachineArgs args) {
-        return getVirtualMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+        return getVirtualMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.compute.inputs.GetVirtualMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -341,10 +341,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineExtensionResult> getVirtualMachineExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineExtensionArgs args) {
-        return getVirtualMachineExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineExtensionResult> getVirtualMachineExtension(GetVirtualMachineExtensionArgs args) {
+        return getVirtualMachineExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineExtensionResult> getVirtualMachineExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineExtensionResult> getVirtualMachineExtension(GetVirtualMachineExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineExtension", TypeShape.of(GetVirtualMachineExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -352,10 +352,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> getVirtualMachineRunCommandByVirtualMachine(io.pulumi.azurenative.compute.inputs.GetVirtualMachineRunCommandByVirtualMachineArgs args) {
-        return getVirtualMachineRunCommandByVirtualMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> getVirtualMachineRunCommandByVirtualMachine(GetVirtualMachineRunCommandByVirtualMachineArgs args) {
+        return getVirtualMachineRunCommandByVirtualMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> getVirtualMachineRunCommandByVirtualMachine(io.pulumi.azurenative.compute.inputs.GetVirtualMachineRunCommandByVirtualMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineRunCommandByVirtualMachineResult> getVirtualMachineRunCommandByVirtualMachine(GetVirtualMachineRunCommandByVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineRunCommandByVirtualMachine", TypeShape.of(GetVirtualMachineRunCommandByVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -363,10 +363,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetArgs args) {
-        return getVirtualMachineScaleSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args) {
+        return getVirtualMachineScaleSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScaleSetResult> getVirtualMachineScaleSet(GetVirtualMachineScaleSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSet", TypeShape.of(GetVirtualMachineScaleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -374,10 +374,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> getVirtualMachineScaleSetExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetExtensionArgs args) {
-        return getVirtualMachineScaleSetExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> getVirtualMachineScaleSetExtension(GetVirtualMachineScaleSetExtensionArgs args) {
+        return getVirtualMachineScaleSetExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> getVirtualMachineScaleSetExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> getVirtualMachineScaleSetExtension(GetVirtualMachineScaleSetExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetExtension", TypeShape.of(GetVirtualMachineScaleSetExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -385,10 +385,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> getVirtualMachineScaleSetVM(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMArgs args) {
-        return getVirtualMachineScaleSetVM(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> getVirtualMachineScaleSetVM(GetVirtualMachineScaleSetVMArgs args) {
+        return getVirtualMachineScaleSetVM(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> getVirtualMachineScaleSetVM(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScaleSetVMResult> getVirtualMachineScaleSetVM(GetVirtualMachineScaleSetVMArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVM", TypeShape.of(GetVirtualMachineScaleSetVMResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -396,10 +396,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> getVirtualMachineScaleSetVMExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMExtensionArgs args) {
-        return getVirtualMachineScaleSetVMExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> getVirtualMachineScaleSetVMExtension(GetVirtualMachineScaleSetVMExtensionArgs args) {
+        return getVirtualMachineScaleSetVMExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> getVirtualMachineScaleSetVMExtension(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> getVirtualMachineScaleSetVMExtension(GetVirtualMachineScaleSetVMExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMExtension", TypeShape.of(GetVirtualMachineScaleSetVMExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -407,10 +407,10 @@ public final class ComputeFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> getVirtualMachineScaleSetVMRunCommand(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMRunCommandArgs args) {
-        return getVirtualMachineScaleSetVMRunCommand(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> getVirtualMachineScaleSetVMRunCommand(GetVirtualMachineScaleSetVMRunCommandArgs args) {
+        return getVirtualMachineScaleSetVMRunCommand(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> getVirtualMachineScaleSetVMRunCommand(io.pulumi.azurenative.compute.inputs.GetVirtualMachineScaleSetVMRunCommandArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> getVirtualMachineScaleSetVMRunCommand(GetVirtualMachineScaleSetVMRunCommandArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMRunCommand", TypeShape.of(GetVirtualMachineScaleSetVMRunCommandResult.class), args, Utilities.withVersion(options));
     }
 }

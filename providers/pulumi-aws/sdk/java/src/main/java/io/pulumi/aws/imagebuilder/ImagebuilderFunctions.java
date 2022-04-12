@@ -36,10 +36,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(io.pulumi.aws.imagebuilder.inputs.GetComponentArgs args) {
-        return getComponent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+        return getComponent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComponentResult> getComponent(io.pulumi.aws.imagebuilder.inputs.GetComponentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,12 +49,12 @@ public final class ImagebuilderFunctions {
      * 
      */
     public static CompletableFuture<GetComponentsResult> getComponents() {
-        return getComponents(io.pulumi.aws.imagebuilder.inputs.GetComponentsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getComponents(GetComponentsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComponentsResult> getComponents(io.pulumi.aws.imagebuilder.inputs.GetComponentsArgs args) {
-        return getComponents(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args) {
+        return getComponents(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComponentsResult> getComponents(io.pulumi.aws.imagebuilder.inputs.GetComponentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -63,10 +63,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationArgs args) {
-        return getDistributionConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
+        return getDistributionConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -76,12 +76,12 @@ public final class ImagebuilderFunctions {
      * 
      */
     public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations() {
-        return getDistributionConfigurations(io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDistributionConfigurations(GetDistributionConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsArgs args) {
-        return getDistributionConfigurations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args) {
+        return getDistributionConfigurations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.imagebuilder.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.imagebuilder.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -102,10 +102,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(io.pulumi.aws.imagebuilder.inputs.GetImagePipelineArgs args) {
-        return getImagePipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
+        return getImagePipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(io.pulumi.aws.imagebuilder.inputs.GetImagePipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -114,10 +114,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(io.pulumi.aws.imagebuilder.inputs.GetImageRecipeArgs args) {
-        return getImageRecipe(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
+        return getImageRecipe(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(io.pulumi.aws.imagebuilder.inputs.GetImageRecipeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipe:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -127,12 +127,12 @@ public final class ImagebuilderFunctions {
      * 
      */
     public static CompletableFuture<GetImageRecipesResult> getImageRecipes() {
-        return getImageRecipes(io.pulumi.aws.imagebuilder.inputs.GetImageRecipesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getImageRecipes(GetImageRecipesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(io.pulumi.aws.imagebuilder.inputs.GetImageRecipesArgs args) {
-        return getImageRecipes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args) {
+        return getImageRecipes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(io.pulumi.aws.imagebuilder.inputs.GetImageRecipesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipes:getImageRecipes", TypeShape.of(GetImageRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,10 +141,10 @@ public final class ImagebuilderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationArgs args) {
-        return getInfrastructureConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
+        return getInfrastructureConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,12 +154,12 @@ public final class ImagebuilderFunctions {
      * 
      */
     public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations() {
-        return getInfrastructureConfigurations(io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsArgs args) {
-        return getInfrastructureConfigurations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args) {
+        return getInfrastructureConfigurations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfigurations:getInfrastructureConfigurations", TypeShape.of(GetInfrastructureConfigurationsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.aws.memorydb.inputs;
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeEndpointGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints;
 
     public Output<List<ClusterShardNodeEndpointGetArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ClusterShardNodeGetArgs(
@@ -69,10 +70,10 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ClusterShardNodeGetArgs() {
-        this.availabilityZone = Output.empty();
-        this.createTime = Output.empty();
-        this.endpoints = Output.empty();
-        this.name = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -114,7 +115,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints) {
@@ -122,7 +123,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder endpoints(@Nullable List<ClusterShardNodeEndpointGetArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(ClusterShardNodeEndpointGetArgs... endpoints) {
@@ -133,7 +134,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ClusterShardNodeGetArgs build() {
             return new ClusterShardNodeGetArgs(availabilityZone, createTime, endpoints, name);

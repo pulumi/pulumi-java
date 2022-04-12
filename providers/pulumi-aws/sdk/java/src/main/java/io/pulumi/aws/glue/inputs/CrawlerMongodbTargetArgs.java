@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class CrawlerMongodbTargetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> scanAll;
 
     public Output<Boolean> getScanAll() {
-        return this.scanAll == null ? Output.empty() : this.scanAll;
+        return this.scanAll == null ? Codegen.empty() : this.scanAll;
     }
 
     public CrawlerMongodbTargetArgs(
@@ -58,9 +59,9 @@ public final class CrawlerMongodbTargetArgs extends io.pulumi.resources.Resource
     }
 
     private CrawlerMongodbTargetArgs() {
-        this.connectionName = Output.empty();
-        this.path = Output.empty();
-        this.scanAll = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.path = Codegen.empty();
+        this.scanAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class CrawlerMongodbTargetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Output.ofNullable(scanAll);
+            this.scanAll = Codegen.ofNullable(scanAll);
             return this;
         }        public CrawlerMongodbTargetArgs build() {
             return new CrawlerMongodbTargetArgs(connectionName, path, scanAll);

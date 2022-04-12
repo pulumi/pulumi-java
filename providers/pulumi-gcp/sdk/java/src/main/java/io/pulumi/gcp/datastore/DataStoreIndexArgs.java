@@ -5,6 +5,7 @@ package io.pulumi.gcp.datastore;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ancestor;
 
     public Output<String> getAncestor() {
-        return this.ancestor == null ? Output.empty() : this.ancestor;
+        return this.ancestor == null ? Codegen.empty() : this.ancestor;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
     public Output<List<DataStoreIndexPropertyArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public DataStoreIndexArgs(
@@ -76,10 +77,10 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataStoreIndexArgs() {
-        this.ancestor = Output.empty();
-        this.kind = Output.empty();
-        this.project = Output.empty();
-        this.properties = Output.empty();
+        this.ancestor = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.project = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ancestor(@Nullable String ancestor) {
-            this.ancestor = Output.ofNullable(ancestor);
+            this.ancestor = Codegen.ofNullable(ancestor);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -129,7 +130,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
@@ -137,7 +138,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable List<DataStoreIndexPropertyArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder properties(DataStoreIndexPropertyArgs... properties) {

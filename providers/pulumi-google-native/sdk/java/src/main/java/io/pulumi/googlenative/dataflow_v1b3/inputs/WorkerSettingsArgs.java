@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> baseUrl;
 
     public Output<String> getBaseUrl() {
-        return this.baseUrl == null ? Output.empty() : this.baseUrl;
+        return this.baseUrl == null ? Codegen.empty() : this.baseUrl;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> reportingEnabled;
 
     public Output<Boolean> getReportingEnabled() {
-        return this.reportingEnabled == null ? Output.empty() : this.reportingEnabled;
+        return this.reportingEnabled == null ? Codegen.empty() : this.reportingEnabled;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> servicePath;
 
     public Output<String> getServicePath() {
-        return this.servicePath == null ? Output.empty() : this.servicePath;
+        return this.servicePath == null ? Codegen.empty() : this.servicePath;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shuffleServicePath;
 
     public Output<String> getShuffleServicePath() {
-        return this.shuffleServicePath == null ? Output.empty() : this.shuffleServicePath;
+        return this.shuffleServicePath == null ? Codegen.empty() : this.shuffleServicePath;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tempStoragePrefix;
 
     public Output<String> getTempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Output.empty() : this.tempStoragePrefix;
+        return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workerId;
 
     public Output<String> getWorkerId() {
-        return this.workerId == null ? Output.empty() : this.workerId;
+        return this.workerId == null ? Codegen.empty() : this.workerId;
     }
 
     public WorkerSettingsArgs(
@@ -101,12 +102,12 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerSettingsArgs() {
-        this.baseUrl = Output.empty();
-        this.reportingEnabled = Output.empty();
-        this.servicePath = Output.empty();
-        this.shuffleServicePath = Output.empty();
-        this.tempStoragePrefix = Output.empty();
-        this.workerId = Output.empty();
+        this.baseUrl = Codegen.empty();
+        this.reportingEnabled = Codegen.empty();
+        this.servicePath = Codegen.empty();
+        this.shuffleServicePath = Codegen.empty();
+        this.tempStoragePrefix = Codegen.empty();
+        this.workerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseUrl(@Nullable String baseUrl) {
-            this.baseUrl = Output.ofNullable(baseUrl);
+            this.baseUrl = Codegen.ofNullable(baseUrl);
             return this;
         }
         public Builder reportingEnabled(@Nullable Output<Boolean> reportingEnabled) {
@@ -152,7 +153,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportingEnabled(@Nullable Boolean reportingEnabled) {
-            this.reportingEnabled = Output.ofNullable(reportingEnabled);
+            this.reportingEnabled = Codegen.ofNullable(reportingEnabled);
             return this;
         }
         public Builder servicePath(@Nullable Output<String> servicePath) {
@@ -160,7 +161,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servicePath(@Nullable String servicePath) {
-            this.servicePath = Output.ofNullable(servicePath);
+            this.servicePath = Codegen.ofNullable(servicePath);
             return this;
         }
         public Builder shuffleServicePath(@Nullable Output<String> shuffleServicePath) {
@@ -168,7 +169,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shuffleServicePath(@Nullable String shuffleServicePath) {
-            this.shuffleServicePath = Output.ofNullable(shuffleServicePath);
+            this.shuffleServicePath = Codegen.ofNullable(shuffleServicePath);
             return this;
         }
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
@@ -176,7 +177,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
+            this.tempStoragePrefix = Codegen.ofNullable(tempStoragePrefix);
             return this;
         }
         public Builder workerId(@Nullable Output<String> workerId) {
@@ -184,7 +185,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerId(@Nullable String workerId) {
-            this.workerId = Output.ofNullable(workerId);
+            this.workerId = Codegen.ofNullable(workerId);
             return this;
         }        public WorkerSettingsArgs build() {
             return new WorkerSettingsArgs(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);

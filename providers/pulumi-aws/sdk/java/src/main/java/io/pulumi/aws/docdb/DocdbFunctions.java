@@ -21,12 +21,12 @@ public final class DocdbFunctions {
      * 
      */
     public static CompletableFuture<GetEngineVersionResult> getEngineVersion() {
-        return getEngineVersion(io.pulumi.aws.docdb.inputs.GetEngineVersionArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEngineVersion(GetEngineVersionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(io.pulumi.aws.docdb.inputs.GetEngineVersionArgs args) {
-        return getEngineVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
+        return getEngineVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(io.pulumi.aws.docdb.inputs.GetEngineVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:docdb/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,12 +36,12 @@ public final class DocdbFunctions {
      * 
      */
     public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance() {
-        return getOrderableDbInstance(io.pulumi.aws.docdb.inputs.GetOrderableDbInstanceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOrderableDbInstance(GetOrderableDbInstanceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(io.pulumi.aws.docdb.inputs.GetOrderableDbInstanceArgs args) {
-        return getOrderableDbInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
+        return getOrderableDbInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(io.pulumi.aws.docdb.inputs.GetOrderableDbInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:docdb/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

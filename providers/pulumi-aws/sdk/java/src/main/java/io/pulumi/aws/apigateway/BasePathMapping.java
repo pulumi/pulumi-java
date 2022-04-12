@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.BasePathMappingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -115,7 +116,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BasePathMapping(String name, BasePathMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/basePathMapping:BasePathMapping", name, args == null ? BasePathMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/basePathMapping:BasePathMapping", name, args == null ? BasePathMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BasePathMapping(String name, Output<String> id, @Nullable BasePathMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

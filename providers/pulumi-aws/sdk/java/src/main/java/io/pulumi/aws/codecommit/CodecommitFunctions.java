@@ -20,10 +20,10 @@ public final class CodecommitFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApprovalRuleTemplateResult> getApprovalRuleTemplate(io.pulumi.aws.codecommit.inputs.GetApprovalRuleTemplateArgs args) {
-        return getApprovalRuleTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApprovalRuleTemplateResult> getApprovalRuleTemplate(GetApprovalRuleTemplateArgs args) {
+        return getApprovalRuleTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApprovalRuleTemplateResult> getApprovalRuleTemplate(io.pulumi.aws.codecommit.inputs.GetApprovalRuleTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApprovalRuleTemplateResult> getApprovalRuleTemplate(GetApprovalRuleTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codecommit/getApprovalRuleTemplate:getApprovalRuleTemplate", TypeShape.of(GetApprovalRuleTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class CodecommitFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.aws.codecommit.inputs.GetRepositoryArgs args) {
-        return getRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+        return getRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.aws.codecommit.inputs.GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codecommit/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

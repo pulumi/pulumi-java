@@ -5,6 +5,7 @@ package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.redis_v1beta1.enums.WeeklyMaintenanceWindowDay;
 import io.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayArgs;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
     }
 
     private WeeklyMaintenanceWindowArgs() {
-        this.day = Output.empty();
-        this.startTime = Output.empty();
+        this.day = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

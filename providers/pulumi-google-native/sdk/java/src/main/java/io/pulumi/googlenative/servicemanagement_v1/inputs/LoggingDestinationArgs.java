@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> logs;
 
     public Output<List<String>> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> monitoredResource;
 
     public Output<String> getMonitoredResource() {
-        return this.monitoredResource == null ? Output.empty() : this.monitoredResource;
+        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
     }
 
     public LoggingDestinationArgs(
@@ -49,8 +50,8 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LoggingDestinationArgs() {
-        this.logs = Output.empty();
-        this.monitoredResource = Output.empty();
+        this.logs = Codegen.empty();
+        this.monitoredResource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder logs(@Nullable List<String> logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }
         public Builder logs(String... logs) {
@@ -91,7 +92,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monitoredResource(@Nullable String monitoredResource) {
-            this.monitoredResource = Output.ofNullable(monitoredResource);
+            this.monitoredResource = Codegen.ofNullable(monitoredResource);
             return this;
         }        public LoggingDestinationArgs build() {
             return new LoggingDestinationArgs(logs, monitoredResource);

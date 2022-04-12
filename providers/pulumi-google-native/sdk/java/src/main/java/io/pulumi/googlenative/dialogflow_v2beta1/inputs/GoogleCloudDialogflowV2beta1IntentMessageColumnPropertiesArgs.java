@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> getHorizontalAlignment() {
-        return this.horizontalAlignment == null ? Output.empty() : this.horizontalAlignment;
+        return this.horizontalAlignment == null ? Codegen.empty() : this.horizontalAlignment;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs() {
-        this.header = Output.empty();
-        this.horizontalAlignment = Output.empty();
+        this.header = Codegen.empty();
+        this.horizontalAlignment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
             return this;
         }
         public Builder horizontalAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
-            this.horizontalAlignment = Output.ofNullable(horizontalAlignment);
+            this.horizontalAlignment = Codegen.ofNullable(horizontalAlignment);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs(header, horizontalAlignment);

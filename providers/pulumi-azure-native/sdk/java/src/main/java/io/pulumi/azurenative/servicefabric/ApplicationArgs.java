@@ -9,6 +9,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ApplicationUserAssignedIdentit
 import io.pulumi.azurenative.servicefabric.inputs.ManagedIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
     public Output<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
-        return this.managedIdentities == null ? Output.empty() : this.managedIdentities;
+        return this.managedIdentities == null ? Codegen.empty() : this.managedIdentities;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maximumNodes;
 
     public Output<Double> getMaximumNodes() {
-        return this.maximumNodes == null ? Output.empty() : this.maximumNodes;
+        return this.maximumNodes == null ? Codegen.empty() : this.maximumNodes;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
 
     public Output<List<ApplicationMetricDescriptionArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minimumNodes;
 
     public Output<Double> getMinimumNodes() {
-        return this.minimumNodes == null ? Output.empty() : this.minimumNodes;
+        return this.minimumNodes == null ? Codegen.empty() : this.minimumNodes;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> removeApplicationCapacity;
 
     public Output<Boolean> getRemoveApplicationCapacity() {
-        return this.removeApplicationCapacity == null ? Output.empty() : this.removeApplicationCapacity;
+        return this.removeApplicationCapacity == null ? Codegen.empty() : this.removeApplicationCapacity;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeVersion;
 
     public Output<String> getTypeVersion() {
-        return this.typeVersion == null ? Output.empty() : this.typeVersion;
+        return this.typeVersion == null ? Codegen.empty() : this.typeVersion;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;
 
     public Output<ApplicationUpgradePolicyArgs> getUpgradePolicy() {
-        return this.upgradePolicy == null ? Output.empty() : this.upgradePolicy;
+        return this.upgradePolicy == null ? Codegen.empty() : this.upgradePolicy;
     }
 
     public ApplicationArgs(
@@ -208,7 +209,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         this.identity = identity;
         this.location = location;
         this.managedIdentities = managedIdentities;
-        this.maximumNodes = maximumNodes == null ? Output.ofNullable(0e+00) : maximumNodes;
+        this.maximumNodes = maximumNodes == null ? Codegen.ofNullable(0e+00) : maximumNodes;
         this.metrics = metrics;
         this.minimumNodes = minimumNodes;
         this.parameters = parameters;
@@ -221,21 +222,21 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationName = Output.empty();
-        this.clusterName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.managedIdentities = Output.empty();
-        this.maximumNodes = Output.empty();
-        this.metrics = Output.empty();
-        this.minimumNodes = Output.empty();
-        this.parameters = Output.empty();
-        this.removeApplicationCapacity = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.typeName = Output.empty();
-        this.typeVersion = Output.empty();
-        this.upgradePolicy = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedIdentities = Codegen.empty();
+        this.maximumNodes = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.minimumNodes = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.removeApplicationCapacity = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.typeName = Codegen.empty();
+        this.typeVersion = Codegen.empty();
+        this.upgradePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -291,7 +292,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -307,7 +308,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -315,7 +316,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedIdentities(@Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
@@ -323,7 +324,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedIdentities(@Nullable List<ApplicationUserAssignedIdentityArgs> managedIdentities) {
-            this.managedIdentities = Output.ofNullable(managedIdentities);
+            this.managedIdentities = Codegen.ofNullable(managedIdentities);
             return this;
         }
         public Builder managedIdentities(ApplicationUserAssignedIdentityArgs... managedIdentities) {
@@ -334,7 +335,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximumNodes(@Nullable Double maximumNodes) {
-            this.maximumNodes = Output.ofNullable(maximumNodes);
+            this.maximumNodes = Codegen.ofNullable(maximumNodes);
             return this;
         }
         public Builder metrics(@Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics) {
@@ -342,7 +343,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metrics(@Nullable List<ApplicationMetricDescriptionArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(ApplicationMetricDescriptionArgs... metrics) {
@@ -353,7 +354,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumNodes(@Nullable Double minimumNodes) {
-            this.minimumNodes = Output.ofNullable(minimumNodes);
+            this.minimumNodes = Codegen.ofNullable(minimumNodes);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -361,7 +362,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder removeApplicationCapacity(@Nullable Output<Boolean> removeApplicationCapacity) {
@@ -369,7 +370,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder removeApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
-            this.removeApplicationCapacity = Output.ofNullable(removeApplicationCapacity);
+            this.removeApplicationCapacity = Codegen.ofNullable(removeApplicationCapacity);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -385,7 +386,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -393,7 +394,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }
         public Builder typeVersion(@Nullable Output<String> typeVersion) {
@@ -401,7 +402,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeVersion(@Nullable String typeVersion) {
-            this.typeVersion = Output.ofNullable(typeVersion);
+            this.typeVersion = Codegen.ofNullable(typeVersion);
             return this;
         }
         public Builder upgradePolicy(@Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy) {
@@ -409,7 +410,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgradePolicy(@Nullable ApplicationUpgradePolicyArgs upgradePolicy) {
-            this.upgradePolicy = Output.ofNullable(upgradePolicy);
+            this.upgradePolicy = Codegen.ofNullable(upgradePolicy);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, parameters, removeApplicationCapacity, resourceGroupName, tags, typeName, typeVersion, upgradePolicy);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.peering.inputs.ContactDetailArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> peerAsn;
 
     public Output<Integer> getPeerAsn() {
-        return this.peerAsn == null ? Output.empty() : this.peerAsn;
+        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peerAsnName;
 
     public Output<String> getPeerAsnName() {
-        return this.peerAsnName == null ? Output.empty() : this.peerAsnName;
+        return this.peerAsnName == null ? Codegen.empty() : this.peerAsnName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
 
     public Output<List<ContactDetailArgs>> getPeerContactDetail() {
-        return this.peerContactDetail == null ? Output.empty() : this.peerContactDetail;
+        return this.peerContactDetail == null ? Codegen.empty() : this.peerContactDetail;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peerName;
 
     public Output<String> getPeerName() {
-        return this.peerName == null ? Output.empty() : this.peerName;
+        return this.peerName == null ? Codegen.empty() : this.peerName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ValidationState>> validationState;
 
     public Output<Either<String,ValidationState>> getValidationState() {
-        return this.validationState == null ? Output.empty() : this.validationState;
+        return this.validationState == null ? Codegen.empty() : this.validationState;
     }
 
     public PeerAsnArgs(
@@ -88,11 +89,11 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeerAsnArgs() {
-        this.peerAsn = Output.empty();
-        this.peerAsnName = Output.empty();
-        this.peerContactDetail = Output.empty();
-        this.peerName = Output.empty();
-        this.validationState = Output.empty();
+        this.peerAsn = Codegen.empty();
+        this.peerAsnName = Codegen.empty();
+        this.peerContactDetail = Codegen.empty();
+        this.peerName = Codegen.empty();
+        this.validationState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerAsn(@Nullable Integer peerAsn) {
-            this.peerAsn = Output.ofNullable(peerAsn);
+            this.peerAsn = Codegen.ofNullable(peerAsn);
             return this;
         }
         public Builder peerAsnName(@Nullable Output<String> peerAsnName) {
@@ -136,7 +137,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerAsnName(@Nullable String peerAsnName) {
-            this.peerAsnName = Output.ofNullable(peerAsnName);
+            this.peerAsnName = Codegen.ofNullable(peerAsnName);
             return this;
         }
         public Builder peerContactDetail(@Nullable Output<List<ContactDetailArgs>> peerContactDetail) {
@@ -144,7 +145,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerContactDetail(@Nullable List<ContactDetailArgs> peerContactDetail) {
-            this.peerContactDetail = Output.ofNullable(peerContactDetail);
+            this.peerContactDetail = Codegen.ofNullable(peerContactDetail);
             return this;
         }
         public Builder peerContactDetail(ContactDetailArgs... peerContactDetail) {
@@ -155,7 +156,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerName(@Nullable String peerName) {
-            this.peerName = Output.ofNullable(peerName);
+            this.peerName = Codegen.ofNullable(peerName);
             return this;
         }
         public Builder validationState(@Nullable Output<Either<String,ValidationState>> validationState) {
@@ -163,7 +164,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationState(@Nullable Either<String,ValidationState> validationState) {
-            this.validationState = Output.ofNullable(validationState);
+            this.validationState = Codegen.ofNullable(validationState);
             return this;
         }        public PeerAsnArgs build() {
             return new PeerAsnArgs(peerAsn, peerAsnName, peerContactDetail, peerName, validationState);

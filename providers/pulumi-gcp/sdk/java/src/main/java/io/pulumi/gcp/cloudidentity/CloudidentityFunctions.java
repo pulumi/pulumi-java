@@ -22,10 +22,10 @@ public final class CloudidentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(io.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsArgs args) {
-        return getGroupMemberships(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args) {
+        return getGroupMemberships(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(io.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroupMemberships:getGroupMemberships", TypeShape.of(GetGroupMembershipsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class CloudidentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(io.pulumi.gcp.cloudidentity.inputs.GetGroupsArgs args) {
-        return getGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
+        return getGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupsResult> getGroups(io.pulumi.gcp.cloudidentity.inputs.GetGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

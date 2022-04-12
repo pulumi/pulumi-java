@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkmanager.CustomerGatewayAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -96,7 +97,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomerGatewayAssociation(String name, CustomerGatewayAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:CustomerGatewayAssociation", name, args == null ? CustomerGatewayAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:CustomerGatewayAssociation", name, args == null ? CustomerGatewayAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomerGatewayAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

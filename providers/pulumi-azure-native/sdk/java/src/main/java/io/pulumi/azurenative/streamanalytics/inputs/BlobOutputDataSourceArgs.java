@@ -6,6 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> container;
 
     public Output<String> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> dateFormat;
 
     public Output<String> getDateFormat() {
-        return this.dateFormat == null ? Output.empty() : this.dateFormat;
+        return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> pathPattern;
 
     public Output<String> getPathPattern() {
-        return this.pathPattern == null ? Output.empty() : this.pathPattern;
+        return this.pathPattern == null ? Codegen.empty() : this.pathPattern;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
     public Output<List<StorageAccountArgs>> getStorageAccounts() {
-        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
+        return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> timeFormat;
 
     public Output<String> getTimeFormat() {
-        return this.timeFormat == null ? Output.empty() : this.timeFormat;
+        return this.timeFormat == null ? Codegen.empty() : this.timeFormat;
     }
 
     /**
@@ -103,12 +104,12 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
     }
 
     private BlobOutputDataSourceArgs() {
-        this.container = Output.empty();
-        this.dateFormat = Output.empty();
-        this.pathPattern = Output.empty();
-        this.storageAccounts = Output.empty();
-        this.timeFormat = Output.empty();
-        this.type = Output.empty();
+        this.container = Codegen.empty();
+        this.dateFormat = Codegen.empty();
+        this.pathPattern = Codegen.empty();
+        this.storageAccounts = Codegen.empty();
+        this.timeFormat = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder container(@Nullable String container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
@@ -154,7 +155,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = Output.ofNullable(dateFormat);
+            this.dateFormat = Codegen.ofNullable(dateFormat);
             return this;
         }
         public Builder pathPattern(@Nullable Output<String> pathPattern) {
@@ -162,7 +163,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder pathPattern(@Nullable String pathPattern) {
-            this.pathPattern = Output.ofNullable(pathPattern);
+            this.pathPattern = Codegen.ofNullable(pathPattern);
             return this;
         }
         public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
@@ -170,7 +171,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
-            this.storageAccounts = Output.ofNullable(storageAccounts);
+            this.storageAccounts = Codegen.ofNullable(storageAccounts);
             return this;
         }
         public Builder storageAccounts(StorageAccountArgs... storageAccounts) {
@@ -181,7 +182,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = Output.ofNullable(timeFormat);
+            this.timeFormat = Codegen.ofNullable(timeFormat);
             return this;
         }
         public Builder type(Output<String> type) {

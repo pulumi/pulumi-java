@@ -55,10 +55,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.azurenative.eventgrid.inputs.GetDomainArgs args) {
-        return getDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+        return getDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.azurenative.eventgrid.inputs.GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(io.pulumi.azurenative.eventgrid.inputs.GetDomainTopicArgs args) {
-        return getDomainTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args) {
+        return getDomainTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(io.pulumi.azurenative.eventgrid.inputs.GetDomainTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,10 +77,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventChannelResult> getEventChannel(io.pulumi.azurenative.eventgrid.inputs.GetEventChannelArgs args) {
-        return getEventChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventChannelResult> getEventChannel(GetEventChannelArgs args) {
+        return getEventChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventChannelResult> getEventChannel(io.pulumi.azurenative.eventgrid.inputs.GetEventChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventChannelResult> getEventChannel(GetEventChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventChannel", TypeShape.of(GetEventChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionArgs args) {
-        return getEventSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args) {
+        return getEventSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscription", TypeShape.of(GetEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionDeliveryAttributesArgs args) {
-        return getEventSubscriptionDeliveryAttributes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args) {
+        return getEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionDeliveryAttributes", TypeShape.of(GetEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionFullUrlArgs args) {
-        return getEventSubscriptionFullUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args) {
+        return getEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionFullUrl", TypeShape.of(GetEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,10 +121,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(io.pulumi.azurenative.eventgrid.inputs.GetPartnerNamespaceArgs args) {
-        return getPartnerNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args) {
+        return getPartnerNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(io.pulumi.azurenative.eventgrid.inputs.GetPartnerNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerNamespace", TypeShape.of(GetPartnerNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,10 +132,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(io.pulumi.azurenative.eventgrid.inputs.GetPartnerRegistrationArgs args) {
-        return getPartnerRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args) {
+        return getPartnerRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(io.pulumi.azurenative.eventgrid.inputs.GetPartnerRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerRegistration", TypeShape.of(GetPartnerRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,10 +143,10 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionArgs args) {
-        return getPartnerTopicEventSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args) {
+        return getPartnerTopicEventSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscription", TypeShape.of(GetPartnerTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,10 +154,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args) {
-        return getPartnerTopicEventSubscriptionDeliveryAttributes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args) {
+        return getPartnerTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetPartnerTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,20 +165,20 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionFullUrlArgs args) {
-        return getPartnerTopicEventSubscriptionFullUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args) {
+        return getPartnerTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscriptionFullUrl", TypeShape.of(GetPartnerTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.eventgrid.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.eventgrid.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -186,10 +186,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicArgs args) {
-        return getSystemTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args) {
+        return getSystemTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -197,10 +197,10 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionArgs args) {
-        return getSystemTopicEventSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args) {
+        return getSystemTopicEventSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscription", TypeShape.of(GetSystemTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -208,10 +208,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionDeliveryAttributesArgs args) {
-        return getSystemTopicEventSubscriptionDeliveryAttributes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args) {
+        return getSystemTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetSystemTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -219,10 +219,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionFullUrlArgs args) {
-        return getSystemTopicEventSubscriptionFullUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args) {
+        return getSystemTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(io.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionFullUrl", TypeShape.of(GetSystemTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -230,10 +230,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.azurenative.eventgrid.inputs.GetTopicArgs args) {
-        return getTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+        return getTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.azurenative.eventgrid.inputs.GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -241,10 +241,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListDomainSharedAccessKeysArgs args) {
-        return listDomainSharedAccessKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args) {
+        return listDomainSharedAccessKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListDomainSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listDomainSharedAccessKeys", TypeShape.of(ListDomainSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -252,10 +252,10 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListPartnerNamespaceSharedAccessKeysArgs args) {
-        return listPartnerNamespaceSharedAccessKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args) {
+        return listPartnerNamespaceSharedAccessKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListPartnerNamespaceSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listPartnerNamespaceSharedAccessKeys", TypeShape.of(ListPartnerNamespaceSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -263,10 +263,10 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListTopicSharedAccessKeysArgs args) {
-        return listTopicSharedAccessKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args) {
+        return listTopicSharedAccessKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(io.pulumi.azurenative.eventgrid.inputs.ListTopicSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listTopicSharedAccessKeys", TypeShape.of(ListTopicSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
 }

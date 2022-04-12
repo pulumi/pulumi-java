@@ -20,30 +20,30 @@ public final class Firebasehosting_v1beta1Functions {
      * Retrieves information for the specified channel of the specified site.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetChannelArgs args) {
-        return getChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+        return getChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a domain mapping on the specified site.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetDomainArgs args) {
-        return getDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+        return getDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified Hosting Site.
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetSiteArgs args) {
-        return getSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+        return getSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
 }

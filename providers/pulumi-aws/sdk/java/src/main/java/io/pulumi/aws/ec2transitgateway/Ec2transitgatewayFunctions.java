@@ -29,12 +29,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment() {
-        return getDirectConnectGatewayAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDirectConnectGatewayAttachment(GetDirectConnectGatewayAttachmentArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentArgs args) {
-        return getDirectConnectGatewayAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment(GetDirectConnectGatewayAttachmentArgs args) {
+        return getDirectConnectGatewayAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment(GetDirectConnectGatewayAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getDirectConnectGatewayAttachment:getDirectConnectGatewayAttachment", TypeShape.of(GetDirectConnectGatewayAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,12 +44,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment() {
-        return getPeeringAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetPeeringAttachmentArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPeeringAttachment(GetPeeringAttachmentArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetPeeringAttachmentArgs args) {
-        return getPeeringAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment(GetPeeringAttachmentArgs args) {
+        return getPeeringAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetPeeringAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment(GetPeeringAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getPeeringAttachment:getPeeringAttachment", TypeShape.of(GetPeeringAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,12 +59,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetRouteTableResult> getRouteTable() {
-        return getRouteTable(io.pulumi.aws.ec2transitgateway.inputs.GetRouteTableArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRouteTable(GetRouteTableArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.aws.ec2transitgateway.inputs.GetRouteTableArgs args) {
-        return getRouteTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+        return getRouteTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.aws.ec2transitgateway.inputs.GetRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,12 +74,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetTransitGatewayResult> getTransitGateway() {
-        return getTransitGateway(io.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTransitGateway(GetTransitGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransitGatewayResult> getTransitGateway(io.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayArgs args) {
-        return getTransitGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransitGatewayResult> getTransitGateway(GetTransitGatewayArgs args) {
+        return getTransitGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransitGatewayResult> getTransitGateway(io.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransitGatewayResult> getTransitGateway(GetTransitGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getTransitGateway:getTransitGateway", TypeShape.of(GetTransitGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,12 +89,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment() {
-        return getVpcAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcAttachment(GetVpcAttachmentArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentArgs args) {
-        return getVpcAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment(GetVpcAttachmentArgs args) {
+        return getVpcAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment(GetVpcAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpcAttachment:getVpcAttachment", TypeShape.of(GetVpcAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,12 +106,12 @@ public final class Ec2transitgatewayFunctions {
      * 
      */
     public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment() {
-        return getVpnAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpnAttachment(GetVpnAttachmentArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentArgs args) {
-        return getVpnAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment(GetVpnAttachmentArgs args) {
+        return getVpnAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment(io.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment(GetVpnAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpnAttachment:getVpnAttachment", TypeShape.of(GetVpnAttachmentResult.class), args, Utilities.withVersion(options));
     }
 }

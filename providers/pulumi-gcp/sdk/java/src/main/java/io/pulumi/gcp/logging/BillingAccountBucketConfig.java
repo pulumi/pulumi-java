@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.BillingAccountBucketConfigArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountBucketConfigState;
@@ -154,7 +155,7 @@ public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccountBucketConfig(String name, BillingAccountBucketConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, args == null ? BillingAccountBucketConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, args == null ? BillingAccountBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingAccountBucketConfig(String name, Output<String> id, @Nullable BillingAccountBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

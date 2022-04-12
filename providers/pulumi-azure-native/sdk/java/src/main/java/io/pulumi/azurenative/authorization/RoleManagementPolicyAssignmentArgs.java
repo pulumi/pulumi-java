@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
+        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
       private final @Nullable Output<String> roleManagementPolicyAssignmentName;
 
     public Output<String> getRoleManagementPolicyAssignmentName() {
-        return this.roleManagementPolicyAssignmentName == null ? Output.empty() : this.roleManagementPolicyAssignmentName;
+        return this.roleManagementPolicyAssignmentName == null ? Codegen.empty() : this.roleManagementPolicyAssignmentName;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     }
 
     private RoleManagementPolicyAssignmentArgs() {
-        this.policyId = Output.empty();
-        this.roleDefinitionId = Output.empty();
-        this.roleManagementPolicyAssignmentName = Output.empty();
-        this.scope = Output.empty();
+        this.policyId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
+        this.roleManagementPolicyAssignmentName = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
@@ -115,7 +116,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
             return this;
         }
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
             return this;
         }
         public Builder roleManagementPolicyAssignmentName(@Nullable Output<String> roleManagementPolicyAssignmentName) {
@@ -123,7 +124,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
             return this;
         }
         public Builder roleManagementPolicyAssignmentName(@Nullable String roleManagementPolicyAssignmentName) {
-            this.roleManagementPolicyAssignmentName = Output.ofNullable(roleManagementPolicyAssignmentName);
+            this.roleManagementPolicyAssignmentName = Codegen.ofNullable(roleManagementPolicyAssignmentName);
             return this;
         }
         public Builder scope(Output<String> scope) {

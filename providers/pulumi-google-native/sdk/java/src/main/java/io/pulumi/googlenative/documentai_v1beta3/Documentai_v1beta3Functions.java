@@ -16,10 +16,10 @@ public final class Documentai_v1beta3Functions {
      * Gets a processor detail.
      * 
      */
-    public static CompletableFuture<GetProcessorResult> getProcessor(io.pulumi.googlenative.documentai_v1beta3.inputs.GetProcessorArgs args) {
-        return getProcessor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args) {
+        return getProcessor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProcessorResult> getProcessor(io.pulumi.googlenative.documentai_v1beta3.inputs.GetProcessorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:documentai/v1beta3:getProcessor", TypeShape.of(GetProcessorResult.class), args, Utilities.withVersion(options));
     }
 }

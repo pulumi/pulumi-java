@@ -6,6 +6,7 @@ package io.pulumi.googlenative.deploymentmanager_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2.DeploymentArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.DeploymentLabelEntryResponse;
@@ -199,7 +200,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Deployment(String name, @Nullable DeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:deploymentmanager/v2:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:deploymentmanager/v2:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Deployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

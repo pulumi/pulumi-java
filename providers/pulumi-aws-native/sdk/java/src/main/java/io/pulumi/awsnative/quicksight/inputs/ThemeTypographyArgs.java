@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeFontArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ThemeFontArgs>> fontFamilies;
 
     public Output<List<ThemeFontArgs>> getFontFamilies() {
-        return this.fontFamilies == null ? Output.empty() : this.fontFamilies;
+        return this.fontFamilies == null ? Codegen.empty() : this.fontFamilies;
     }
 
     public ThemeTypographyArgs(@Nullable Output<List<ThemeFontArgs>> fontFamilies) {
@@ -31,7 +32,7 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ThemeTypographyArgs() {
-        this.fontFamilies = Output.empty();
+        this.fontFamilies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fontFamilies(@Nullable List<ThemeFontArgs> fontFamilies) {
-            this.fontFamilies = Output.ofNullable(fontFamilies);
+            this.fontFamilies = Codegen.ofNullable(fontFamilies);
             return this;
         }
         public Builder fontFamilies(ThemeFontArgs... fontFamilies) {

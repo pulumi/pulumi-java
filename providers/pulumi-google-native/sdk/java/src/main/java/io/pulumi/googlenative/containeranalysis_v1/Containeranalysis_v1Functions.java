@@ -22,40 +22,40 @@ public final class Containeranalysis_v1Functions {
      * Gets the specified note.
      * 
      */
-    public static CompletableFuture<GetNoteResult> getNote(io.pulumi.googlenative.containeranalysis_v1.inputs.GetNoteArgs args) {
-        return getNote(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args) {
+        return getNote(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNoteResult> getNote(io.pulumi.googlenative.containeranalysis_v1.inputs.GetNoteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNoteResult> getNote(GetNoteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getNote", TypeShape.of(GetNoteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a note or an occurrence resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
      * 
      */
-    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(io.pulumi.googlenative.containeranalysis_v1.inputs.GetNoteIamPolicyArgs args) {
-        return getNoteIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args) {
+        return getNoteIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(io.pulumi.googlenative.containeranalysis_v1.inputs.GetNoteIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNoteIamPolicyResult> getNoteIamPolicy(GetNoteIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getNoteIamPolicy", TypeShape.of(GetNoteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified occurrence.
      * 
      */
-    public static CompletableFuture<GetOccurrenceResult> getOccurrence(io.pulumi.googlenative.containeranalysis_v1.inputs.GetOccurrenceArgs args) {
-        return getOccurrence(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args) {
+        return getOccurrence(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOccurrenceResult> getOccurrence(io.pulumi.googlenative.containeranalysis_v1.inputs.GetOccurrenceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOccurrenceResult> getOccurrence(GetOccurrenceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a note or an occurrence resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
      * 
      */
-    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(io.pulumi.googlenative.containeranalysis_v1.inputs.GetOccurrenceIamPolicyArgs args) {
-        return getOccurrenceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args) {
+        return getOccurrenceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(io.pulumi.googlenative.containeranalysis_v1.inputs.GetOccurrenceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOccurrenceIamPolicyResult> getOccurrenceIamPolicy(GetOccurrenceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getOccurrenceIamPolicy", TypeShape.of(GetOccurrenceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

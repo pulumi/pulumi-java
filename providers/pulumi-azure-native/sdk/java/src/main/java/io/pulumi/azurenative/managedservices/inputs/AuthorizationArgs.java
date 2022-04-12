@@ -5,6 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
     public Output<List<String>> getDelegatedRoleDefinitionIds() {
-        return this.delegatedRoleDefinitionIds == null ? Output.empty() : this.delegatedRoleDefinitionIds;
+        return this.delegatedRoleDefinitionIds == null ? Codegen.empty() : this.delegatedRoleDefinitionIds;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> principalIdDisplayName;
 
     public Output<String> getPrincipalIdDisplayName() {
-        return this.principalIdDisplayName == null ? Output.empty() : this.principalIdDisplayName;
+        return this.principalIdDisplayName == null ? Codegen.empty() : this.principalIdDisplayName;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizationArgs() {
-        this.delegatedRoleDefinitionIds = Output.empty();
-        this.principalId = Output.empty();
-        this.principalIdDisplayName = Output.empty();
-        this.roleDefinitionId = Output.empty();
+        this.delegatedRoleDefinitionIds = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalIdDisplayName = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
-            this.delegatedRoleDefinitionIds = Output.ofNullable(delegatedRoleDefinitionIds);
+            this.delegatedRoleDefinitionIds = Codegen.ofNullable(delegatedRoleDefinitionIds);
             return this;
         }
         public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
@@ -131,7 +132,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
-            this.principalIdDisplayName = Output.ofNullable(principalIdDisplayName);
+            this.principalIdDisplayName = Codegen.ofNullable(principalIdDisplayName);
             return this;
         }
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {

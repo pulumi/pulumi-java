@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesBoundsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
       private final @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
     public Output<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
-        return this.bounds == null ? Output.empty() : this.bounds;
+        return this.bounds == null ? Codegen.empty() : this.bounds;
     }
 
     public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
@@ -34,7 +35,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
     }
 
     private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs() {
-        this.bounds = Output.empty();
+        this.bounds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
             return this;
         }
         public Builder bounds(@Nullable ExpressRouteGatewayPropertiesBoundsArgs bounds) {
-            this.bounds = Output.ofNullable(bounds);
+            this.bounds = Codegen.ofNullable(bounds);
             return this;
         }        public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
             return new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(bounds);

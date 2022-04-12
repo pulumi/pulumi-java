@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> column;
 
     public Output<String> getColumn() {
-        return this.column == null ? Output.empty() : this.column;
+        return this.column == null ? Codegen.empty() : this.column;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -80,10 +81,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.column = Output.empty();
-        this.fields = Output.empty();
-        this.parent = Output.empty();
-        this.template = Output.empty();
+        this.column = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder column(@Nullable String column) {
-            this.column = Output.ofNullable(column);
+            this.column = Codegen.ofNullable(column);
             return this;
         }
         public Builder fields(Output<List<TagFieldArgs>> fields) {
@@ -136,7 +137,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder template(Output<String> template) {

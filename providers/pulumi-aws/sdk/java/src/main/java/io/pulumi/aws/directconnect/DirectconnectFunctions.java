@@ -24,10 +24,10 @@ public final class DirectconnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.aws.directconnect.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.aws.directconnect.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directconnect/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class DirectconnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.aws.directconnect.inputs.GetGatewayArgs args) {
-        return getGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+        return getGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.aws.directconnect.inputs.GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directconnect/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class DirectconnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocationResult> getLocation(io.pulumi.aws.directconnect.inputs.GetLocationArgs args) {
-        return getLocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationResult> getLocation(GetLocationArgs args) {
+        return getLocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationResult> getLocation(io.pulumi.aws.directconnect.inputs.GetLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationResult> getLocation(GetLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directconnect/getLocation:getLocation", TypeShape.of(GetLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -67,12 +67,12 @@ public final class DirectconnectFunctions {
      * 
      */
     public static CompletableFuture<GetLocationsResult> getLocations() {
-        return getLocations(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocations(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationsResult> getLocations(io.pulumi.resources.InvokeArgs args) {
-        return getLocations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationsResult> getLocations(InvokeArgs args) {
+        return getLocations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationsResult> getLocations(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationsResult> getLocations(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directconnect/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
     }
 }

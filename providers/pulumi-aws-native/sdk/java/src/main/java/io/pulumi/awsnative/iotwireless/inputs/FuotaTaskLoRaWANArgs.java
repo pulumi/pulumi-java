@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public FuotaTaskLoRaWANArgs(
@@ -44,8 +45,8 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FuotaTaskLoRaWANArgs() {
-        this.rfRegion = Output.empty();
-        this.startTime = Output.empty();
+        this.rfRegion = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class FuotaTaskLoRaWANArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public FuotaTaskLoRaWANArgs build() {
             return new FuotaTaskLoRaWANArgs(rfRegion, startTime);

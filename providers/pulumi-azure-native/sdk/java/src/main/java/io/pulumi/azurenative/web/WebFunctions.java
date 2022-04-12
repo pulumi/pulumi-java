@@ -189,10 +189,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(io.pulumi.azurenative.web.inputs.GetAppServiceEnvironmentArgs args) {
-        return getAppServiceEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args) {
+        return getAppServiceEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(io.pulumi.azurenative.web.inputs.GetAppServiceEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppServiceEnvironmentResult> getAppServiceEnvironment(GetAppServiceEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironment", TypeShape.of(GetAppServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -200,10 +200,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetAppServiceEnvironmentPrivateEndpointConnectionArgs args) {
-        return getAppServiceEnvironmentPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(GetAppServiceEnvironmentPrivateEndpointConnectionArgs args) {
+        return getAppServiceEnvironmentPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetAppServiceEnvironmentPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppServiceEnvironmentPrivateEndpointConnectionResult> getAppServiceEnvironmentPrivateEndpointConnection(GetAppServiceEnvironmentPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironmentPrivateEndpointConnection", TypeShape.of(GetAppServiceEnvironmentPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -211,10 +211,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(io.pulumi.azurenative.web.inputs.GetAppServicePlanArgs args) {
-        return getAppServicePlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args) {
+        return getAppServicePlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(io.pulumi.azurenative.web.inputs.GetAppServicePlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppServicePlanResult> getAppServicePlan(GetAppServicePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -222,10 +222,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.web.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.web.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -233,10 +233,10 @@ public final class WebFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.azurenative.web.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.azurenative.web.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -244,10 +244,10 @@ public final class WebFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(io.pulumi.azurenative.web.inputs.GetConnectionGatewayArgs args) {
-        return getConnectionGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(GetConnectionGatewayArgs args) {
+        return getConnectionGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(io.pulumi.azurenative.web.inputs.GetConnectionGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionGatewayResult> getConnectionGateway(GetConnectionGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnectionGateway", TypeShape.of(GetConnectionGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -255,10 +255,10 @@ public final class WebFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetContainerAppResult> getContainerApp(io.pulumi.azurenative.web.inputs.GetContainerAppArgs args) {
-        return getContainerApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args) {
+        return getContainerApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContainerAppResult> getContainerApp(io.pulumi.azurenative.web.inputs.GetContainerAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerAppResult> getContainerApp(GetContainerAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getContainerApp", TypeShape.of(GetContainerAppResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -266,10 +266,10 @@ public final class WebFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<GetCustomApiResult> getCustomApi(io.pulumi.azurenative.web.inputs.GetCustomApiArgs args) {
-        return getCustomApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomApiResult> getCustomApi(GetCustomApiArgs args) {
+        return getCustomApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomApiResult> getCustomApi(io.pulumi.azurenative.web.inputs.GetCustomApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomApiResult> getCustomApi(GetCustomApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCustomApi", TypeShape.of(GetCustomApiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -277,10 +277,10 @@ public final class WebFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(io.pulumi.azurenative.web.inputs.GetKubeEnvironmentArgs args) {
-        return getKubeEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(GetKubeEnvironmentArgs args) {
+        return getKubeEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(io.pulumi.azurenative.web.inputs.GetKubeEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKubeEnvironmentResult> getKubeEnvironment(GetKubeEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getKubeEnvironment", TypeShape.of(GetKubeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -288,10 +288,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStaticSiteResult> getStaticSite(io.pulumi.azurenative.web.inputs.GetStaticSiteArgs args) {
-        return getStaticSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticSiteResult> getStaticSite(GetStaticSiteArgs args) {
+        return getStaticSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticSiteResult> getStaticSite(io.pulumi.azurenative.web.inputs.GetStaticSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticSiteResult> getStaticSite(GetStaticSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSite", TypeShape.of(GetStaticSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -299,10 +299,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(io.pulumi.azurenative.web.inputs.GetStaticSiteCustomDomainArgs args) {
-        return getStaticSiteCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(GetStaticSiteCustomDomainArgs args) {
+        return getStaticSiteCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(io.pulumi.azurenative.web.inputs.GetStaticSiteCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticSiteCustomDomainResult> getStaticSiteCustomDomain(GetStaticSiteCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteCustomDomain", TypeShape.of(GetStaticSiteCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -310,10 +310,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetStaticSitePrivateEndpointConnectionArgs args) {
-        return getStaticSitePrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(GetStaticSitePrivateEndpointConnectionArgs args) {
+        return getStaticSitePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetStaticSitePrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticSitePrivateEndpointConnectionResult> getStaticSitePrivateEndpointConnection(GetStaticSitePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSitePrivateEndpointConnection", TypeShape.of(GetStaticSitePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -321,10 +321,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(io.pulumi.azurenative.web.inputs.GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args) {
-        return getStaticSiteUserProvidedFunctionAppForStaticSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args) {
+        return getStaticSiteUserProvidedFunctionAppForStaticSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(io.pulumi.azurenative.web.inputs.GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> getStaticSiteUserProvidedFunctionAppForStaticSite(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteUserProvidedFunctionAppForStaticSite", TypeShape.of(GetStaticSiteUserProvidedFunctionAppForStaticSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -332,10 +332,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(io.pulumi.azurenative.web.inputs.GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args) {
-        return getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args) {
+        return getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(io.pulumi.azurenative.web.inputs.GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult> getStaticSiteUserProvidedFunctionAppForStaticSiteBuild(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteUserProvidedFunctionAppForStaticSiteBuild", TypeShape.of(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -343,10 +343,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppResult> getWebApp(io.pulumi.azurenative.web.inputs.GetWebAppArgs args) {
-        return getWebApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args) {
+        return getWebApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppResult> getWebApp(io.pulumi.azurenative.web.inputs.GetWebAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -354,10 +354,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(io.pulumi.azurenative.web.inputs.GetWebAppDeploymentArgs args) {
-        return getWebAppDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(GetWebAppDeploymentArgs args) {
+        return getWebAppDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(io.pulumi.azurenative.web.inputs.GetWebAppDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppDeploymentResult> getWebAppDeployment(GetWebAppDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDeployment", TypeShape.of(GetWebAppDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -365,10 +365,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(io.pulumi.azurenative.web.inputs.GetWebAppDeploymentSlotArgs args) {
-        return getWebAppDeploymentSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(GetWebAppDeploymentSlotArgs args) {
+        return getWebAppDeploymentSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(io.pulumi.azurenative.web.inputs.GetWebAppDeploymentSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppDeploymentSlotResult> getWebAppDeploymentSlot(GetWebAppDeploymentSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDeploymentSlot", TypeShape.of(GetWebAppDeploymentSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -376,10 +376,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(io.pulumi.azurenative.web.inputs.GetWebAppDiagnosticLogsConfigurationArgs args) {
-        return getWebAppDiagnosticLogsConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(GetWebAppDiagnosticLogsConfigurationArgs args) {
+        return getWebAppDiagnosticLogsConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(io.pulumi.azurenative.web.inputs.GetWebAppDiagnosticLogsConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> getWebAppDiagnosticLogsConfiguration(GetWebAppDiagnosticLogsConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDiagnosticLogsConfiguration", TypeShape.of(GetWebAppDiagnosticLogsConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -387,10 +387,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(io.pulumi.azurenative.web.inputs.GetWebAppDomainOwnershipIdentifierArgs args) {
-        return getWebAppDomainOwnershipIdentifier(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(GetWebAppDomainOwnershipIdentifierArgs args) {
+        return getWebAppDomainOwnershipIdentifier(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(io.pulumi.azurenative.web.inputs.GetWebAppDomainOwnershipIdentifierArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> getWebAppDomainOwnershipIdentifier(GetWebAppDomainOwnershipIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifier", TypeShape.of(GetWebAppDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -398,10 +398,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(io.pulumi.azurenative.web.inputs.GetWebAppDomainOwnershipIdentifierSlotArgs args) {
-        return getWebAppDomainOwnershipIdentifierSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(GetWebAppDomainOwnershipIdentifierSlotArgs args) {
+        return getWebAppDomainOwnershipIdentifierSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(io.pulumi.azurenative.web.inputs.GetWebAppDomainOwnershipIdentifierSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> getWebAppDomainOwnershipIdentifierSlot(GetWebAppDomainOwnershipIdentifierSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifierSlot", TypeShape.of(GetWebAppDomainOwnershipIdentifierSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -409,10 +409,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(io.pulumi.azurenative.web.inputs.GetWebAppFunctionArgs args) {
-        return getWebAppFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(GetWebAppFunctionArgs args) {
+        return getWebAppFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(io.pulumi.azurenative.web.inputs.GetWebAppFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppFunctionResult> getWebAppFunction(GetWebAppFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppFunction", TypeShape.of(GetWebAppFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -420,10 +420,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(io.pulumi.azurenative.web.inputs.GetWebAppHostNameBindingArgs args) {
-        return getWebAppHostNameBinding(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(GetWebAppHostNameBindingArgs args) {
+        return getWebAppHostNameBinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(io.pulumi.azurenative.web.inputs.GetWebAppHostNameBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppHostNameBindingResult> getWebAppHostNameBinding(GetWebAppHostNameBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBinding", TypeShape.of(GetWebAppHostNameBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -431,10 +431,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(io.pulumi.azurenative.web.inputs.GetWebAppHostNameBindingSlotArgs args) {
-        return getWebAppHostNameBindingSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(GetWebAppHostNameBindingSlotArgs args) {
+        return getWebAppHostNameBindingSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(io.pulumi.azurenative.web.inputs.GetWebAppHostNameBindingSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppHostNameBindingSlotResult> getWebAppHostNameBindingSlot(GetWebAppHostNameBindingSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBindingSlot", TypeShape.of(GetWebAppHostNameBindingSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -442,10 +442,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(io.pulumi.azurenative.web.inputs.GetWebAppHybridConnectionArgs args) {
-        return getWebAppHybridConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(GetWebAppHybridConnectionArgs args) {
+        return getWebAppHybridConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(io.pulumi.azurenative.web.inputs.GetWebAppHybridConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppHybridConnectionResult> getWebAppHybridConnection(GetWebAppHybridConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnection", TypeShape.of(GetWebAppHybridConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -453,10 +453,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppHybridConnectionSlotArgs args) {
-        return getWebAppHybridConnectionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(GetWebAppHybridConnectionSlotArgs args) {
+        return getWebAppHybridConnectionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppHybridConnectionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppHybridConnectionSlotResult> getWebAppHybridConnectionSlot(GetWebAppHybridConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHybridConnectionSlot", TypeShape.of(GetWebAppHybridConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -464,10 +464,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(io.pulumi.azurenative.web.inputs.GetWebAppInstanceFunctionSlotArgs args) {
-        return getWebAppInstanceFunctionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(GetWebAppInstanceFunctionSlotArgs args) {
+        return getWebAppInstanceFunctionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(io.pulumi.azurenative.web.inputs.GetWebAppInstanceFunctionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppInstanceFunctionSlotResult> getWebAppInstanceFunctionSlot(GetWebAppInstanceFunctionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppInstanceFunctionSlot", TypeShape.of(GetWebAppInstanceFunctionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -475,10 +475,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(io.pulumi.azurenative.web.inputs.GetWebAppPremierAddOnArgs args) {
-        return getWebAppPremierAddOn(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(GetWebAppPremierAddOnArgs args) {
+        return getWebAppPremierAddOn(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(io.pulumi.azurenative.web.inputs.GetWebAppPremierAddOnArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPremierAddOnResult> getWebAppPremierAddOn(GetWebAppPremierAddOnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOn", TypeShape.of(GetWebAppPremierAddOnResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -486,10 +486,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(io.pulumi.azurenative.web.inputs.GetWebAppPremierAddOnSlotArgs args) {
-        return getWebAppPremierAddOnSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(GetWebAppPremierAddOnSlotArgs args) {
+        return getWebAppPremierAddOnSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(io.pulumi.azurenative.web.inputs.GetWebAppPremierAddOnSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPremierAddOnSlotResult> getWebAppPremierAddOnSlot(GetWebAppPremierAddOnSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOnSlot", TypeShape.of(GetWebAppPremierAddOnSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -497,10 +497,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetWebAppPrivateEndpointConnectionArgs args) {
-        return getWebAppPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(GetWebAppPrivateEndpointConnectionArgs args) {
+        return getWebAppPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(io.pulumi.azurenative.web.inputs.GetWebAppPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> getWebAppPrivateEndpointConnection(GetWebAppPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPrivateEndpointConnection", TypeShape.of(GetWebAppPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -508,10 +508,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppPrivateEndpointConnectionSlotArgs args) {
-        return getWebAppPrivateEndpointConnectionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(GetWebAppPrivateEndpointConnectionSlotArgs args) {
+        return getWebAppPrivateEndpointConnectionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppPrivateEndpointConnectionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPrivateEndpointConnectionSlotResult> getWebAppPrivateEndpointConnectionSlot(GetWebAppPrivateEndpointConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPrivateEndpointConnectionSlot", TypeShape.of(GetWebAppPrivateEndpointConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -519,10 +519,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(io.pulumi.azurenative.web.inputs.GetWebAppPublicCertificateArgs args) {
-        return getWebAppPublicCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(GetWebAppPublicCertificateArgs args) {
+        return getWebAppPublicCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(io.pulumi.azurenative.web.inputs.GetWebAppPublicCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPublicCertificateResult> getWebAppPublicCertificate(GetWebAppPublicCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificate", TypeShape.of(GetWebAppPublicCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -530,10 +530,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(io.pulumi.azurenative.web.inputs.GetWebAppPublicCertificateSlotArgs args) {
-        return getWebAppPublicCertificateSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(GetWebAppPublicCertificateSlotArgs args) {
+        return getWebAppPublicCertificateSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(io.pulumi.azurenative.web.inputs.GetWebAppPublicCertificateSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppPublicCertificateSlotResult> getWebAppPublicCertificateSlot(GetWebAppPublicCertificateSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificateSlot", TypeShape.of(GetWebAppPublicCertificateSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -541,10 +541,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(io.pulumi.azurenative.web.inputs.GetWebAppRelayServiceConnectionArgs args) {
-        return getWebAppRelayServiceConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(GetWebAppRelayServiceConnectionArgs args) {
+        return getWebAppRelayServiceConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(io.pulumi.azurenative.web.inputs.GetWebAppRelayServiceConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppRelayServiceConnectionResult> getWebAppRelayServiceConnection(GetWebAppRelayServiceConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppRelayServiceConnection", TypeShape.of(GetWebAppRelayServiceConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -552,10 +552,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppRelayServiceConnectionSlotArgs args) {
-        return getWebAppRelayServiceConnectionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(GetWebAppRelayServiceConnectionSlotArgs args) {
+        return getWebAppRelayServiceConnectionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppRelayServiceConnectionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppRelayServiceConnectionSlotResult> getWebAppRelayServiceConnectionSlot(GetWebAppRelayServiceConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppRelayServiceConnectionSlot", TypeShape.of(GetWebAppRelayServiceConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -563,10 +563,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(io.pulumi.azurenative.web.inputs.GetWebAppSiteExtensionArgs args) {
-        return getWebAppSiteExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(GetWebAppSiteExtensionArgs args) {
+        return getWebAppSiteExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(io.pulumi.azurenative.web.inputs.GetWebAppSiteExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSiteExtensionResult> getWebAppSiteExtension(GetWebAppSiteExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtension", TypeShape.of(GetWebAppSiteExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -574,10 +574,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(io.pulumi.azurenative.web.inputs.GetWebAppSiteExtensionSlotArgs args) {
-        return getWebAppSiteExtensionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(GetWebAppSiteExtensionSlotArgs args) {
+        return getWebAppSiteExtensionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(io.pulumi.azurenative.web.inputs.GetWebAppSiteExtensionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSiteExtensionSlotResult> getWebAppSiteExtensionSlot(GetWebAppSiteExtensionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtensionSlot", TypeShape.of(GetWebAppSiteExtensionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -585,10 +585,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(io.pulumi.azurenative.web.inputs.GetWebAppSlotArgs args) {
-        return getWebAppSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args) {
+        return getWebAppSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(io.pulumi.azurenative.web.inputs.GetWebAppSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -596,10 +596,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(io.pulumi.azurenative.web.inputs.GetWebAppSlotConfigurationNamesArgs args) {
-        return getWebAppSlotConfigurationNames(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(GetWebAppSlotConfigurationNamesArgs args) {
+        return getWebAppSlotConfigurationNames(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(io.pulumi.azurenative.web.inputs.GetWebAppSlotConfigurationNamesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> getWebAppSlotConfigurationNames(GetWebAppSlotConfigurationNamesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlotConfigurationNames", TypeShape.of(GetWebAppSlotConfigurationNamesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -607,10 +607,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(io.pulumi.azurenative.web.inputs.GetWebAppSourceControlArgs args) {
-        return getWebAppSourceControl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(GetWebAppSourceControlArgs args) {
+        return getWebAppSourceControl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(io.pulumi.azurenative.web.inputs.GetWebAppSourceControlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSourceControlResult> getWebAppSourceControl(GetWebAppSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControl", TypeShape.of(GetWebAppSourceControlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -618,10 +618,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(io.pulumi.azurenative.web.inputs.GetWebAppSourceControlSlotArgs args) {
-        return getWebAppSourceControlSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(GetWebAppSourceControlSlotArgs args) {
+        return getWebAppSourceControlSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(io.pulumi.azurenative.web.inputs.GetWebAppSourceControlSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSourceControlSlotResult> getWebAppSourceControlSlot(GetWebAppSourceControlSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControlSlot", TypeShape.of(GetWebAppSourceControlSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -629,10 +629,10 @@ public final class WebFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(io.pulumi.azurenative.web.inputs.GetWebAppSwiftVirtualNetworkConnectionArgs args) {
-        return getWebAppSwiftVirtualNetworkConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(GetWebAppSwiftVirtualNetworkConnectionArgs args) {
+        return getWebAppSwiftVirtualNetworkConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(io.pulumi.azurenative.web.inputs.GetWebAppSwiftVirtualNetworkConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> getWebAppSwiftVirtualNetworkConnection(GetWebAppSwiftVirtualNetworkConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnection", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -640,10 +640,10 @@ public final class WebFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppSwiftVirtualNetworkConnectionSlotArgs args) {
-        return getWebAppSwiftVirtualNetworkConnectionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(GetWebAppSwiftVirtualNetworkConnectionSlotArgs args) {
+        return getWebAppSwiftVirtualNetworkConnectionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppSwiftVirtualNetworkConnectionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionSlotResult> getWebAppSwiftVirtualNetworkConnectionSlot(GetWebAppSwiftVirtualNetworkConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnectionSlot", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -651,10 +651,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(io.pulumi.azurenative.web.inputs.GetWebAppVnetConnectionArgs args) {
-        return getWebAppVnetConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(GetWebAppVnetConnectionArgs args) {
+        return getWebAppVnetConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(io.pulumi.azurenative.web.inputs.GetWebAppVnetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppVnetConnectionResult> getWebAppVnetConnection(GetWebAppVnetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnection", TypeShape.of(GetWebAppVnetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -662,10 +662,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppVnetConnectionSlotArgs args) {
-        return getWebAppVnetConnectionSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(GetWebAppVnetConnectionSlotArgs args) {
+        return getWebAppVnetConnectionSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(io.pulumi.azurenative.web.inputs.GetWebAppVnetConnectionSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppVnetConnectionSlotResult> getWebAppVnetConnectionSlot(GetWebAppVnetConnectionSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnectionSlot", TypeShape.of(GetWebAppVnetConnectionSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -673,10 +673,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(io.pulumi.azurenative.web.inputs.ListAppServicePlanHybridConnectionKeysArgs args) {
-        return listAppServicePlanHybridConnectionKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(ListAppServicePlanHybridConnectionKeysArgs args) {
+        return listAppServicePlanHybridConnectionKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(io.pulumi.azurenative.web.inputs.ListAppServicePlanHybridConnectionKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> listAppServicePlanHybridConnectionKeys(ListAppServicePlanHybridConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listAppServicePlanHybridConnectionKeys", TypeShape.of(ListAppServicePlanHybridConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -684,20 +684,20 @@ public final class WebFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(io.pulumi.azurenative.web.inputs.ListConnectionConsentLinksArgs args) {
-        return listConnectionConsentLinks(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(ListConnectionConsentLinksArgs args) {
+        return listConnectionConsentLinks(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(io.pulumi.azurenative.web.inputs.ListConnectionConsentLinksArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConnectionConsentLinksResult> listConnectionConsentLinks(ListConnectionConsentLinksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionConsentLinks", TypeShape.of(ListConnectionConsentLinksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2015-08-01-preview.
      * 
      */
-    public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(io.pulumi.azurenative.web.inputs.ListConnectionKeysArgs args) {
-        return listConnectionKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(ListConnectionKeysArgs args) {
+        return listConnectionKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(io.pulumi.azurenative.web.inputs.ListConnectionKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConnectionKeysResult> listConnectionKeys(ListConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionKeys", TypeShape.of(ListConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -705,10 +705,10 @@ public final class WebFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(io.pulumi.azurenative.web.inputs.ListContainerAppSecretsArgs args) {
-        return listContainerAppSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args) {
+        return listContainerAppSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(io.pulumi.azurenative.web.inputs.ListContainerAppSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListContainerAppSecretsResult> listContainerAppSecrets(ListContainerAppSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listContainerAppSecrets", TypeShape.of(ListContainerAppSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -716,10 +716,10 @@ public final class WebFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(io.pulumi.azurenative.web.inputs.ListCustomApiWsdlInterfacesArgs args) {
-        return listCustomApiWsdlInterfaces(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(ListCustomApiWsdlInterfacesArgs args) {
+        return listCustomApiWsdlInterfaces(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(io.pulumi.azurenative.web.inputs.ListCustomApiWsdlInterfacesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListCustomApiWsdlInterfacesResult> listCustomApiWsdlInterfaces(ListCustomApiWsdlInterfacesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listCustomApiWsdlInterfaces", TypeShape.of(ListCustomApiWsdlInterfacesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -728,12 +728,12 @@ public final class WebFunctions {
      * 
      */
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName() {
-        return listSiteIdentifiersAssignedToHostName(io.pulumi.azurenative.web.inputs.ListSiteIdentifiersAssignedToHostNameArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(io.pulumi.azurenative.web.inputs.ListSiteIdentifiersAssignedToHostNameArgs args) {
-        return listSiteIdentifiersAssignedToHostName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs args) {
+        return listSiteIdentifiersAssignedToHostName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(io.pulumi.azurenative.web.inputs.ListSiteIdentifiersAssignedToHostNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> listSiteIdentifiersAssignedToHostName(ListSiteIdentifiersAssignedToHostNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listSiteIdentifiersAssignedToHostName", TypeShape.of(ListSiteIdentifiersAssignedToHostNameResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -741,10 +741,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteAppSettingsArgs args) {
-        return listStaticSiteAppSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(ListStaticSiteAppSettingsArgs args) {
+        return listStaticSiteAppSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteAppSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteAppSettingsResult> listStaticSiteAppSettings(ListStaticSiteAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteAppSettings", TypeShape.of(ListStaticSiteAppSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -752,10 +752,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteBuildAppSettingsArgs args) {
-        return listStaticSiteBuildAppSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(ListStaticSiteBuildAppSettingsArgs args) {
+        return listStaticSiteBuildAppSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteBuildAppSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteBuildAppSettingsResult> listStaticSiteBuildAppSettings(ListStaticSiteBuildAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteBuildAppSettings", TypeShape.of(ListStaticSiteBuildAppSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -763,10 +763,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteBuildFunctionAppSettingsArgs args) {
-        return listStaticSiteBuildFunctionAppSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(ListStaticSiteBuildFunctionAppSettingsArgs args) {
+        return listStaticSiteBuildFunctionAppSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteBuildFunctionAppSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteBuildFunctionAppSettingsResult> listStaticSiteBuildFunctionAppSettings(ListStaticSiteBuildFunctionAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteBuildFunctionAppSettings", TypeShape.of(ListStaticSiteBuildFunctionAppSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -774,10 +774,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(io.pulumi.azurenative.web.inputs.ListStaticSiteConfiguredRolesArgs args) {
-        return listStaticSiteConfiguredRoles(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(ListStaticSiteConfiguredRolesArgs args) {
+        return listStaticSiteConfiguredRoles(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(io.pulumi.azurenative.web.inputs.ListStaticSiteConfiguredRolesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteConfiguredRolesResult> listStaticSiteConfiguredRoles(ListStaticSiteConfiguredRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteConfiguredRoles", TypeShape.of(ListStaticSiteConfiguredRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -785,10 +785,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteFunctionAppSettingsArgs args) {
-        return listStaticSiteFunctionAppSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(ListStaticSiteFunctionAppSettingsArgs args) {
+        return listStaticSiteFunctionAppSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(io.pulumi.azurenative.web.inputs.ListStaticSiteFunctionAppSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> listStaticSiteFunctionAppSettings(ListStaticSiteFunctionAppSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteFunctionAppSettings", TypeShape.of(ListStaticSiteFunctionAppSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -796,10 +796,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(io.pulumi.azurenative.web.inputs.ListStaticSiteSecretsArgs args) {
-        return listStaticSiteSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(ListStaticSiteSecretsArgs args) {
+        return listStaticSiteSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(io.pulumi.azurenative.web.inputs.ListStaticSiteSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteSecretsResult> listStaticSiteSecrets(ListStaticSiteSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteSecrets", TypeShape.of(ListStaticSiteSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -807,10 +807,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(io.pulumi.azurenative.web.inputs.ListStaticSiteUsersArgs args) {
-        return listStaticSiteUsers(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(ListStaticSiteUsersArgs args) {
+        return listStaticSiteUsers(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(io.pulumi.azurenative.web.inputs.ListStaticSiteUsersArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStaticSiteUsersResult> listStaticSiteUsers(ListStaticSiteUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteUsers", TypeShape.of(ListStaticSiteUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -818,10 +818,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(io.pulumi.azurenative.web.inputs.ListWebAppApplicationSettingsArgs args) {
-        return listWebAppApplicationSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(ListWebAppApplicationSettingsArgs args) {
+        return listWebAppApplicationSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(io.pulumi.azurenative.web.inputs.ListWebAppApplicationSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppApplicationSettingsResult> listWebAppApplicationSettings(ListWebAppApplicationSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppApplicationSettings", TypeShape.of(ListWebAppApplicationSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -829,10 +829,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppApplicationSettingsSlotArgs args) {
-        return listWebAppApplicationSettingsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(ListWebAppApplicationSettingsSlotArgs args) {
+        return listWebAppApplicationSettingsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppApplicationSettingsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> listWebAppApplicationSettingsSlot(ListWebAppApplicationSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppApplicationSettingsSlot", TypeShape.of(ListWebAppApplicationSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -840,10 +840,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(io.pulumi.azurenative.web.inputs.ListWebAppAuthSettingsArgs args) {
-        return listWebAppAuthSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(ListWebAppAuthSettingsArgs args) {
+        return listWebAppAuthSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(io.pulumi.azurenative.web.inputs.ListWebAppAuthSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppAuthSettingsResult> listWebAppAuthSettings(ListWebAppAuthSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettings", TypeShape.of(ListWebAppAuthSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -851,10 +851,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppAuthSettingsSlotArgs args) {
-        return listWebAppAuthSettingsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(ListWebAppAuthSettingsSlotArgs args) {
+        return listWebAppAuthSettingsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppAuthSettingsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppAuthSettingsSlotResult> listWebAppAuthSettingsSlot(ListWebAppAuthSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAuthSettingsSlot", TypeShape.of(ListWebAppAuthSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -862,10 +862,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(io.pulumi.azurenative.web.inputs.ListWebAppAzureStorageAccountsArgs args) {
-        return listWebAppAzureStorageAccounts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(ListWebAppAzureStorageAccountsArgs args) {
+        return listWebAppAzureStorageAccounts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(io.pulumi.azurenative.web.inputs.ListWebAppAzureStorageAccountsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppAzureStorageAccountsResult> listWebAppAzureStorageAccounts(ListWebAppAzureStorageAccountsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccounts", TypeShape.of(ListWebAppAzureStorageAccountsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -873,10 +873,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(io.pulumi.azurenative.web.inputs.ListWebAppAzureStorageAccountsSlotArgs args) {
-        return listWebAppAzureStorageAccountsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(ListWebAppAzureStorageAccountsSlotArgs args) {
+        return listWebAppAzureStorageAccountsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(io.pulumi.azurenative.web.inputs.ListWebAppAzureStorageAccountsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> listWebAppAzureStorageAccountsSlot(ListWebAppAzureStorageAccountsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccountsSlot", TypeShape.of(ListWebAppAzureStorageAccountsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -884,10 +884,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationArgs args) {
-        return listWebAppBackupConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(ListWebAppBackupConfigurationArgs args) {
+        return listWebAppBackupConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppBackupConfigurationResult> listWebAppBackupConfiguration(ListWebAppBackupConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfiguration", TypeShape.of(ListWebAppBackupConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -895,10 +895,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationSlotArgs args) {
-        return listWebAppBackupConfigurationSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(ListWebAppBackupConfigurationSlotArgs args) {
+        return listWebAppBackupConfigurationSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(io.pulumi.azurenative.web.inputs.ListWebAppBackupConfigurationSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppBackupConfigurationSlotResult> listWebAppBackupConfigurationSlot(ListWebAppBackupConfigurationSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupConfigurationSlot", TypeShape.of(ListWebAppBackupConfigurationSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -906,10 +906,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(io.pulumi.azurenative.web.inputs.ListWebAppBackupStatusSecretsArgs args) {
-        return listWebAppBackupStatusSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(ListWebAppBackupStatusSecretsArgs args) {
+        return listWebAppBackupStatusSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(io.pulumi.azurenative.web.inputs.ListWebAppBackupStatusSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppBackupStatusSecretsResult> listWebAppBackupStatusSecrets(ListWebAppBackupStatusSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupStatusSecrets", TypeShape.of(ListWebAppBackupStatusSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -917,10 +917,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(io.pulumi.azurenative.web.inputs.ListWebAppBackupStatusSecretsSlotArgs args) {
-        return listWebAppBackupStatusSecretsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(ListWebAppBackupStatusSecretsSlotArgs args) {
+        return listWebAppBackupStatusSecretsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(io.pulumi.azurenative.web.inputs.ListWebAppBackupStatusSecretsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppBackupStatusSecretsSlotResult> listWebAppBackupStatusSecretsSlot(ListWebAppBackupStatusSecretsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppBackupStatusSecretsSlot", TypeShape.of(ListWebAppBackupStatusSecretsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -928,10 +928,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(io.pulumi.azurenative.web.inputs.ListWebAppConnectionStringsArgs args) {
-        return listWebAppConnectionStrings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(ListWebAppConnectionStringsArgs args) {
+        return listWebAppConnectionStrings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(io.pulumi.azurenative.web.inputs.ListWebAppConnectionStringsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppConnectionStringsResult> listWebAppConnectionStrings(ListWebAppConnectionStringsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStrings", TypeShape.of(ListWebAppConnectionStringsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -939,10 +939,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(io.pulumi.azurenative.web.inputs.ListWebAppConnectionStringsSlotArgs args) {
-        return listWebAppConnectionStringsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(ListWebAppConnectionStringsSlotArgs args) {
+        return listWebAppConnectionStringsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(io.pulumi.azurenative.web.inputs.ListWebAppConnectionStringsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> listWebAppConnectionStringsSlot(ListWebAppConnectionStringsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStringsSlot", TypeShape.of(ListWebAppConnectionStringsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -950,10 +950,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(io.pulumi.azurenative.web.inputs.ListWebAppFunctionKeysArgs args) {
-        return listWebAppFunctionKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(ListWebAppFunctionKeysArgs args) {
+        return listWebAppFunctionKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(io.pulumi.azurenative.web.inputs.ListWebAppFunctionKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppFunctionKeysResult> listWebAppFunctionKeys(ListWebAppFunctionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeys", TypeShape.of(ListWebAppFunctionKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -961,10 +961,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppFunctionKeysSlotArgs args) {
-        return listWebAppFunctionKeysSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(ListWebAppFunctionKeysSlotArgs args) {
+        return listWebAppFunctionKeysSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppFunctionKeysSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppFunctionKeysSlotResult> listWebAppFunctionKeysSlot(ListWebAppFunctionKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeysSlot", TypeShape.of(ListWebAppFunctionKeysSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -972,10 +972,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(io.pulumi.azurenative.web.inputs.ListWebAppFunctionSecretsArgs args) {
-        return listWebAppFunctionSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(ListWebAppFunctionSecretsArgs args) {
+        return listWebAppFunctionSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(io.pulumi.azurenative.web.inputs.ListWebAppFunctionSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppFunctionSecretsResult> listWebAppFunctionSecrets(ListWebAppFunctionSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecrets", TypeShape.of(ListWebAppFunctionSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -983,10 +983,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(io.pulumi.azurenative.web.inputs.ListWebAppFunctionSecretsSlotArgs args) {
-        return listWebAppFunctionSecretsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(ListWebAppFunctionSecretsSlotArgs args) {
+        return listWebAppFunctionSecretsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(io.pulumi.azurenative.web.inputs.ListWebAppFunctionSecretsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> listWebAppFunctionSecretsSlot(ListWebAppFunctionSecretsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecretsSlot", TypeShape.of(ListWebAppFunctionSecretsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -994,10 +994,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(io.pulumi.azurenative.web.inputs.ListWebAppHostKeysArgs args) {
-        return listWebAppHostKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(ListWebAppHostKeysArgs args) {
+        return listWebAppHostKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(io.pulumi.azurenative.web.inputs.ListWebAppHostKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppHostKeysResult> listWebAppHostKeys(ListWebAppHostKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHostKeys", TypeShape.of(ListWebAppHostKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1005,10 +1005,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppHostKeysSlotArgs args) {
-        return listWebAppHostKeysSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(ListWebAppHostKeysSlotArgs args) {
+        return listWebAppHostKeysSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppHostKeysSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppHostKeysSlotResult> listWebAppHostKeysSlot(ListWebAppHostKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHostKeysSlot", TypeShape.of(ListWebAppHostKeysSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1016,10 +1016,10 @@ public final class WebFunctions {
      * API Version: 2018-11-01.
      * 
      */
-    public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(io.pulumi.azurenative.web.inputs.ListWebAppHybridConnectionKeysArgs args) {
-        return listWebAppHybridConnectionKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(ListWebAppHybridConnectionKeysArgs args) {
+        return listWebAppHybridConnectionKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(io.pulumi.azurenative.web.inputs.ListWebAppHybridConnectionKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppHybridConnectionKeysResult> listWebAppHybridConnectionKeys(ListWebAppHybridConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeys", TypeShape.of(ListWebAppHybridConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1027,10 +1027,10 @@ public final class WebFunctions {
      * API Version: 2018-11-01.
      * 
      */
-    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppHybridConnectionKeysSlotArgs args) {
-        return listWebAppHybridConnectionKeysSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(ListWebAppHybridConnectionKeysSlotArgs args) {
+        return listWebAppHybridConnectionKeysSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(io.pulumi.azurenative.web.inputs.ListWebAppHybridConnectionKeysSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> listWebAppHybridConnectionKeysSlot(ListWebAppHybridConnectionKeysSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeysSlot", TypeShape.of(ListWebAppHybridConnectionKeysSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1038,10 +1038,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(io.pulumi.azurenative.web.inputs.ListWebAppMetadataArgs args) {
-        return listWebAppMetadata(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(ListWebAppMetadataArgs args) {
+        return listWebAppMetadata(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(io.pulumi.azurenative.web.inputs.ListWebAppMetadataArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppMetadataResult> listWebAppMetadata(ListWebAppMetadataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppMetadata", TypeShape.of(ListWebAppMetadataResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1049,10 +1049,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(io.pulumi.azurenative.web.inputs.ListWebAppMetadataSlotArgs args) {
-        return listWebAppMetadataSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(ListWebAppMetadataSlotArgs args) {
+        return listWebAppMetadataSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(io.pulumi.azurenative.web.inputs.ListWebAppMetadataSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppMetadataSlotResult> listWebAppMetadataSlot(ListWebAppMetadataSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppMetadataSlot", TypeShape.of(ListWebAppMetadataSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1060,10 +1060,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsArgs args) {
-        return listWebAppPublishingCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(ListWebAppPublishingCredentialsArgs args) {
+        return listWebAppPublishingCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppPublishingCredentialsResult> listWebAppPublishingCredentials(ListWebAppPublishingCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentials", TypeShape.of(ListWebAppPublishingCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1071,10 +1071,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsSlotArgs args) {
-        return listWebAppPublishingCredentialsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(ListWebAppPublishingCredentialsSlotArgs args) {
+        return listWebAppPublishingCredentialsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(io.pulumi.azurenative.web.inputs.ListWebAppPublishingCredentialsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppPublishingCredentialsSlotResult> listWebAppPublishingCredentialsSlot(ListWebAppPublishingCredentialsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentialsSlot", TypeShape.of(ListWebAppPublishingCredentialsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1082,10 +1082,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(io.pulumi.azurenative.web.inputs.ListWebAppSiteBackupsArgs args) {
-        return listWebAppSiteBackups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(ListWebAppSiteBackupsArgs args) {
+        return listWebAppSiteBackups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(io.pulumi.azurenative.web.inputs.ListWebAppSiteBackupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSiteBackupsResult> listWebAppSiteBackups(ListWebAppSiteBackupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSiteBackups", TypeShape.of(ListWebAppSiteBackupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1093,10 +1093,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(io.pulumi.azurenative.web.inputs.ListWebAppSiteBackupsSlotArgs args) {
-        return listWebAppSiteBackupsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(ListWebAppSiteBackupsSlotArgs args) {
+        return listWebAppSiteBackupsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(io.pulumi.azurenative.web.inputs.ListWebAppSiteBackupsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSiteBackupsSlotResult> listWebAppSiteBackupsSlot(ListWebAppSiteBackupsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSiteBackupsSlot", TypeShape.of(ListWebAppSiteBackupsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1104,10 +1104,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(io.pulumi.azurenative.web.inputs.ListWebAppSitePushSettingsArgs args) {
-        return listWebAppSitePushSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(ListWebAppSitePushSettingsArgs args) {
+        return listWebAppSitePushSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(io.pulumi.azurenative.web.inputs.ListWebAppSitePushSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSitePushSettingsResult> listWebAppSitePushSettings(ListWebAppSitePushSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettings", TypeShape.of(ListWebAppSitePushSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1115,10 +1115,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppSitePushSettingsSlotArgs args) {
-        return listWebAppSitePushSettingsSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(ListWebAppSitePushSettingsSlotArgs args) {
+        return listWebAppSitePushSettingsSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(io.pulumi.azurenative.web.inputs.ListWebAppSitePushSettingsSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSitePushSettingsSlotResult> listWebAppSitePushSettingsSlot(ListWebAppSitePushSettingsSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettingsSlot", TypeShape.of(ListWebAppSitePushSettingsSlotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1126,10 +1126,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(io.pulumi.azurenative.web.inputs.ListWebAppSyncFunctionTriggersArgs args) {
-        return listWebAppSyncFunctionTriggers(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(ListWebAppSyncFunctionTriggersArgs args) {
+        return listWebAppSyncFunctionTriggers(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(io.pulumi.azurenative.web.inputs.ListWebAppSyncFunctionTriggersArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> listWebAppSyncFunctionTriggers(ListWebAppSyncFunctionTriggersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggers", TypeShape.of(ListWebAppSyncFunctionTriggersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1137,10 +1137,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(io.pulumi.azurenative.web.inputs.ListWebAppSyncFunctionTriggersSlotArgs args) {
-        return listWebAppSyncFunctionTriggersSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(ListWebAppSyncFunctionTriggersSlotArgs args) {
+        return listWebAppSyncFunctionTriggersSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(io.pulumi.azurenative.web.inputs.ListWebAppSyncFunctionTriggersSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> listWebAppSyncFunctionTriggersSlot(ListWebAppSyncFunctionTriggersSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggersSlot", TypeShape.of(ListWebAppSyncFunctionTriggersSlotResult.class), args, Utilities.withVersion(options));
     }
 }

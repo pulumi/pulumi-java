@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> fileName;
 
     public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> relativeUrl;
 
     public Output<Object> getRelativeUrl() {
-        return this.relativeUrl == null ? Output.empty() : this.relativeUrl;
+        return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpServerLocationArgs() {
-        this.fileName = Output.empty();
-        this.folderPath = Output.empty();
-        this.relativeUrl = Output.empty();
-        this.type = Output.empty();
+        this.fileName = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.relativeUrl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -121,7 +122,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
@@ -129,7 +130,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder relativeUrl(@Nullable Object relativeUrl) {
-            this.relativeUrl = Output.ofNullable(relativeUrl);
+            this.relativeUrl = Codegen.ofNullable(relativeUrl);
             return this;
         }
         public Builder type(Output<String> type) {

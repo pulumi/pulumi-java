@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<JwtArgs>> jwts;
 
     public Output<List<JwtArgs>> getJwts() {
-        return this.jwts == null ? Output.empty() : this.jwts;
+        return this.jwts == null ? Codegen.empty() : this.jwts;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
     public Output<List<SignatureArgs>> getSignatures() {
-        return this.signatures == null ? Output.empty() : this.signatures;
+        return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 
     public AttestationOccurrenceArgs(
@@ -64,9 +65,9 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     }
 
     private AttestationOccurrenceArgs() {
-        this.jwts = Output.empty();
-        this.serializedPayload = Output.empty();
-        this.signatures = Output.empty();
+        this.jwts = Codegen.empty();
+        this.serializedPayload = Codegen.empty();
+        this.signatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder jwts(@Nullable List<JwtArgs> jwts) {
-            this.jwts = Output.ofNullable(jwts);
+            this.jwts = Codegen.ofNullable(jwts);
             return this;
         }
         public Builder jwts(JwtArgs... jwts) {
@@ -117,7 +118,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder signatures(@Nullable List<SignatureArgs> signatures) {
-            this.signatures = Output.ofNullable(signatures);
+            this.signatures = Codegen.ofNullable(signatures);
             return this;
         }
         public Builder signatures(SignatureArgs... signatures) {

@@ -16,10 +16,10 @@ public final class Oslogin_v1Functions {
      * Retrieves an SSH public key.
      * 
      */
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(io.pulumi.googlenative.oslogin_v1.inputs.GetSshPublicKeyArgs args) {
-        return getSshPublicKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args) {
+        return getSshPublicKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(io.pulumi.googlenative.oslogin_v1.inputs.GetSshPublicKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:oslogin/v1:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
     }
 }

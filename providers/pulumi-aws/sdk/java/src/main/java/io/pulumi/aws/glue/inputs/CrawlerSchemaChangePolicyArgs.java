@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> deleteBehavior;
 
     public Output<String> getDeleteBehavior() {
-        return this.deleteBehavior == null ? Output.empty() : this.deleteBehavior;
+        return this.deleteBehavior == null ? Codegen.empty() : this.deleteBehavior;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> updateBehavior;
 
     public Output<String> getUpdateBehavior() {
-        return this.updateBehavior == null ? Output.empty() : this.updateBehavior;
+        return this.updateBehavior == null ? Codegen.empty() : this.updateBehavior;
     }
 
     public CrawlerSchemaChangePolicyArgs(
@@ -44,8 +45,8 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
     }
 
     private CrawlerSchemaChangePolicyArgs() {
-        this.deleteBehavior = Output.empty();
-        this.updateBehavior = Output.empty();
+        this.deleteBehavior = Codegen.empty();
+        this.updateBehavior = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder deleteBehavior(@Nullable String deleteBehavior) {
-            this.deleteBehavior = Output.ofNullable(deleteBehavior);
+            this.deleteBehavior = Codegen.ofNullable(deleteBehavior);
             return this;
         }
         public Builder updateBehavior(@Nullable Output<String> updateBehavior) {
@@ -83,7 +84,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder updateBehavior(@Nullable String updateBehavior) {
-            this.updateBehavior = Output.ofNullable(updateBehavior);
+            this.updateBehavior = Codegen.ofNullable(updateBehavior);
             return this;
         }        public CrawlerSchemaChangePolicyArgs build() {
             return new CrawlerSchemaChangePolicyArgs(deleteBehavior, updateBehavior);

@@ -24,10 +24,10 @@ public final class LexFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.aws.lex.inputs.GetBotArgs args) {
-        return getBot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+        return getBot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.aws.lex.inputs.GetBotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lex/getBot:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class LexFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBotAliasResult> getBotAlias(io.pulumi.aws.lex.inputs.GetBotAliasArgs args) {
-        return getBotAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotAliasResult> getBotAlias(GetBotAliasArgs args) {
+        return getBotAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotAliasResult> getBotAlias(io.pulumi.aws.lex.inputs.GetBotAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotAliasResult> getBotAlias(GetBotAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lex/getBotAlias:getBotAlias", TypeShape.of(GetBotAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class LexFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.aws.lex.inputs.GetIntentArgs args) {
-        return getIntent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args) {
+        return getIntent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.aws.lex.inputs.GetIntentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lex/getIntent:getIntent", TypeShape.of(GetIntentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class LexFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSlotTypeResult> getSlotType(io.pulumi.aws.lex.inputs.GetSlotTypeArgs args) {
-        return getSlotType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSlotTypeResult> getSlotType(GetSlotTypeArgs args) {
+        return getSlotType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSlotTypeResult> getSlotType(io.pulumi.aws.lex.inputs.GetSlotTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSlotTypeResult> getSlotType(GetSlotTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lex/getSlotType:getSlotType", TypeShape.of(GetSlotTypeResult.class), args, Utilities.withVersion(options));
     }
 }

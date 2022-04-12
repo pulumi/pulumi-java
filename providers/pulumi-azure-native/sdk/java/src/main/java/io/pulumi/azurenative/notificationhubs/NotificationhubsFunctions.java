@@ -29,10 +29,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.notificationhubs.inputs.GetNamespaceArgs args) {
-        return getNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+        return getNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.notificationhubs.inputs.GetNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.notificationhubs.inputs.GetNamespaceAuthorizationRuleArgs args) {
-        return getNamespaceAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+        return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.notificationhubs.inputs.GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubArgs args) {
-        return getNotificationHub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args) {
+        return getNotificationHub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationHubResult> getNotificationHub(GetNotificationHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHub", TypeShape.of(GetNotificationHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubAuthorizationRuleArgs args) {
-        return getNotificationHubAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args) {
+        return getNotificationHubAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> getNotificationHubAuthorizationRule(GetNotificationHubAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubAuthorizationRule", TypeShape.of(GetNotificationHubAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubPnsCredentialsArgs args) {
-        return getNotificationHubPnsCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args) {
+        return getNotificationHubPnsCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(io.pulumi.azurenative.notificationhubs.inputs.GetNotificationHubPnsCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationHubPnsCredentialsResult> getNotificationHubPnsCredentials(GetNotificationHubPnsCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubPnsCredentials", TypeShape.of(GetNotificationHubPnsCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.notificationhubs.inputs.ListNamespaceKeysArgs args) {
-        return listNamespaceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+        return listNamespaceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.notificationhubs.inputs.ListNamespaceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class NotificationhubsFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(io.pulumi.azurenative.notificationhubs.inputs.ListNotificationHubKeysArgs args) {
-        return listNotificationHubKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args) {
+        return listNotificationHubKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(io.pulumi.azurenative.notificationhubs.inputs.ListNotificationHubKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNotificationHubKeysResult> listNotificationHubKeys(ListNotificationHubKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNotificationHubKeys", TypeShape.of(ListNotificationHubKeysResult.class), args, Utilities.withVersion(options));
     }
 }

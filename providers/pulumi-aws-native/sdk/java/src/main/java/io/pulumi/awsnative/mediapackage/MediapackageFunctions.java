@@ -24,50 +24,50 @@ public final class MediapackageFunctions {
      * Resource schema for AWS::MediaPackage::Asset
      * 
      */
-    public static CompletableFuture<GetAssetResult> getAsset(io.pulumi.awsnative.mediapackage.inputs.GetAssetArgs args) {
-        return getAsset(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args) {
+        return getAsset(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssetResult> getAsset(io.pulumi.awsnative.mediapackage.inputs.GetAssetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssetResult> getAsset(GetAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getAsset", TypeShape.of(GetAssetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaPackage::Channel
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.awsnative.mediapackage.inputs.GetChannelArgs args) {
-        return getChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+        return getChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.awsnative.mediapackage.inputs.GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaPackage::OriginEndpoint
      * 
      */
-    public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(io.pulumi.awsnative.mediapackage.inputs.GetOriginEndpointArgs args) {
-        return getOriginEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(GetOriginEndpointArgs args) {
+        return getOriginEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(io.pulumi.awsnative.mediapackage.inputs.GetOriginEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginEndpointResult> getOriginEndpoint(GetOriginEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getOriginEndpoint", TypeShape.of(GetOriginEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaPackage::PackagingConfiguration
      * 
      */
-    public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(io.pulumi.awsnative.mediapackage.inputs.GetPackagingConfigurationArgs args) {
-        return getPackagingConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(GetPackagingConfigurationArgs args) {
+        return getPackagingConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(io.pulumi.awsnative.mediapackage.inputs.GetPackagingConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackagingConfigurationResult> getPackagingConfiguration(GetPackagingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingConfiguration", TypeShape.of(GetPackagingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaPackage::PackagingGroup
      * 
      */
-    public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(io.pulumi.awsnative.mediapackage.inputs.GetPackagingGroupArgs args) {
-        return getPackagingGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(GetPackagingGroupArgs args) {
+        return getPackagingGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(io.pulumi.awsnative.mediapackage.inputs.GetPackagingGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackagingGroupResult> getPackagingGroup(GetPackagingGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getPackagingGroup", TypeShape.of(GetPackagingGroupResult.class), args, Utilities.withVersion(options));
     }
 }

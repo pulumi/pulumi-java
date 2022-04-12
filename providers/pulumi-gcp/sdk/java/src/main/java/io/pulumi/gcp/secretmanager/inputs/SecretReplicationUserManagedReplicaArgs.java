@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
       private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
 
     public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
+        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
     }
 
     private SecretReplicationUserManagedReplicaArgs() {
-        this.customerManagedEncryption = Output.empty();
-        this.location = Output.empty();
+        this.customerManagedEncryption = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
             return this;
         }
         public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
             return this;
         }
         public Builder location(Output<String> location) {

@@ -26,60 +26,60 @@ public final class ConnectFunctions {
      * Resource Type definition for AWS::Connect::ContactFlow
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(io.pulumi.awsnative.connect.inputs.GetContactFlowArgs args) {
-        return getContactFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
+        return getContactFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(io.pulumi.awsnative.connect.inputs.GetContactFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::ContactFlowModule.
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(io.pulumi.awsnative.connect.inputs.GetContactFlowModuleArgs args) {
-        return getContactFlowModule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
+        return getContactFlowModule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(io.pulumi.awsnative.connect.inputs.GetContactFlowModuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::HoursOfOperation
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(io.pulumi.awsnative.connect.inputs.GetHoursOfOperationArgs args) {
-        return getHoursOfOperation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
+        return getHoursOfOperation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(io.pulumi.awsnative.connect.inputs.GetHoursOfOperationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::QuickConnect
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(io.pulumi.awsnative.connect.inputs.GetQuickConnectArgs args) {
-        return getQuickConnect(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
+        return getQuickConnect(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(io.pulumi.awsnative.connect.inputs.GetQuickConnectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.connect.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.connect.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Connect::UserHierarchyGroup
      * 
      */
-    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(io.pulumi.awsnative.connect.inputs.GetUserHierarchyGroupArgs args) {
-        return getUserHierarchyGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args) {
+        return getUserHierarchyGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(io.pulumi.awsnative.connect.inputs.GetUserHierarchyGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserHierarchyGroupResult> getUserHierarchyGroup(GetUserHierarchyGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:connect:getUserHierarchyGroup", TypeShape.of(GetUserHierarchyGroupResult.class), args, Utilities.withVersion(options));
     }
 }

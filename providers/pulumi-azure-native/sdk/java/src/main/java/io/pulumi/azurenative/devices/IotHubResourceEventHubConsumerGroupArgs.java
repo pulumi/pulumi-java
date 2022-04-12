@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.devices.inputs.EventHubConsumerGroupNameArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
       private final @Nullable Output<EventHubConsumerGroupNameArgs> properties;
 
     public Output<EventHubConsumerGroupNameArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
     }
 
     private IotHubResourceEventHubConsumerGroupArgs() {
-        this.eventHubEndpointName = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.eventHubEndpointName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<EventHubConsumerGroupNameArgs> properties) {
@@ -140,7 +141,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
             return this;
         }
         public Builder properties(@Nullable EventHubConsumerGroupNameArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -20,10 +20,10 @@ public final class SecretmanagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.gcp.secretmanager.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.gcp.secretmanager.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:secretmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class SecretmanagerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.gcp.secretmanager.inputs.GetSecretVersionArgs args) {
-        return getSecretVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+        return getSecretVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.gcp.secretmanager.inputs.GetSecretVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:secretmanager/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
 }

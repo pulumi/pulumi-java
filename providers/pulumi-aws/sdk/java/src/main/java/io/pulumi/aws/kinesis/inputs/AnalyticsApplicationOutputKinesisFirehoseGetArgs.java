@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class AnalyticsApplicationOutputKinesisFirehoseGetArgs extends io.p
     }
 
     private AnalyticsApplicationOutputKinesisFirehoseGetArgs() {
-        this.resourceArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

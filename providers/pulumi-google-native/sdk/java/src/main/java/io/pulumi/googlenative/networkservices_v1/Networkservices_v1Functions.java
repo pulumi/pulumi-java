@@ -24,50 +24,50 @@ public final class Networkservices_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheKeysetIamPolicyArgs args) {
-        return getEdgeCacheKeysetIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicy(GetEdgeCacheKeysetIamPolicyArgs args) {
+        return getEdgeCacheKeysetIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheKeysetIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicy(GetEdgeCacheKeysetIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheKeysetIamPolicy", TypeShape.of(GetEdgeCacheKeysetIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheOriginIamPolicyArgs args) {
-        return getEdgeCacheOriginIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicy(GetEdgeCacheOriginIamPolicyArgs args) {
+        return getEdgeCacheOriginIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheOriginIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicy(GetEdgeCacheOriginIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheOriginIamPolicy", TypeShape.of(GetEdgeCacheOriginIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheServiceIamPolicyArgs args) {
-        return getEdgeCacheServiceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicy(GetEdgeCacheServiceIamPolicyArgs args) {
+        return getEdgeCacheServiceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheServiceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicy(GetEdgeCacheServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheServiceIamPolicy", TypeShape.of(GetEdgeCacheServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single EndpointPolicy.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyArgs args) {
-        return getEndpointPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args) {
+        return getEndpointPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyIamPolicyArgs args) {
-        return getEndpointPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args) {
+        return getEndpointPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(io.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public EncryptionConfigPropertiesArgs(
@@ -36,8 +37,8 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private EncryptionConfigPropertiesArgs() {
-        this.kmsKeyArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -75,7 +76,7 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public EncryptionConfigPropertiesArgs build() {
             return new EncryptionConfigPropertiesArgs(kmsKeyArn, roleArn);

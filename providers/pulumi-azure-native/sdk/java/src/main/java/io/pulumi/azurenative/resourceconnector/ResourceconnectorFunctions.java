@@ -19,10 +19,10 @@ public final class ResourceconnectorFunctions {
      * API Version: 2021-10-31-preview.
      * 
      */
-    public static CompletableFuture<GetApplianceResult> getAppliance(io.pulumi.azurenative.resourceconnector.inputs.GetApplianceArgs args) {
-        return getAppliance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplianceResult> getAppliance(GetApplianceArgs args) {
+        return getAppliance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplianceResult> getAppliance(io.pulumi.azurenative.resourceconnector.inputs.GetApplianceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplianceResult> getAppliance(GetApplianceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:getAppliance", TypeShape.of(GetApplianceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class ResourceconnectorFunctions {
      * API Version: 2021-10-31-preview.
      * 
      */
-    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredential(io.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialArgs args) {
-        return listApplianceClusterUserCredential(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredential(ListApplianceClusterUserCredentialArgs args) {
+        return listApplianceClusterUserCredential(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredential(io.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredential(ListApplianceClusterUserCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:listApplianceClusterUserCredential", TypeShape.of(ListApplianceClusterUserCredentialResult.class), args, Utilities.withVersion(options));
     }
 }

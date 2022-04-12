@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlTableArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
     public Output<List<MysqlTableArgs>> getMysqlTables() {
-        return this.mysqlTables == null ? Output.empty() : this.mysqlTables;
+        return this.mysqlTables == null ? Codegen.empty() : this.mysqlTables;
     }
 
     public MysqlDatabaseArgs(
@@ -50,8 +51,8 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlDatabaseArgs() {
-        this.databaseName = Output.empty();
-        this.mysqlTables = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.mysqlTables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
@@ -89,7 +90,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
-            this.mysqlTables = Output.ofNullable(mysqlTables);
+            this.mysqlTables = Codegen.ofNullable(mysqlTables);
             return this;
         }
         public Builder mysqlTables(MysqlTableArgs... mysqlTables) {

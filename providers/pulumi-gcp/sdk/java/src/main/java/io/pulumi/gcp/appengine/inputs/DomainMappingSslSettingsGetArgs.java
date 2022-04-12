@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> pendingManagedCertificateId;
 
     public Output<String> getPendingManagedCertificateId() {
-        return this.pendingManagedCertificateId == null ? Output.empty() : this.pendingManagedCertificateId;
+        return this.pendingManagedCertificateId == null ? Codegen.empty() : this.pendingManagedCertificateId;
     }
 
     /**
@@ -69,9 +70,9 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
     }
 
     private DomainMappingSslSettingsGetArgs() {
-        this.certificateId = Output.empty();
-        this.pendingManagedCertificateId = Output.empty();
-        this.sslManagementType = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.pendingManagedCertificateId = Codegen.empty();
+        this.sslManagementType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder pendingManagedCertificateId(@Nullable Output<String> pendingManagedCertificateId) {
@@ -111,7 +112,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
-            this.pendingManagedCertificateId = Output.ofNullable(pendingManagedCertificateId);
+            this.pendingManagedCertificateId = Codegen.ofNullable(pendingManagedCertificateId);
             return this;
         }
         public Builder sslManagementType(Output<String> sslManagementType) {

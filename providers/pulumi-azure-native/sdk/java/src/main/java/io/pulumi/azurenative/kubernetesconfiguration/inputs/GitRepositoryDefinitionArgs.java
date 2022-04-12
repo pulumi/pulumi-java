@@ -6,6 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> httpsCAFile;
 
     public Output<String> getHttpsCAFile() {
-        return this.httpsCAFile == null ? Output.empty() : this.httpsCAFile;
+        return this.httpsCAFile == null ? Codegen.empty() : this.httpsCAFile;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> httpsUser;
 
     public Output<String> getHttpsUser() {
-        return this.httpsUser == null ? Output.empty() : this.httpsUser;
+        return this.httpsUser == null ? Codegen.empty() : this.httpsUser;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> localAuthRef;
 
     public Output<String> getLocalAuthRef() {
-        return this.localAuthRef == null ? Output.empty() : this.localAuthRef;
+        return this.localAuthRef == null ? Codegen.empty() : this.localAuthRef;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
 
     public Output<RepositoryRefDefinitionArgs> getRepositoryRef() {
-        return this.repositoryRef == null ? Output.empty() : this.repositoryRef;
+        return this.repositoryRef == null ? Codegen.empty() : this.repositoryRef;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> sshKnownHosts;
 
     public Output<String> getSshKnownHosts() {
-        return this.sshKnownHosts == null ? Output.empty() : this.sshKnownHosts;
+        return this.sshKnownHosts == null ? Codegen.empty() : this.sshKnownHosts;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> syncIntervalInSeconds;
 
     public Output<Double> getSyncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Output.empty() : this.syncIntervalInSeconds;
+        return this.syncIntervalInSeconds == null ? Codegen.empty() : this.syncIntervalInSeconds;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> timeoutInSeconds;
 
     public Output<Double> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public GitRepositoryDefinitionArgs(
@@ -122,20 +123,20 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
         this.localAuthRef = localAuthRef;
         this.repositoryRef = repositoryRef;
         this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Output.ofNullable(6e+02) : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? Output.ofNullable(6e+02) : timeoutInSeconds;
+        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Codegen.ofNullable(6e+02) : syncIntervalInSeconds;
+        this.timeoutInSeconds = timeoutInSeconds == null ? Codegen.ofNullable(6e+02) : timeoutInSeconds;
         this.url = url;
     }
 
     private GitRepositoryDefinitionArgs() {
-        this.httpsCAFile = Output.empty();
-        this.httpsUser = Output.empty();
-        this.localAuthRef = Output.empty();
-        this.repositoryRef = Output.empty();
-        this.sshKnownHosts = Output.empty();
-        this.syncIntervalInSeconds = Output.empty();
-        this.timeoutInSeconds = Output.empty();
-        this.url = Output.empty();
+        this.httpsCAFile = Codegen.empty();
+        this.httpsUser = Codegen.empty();
+        this.localAuthRef = Codegen.empty();
+        this.repositoryRef = Codegen.empty();
+        this.sshKnownHosts = Codegen.empty();
+        this.syncIntervalInSeconds = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder httpsCAFile(@Nullable String httpsCAFile) {
-            this.httpsCAFile = Output.ofNullable(httpsCAFile);
+            this.httpsCAFile = Codegen.ofNullable(httpsCAFile);
             return this;
         }
         public Builder httpsUser(@Nullable Output<String> httpsUser) {
@@ -185,7 +186,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder httpsUser(@Nullable String httpsUser) {
-            this.httpsUser = Output.ofNullable(httpsUser);
+            this.httpsUser = Codegen.ofNullable(httpsUser);
             return this;
         }
         public Builder localAuthRef(@Nullable Output<String> localAuthRef) {
@@ -193,7 +194,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder localAuthRef(@Nullable String localAuthRef) {
-            this.localAuthRef = Output.ofNullable(localAuthRef);
+            this.localAuthRef = Codegen.ofNullable(localAuthRef);
             return this;
         }
         public Builder repositoryRef(@Nullable Output<RepositoryRefDefinitionArgs> repositoryRef) {
@@ -201,7 +202,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
-            this.repositoryRef = Output.ofNullable(repositoryRef);
+            this.repositoryRef = Codegen.ofNullable(repositoryRef);
             return this;
         }
         public Builder sshKnownHosts(@Nullable Output<String> sshKnownHosts) {
@@ -209,7 +210,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
-            this.sshKnownHosts = Output.ofNullable(sshKnownHosts);
+            this.sshKnownHosts = Codegen.ofNullable(sshKnownHosts);
             return this;
         }
         public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
@@ -217,7 +218,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = Output.ofNullable(syncIntervalInSeconds);
+            this.syncIntervalInSeconds = Codegen.ofNullable(syncIntervalInSeconds);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
@@ -225,7 +226,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -233,7 +234,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public GitRepositoryDefinitionArgs build() {
             return new GitRepositoryDefinitionArgs(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);

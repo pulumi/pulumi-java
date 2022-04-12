@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.PageArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
@@ -143,7 +144,7 @@ public class Page extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Page(String name, PageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3:Page", name, args == null ? PageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3:Page", name, args == null ? PageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Page(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

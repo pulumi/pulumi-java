@@ -9,6 +9,7 @@ import io.pulumi.azurenative.security.inputs.GcpCredentialsDetailsPropertiesArgs
 import io.pulumi.azurenative.security.inputs.HybridComputeSettingsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> authenticationDetails;
 
     public Output<Object> getAuthenticationDetails() {
-        return this.authenticationDetails == null ? Output.empty() : this.authenticationDetails;
+        return this.authenticationDetails == null ? Codegen.empty() : this.authenticationDetails;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectorName;
 
     public Output<String> getConnectorName() {
-        return this.connectorName == null ? Output.empty() : this.connectorName;
+        return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
     public Output<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {
-        return this.hybridComputeSettings == null ? Output.empty() : this.hybridComputeSettings;
+        return this.hybridComputeSettings == null ? Codegen.empty() : this.hybridComputeSettings;
     }
 
     public ConnectorArgs(
@@ -62,9 +63,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.authenticationDetails = Output.empty();
-        this.connectorName = Output.empty();
-        this.hybridComputeSettings = Output.empty();
+        this.authenticationDetails = Codegen.empty();
+        this.connectorName = Codegen.empty();
+        this.hybridComputeSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationDetails(@Nullable Object authenticationDetails) {
-            this.authenticationDetails = Output.ofNullable(authenticationDetails);
+            this.authenticationDetails = Codegen.ofNullable(authenticationDetails);
             return this;
         }
         public Builder connectorName(@Nullable Output<String> connectorName) {
@@ -104,7 +105,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Output.ofNullable(connectorName);
+            this.connectorName = Codegen.ofNullable(connectorName);
             return this;
         }
         public Builder hybridComputeSettings(@Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
@@ -112,7 +113,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hybridComputeSettings(@Nullable HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
-            this.hybridComputeSettings = Output.ofNullable(hybridComputeSettings);
+            this.hybridComputeSettings = Codegen.ofNullable(hybridComputeSettings);
             return this;
         }        public ConnectorArgs build() {
             return new ConnectorArgs(authenticationDetails, connectorName, hybridComputeSettings);

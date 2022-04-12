@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.CidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
       private final @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
     public Output<List<CidrBlockArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public MasterAuthorizedNetworksConfigArgs(
@@ -50,8 +51,8 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
     }
 
     private MasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Output.empty();
-        this.enabled = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder cidrBlocks(@Nullable List<CidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(CidrBlockArgs... cidrBlocks) {
@@ -92,7 +93,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public MasterAuthorizedNetworksConfigArgs build() {
             return new MasterAuthorizedNetworksConfigArgs(cidrBlocks, enabled);

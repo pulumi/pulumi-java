@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowConfigBasedIssuance;
 
     public Output<Boolean> getAllowConfigBasedIssuance() {
-        return this.allowConfigBasedIssuance == null ? Output.empty() : this.allowConfigBasedIssuance;
+        return this.allowConfigBasedIssuance == null ? Codegen.empty() : this.allowConfigBasedIssuance;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowCsrBasedIssuance;
 
     public Output<Boolean> getAllowCsrBasedIssuance() {
-        return this.allowCsrBasedIssuance == null ? Output.empty() : this.allowCsrBasedIssuance;
+        return this.allowCsrBasedIssuance == null ? Codegen.empty() : this.allowCsrBasedIssuance;
     }
 
     public IssuanceModesArgs(
@@ -48,8 +49,8 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Output.empty();
-        this.allowCsrBasedIssuance = Output.empty();
+        this.allowConfigBasedIssuance = Codegen.empty();
+        this.allowCsrBasedIssuance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowConfigBasedIssuance(@Nullable Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Output.ofNullable(allowConfigBasedIssuance);
+            this.allowConfigBasedIssuance = Codegen.ofNullable(allowConfigBasedIssuance);
             return this;
         }
         public Builder allowCsrBasedIssuance(@Nullable Output<Boolean> allowCsrBasedIssuance) {
@@ -87,7 +88,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowCsrBasedIssuance(@Nullable Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Output.ofNullable(allowCsrBasedIssuance);
+            this.allowCsrBasedIssuance = Codegen.ofNullable(allowCsrBasedIssuance);
             return this;
         }        public IssuanceModesArgs build() {
             return new IssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);

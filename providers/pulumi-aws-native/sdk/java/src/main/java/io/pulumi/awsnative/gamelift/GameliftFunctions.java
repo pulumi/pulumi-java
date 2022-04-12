@@ -20,30 +20,30 @@ public final class GameliftFunctions {
      * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.awsnative.gamelift.inputs.GetAliasArgs args) {
-        return getAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+        return getAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.awsnative.gamelift.inputs.GetAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
      * 
      */
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.awsnative.gamelift.inputs.GetFleetArgs args) {
-        return getFleet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args) {
+        return getFleet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.awsnative.gamelift.inputs.GetFleetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
      * 
      */
-    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroup(io.pulumi.awsnative.gamelift.inputs.GetGameServerGroupArgs args) {
-        return getGameServerGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroup(GetGameServerGroupArgs args) {
+        return getGameServerGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroup(io.pulumi.awsnative.gamelift.inputs.GetGameServerGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroup(GetGameServerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getGameServerGroup", TypeShape.of(GetGameServerGroupResult.class), args, Utilities.withVersion(options));
     }
 }

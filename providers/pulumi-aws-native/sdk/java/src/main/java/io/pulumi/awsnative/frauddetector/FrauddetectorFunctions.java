@@ -26,60 +26,60 @@ public final class FrauddetectorFunctions {
      * A resource schema for a Detector in Amazon Fraud Detector.
      * 
      */
-    public static CompletableFuture<GetDetectorResult> getDetector(io.pulumi.awsnative.frauddetector.inputs.GetDetectorArgs args) {
-        return getDetector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args) {
+        return getDetector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDetectorResult> getDetector(io.pulumi.awsnative.frauddetector.inputs.GetDetectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An entity type for fraud detector.
      * 
      */
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.awsnative.frauddetector.inputs.GetEntityTypeArgs args) {
-        return getEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args) {
+        return getEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.awsnative.frauddetector.inputs.GetEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEntityType", TypeShape.of(GetEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A resource schema for an EventType in Amazon Fraud Detector.
      * 
      */
-    public static CompletableFuture<GetEventTypeResult> getEventType(io.pulumi.awsnative.frauddetector.inputs.GetEventTypeArgs args) {
-        return getEventType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventTypeResult> getEventType(GetEventTypeArgs args) {
+        return getEventType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventTypeResult> getEventType(io.pulumi.awsnative.frauddetector.inputs.GetEventTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventTypeResult> getEventType(GetEventTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEventType", TypeShape.of(GetEventTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An label for fraud detector.
      * 
      */
-    public static CompletableFuture<GetLabelResult> getLabel(io.pulumi.awsnative.frauddetector.inputs.GetLabelArgs args) {
-        return getLabel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLabelResult> getLabel(GetLabelArgs args) {
+        return getLabel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLabelResult> getLabel(io.pulumi.awsnative.frauddetector.inputs.GetLabelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLabelResult> getLabel(GetLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getLabel", TypeShape.of(GetLabelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An outcome for rule evaluation.
      * 
      */
-    public static CompletableFuture<GetOutcomeResult> getOutcome(io.pulumi.awsnative.frauddetector.inputs.GetOutcomeArgs args) {
-        return getOutcome(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutcomeResult> getOutcome(GetOutcomeArgs args) {
+        return getOutcome(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutcomeResult> getOutcome(io.pulumi.awsnative.frauddetector.inputs.GetOutcomeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutcomeResult> getOutcome(GetOutcomeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getOutcome", TypeShape.of(GetOutcomeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A resource schema for a Variable in Amazon Fraud Detector.
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.awsnative.frauddetector.inputs.GetVariableArgs args) {
-        return getVariable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
+        return getVariable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.awsnative.frauddetector.inputs.GetVariableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
 }

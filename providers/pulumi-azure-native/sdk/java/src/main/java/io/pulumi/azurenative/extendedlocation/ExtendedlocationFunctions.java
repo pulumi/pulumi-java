@@ -17,10 +17,10 @@ public final class ExtendedlocationFunctions {
      * API Version: 2021-03-15-preview.
      * 
      */
-    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(io.pulumi.azurenative.extendedlocation.inputs.GetCustomLocationArgs args) {
-        return getCustomLocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args) {
+        return getCustomLocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(io.pulumi.azurenative.extendedlocation.inputs.GetCustomLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomLocationResult> getCustomLocation(GetCustomLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:extendedlocation:getCustomLocation", TypeShape.of(GetCustomLocationResult.class), args, Utilities.withVersion(options));
     }
 }

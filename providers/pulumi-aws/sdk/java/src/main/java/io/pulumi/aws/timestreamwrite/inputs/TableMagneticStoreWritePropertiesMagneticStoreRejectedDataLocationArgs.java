@@ -6,6 +6,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
       private final @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
 
     public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> getS3Configuration() {
-        return this.s3Configuration == null ? Output.empty() : this.s3Configuration;
+        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 
     public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration) {
@@ -30,7 +31,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     }
 
     private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs() {
-        this.s3Configuration = Output.empty();
+        this.s3Configuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             return this;
         }
         public Builder s3Configuration(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs s3Configuration) {
-            this.s3Configuration = Output.ofNullable(s3Configuration);
+            this.s3Configuration = Codegen.ofNullable(s3Configuration);
             return this;
         }        public TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs build() {
             return new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs(s3Configuration);

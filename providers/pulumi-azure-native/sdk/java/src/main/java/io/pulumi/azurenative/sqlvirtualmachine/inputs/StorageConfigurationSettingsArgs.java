@@ -9,6 +9,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.SQLStorageSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
     public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
-        return this.diskConfigurationType == null ? Output.empty() : this.diskConfigurationType;
+        return this.diskConfigurationType == null ? Codegen.empty() : this.diskConfigurationType;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlDataSettings() {
-        return this.sqlDataSettings == null ? Output.empty() : this.sqlDataSettings;
+        return this.sqlDataSettings == null ? Codegen.empty() : this.sqlDataSettings;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlLogSettings() {
-        return this.sqlLogSettings == null ? Output.empty() : this.sqlLogSettings;
+        return this.sqlLogSettings == null ? Codegen.empty() : this.sqlLogSettings;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlTempDbSettings() {
-        return this.sqlTempDbSettings == null ? Output.empty() : this.sqlTempDbSettings;
+        return this.sqlTempDbSettings == null ? Codegen.empty() : this.sqlTempDbSettings;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
     public Output<Either<String,StorageWorkloadType>> getStorageWorkloadType() {
-        return this.storageWorkloadType == null ? Output.empty() : this.storageWorkloadType;
+        return this.storageWorkloadType == null ? Codegen.empty() : this.storageWorkloadType;
     }
 
     public StorageConfigurationSettingsArgs(
@@ -91,11 +92,11 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
     }
 
     private StorageConfigurationSettingsArgs() {
-        this.diskConfigurationType = Output.empty();
-        this.sqlDataSettings = Output.empty();
-        this.sqlLogSettings = Output.empty();
-        this.sqlTempDbSettings = Output.empty();
-        this.storageWorkloadType = Output.empty();
+        this.diskConfigurationType = Codegen.empty();
+        this.sqlDataSettings = Codegen.empty();
+        this.sqlLogSettings = Codegen.empty();
+        this.sqlTempDbSettings = Codegen.empty();
+        this.storageWorkloadType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
-            this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
+            this.diskConfigurationType = Codegen.ofNullable(diskConfigurationType);
             return this;
         }
         public Builder sqlDataSettings(@Nullable Output<SQLStorageSettingsArgs> sqlDataSettings) {
@@ -139,7 +140,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sqlDataSettings(@Nullable SQLStorageSettingsArgs sqlDataSettings) {
-            this.sqlDataSettings = Output.ofNullable(sqlDataSettings);
+            this.sqlDataSettings = Codegen.ofNullable(sqlDataSettings);
             return this;
         }
         public Builder sqlLogSettings(@Nullable Output<SQLStorageSettingsArgs> sqlLogSettings) {
@@ -147,7 +148,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sqlLogSettings(@Nullable SQLStorageSettingsArgs sqlLogSettings) {
-            this.sqlLogSettings = Output.ofNullable(sqlLogSettings);
+            this.sqlLogSettings = Codegen.ofNullable(sqlLogSettings);
             return this;
         }
         public Builder sqlTempDbSettings(@Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings) {
@@ -155,7 +156,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsArgs sqlTempDbSettings) {
-            this.sqlTempDbSettings = Output.ofNullable(sqlTempDbSettings);
+            this.sqlTempDbSettings = Codegen.ofNullable(sqlTempDbSettings);
             return this;
         }
         public Builder storageWorkloadType(@Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType) {
@@ -163,7 +164,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder storageWorkloadType(@Nullable Either<String,StorageWorkloadType> storageWorkloadType) {
-            this.storageWorkloadType = Output.ofNullable(storageWorkloadType);
+            this.storageWorkloadType = Codegen.ofNullable(storageWorkloadType);
             return this;
         }        public StorageConfigurationSettingsArgs build() {
             return new StorageConfigurationSettingsArgs(diskConfigurationType, sqlDataSettings, sqlLogSettings, sqlTempDbSettings, storageWorkloadType);

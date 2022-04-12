@@ -48,170 +48,170 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::App
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.sagemaker.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.sagemaker.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::AppImageConfig
      * 
      */
-    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfig(io.pulumi.awsnative.sagemaker.inputs.GetAppImageConfigArgs args) {
-        return getAppImageConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfig(GetAppImageConfigArgs args) {
+        return getAppImageConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfig(io.pulumi.awsnative.sagemaker.inputs.GetAppImageConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfig(GetAppImageConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getAppImageConfig", TypeShape.of(GetAppImageConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
      * 
      */
-    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetDataQualityJobDefinitionArgs args) {
-        return getDataQualityJobDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinition(GetDataQualityJobDefinitionArgs args) {
+        return getDataQualityJobDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetDataQualityJobDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinition(GetDataQualityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDataQualityJobDefinition", TypeShape.of(GetDataQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SageMaker::Device
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.awsnative.sagemaker.inputs.GetDeviceArgs args) {
-        return getDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.awsnative.sagemaker.inputs.GetDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SageMaker::DeviceFleet
      * 
      */
-    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleet(io.pulumi.awsnative.sagemaker.inputs.GetDeviceFleetArgs args) {
-        return getDeviceFleet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleet(GetDeviceFleetArgs args) {
+        return getDeviceFleet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleet(io.pulumi.awsnative.sagemaker.inputs.GetDeviceFleetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleet(GetDeviceFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDeviceFleet", TypeShape.of(GetDeviceFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Domain
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.sagemaker.inputs.GetDomainArgs args) {
-        return getDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+        return getDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.sagemaker.inputs.GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::FeatureGroup
      * 
      */
-    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroup(io.pulumi.awsnative.sagemaker.inputs.GetFeatureGroupArgs args) {
-        return getFeatureGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroup(GetFeatureGroupArgs args) {
+        return getFeatureGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroup(io.pulumi.awsnative.sagemaker.inputs.GetFeatureGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroup(GetFeatureGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getFeatureGroup", TypeShape.of(GetFeatureGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Image
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.awsnative.sagemaker.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.awsnative.sagemaker.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ImageVersion
      * 
      */
-    public static CompletableFuture<GetImageVersionResult> getImageVersion(io.pulumi.awsnative.sagemaker.inputs.GetImageVersionArgs args) {
-        return getImageVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageVersionResult> getImageVersion(GetImageVersionArgs args) {
+        return getImageVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageVersionResult> getImageVersion(io.pulumi.awsnative.sagemaker.inputs.GetImageVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageVersionResult> getImageVersion(GetImageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImageVersion", TypeShape.of(GetImageVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
      * 
      */
-    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelBiasJobDefinitionArgs args) {
-        return getModelBiasJobDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinition(GetModelBiasJobDefinitionArgs args) {
+        return getModelBiasJobDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelBiasJobDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinition(GetModelBiasJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelBiasJobDefinition", TypeShape.of(GetModelBiasJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
      * 
      */
-    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelExplainabilityJobDefinitionArgs args) {
-        return getModelExplainabilityJobDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinition(GetModelExplainabilityJobDefinitionArgs args) {
+        return getModelExplainabilityJobDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelExplainabilityJobDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinition(GetModelExplainabilityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelExplainabilityJobDefinition", TypeShape.of(GetModelExplainabilityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelPackageGroup
      * 
      */
-    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroup(io.pulumi.awsnative.sagemaker.inputs.GetModelPackageGroupArgs args) {
-        return getModelPackageGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroup(GetModelPackageGroupArgs args) {
+        return getModelPackageGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroup(io.pulumi.awsnative.sagemaker.inputs.GetModelPackageGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroup(GetModelPackageGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelPackageGroup", TypeShape.of(GetModelPackageGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
      * 
      */
-    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelQualityJobDefinitionArgs args) {
-        return getModelQualityJobDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinition(GetModelQualityJobDefinitionArgs args) {
+        return getModelQualityJobDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinition(io.pulumi.awsnative.sagemaker.inputs.GetModelQualityJobDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinition(GetModelQualityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelQualityJobDefinition", TypeShape.of(GetModelQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::MonitoringSchedule
      * 
      */
-    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedule(io.pulumi.awsnative.sagemaker.inputs.GetMonitoringScheduleArgs args) {
-        return getMonitoringSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedule(GetMonitoringScheduleArgs args) {
+        return getMonitoringSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedule(io.pulumi.awsnative.sagemaker.inputs.GetMonitoringScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedule(GetMonitoringScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getMonitoringSchedule", TypeShape.of(GetMonitoringScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Pipeline
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.awsnative.sagemaker.inputs.GetPipelineArgs args) {
-        return getPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+        return getPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.awsnative.sagemaker.inputs.GetPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Project
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.awsnative.sagemaker.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.awsnative.sagemaker.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::UserProfile
      * 
      */
-    public static CompletableFuture<GetUserProfileResult> getUserProfile(io.pulumi.awsnative.sagemaker.inputs.GetUserProfileArgs args) {
-        return getUserProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserProfileResult> getUserProfile(GetUserProfileArgs args) {
+        return getUserProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserProfileResult> getUserProfile(io.pulumi.awsnative.sagemaker.inputs.GetUserProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserProfileResult> getUserProfile(GetUserProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getUserProfile", TypeShape.of(GetUserProfileResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -19,10 +19,10 @@ public final class PricingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.aws.pricing.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.aws.pricing.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:pricing/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
 }

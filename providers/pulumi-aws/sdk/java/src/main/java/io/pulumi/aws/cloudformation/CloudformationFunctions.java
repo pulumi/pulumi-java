@@ -23,12 +23,12 @@ public final class CloudformationFunctions {
      * 
      */
     public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType() {
-        return getCloudFormationType(io.pulumi.aws.cloudformation.inputs.GetCloudFormationTypeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCloudFormationType(GetCloudFormationTypeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(io.pulumi.aws.cloudformation.inputs.GetCloudFormationTypeArgs args) {
-        return getCloudFormationType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args) {
+        return getCloudFormationType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(io.pulumi.aws.cloudformation.inputs.GetCloudFormationTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudFormationTypeResult> getCloudFormationType(GetCloudFormationTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudformation/getCloudFormationType:getCloudFormationType", TypeShape.of(GetCloudFormationTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class CloudformationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExportResult> getExport(io.pulumi.aws.cloudformation.inputs.GetExportArgs args) {
-        return getExport(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
+        return getExport(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExportResult> getExport(io.pulumi.aws.cloudformation.inputs.GetExportArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExportResult> getExport(GetExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudformation/getExport:getExport", TypeShape.of(GetExportResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class CloudformationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStackResult> getStack(io.pulumi.aws.cloudformation.inputs.GetStackArgs args) {
-        return getStack(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args) {
+        return getStack(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStackResult> getStack(io.pulumi.aws.cloudformation.inputs.GetStackArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStackResult> getStack(GetStackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudformation/getStack:getStack", TypeShape.of(GetStackResult.class), args, Utilities.withVersion(options));
     }
 }

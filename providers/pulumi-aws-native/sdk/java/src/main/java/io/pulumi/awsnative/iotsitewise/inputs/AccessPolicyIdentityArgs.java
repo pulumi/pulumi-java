@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUserArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUserArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,21 +25,21 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
 
     public Output<AccessPolicyIamRoleArgs> getIamRole() {
-        return this.iamRole == null ? Output.empty() : this.iamRole;
+        return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
     @Import(name="iamUser")
       private final @Nullable Output<AccessPolicyIamUserArgs> iamUser;
 
     public Output<AccessPolicyIamUserArgs> getIamUser() {
-        return this.iamUser == null ? Output.empty() : this.iamUser;
+        return this.iamUser == null ? Codegen.empty() : this.iamUser;
     }
 
     @Import(name="user")
       private final @Nullable Output<AccessPolicyUserArgs> user;
 
     public Output<AccessPolicyUserArgs> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public AccessPolicyIdentityArgs(
@@ -51,9 +52,9 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
     }
 
     private AccessPolicyIdentityArgs() {
-        this.iamRole = Output.empty();
-        this.iamUser = Output.empty();
-        this.user = Output.empty();
+        this.iamRole = Codegen.empty();
+        this.iamUser = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder iamRole(@Nullable AccessPolicyIamRoleArgs iamRole) {
-            this.iamRole = Output.ofNullable(iamRole);
+            this.iamRole = Codegen.ofNullable(iamRole);
             return this;
         }
         public Builder iamUser(@Nullable Output<AccessPolicyIamUserArgs> iamUser) {
@@ -93,7 +94,7 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder iamUser(@Nullable AccessPolicyIamUserArgs iamUser) {
-            this.iamUser = Output.ofNullable(iamUser);
+            this.iamUser = Codegen.ofNullable(iamUser);
             return this;
         }
         public Builder user(@Nullable Output<AccessPolicyUserArgs> user) {
@@ -101,7 +102,7 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder user(@Nullable AccessPolicyUserArgs user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public AccessPolicyIdentityArgs build() {
             return new AccessPolicyIdentityArgs(iamRole, iamUser, user);

@@ -41,10 +41,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.operationalinsights.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.operationalinsights.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,10 +52,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataExportResult> getDataExport(io.pulumi.azurenative.operationalinsights.inputs.GetDataExportArgs args) {
-        return getDataExport(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataExportResult> getDataExport(GetDataExportArgs args) {
+        return getDataExport(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataExportResult> getDataExport(io.pulumi.azurenative.operationalinsights.inputs.GetDataExportArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataExportResult> getDataExport(GetDataExportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getDataExport", TypeShape.of(GetDataExportResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -63,10 +63,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.azurenative.operationalinsights.inputs.GetDataSourceArgs args) {
-        return getDataSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+        return getDataSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.azurenative.operationalinsights.inputs.GetDataSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,10 +74,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(io.pulumi.azurenative.operationalinsights.inputs.GetLinkedServiceArgs args) {
-        return getLinkedService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args) {
+        return getLinkedService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(io.pulumi.azurenative.operationalinsights.inputs.GetLinkedServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,10 +85,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(io.pulumi.azurenative.operationalinsights.inputs.GetLinkedStorageAccountArgs args) {
-        return getLinkedStorageAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args) {
+        return getLinkedStorageAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(io.pulumi.azurenative.operationalinsights.inputs.GetLinkedStorageAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLinkedStorageAccountResult> getLinkedStorageAccount(GetLinkedStorageAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedStorageAccount", TypeShape.of(GetLinkedStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2015-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(io.pulumi.azurenative.operationalinsights.inputs.GetMachineGroupArgs args) {
-        return getMachineGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args) {
+        return getMachineGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(io.pulumi.azurenative.operationalinsights.inputs.GetMachineGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMachineGroupResult> getMachineGroup(GetMachineGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getMachineGroup", TypeShape.of(GetMachineGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2019-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetQueryResult> getQuery(io.pulumi.azurenative.operationalinsights.inputs.GetQueryArgs args) {
-        return getQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args) {
+        return getQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueryResult> getQuery(io.pulumi.azurenative.operationalinsights.inputs.GetQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueryResult> getQuery(GetQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQuery", TypeShape.of(GetQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,10 +118,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2019-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetQueryPackResult> getQueryPack(io.pulumi.azurenative.operationalinsights.inputs.GetQueryPackArgs args) {
-        return getQueryPack(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueryPackResult> getQueryPack(GetQueryPackArgs args) {
+        return getQueryPack(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueryPackResult> getQueryPack(io.pulumi.azurenative.operationalinsights.inputs.GetQueryPackArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueryPackResult> getQueryPack(GetQueryPackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQueryPack", TypeShape.of(GetQueryPackResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,10 +129,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(io.pulumi.azurenative.operationalinsights.inputs.GetSavedSearchArgs args) {
-        return getSavedSearch(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args) {
+        return getSavedSearch(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(io.pulumi.azurenative.operationalinsights.inputs.GetSavedSearchArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSavedSearchResult> getSavedSearch(GetSavedSearchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSavedSearch", TypeShape.of(GetSavedSearchResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,10 +140,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(io.pulumi.azurenative.operationalinsights.inputs.GetSharedKeysArgs args) {
-        return getSharedKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args) {
+        return getSharedKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(io.pulumi.azurenative.operationalinsights.inputs.GetSharedKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSharedKeysResult> getSharedKeys(GetSharedKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSharedKeys", TypeShape.of(GetSharedKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -151,10 +151,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(io.pulumi.azurenative.operationalinsights.inputs.GetStorageInsightConfigArgs args) {
-        return getStorageInsightConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args) {
+        return getStorageInsightConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(io.pulumi.azurenative.operationalinsights.inputs.GetStorageInsightConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageInsightConfigResult> getStorageInsightConfig(GetStorageInsightConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getStorageInsightConfig", TypeShape.of(GetStorageInsightConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -162,10 +162,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.azurenative.operationalinsights.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.azurenative.operationalinsights.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -173,10 +173,10 @@ public final class OperationalinsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.operationalinsights.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.operationalinsights.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

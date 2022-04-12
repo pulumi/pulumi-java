@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> internalDnsNameLabel;
 
     public Output<String> getInternalDnsNameLabel() {
-        return this.internalDnsNameLabel == null ? Output.empty() : this.internalDnsNameLabel;
+        return this.internalDnsNameLabel == null ? Codegen.empty() : this.internalDnsNameLabel;
     }
 
     public NetworkInterfaceDnsSettingsArgs(
@@ -49,8 +50,8 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
     }
 
     private NetworkInterfaceDnsSettingsArgs() {
-        this.dnsServers = Output.empty();
-        this.internalDnsNameLabel = Output.empty();
+        this.dnsServers = Codegen.empty();
+        this.internalDnsNameLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -91,7 +92,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
-            this.internalDnsNameLabel = Output.ofNullable(internalDnsNameLabel);
+            this.internalDnsNameLabel = Codegen.ofNullable(internalDnsNameLabel);
             return this;
         }        public NetworkInterfaceDnsSettingsArgs build() {
             return new NetworkInterfaceDnsSettingsArgs(dnsServers, internalDnsNameLabel);

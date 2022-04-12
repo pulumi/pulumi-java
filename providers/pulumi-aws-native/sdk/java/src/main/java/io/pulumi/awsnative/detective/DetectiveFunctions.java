@@ -18,20 +18,20 @@ public final class DetectiveFunctions {
      * Resource schema for AWS::Detective::Graph
      * 
      */
-    public static CompletableFuture<GetGraphResult> getGraph(io.pulumi.awsnative.detective.inputs.GetGraphArgs args) {
-        return getGraph(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args) {
+        return getGraph(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGraphResult> getGraph(io.pulumi.awsnative.detective.inputs.GetGraphArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getGraph", TypeShape.of(GetGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Detective::MemberInvitation
      * 
      */
-    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(io.pulumi.awsnative.detective.inputs.GetMemberInvitationArgs args) {
-        return getMemberInvitation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args) {
+        return getMemberInvitation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(io.pulumi.awsnative.detective.inputs.GetMemberInvitationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getMemberInvitation", TypeShape.of(GetMemberInvitationResult.class), args, Utilities.withVersion(options));
     }
 }

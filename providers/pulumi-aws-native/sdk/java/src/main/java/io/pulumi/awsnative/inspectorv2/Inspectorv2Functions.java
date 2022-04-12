@@ -16,10 +16,10 @@ public final class Inspectorv2Functions {
      * Inspector Filter resource schema
      * 
      */
-    public static CompletableFuture<GetFilterResult> getFilter(io.pulumi.awsnative.inspectorv2.inputs.GetFilterArgs args) {
-        return getFilter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args) {
+        return getFilter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFilterResult> getFilter(io.pulumi.awsnative.inspectorv2.inputs.GetFilterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFilterResult> getFilter(GetFilterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:inspectorv2:getFilter", TypeShape.of(GetFilterResult.class), args, Utilities.withVersion(options));
     }
 }

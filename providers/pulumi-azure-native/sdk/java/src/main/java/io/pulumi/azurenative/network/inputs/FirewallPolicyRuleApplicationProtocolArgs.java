@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyRuleApplicationProtocol
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
       private final @Nullable Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType;
 
     public Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> getProtocolType() {
-        return this.protocolType == null ? Output.empty() : this.protocolType;
+        return this.protocolType == null ? Codegen.empty() : this.protocolType;
     }
 
     public FirewallPolicyRuleApplicationProtocolArgs(
@@ -51,8 +52,8 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
     }
 
     private FirewallPolicyRuleApplicationProtocolArgs() {
-        this.port = Output.empty();
-        this.protocolType = Output.empty();
+        this.port = Codegen.empty();
+        this.protocolType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType) {
@@ -90,7 +91,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
             return this;
         }
         public Builder protocolType(@Nullable Either<String,FirewallPolicyRuleApplicationProtocolType> protocolType) {
-            this.protocolType = Output.ofNullable(protocolType);
+            this.protocolType = Codegen.ofNullable(protocolType);
             return this;
         }        public FirewallPolicyRuleApplicationProtocolArgs build() {
             return new FirewallPolicyRuleApplicationProtocolArgs(port, protocolType);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionKeyValuePairArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,14 +28,14 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
 
     public Output<List<TaskDefinitionKeyValuePairArgs>> getProxyConfigurationProperties() {
-        return this.proxyConfigurationProperties == null ? Output.empty() : this.proxyConfigurationProperties;
+        return this.proxyConfigurationProperties == null ? Codegen.empty() : this.proxyConfigurationProperties;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TaskDefinitionProxyConfigurationArgs(
@@ -47,9 +48,9 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
     }
 
     private TaskDefinitionProxyConfigurationArgs() {
-        this.containerName = Output.empty();
-        this.proxyConfigurationProperties = Output.empty();
-        this.type = Output.empty();
+        this.containerName = Codegen.empty();
+        this.proxyConfigurationProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder proxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePairArgs> proxyConfigurationProperties) {
-            this.proxyConfigurationProperties = Output.ofNullable(proxyConfigurationProperties);
+            this.proxyConfigurationProperties = Codegen.ofNullable(proxyConfigurationProperties);
             return this;
         }
         public Builder proxyConfigurationProperties(TaskDefinitionKeyValuePairArgs... proxyConfigurationProperties) {
@@ -100,7 +101,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TaskDefinitionProxyConfigurationArgs build() {
             return new TaskDefinitionProxyConfigurationArgs(containerName, proxyConfigurationProperties, type);

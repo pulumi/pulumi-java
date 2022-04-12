@@ -23,10 +23,10 @@ public final class MachinelearningFunctions {
      * API Version: 2016-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(io.pulumi.azurenative.machinelearning.inputs.GetCommitmentPlanArgs args) {
-        return getCommitmentPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
+        return getCommitmentPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(io.pulumi.azurenative.machinelearning.inputs.GetCommitmentPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class MachinelearningFunctions {
      * API Version: 2017-01-01.
      * 
      */
-    public static CompletableFuture<GetWebServiceResult> getWebService(io.pulumi.azurenative.machinelearning.inputs.GetWebServiceArgs args) {
-        return getWebService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebServiceResult> getWebService(GetWebServiceArgs args) {
+        return getWebService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebServiceResult> getWebService(io.pulumi.azurenative.machinelearning.inputs.GetWebServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebServiceResult> getWebService(GetWebServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getWebService", TypeShape.of(GetWebServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class MachinelearningFunctions {
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.machinelearning.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.machinelearning.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class MachinelearningFunctions {
      * API Version: 2016-04-01.
      * 
      */
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(io.pulumi.azurenative.machinelearning.inputs.ListWorkspaceKeysArgs args) {
-        return listWorkspaceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args) {
+        return listWorkspaceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(io.pulumi.azurenative.machinelearning.inputs.ListWorkspaceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkspaceKeysResult> listWorkspaceKeys(ListWorkspaceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearning:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args, Utilities.withVersion(options));
     }
 }

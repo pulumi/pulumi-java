@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v4.inputs.MoneyArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MoneyArgs> maxCompensation;
 
     public Output<MoneyArgs> getMaxCompensation() {
-        return this.maxCompensation == null ? Output.empty() : this.maxCompensation;
+        return this.maxCompensation == null ? Codegen.empty() : this.maxCompensation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MoneyArgs> minCompensation;
 
     public Output<MoneyArgs> getMinCompensation() {
-        return this.minCompensation == null ? Output.empty() : this.minCompensation;
+        return this.minCompensation == null ? Codegen.empty() : this.minCompensation;
     }
 
     public CompensationRangeArgs(
@@ -48,8 +49,8 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CompensationRangeArgs() {
-        this.maxCompensation = Output.empty();
-        this.minCompensation = Output.empty();
+        this.maxCompensation = Codegen.empty();
+        this.minCompensation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxCompensation(@Nullable MoneyArgs maxCompensation) {
-            this.maxCompensation = Output.ofNullable(maxCompensation);
+            this.maxCompensation = Codegen.ofNullable(maxCompensation);
             return this;
         }
         public Builder minCompensation(@Nullable Output<MoneyArgs> minCompensation) {
@@ -87,7 +88,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minCompensation(@Nullable MoneyArgs minCompensation) {
-            this.minCompensation = Output.ofNullable(minCompensation);
+            this.minCompensation = Codegen.ofNullable(minCompensation);
             return this;
         }        public CompensationRangeArgs build() {
             return new CompensationRangeArgs(maxCompensation, minCompensation);

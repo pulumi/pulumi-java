@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
       private final @Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
     public Output<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
-        return this.secretKeyRef == null ? Output.empty() : this.secretKeyRef;
+        return this.secretKeyRef == null ? Codegen.empty() : this.secretKeyRef;
     }
 
     public GoogleCloudRunOpV2EnvVarSourceArgs(@Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
@@ -34,7 +35,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
     }
 
     private GoogleCloudRunOpV2EnvVarSourceArgs() {
-        this.secretKeyRef = Output.empty();
+        this.secretKeyRef = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
             return this;
         }
         public Builder secretKeyRef(@Nullable GoogleCloudRunOpV2SecretKeySelectorArgs secretKeyRef) {
-            this.secretKeyRef = Output.ofNullable(secretKeyRef);
+            this.secretKeyRef = Codegen.ofNullable(secretKeyRef);
             return this;
         }        public GoogleCloudRunOpV2EnvVarSourceArgs build() {
             return new GoogleCloudRunOpV2EnvVarSourceArgs(secretKeyRef);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInpu
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<Object> customDetails;
 
     public Output<Object> getCustomDetails() {
-        return this.customDetails == null ? Output.empty() : this.customDetails;
+        return this.customDetails == null ? Codegen.empty() : this.customDetails;
     }
 
     public FabricCreationInputPropertiesArgs(@Nullable Output<Object> customDetails) {
@@ -37,7 +38,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
     }
 
     private FabricCreationInputPropertiesArgs() {
-        this.customDetails = Output.empty();
+        this.customDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -65,7 +66,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder customDetails(@Nullable Object customDetails) {
-            this.customDetails = Output.ofNullable(customDetails);
+            this.customDetails = Codegen.ofNullable(customDetails);
             return this;
         }        public FabricCreationInputPropertiesArgs build() {
             return new FabricCreationInputPropertiesArgs(customDetails);

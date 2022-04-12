@@ -5,6 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> changeableForDays;
 
     public Output<Integer> getChangeableForDays() {
-        return this.changeableForDays == null ? Output.empty() : this.changeableForDays;
+        return this.changeableForDays == null ? Codegen.empty() : this.changeableForDays;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> maxRetentionDays;
 
     public Output<Integer> getMaxRetentionDays() {
-        return this.maxRetentionDays == null ? Output.empty() : this.maxRetentionDays;
+        return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> minRetentionDays;
 
     public Output<Integer> getMinRetentionDays() {
-        return this.minRetentionDays == null ? Output.empty() : this.minRetentionDays;
+        return this.minRetentionDays == null ? Codegen.empty() : this.minRetentionDays;
     }
 
     public VaultLockConfigurationArgs(
@@ -71,10 +72,10 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private VaultLockConfigurationArgs() {
-        this.backupVaultName = Output.empty();
-        this.changeableForDays = Output.empty();
-        this.maxRetentionDays = Output.empty();
-        this.minRetentionDays = Output.empty();
+        this.backupVaultName = Codegen.empty();
+        this.changeableForDays = Codegen.empty();
+        this.maxRetentionDays = Codegen.empty();
+        this.minRetentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder changeableForDays(@Nullable Integer changeableForDays) {
-            this.changeableForDays = Output.ofNullable(changeableForDays);
+            this.changeableForDays = Codegen.ofNullable(changeableForDays);
             return this;
         }
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
@@ -124,7 +125,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
-            this.maxRetentionDays = Output.ofNullable(maxRetentionDays);
+            this.maxRetentionDays = Codegen.ofNullable(maxRetentionDays);
             return this;
         }
         public Builder minRetentionDays(@Nullable Output<Integer> minRetentionDays) {
@@ -132,7 +133,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder minRetentionDays(@Nullable Integer minRetentionDays) {
-            this.minRetentionDays = Output.ofNullable(minRetentionDays);
+            this.minRetentionDays = Codegen.ofNullable(minRetentionDays);
             return this;
         }        public VaultLockConfigurationArgs build() {
             return new VaultLockConfigurationArgs(backupVaultName, changeableForDays, maxRetentionDays, minRetentionDays);

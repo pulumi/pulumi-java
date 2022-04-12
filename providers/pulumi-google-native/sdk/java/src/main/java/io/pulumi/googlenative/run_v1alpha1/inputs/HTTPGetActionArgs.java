@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.HTTPHeaderArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
     public Output<List<HTTPHeaderArgs>> getHttpHeaders() {
-        return this.httpHeaders == null ? Output.empty() : this.httpHeaders;
+        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheme;
 
     public Output<String> getScheme() {
-        return this.scheme == null ? Output.empty() : this.scheme;
+        return this.scheme == null ? Codegen.empty() : this.scheme;
     }
 
     public HTTPGetActionArgs(
@@ -76,10 +77,10 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HTTPGetActionArgs() {
-        this.host = Output.empty();
-        this.httpHeaders = Output.empty();
-        this.path = Output.empty();
-        this.scheme = Output.empty();
+        this.host = Codegen.empty();
+        this.httpHeaders = Codegen.empty();
+        this.path = Codegen.empty();
+        this.scheme = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder httpHeaders(@Nullable Output<List<HTTPHeaderArgs>> httpHeaders) {
@@ -121,7 +122,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpHeaders(@Nullable List<HTTPHeaderArgs> httpHeaders) {
-            this.httpHeaders = Output.ofNullable(httpHeaders);
+            this.httpHeaders = Codegen.ofNullable(httpHeaders);
             return this;
         }
         public Builder httpHeaders(HTTPHeaderArgs... httpHeaders) {
@@ -132,7 +133,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder scheme(@Nullable Output<String> scheme) {
@@ -140,7 +141,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheme(@Nullable String scheme) {
-            this.scheme = Output.ofNullable(scheme);
+            this.scheme = Codegen.ofNullable(scheme);
             return this;
         }        public HTTPGetActionArgs build() {
             return new HTTPGetActionArgs(host, httpHeaders, path, scheme);

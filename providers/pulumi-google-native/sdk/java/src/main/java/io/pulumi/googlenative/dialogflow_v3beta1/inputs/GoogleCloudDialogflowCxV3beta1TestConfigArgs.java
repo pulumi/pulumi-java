@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
       private final @Nullable Output<String> flow;
 
     public Output<String> getFlow() {
-        return this.flow == null ? Output.empty() : this.flow;
+        return this.flow == null ? Codegen.empty() : this.flow;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
       private final @Nullable Output<List<String>> trackingParameters;
 
     public Output<List<String>> getTrackingParameters() {
-        return this.trackingParameters == null ? Output.empty() : this.trackingParameters;
+        return this.trackingParameters == null ? Codegen.empty() : this.trackingParameters;
     }
 
     public GoogleCloudDialogflowCxV3beta1TestConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3beta1TestConfigArgs() {
-        this.flow = Output.empty();
-        this.trackingParameters = Output.empty();
+        this.flow = Codegen.empty();
+        this.trackingParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
             return this;
         }
         public Builder flow(@Nullable String flow) {
-            this.flow = Output.ofNullable(flow);
+            this.flow = Codegen.ofNullable(flow);
             return this;
         }
         public Builder trackingParameters(@Nullable Output<List<String>> trackingParameters) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
             return this;
         }
         public Builder trackingParameters(@Nullable List<String> trackingParameters) {
-            this.trackingParameters = Output.ofNullable(trackingParameters);
+            this.trackingParameters = Codegen.ofNullable(trackingParameters);
             return this;
         }
         public Builder trackingParameters(String... trackingParameters) {

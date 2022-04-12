@@ -13,6 +13,7 @@ import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -126,7 +127,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SafetyRule(String name, @Nullable SafetyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SafetyRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

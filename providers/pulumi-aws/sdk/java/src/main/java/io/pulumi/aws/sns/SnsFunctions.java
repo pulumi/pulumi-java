@@ -20,10 +20,10 @@ public final class SnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.aws.sns.inputs.GetTopicArgs args) {
-        return getTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+        return getTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.aws.sns.inputs.GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sns/getTopic:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

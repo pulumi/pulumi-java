@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebBackendServiceIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamBindingState;
@@ -169,7 +170,7 @@ public class WebBackendServiceIamBinding extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public WebBackendServiceIamBinding(String name, WebBackendServiceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webBackendServiceIamBinding:WebBackendServiceIamBinding", name, args == null ? WebBackendServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webBackendServiceIamBinding:WebBackendServiceIamBinding", name, args == null ? WebBackendServiceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebBackendServiceIamBinding(String name, Output<String> id, @Nullable WebBackendServiceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

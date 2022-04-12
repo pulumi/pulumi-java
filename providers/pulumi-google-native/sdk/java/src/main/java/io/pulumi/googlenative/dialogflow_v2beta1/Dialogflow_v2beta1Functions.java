@@ -36,110 +36,110 @@ public final class Dialogflow_v2beta1Functions {
      * Retrieves the specified context.
      * 
      */
-    public static CompletableFuture<GetContextResult> getContext(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetContextArgs args) {
-        return getContext(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContextResult> getContext(GetContextArgs args) {
+        return getContext(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContextResult> getContext(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetContextArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContextResult> getContext(GetContextArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getContext", TypeShape.of(GetContextResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specific conversation.
      * 
      */
-    public static CompletableFuture<GetConversationResult> getConversation(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetConversationArgs args) {
-        return getConversation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args) {
+        return getConversation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConversationResult> getConversation(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetConversationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getConversation", TypeShape.of(GetConversationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified conversation profile.
      * 
      */
-    public static CompletableFuture<GetConversationProfileResult> getConversationProfile(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetConversationProfileArgs args) {
-        return getConversationProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConversationProfileResult> getConversationProfile(GetConversationProfileArgs args) {
+        return getConversationProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConversationProfileResult> getConversationProfile(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetConversationProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConversationProfileResult> getConversationProfile(GetConversationProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getConversationProfile", TypeShape.of(GetConversationProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified document. Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use `projects.knowledgeBases.documents`.
      * 
      */
-    public static CompletableFuture<GetDocumentResult> getDocument(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetDocumentArgs args) {
-        return getDocument(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args) {
+        return getDocument(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDocumentResult> getDocument(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetDocumentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified entity type.
      * 
      */
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetEntityTypeArgs args) {
-        return getEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args) {
+        return getEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getEntityType", TypeShape.of(GetEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified agent environment.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified intent.
      * 
      */
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetIntentArgs args) {
-        return getIntent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args) {
+        return getIntent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetIntentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getIntent", TypeShape.of(GetIntentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified knowledge base. Note: The `projects.agent.knowledgeBases` resource is deprecated; only use `projects.knowledgeBases`.
      * 
      */
-    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetKnowledgeBaseArgs args) {
-        return getKnowledgeBase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args) {
+        return getKnowledgeBase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetKnowledgeBaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getKnowledgeBase", TypeShape.of(GetKnowledgeBaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a conversation participant.
      * 
      */
-    public static CompletableFuture<GetParticipantResult> getParticipant(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetParticipantArgs args) {
-        return getParticipant(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetParticipantResult> getParticipant(GetParticipantArgs args) {
+        return getParticipant(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetParticipantResult> getParticipant(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetParticipantArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetParticipantResult> getParticipant(GetParticipantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getParticipant", TypeShape.of(GetParticipantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
      * 
      */
-    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetSessionEntityTypeArgs args) {
-        return getSessionEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args) {
+        return getSessionEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetSessionEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getSessionEntityType", TypeShape.of(GetSessionEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified agent version.
      * 
      */
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetVersionArgs args) {
-        return getVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args) {
+        return getVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.dialogflow_v2beta1.inputs.GetVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
     }
 }

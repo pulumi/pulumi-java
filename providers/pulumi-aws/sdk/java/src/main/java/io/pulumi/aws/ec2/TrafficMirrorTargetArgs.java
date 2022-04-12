@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> networkLoadBalancerArn;
 
     public Output<String> getNetworkLoadBalancerArn() {
-        return this.networkLoadBalancerArn == null ? Output.empty() : this.networkLoadBalancerArn;
+        return this.networkLoadBalancerArn == null ? Codegen.empty() : this.networkLoadBalancerArn;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TrafficMirrorTargetArgs(
@@ -71,10 +72,10 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     }
 
     private TrafficMirrorTargetArgs() {
-        this.description = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.networkLoadBalancerArn = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.networkLoadBalancerArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -116,7 +117,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder networkLoadBalancerArn(@Nullable Output<String> networkLoadBalancerArn) {
@@ -124,7 +125,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkLoadBalancerArn(@Nullable String networkLoadBalancerArn) {
-            this.networkLoadBalancerArn = Output.ofNullable(networkLoadBalancerArn);
+            this.networkLoadBalancerArn = Codegen.ofNullable(networkLoadBalancerArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -132,7 +133,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TrafficMirrorTargetArgs build() {
             return new TrafficMirrorTargetArgs(description, networkInterfaceId, networkLoadBalancerArn, tags);

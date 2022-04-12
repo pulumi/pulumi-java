@@ -5,6 +5,7 @@ package io.pulumi.googlenative.translate_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> languageCodes;
 
     public Output<List<String>> getLanguageCodes() {
-        return this.languageCodes == null ? Output.empty() : this.languageCodes;
+        return this.languageCodes == null ? Codegen.empty() : this.languageCodes;
     }
 
     public LanguageCodesSetArgs(@Nullable Output<List<String>> languageCodes) {
@@ -35,7 +36,7 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LanguageCodesSetArgs() {
-        this.languageCodes = Output.empty();
+        this.languageCodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder languageCodes(@Nullable List<String> languageCodes) {
-            this.languageCodes = Output.ofNullable(languageCodes);
+            this.languageCodes = Codegen.ofNullable(languageCodes);
             return this;
         }
         public Builder languageCodes(String... languageCodes) {

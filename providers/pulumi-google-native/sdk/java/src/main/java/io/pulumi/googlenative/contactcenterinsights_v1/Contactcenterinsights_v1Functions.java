@@ -24,50 +24,50 @@ public final class Contactcenterinsights_v1Functions {
      * Gets an analysis.
      * 
      */
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetAnalysisArgs args) {
-        return getAnalysis(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
+        return getAnalysis(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetAnalysisArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a conversation.
      * 
      */
-    public static CompletableFuture<GetConversationResult> getConversation(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetConversationArgs args) {
-        return getConversation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args) {
+        return getConversation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConversationResult> getConversation(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetConversationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getConversation", TypeShape.of(GetConversationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an issue model.
      * 
      */
-    public static CompletableFuture<GetIssueModelResult> getIssueModel(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetIssueModelArgs args) {
-        return getIssueModel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIssueModelResult> getIssueModel(GetIssueModelArgs args) {
+        return getIssueModel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIssueModelResult> getIssueModel(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetIssueModelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIssueModelResult> getIssueModel(GetIssueModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getIssueModel", TypeShape.of(GetIssueModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a phrase matcher.
      * 
      */
-    public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetPhraseMatcherArgs args) {
-        return getPhraseMatcher(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(GetPhraseMatcherArgs args) {
+        return getPhraseMatcher(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetPhraseMatcherArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPhraseMatcherResult> getPhraseMatcher(GetPhraseMatcherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getPhraseMatcher", TypeShape.of(GetPhraseMatcherResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a view.
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetViewArgs args) {
-        return getView(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
+        return getView(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetViewResult> getView(io.pulumi.googlenative.contactcenterinsights_v1.inputs.GetViewArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
 }

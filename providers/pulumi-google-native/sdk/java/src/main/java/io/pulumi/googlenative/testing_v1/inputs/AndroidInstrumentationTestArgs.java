@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.enums.AndroidInstrumentationTestOrchestratorOption;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
@@ -31,7 +32,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<FileReferenceArgs> appApk;
 
     public Output<FileReferenceArgs> getAppApk() {
-        return this.appApk == null ? Output.empty() : this.appApk;
+        return this.appApk == null ? Codegen.empty() : this.appApk;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<AppBundleArgs> appBundle;
 
     public Output<AppBundleArgs> getAppBundle() {
-        return this.appBundle == null ? Output.empty() : this.appBundle;
+        return this.appBundle == null ? Codegen.empty() : this.appBundle;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> appPackageId;
 
     public Output<String> getAppPackageId() {
-        return this.appPackageId == null ? Output.empty() : this.appPackageId;
+        return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
 
     public Output<AndroidInstrumentationTestOrchestratorOption> getOrchestratorOption() {
-        return this.orchestratorOption == null ? Output.empty() : this.orchestratorOption;
+        return this.orchestratorOption == null ? Codegen.empty() : this.orchestratorOption;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ShardingOptionArgs> shardingOption;
 
     public Output<ShardingOptionArgs> getShardingOption() {
-        return this.shardingOption == null ? Output.empty() : this.shardingOption;
+        return this.shardingOption == null ? Codegen.empty() : this.shardingOption;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> testPackageId;
 
     public Output<String> getTestPackageId() {
-        return this.testPackageId == null ? Output.empty() : this.testPackageId;
+        return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> testRunnerClass;
 
     public Output<String> getTestRunnerClass() {
-        return this.testRunnerClass == null ? Output.empty() : this.testRunnerClass;
+        return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> testTargets;
 
     public Output<List<String>> getTestTargets() {
-        return this.testTargets == null ? Output.empty() : this.testTargets;
+        return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 
     public AndroidInstrumentationTestArgs(
@@ -144,15 +145,15 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     }
 
     private AndroidInstrumentationTestArgs() {
-        this.appApk = Output.empty();
-        this.appBundle = Output.empty();
-        this.appPackageId = Output.empty();
-        this.orchestratorOption = Output.empty();
-        this.shardingOption = Output.empty();
-        this.testApk = Output.empty();
-        this.testPackageId = Output.empty();
-        this.testRunnerClass = Output.empty();
-        this.testTargets = Output.empty();
+        this.appApk = Codegen.empty();
+        this.appBundle = Codegen.empty();
+        this.appPackageId = Codegen.empty();
+        this.orchestratorOption = Codegen.empty();
+        this.shardingOption = Codegen.empty();
+        this.testApk = Codegen.empty();
+        this.testPackageId = Codegen.empty();
+        this.testRunnerClass = Codegen.empty();
+        this.testTargets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Output.ofNullable(appApk);
+            this.appApk = Codegen.ofNullable(appApk);
             return this;
         }
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
@@ -204,7 +205,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Output.ofNullable(appBundle);
+            this.appBundle = Codegen.ofNullable(appBundle);
             return this;
         }
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
@@ -212,7 +213,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Output.ofNullable(appPackageId);
+            this.appPackageId = Codegen.ofNullable(appPackageId);
             return this;
         }
         public Builder orchestratorOption(@Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
@@ -220,7 +221,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder orchestratorOption(@Nullable AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
-            this.orchestratorOption = Output.ofNullable(orchestratorOption);
+            this.orchestratorOption = Codegen.ofNullable(orchestratorOption);
             return this;
         }
         public Builder shardingOption(@Nullable Output<ShardingOptionArgs> shardingOption) {
@@ -228,7 +229,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder shardingOption(@Nullable ShardingOptionArgs shardingOption) {
-            this.shardingOption = Output.ofNullable(shardingOption);
+            this.shardingOption = Codegen.ofNullable(shardingOption);
             return this;
         }
         public Builder testApk(Output<FileReferenceArgs> testApk) {
@@ -244,7 +245,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testPackageId(@Nullable String testPackageId) {
-            this.testPackageId = Output.ofNullable(testPackageId);
+            this.testPackageId = Codegen.ofNullable(testPackageId);
             return this;
         }
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
@@ -252,7 +253,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testRunnerClass(@Nullable String testRunnerClass) {
-            this.testRunnerClass = Output.ofNullable(testRunnerClass);
+            this.testRunnerClass = Codegen.ofNullable(testRunnerClass);
             return this;
         }
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
@@ -260,7 +261,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Output.ofNullable(testTargets);
+            this.testTargets = Codegen.ofNullable(testTargets);
             return this;
         }
         public Builder testTargets(String... testTargets) {

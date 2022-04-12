@@ -19,10 +19,10 @@ public final class CustomprovidersFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAssociationResult> getAssociation(io.pulumi.azurenative.customproviders.inputs.GetAssociationArgs args) {
-        return getAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args) {
+        return getAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssociationResult> getAssociation(io.pulumi.azurenative.customproviders.inputs.GetAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssociationResult> getAssociation(GetAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getAssociation", TypeShape.of(GetAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class CustomprovidersFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(io.pulumi.azurenative.customproviders.inputs.GetCustomResourceProviderArgs args) {
-        return getCustomResourceProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args) {
+        return getCustomResourceProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(io.pulumi.azurenative.customproviders.inputs.GetCustomResourceProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomResourceProviderResult> getCustomResourceProvider(GetCustomResourceProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customproviders:getCustomResourceProvider", TypeShape.of(GetCustomResourceProviderResult.class), args, Utilities.withVersion(options));
     }
 }

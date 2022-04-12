@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
     public Output<List<ScaleRuleAuthArgs>> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public CustomScaleRuleArgs(
@@ -65,9 +66,9 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CustomScaleRuleArgs() {
-        this.auth = Output.empty();
-        this.metadata = Output.empty();
-        this.type = Output.empty();
+        this.auth = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder auth(ScaleRuleAuthArgs... auth) {
@@ -110,7 +111,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -118,7 +119,7 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public CustomScaleRuleArgs build() {
             return new CustomScaleRuleArgs(auth, metadata, type);

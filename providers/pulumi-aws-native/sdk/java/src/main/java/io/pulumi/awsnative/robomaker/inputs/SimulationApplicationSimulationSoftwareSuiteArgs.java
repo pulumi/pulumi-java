@@ -7,6 +7,7 @@ import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwa
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSimulationSoftwareSuiteVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
       private final @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
     public Output<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SimulationApplicationSimulationSoftwareSuiteArgs(
@@ -49,8 +50,8 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     }
 
     private SimulationApplicationSimulationSoftwareSuiteArgs() {
-        this.name = Output.empty();
-        this.version = Output.empty();
+        this.name = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
             return this;
         }
         public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SimulationApplicationSimulationSoftwareSuiteArgs build() {
             return new SimulationApplicationSimulationSoftwareSuiteArgs(name, version);

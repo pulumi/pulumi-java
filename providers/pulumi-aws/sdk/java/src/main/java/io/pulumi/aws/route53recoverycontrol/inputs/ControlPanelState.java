@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
-        return this.clusterArn == null ? Output.empty() : this.clusterArn;
+        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultControlPanel;
 
     public Output<Boolean> getDefaultControlPanel() {
-        return this.defaultControlPanel == null ? Output.empty() : this.defaultControlPanel;
+        return this.defaultControlPanel == null ? Codegen.empty() : this.defaultControlPanel;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> routingControlCount;
 
     public Output<Integer> getRoutingControlCount() {
-        return this.routingControlCount == null ? Output.empty() : this.routingControlCount;
+        return this.routingControlCount == null ? Codegen.empty() : this.routingControlCount;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ControlPanelState(
@@ -98,12 +99,12 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlPanelState() {
-        this.arn = Output.empty();
-        this.clusterArn = Output.empty();
-        this.defaultControlPanel = Output.empty();
-        this.name = Output.empty();
-        this.routingControlCount = Output.empty();
-        this.status = Output.empty();
+        this.arn = Codegen.empty();
+        this.clusterArn = Codegen.empty();
+        this.defaultControlPanel = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingControlCount = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
@@ -149,7 +150,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Output.ofNullable(clusterArn);
+            this.clusterArn = Codegen.ofNullable(clusterArn);
             return this;
         }
         public Builder defaultControlPanel(@Nullable Output<Boolean> defaultControlPanel) {
@@ -157,7 +158,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
-            this.defaultControlPanel = Output.ofNullable(defaultControlPanel);
+            this.defaultControlPanel = Codegen.ofNullable(defaultControlPanel);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder routingControlCount(@Nullable Output<Integer> routingControlCount) {
@@ -173,7 +174,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingControlCount(@Nullable Integer routingControlCount) {
-            this.routingControlCount = Output.ofNullable(routingControlCount);
+            this.routingControlCount = Codegen.ofNullable(routingControlCount);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -181,7 +182,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ControlPanelState build() {
             return new ControlPanelState(arn, clusterArn, defaultControlPanel, name, routingControlCount, status);

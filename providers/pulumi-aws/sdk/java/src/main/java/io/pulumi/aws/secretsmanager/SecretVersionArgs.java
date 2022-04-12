@@ -5,6 +5,7 @@ package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretBinary;
 
     public Output<String> getSecretBinary() {
-        return this.secretBinary == null ? Output.empty() : this.secretBinary;
+        return this.secretBinary == null ? Codegen.empty() : this.secretBinary;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretString;
 
     public Output<String> getSecretString() {
-        return this.secretString == null ? Output.empty() : this.secretString;
+        return this.secretString == null ? Codegen.empty() : this.secretString;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> versionStages;
 
     public Output<List<String>> getVersionStages() {
-        return this.versionStages == null ? Output.empty() : this.versionStages;
+        return this.versionStages == null ? Codegen.empty() : this.versionStages;
     }
 
     public SecretVersionArgs(
@@ -71,10 +72,10 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretVersionArgs() {
-        this.secretBinary = Output.empty();
-        this.secretId = Output.empty();
-        this.secretString = Output.empty();
-        this.versionStages = Output.empty();
+        this.secretBinary = Codegen.empty();
+        this.secretId = Codegen.empty();
+        this.secretString = Codegen.empty();
+        this.versionStages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretBinary(@Nullable String secretBinary) {
-            this.secretBinary = Output.ofNullable(secretBinary);
+            this.secretBinary = Codegen.ofNullable(secretBinary);
             return this;
         }
         public Builder secretId(Output<String> secretId) {
@@ -124,7 +125,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretString(@Nullable String secretString) {
-            this.secretString = Output.ofNullable(secretString);
+            this.secretString = Codegen.ofNullable(secretString);
             return this;
         }
         public Builder versionStages(@Nullable Output<List<String>> versionStages) {
@@ -132,7 +133,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionStages(@Nullable List<String> versionStages) {
-            this.versionStages = Output.ofNullable(versionStages);
+            this.versionStages = Codegen.ofNullable(versionStages);
             return this;
         }
         public Builder versionStages(String... versionStages) {

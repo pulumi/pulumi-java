@@ -16,10 +16,10 @@ public final class WorkspacesFunctions {
      * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
      * 
      */
-    public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(io.pulumi.awsnative.workspaces.inputs.GetConnectionAliasArgs args) {
-        return getConnectionAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(GetConnectionAliasArgs args) {
+        return getConnectionAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(io.pulumi.awsnative.workspaces.inputs.GetConnectionAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionAliasResult> getConnectionAlias(GetConnectionAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:workspaces:getConnectionAlias", TypeShape.of(GetConnectionAliasResult.class), args, Utilities.withVersion(options));
     }
 }

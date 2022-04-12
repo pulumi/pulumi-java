@@ -22,10 +22,10 @@ public final class BackupFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPlanResult> getPlan(io.pulumi.aws.backup.inputs.GetPlanArgs args) {
-        return getPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args) {
+        return getPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPlanResult> getPlan(io.pulumi.aws.backup.inputs.GetPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getPlan:getPlan", TypeShape.of(GetPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class BackupFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSelectionResult> getSelection(io.pulumi.aws.backup.inputs.GetSelectionArgs args) {
-        return getSelection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args) {
+        return getSelection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSelectionResult> getSelection(io.pulumi.aws.backup.inputs.GetSelectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getSelection:getSelection", TypeShape.of(GetSelectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,10 +46,10 @@ public final class BackupFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVaultResult> getVault(io.pulumi.aws.backup.inputs.GetVaultArgs args) {
-        return getVault(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {
+        return getVault(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVaultResult> getVault(io.pulumi.aws.backup.inputs.GetVaultArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:backup/getVault:getVault", TypeShape.of(GetVaultResult.class), args, Utilities.withVersion(options));
     }
 }

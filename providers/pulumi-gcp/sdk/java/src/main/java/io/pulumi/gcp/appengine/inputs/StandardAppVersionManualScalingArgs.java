@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
     }
 
     private StandardAppVersionManualScalingArgs() {
-        this.instances = Output.empty();
+        this.instances = Codegen.empty();
     }
 
     public static Builder builder() {

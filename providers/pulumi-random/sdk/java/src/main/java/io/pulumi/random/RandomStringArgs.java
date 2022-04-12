@@ -5,6 +5,7 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,7 +27,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> lower;
 
     public Output<Boolean> getLower() {
-        return this.lower == null ? Output.empty() : this.lower;
+        return this.lower == null ? Codegen.empty() : this.lower;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minLower;
 
     public Output<Integer> getMinLower() {
-        return this.minLower == null ? Output.empty() : this.minLower;
+        return this.minLower == null ? Codegen.empty() : this.minLower;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minNumeric;
 
     public Output<Integer> getMinNumeric() {
-        return this.minNumeric == null ? Output.empty() : this.minNumeric;
+        return this.minNumeric == null ? Codegen.empty() : this.minNumeric;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minSpecial;
 
     public Output<Integer> getMinSpecial() {
-        return this.minSpecial == null ? Output.empty() : this.minSpecial;
+        return this.minSpecial == null ? Codegen.empty() : this.minSpecial;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minUpper;
 
     public Output<Integer> getMinUpper() {
-        return this.minUpper == null ? Output.empty() : this.minUpper;
+        return this.minUpper == null ? Codegen.empty() : this.minUpper;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> number;
 
     public Output<Boolean> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> overrideSpecial;
 
     public Output<String> getOverrideSpecial() {
-        return this.overrideSpecial == null ? Output.empty() : this.overrideSpecial;
+        return this.overrideSpecial == null ? Codegen.empty() : this.overrideSpecial;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> special;
 
     public Output<Boolean> getSpecial() {
-        return this.special == null ? Output.empty() : this.special;
+        return this.special == null ? Codegen.empty() : this.special;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> upper;
 
     public Output<Boolean> getUpper() {
-        return this.upper == null ? Output.empty() : this.upper;
+        return this.upper == null ? Codegen.empty() : this.upper;
     }
 
     public RandomStringArgs(
@@ -165,17 +166,17 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomStringArgs() {
-        this.keepers = Output.empty();
-        this.length = Output.empty();
-        this.lower = Output.empty();
-        this.minLower = Output.empty();
-        this.minNumeric = Output.empty();
-        this.minSpecial = Output.empty();
-        this.minUpper = Output.empty();
-        this.number = Output.empty();
-        this.overrideSpecial = Output.empty();
-        this.special = Output.empty();
-        this.upper = Output.empty();
+        this.keepers = Codegen.empty();
+        this.length = Codegen.empty();
+        this.lower = Codegen.empty();
+        this.minLower = Codegen.empty();
+        this.minNumeric = Codegen.empty();
+        this.minSpecial = Codegen.empty();
+        this.minUpper = Codegen.empty();
+        this.number = Codegen.empty();
+        this.overrideSpecial = Codegen.empty();
+        this.special = Codegen.empty();
+        this.upper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder length(Output<Integer> length) {
@@ -239,7 +240,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lower(@Nullable Boolean lower) {
-            this.lower = Output.ofNullable(lower);
+            this.lower = Codegen.ofNullable(lower);
             return this;
         }
         public Builder minLower(@Nullable Output<Integer> minLower) {
@@ -247,7 +248,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minLower(@Nullable Integer minLower) {
-            this.minLower = Output.ofNullable(minLower);
+            this.minLower = Codegen.ofNullable(minLower);
             return this;
         }
         public Builder minNumeric(@Nullable Output<Integer> minNumeric) {
@@ -255,7 +256,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minNumeric(@Nullable Integer minNumeric) {
-            this.minNumeric = Output.ofNullable(minNumeric);
+            this.minNumeric = Codegen.ofNullable(minNumeric);
             return this;
         }
         public Builder minSpecial(@Nullable Output<Integer> minSpecial) {
@@ -263,7 +264,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minSpecial(@Nullable Integer minSpecial) {
-            this.minSpecial = Output.ofNullable(minSpecial);
+            this.minSpecial = Codegen.ofNullable(minSpecial);
             return this;
         }
         public Builder minUpper(@Nullable Output<Integer> minUpper) {
@@ -271,7 +272,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minUpper(@Nullable Integer minUpper) {
-            this.minUpper = Output.ofNullable(minUpper);
+            this.minUpper = Codegen.ofNullable(minUpper);
             return this;
         }
         public Builder number(@Nullable Output<Boolean> number) {
@@ -279,7 +280,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder number(@Nullable Boolean number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }
         public Builder overrideSpecial(@Nullable Output<String> overrideSpecial) {
@@ -287,7 +288,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrideSpecial(@Nullable String overrideSpecial) {
-            this.overrideSpecial = Output.ofNullable(overrideSpecial);
+            this.overrideSpecial = Codegen.ofNullable(overrideSpecial);
             return this;
         }
         public Builder special(@Nullable Output<Boolean> special) {
@@ -295,7 +296,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder special(@Nullable Boolean special) {
-            this.special = Output.ofNullable(special);
+            this.special = Codegen.ofNullable(special);
             return this;
         }
         public Builder upper(@Nullable Output<Boolean> upper) {
@@ -303,7 +304,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upper(@Nullable Boolean upper) {
-            this.upper = Output.ofNullable(upper);
+            this.upper = Codegen.ofNullable(upper);
             return this;
         }        public RandomStringArgs build() {
             return new RandomStringArgs(keepers, length, lower, minLower, minNumeric, minSpecial, minUpper, number, overrideSpecial, special, upper);

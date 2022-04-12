@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     public FhirStoreStreamConfigArgs(
@@ -53,8 +54,8 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private FhirStoreStreamConfigArgs() {
-        this.bigqueryDestination = Output.empty();
-        this.resourceTypes = Output.empty();
+        this.bigqueryDestination = Codegen.empty();
+        this.resourceTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(String... resourceTypes) {

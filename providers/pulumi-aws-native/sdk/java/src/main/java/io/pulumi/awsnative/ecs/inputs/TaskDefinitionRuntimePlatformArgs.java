@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
       private final @Nullable Output<String> cpuArchitecture;
 
     public Output<String> getCpuArchitecture() {
-        return this.cpuArchitecture == null ? Output.empty() : this.cpuArchitecture;
+        return this.cpuArchitecture == null ? Codegen.empty() : this.cpuArchitecture;
     }
 
     @Import(name="operatingSystemFamily")
       private final @Nullable Output<String> operatingSystemFamily;
 
     public Output<String> getOperatingSystemFamily() {
-        return this.operatingSystemFamily == null ? Output.empty() : this.operatingSystemFamily;
+        return this.operatingSystemFamily == null ? Codegen.empty() : this.operatingSystemFamily;
     }
 
     public TaskDefinitionRuntimePlatformArgs(
@@ -36,8 +37,8 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
     }
 
     private TaskDefinitionRuntimePlatformArgs() {
-        this.cpuArchitecture = Output.empty();
-        this.operatingSystemFamily = Output.empty();
+        this.cpuArchitecture = Codegen.empty();
+        this.operatingSystemFamily = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
             return this;
         }
         public Builder cpuArchitecture(@Nullable String cpuArchitecture) {
-            this.cpuArchitecture = Output.ofNullable(cpuArchitecture);
+            this.cpuArchitecture = Codegen.ofNullable(cpuArchitecture);
             return this;
         }
         public Builder operatingSystemFamily(@Nullable Output<String> operatingSystemFamily) {
@@ -75,7 +76,7 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
             return this;
         }
         public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
-            this.operatingSystemFamily = Output.ofNullable(operatingSystemFamily);
+            this.operatingSystemFamily = Codegen.ofNullable(operatingSystemFamily);
             return this;
         }        public TaskDefinitionRuntimePlatformArgs build() {
             return new TaskDefinitionRuntimePlatformArgs(cpuArchitecture, operatingSystemFamily);

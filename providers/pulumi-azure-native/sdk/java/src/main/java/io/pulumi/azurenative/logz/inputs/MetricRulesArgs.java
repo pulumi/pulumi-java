@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logz.inputs;
 import io.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
     public Output<List<FilteringTagArgs>> getFilteringTags() {
-        return this.filteringTags == null ? Output.empty() : this.filteringTags;
+        return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     public MetricRulesArgs(
@@ -50,8 +51,8 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricRulesArgs() {
-        this.filteringTags = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.filteringTags = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
-            this.filteringTags = Output.ofNullable(filteringTags);
+            this.filteringTags = Codegen.ofNullable(filteringTags);
             return this;
         }
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
@@ -92,7 +93,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }        public MetricRulesArgs build() {
             return new MetricRulesArgs(filteringTags, subscriptionId);

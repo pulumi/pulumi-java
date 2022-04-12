@@ -22,40 +22,40 @@ public final class Cloudiot_v1Functions {
      * Gets details about a device.
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.googlenative.cloudiot_v1.inputs.GetDeviceArgs args) {
-        return getDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.googlenative.cloudiot_v1.inputs.GetDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a device registry configuration.
      * 
      */
-    public static CompletableFuture<GetRegistryResult> getRegistry(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryArgs args) {
-        return getRegistry(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args) {
+        return getRegistry(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryResult> getRegistry(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicy(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryGroupIamPolicyArgs args) {
-        return getRegistryGroupIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicy(GetRegistryGroupIamPolicyArgs args) {
+        return getRegistryGroupIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicy(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryGroupIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicy(GetRegistryGroupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistryGroupIamPolicy", TypeShape.of(GetRegistryGroupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicy(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryIamPolicyArgs args) {
-        return getRegistryIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicy(GetRegistryIamPolicyArgs args) {
+        return getRegistryIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicy(io.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicy(GetRegistryIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistryIamPolicy", TypeShape.of(GetRegistryIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

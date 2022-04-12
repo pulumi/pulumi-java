@@ -6,6 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder.inputs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<ThemeValueArgs> value;
 
     public Output<ThemeValueArgs> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ThemeValuesArgs(
@@ -37,8 +38,8 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeValuesArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder value(@Nullable Output<ThemeValueArgs> value) {
@@ -76,7 +77,7 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable ThemeValueArgs value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ThemeValuesArgs build() {
             return new ThemeValuesArgs(key, value);

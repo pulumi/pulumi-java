@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
     public Output<SSISAccessCredentialArgs> getAccessCredential() {
-        return this.accessCredential == null ? Output.empty() : this.accessCredential;
+        return this.accessCredential == null ? Codegen.empty() : this.accessCredential;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> logRefreshInterval;
 
     public Output<Object> getLogRefreshInterval() {
-        return this.logRefreshInterval == null ? Output.empty() : this.logRefreshInterval;
+        return this.logRefreshInterval == null ? Codegen.empty() : this.logRefreshInterval;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SSISLogLocationArgs() {
-        this.accessCredential = Output.empty();
-        this.logPath = Output.empty();
-        this.logRefreshInterval = Output.empty();
-        this.type = Output.empty();
+        this.accessCredential = Codegen.empty();
+        this.logPath = Codegen.empty();
+        this.logRefreshInterval = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
-            this.accessCredential = Output.ofNullable(accessCredential);
+            this.accessCredential = Codegen.ofNullable(accessCredential);
             return this;
         }
         public Builder logPath(Output<Object> logPath) {
@@ -131,7 +132,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
-            this.logRefreshInterval = Output.ofNullable(logRefreshInterval);
+            this.logRefreshInterval = Codegen.ofNullable(logRefreshInterval);
             return this;
         }
         public Builder type(Output<Either<String,SsisLogLocationType>> type) {

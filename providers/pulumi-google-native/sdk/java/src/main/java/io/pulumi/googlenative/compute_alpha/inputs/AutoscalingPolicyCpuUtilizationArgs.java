@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.AutoscalingPolicyCpuUtilizationPredictiveMethod;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
       private final @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
 
     public Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> getPredictiveMethod() {
-        return this.predictiveMethod == null ? Output.empty() : this.predictiveMethod;
+        return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
       private final @Nullable Output<Double> utilizationTarget;
 
     public Output<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
+        return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 
     public AutoscalingPolicyCpuUtilizationArgs(
@@ -49,8 +50,8 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     }
 
     private AutoscalingPolicyCpuUtilizationArgs() {
-        this.predictiveMethod = Output.empty();
-        this.utilizationTarget = Output.empty();
+        this.predictiveMethod = Codegen.empty();
+        this.utilizationTarget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder predictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
-            this.predictiveMethod = Output.ofNullable(predictiveMethod);
+            this.predictiveMethod = Codegen.ofNullable(predictiveMethod);
             return this;
         }
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
@@ -88,7 +89,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Output.ofNullable(utilizationTarget);
+            this.utilizationTarget = Codegen.ofNullable(utilizationTarget);
             return this;
         }        public AutoscalingPolicyCpuUtilizationArgs build() {
             return new AutoscalingPolicyCpuUtilizationArgs(predictiveMethod, utilizationTarget);

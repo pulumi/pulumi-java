@@ -5,6 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ConfigDecodeConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> unvalidatedJSON;
 
     public Output<String> getUnvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Output.empty() : this.unvalidatedJSON;
+        return this.unvalidatedJSON == null ? Codegen.empty() : this.unvalidatedJSON;
     }
 
     public ConfigDecodeConfigArgs(@Nullable Output<String> unvalidatedJSON) {
@@ -26,7 +27,7 @@ public final class ConfigDecodeConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ConfigDecodeConfigArgs() {
-        this.unvalidatedJSON = Output.empty();
+        this.unvalidatedJSON = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ConfigDecodeConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = Output.ofNullable(unvalidatedJSON);
+            this.unvalidatedJSON = Codegen.ofNullable(unvalidatedJSON);
             return this;
         }        public ConfigDecodeConfigArgs build() {
             return new ConfigDecodeConfigArgs(unvalidatedJSON);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.enums.AppDatabaseType;
 import io.pulumi.googlenative.appengine_v1beta.enums.AppServingStatus;
 import io.pulumi.googlenative.appengine_v1beta.inputs.FeatureSettingsArgs;
@@ -28,7 +29,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authDomain;
 
     public Output<String> getAuthDomain() {
-        return this.authDomain == null ? Output.empty() : this.authDomain;
+        return this.authDomain == null ? Codegen.empty() : this.authDomain;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppDatabaseType> databaseType;
 
     public Output<AppDatabaseType> getDatabaseType() {
-        return this.databaseType == null ? Output.empty() : this.databaseType;
+        return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultCookieExpiration;
 
     public Output<String> getDefaultCookieExpiration() {
-        return this.defaultCookieExpiration == null ? Output.empty() : this.defaultCookieExpiration;
+        return this.defaultCookieExpiration == null ? Codegen.empty() : this.defaultCookieExpiration;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
 
     public Output<List<UrlDispatchRuleArgs>> getDispatchRules() {
-        return this.dispatchRules == null ? Output.empty() : this.dispatchRules;
+        return this.dispatchRules == null ? Codegen.empty() : this.dispatchRules;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FeatureSettingsArgs> featureSettings;
 
     public Output<FeatureSettingsArgs> getFeatureSettings() {
-        return this.featureSettings == null ? Output.empty() : this.featureSettings;
+        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
     }
 
     /**
@@ -83,14 +84,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gcrDomain;
 
     public Output<String> getGcrDomain() {
-        return this.gcrDomain == null ? Output.empty() : this.gcrDomain;
+        return this.gcrDomain == null ? Codegen.empty() : this.gcrDomain;
     }
 
     @Import(name="iap")
       private final @Nullable Output<IdentityAwareProxyArgs> iap;
 
     public Output<IdentityAwareProxyArgs> getIap() {
-        return this.iap == null ? Output.empty() : this.iap;
+        return this.iap == null ? Codegen.empty() : this.iap;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppServingStatus> servingStatus;
 
     public Output<AppServingStatus> getServingStatus() {
-        return this.servingStatus == null ? Output.empty() : this.servingStatus;
+        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 
     public AppArgs(
@@ -163,17 +164,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.authDomain = Output.empty();
-        this.databaseType = Output.empty();
-        this.defaultCookieExpiration = Output.empty();
-        this.dispatchRules = Output.empty();
-        this.featureSettings = Output.empty();
-        this.gcrDomain = Output.empty();
-        this.iap = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.servingStatus = Output.empty();
+        this.authDomain = Codegen.empty();
+        this.databaseType = Codegen.empty();
+        this.defaultCookieExpiration = Codegen.empty();
+        this.dispatchRules = Codegen.empty();
+        this.featureSettings = Codegen.empty();
+        this.gcrDomain = Codegen.empty();
+        this.iap = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.servingStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Output.ofNullable(authDomain);
+            this.authDomain = Codegen.ofNullable(authDomain);
             return this;
         }
         public Builder databaseType(@Nullable Output<AppDatabaseType> databaseType) {
@@ -229,7 +230,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseType(@Nullable AppDatabaseType databaseType) {
-            this.databaseType = Output.ofNullable(databaseType);
+            this.databaseType = Codegen.ofNullable(databaseType);
             return this;
         }
         public Builder defaultCookieExpiration(@Nullable Output<String> defaultCookieExpiration) {
@@ -237,7 +238,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultCookieExpiration(@Nullable String defaultCookieExpiration) {
-            this.defaultCookieExpiration = Output.ofNullable(defaultCookieExpiration);
+            this.defaultCookieExpiration = Codegen.ofNullable(defaultCookieExpiration);
             return this;
         }
         public Builder dispatchRules(@Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules) {
@@ -245,7 +246,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
-            this.dispatchRules = Output.ofNullable(dispatchRules);
+            this.dispatchRules = Codegen.ofNullable(dispatchRules);
             return this;
         }
         public Builder dispatchRules(UrlDispatchRuleArgs... dispatchRules) {
@@ -256,7 +257,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureSettings(@Nullable FeatureSettingsArgs featureSettings) {
-            this.featureSettings = Output.ofNullable(featureSettings);
+            this.featureSettings = Codegen.ofNullable(featureSettings);
             return this;
         }
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
@@ -264,7 +265,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcrDomain(@Nullable String gcrDomain) {
-            this.gcrDomain = Output.ofNullable(gcrDomain);
+            this.gcrDomain = Codegen.ofNullable(gcrDomain);
             return this;
         }
         public Builder iap(@Nullable Output<IdentityAwareProxyArgs> iap) {
@@ -272,7 +273,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iap(@Nullable IdentityAwareProxyArgs iap) {
-            this.iap = Output.ofNullable(iap);
+            this.iap = Codegen.ofNullable(iap);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -280,7 +281,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -288,7 +289,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -296,7 +297,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder servingStatus(@Nullable Output<AppServingStatus> servingStatus) {
@@ -304,7 +305,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servingStatus(@Nullable AppServingStatus servingStatus) {
-            this.servingStatus = Output.ofNullable(servingStatus);
+            this.servingStatus = Codegen.ofNullable(servingStatus);
             return this;
         }        public AppArgs build() {
             return new AppArgs(authDomain, databaseType, defaultCookieExpiration, dispatchRules, featureSettings, gcrDomain, iap, id, location, serviceAccount, servingStatus);

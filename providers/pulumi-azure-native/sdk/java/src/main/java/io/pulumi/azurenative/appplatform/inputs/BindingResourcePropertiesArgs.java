@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,Object>> bindingParameters;
 
     public Output<Map<String,Object>> getBindingParameters() {
-        return this.bindingParameters == null ? Output.empty() : this.bindingParameters;
+        return this.bindingParameters == null ? Codegen.empty() : this.bindingParameters;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public BindingResourcePropertiesArgs(
@@ -63,9 +64,9 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private BindingResourcePropertiesArgs() {
-        this.bindingParameters = Output.empty();
-        this.key = Output.empty();
-        this.resourceId = Output.empty();
+        this.bindingParameters = Codegen.empty();
+        this.key = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
-            this.bindingParameters = Output.ofNullable(bindingParameters);
+            this.bindingParameters = Codegen.ofNullable(bindingParameters);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -105,7 +106,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -113,7 +114,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public BindingResourcePropertiesArgs build() {
             return new BindingResourcePropertiesArgs(bindingParameters, key, resourceId);

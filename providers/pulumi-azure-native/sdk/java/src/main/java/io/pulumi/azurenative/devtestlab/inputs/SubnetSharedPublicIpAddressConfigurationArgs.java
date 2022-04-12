@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.PortArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
       private final @Nullable Output<List<PortArgs>> allowedPorts;
 
     public Output<List<PortArgs>> getAllowedPorts() {
-        return this.allowedPorts == null ? Output.empty() : this.allowedPorts;
+        return this.allowedPorts == null ? Codegen.empty() : this.allowedPorts;
     }
 
     public SubnetSharedPublicIpAddressConfigurationArgs(@Nullable Output<List<PortArgs>> allowedPorts) {
@@ -35,7 +36,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
     }
 
     private SubnetSharedPublicIpAddressConfigurationArgs() {
-        this.allowedPorts = Output.empty();
+        this.allowedPorts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
             return this;
         }
         public Builder allowedPorts(@Nullable List<PortArgs> allowedPorts) {
-            this.allowedPorts = Output.ofNullable(allowedPorts);
+            this.allowedPorts = Codegen.ofNullable(allowedPorts);
             return this;
         }
         public Builder allowedPorts(PortArgs... allowedPorts) {

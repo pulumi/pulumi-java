@@ -22,10 +22,10 @@ public final class ServicequotasFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.aws.servicequotas.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.aws.servicequotas.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicequotas/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class ServicequotasFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(io.pulumi.aws.servicequotas.inputs.GetServiceQuotaArgs args) {
-        return getServiceQuota(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args) {
+        return getServiceQuota(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(io.pulumi.aws.servicequotas.inputs.GetServiceQuotaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceQuotaResult> getServiceQuota(GetServiceQuotaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicequotas/getServiceQuota:getServiceQuota", TypeShape.of(GetServiceQuotaResult.class), args, Utilities.withVersion(options));
     }
 }

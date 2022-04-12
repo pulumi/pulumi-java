@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
+        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -90,11 +91,11 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private BastionHostIPConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.privateIPAllocationMethod = Output.empty();
-        this.publicIPAddress = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateIPAllocationMethod = Codegen.empty();
+        this.publicIPAddress = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -138,7 +139,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
@@ -146,7 +147,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
             return this;
         }
         public Builder publicIPAddress(Output<SubResourceArgs> publicIPAddress) {

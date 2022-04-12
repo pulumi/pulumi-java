@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceEndpointSpecPortGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +21,14 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="ports")
       private final @Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports;
 
     public Output<List<ServiceEndpointSpecPortGetArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public ServiceEndpointSpecGetArgs(
@@ -38,8 +39,8 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceEndpointSpecGetArgs() {
-        this.mode = Output.empty();
-        this.ports = Output.empty();
+        this.mode = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder ports(@Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports) {
@@ -77,7 +78,7 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ports(@Nullable List<ServiceEndpointSpecPortGetArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ServiceEndpointSpecPortGetArgs... ports) {

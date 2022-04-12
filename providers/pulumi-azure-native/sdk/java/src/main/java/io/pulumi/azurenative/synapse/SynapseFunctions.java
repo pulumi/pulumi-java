@@ -81,10 +81,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(io.pulumi.azurenative.synapse.inputs.GetBigDataPoolArgs args) {
-        return getBigDataPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args) {
+        return getBigDataPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(io.pulumi.azurenative.synapse.inputs.GetBigDataPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBigDataPoolResult> getBigDataPool(GetBigDataPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getBigDataPool", TypeShape.of(GetBigDataPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(io.pulumi.azurenative.synapse.inputs.GetDataConnectionArgs args) {
-        return getDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args) {
+        return getDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataConnectionResult> getDataConnection(io.pulumi.azurenative.synapse.inputs.GetDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataConnectionResult> getDataConnection(GetDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -111,10 +111,10 @@ public final class SynapseFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ReadWriteDatabase. */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.synapse.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.synapse.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -122,10 +122,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(io.pulumi.azurenative.synapse.inputs.GetDatabasePrincipalAssignmentArgs args) {
-        return getDatabasePrincipalAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args) {
+        return getDatabasePrincipalAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(io.pulumi.azurenative.synapse.inputs.GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> getDatabasePrincipalAssignment(GetDatabasePrincipalAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,10 +133,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(io.pulumi.azurenative.synapse.inputs.GetEventGridDataConnectionArgs args) {
-        return getEventGridDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args) {
+        return getEventGridDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(io.pulumi.azurenative.synapse.inputs.GetEventGridDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventGridDataConnectionResult> getEventGridDataConnection(GetEventGridDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -144,10 +144,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(io.pulumi.azurenative.synapse.inputs.GetEventHubDataConnectionArgs args) {
-        return getEventHubDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args) {
+        return getEventHubDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(io.pulumi.azurenative.synapse.inputs.GetEventHubDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubDataConnectionResult> getEventHubDataConnection(GetEventHubDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventHubDataConnection", TypeShape.of(GetEventHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -155,10 +155,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeArgs args) {
-        return getIntegrationRuntime(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args) {
+        return getIntegrationRuntime(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -166,10 +166,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeConnectionInfoArgs args) {
-        return getIntegrationRuntimeConnectionInfo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args) {
+        return getIntegrationRuntimeConnectionInfo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -177,10 +177,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeObjectMetadatumArgs args) {
-        return getIntegrationRuntimeObjectMetadatum(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args) {
+        return getIntegrationRuntimeObjectMetadatum(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -188,10 +188,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeStatusArgs args) {
-        return getIntegrationRuntimeStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args) {
+        return getIntegrationRuntimeStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(io.pulumi.azurenative.synapse.inputs.GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -199,10 +199,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(io.pulumi.azurenative.synapse.inputs.GetIotHubDataConnectionArgs args) {
-        return getIotHubDataConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args) {
+        return getIotHubDataConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(io.pulumi.azurenative.synapse.inputs.GetIotHubDataConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotHubDataConnectionResult> getIotHubDataConnection(GetIotHubDataConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -210,10 +210,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(io.pulumi.azurenative.synapse.inputs.GetIpFirewallRuleArgs args) {
-        return getIpFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args) {
+        return getIpFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(io.pulumi.azurenative.synapse.inputs.GetIpFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpFirewallRuleResult> getIpFirewallRule(GetIpFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIpFirewallRule", TypeShape.of(GetIpFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -221,10 +221,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.azurenative.synapse.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.azurenative.synapse.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -232,10 +232,10 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(io.pulumi.azurenative.synapse.inputs.GetKustoPoolAttachedDatabaseConfigurationArgs args) {
-        return getKustoPoolAttachedDatabaseConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args) {
+        return getKustoPoolAttachedDatabaseConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(io.pulumi.azurenative.synapse.inputs.GetKustoPoolAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> getKustoPoolAttachedDatabaseConfiguration(GetKustoPoolAttachedDatabaseConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolAttachedDatabaseConfiguration", TypeShape.of(GetKustoPoolAttachedDatabaseConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -243,10 +243,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(io.pulumi.azurenative.synapse.inputs.GetKustoPoolPrincipalAssignmentArgs args) {
-        return getKustoPoolPrincipalAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args) {
+        return getKustoPoolPrincipalAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(io.pulumi.azurenative.synapse.inputs.GetKustoPoolPrincipalAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKustoPoolPrincipalAssignmentResult> getKustoPoolPrincipalAssignment(GetKustoPoolPrincipalAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolPrincipalAssignment", TypeShape.of(GetKustoPoolPrincipalAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -254,10 +254,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.synapse.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.synapse.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -265,10 +265,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(io.pulumi.azurenative.synapse.inputs.GetPrivateLinkHubArgs args) {
-        return getPrivateLinkHub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args) {
+        return getPrivateLinkHub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(io.pulumi.azurenative.synapse.inputs.GetPrivateLinkHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateLinkHubResult> getPrivateLinkHub(GetPrivateLinkHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getPrivateLinkHub", TypeShape.of(GetPrivateLinkHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -276,10 +276,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(io.pulumi.azurenative.synapse.inputs.GetReadWriteDatabaseArgs args) {
-        return getReadWriteDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args) {
+        return getReadWriteDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(io.pulumi.azurenative.synapse.inputs.GetReadWriteDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReadWriteDatabaseResult> getReadWriteDatabase(GetReadWriteDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -287,10 +287,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolResult> getSqlPool(io.pulumi.azurenative.synapse.inputs.GetSqlPoolArgs args) {
-        return getSqlPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args) {
+        return getSqlPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolResult> getSqlPool(io.pulumi.azurenative.synapse.inputs.GetSqlPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolResult> getSqlPool(GetSqlPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPool", TypeShape.of(GetSqlPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -298,10 +298,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(io.pulumi.azurenative.synapse.inputs.GetSqlPoolSensitivityLabelArgs args) {
-        return getSqlPoolSensitivityLabel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args) {
+        return getSqlPoolSensitivityLabel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(io.pulumi.azurenative.synapse.inputs.GetSqlPoolSensitivityLabelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> getSqlPoolSensitivityLabel(GetSqlPoolSensitivityLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolSensitivityLabel", TypeShape.of(GetSqlPoolSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -309,10 +309,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(io.pulumi.azurenative.synapse.inputs.GetSqlPoolTransparentDataEncryptionArgs args) {
-        return getSqlPoolTransparentDataEncryption(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args) {
+        return getSqlPoolTransparentDataEncryption(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(io.pulumi.azurenative.synapse.inputs.GetSqlPoolTransparentDataEncryptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> getSqlPoolTransparentDataEncryption(GetSqlPoolTransparentDataEncryptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolTransparentDataEncryption", TypeShape.of(GetSqlPoolTransparentDataEncryptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -320,10 +320,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(io.pulumi.azurenative.synapse.inputs.GetSqlPoolVulnerabilityAssessmentArgs args) {
-        return getSqlPoolVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args) {
+        return getSqlPoolVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(io.pulumi.azurenative.synapse.inputs.GetSqlPoolVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentResult> getSqlPoolVulnerabilityAssessment(GetSqlPoolVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolVulnerabilityAssessment", TypeShape.of(GetSqlPoolVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -331,10 +331,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.synapse.inputs.GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args) {
-        return getSqlPoolVulnerabilityAssessmentRuleBaseline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args) {
+        return getSqlPoolVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.synapse.inputs.GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolVulnerabilityAssessmentRuleBaselineResult> getSqlPoolVulnerabilityAssessmentRuleBaseline(GetSqlPoolVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetSqlPoolVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -342,10 +342,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadClassifierArgs args) {
-        return getSqlPoolWorkloadClassifier(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args) {
+        return getSqlPoolWorkloadClassifier(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadClassifierArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolWorkloadClassifierResult> getSqlPoolWorkloadClassifier(GetSqlPoolWorkloadClassifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadClassifier", TypeShape.of(GetSqlPoolWorkloadClassifierResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -353,10 +353,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadGroupArgs args) {
-        return getSqlPoolWorkloadGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args) {
+        return getSqlPoolWorkloadGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(io.pulumi.azurenative.synapse.inputs.GetSqlPoolWorkloadGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlPoolWorkloadGroupResult> getSqlPoolWorkloadGroup(GetSqlPoolWorkloadGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadGroup", TypeShape.of(GetSqlPoolWorkloadGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -364,10 +364,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.synapse.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.synapse.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -375,10 +375,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(io.pulumi.azurenative.synapse.inputs.GetWorkspaceAadAdminArgs args) {
-        return getWorkspaceAadAdmin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args) {
+        return getWorkspaceAadAdmin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(io.pulumi.azurenative.synapse.inputs.GetWorkspaceAadAdminArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceAadAdminResult> getWorkspaceAadAdmin(GetWorkspaceAadAdminArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceAadAdmin", TypeShape.of(GetWorkspaceAadAdminResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -386,10 +386,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(io.pulumi.azurenative.synapse.inputs.GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args) {
-        return getWorkspaceManagedSqlServerVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args) {
+        return getWorkspaceManagedSqlServerVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(io.pulumi.azurenative.synapse.inputs.GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult> getWorkspaceManagedSqlServerVulnerabilityAssessment(GetWorkspaceManagedSqlServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceManagedSqlServerVulnerabilityAssessment", TypeShape.of(GetWorkspaceManagedSqlServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -397,10 +397,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(io.pulumi.azurenative.synapse.inputs.GetWorkspaceSqlAadAdminArgs args) {
-        return getWorkspaceSqlAadAdmin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args) {
+        return getWorkspaceSqlAadAdmin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(io.pulumi.azurenative.synapse.inputs.GetWorkspaceSqlAadAdminArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceSqlAadAdminResult> getWorkspaceSqlAadAdmin(GetWorkspaceSqlAadAdminArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceSqlAadAdmin", TypeShape.of(GetWorkspaceSqlAadAdminResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -408,10 +408,10 @@ public final class SynapseFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetkustoPoolResult> getkustoPool(io.pulumi.azurenative.synapse.inputs.GetkustoPoolArgs args) {
-        return getkustoPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args) {
+        return getkustoPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetkustoPoolResult> getkustoPool(io.pulumi.azurenative.synapse.inputs.GetkustoPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetkustoPoolResult> getkustoPool(GetkustoPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getkustoPool", TypeShape.of(GetkustoPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -419,10 +419,10 @@ public final class SynapseFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(io.pulumi.azurenative.synapse.inputs.ListIntegrationRuntimeAuthKeyArgs args) {
-        return listIntegrationRuntimeAuthKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args) {
+        return listIntegrationRuntimeAuthKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(io.pulumi.azurenative.synapse.inputs.ListIntegrationRuntimeAuthKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> listIntegrationRuntimeAuthKey(ListIntegrationRuntimeAuthKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listIntegrationRuntimeAuthKey", TypeShape.of(ListIntegrationRuntimeAuthKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -430,10 +430,10 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(io.pulumi.azurenative.synapse.inputs.ListKustoPoolFollowerDatabasesArgs args) {
-        return listKustoPoolFollowerDatabases(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args) {
+        return listKustoPoolFollowerDatabases(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(io.pulumi.azurenative.synapse.inputs.ListKustoPoolFollowerDatabasesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> listKustoPoolFollowerDatabases(ListKustoPoolFollowerDatabasesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolFollowerDatabases", TypeShape.of(ListKustoPoolFollowerDatabasesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -441,10 +441,10 @@ public final class SynapseFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(io.pulumi.azurenative.synapse.inputs.ListKustoPoolLanguageExtensionsArgs args) {
-        return listKustoPoolLanguageExtensions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args) {
+        return listKustoPoolLanguageExtensions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(io.pulumi.azurenative.synapse.inputs.ListKustoPoolLanguageExtensionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> listKustoPoolLanguageExtensions(ListKustoPoolLanguageExtensionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolLanguageExtensions", TypeShape.of(ListKustoPoolLanguageExtensionsResult.class), args, Utilities.withVersion(options));
     }
 }

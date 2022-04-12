@@ -6,6 +6,7 @@ package io.pulumi.gcp.certificateauthority;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamMemberArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberState;
@@ -172,7 +173,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPoolIamMember(String name, CaPoolIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CaPoolIamMember(String name, Output<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

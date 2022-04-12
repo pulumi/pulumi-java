@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
       private final @Nullable Output<String> retentionUnit;
 
     public Output<String> getRetentionUnit() {
-        return this.retentionUnit == null ? Output.empty() : this.retentionUnit;
+        return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
     }
 
     public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs(
@@ -46,8 +47,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     }
 
     private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs() {
-        this.retainedBackups = Output.empty();
-        this.retentionUnit = Output.empty();
+        this.retainedBackups = Codegen.empty();
+        this.retentionUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             return this;
         }
         public Builder retentionUnit(@Nullable String retentionUnit) {
-            this.retentionUnit = Output.ofNullable(retentionUnit);
+            this.retentionUnit = Codegen.ofNullable(retentionUnit);
             return this;
         }        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs(retainedBackups, retentionUnit);

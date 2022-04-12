@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     }
 
     private FilterTrackPropertyConditionArgs() {
-        this.operation = Output.empty();
-        this.property = Output.empty();
-        this.value = Output.empty();
+        this.operation = Codegen.empty();
+        this.property = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

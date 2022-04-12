@@ -5,6 +5,7 @@ package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VaultNotificationArgs() {
-        this.events = Output.empty();
-        this.snsTopic = Output.empty();
+        this.events = Codegen.empty();
+        this.snsTopic = Codegen.empty();
     }
 
     public static Builder builder() {

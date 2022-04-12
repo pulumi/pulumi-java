@@ -5,6 +5,7 @@ package io.pulumi.aws.s3outposts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     public EndpointNetworkInterfaceGetArgs(@Nullable Output<String> networkInterfaceId) {
@@ -30,7 +31,7 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
     }
 
     private EndpointNetworkInterfaceGetArgs() {
-        this.networkInterfaceId = Output.empty();
+        this.networkInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }        public EndpointNetworkInterfaceGetArgs build() {
             return new EndpointNetworkInterfaceGetArgs(networkInterfaceId);

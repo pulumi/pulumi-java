@@ -16,10 +16,10 @@ public final class MwaaFunctions {
      * Resource schema for AWS::MWAA::Environment
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.awsnative.mwaa.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.awsnative.mwaa.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mwaa:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
 }

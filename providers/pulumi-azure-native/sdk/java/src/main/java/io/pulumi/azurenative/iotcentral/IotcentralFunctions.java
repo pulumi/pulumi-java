@@ -17,10 +17,10 @@ public final class IotcentralFunctions {
      * API Version: 2018-09-01.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.azurenative.iotcentral.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.azurenative.iotcentral.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotcentral:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
 }

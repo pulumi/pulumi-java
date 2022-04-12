@@ -18,20 +18,20 @@ public final class DevspacesFunctions {
      * API Version: 2019-04-01.
      * 
      */
-    public static CompletableFuture<GetControllerResult> getController(io.pulumi.azurenative.devspaces.inputs.GetControllerArgs args) {
-        return getController(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetControllerResult> getController(GetControllerArgs args) {
+        return getController(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetControllerResult> getController(io.pulumi.azurenative.devspaces.inputs.GetControllerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetControllerResult> getController(GetControllerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:getController", TypeShape.of(GetControllerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-04-01.
      * 
      */
-    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(io.pulumi.azurenative.devspaces.inputs.ListControllerConnectionDetailsArgs args) {
-        return listControllerConnectionDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(ListControllerConnectionDetailsArgs args) {
+        return listControllerConnectionDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(io.pulumi.azurenative.devspaces.inputs.ListControllerConnectionDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetails(ListControllerConnectionDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devspaces:listControllerConnectionDetails", TypeShape.of(ListControllerConnectionDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

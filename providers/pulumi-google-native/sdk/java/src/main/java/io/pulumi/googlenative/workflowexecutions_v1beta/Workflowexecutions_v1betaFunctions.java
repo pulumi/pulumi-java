@@ -16,10 +16,10 @@ public final class Workflowexecutions_v1betaFunctions {
      * Returns an execution of the given name.
      * 
      */
-    public static CompletableFuture<GetExecutionResult> getExecution(io.pulumi.googlenative.workflowexecutions_v1beta.inputs.GetExecutionArgs args) {
-        return getExecution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args) {
+        return getExecution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExecutionResult> getExecution(io.pulumi.googlenative.workflowexecutions_v1beta.inputs.GetExecutionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflowexecutions/v1beta:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
     }
 }

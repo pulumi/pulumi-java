@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public DatasetS3LocationArgs(
@@ -40,8 +41,8 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetS3LocationArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DatasetS3LocationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public DatasetS3LocationArgs build() {
             return new DatasetS3LocationArgs(bucket, key);

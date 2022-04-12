@@ -5,6 +5,7 @@ package io.pulumi.azurenative.chaos;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> capabilityName;
 
     public Output<String> getCapabilityName() {
-        return this.capabilityName == null ? Output.empty() : this.capabilityName;
+        return this.capabilityName == null ? Codegen.empty() : this.capabilityName;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CapabilityArgs() {
-        this.capabilityName = Output.empty();
-        this.parentProviderNamespace = Output.empty();
-        this.parentResourceName = Output.empty();
-        this.parentResourceType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.targetName = Output.empty();
+        this.capabilityName = Codegen.empty();
+        this.parentProviderNamespace = Codegen.empty();
+        this.parentResourceName = Codegen.empty();
+        this.parentResourceType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.targetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilityName(@Nullable String capabilityName) {
-            this.capabilityName = Output.ofNullable(capabilityName);
+            this.capabilityName = Codegen.ofNullable(capabilityName);
             return this;
         }
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {

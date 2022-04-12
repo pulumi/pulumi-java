@@ -30,80 +30,80 @@ public final class Bigtableadmin_v2Functions {
      * Gets information about an app profile.
      * 
      */
-    public static CompletableFuture<GetAppProfileResult> getAppProfile(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetAppProfileArgs args) {
-        return getAppProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppProfileResult> getAppProfile(GetAppProfileArgs args) {
+        return getAppProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppProfileResult> getAppProfile(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetAppProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppProfileResult> getAppProfile(GetAppProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getAppProfile", TypeShape.of(GetAppProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets metadata on a pending or completed Cloud Bigtable Backup.
      * 
      */
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetBackupArgs args) {
-        return getBackup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
+        return getBackup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetBackupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about an instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> getInstanceClusterBackupIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceClusterBackupIamPolicyArgs args) {
-        return getInstanceClusterBackupIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> getInstanceClusterBackupIamPolicy(GetInstanceClusterBackupIamPolicyArgs args) {
+        return getInstanceClusterBackupIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> getInstanceClusterBackupIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceClusterBackupIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceClusterBackupIamPolicyResult> getInstanceClusterBackupIamPolicy(GetInstanceClusterBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceClusterBackupIamPolicy", TypeShape.of(GetInstanceClusterBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceIamPolicyArgs args) {
-        return getInstanceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args) {
+        return getInstanceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetInstanceTableIamPolicyResult> getInstanceTableIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceTableIamPolicyArgs args) {
-        return getInstanceTableIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTableIamPolicyResult> getInstanceTableIamPolicy(GetInstanceTableIamPolicyArgs args) {
+        return getInstanceTableIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTableIamPolicyResult> getInstanceTableIamPolicy(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetInstanceTableIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTableIamPolicyResult> getInstanceTableIamPolicy(GetInstanceTableIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceTableIamPolicy", TypeShape.of(GetInstanceTableIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets metadata information about the specified table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.googlenative.bigtableadmin_v2.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

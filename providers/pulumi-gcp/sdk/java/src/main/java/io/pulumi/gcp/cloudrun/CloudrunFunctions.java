@@ -27,12 +27,12 @@ public final class CloudrunFunctions {
      * 
      */
     public static CompletableFuture<GetLocationsResult> getLocations() {
-        return getLocations(io.pulumi.gcp.cloudrun.inputs.GetLocationsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocations(GetLocationsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationsResult> getLocations(io.pulumi.gcp.cloudrun.inputs.GetLocationsArgs args) {
-        return getLocations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args) {
+        return getLocations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationsResult> getLocations(io.pulumi.gcp.cloudrun.inputs.GetLocationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationsResult> getLocations(GetLocationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class CloudrunFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.gcp.cloudrun.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.gcp.cloudrun.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudrun/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

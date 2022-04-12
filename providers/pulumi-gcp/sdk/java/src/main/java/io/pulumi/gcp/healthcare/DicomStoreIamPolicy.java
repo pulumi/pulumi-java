@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreIamPolicyArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamPolicyState;
@@ -131,7 +132,7 @@ public class DicomStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DicomStoreIamPolicy(String name, DicomStoreIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/dicomStoreIamPolicy:DicomStoreIamPolicy", name, args == null ? DicomStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/dicomStoreIamPolicy:DicomStoreIamPolicy", name, args == null ? DicomStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DicomStoreIamPolicy(String name, Output<String> id, @Nullable DicomStoreIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

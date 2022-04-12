@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UniformShardingArgs() {
-        this.numShards = Output.empty();
+        this.numShards = Codegen.empty();
     }
 
     public static Builder builder() {

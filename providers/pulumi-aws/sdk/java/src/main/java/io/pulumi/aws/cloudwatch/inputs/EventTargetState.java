@@ -15,6 +15,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
 
     public Output<EventTargetBatchTargetGetArgs> getBatchTarget() {
-        return this.batchTarget == null ? Output.empty() : this.batchTarget;
+        return this.batchTarget == null ? Codegen.empty() : this.batchTarget;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
 
     public Output<EventTargetDeadLetterConfigGetArgs> getDeadLetterConfig() {
-        return this.deadLetterConfig == null ? Output.empty() : this.deadLetterConfig;
+        return this.deadLetterConfig == null ? Codegen.empty() : this.deadLetterConfig;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
 
     public Output<EventTargetEcsTargetGetArgs> getEcsTarget() {
-        return this.ecsTarget == null ? Output.empty() : this.ecsTarget;
+        return this.ecsTarget == null ? Codegen.empty() : this.ecsTarget;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
-        return this.eventBusName == null ? Output.empty() : this.eventBusName;
+        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
 
     public Output<EventTargetHttpTargetGetArgs> getHttpTarget() {
-        return this.httpTarget == null ? Output.empty() : this.httpTarget;
+        return this.httpTarget == null ? Codegen.empty() : this.httpTarget;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> input;
 
     public Output<String> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> inputPath;
 
     public Output<String> getInputPath() {
-        return this.inputPath == null ? Output.empty() : this.inputPath;
+        return this.inputPath == null ? Codegen.empty() : this.inputPath;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
 
     public Output<EventTargetInputTransformerGetArgs> getInputTransformer() {
-        return this.inputTransformer == null ? Output.empty() : this.inputTransformer;
+        return this.inputTransformer == null ? Codegen.empty() : this.inputTransformer;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
 
     public Output<EventTargetKinesisTargetGetArgs> getKinesisTarget() {
-        return this.kinesisTarget == null ? Output.empty() : this.kinesisTarget;
+        return this.kinesisTarget == null ? Codegen.empty() : this.kinesisTarget;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
 
     public Output<EventTargetRedshiftTargetGetArgs> getRedshiftTarget() {
-        return this.redshiftTarget == null ? Output.empty() : this.redshiftTarget;
+        return this.redshiftTarget == null ? Codegen.empty() : this.redshiftTarget;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
 
     public Output<EventTargetRetryPolicyGetArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rule;
 
     public Output<String> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     /**
@@ -187,7 +188,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
 
     public Output<List<EventTargetRunCommandTargetGetArgs>> getRunCommandTargets() {
-        return this.runCommandTargets == null ? Output.empty() : this.runCommandTargets;
+        return this.runCommandTargets == null ? Codegen.empty() : this.runCommandTargets;
     }
 
     /**
@@ -198,7 +199,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
 
     public Output<EventTargetSqsTargetGetArgs> getSqsTarget() {
-        return this.sqsTarget == null ? Output.empty() : this.sqsTarget;
+        return this.sqsTarget == null ? Codegen.empty() : this.sqsTarget;
     }
 
     /**
@@ -209,7 +210,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public EventTargetState(
@@ -250,23 +251,23 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventTargetState() {
-        this.arn = Output.empty();
-        this.batchTarget = Output.empty();
-        this.deadLetterConfig = Output.empty();
-        this.ecsTarget = Output.empty();
-        this.eventBusName = Output.empty();
-        this.httpTarget = Output.empty();
-        this.input = Output.empty();
-        this.inputPath = Output.empty();
-        this.inputTransformer = Output.empty();
-        this.kinesisTarget = Output.empty();
-        this.redshiftTarget = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.roleArn = Output.empty();
-        this.rule = Output.empty();
-        this.runCommandTargets = Output.empty();
-        this.sqsTarget = Output.empty();
-        this.targetId = Output.empty();
+        this.arn = Codegen.empty();
+        this.batchTarget = Codegen.empty();
+        this.deadLetterConfig = Codegen.empty();
+        this.ecsTarget = Codegen.empty();
+        this.eventBusName = Codegen.empty();
+        this.httpTarget = Codegen.empty();
+        this.input = Codegen.empty();
+        this.inputPath = Codegen.empty();
+        this.inputTransformer = Codegen.empty();
+        this.kinesisTarget = Codegen.empty();
+        this.redshiftTarget = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.rule = Codegen.empty();
+        this.runCommandTargets = Codegen.empty();
+        this.sqsTarget = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -326,7 +327,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder batchTarget(@Nullable Output<EventTargetBatchTargetGetArgs> batchTarget) {
@@ -334,7 +335,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder batchTarget(@Nullable EventTargetBatchTargetGetArgs batchTarget) {
-            this.batchTarget = Output.ofNullable(batchTarget);
+            this.batchTarget = Codegen.ofNullable(batchTarget);
             return this;
         }
         public Builder deadLetterConfig(@Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig) {
@@ -342,7 +343,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterConfig(@Nullable EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
-            this.deadLetterConfig = Output.ofNullable(deadLetterConfig);
+            this.deadLetterConfig = Codegen.ofNullable(deadLetterConfig);
             return this;
         }
         public Builder ecsTarget(@Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget) {
@@ -350,7 +351,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ecsTarget(@Nullable EventTargetEcsTargetGetArgs ecsTarget) {
-            this.ecsTarget = Output.ofNullable(ecsTarget);
+            this.ecsTarget = Codegen.ofNullable(ecsTarget);
             return this;
         }
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
@@ -358,7 +359,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Output.ofNullable(eventBusName);
+            this.eventBusName = Codegen.ofNullable(eventBusName);
             return this;
         }
         public Builder httpTarget(@Nullable Output<EventTargetHttpTargetGetArgs> httpTarget) {
@@ -366,7 +367,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpTarget(@Nullable EventTargetHttpTargetGetArgs httpTarget) {
-            this.httpTarget = Output.ofNullable(httpTarget);
+            this.httpTarget = Codegen.ofNullable(httpTarget);
             return this;
         }
         public Builder input(@Nullable Output<String> input) {
@@ -374,7 +375,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder input(@Nullable String input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder inputPath(@Nullable Output<String> inputPath) {
@@ -382,7 +383,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputPath(@Nullable String inputPath) {
-            this.inputPath = Output.ofNullable(inputPath);
+            this.inputPath = Codegen.ofNullable(inputPath);
             return this;
         }
         public Builder inputTransformer(@Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer) {
@@ -390,7 +391,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputTransformer(@Nullable EventTargetInputTransformerGetArgs inputTransformer) {
-            this.inputTransformer = Output.ofNullable(inputTransformer);
+            this.inputTransformer = Codegen.ofNullable(inputTransformer);
             return this;
         }
         public Builder kinesisTarget(@Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget) {
@@ -398,7 +399,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kinesisTarget(@Nullable EventTargetKinesisTargetGetArgs kinesisTarget) {
-            this.kinesisTarget = Output.ofNullable(kinesisTarget);
+            this.kinesisTarget = Codegen.ofNullable(kinesisTarget);
             return this;
         }
         public Builder redshiftTarget(@Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget) {
@@ -406,7 +407,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redshiftTarget(@Nullable EventTargetRedshiftTargetGetArgs redshiftTarget) {
-            this.redshiftTarget = Output.ofNullable(redshiftTarget);
+            this.redshiftTarget = Codegen.ofNullable(redshiftTarget);
             return this;
         }
         public Builder retryPolicy(@Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy) {
@@ -414,7 +415,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryPolicy(@Nullable EventTargetRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -422,7 +423,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder rule(@Nullable Output<String> rule) {
@@ -430,7 +431,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rule(@Nullable String rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }
         public Builder runCommandTargets(@Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets) {
@@ -438,7 +439,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runCommandTargets(@Nullable List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
-            this.runCommandTargets = Output.ofNullable(runCommandTargets);
+            this.runCommandTargets = Codegen.ofNullable(runCommandTargets);
             return this;
         }
         public Builder runCommandTargets(EventTargetRunCommandTargetGetArgs... runCommandTargets) {
@@ -449,7 +450,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqsTarget(@Nullable EventTargetSqsTargetGetArgs sqsTarget) {
-            this.sqsTarget = Output.ofNullable(sqsTarget);
+            this.sqsTarget = Codegen.ofNullable(sqsTarget);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -457,7 +458,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public EventTargetState build() {
             return new EventTargetState(arn, batchTarget, deadLetterConfig, ecsTarget, eventBusName, httpTarget, input, inputPath, inputTransformer, kinesisTarget, redshiftTarget, retryPolicy, roleArn, rule, runCommandTargets, sqsTarget, targetId);

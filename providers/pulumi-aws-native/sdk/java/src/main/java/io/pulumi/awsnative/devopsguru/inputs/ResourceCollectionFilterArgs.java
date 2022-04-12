@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devopsguru.inputs;
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
     public Output<ResourceCollectionCloudFormationCollectionFilterArgs> getCloudFormation() {
-        return this.cloudFormation == null ? Output.empty() : this.cloudFormation;
+        return this.cloudFormation == null ? Codegen.empty() : this.cloudFormation;
     }
 
     public ResourceCollectionFilterArgs(@Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
@@ -30,7 +31,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     }
 
     private ResourceCollectionFilterArgs() {
-        this.cloudFormation = Output.empty();
+        this.cloudFormation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
-            this.cloudFormation = Output.ofNullable(cloudFormation);
+            this.cloudFormation = Codegen.ofNullable(cloudFormation);
             return this;
         }        public ResourceCollectionFilterArgs build() {
             return new ResourceCollectionFilterArgs(cloudFormation);

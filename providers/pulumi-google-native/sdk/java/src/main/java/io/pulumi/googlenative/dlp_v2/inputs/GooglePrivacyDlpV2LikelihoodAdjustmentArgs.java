@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
       private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
 
     public Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> getFixedLikelihood() {
-        return this.fixedLikelihood == null ? Output.empty() : this.fixedLikelihood;
+        return this.fixedLikelihood == null ? Codegen.empty() : this.fixedLikelihood;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
       private final @Nullable Output<Integer> relativeLikelihood;
 
     public Output<Integer> getRelativeLikelihood() {
-        return this.relativeLikelihood == null ? Output.empty() : this.relativeLikelihood;
+        return this.relativeLikelihood == null ? Codegen.empty() : this.relativeLikelihood;
     }
 
     public GooglePrivacyDlpV2LikelihoodAdjustmentArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
     }
 
     private GooglePrivacyDlpV2LikelihoodAdjustmentArgs() {
-        this.fixedLikelihood = Output.empty();
-        this.relativeLikelihood = Output.empty();
+        this.fixedLikelihood = Codegen.empty();
+        this.relativeLikelihood = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
             return this;
         }
         public Builder fixedLikelihood(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood fixedLikelihood) {
-            this.fixedLikelihood = Output.ofNullable(fixedLikelihood);
+            this.fixedLikelihood = Codegen.ofNullable(fixedLikelihood);
             return this;
         }
         public Builder relativeLikelihood(@Nullable Output<Integer> relativeLikelihood) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
             return this;
         }
         public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
-            this.relativeLikelihood = Output.ofNullable(relativeLikelihood);
+            this.relativeLikelihood = Codegen.ofNullable(relativeLikelihood);
             return this;
         }        public GooglePrivacyDlpV2LikelihoodAdjustmentArgs build() {
             return new GooglePrivacyDlpV2LikelihoodAdjustmentArgs(fixedLikelihood, relativeLikelihood);

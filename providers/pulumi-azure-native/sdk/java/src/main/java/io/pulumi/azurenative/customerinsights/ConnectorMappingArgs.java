@@ -9,6 +9,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingPropertiesA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,ConnectorTypes>> connectorType;
 
     public Output<Either<String,ConnectorTypes>> getConnectorType() {
-        return this.connectorType == null ? Output.empty() : this.connectorType;
+        return this.connectorType == null ? Codegen.empty() : this.connectorType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mappingName;
 
     public Output<String> getMappingName() {
-        return this.mappingName == null ? Output.empty() : this.mappingName;
+        return this.mappingName == null ? Codegen.empty() : this.mappingName;
     }
 
     /**
@@ -152,16 +153,16 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectorMappingArgs() {
-        this.connectorName = Output.empty();
-        this.connectorType = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entityType = Output.empty();
-        this.entityTypeName = Output.empty();
-        this.hubName = Output.empty();
-        this.mappingName = Output.empty();
-        this.mappingProperties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.connectorName = Codegen.empty();
+        this.connectorType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entityType = Codegen.empty();
+        this.entityTypeName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.mappingName = Codegen.empty();
+        this.mappingProperties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectorType(@Nullable Either<String,ConnectorTypes> connectorType) {
-            this.connectorType = Output.ofNullable(connectorType);
+            this.connectorType = Codegen.ofNullable(connectorType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -223,7 +224,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -231,7 +232,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entityType(Output<EntityTypes> entityType) {
@@ -263,7 +264,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mappingName(@Nullable String mappingName) {
-            this.mappingName = Output.ofNullable(mappingName);
+            this.mappingName = Codegen.ofNullable(mappingName);
             return this;
         }
         public Builder mappingProperties(Output<ConnectorMappingPropertiesArgs> mappingProperties) {

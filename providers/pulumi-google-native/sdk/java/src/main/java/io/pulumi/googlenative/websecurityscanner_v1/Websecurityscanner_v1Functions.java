@@ -16,10 +16,10 @@ public final class Websecurityscanner_v1Functions {
      * Gets a ScanConfig.
      * 
      */
-    public static CompletableFuture<GetScanConfigResult> getScanConfig(io.pulumi.googlenative.websecurityscanner_v1.inputs.GetScanConfigArgs args) {
-        return getScanConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScanConfigResult> getScanConfig(GetScanConfigArgs args) {
+        return getScanConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScanConfigResult> getScanConfig(io.pulumi.googlenative.websecurityscanner_v1.inputs.GetScanConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScanConfigResult> getScanConfig(GetScanConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:websecurityscanner/v1:getScanConfig", TypeShape.of(GetScanConfigResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> blobPathList;
 
     public Output<List<String>> getBlobPathList() {
-        return this.blobPathList == null ? Output.empty() : this.blobPathList;
+        return this.blobPathList == null ? Codegen.empty() : this.blobPathList;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> blobPrefixList;
 
     public Output<List<String>> getBlobPrefixList() {
-        return this.blobPrefixList == null ? Output.empty() : this.blobPrefixList;
+        return this.blobPrefixList == null ? Codegen.empty() : this.blobPrefixList;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> containerList;
 
     public Output<List<String>> getContainerList() {
-        return this.containerList == null ? Output.empty() : this.containerList;
+        return this.containerList == null ? Codegen.empty() : this.containerList;
     }
 
     public BlobFilterDetailsArgs(
@@ -62,9 +63,9 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BlobFilterDetailsArgs() {
-        this.blobPathList = Output.empty();
-        this.blobPrefixList = Output.empty();
-        this.containerList = Output.empty();
+        this.blobPathList = Codegen.empty();
+        this.blobPrefixList = Codegen.empty();
+        this.containerList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder blobPathList(@Nullable List<String> blobPathList) {
-            this.blobPathList = Output.ofNullable(blobPathList);
+            this.blobPathList = Codegen.ofNullable(blobPathList);
             return this;
         }
         public Builder blobPathList(String... blobPathList) {
@@ -107,7 +108,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
-            this.blobPrefixList = Output.ofNullable(blobPrefixList);
+            this.blobPrefixList = Codegen.ofNullable(blobPrefixList);
             return this;
         }
         public Builder blobPrefixList(String... blobPrefixList) {
@@ -118,7 +119,7 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder containerList(@Nullable List<String> containerList) {
-            this.containerList = Output.ofNullable(containerList);
+            this.containerList = Codegen.ofNullable(containerList);
             return this;
         }
         public Builder containerList(String... containerList) {

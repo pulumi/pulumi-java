@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> revision;
 
     public Output<Integer> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public RollbackConfigArgs(@Nullable Output<Integer> revision) {
@@ -34,7 +35,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RollbackConfigArgs() {
-        this.revision = Output.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public RollbackConfigArgs build() {
             return new RollbackConfigArgs(revision);

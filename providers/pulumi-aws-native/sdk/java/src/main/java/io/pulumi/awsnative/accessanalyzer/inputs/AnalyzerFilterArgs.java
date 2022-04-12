@@ -5,6 +5,7 @@ package io.pulumi.awsnative.accessanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,28 +21,28 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> contains;
 
     public Output<List<String>> getContains() {
-        return this.contains == null ? Output.empty() : this.contains;
+        return this.contains == null ? Codegen.empty() : this.contains;
     }
 
     @Import(name="eq")
       private final @Nullable Output<List<String>> eq;
 
     public Output<List<String>> getEq() {
-        return this.eq == null ? Output.empty() : this.eq;
+        return this.eq == null ? Codegen.empty() : this.eq;
     }
 
     @Import(name="exists")
       private final @Nullable Output<Boolean> exists;
 
     public Output<Boolean> getExists() {
-        return this.exists == null ? Output.empty() : this.exists;
+        return this.exists == null ? Codegen.empty() : this.exists;
     }
 
     @Import(name="neq")
       private final @Nullable Output<List<String>> neq;
 
     public Output<List<String>> getNeq() {
-        return this.neq == null ? Output.empty() : this.neq;
+        return this.neq == null ? Codegen.empty() : this.neq;
     }
 
     @Import(name="property", required=true)
@@ -65,11 +66,11 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyzerFilterArgs() {
-        this.contains = Output.empty();
-        this.eq = Output.empty();
-        this.exists = Output.empty();
-        this.neq = Output.empty();
-        this.property = Output.empty();
+        this.contains = Codegen.empty();
+        this.eq = Codegen.empty();
+        this.exists = Codegen.empty();
+        this.neq = Codegen.empty();
+        this.property = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contains(@Nullable List<String> contains) {
-            this.contains = Output.ofNullable(contains);
+            this.contains = Codegen.ofNullable(contains);
             return this;
         }
         public Builder contains(String... contains) {
@@ -116,7 +117,7 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eq(@Nullable List<String> eq) {
-            this.eq = Output.ofNullable(eq);
+            this.eq = Codegen.ofNullable(eq);
             return this;
         }
         public Builder eq(String... eq) {
@@ -127,7 +128,7 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exists(@Nullable Boolean exists) {
-            this.exists = Output.ofNullable(exists);
+            this.exists = Codegen.ofNullable(exists);
             return this;
         }
         public Builder neq(@Nullable Output<List<String>> neq) {
@@ -135,7 +136,7 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder neq(@Nullable List<String> neq) {
-            this.neq = Output.ofNullable(neq);
+            this.neq = Codegen.ofNullable(neq);
             return this;
         }
         public Builder neq(String... neq) {

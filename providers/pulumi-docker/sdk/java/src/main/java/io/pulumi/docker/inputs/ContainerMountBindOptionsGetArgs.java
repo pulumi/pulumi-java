@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ContainerMountBindOptionsGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> propagation;
 
     public Output<String> getPropagation() {
-        return this.propagation == null ? Output.empty() : this.propagation;
+        return this.propagation == null ? Codegen.empty() : this.propagation;
     }
 
     public ContainerMountBindOptionsGetArgs(@Nullable Output<String> propagation) {
@@ -26,7 +27,7 @@ public final class ContainerMountBindOptionsGetArgs extends io.pulumi.resources.
     }
 
     private ContainerMountBindOptionsGetArgs() {
-        this.propagation = Output.empty();
+        this.propagation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ContainerMountBindOptionsGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder propagation(@Nullable String propagation) {
-            this.propagation = Output.ofNullable(propagation);
+            this.propagation = Codegen.ofNullable(propagation);
             return this;
         }        public ContainerMountBindOptionsGetArgs build() {
             return new ContainerMountBindOptionsGetArgs(propagation);

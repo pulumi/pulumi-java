@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.RegistryImageBuildGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RegistryImageBuildGetArgs> build;
 
     public Output<RegistryImageBuildGetArgs> getBuild() {
-        return this.build == null ? Output.empty() : this.build;
+        return this.build == null ? Codegen.empty() : this.build;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> insecureSkipVerify;
 
     public Output<Boolean> getInsecureSkipVerify() {
-        return this.insecureSkipVerify == null ? Output.empty() : this.insecureSkipVerify;
+        return this.insecureSkipVerify == null ? Codegen.empty() : this.insecureSkipVerify;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> keepRemotely;
 
     public Output<Boolean> getKeepRemotely() {
-        return this.keepRemotely == null ? Output.empty() : this.keepRemotely;
+        return this.keepRemotely == null ? Codegen.empty() : this.keepRemotely;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sha256Digest;
 
     public Output<String> getSha256Digest() {
-        return this.sha256Digest == null ? Output.empty() : this.sha256Digest;
+        return this.sha256Digest == null ? Codegen.empty() : this.sha256Digest;
     }
 
     public RegistryImageState(
@@ -86,11 +87,11 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryImageState() {
-        this.build = Output.empty();
-        this.insecureSkipVerify = Output.empty();
-        this.keepRemotely = Output.empty();
-        this.name = Output.empty();
-        this.sha256Digest = Output.empty();
+        this.build = Codegen.empty();
+        this.insecureSkipVerify = Codegen.empty();
+        this.keepRemotely = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sha256Digest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder build(@Nullable RegistryImageBuildGetArgs build) {
-            this.build = Output.ofNullable(build);
+            this.build = Codegen.ofNullable(build);
             return this;
         }
         public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
@@ -134,7 +135,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
-            this.insecureSkipVerify = Output.ofNullable(insecureSkipVerify);
+            this.insecureSkipVerify = Codegen.ofNullable(insecureSkipVerify);
             return this;
         }
         public Builder keepRemotely(@Nullable Output<Boolean> keepRemotely) {
@@ -142,7 +143,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepRemotely(@Nullable Boolean keepRemotely) {
-            this.keepRemotely = Output.ofNullable(keepRemotely);
+            this.keepRemotely = Codegen.ofNullable(keepRemotely);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -150,7 +151,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sha256Digest(@Nullable Output<String> sha256Digest) {
@@ -158,7 +159,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sha256Digest(@Nullable String sha256Digest) {
-            this.sha256Digest = Output.ofNullable(sha256Digest);
+            this.sha256Digest = Codegen.ofNullable(sha256Digest);
             return this;
         }        public RegistryImageState build() {
             return new RegistryImageState(build, insecureSkipVerify, keepRemotely, name, sha256Digest);

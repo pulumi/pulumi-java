@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceOneDriveUsersArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,28 +23,28 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> disableLocalGroups;
 
     public Output<Boolean> getDisableLocalGroups() {
-        return this.disableLocalGroups == null ? Output.empty() : this.disableLocalGroups;
+        return this.disableLocalGroups == null ? Codegen.empty() : this.disableLocalGroups;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
+        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
+        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="oneDriveUsers", required=true)
@@ -85,13 +86,13 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
     }
 
     private DataSourceOneDriveConfigurationArgs() {
-        this.disableLocalGroups = Output.empty();
-        this.exclusionPatterns = Output.empty();
-        this.fieldMappings = Output.empty();
-        this.inclusionPatterns = Output.empty();
-        this.oneDriveUsers = Output.empty();
-        this.secretArn = Output.empty();
-        this.tenantDomain = Output.empty();
+        this.disableLocalGroups = Codegen.empty();
+        this.exclusionPatterns = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
+        this.inclusionPatterns = Codegen.empty();
+        this.oneDriveUsers = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.tenantDomain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
-            this.disableLocalGroups = Output.ofNullable(disableLocalGroups);
+            this.disableLocalGroups = Codegen.ofNullable(disableLocalGroups);
             return this;
         }
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
@@ -139,7 +140,7 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
             return this;
         }
         public Builder exclusionPatterns(String... exclusionPatterns) {
@@ -150,7 +151,7 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
@@ -161,7 +162,7 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
             return this;
         }
         public Builder inclusionPatterns(String... inclusionPatterns) {

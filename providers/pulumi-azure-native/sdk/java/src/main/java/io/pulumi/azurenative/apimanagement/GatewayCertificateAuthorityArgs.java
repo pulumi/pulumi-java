@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> isTrusted;
 
     public Output<Boolean> getIsTrusted() {
-        return this.isTrusted == null ? Output.empty() : this.isTrusted;
+        return this.isTrusted == null ? Codegen.empty() : this.isTrusted;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     }
 
     private GatewayCertificateAuthorityArgs() {
-        this.certificateId = Output.empty();
-        this.gatewayId = Output.empty();
-        this.isTrusted = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.gatewayId = Codegen.empty();
+        this.isTrusted = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder gatewayId(Output<String> gatewayId) {
@@ -140,7 +141,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder isTrusted(@Nullable Boolean isTrusted) {
-            this.isTrusted = Output.ofNullable(isTrusted);
+            this.isTrusted = Codegen.ofNullable(isTrusted);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

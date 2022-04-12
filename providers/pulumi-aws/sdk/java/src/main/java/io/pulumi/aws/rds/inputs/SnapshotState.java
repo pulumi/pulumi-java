@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> allocatedStorage;
 
     public Output<Integer> getAllocatedStorage() {
-        return this.allocatedStorage == null ? Output.empty() : this.allocatedStorage;
+        return this.allocatedStorage == null ? Codegen.empty() : this.allocatedStorage;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dbInstanceIdentifier;
 
     public Output<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
+        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dbSnapshotArn;
 
     public Output<String> getDbSnapshotArn() {
-        return this.dbSnapshotArn == null ? Output.empty() : this.dbSnapshotArn;
+        return this.dbSnapshotArn == null ? Codegen.empty() : this.dbSnapshotArn;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dbSnapshotIdentifier;
 
     public Output<String> getDbSnapshotIdentifier() {
-        return this.dbSnapshotIdentifier == null ? Output.empty() : this.dbSnapshotIdentifier;
+        return this.dbSnapshotIdentifier == null ? Codegen.empty() : this.dbSnapshotIdentifier;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> licenseModel;
 
     public Output<String> getLicenseModel() {
-        return this.licenseModel == null ? Output.empty() : this.licenseModel;
+        return this.licenseModel == null ? Codegen.empty() : this.licenseModel;
     }
 
     /**
@@ -146,21 +147,21 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> optionGroupName;
 
     public Output<String> getOptionGroupName() {
-        return this.optionGroupName == null ? Output.empty() : this.optionGroupName;
+        return this.optionGroupName == null ? Codegen.empty() : this.optionGroupName;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="snapshotType")
       private final @Nullable Output<String> snapshotType;
 
     public Output<String> getSnapshotType() {
-        return this.snapshotType == null ? Output.empty() : this.snapshotType;
+        return this.snapshotType == null ? Codegen.empty() : this.snapshotType;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceDbSnapshotIdentifier;
 
     public Output<String> getSourceDbSnapshotIdentifier() {
-        return this.sourceDbSnapshotIdentifier == null ? Output.empty() : this.sourceDbSnapshotIdentifier;
+        return this.sourceDbSnapshotIdentifier == null ? Codegen.empty() : this.sourceDbSnapshotIdentifier;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceRegion;
 
     public Output<String> getSourceRegion() {
-        return this.sourceRegion == null ? Output.empty() : this.sourceRegion;
+        return this.sourceRegion == null ? Codegen.empty() : this.sourceRegion;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public SnapshotState(
@@ -286,27 +287,27 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotState() {
-        this.allocatedStorage = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.dbInstanceIdentifier = Output.empty();
-        this.dbSnapshotArn = Output.empty();
-        this.dbSnapshotIdentifier = Output.empty();
-        this.encrypted = Output.empty();
-        this.engine = Output.empty();
-        this.engineVersion = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.licenseModel = Output.empty();
-        this.optionGroupName = Output.empty();
-        this.port = Output.empty();
-        this.snapshotType = Output.empty();
-        this.sourceDbSnapshotIdentifier = Output.empty();
-        this.sourceRegion = Output.empty();
-        this.status = Output.empty();
-        this.storageType = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.allocatedStorage = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.dbInstanceIdentifier = Codegen.empty();
+        this.dbSnapshotArn = Codegen.empty();
+        this.dbSnapshotIdentifier = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.licenseModel = Codegen.empty();
+        this.optionGroupName = Codegen.empty();
+        this.port = Codegen.empty();
+        this.snapshotType = Codegen.empty();
+        this.sourceDbSnapshotIdentifier = Codegen.empty();
+        this.sourceRegion = Codegen.empty();
+        this.status = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -374,7 +375,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Output.ofNullable(allocatedStorage);
+            this.allocatedStorage = Codegen.ofNullable(allocatedStorage);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -382,7 +383,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
@@ -390,7 +391,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
             return this;
         }
         public Builder dbSnapshotArn(@Nullable Output<String> dbSnapshotArn) {
@@ -398,7 +399,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbSnapshotArn(@Nullable String dbSnapshotArn) {
-            this.dbSnapshotArn = Output.ofNullable(dbSnapshotArn);
+            this.dbSnapshotArn = Codegen.ofNullable(dbSnapshotArn);
             return this;
         }
         public Builder dbSnapshotIdentifier(@Nullable Output<String> dbSnapshotIdentifier) {
@@ -406,7 +407,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = Output.ofNullable(dbSnapshotIdentifier);
+            this.dbSnapshotIdentifier = Codegen.ofNullable(dbSnapshotIdentifier);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -414,7 +415,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder engine(@Nullable Output<String> engine) {
@@ -422,7 +423,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engine(@Nullable String engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
@@ -430,7 +431,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -438,7 +439,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -446,7 +447,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
@@ -454,7 +455,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = Output.ofNullable(licenseModel);
+            this.licenseModel = Codegen.ofNullable(licenseModel);
             return this;
         }
         public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
@@ -462,7 +463,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optionGroupName(@Nullable String optionGroupName) {
-            this.optionGroupName = Output.ofNullable(optionGroupName);
+            this.optionGroupName = Codegen.ofNullable(optionGroupName);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -470,7 +471,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder snapshotType(@Nullable Output<String> snapshotType) {
@@ -478,7 +479,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = Output.ofNullable(snapshotType);
+            this.snapshotType = Codegen.ofNullable(snapshotType);
             return this;
         }
         public Builder sourceDbSnapshotIdentifier(@Nullable Output<String> sourceDbSnapshotIdentifier) {
@@ -486,7 +487,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
-            this.sourceDbSnapshotIdentifier = Output.ofNullable(sourceDbSnapshotIdentifier);
+            this.sourceDbSnapshotIdentifier = Codegen.ofNullable(sourceDbSnapshotIdentifier);
             return this;
         }
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
@@ -494,7 +495,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRegion(@Nullable String sourceRegion) {
-            this.sourceRegion = Output.ofNullable(sourceRegion);
+            this.sourceRegion = Codegen.ofNullable(sourceRegion);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -502,7 +503,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -510,7 +511,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -518,7 +519,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -526,7 +527,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -534,7 +535,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public SnapshotState build() {
             return new SnapshotState(allocatedStorage, availabilityZone, dbInstanceIdentifier, dbSnapshotArn, dbSnapshotIdentifier, encrypted, engine, engineVersion, iops, kmsKeyId, licenseModel, optionGroupName, port, snapshotType, sourceDbSnapshotIdentifier, sourceRegion, status, storageType, tags, tagsAll, vpcId);

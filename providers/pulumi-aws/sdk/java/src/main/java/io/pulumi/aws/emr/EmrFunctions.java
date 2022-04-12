@@ -19,12 +19,12 @@ public final class EmrFunctions {
      * 
      */
     public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels() {
-        return getReleaseLabels(io.pulumi.aws.emr.inputs.GetReleaseLabelsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getReleaseLabels(GetReleaseLabelsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(io.pulumi.aws.emr.inputs.GetReleaseLabelsArgs args) {
-        return getReleaseLabels(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args) {
+        return getReleaseLabels(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(io.pulumi.aws.emr.inputs.GetReleaseLabelsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReleaseLabelsResult> getReleaseLabels(GetReleaseLabelsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:emr/getReleaseLabels:getReleaseLabels", TypeShape.of(GetReleaseLabelsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configurationSet;
 
     public Output<String> getConfigurationSet() {
-        return this.configurationSet == null ? Output.empty() : this.configurationSet;
+        return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public EmailChannelArgs(
@@ -97,12 +98,12 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailChannelArgs() {
-        this.applicationId = Output.empty();
-        this.configurationSet = Output.empty();
-        this.enabled = Output.empty();
-        this.fromAddress = Output.empty();
-        this.identity = Output.empty();
-        this.roleArn = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.configurationSet = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.fromAddress = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Output.ofNullable(configurationSet);
+            this.configurationSet = Codegen.ofNullable(configurationSet);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -156,7 +157,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder fromAddress(Output<String> fromAddress) {
@@ -180,7 +181,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public EmailChannelArgs build() {
             return new EmailChannelArgs(applicationId, configurationSet, enabled, fromAddress, identity, roleArn);

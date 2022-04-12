@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceAccountSubjectArgs() {
-        this.name = Output.empty();
-        this.namespace = Output.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.PublicKeyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectConfigArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
@@ -28,7 +29,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<PublicKeyArgs> publicKey;
 
     public Output<PublicKeyArgs> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CertificateConfigArgs() {
-        this.publicKey = Output.empty();
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.publicKey = Codegen.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publicKey(@Nullable PublicKeyArgs publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder subjectConfig(Output<SubjectConfigArgs> subjectConfig) {

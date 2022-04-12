@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismGetArgs extend
     }
 
     private UserPoolAccountRecoverySettingRecoveryMechanismGetArgs() {
-        this.name = Output.empty();
-        this.priority = Output.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {

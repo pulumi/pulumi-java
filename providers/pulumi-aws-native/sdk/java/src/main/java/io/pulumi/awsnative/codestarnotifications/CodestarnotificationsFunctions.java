@@ -16,10 +16,10 @@ public final class CodestarnotificationsFunctions {
      * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
      * 
      */
-    public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(io.pulumi.awsnative.codestarnotifications.inputs.GetNotificationRuleArgs args) {
-        return getNotificationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(GetNotificationRuleArgs args) {
+        return getNotificationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(io.pulumi.awsnative.codestarnotifications.inputs.GetNotificationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(GetNotificationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args, Utilities.withVersion(options));
     }
 }

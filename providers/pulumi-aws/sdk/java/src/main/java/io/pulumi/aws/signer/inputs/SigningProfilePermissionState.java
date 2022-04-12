@@ -5,6 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
-        return this.profileName == null ? Output.empty() : this.profileName;
+        return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> profileVersion;
 
     public Output<String> getProfileVersion() {
-        return this.profileVersion == null ? Output.empty() : this.profileVersion;
+        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> statementId;
 
     public Output<String> getStatementId() {
-        return this.statementId == null ? Output.empty() : this.statementId;
+        return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
       private final @Nullable Output<String> statementIdPrefix;
 
     public Output<String> getStatementIdPrefix() {
-        return this.statementIdPrefix == null ? Output.empty() : this.statementIdPrefix;
+        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
     }
 
     public SigningProfilePermissionState(
@@ -96,12 +97,12 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
     }
 
     private SigningProfilePermissionState() {
-        this.action = Output.empty();
-        this.principal = Output.empty();
-        this.profileName = Output.empty();
-        this.profileVersion = Output.empty();
-        this.statementId = Output.empty();
-        this.statementIdPrefix = Output.empty();
+        this.action = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.profileVersion = Codegen.empty();
+        this.statementId = Codegen.empty();
+        this.statementIdPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder principal(@Nullable Output<String> principal) {
@@ -147,7 +148,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }
         public Builder profileName(@Nullable Output<String> profileName) {
@@ -155,7 +156,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Output.ofNullable(profileName);
+            this.profileName = Codegen.ofNullable(profileName);
             return this;
         }
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
@@ -163,7 +164,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Output.ofNullable(profileVersion);
+            this.profileVersion = Codegen.ofNullable(profileVersion);
             return this;
         }
         public Builder statementId(@Nullable Output<String> statementId) {
@@ -171,7 +172,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Output.ofNullable(statementId);
+            this.statementId = Codegen.ofNullable(statementId);
             return this;
         }
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
@@ -179,7 +180,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
             return this;
         }
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
+            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
             return this;
         }        public SigningProfilePermissionState build() {
             return new SigningProfilePermissionState(action, principal, profileName, profileVersion, statementId, statementIdPrefix);

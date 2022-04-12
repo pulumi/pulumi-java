@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> interimSchemaName;
 
     public Output<Object> getInterimSchemaName() {
-        return this.interimSchemaName == null ? Output.empty() : this.interimSchemaName;
+        return this.interimSchemaName == null ? Codegen.empty() : this.interimSchemaName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> keys;
 
     public Output<Object> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     public SqlDWUpsertSettingsArgs(
@@ -48,8 +49,8 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private SqlDWUpsertSettingsArgs() {
-        this.interimSchemaName = Output.empty();
-        this.keys = Output.empty();
+        this.interimSchemaName = Codegen.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = Output.ofNullable(interimSchemaName);
+            this.interimSchemaName = Codegen.ofNullable(interimSchemaName);
             return this;
         }
         public Builder keys(@Nullable Output<Object> keys) {
@@ -87,7 +88,7 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keys(@Nullable Object keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }        public SqlDWUpsertSettingsArgs build() {
             return new SqlDWUpsertSettingsArgs(interimSchemaName, keys);

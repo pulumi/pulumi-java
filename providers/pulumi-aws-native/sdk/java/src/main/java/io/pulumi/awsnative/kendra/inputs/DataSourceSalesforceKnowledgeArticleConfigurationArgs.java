@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceCustomKnowledgeArti
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
       private final @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
 
     public Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> getCustomKnowledgeArticleTypeConfigurations() {
-        return this.customKnowledgeArticleTypeConfigurations == null ? Output.empty() : this.customKnowledgeArticleTypeConfigurations;
+        return this.customKnowledgeArticleTypeConfigurations == null ? Codegen.empty() : this.customKnowledgeArticleTypeConfigurations;
     }
 
     @Import(name="includedStates", required=true)
@@ -35,7 +36,7 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
       private final @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
 
     public Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> getStandardKnowledgeArticleTypeConfiguration() {
-        return this.standardKnowledgeArticleTypeConfiguration == null ? Output.empty() : this.standardKnowledgeArticleTypeConfiguration;
+        return this.standardKnowledgeArticleTypeConfiguration == null ? Codegen.empty() : this.standardKnowledgeArticleTypeConfiguration;
     }
 
     public DataSourceSalesforceKnowledgeArticleConfigurationArgs(
@@ -48,9 +49,9 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
     }
 
     private DataSourceSalesforceKnowledgeArticleConfigurationArgs() {
-        this.customKnowledgeArticleTypeConfigurations = Output.empty();
-        this.includedStates = Output.empty();
-        this.standardKnowledgeArticleTypeConfiguration = Output.empty();
+        this.customKnowledgeArticleTypeConfigurations = Codegen.empty();
+        this.includedStates = Codegen.empty();
+        this.standardKnowledgeArticleTypeConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
             return this;
         }
         public Builder customKnowledgeArticleTypeConfigurations(@Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs> customKnowledgeArticleTypeConfigurations) {
-            this.customKnowledgeArticleTypeConfigurations = Output.ofNullable(customKnowledgeArticleTypeConfigurations);
+            this.customKnowledgeArticleTypeConfigurations = Codegen.ofNullable(customKnowledgeArticleTypeConfigurations);
             return this;
         }
         public Builder customKnowledgeArticleTypeConfigurations(DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs... customKnowledgeArticleTypeConfigurations) {
@@ -104,7 +105,7 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
             return this;
         }
         public Builder standardKnowledgeArticleTypeConfiguration(@Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs standardKnowledgeArticleTypeConfiguration) {
-            this.standardKnowledgeArticleTypeConfiguration = Output.ofNullable(standardKnowledgeArticleTypeConfiguration);
+            this.standardKnowledgeArticleTypeConfiguration = Codegen.ofNullable(standardKnowledgeArticleTypeConfiguration);
             return this;
         }        public DataSourceSalesforceKnowledgeArticleConfigurationArgs build() {
             return new DataSourceSalesforceKnowledgeArticleConfigurationArgs(customKnowledgeArticleTypeConfigurations, includedStates, standardKnowledgeArticleTypeConfiguration);

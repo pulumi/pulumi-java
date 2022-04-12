@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     }
 
     private BucketLifecycleConfigurationArgs() {
-        this.bucket = Output.empty();
-        this.rules = Output.empty();
+        this.bucket = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

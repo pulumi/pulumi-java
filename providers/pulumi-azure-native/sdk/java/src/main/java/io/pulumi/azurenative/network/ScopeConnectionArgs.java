@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scopeConnectionName;
 
     public Output<String> getScopeConnectionName() {
-        return this.scopeConnectionName == null ? Output.empty() : this.scopeConnectionName;
+        return this.scopeConnectionName == null ? Codegen.empty() : this.scopeConnectionName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ScopeConnectionArgs(
@@ -96,12 +97,12 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScopeConnectionArgs() {
-        this.description = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.scopeConnectionName = Output.empty();
-        this.tenantId = Output.empty();
+        this.description = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scopeConnectionName = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder networkManagerName(Output<String> networkManagerName) {
@@ -163,7 +164,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder scopeConnectionName(@Nullable Output<String> scopeConnectionName) {
@@ -171,7 +172,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scopeConnectionName(@Nullable String scopeConnectionName) {
-            this.scopeConnectionName = Output.ofNullable(scopeConnectionName);
+            this.scopeConnectionName = Codegen.ofNullable(scopeConnectionName);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -179,7 +180,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ScopeConnectionArgs build() {
             return new ScopeConnectionArgs(description, networkManagerName, resourceGroupName, resourceId, scopeConnectionName, tenantId);

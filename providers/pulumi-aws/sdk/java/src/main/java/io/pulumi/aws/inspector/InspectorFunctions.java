@@ -21,12 +21,12 @@ public final class InspectorFunctions {
      * 
      */
     public static CompletableFuture<GetRulesPackagesResult> getRulesPackages() {
-        return getRulesPackages(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRulesPackages(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(io.pulumi.resources.InvokeArgs args) {
-        return getRulesPackages(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(InvokeArgs args) {
+        return getRulesPackages(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRulesPackagesResult> getRulesPackages(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:inspector/getRulesPackages:getRulesPackages", TypeShape.of(GetRulesPackagesResult.class), args, Utilities.withVersion(options));
     }
 }

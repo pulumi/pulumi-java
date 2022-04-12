@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HttpRuleArgs>> additionalBindings;
 
     public Output<List<HttpRuleArgs>> getAdditionalBindings() {
-        return this.additionalBindings == null ? Output.empty() : this.additionalBindings;
+        return this.additionalBindings == null ? Codegen.empty() : this.additionalBindings;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CustomHttpPatternArgs> custom;
 
     public Output<CustomHttpPatternArgs> getCustom() {
-        return this.custom == null ? Output.empty() : this.custom;
+        return this.custom == null ? Codegen.empty() : this.custom;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> delete;
 
     public Output<String> getDelete() {
-        return this.delete == null ? Output.empty() : this.delete;
+        return this.delete == null ? Codegen.empty() : this.delete;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> get;
 
     public Output<String> getGet() {
-        return this.get == null ? Output.empty() : this.get;
+        return this.get == null ? Codegen.empty() : this.get;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> patch;
 
     public Output<String> getPatch() {
-        return this.patch == null ? Output.empty() : this.patch;
+        return this.patch == null ? Codegen.empty() : this.patch;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> post;
 
     public Output<String> getPost() {
-        return this.post == null ? Output.empty() : this.post;
+        return this.post == null ? Codegen.empty() : this.post;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> put;
 
     public Output<String> getPut() {
-        return this.put == null ? Output.empty() : this.put;
+        return this.put == null ? Codegen.empty() : this.put;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> responseBody;
 
     public Output<String> getResponseBody() {
-        return this.responseBody == null ? Output.empty() : this.responseBody;
+        return this.responseBody == null ? Codegen.empty() : this.responseBody;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public HttpRuleArgs(
@@ -154,16 +155,16 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpRuleArgs() {
-        this.additionalBindings = Output.empty();
-        this.body = Output.empty();
-        this.custom = Output.empty();
-        this.delete = Output.empty();
-        this.get = Output.empty();
-        this.patch = Output.empty();
-        this.post = Output.empty();
-        this.put = Output.empty();
-        this.responseBody = Output.empty();
-        this.selector = Output.empty();
+        this.additionalBindings = Codegen.empty();
+        this.body = Codegen.empty();
+        this.custom = Codegen.empty();
+        this.delete = Codegen.empty();
+        this.get = Codegen.empty();
+        this.patch = Codegen.empty();
+        this.post = Codegen.empty();
+        this.put = Codegen.empty();
+        this.responseBody = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalBindings(@Nullable List<HttpRuleArgs> additionalBindings) {
-            this.additionalBindings = Output.ofNullable(additionalBindings);
+            this.additionalBindings = Codegen.ofNullable(additionalBindings);
             return this;
         }
         public Builder additionalBindings(HttpRuleArgs... additionalBindings) {
@@ -220,7 +221,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder custom(@Nullable Output<CustomHttpPatternArgs> custom) {
@@ -228,7 +229,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder custom(@Nullable CustomHttpPatternArgs custom) {
-            this.custom = Output.ofNullable(custom);
+            this.custom = Codegen.ofNullable(custom);
             return this;
         }
         public Builder delete(@Nullable Output<String> delete) {
@@ -236,7 +237,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delete(@Nullable String delete) {
-            this.delete = Output.ofNullable(delete);
+            this.delete = Codegen.ofNullable(delete);
             return this;
         }
         public Builder get(@Nullable Output<String> get) {
@@ -244,7 +245,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder get(@Nullable String get) {
-            this.get = Output.ofNullable(get);
+            this.get = Codegen.ofNullable(get);
             return this;
         }
         public Builder patch(@Nullable Output<String> patch) {
@@ -252,7 +253,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patch(@Nullable String patch) {
-            this.patch = Output.ofNullable(patch);
+            this.patch = Codegen.ofNullable(patch);
             return this;
         }
         public Builder post(@Nullable Output<String> post) {
@@ -260,7 +261,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder post(@Nullable String post) {
-            this.post = Output.ofNullable(post);
+            this.post = Codegen.ofNullable(post);
             return this;
         }
         public Builder put(@Nullable Output<String> put) {
@@ -268,7 +269,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder put(@Nullable String put) {
-            this.put = Output.ofNullable(put);
+            this.put = Codegen.ofNullable(put);
             return this;
         }
         public Builder responseBody(@Nullable Output<String> responseBody) {
@@ -276,7 +277,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseBody(@Nullable String responseBody) {
-            this.responseBody = Output.ofNullable(responseBody);
+            this.responseBody = Codegen.ofNullable(responseBody);
             return this;
         }
         public Builder selector(@Nullable Output<String> selector) {
@@ -284,7 +285,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public HttpRuleArgs build() {
             return new HttpRuleArgs(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);

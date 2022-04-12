@@ -8,6 +8,7 @@ import io.pulumi.azurenative.iotsecurity.inputs.DefenderSettingsPropertiesMdeInt
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -74,10 +75,10 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DefenderSettingArgs() {
-        this.deviceQuota = Output.empty();
-        this.mdeIntegration = Output.empty();
-        this.onboardingKind = Output.empty();
-        this.sentinelWorkspaceResourceIds = Output.empty();
+        this.deviceQuota = Codegen.empty();
+        this.mdeIntegration = Codegen.empty();
+        this.onboardingKind = Codegen.empty();
+        this.sentinelWorkspaceResourceIds = Codegen.empty();
     }
 
     public static Builder builder() {

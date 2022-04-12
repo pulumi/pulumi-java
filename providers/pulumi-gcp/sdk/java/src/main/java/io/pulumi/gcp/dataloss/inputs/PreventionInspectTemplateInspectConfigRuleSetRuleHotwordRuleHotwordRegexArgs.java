@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
       private final @Nullable Output<List<Integer>> groupIndexes;
 
     public Output<List<Integer>> getGroupIndexes() {
-        return this.groupIndexes == null ? Output.empty() : this.groupIndexes;
+        return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs() {
-        this.groupIndexes = Output.empty();
-        this.pattern = Output.empty();
+        this.groupIndexes = Codegen.empty();
+        this.pattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
             return this;
         }
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Output.ofNullable(groupIndexes);
+            this.groupIndexes = Codegen.ofNullable(groupIndexes);
             return this;
         }
         public Builder groupIndexes(Integer... groupIndexes) {

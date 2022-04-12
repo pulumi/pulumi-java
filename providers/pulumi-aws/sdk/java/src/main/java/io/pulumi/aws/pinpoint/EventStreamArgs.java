@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventStreamArgs() {
-        this.applicationId = Output.empty();
-        this.destinationStreamArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.destinationStreamArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

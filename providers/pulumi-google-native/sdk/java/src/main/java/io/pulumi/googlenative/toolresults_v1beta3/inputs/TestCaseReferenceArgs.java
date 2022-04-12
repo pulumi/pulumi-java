@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> className;
 
     public Output<String> getClassName() {
-        return this.className == null ? Output.empty() : this.className;
+        return this.className == null ? Codegen.empty() : this.className;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> testSuiteName;
 
     public Output<String> getTestSuiteName() {
-        return this.testSuiteName == null ? Output.empty() : this.testSuiteName;
+        return this.testSuiteName == null ? Codegen.empty() : this.testSuiteName;
     }
 
     public TestCaseReferenceArgs(
@@ -61,9 +62,9 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TestCaseReferenceArgs() {
-        this.className = Output.empty();
-        this.name = Output.empty();
-        this.testSuiteName = Output.empty();
+        this.className = Codegen.empty();
+        this.name = Codegen.empty();
+        this.testSuiteName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder className(@Nullable String className) {
-            this.className = Output.ofNullable(className);
+            this.className = Codegen.ofNullable(className);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -103,7 +104,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder testSuiteName(@Nullable Output<String> testSuiteName) {
@@ -111,7 +112,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder testSuiteName(@Nullable String testSuiteName) {
-            this.testSuiteName = Output.ofNullable(testSuiteName);
+            this.testSuiteName = Codegen.ofNullable(testSuiteName);
             return this;
         }        public TestCaseReferenceArgs build() {
             return new TestCaseReferenceArgs(className, name, testSuiteName);

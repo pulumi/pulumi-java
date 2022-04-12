@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -396,7 +397,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Lab(String name, LabArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:Lab", name, args == null ? LabArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Lab(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

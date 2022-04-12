@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.billing.inputs.BudgetAmountSpecifiedAmountGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> lastPeriodAmount;
 
     public Output<Boolean> getLastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Output.empty() : this.lastPeriodAmount;
+        return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount;
 
     public Output<BudgetAmountSpecifiedAmountGetArgs> getSpecifiedAmount() {
-        return this.specifiedAmount == null ? Output.empty() : this.specifiedAmount;
+        return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
     }
 
     public BudgetAmountGetArgs(
@@ -51,8 +52,8 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BudgetAmountGetArgs() {
-        this.lastPeriodAmount = Output.empty();
-        this.specifiedAmount = Output.empty();
+        this.lastPeriodAmount = Codegen.empty();
+        this.specifiedAmount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
-            this.lastPeriodAmount = Output.ofNullable(lastPeriodAmount);
+            this.lastPeriodAmount = Codegen.ofNullable(lastPeriodAmount);
             return this;
         }
         public Builder specifiedAmount(@Nullable Output<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount) {
@@ -90,7 +91,7 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmountGetArgs specifiedAmount) {
-            this.specifiedAmount = Output.ofNullable(specifiedAmount);
+            this.specifiedAmount = Codegen.ofNullable(specifiedAmount);
             return this;
         }        public BudgetAmountGetArgs build() {
             return new BudgetAmountGetArgs(lastPeriodAmount, specifiedAmount);

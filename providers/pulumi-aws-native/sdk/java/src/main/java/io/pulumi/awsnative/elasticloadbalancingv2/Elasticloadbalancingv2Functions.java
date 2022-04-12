@@ -18,20 +18,20 @@ public final class Elasticloadbalancingv2Functions {
      * Resource Type definition for AWS::ElasticLoadBalancingV2::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerArgs args) {
-        return getListener(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+        return getListener(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
      * 
      */
-    public static CompletableFuture<GetListenerRuleResult> getListenerRule(io.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerRuleArgs args) {
-        return getListenerRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args) {
+        return getListenerRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerRuleResult> getListenerRule(io.pulumi.awsnative.elasticloadbalancingv2.inputs.GetListenerRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetListenerRuleResult> getListenerRule(GetListenerRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListenerRule", TypeShape.of(GetListenerRuleResult.class), args, Utilities.withVersion(options));
     }
 }

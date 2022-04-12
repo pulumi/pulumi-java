@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> streamArn;
 
     public Output<String> getStreamArn() {
-        return this.streamArn == null ? Output.empty() : this.streamArn;
+        return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 
     public StreamConsumerState(
@@ -70,10 +71,10 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
     }
 
     private StreamConsumerState() {
-        this.arn = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.streamArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.streamArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -115,7 +116,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder streamArn(@Nullable Output<String> streamArn) {
@@ -131,7 +132,7 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Output.ofNullable(streamArn);
+            this.streamArn = Codegen.ofNullable(streamArn);
             return this;
         }        public StreamConsumerState build() {
             return new StreamConsumerState(arn, creationTimestamp, name, streamArn);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public MissionProfileDataflowEdgeArgs(
@@ -36,8 +37,8 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
     }
 
     private MissionProfileDataflowEdgeArgs() {
-        this.destination = Output.empty();
-        this.source = Output.empty();
+        this.destination = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -75,7 +76,7 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public MissionProfileDataflowEdgeArgs build() {
             return new MissionProfileDataflowEdgeArgs(destination, source);

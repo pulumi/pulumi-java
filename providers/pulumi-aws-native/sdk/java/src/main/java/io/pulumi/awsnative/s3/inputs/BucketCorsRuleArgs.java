@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedHeaders;
 
     public Output<List<String>> getAllowedHeaders() {
-        return this.allowedHeaders == null ? Output.empty() : this.allowedHeaders;
+        return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> exposedHeaders;
 
     public Output<List<String>> getExposedHeaders() {
-        return this.exposedHeaders == null ? Output.empty() : this.exposedHeaders;
+        return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxAge;
 
     public Output<Integer> getMaxAge() {
-        return this.maxAge == null ? Output.empty() : this.maxAge;
+        return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
     public BucketCorsRuleArgs(
@@ -103,12 +104,12 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketCorsRuleArgs() {
-        this.allowedHeaders = Output.empty();
-        this.allowedMethods = Output.empty();
-        this.allowedOrigins = Output.empty();
-        this.exposedHeaders = Output.empty();
-        this.id = Output.empty();
-        this.maxAge = Output.empty();
+        this.allowedHeaders = Codegen.empty();
+        this.allowedMethods = Codegen.empty();
+        this.allowedOrigins = Codegen.empty();
+        this.exposedHeaders = Codegen.empty();
+        this.id = Codegen.empty();
+        this.maxAge = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
-            this.allowedHeaders = Output.ofNullable(allowedHeaders);
+            this.allowedHeaders = Codegen.ofNullable(allowedHeaders);
             return this;
         }
         public Builder allowedHeaders(String... allowedHeaders) {
@@ -179,7 +180,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
-            this.exposedHeaders = Output.ofNullable(exposedHeaders);
+            this.exposedHeaders = Codegen.ofNullable(exposedHeaders);
             return this;
         }
         public Builder exposedHeaders(String... exposedHeaders) {
@@ -190,7 +191,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
@@ -198,7 +199,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = Output.ofNullable(maxAge);
+            this.maxAge = Codegen.ofNullable(maxAge);
             return this;
         }        public BucketCorsRuleArgs build() {
             return new BucketCorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);

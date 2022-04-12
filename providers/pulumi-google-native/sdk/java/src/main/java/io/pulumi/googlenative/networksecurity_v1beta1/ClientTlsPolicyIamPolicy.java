@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1beta1.ClientTlsPolicyIamPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleIamV1AuditConfigResponse;
@@ -102,7 +103,7 @@ public class ClientTlsPolicyIamPolicy extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientTlsPolicyIamPolicy(String name, ClientTlsPolicyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networksecurity/v1beta1:ClientTlsPolicyIamPolicy", name, args == null ? ClientTlsPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networksecurity/v1beta1:ClientTlsPolicyIamPolicy", name, args == null ? ClientTlsPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClientTlsPolicyIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

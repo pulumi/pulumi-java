@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsDetailArgs() {
-        this.cpeUri = Output.empty();
-        this.description = Output.empty();
-        this.fixingKbs = Output.empty();
-        this.name = Output.empty();
+        this.cpeUri = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fixingKbs = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fixingKbs(Output<List<KnowledgeBaseArgs>> fixingKbs) {

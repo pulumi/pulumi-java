@@ -16,10 +16,10 @@ public final class Cloudscheduler_v1beta1Functions {
      * Gets a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudscheduler/v1beta1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
 }

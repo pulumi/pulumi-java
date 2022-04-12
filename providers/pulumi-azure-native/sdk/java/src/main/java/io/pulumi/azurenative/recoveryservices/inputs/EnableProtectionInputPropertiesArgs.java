@@ -11,6 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmEnableProtectionIn
 import io.pulumi.azurenative.recoveryservices.inputs.SanEnableProtectionInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> protectableItemId;
 
     public Output<String> getProtectableItemId() {
-        return this.protectableItemId == null ? Output.empty() : this.protectableItemId;
+        return this.protectableItemId == null ? Codegen.empty() : this.protectableItemId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<Object> providerSpecificDetails;
 
     public Output<Object> getProviderSpecificDetails() {
-        return this.providerSpecificDetails == null ? Output.empty() : this.providerSpecificDetails;
+        return this.providerSpecificDetails == null ? Codegen.empty() : this.providerSpecificDetails;
     }
 
     public EnableProtectionInputPropertiesArgs(
@@ -68,9 +69,9 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
     }
 
     private EnableProtectionInputPropertiesArgs() {
-        this.policyId = Output.empty();
-        this.protectableItemId = Output.empty();
-        this.providerSpecificDetails = Output.empty();
+        this.policyId = Codegen.empty();
+        this.protectableItemId = Codegen.empty();
+        this.providerSpecificDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder protectableItemId(@Nullable Output<String> protectableItemId) {
@@ -110,7 +111,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder protectableItemId(@Nullable String protectableItemId) {
-            this.protectableItemId = Output.ofNullable(protectableItemId);
+            this.protectableItemId = Codegen.ofNullable(protectableItemId);
             return this;
         }
         public Builder providerSpecificDetails(@Nullable Output<Object> providerSpecificDetails) {
@@ -118,7 +119,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
-            this.providerSpecificDetails = Output.ofNullable(providerSpecificDetails);
+            this.providerSpecificDetails = Codegen.ofNullable(providerSpecificDetails);
             return this;
         }        public EnableProtectionInputPropertiesArgs build() {
             return new EnableProtectionInputPropertiesArgs(policyId, protectableItemId, providerSpecificDetails);

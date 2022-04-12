@@ -32,10 +32,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(io.pulumi.aws.connect.inputs.GetBotAssociationArgs args) {
-        return getBotAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args) {
+        return getBotAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(io.pulumi.aws.connect.inputs.GetBotAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,10 +44,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(io.pulumi.aws.connect.inputs.GetContactFlowArgs args) {
-        return getContactFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
+        return getContactFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(io.pulumi.aws.connect.inputs.GetContactFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getContactFlow:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(io.pulumi.aws.connect.inputs.GetContactFlowModuleArgs args) {
-        return getContactFlowModule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
+        return getContactFlowModule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(io.pulumi.aws.connect.inputs.GetContactFlowModuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getContactFlowModule:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,10 +68,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(io.pulumi.aws.connect.inputs.GetHoursOfOperationArgs args) {
-        return getHoursOfOperation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
+        return getHoursOfOperation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(io.pulumi.aws.connect.inputs.GetHoursOfOperationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,12 +81,12 @@ public final class ConnectFunctions {
      * 
      */
     public static CompletableFuture<GetInstanceResult> getInstance() {
-        return getInstance(io.pulumi.aws.connect.inputs.GetInstanceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.connect.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.connect.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(io.pulumi.aws.connect.inputs.GetLambdaFunctionAssociationArgs args) {
-        return getLambdaFunctionAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args) {
+        return getLambdaFunctionAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(io.pulumi.aws.connect.inputs.GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPromptResult> getPrompt(io.pulumi.aws.connect.inputs.GetPromptArgs args) {
-        return getPrompt(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args) {
+        return getPrompt(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPromptResult> getPrompt(io.pulumi.aws.connect.inputs.GetPromptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -119,10 +119,10 @@ public final class ConnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(io.pulumi.aws.connect.inputs.GetQuickConnectArgs args) {
-        return getQuickConnect(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
+        return getQuickConnect(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(io.pulumi.aws.connect.inputs.GetQuickConnectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getQuickConnect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
     }
 }

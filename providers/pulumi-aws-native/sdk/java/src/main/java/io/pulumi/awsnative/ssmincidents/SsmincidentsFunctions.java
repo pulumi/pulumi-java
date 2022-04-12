@@ -18,20 +18,20 @@ public final class SsmincidentsFunctions {
      * Resource type definition for AWS::SSMIncidents::ReplicationSet
      * 
      */
-    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(io.pulumi.awsnative.ssmincidents.inputs.GetReplicationSetArgs args) {
-        return getReplicationSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args) {
+        return getReplicationSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(io.pulumi.awsnative.ssmincidents.inputs.GetReplicationSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationSetResult> getReplicationSet(GetReplicationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getReplicationSet", TypeShape.of(GetReplicationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::SSMIncidents::ResponsePlan
      * 
      */
-    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(io.pulumi.awsnative.ssmincidents.inputs.GetResponsePlanArgs args) {
-        return getResponsePlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args) {
+        return getResponsePlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(io.pulumi.awsnative.ssmincidents.inputs.GetResponsePlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResponsePlanResult> getResponsePlan(GetResponsePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmincidents:getResponsePlan", TypeShape.of(GetResponsePlanResult.class), args, Utilities.withVersion(options));
     }
 }

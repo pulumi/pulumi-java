@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.PacketMirroringArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringFilterResponse;
@@ -227,7 +228,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PacketMirroring(String name, PacketMirroringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:PacketMirroring", name, args == null ? PacketMirroringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:PacketMirroring", name, args == null ? PacketMirroringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PacketMirroring(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

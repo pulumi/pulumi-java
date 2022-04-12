@@ -24,12 +24,12 @@ public final class ManagementFunctions {
      * 
      */
     public static CompletableFuture<GetEntityResult> getEntity() {
-        return getEntity(io.pulumi.azurenative.management.inputs.GetEntityArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEntity(GetEntityArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityResult> getEntity(io.pulumi.azurenative.management.inputs.GetEntityArgs args) {
-        return getEntity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args) {
+        return getEntity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityResult> getEntity(io.pulumi.azurenative.management.inputs.GetEntityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,10 +37,10 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(io.pulumi.azurenative.management.inputs.GetHierarchySettingArgs args) {
-        return getHierarchySetting(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args) {
+        return getHierarchySetting(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(io.pulumi.azurenative.management.inputs.GetHierarchySettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getHierarchySetting", TypeShape.of(GetHierarchySettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(io.pulumi.azurenative.management.inputs.GetManagementGroupArgs args) {
-        return getManagementGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args) {
+        return getManagementGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(io.pulumi.azurenative.management.inputs.GetManagementGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,10 +59,10 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(io.pulumi.azurenative.management.inputs.GetManagementGroupSubscriptionArgs args) {
-        return getManagementGroupSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args) {
+        return getManagementGroupSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(io.pulumi.azurenative.management.inputs.GetManagementGroupSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroupSubscription", TypeShape.of(GetManagementGroupSubscriptionResult.class), args, Utilities.withVersion(options));
     }
 }

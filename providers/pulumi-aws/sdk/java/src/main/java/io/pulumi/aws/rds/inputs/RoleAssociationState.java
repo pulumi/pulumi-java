@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dbInstanceIdentifier;
 
     public Output<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
+        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> featureName;
 
     public Output<String> getFeatureName() {
-        return this.featureName == null ? Output.empty() : this.featureName;
+        return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public RoleAssociationState(
@@ -57,9 +58,9 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
     }
 
     private RoleAssociationState() {
-        this.dbInstanceIdentifier = Output.empty();
-        this.featureName = Output.empty();
-        this.roleArn = Output.empty();
+        this.dbInstanceIdentifier = Codegen.empty();
+        this.featureName = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
             return this;
         }
         public Builder featureName(@Nullable Output<String> featureName) {
@@ -99,7 +100,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Output.ofNullable(featureName);
+            this.featureName = Codegen.ofNullable(featureName);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -107,7 +108,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public RoleAssociationState build() {
             return new RoleAssociationState(dbInstanceIdentifier, featureName, roleArn);

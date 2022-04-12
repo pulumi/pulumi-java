@@ -22,40 +22,40 @@ public final class LexFunctions {
      * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.awsnative.lex.inputs.GetBotArgs args) {
-        return getBot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+        return getBot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.awsnative.lex.inputs.GetBotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
      * 
      */
-    public static CompletableFuture<GetBotAliasResult> getBotAlias(io.pulumi.awsnative.lex.inputs.GetBotAliasArgs args) {
-        return getBotAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotAliasResult> getBotAlias(GetBotAliasArgs args) {
+        return getBotAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotAliasResult> getBotAlias(io.pulumi.awsnative.lex.inputs.GetBotAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotAliasResult> getBotAlias(GetBotAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBotAlias", TypeShape.of(GetBotAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
      * 
      */
-    public static CompletableFuture<GetBotVersionResult> getBotVersion(io.pulumi.awsnative.lex.inputs.GetBotVersionArgs args) {
-        return getBotVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotVersionResult> getBotVersion(GetBotVersionArgs args) {
+        return getBotVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotVersionResult> getBotVersion(io.pulumi.awsnative.lex.inputs.GetBotVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotVersionResult> getBotVersion(GetBotVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBotVersion", TypeShape.of(GetBotVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.awsnative.lex.inputs.GetResourcePolicyArgs args) {
-        return getResourcePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
+        return getResourcePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.awsnative.lex.inputs.GetResourcePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
 }

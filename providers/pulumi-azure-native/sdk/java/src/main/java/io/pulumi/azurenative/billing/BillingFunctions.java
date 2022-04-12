@@ -23,10 +23,10 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByBillingAccountArgs args) {
-        return getBillingRoleAssignmentByBillingAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args) {
+        return getBillingRoleAssignmentByBillingAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByBillingAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> getBillingRoleAssignmentByBillingAccount(GetBillingRoleAssignmentByBillingAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByBillingAccount", TypeShape.of(GetBillingRoleAssignmentByBillingAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByDepartmentArgs args) {
-        return getBillingRoleAssignmentByDepartment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args) {
+        return getBillingRoleAssignmentByDepartment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByDepartmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> getBillingRoleAssignmentByDepartment(GetBillingRoleAssignmentByDepartmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByDepartment", TypeShape.of(GetBillingRoleAssignmentByDepartmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class BillingFunctions {
      * API Version: 2019-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByEnrollmentAccountArgs args) {
-        return getBillingRoleAssignmentByEnrollmentAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args) {
+        return getBillingRoleAssignmentByEnrollmentAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(io.pulumi.azurenative.billing.inputs.GetBillingRoleAssignmentByEnrollmentAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingRoleAssignmentByEnrollmentAccountResult> getBillingRoleAssignmentByEnrollmentAccount(GetBillingRoleAssignmentByEnrollmentAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByEnrollmentAccount", TypeShape.of(GetBillingRoleAssignmentByEnrollmentAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class BillingFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(io.pulumi.azurenative.billing.inputs.ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args) {
-        return listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args) {
+        return listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(io.pulumi.azurenative.billing.inputs.ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> listBillingAccountInvoiceSectionsByCreateSubscriptionPermission(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:listBillingAccountInvoiceSectionsByCreateSubscriptionPermission", TypeShape.of(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SessionAffinityConfigArgs;
@@ -34,7 +35,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
     public Output<Boolean> getAllocateLoadBalancerNodePorts() {
-        return this.allocateLoadBalancerNodePorts == null ? Output.empty() : this.allocateLoadBalancerNodePorts;
+        return this.allocateLoadBalancerNodePorts == null ? Codegen.empty() : this.allocateLoadBalancerNodePorts;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterIP;
 
     public Output<String> getClusterIP() {
-        return this.clusterIP == null ? Output.empty() : this.clusterIP;
+        return this.clusterIP == null ? Codegen.empty() : this.clusterIP;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> clusterIPs;
 
     public Output<List<String>> getClusterIPs() {
-        return this.clusterIPs == null ? Output.empty() : this.clusterIPs;
+        return this.clusterIPs == null ? Codegen.empty() : this.clusterIPs;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> externalIPs;
 
     public Output<List<String>> getExternalIPs() {
-        return this.externalIPs == null ? Output.empty() : this.externalIPs;
+        return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalName;
 
     public Output<String> getExternalName() {
-        return this.externalName == null ? Output.empty() : this.externalName;
+        return this.externalName == null ? Codegen.empty() : this.externalName;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalTrafficPolicy;
 
     public Output<String> getExternalTrafficPolicy() {
-        return this.externalTrafficPolicy == null ? Output.empty() : this.externalTrafficPolicy;
+        return this.externalTrafficPolicy == null ? Codegen.empty() : this.externalTrafficPolicy;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> healthCheckNodePort;
 
     public Output<Integer> getHealthCheckNodePort() {
-        return this.healthCheckNodePort == null ? Output.empty() : this.healthCheckNodePort;
+        return this.healthCheckNodePort == null ? Codegen.empty() : this.healthCheckNodePort;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> internalTrafficPolicy;
 
     public Output<String> getInternalTrafficPolicy() {
-        return this.internalTrafficPolicy == null ? Output.empty() : this.internalTrafficPolicy;
+        return this.internalTrafficPolicy == null ? Codegen.empty() : this.internalTrafficPolicy;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipFamilies;
 
     public Output<List<String>> getIpFamilies() {
-        return this.ipFamilies == null ? Output.empty() : this.ipFamilies;
+        return this.ipFamilies == null ? Codegen.empty() : this.ipFamilies;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {
-        return this.ipFamily == null ? Output.empty() : this.ipFamily;
+        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipFamilyPolicy;
 
     public Output<String> getIpFamilyPolicy() {
-        return this.ipFamilyPolicy == null ? Output.empty() : this.ipFamilyPolicy;
+        return this.ipFamilyPolicy == null ? Codegen.empty() : this.ipFamilyPolicy;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loadBalancerClass;
 
     public Output<String> getLoadBalancerClass() {
-        return this.loadBalancerClass == null ? Output.empty() : this.loadBalancerClass;
+        return this.loadBalancerClass == null ? Codegen.empty() : this.loadBalancerClass;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loadBalancerIP;
 
     public Output<String> getLoadBalancerIP() {
-        return this.loadBalancerIP == null ? Output.empty() : this.loadBalancerIP;
+        return this.loadBalancerIP == null ? Codegen.empty() : this.loadBalancerIP;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> loadBalancerSourceRanges;
 
     public Output<List<String>> getLoadBalancerSourceRanges() {
-        return this.loadBalancerSourceRanges == null ? Output.empty() : this.loadBalancerSourceRanges;
+        return this.loadBalancerSourceRanges == null ? Codegen.empty() : this.loadBalancerSourceRanges;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServicePortArgs>> ports;
 
     public Output<List<ServicePortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> publishNotReadyAddresses;
 
     public Output<Boolean> getPublishNotReadyAddresses() {
-        return this.publishNotReadyAddresses == null ? Output.empty() : this.publishNotReadyAddresses;
+        return this.publishNotReadyAddresses == null ? Codegen.empty() : this.publishNotReadyAddresses;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> selector;
 
     public Output<Map<String,String>> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -233,7 +234,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sessionAffinity;
 
     public Output<String> getSessionAffinity() {
-        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
+        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
     /**
@@ -244,7 +245,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
     public Output<SessionAffinityConfigArgs> getSessionAffinityConfig() {
-        return this.sessionAffinityConfig == null ? Output.empty() : this.sessionAffinityConfig;
+        return this.sessionAffinityConfig == null ? Codegen.empty() : this.sessionAffinityConfig;
     }
 
     /**
@@ -255,7 +256,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> topologyKeys;
 
     public Output<List<String>> getTopologyKeys() {
-        return this.topologyKeys == null ? Output.empty() : this.topologyKeys;
+        return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
     }
 
     /**
@@ -272,7 +273,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServiceSpecType>> type;
 
     public Output<Either<String,ServiceSpecType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServiceSpecArgs(
@@ -321,27 +322,27 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceSpecArgs() {
-        this.allocateLoadBalancerNodePorts = Output.empty();
-        this.clusterIP = Output.empty();
-        this.clusterIPs = Output.empty();
-        this.externalIPs = Output.empty();
-        this.externalName = Output.empty();
-        this.externalTrafficPolicy = Output.empty();
-        this.healthCheckNodePort = Output.empty();
-        this.internalTrafficPolicy = Output.empty();
-        this.ipFamilies = Output.empty();
-        this.ipFamily = Output.empty();
-        this.ipFamilyPolicy = Output.empty();
-        this.loadBalancerClass = Output.empty();
-        this.loadBalancerIP = Output.empty();
-        this.loadBalancerSourceRanges = Output.empty();
-        this.ports = Output.empty();
-        this.publishNotReadyAddresses = Output.empty();
-        this.selector = Output.empty();
-        this.sessionAffinity = Output.empty();
-        this.sessionAffinityConfig = Output.empty();
-        this.topologyKeys = Output.empty();
-        this.type = Output.empty();
+        this.allocateLoadBalancerNodePorts = Codegen.empty();
+        this.clusterIP = Codegen.empty();
+        this.clusterIPs = Codegen.empty();
+        this.externalIPs = Codegen.empty();
+        this.externalName = Codegen.empty();
+        this.externalTrafficPolicy = Codegen.empty();
+        this.healthCheckNodePort = Codegen.empty();
+        this.internalTrafficPolicy = Codegen.empty();
+        this.ipFamilies = Codegen.empty();
+        this.ipFamily = Codegen.empty();
+        this.ipFamilyPolicy = Codegen.empty();
+        this.loadBalancerClass = Codegen.empty();
+        this.loadBalancerIP = Codegen.empty();
+        this.loadBalancerSourceRanges = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.publishNotReadyAddresses = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.sessionAffinity = Codegen.empty();
+        this.sessionAffinityConfig = Codegen.empty();
+        this.topologyKeys = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -409,7 +410,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
-            this.allocateLoadBalancerNodePorts = Output.ofNullable(allocateLoadBalancerNodePorts);
+            this.allocateLoadBalancerNodePorts = Codegen.ofNullable(allocateLoadBalancerNodePorts);
             return this;
         }
         public Builder clusterIP(@Nullable Output<String> clusterIP) {
@@ -417,7 +418,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterIP(@Nullable String clusterIP) {
-            this.clusterIP = Output.ofNullable(clusterIP);
+            this.clusterIP = Codegen.ofNullable(clusterIP);
             return this;
         }
         public Builder clusterIPs(@Nullable Output<List<String>> clusterIPs) {
@@ -425,7 +426,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterIPs(@Nullable List<String> clusterIPs) {
-            this.clusterIPs = Output.ofNullable(clusterIPs);
+            this.clusterIPs = Codegen.ofNullable(clusterIPs);
             return this;
         }
         public Builder clusterIPs(String... clusterIPs) {
@@ -436,7 +437,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalIPs(@Nullable List<String> externalIPs) {
-            this.externalIPs = Output.ofNullable(externalIPs);
+            this.externalIPs = Codegen.ofNullable(externalIPs);
             return this;
         }
         public Builder externalIPs(String... externalIPs) {
@@ -447,7 +448,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalName(@Nullable String externalName) {
-            this.externalName = Output.ofNullable(externalName);
+            this.externalName = Codegen.ofNullable(externalName);
             return this;
         }
         public Builder externalTrafficPolicy(@Nullable Output<String> externalTrafficPolicy) {
@@ -455,7 +456,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalTrafficPolicy(@Nullable String externalTrafficPolicy) {
-            this.externalTrafficPolicy = Output.ofNullable(externalTrafficPolicy);
+            this.externalTrafficPolicy = Codegen.ofNullable(externalTrafficPolicy);
             return this;
         }
         public Builder healthCheckNodePort(@Nullable Output<Integer> healthCheckNodePort) {
@@ -463,7 +464,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckNodePort(@Nullable Integer healthCheckNodePort) {
-            this.healthCheckNodePort = Output.ofNullable(healthCheckNodePort);
+            this.healthCheckNodePort = Codegen.ofNullable(healthCheckNodePort);
             return this;
         }
         public Builder internalTrafficPolicy(@Nullable Output<String> internalTrafficPolicy) {
@@ -471,7 +472,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internalTrafficPolicy(@Nullable String internalTrafficPolicy) {
-            this.internalTrafficPolicy = Output.ofNullable(internalTrafficPolicy);
+            this.internalTrafficPolicy = Codegen.ofNullable(internalTrafficPolicy);
             return this;
         }
         public Builder ipFamilies(@Nullable Output<List<String>> ipFamilies) {
@@ -479,7 +480,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipFamilies(@Nullable List<String> ipFamilies) {
-            this.ipFamilies = Output.ofNullable(ipFamilies);
+            this.ipFamilies = Codegen.ofNullable(ipFamilies);
             return this;
         }
         public Builder ipFamilies(String... ipFamilies) {
@@ -490,7 +491,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Output.ofNullable(ipFamily);
+            this.ipFamily = Codegen.ofNullable(ipFamily);
             return this;
         }
         public Builder ipFamilyPolicy(@Nullable Output<String> ipFamilyPolicy) {
@@ -498,7 +499,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipFamilyPolicy(@Nullable String ipFamilyPolicy) {
-            this.ipFamilyPolicy = Output.ofNullable(ipFamilyPolicy);
+            this.ipFamilyPolicy = Codegen.ofNullable(ipFamilyPolicy);
             return this;
         }
         public Builder loadBalancerClass(@Nullable Output<String> loadBalancerClass) {
@@ -506,7 +507,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancerClass(@Nullable String loadBalancerClass) {
-            this.loadBalancerClass = Output.ofNullable(loadBalancerClass);
+            this.loadBalancerClass = Codegen.ofNullable(loadBalancerClass);
             return this;
         }
         public Builder loadBalancerIP(@Nullable Output<String> loadBalancerIP) {
@@ -514,7 +515,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancerIP(@Nullable String loadBalancerIP) {
-            this.loadBalancerIP = Output.ofNullable(loadBalancerIP);
+            this.loadBalancerIP = Codegen.ofNullable(loadBalancerIP);
             return this;
         }
         public Builder loadBalancerSourceRanges(@Nullable Output<List<String>> loadBalancerSourceRanges) {
@@ -522,7 +523,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
-            this.loadBalancerSourceRanges = Output.ofNullable(loadBalancerSourceRanges);
+            this.loadBalancerSourceRanges = Codegen.ofNullable(loadBalancerSourceRanges);
             return this;
         }
         public Builder loadBalancerSourceRanges(String... loadBalancerSourceRanges) {
@@ -533,7 +534,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<ServicePortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ServicePortArgs... ports) {
@@ -544,7 +545,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
-            this.publishNotReadyAddresses = Output.ofNullable(publishNotReadyAddresses);
+            this.publishNotReadyAddresses = Codegen.ofNullable(publishNotReadyAddresses);
             return this;
         }
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
@@ -552,7 +553,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable Map<String,String> selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
@@ -560,7 +561,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Output.ofNullable(sessionAffinity);
+            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
             return this;
         }
         public Builder sessionAffinityConfig(@Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig) {
@@ -568,7 +569,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionAffinityConfig(@Nullable SessionAffinityConfigArgs sessionAffinityConfig) {
-            this.sessionAffinityConfig = Output.ofNullable(sessionAffinityConfig);
+            this.sessionAffinityConfig = Codegen.ofNullable(sessionAffinityConfig);
             return this;
         }
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
@@ -576,7 +577,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Output.ofNullable(topologyKeys);
+            this.topologyKeys = Codegen.ofNullable(topologyKeys);
             return this;
         }
         public Builder topologyKeys(String... topologyKeys) {
@@ -587,7 +588,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,ServiceSpecType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServiceSpecArgs build() {
             return new ServiceSpecArgs(allocateLoadBalancerNodePorts, clusterIP, clusterIPs, externalIPs, externalName, externalTrafficPolicy, healthCheckNodePort, internalTrafficPolicy, ipFamilies, ipFamily, ipFamilyPolicy, loadBalancerClass, loadBalancerIP, loadBalancerSourceRanges, ports, publishNotReadyAddresses, selector, sessionAffinity, sessionAffinityConfig, topologyKeys, type);

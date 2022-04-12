@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1.inputs.OidcTokenArgs;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OidcTokenArgs> oidcToken;
 
     public Output<OidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Output.empty() : this.oidcToken;
+        return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pushEndpoint;
 
     public Output<String> getPushEndpoint() {
-        return this.pushEndpoint == null ? Output.empty() : this.pushEndpoint;
+        return this.pushEndpoint == null ? Codegen.empty() : this.pushEndpoint;
     }
 
     public PushConfigArgs(
@@ -63,9 +64,9 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PushConfigArgs() {
-        this.attributes = Output.empty();
-        this.oidcToken = Output.empty();
-        this.pushEndpoint = Output.empty();
+        this.attributes = Codegen.empty();
+        this.oidcToken = Codegen.empty();
+        this.pushEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
@@ -105,7 +106,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
-            this.oidcToken = Output.ofNullable(oidcToken);
+            this.oidcToken = Codegen.ofNullable(oidcToken);
             return this;
         }
         public Builder pushEndpoint(@Nullable Output<String> pushEndpoint) {
@@ -113,7 +114,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pushEndpoint(@Nullable String pushEndpoint) {
-            this.pushEndpoint = Output.ofNullable(pushEndpoint);
+            this.pushEndpoint = Codegen.ofNullable(pushEndpoint);
             return this;
         }        public PushConfigArgs build() {
             return new PushConfigArgs(attributes, oidcToken, pushEndpoint);

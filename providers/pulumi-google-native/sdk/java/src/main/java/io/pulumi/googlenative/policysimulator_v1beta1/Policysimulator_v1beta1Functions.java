@@ -20,30 +20,30 @@ public final class Policysimulator_v1beta1Functions {
      * Gets the specified Replay. Each `Replay` is available for at least 7 days.
      * 
      */
-    public static CompletableFuture<GetFolderReplayResult> getFolderReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetFolderReplayArgs args) {
-        return getFolderReplay(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderReplayResult> getFolderReplay(GetFolderReplayArgs args) {
+        return getFolderReplay(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderReplayResult> getFolderReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetFolderReplayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderReplayResult> getFolderReplay(GetFolderReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getFolderReplay", TypeShape.of(GetFolderReplayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified Replay. Each `Replay` is available for at least 7 days.
      * 
      */
-    public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetOrganizationReplayArgs args) {
-        return getOrganizationReplay(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(GetOrganizationReplayArgs args) {
+        return getOrganizationReplay(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetOrganizationReplayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationReplayResult> getOrganizationReplay(GetOrganizationReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getOrganizationReplay", TypeShape.of(GetOrganizationReplayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified Replay. Each `Replay` is available for at least 7 days.
      * 
      */
-    public static CompletableFuture<GetReplayResult> getReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetReplayArgs args) {
-        return getReplay(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplayResult> getReplay(GetReplayArgs args) {
+        return getReplay(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplayResult> getReplay(io.pulumi.googlenative.policysimulator_v1beta1.inputs.GetReplayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplayResult> getReplay(GetReplayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getReplay", TypeShape.of(GetReplayResult.class), args, Utilities.withVersion(options));
     }
 }

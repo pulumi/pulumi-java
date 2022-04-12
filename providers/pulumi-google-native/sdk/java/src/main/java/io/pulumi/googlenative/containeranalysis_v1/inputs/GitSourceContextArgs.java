@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public GitSourceContextArgs(
@@ -48,8 +49,8 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GitSourceContextArgs() {
-        this.revisionId = Output.empty();
-        this.url = Output.empty();
+        this.revisionId = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -87,7 +88,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public GitSourceContextArgs build() {
             return new GitSourceContextArgs(revisionId, url);

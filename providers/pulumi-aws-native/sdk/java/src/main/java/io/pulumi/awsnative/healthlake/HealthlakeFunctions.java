@@ -16,10 +16,10 @@ public final class HealthlakeFunctions {
      * HealthLake FHIR Datastore
      * 
      */
-    public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(io.pulumi.awsnative.healthlake.inputs.GetFHIRDatastoreArgs args) {
-        return getFHIRDatastore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(GetFHIRDatastoreArgs args) {
+        return getFHIRDatastore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(io.pulumi.awsnative.healthlake.inputs.GetFHIRDatastoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFHIRDatastoreResult> getFHIRDatastore(GetFHIRDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:healthlake:getFHIRDatastore", TypeShape.of(GetFHIRDatastoreResult.class), args, Utilities.withVersion(options));
     }
 }

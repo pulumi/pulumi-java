@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAutoclassArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketBillingArgs;
@@ -39,7 +40,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BucketAccessControlArgs>> acl;
 
     public Output<List<BucketAccessControlArgs>> getAcl() {
-        return this.acl == null ? Output.empty() : this.acl;
+        return this.acl == null ? Codegen.empty() : this.acl;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketAutoclassArgs> autoclass;
 
     public Output<BucketAutoclassArgs> getAutoclass() {
-        return this.autoclass == null ? Output.empty() : this.autoclass;
+        return this.autoclass == null ? Codegen.empty() : this.autoclass;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketBillingArgs> billing;
 
     public Output<BucketBillingArgs> getBilling() {
-        return this.billing == null ? Output.empty() : this.billing;
+        return this.billing == null ? Codegen.empty() : this.billing;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BucketCorsItemArgs>> cors;
 
     public Output<List<BucketCorsItemArgs>> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
     public Output<BucketCustomPlacementConfigArgs> getCustomPlacementConfig() {
-        return this.customPlacementConfig == null ? Output.empty() : this.customPlacementConfig;
+        return this.customPlacementConfig == null ? Codegen.empty() : this.customPlacementConfig;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultEventBasedHold;
 
     public Output<Boolean> getDefaultEventBasedHold() {
-        return this.defaultEventBasedHold == null ? Output.empty() : this.defaultEventBasedHold;
+        return this.defaultEventBasedHold == null ? Codegen.empty() : this.defaultEventBasedHold;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
     public Output<List<ObjectAccessControlArgs>> getDefaultObjectAcl() {
-        return this.defaultObjectAcl == null ? Output.empty() : this.defaultObjectAcl;
+        return this.defaultObjectAcl == null ? Codegen.empty() : this.defaultObjectAcl;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketEncryptionArgs> encryption;
 
     public Output<BucketEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
 
     public Output<BucketIamConfigurationArgs> getIamConfiguration() {
-        return this.iamConfiguration == null ? Output.empty() : this.iamConfiguration;
+        return this.iamConfiguration == null ? Codegen.empty() : this.iamConfiguration;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketLifecycleArgs> lifecycle;
 
     public Output<BucketLifecycleArgs> getLifecycle() {
-        return this.lifecycle == null ? Output.empty() : this.lifecycle;
+        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> locationType;
 
     public Output<String> getLocationType() {
-        return this.locationType == null ? Output.empty() : this.locationType;
+        return this.locationType == null ? Codegen.empty() : this.locationType;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketLoggingArgs> logging;
 
     public Output<BucketLoggingArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metageneration;
 
     public Output<String> getMetageneration() {
-        return this.metageneration == null ? Output.empty() : this.metageneration;
+        return this.metageneration == null ? Codegen.empty() : this.metageneration;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -248,28 +249,28 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketOwnerArgs> owner;
 
     public Output<BucketOwnerArgs> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
     public Output<String> getPredefinedAcl() {
-        return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
+        return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
     }
 
     @Import(name="predefinedDefaultObjectAcl")
       private final @Nullable Output<String> predefinedDefaultObjectAcl;
 
     public Output<String> getPredefinedDefaultObjectAcl() {
-        return this.predefinedDefaultObjectAcl == null ? Output.empty() : this.predefinedDefaultObjectAcl;
+        return this.predefinedDefaultObjectAcl == null ? Codegen.empty() : this.predefinedDefaultObjectAcl;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -280,21 +281,21 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
-        return this.projectNumber == null ? Output.empty() : this.projectNumber;
+        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     @Import(name="projection")
       private final @Nullable Output<String> projection;
 
     public Output<String> getProjection() {
-        return this.projection == null ? Output.empty() : this.projection;
+        return this.projection == null ? Codegen.empty() : this.projection;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
-        return this.provisionalUserProject == null ? Output.empty() : this.provisionalUserProject;
+        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
     /**
@@ -305,7 +306,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
     public Output<BucketRetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -316,7 +317,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rpo;
 
     public Output<String> getRpo() {
-        return this.rpo == null ? Output.empty() : this.rpo;
+        return this.rpo == null ? Codegen.empty() : this.rpo;
     }
 
     /**
@@ -327,7 +328,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> satisfiesPZS;
 
     public Output<Boolean> getSatisfiesPZS() {
-        return this.satisfiesPZS == null ? Output.empty() : this.satisfiesPZS;
+        return this.satisfiesPZS == null ? Codegen.empty() : this.satisfiesPZS;
     }
 
     /**
@@ -338,7 +339,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -349,7 +350,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     /**
@@ -360,7 +361,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {
-        return this.timeCreated == null ? Output.empty() : this.timeCreated;
+        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 
     /**
@@ -371,14 +372,14 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
-        return this.updated == null ? Output.empty() : this.updated;
+        return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {
-        return this.userProject == null ? Output.empty() : this.userProject;
+        return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 
     /**
@@ -389,7 +390,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketVersioningArgs> versioning;
 
     public Output<BucketVersioningArgs> getVersioning() {
-        return this.versioning == null ? Output.empty() : this.versioning;
+        return this.versioning == null ? Codegen.empty() : this.versioning;
     }
 
     /**
@@ -400,7 +401,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketWebsiteArgs> website;
 
     public Output<BucketWebsiteArgs> getWebsite() {
-        return this.website == null ? Output.empty() : this.website;
+        return this.website == null ? Codegen.empty() : this.website;
     }
 
     public BucketArgs(
@@ -479,42 +480,42 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.acl = Output.empty();
-        this.autoclass = Output.empty();
-        this.billing = Output.empty();
-        this.cors = Output.empty();
-        this.customPlacementConfig = Output.empty();
-        this.defaultEventBasedHold = Output.empty();
-        this.defaultObjectAcl = Output.empty();
-        this.encryption = Output.empty();
-        this.etag = Output.empty();
-        this.iamConfiguration = Output.empty();
-        this.id = Output.empty();
-        this.kind = Output.empty();
-        this.labels = Output.empty();
-        this.lifecycle = Output.empty();
-        this.location = Output.empty();
-        this.locationType = Output.empty();
-        this.logging = Output.empty();
-        this.metageneration = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.predefinedAcl = Output.empty();
-        this.predefinedDefaultObjectAcl = Output.empty();
-        this.project = Output.empty();
-        this.projectNumber = Output.empty();
-        this.projection = Output.empty();
-        this.provisionalUserProject = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.rpo = Output.empty();
-        this.satisfiesPZS = Output.empty();
-        this.selfLink = Output.empty();
-        this.storageClass = Output.empty();
-        this.timeCreated = Output.empty();
-        this.updated = Output.empty();
-        this.userProject = Output.empty();
-        this.versioning = Output.empty();
-        this.website = Output.empty();
+        this.acl = Codegen.empty();
+        this.autoclass = Codegen.empty();
+        this.billing = Codegen.empty();
+        this.cors = Codegen.empty();
+        this.customPlacementConfig = Codegen.empty();
+        this.defaultEventBasedHold = Codegen.empty();
+        this.defaultObjectAcl = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.iamConfiguration = Codegen.empty();
+        this.id = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lifecycle = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locationType = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.metageneration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.predefinedAcl = Codegen.empty();
+        this.predefinedDefaultObjectAcl = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectNumber = Codegen.empty();
+        this.projection = Codegen.empty();
+        this.provisionalUserProject = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.rpo = Codegen.empty();
+        this.satisfiesPZS = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.timeCreated = Codegen.empty();
+        this.updated = Codegen.empty();
+        this.userProject = Codegen.empty();
+        this.versioning = Codegen.empty();
+        this.website = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -612,7 +613,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acl(@Nullable List<BucketAccessControlArgs> acl) {
-            this.acl = Output.ofNullable(acl);
+            this.acl = Codegen.ofNullable(acl);
             return this;
         }
         public Builder acl(BucketAccessControlArgs... acl) {
@@ -623,7 +624,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoclass(@Nullable BucketAutoclassArgs autoclass) {
-            this.autoclass = Output.ofNullable(autoclass);
+            this.autoclass = Codegen.ofNullable(autoclass);
             return this;
         }
         public Builder billing(@Nullable Output<BucketBillingArgs> billing) {
@@ -631,7 +632,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billing(@Nullable BucketBillingArgs billing) {
-            this.billing = Output.ofNullable(billing);
+            this.billing = Codegen.ofNullable(billing);
             return this;
         }
         public Builder cors(@Nullable Output<List<BucketCorsItemArgs>> cors) {
@@ -639,7 +640,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cors(@Nullable List<BucketCorsItemArgs> cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder cors(BucketCorsItemArgs... cors) {
@@ -650,7 +651,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customPlacementConfig(@Nullable BucketCustomPlacementConfigArgs customPlacementConfig) {
-            this.customPlacementConfig = Output.ofNullable(customPlacementConfig);
+            this.customPlacementConfig = Codegen.ofNullable(customPlacementConfig);
             return this;
         }
         public Builder defaultEventBasedHold(@Nullable Output<Boolean> defaultEventBasedHold) {
@@ -658,7 +659,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
-            this.defaultEventBasedHold = Output.ofNullable(defaultEventBasedHold);
+            this.defaultEventBasedHold = Codegen.ofNullable(defaultEventBasedHold);
             return this;
         }
         public Builder defaultObjectAcl(@Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl) {
@@ -666,7 +667,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultObjectAcl(@Nullable List<ObjectAccessControlArgs> defaultObjectAcl) {
-            this.defaultObjectAcl = Output.ofNullable(defaultObjectAcl);
+            this.defaultObjectAcl = Codegen.ofNullable(defaultObjectAcl);
             return this;
         }
         public Builder defaultObjectAcl(ObjectAccessControlArgs... defaultObjectAcl) {
@@ -677,7 +678,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable BucketEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -685,7 +686,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder iamConfiguration(@Nullable Output<BucketIamConfigurationArgs> iamConfiguration) {
@@ -693,7 +694,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamConfiguration(@Nullable BucketIamConfigurationArgs iamConfiguration) {
-            this.iamConfiguration = Output.ofNullable(iamConfiguration);
+            this.iamConfiguration = Codegen.ofNullable(iamConfiguration);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -701,7 +702,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -709,7 +710,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -717,7 +718,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lifecycle(@Nullable Output<BucketLifecycleArgs> lifecycle) {
@@ -725,7 +726,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycle(@Nullable BucketLifecycleArgs lifecycle) {
-            this.lifecycle = Output.ofNullable(lifecycle);
+            this.lifecycle = Codegen.ofNullable(lifecycle);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -733,7 +734,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locationType(@Nullable Output<String> locationType) {
@@ -741,7 +742,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationType(@Nullable String locationType) {
-            this.locationType = Output.ofNullable(locationType);
+            this.locationType = Codegen.ofNullable(locationType);
             return this;
         }
         public Builder logging(@Nullable Output<BucketLoggingArgs> logging) {
@@ -749,7 +750,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logging(@Nullable BucketLoggingArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder metageneration(@Nullable Output<String> metageneration) {
@@ -757,7 +758,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metageneration(@Nullable String metageneration) {
-            this.metageneration = Output.ofNullable(metageneration);
+            this.metageneration = Codegen.ofNullable(metageneration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -765,7 +766,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<BucketOwnerArgs> owner) {
@@ -773,7 +774,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable BucketOwnerArgs owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
@@ -781,7 +782,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Output.ofNullable(predefinedAcl);
+            this.predefinedAcl = Codegen.ofNullable(predefinedAcl);
             return this;
         }
         public Builder predefinedDefaultObjectAcl(@Nullable Output<String> predefinedDefaultObjectAcl) {
@@ -789,7 +790,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predefinedDefaultObjectAcl(@Nullable String predefinedDefaultObjectAcl) {
-            this.predefinedDefaultObjectAcl = Output.ofNullable(predefinedDefaultObjectAcl);
+            this.predefinedDefaultObjectAcl = Codegen.ofNullable(predefinedDefaultObjectAcl);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -797,7 +798,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
@@ -805,7 +806,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Output.ofNullable(projectNumber);
+            this.projectNumber = Codegen.ofNullable(projectNumber);
             return this;
         }
         public Builder projection(@Nullable Output<String> projection) {
@@ -813,7 +814,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projection(@Nullable String projection) {
-            this.projection = Output.ofNullable(projection);
+            this.projection = Codegen.ofNullable(projection);
             return this;
         }
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
@@ -821,7 +822,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
+            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyArgs> retentionPolicy) {
@@ -829,7 +830,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable BucketRetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder rpo(@Nullable Output<String> rpo) {
@@ -837,7 +838,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rpo(@Nullable String rpo) {
-            this.rpo = Output.ofNullable(rpo);
+            this.rpo = Codegen.ofNullable(rpo);
             return this;
         }
         public Builder satisfiesPZS(@Nullable Output<Boolean> satisfiesPZS) {
@@ -845,7 +846,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder satisfiesPZS(@Nullable Boolean satisfiesPZS) {
-            this.satisfiesPZS = Output.ofNullable(satisfiesPZS);
+            this.satisfiesPZS = Codegen.ofNullable(satisfiesPZS);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -853,7 +854,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -861,7 +862,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
@@ -869,7 +870,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Output.ofNullable(timeCreated);
+            this.timeCreated = Codegen.ofNullable(timeCreated);
             return this;
         }
         public Builder updated(@Nullable Output<String> updated) {
@@ -877,7 +878,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updated(@Nullable String updated) {
-            this.updated = Output.ofNullable(updated);
+            this.updated = Codegen.ofNullable(updated);
             return this;
         }
         public Builder userProject(@Nullable Output<String> userProject) {
@@ -885,7 +886,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Output.ofNullable(userProject);
+            this.userProject = Codegen.ofNullable(userProject);
             return this;
         }
         public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
@@ -893,7 +894,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versioning(@Nullable BucketVersioningArgs versioning) {
-            this.versioning = Output.ofNullable(versioning);
+            this.versioning = Codegen.ofNullable(versioning);
             return this;
         }
         public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
@@ -901,7 +902,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder website(@Nullable BucketWebsiteArgs website) {
-            this.website = Output.ofNullable(website);
+            this.website = Codegen.ofNullable(website);
             return this;
         }        public BucketArgs build() {
             return new BucketArgs(acl, autoclass, billing, cors, customPlacementConfig, defaultEventBasedHold, defaultObjectAcl, encryption, etag, iamConfiguration, id, kind, labels, lifecycle, location, locationType, logging, metageneration, name, owner, predefinedAcl, predefinedDefaultObjectAcl, project, projectNumber, projection, provisionalUserProject, retentionPolicy, rpo, satisfiesPZS, selfLink, storageClass, timeCreated, updated, userProject, versioning, website);

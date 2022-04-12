@@ -17,10 +17,10 @@ public final class HardwaresecuritymodulesFunctions {
      * API Version: 2018-10-31-preview.
      * 
      */
-    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(io.pulumi.azurenative.hardwaresecuritymodules.inputs.GetDedicatedHsmArgs args) {
-        return getDedicatedHsm(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args) {
+        return getDedicatedHsm(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(io.pulumi.azurenative.hardwaresecuritymodules.inputs.GetDedicatedHsmArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDedicatedHsmResult> getDedicatedHsm(GetDedicatedHsmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hardwaresecuritymodules:getDedicatedHsm", TypeShape.of(GetDedicatedHsmResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
       private final @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
 
     public Output<ApigatewayApiConfigFileArgs> getFileDescriptorSet() {
-        return this.fileDescriptorSet == null ? Output.empty() : this.fileDescriptorSet;
+        return this.fileDescriptorSet == null ? Codegen.empty() : this.fileDescriptorSet;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
       private final @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
 
     public Output<List<ApigatewayApiConfigFileArgs>> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public ApigatewayApiConfigGrpcServiceDefinitionArgs(
@@ -49,8 +50,8 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     }
 
     private ApigatewayApiConfigGrpcServiceDefinitionArgs() {
-        this.fileDescriptorSet = Output.empty();
-        this.source = Output.empty();
+        this.fileDescriptorSet = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
             return this;
         }
         public Builder fileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
-            this.fileDescriptorSet = Output.ofNullable(fileDescriptorSet);
+            this.fileDescriptorSet = Codegen.ofNullable(fileDescriptorSet);
             return this;
         }
         public Builder source(@Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
@@ -88,7 +89,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
             return this;
         }
         public Builder source(@Nullable List<ApigatewayApiConfigFileArgs> source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder source(ApigatewayApiConfigFileArgs... source) {

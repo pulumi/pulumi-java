@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1beta1.enums.RegistrationContactNoticesItem;
 import io.pulumi.googlenative.domains_v1beta1.enums.RegistrationDomainNoticesItem;
 import io.pulumi.googlenative.domains_v1beta1.inputs.ContactSettingsArgs;
@@ -31,7 +32,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
     public Output<List<RegistrationContactNoticesItem>> getContactNotices() {
-        return this.contactNotices == null ? Output.empty() : this.contactNotices;
+        return this.contactNotices == null ? Codegen.empty() : this.contactNotices;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
     public Output<DnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
+        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
     public Output<List<RegistrationDomainNoticesItem>> getDomainNotices() {
-        return this.domainNotices == null ? Output.empty() : this.domainNotices;
+        return this.domainNotices == null ? Codegen.empty() : this.domainNotices;
     }
 
     /**
@@ -86,14 +87,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -104,14 +105,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagementSettingsArgs> managementSettings;
 
     public Output<ManagementSettingsArgs> getManagementSettings() {
-        return this.managementSettings == null ? Output.empty() : this.managementSettings;
+        return this.managementSettings == null ? Codegen.empty() : this.managementSettings;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> validateOnly;
 
     public Output<Boolean> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     /**
@@ -162,17 +163,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistrationArgs() {
-        this.contactNotices = Output.empty();
-        this.contactSettings = Output.empty();
-        this.dnsSettings = Output.empty();
-        this.domainName = Output.empty();
-        this.domainNotices = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.managementSettings = Output.empty();
-        this.project = Output.empty();
-        this.validateOnly = Output.empty();
-        this.yearlyPrice = Output.empty();
+        this.contactNotices = Codegen.empty();
+        this.contactSettings = Codegen.empty();
+        this.dnsSettings = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.domainNotices = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managementSettings = Codegen.empty();
+        this.project = Codegen.empty();
+        this.validateOnly = Codegen.empty();
+        this.yearlyPrice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
-            this.contactNotices = Output.ofNullable(contactNotices);
+            this.contactNotices = Codegen.ofNullable(contactNotices);
             return this;
         }
         public Builder contactNotices(RegistrationContactNoticesItem... contactNotices) {
@@ -239,7 +240,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Output.ofNullable(dnsSettings);
+            this.dnsSettings = Codegen.ofNullable(dnsSettings);
             return this;
         }
         public Builder domainName(Output<String> domainName) {
@@ -255,7 +256,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
-            this.domainNotices = Output.ofNullable(domainNotices);
+            this.domainNotices = Codegen.ofNullable(domainNotices);
             return this;
         }
         public Builder domainNotices(RegistrationDomainNoticesItem... domainNotices) {
@@ -266,7 +267,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -274,7 +275,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managementSettings(@Nullable Output<ManagementSettingsArgs> managementSettings) {
@@ -282,7 +283,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managementSettings(@Nullable ManagementSettingsArgs managementSettings) {
-            this.managementSettings = Output.ofNullable(managementSettings);
+            this.managementSettings = Codegen.ofNullable(managementSettings);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -290,7 +291,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
@@ -298,7 +299,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }
         public Builder yearlyPrice(Output<MoneyArgs> yearlyPrice) {

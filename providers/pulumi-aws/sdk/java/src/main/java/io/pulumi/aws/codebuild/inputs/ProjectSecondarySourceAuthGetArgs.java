@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ProjectSecondarySourceAuthGetArgs extends io.pulumi.resources
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ProjectSecondarySourceAuthGetArgs extends io.pulumi.resources
     }
 
     private ProjectSecondarySourceAuthGetArgs() {
-        this.resource = Output.empty();
-        this.type = Output.empty();
+        this.resource = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ProjectSecondarySourceAuthGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder type(Output<String> type) {

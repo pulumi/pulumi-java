@@ -6,6 +6,7 @@ package io.pulumi.gcp.identityplatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantDefaultSupportedIdpConfigState;
@@ -184,7 +185,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public TenantDefaultSupportedIdpConfig(String name, TenantDefaultSupportedIdpConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig", name, args == null ? TenantDefaultSupportedIdpConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig", name, args == null ? TenantDefaultSupportedIdpConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TenantDefaultSupportedIdpConfig(String name, Output<String> id, @Nullable TenantDefaultSupportedIdpConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

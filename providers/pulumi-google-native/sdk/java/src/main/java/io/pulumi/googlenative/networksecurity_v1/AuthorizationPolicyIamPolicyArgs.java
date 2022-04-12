@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleIamV1AuditConfigArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleIamV1BindingArgs;
 import java.lang.Integer;
@@ -26,7 +27,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
     public Output<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
+        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
     @Import(name="authorizationPolicyId", required=true)
@@ -44,7 +45,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
 
     public Output<List<GoogleIamV1BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -55,21 +56,21 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<String> updateMask;
 
     public Output<String> getUpdateMask() {
-        return this.updateMask == null ? Output.empty() : this.updateMask;
+        return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public AuthorizationPolicyIamPolicyArgs(
@@ -114,14 +115,14 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
     }
 
     private AuthorizationPolicyIamPolicyArgs() {
-        this.auditConfigs = Output.empty();
-        this.authorizationPolicyId = Output.empty();
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.updateMask = Output.empty();
-        this.version = Output.empty();
+        this.auditConfigs = Codegen.empty();
+        this.authorizationPolicyId = Codegen.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.updateMask = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder auditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Output.ofNullable(auditConfigs);
+            this.auditConfigs = Codegen.ofNullable(auditConfigs);
             return this;
         }
         public Builder auditConfigs(GoogleIamV1AuditConfigArgs... auditConfigs) {
@@ -182,7 +183,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder bindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(GoogleIamV1BindingArgs... bindings) {
@@ -193,7 +194,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -201,7 +202,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -209,7 +210,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder updateMask(@Nullable Output<String> updateMask) {
@@ -217,7 +218,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Output.ofNullable(updateMask);
+            this.updateMask = Codegen.ofNullable(updateMask);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -225,7 +226,7 @@ public final class AuthorizationPolicyIamPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public AuthorizationPolicyIamPolicyArgs build() {
             return new AuthorizationPolicyIamPolicyArgs(auditConfigs, authorizationPolicyId, bindings, etag, location, project, updateMask, version);

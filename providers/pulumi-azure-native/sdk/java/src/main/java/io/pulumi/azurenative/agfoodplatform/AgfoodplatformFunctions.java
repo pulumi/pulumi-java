@@ -19,10 +19,10 @@ public final class AgfoodplatformFunctions {
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.agfoodplatform.inputs.GetExtensionArgs args) {
-        return getExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+        return getExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExtensionResult> getExtension(io.pulumi.azurenative.agfoodplatform.inputs.GetExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AgfoodplatformFunctions {
      * API Version: 2020-05-12-preview.
      * 
      */
-    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(io.pulumi.azurenative.agfoodplatform.inputs.GetFarmBeatsModelArgs args) {
-        return getFarmBeatsModel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args) {
+        return getFarmBeatsModel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(io.pulumi.azurenative.agfoodplatform.inputs.GetFarmBeatsModelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFarmBeatsModelResult> getFarmBeatsModel(GetFarmBeatsModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getFarmBeatsModel", TypeShape.of(GetFarmBeatsModelResult.class), args, Utilities.withVersion(options));
     }
 }

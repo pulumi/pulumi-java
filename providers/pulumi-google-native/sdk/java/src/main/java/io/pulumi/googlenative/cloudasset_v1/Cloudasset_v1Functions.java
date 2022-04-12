@@ -18,20 +18,20 @@ public final class Cloudasset_v1Functions {
      * Gets details about an asset feed.
      * 
      */
-    public static CompletableFuture<GetFeedResult> getFeed(io.pulumi.googlenative.cloudasset_v1.inputs.GetFeedArgs args) {
-        return getFeed(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeedResult> getFeed(GetFeedArgs args) {
+        return getFeed(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeedResult> getFeed(io.pulumi.googlenative.cloudasset_v1.inputs.GetFeedArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeedResult> getFeed(GetFeedArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getFeed", TypeShape.of(GetFeedResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details about a saved query.
      * 
      */
-    public static CompletableFuture<GetSavedQueryResult> getSavedQuery(io.pulumi.googlenative.cloudasset_v1.inputs.GetSavedQueryArgs args) {
-        return getSavedQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSavedQueryResult> getSavedQuery(GetSavedQueryArgs args) {
+        return getSavedQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSavedQueryResult> getSavedQuery(io.pulumi.googlenative.cloudasset_v1.inputs.GetSavedQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSavedQueryResult> getSavedQuery(GetSavedQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args, Utilities.withVersion(options));
     }
 }

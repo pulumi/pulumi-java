@@ -46,160 +46,160 @@ public final class IotFunctions {
      * Configures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.
      * 
      */
-    public static CompletableFuture<GetAccountAuditConfigurationResult> getAccountAuditConfiguration(io.pulumi.awsnative.iot.inputs.GetAccountAuditConfigurationArgs args) {
-        return getAccountAuditConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountAuditConfigurationResult> getAccountAuditConfiguration(GetAccountAuditConfigurationArgs args) {
+        return getAccountAuditConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountAuditConfigurationResult> getAccountAuditConfiguration(io.pulumi.awsnative.iot.inputs.GetAccountAuditConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountAuditConfigurationResult> getAccountAuditConfiguration(GetAccountAuditConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getAccountAuditConfiguration", TypeShape.of(GetAccountAuditConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates an authorizer.
      * 
      */
-    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(io.pulumi.awsnative.iot.inputs.GetAuthorizerArgs args) {
-        return getAuthorizer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args) {
+        return getAuthorizer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(io.pulumi.awsnative.iot.inputs.GetAuthorizerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use the AWS::IoT::Certificate resource to declare an AWS IoT X.509 certificate.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.awsnative.iot.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.awsnative.iot.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A custom metric published by your devices to Device Defender.
      * 
      */
-    public static CompletableFuture<GetCustomMetricResult> getCustomMetric(io.pulumi.awsnative.iot.inputs.GetCustomMetricArgs args) {
-        return getCustomMetric(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomMetricResult> getCustomMetric(GetCustomMetricArgs args) {
+        return getCustomMetric(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomMetricResult> getCustomMetric(io.pulumi.awsnative.iot.inputs.GetCustomMetricArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomMetricResult> getCustomMetric(GetCustomMetricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getCustomMetric", TypeShape.of(GetCustomMetricResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A dimension can be used to limit the scope of a metric used in a security profile for AWS IoT Device Defender.
      * 
      */
-    public static CompletableFuture<GetDimensionResult> getDimension(io.pulumi.awsnative.iot.inputs.GetDimensionArgs args) {
-        return getDimension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDimensionResult> getDimension(GetDimensionArgs args) {
+        return getDimension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDimensionResult> getDimension(io.pulumi.awsnative.iot.inputs.GetDimensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDimensionResult> getDimension(GetDimensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getDimension", TypeShape.of(GetDimensionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage a Domain Configuration
      * 
      */
-    public static CompletableFuture<GetDomainConfigurationResult> getDomainConfiguration(io.pulumi.awsnative.iot.inputs.GetDomainConfigurationArgs args) {
-        return getDomainConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainConfigurationResult> getDomainConfiguration(GetDomainConfigurationArgs args) {
+        return getDomainConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainConfigurationResult> getDomainConfiguration(io.pulumi.awsnative.iot.inputs.GetDomainConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainConfigurationResult> getDomainConfiguration(GetDomainConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getDomainConfiguration", TypeShape.of(GetDomainConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An aggregated metric of certain devices in your fleet
      * 
      */
-    public static CompletableFuture<GetFleetMetricResult> getFleetMetric(io.pulumi.awsnative.iot.inputs.GetFleetMetricArgs args) {
-        return getFleetMetric(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFleetMetricResult> getFleetMetric(GetFleetMetricArgs args) {
+        return getFleetMetric(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFleetMetricResult> getFleetMetric(io.pulumi.awsnative.iot.inputs.GetFleetMetricArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFleetMetricResult> getFleetMetric(GetFleetMetricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getFleetMetric", TypeShape.of(GetFleetMetricResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Job templates enable you to preconfigure jobs so that you can deploy them to multiple sets of target devices.
      * 
      */
-    public static CompletableFuture<GetJobTemplateResult> getJobTemplate(io.pulumi.awsnative.iot.inputs.GetJobTemplateArgs args) {
-        return getJobTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobTemplateResult> getJobTemplate(GetJobTemplateArgs args) {
+        return getJobTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobTemplateResult> getJobTemplate(io.pulumi.awsnative.iot.inputs.GetJobTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobTemplateResult> getJobTemplate(GetJobTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getJobTemplate", TypeShape.of(GetJobTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
      * 
      */
-    public static CompletableFuture<GetLoggingResult> getLogging(io.pulumi.awsnative.iot.inputs.GetLoggingArgs args) {
-        return getLogging(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoggingResult> getLogging(GetLoggingArgs args) {
+        return getLogging(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoggingResult> getLogging(io.pulumi.awsnative.iot.inputs.GetLoggingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoggingResult> getLogging(GetLoggingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getLogging", TypeShape.of(GetLoggingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
      * 
      */
-    public static CompletableFuture<GetMitigationActionResult> getMitigationAction(io.pulumi.awsnative.iot.inputs.GetMitigationActionArgs args) {
-        return getMitigationAction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMitigationActionResult> getMitigationAction(GetMitigationActionArgs args) {
+        return getMitigationAction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMitigationActionResult> getMitigationAction(io.pulumi.awsnative.iot.inputs.GetMitigationActionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMitigationActionResult> getMitigationAction(GetMitigationActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getMitigationAction", TypeShape.of(GetMitigationActionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates a fleet provisioning template.
      * 
      */
-    public static CompletableFuture<GetProvisioningTemplateResult> getProvisioningTemplate(io.pulumi.awsnative.iot.inputs.GetProvisioningTemplateArgs args) {
-        return getProvisioningTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProvisioningTemplateResult> getProvisioningTemplate(GetProvisioningTemplateArgs args) {
+        return getProvisioningTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProvisioningTemplateResult> getProvisioningTemplate(io.pulumi.awsnative.iot.inputs.GetProvisioningTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProvisioningTemplateResult> getProvisioningTemplate(GetProvisioningTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getProvisioningTemplate", TypeShape.of(GetProvisioningTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource-specific logging allows you to specify a logging level for a specific thing group.
      * 
      */
-    public static CompletableFuture<GetResourceSpecificLoggingResult> getResourceSpecificLogging(io.pulumi.awsnative.iot.inputs.GetResourceSpecificLoggingArgs args) {
-        return getResourceSpecificLogging(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceSpecificLoggingResult> getResourceSpecificLogging(GetResourceSpecificLoggingArgs args) {
+        return getResourceSpecificLogging(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceSpecificLoggingResult> getResourceSpecificLogging(io.pulumi.awsnative.iot.inputs.GetResourceSpecificLoggingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceSpecificLoggingResult> getResourceSpecificLogging(GetResourceSpecificLoggingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getResourceSpecificLogging", TypeShape.of(GetResourceSpecificLoggingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Scheduled audits can be used to specify the checks you want to perform during an audit and how often the audit should be run.
      * 
      */
-    public static CompletableFuture<GetScheduledAuditResult> getScheduledAudit(io.pulumi.awsnative.iot.inputs.GetScheduledAuditArgs args) {
-        return getScheduledAudit(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScheduledAuditResult> getScheduledAudit(GetScheduledAuditArgs args) {
+        return getScheduledAudit(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScheduledAuditResult> getScheduledAudit(io.pulumi.awsnative.iot.inputs.GetScheduledAuditArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduledAuditResult> getScheduledAudit(GetScheduledAuditArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getScheduledAudit", TypeShape.of(GetScheduledAuditResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A security profile defines a set of expected behaviors for devices in your account.
      * 
      */
-    public static CompletableFuture<GetSecurityProfileResult> getSecurityProfile(io.pulumi.awsnative.iot.inputs.GetSecurityProfileArgs args) {
-        return getSecurityProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityProfileResult> getSecurityProfile(GetSecurityProfileArgs args) {
+        return getSecurityProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityProfileResult> getSecurityProfile(io.pulumi.awsnative.iot.inputs.GetSecurityProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityProfileResult> getSecurityProfile(GetSecurityProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getSecurityProfile", TypeShape.of(GetSecurityProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IoT::TopicRule
      * 
      */
-    public static CompletableFuture<GetTopicRuleResult> getTopicRule(io.pulumi.awsnative.iot.inputs.GetTopicRuleArgs args) {
-        return getTopicRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicRuleResult> getTopicRule(GetTopicRuleArgs args) {
+        return getTopicRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicRuleResult> getTopicRule(io.pulumi.awsnative.iot.inputs.GetTopicRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicRuleResult> getTopicRule(GetTopicRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getTopicRule", TypeShape.of(GetTopicRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IoT::TopicRuleDestination
      * 
      */
-    public static CompletableFuture<GetTopicRuleDestinationResult> getTopicRuleDestination(io.pulumi.awsnative.iot.inputs.GetTopicRuleDestinationArgs args) {
-        return getTopicRuleDestination(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicRuleDestinationResult> getTopicRuleDestination(GetTopicRuleDestinationArgs args) {
+        return getTopicRuleDestination(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicRuleDestinationResult> getTopicRuleDestination(io.pulumi.awsnative.iot.inputs.GetTopicRuleDestinationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicRuleDestinationResult> getTopicRuleDestination(GetTopicRuleDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getTopicRuleDestination", TypeShape.of(GetTopicRuleDestinationResult.class), args, Utilities.withVersion(options));
     }
 }

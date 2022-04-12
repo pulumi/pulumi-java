@@ -8,6 +8,7 @@ import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -77,10 +78,10 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpacecraftLinkArgs() {
-        this.bandwidthMHz = Output.empty();
-        this.centerFrequencyMHz = Output.empty();
-        this.direction = Output.empty();
-        this.polarization = Output.empty();
+        this.bandwidthMHz = Codegen.empty();
+        this.centerFrequencyMHz = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.polarization = Codegen.empty();
     }
 
     public static Builder builder() {

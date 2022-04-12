@@ -18,10 +18,10 @@ public final class IapFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClientResult> getClient(io.pulumi.gcp.iap.inputs.GetClientArgs args) {
-        return getClient(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientResult> getClient(GetClientArgs args) {
+        return getClient(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientResult> getClient(io.pulumi.gcp.iap.inputs.GetClientArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientResult> getClient(GetClientArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iap/getClient:getClient", TypeShape.of(GetClientResult.class), args, Utilities.withVersion(options));
     }
 }

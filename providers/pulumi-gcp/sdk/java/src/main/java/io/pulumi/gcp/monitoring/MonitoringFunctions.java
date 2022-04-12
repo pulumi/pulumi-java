@@ -42,10 +42,10 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(io.pulumi.gcp.monitoring.inputs.GetAppEngineServiceArgs args) {
-        return getAppEngineService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args) {
+        return getAppEngineService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(io.pulumi.gcp.monitoring.inputs.GetAppEngineServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppEngineServiceResult> getAppEngineService(GetAppEngineServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getAppEngineService:getAppEngineService", TypeShape.of(GetAppEngineServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(io.pulumi.gcp.monitoring.inputs.GetClusterIstioServiceArgs args) {
-        return getClusterIstioService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args) {
+        return getClusterIstioService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(io.pulumi.gcp.monitoring.inputs.GetClusterIstioServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterIstioServiceResult> getClusterIstioService(GetClusterIstioServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getClusterIstioService:getClusterIstioService", TypeShape.of(GetClusterIstioServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(io.pulumi.gcp.monitoring.inputs.GetIstioCanonicalServiceArgs args) {
-        return getIstioCanonicalService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args) {
+        return getIstioCanonicalService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(io.pulumi.gcp.monitoring.inputs.GetIstioCanonicalServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIstioCanonicalServiceResult> getIstioCanonicalService(GetIstioCanonicalServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getIstioCanonicalService:getIstioCanonicalService", TypeShape.of(GetIstioCanonicalServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -114,10 +114,10 @@ public final class MonitoringFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(io.pulumi.gcp.monitoring.inputs.GetMeshIstioServiceArgs args) {
-        return getMeshIstioService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args) {
+        return getMeshIstioService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(io.pulumi.gcp.monitoring.inputs.GetMeshIstioServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMeshIstioServiceResult> getMeshIstioService(GetMeshIstioServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getMeshIstioService:getMeshIstioService", TypeShape.of(GetMeshIstioServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -137,12 +137,12 @@ public final class MonitoringFunctions {
      * 
      */
     public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel() {
-        return getNotificationChannel(io.pulumi.gcp.monitoring.inputs.GetNotificationChannelArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNotificationChannel(GetNotificationChannelArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.gcp.monitoring.inputs.GetNotificationChannelArgs args) {
-        return getNotificationChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+        return getNotificationChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.gcp.monitoring.inputs.GetNotificationChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getNotificationChannel:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -152,10 +152,10 @@ public final class MonitoringFunctions {
      * 
      */
     @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.gcp.monitoring.inputs.GetSecretVersionArgs args) {
-        return getSecretVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {
+        return getSecretVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(io.pulumi.gcp.monitoring.inputs.GetSecretVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -166,12 +166,12 @@ public final class MonitoringFunctions {
      * 
      */
     public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs() {
-        return getUptimeCheckIPs(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getUptimeCheckIPs(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(io.pulumi.resources.InvokeArgs args) {
-        return getUptimeCheckIPs(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args) {
+        return getUptimeCheckIPs(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUptimeCheckIPsResult> getUptimeCheckIPs(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getUptimeCheckIPs:getUptimeCheckIPs", TypeShape.of(GetUptimeCheckIPsResult.class), args, Utilities.withVersion(options));
     }
 }

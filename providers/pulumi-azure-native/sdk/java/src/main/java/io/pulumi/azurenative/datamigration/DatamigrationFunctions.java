@@ -29,10 +29,10 @@ public final class DatamigrationFunctions {
      * API Version: 2018-07-15-preview.
      * 
      */
-    public static CompletableFuture<GetFileResult> getFile(io.pulumi.azurenative.datamigration.inputs.GetFileArgs args) {
-        return getFile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileResult> getFile(GetFileArgs args) {
+        return getFile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileResult> getFile(io.pulumi.azurenative.datamigration.inputs.GetFileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileResult> getFile(GetFileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getFile", TypeShape.of(GetFileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class DatamigrationFunctions {
      * API Version: 2018-04-19.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.azurenative.datamigration.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.azurenative.datamigration.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class DatamigrationFunctions {
      * API Version: 2018-04-19.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.datamigration.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.datamigration.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class DatamigrationFunctions {
      * API Version: 2021-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(io.pulumi.azurenative.datamigration.inputs.GetSqlMigrationServiceArgs args) {
-        return getSqlMigrationService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(GetSqlMigrationServiceArgs args) {
+        return getSqlMigrationService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(io.pulumi.azurenative.datamigration.inputs.GetSqlMigrationServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlMigrationServiceResult> getSqlMigrationService(GetSqlMigrationServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getSqlMigrationService", TypeShape.of(GetSqlMigrationServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class DatamigrationFunctions {
      * API Version: 2018-04-19.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.azurenative.datamigration.inputs.GetTaskArgs args) {
-        return getTask(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
+        return getTask(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.azurenative.datamigration.inputs.GetTaskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class DatamigrationFunctions {
      * API Version: 2021-10-30-preview.
      * 
      */
-    public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(io.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceAuthKeysArgs args) {
-        return listSqlMigrationServiceAuthKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(ListSqlMigrationServiceAuthKeysArgs args) {
+        return listSqlMigrationServiceAuthKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(io.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceAuthKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> listSqlMigrationServiceAuthKeys(ListSqlMigrationServiceAuthKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceAuthKeys", TypeShape.of(ListSqlMigrationServiceAuthKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class DatamigrationFunctions {
      * API Version: 2021-10-30-preview.
      * 
      */
-    public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(io.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceMonitoringDataArgs args) {
-        return listSqlMigrationServiceMonitoringData(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(ListSqlMigrationServiceMonitoringDataArgs args) {
+        return listSqlMigrationServiceMonitoringData(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(io.pulumi.azurenative.datamigration.inputs.ListSqlMigrationServiceMonitoringDataArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> listSqlMigrationServiceMonitoringData(ListSqlMigrationServiceMonitoringDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceMonitoringData", TypeShape.of(ListSqlMigrationServiceMonitoringDataResult.class), args, Utilities.withVersion(options));
     }
 }

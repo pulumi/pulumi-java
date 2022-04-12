@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty.inputs;
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaCriterionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     }
 
     private FilterFindingCriteriaArgs() {
-        this.criterions = Output.empty();
+        this.criterions = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -18,20 +18,20 @@ public final class ForecastFunctions {
      * Resource Type Definition for AWS::Forecast::Dataset
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.awsnative.forecast.inputs.GetDatasetArgs args) {
-        return getDataset(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+        return getDataset(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.awsnative.forecast.inputs.GetDatasetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:forecast:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a dataset group that holds a collection of related datasets
      * 
      */
-    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(io.pulumi.awsnative.forecast.inputs.GetDatasetGroupArgs args) {
-        return getDatasetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args) {
+        return getDatasetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(io.pulumi.awsnative.forecast.inputs.GetDatasetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:forecast:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -28,12 +28,12 @@ public final class ElasticloadbalancingFunctions {
      */
     @Deprecated /* aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId */
     public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId() {
-        return getHostedZoneId(io.pulumi.aws.elasticloadbalancing.inputs.GetHostedZoneIdArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getHostedZoneId(GetHostedZoneIdArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(io.pulumi.aws.elasticloadbalancing.inputs.GetHostedZoneIdArgs args) {
-        return getHostedZoneId(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args) {
+        return getHostedZoneId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(io.pulumi.aws.elasticloadbalancing.inputs.GetHostedZoneIdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancing/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,10 +52,10 @@ public final class ElasticloadbalancingFunctions {
      * 
      */
     @Deprecated /* aws.elasticloadbalancing.getLoadBalancer has been deprecated in favor of aws.elb.getLoadBalancer */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.elasticloadbalancing.inputs.GetLoadBalancerArgs args) {
-        return getLoadBalancer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+        return getLoadBalancer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.elasticloadbalancing.inputs.GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancing/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -70,12 +70,12 @@ public final class ElasticloadbalancingFunctions {
      */
     @Deprecated /* aws.elasticloadbalancing.getServiceAccount has been deprecated in favor of aws.elb.getServiceAccount */
     public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
-        return getServiceAccount(io.pulumi.aws.elasticloadbalancing.inputs.GetServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.elasticloadbalancing.inputs.GetServiceAccountArgs args) {
-        return getServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+        return getServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.elasticloadbalancing.inputs.GetServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancing/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

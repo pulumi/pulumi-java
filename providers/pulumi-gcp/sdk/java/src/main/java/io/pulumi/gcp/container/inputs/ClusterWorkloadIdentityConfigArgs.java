@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
       private final @Nullable Output<String> workloadPool;
 
     public Output<String> getWorkloadPool() {
-        return this.workloadPool == null ? Output.empty() : this.workloadPool;
+        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 
     public ClusterWorkloadIdentityConfigArgs(@Nullable Output<String> workloadPool) {
@@ -30,7 +31,7 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
     }
 
     private ClusterWorkloadIdentityConfigArgs() {
-        this.workloadPool = Output.empty();
+        this.workloadPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Output.ofNullable(workloadPool);
+            this.workloadPool = Codegen.ofNullable(workloadPool);
             return this;
         }        public ClusterWorkloadIdentityConfigArgs build() {
             return new ClusterWorkloadIdentityConfigArgs(workloadPool);

@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
       private final @Nullable Output<String> onCreate;
 
     public Output<String> getOnCreate() {
-        return this.onCreate == null ? Output.empty() : this.onCreate;
+        return this.onCreate == null ? Codegen.empty() : this.onCreate;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
       private final @Nullable Output<String> onStart;
 
     public Output<String> getOnStart() {
-        return this.onStart == null ? Output.empty() : this.onStart;
+        return this.onStart == null ? Codegen.empty() : this.onStart;
     }
 
     public NotebookInstanceLifecycleConfigurationState(
@@ -70,10 +71,10 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
     }
 
     private NotebookInstanceLifecycleConfigurationState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.onCreate = Output.empty();
-        this.onStart = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onCreate = Codegen.empty();
+        this.onStart = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onCreate(@Nullable Output<String> onCreate) {
@@ -123,7 +124,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
             return this;
         }
         public Builder onCreate(@Nullable String onCreate) {
-            this.onCreate = Output.ofNullable(onCreate);
+            this.onCreate = Codegen.ofNullable(onCreate);
             return this;
         }
         public Builder onStart(@Nullable Output<String> onStart) {
@@ -131,7 +132,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
             return this;
         }
         public Builder onStart(@Nullable String onStart) {
-            this.onStart = Output.ofNullable(onStart);
+            this.onStart = Codegen.ofNullable(onStart);
             return this;
         }        public NotebookInstanceLifecycleConfigurationState build() {
             return new NotebookInstanceLifecycleConfigurationState(arn, name, onCreate, onStart);

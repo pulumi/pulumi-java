@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.authentication.k8s.io_v1beta1.TokenReviewArgs;
 import io.pulumi.kubernetes.authentication.k8s.io_v1beta1.outputs.TokenReviewSpec;
@@ -107,7 +108,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TokenReview(String name, TokenReviewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:authentication.k8s.io/v1beta1:TokenReview", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:authentication.k8s.io/v1beta1:TokenReview", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private TokenReview(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

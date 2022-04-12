@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
 
     public Output<List<BusinessIdentityArgs>> getBusinessIdentities() {
-        return this.businessIdentities == null ? Output.empty() : this.businessIdentities;
+        return this.businessIdentities == null ? Codegen.empty() : this.businessIdentities;
     }
 
     public B2BPartnerContentArgs(@Nullable Output<List<BusinessIdentityArgs>> businessIdentities) {
@@ -35,7 +36,7 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private B2BPartnerContentArgs() {
-        this.businessIdentities = Output.empty();
+        this.businessIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder businessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
-            this.businessIdentities = Output.ofNullable(businessIdentities);
+            this.businessIdentities = Codegen.ofNullable(businessIdentities);
             return this;
         }
         public Builder businessIdentities(BusinessIdentityArgs... businessIdentities) {

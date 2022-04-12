@@ -5,6 +5,7 @@ package io.pulumi.aws.mediapackage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ChannelArgs(
@@ -53,14 +54,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> description,
         @Nullable Output<Map<String,String>> tags) {
         this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.tags = tags;
     }
 
     private ChannelArgs() {
-        this.channelId = Output.empty();
-        this.description = Output.empty();
-        this.tags = Output.empty();
+        this.channelId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -108,7 +109,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ChannelArgs build() {
             return new ChannelArgs(channelId, description, tags);

@@ -20,10 +20,10 @@ public final class CodeartifactFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(io.pulumi.aws.codeartifact.inputs.GetAuthorizationTokenArgs args) {
-        return getAuthorizationToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
+        return getAuthorizationToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(io.pulumi.aws.codeartifact.inputs.GetAuthorizationTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class CodeartifactFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(io.pulumi.aws.codeartifact.inputs.GetRepositoryEndpointArgs args) {
-        return getRepositoryEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args) {
+        return getRepositoryEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(io.pulumi.aws.codeartifact.inputs.GetRepositoryEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getRepositoryEndpoint:getRepositoryEndpoint", TypeShape.of(GetRepositoryEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

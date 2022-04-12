@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
     public Output<Boolean> getHasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Output.empty() : this.hasPublicAccessPolicy;
+        return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public ObjectLambdaAccessPointPolicyState(
@@ -67,10 +68,10 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     }
 
     private ObjectLambdaAccessPointPolicyState() {
-        this.accountId = Output.empty();
-        this.hasPublicAccessPolicy = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.accountId = Codegen.empty();
+        this.hasPublicAccessPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
@@ -112,7 +113,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
             return this;
         }
         public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Output.ofNullable(hasPublicAccessPolicy);
+            this.hasPublicAccessPolicy = Codegen.ofNullable(hasPublicAccessPolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -120,7 +121,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -128,7 +129,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public ObjectLambdaAccessPointPolicyState build() {
             return new ObjectLambdaAccessPointPolicyState(accountId, hasPublicAccessPolicy, name, policy);

@@ -18,20 +18,20 @@ public final class SchedulerFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.scheduler.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.scheduler.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetJobCollectionResult> getJobCollection(io.pulumi.azurenative.scheduler.inputs.GetJobCollectionArgs args) {
-        return getJobCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobCollectionResult> getJobCollection(GetJobCollectionArgs args) {
+        return getJobCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobCollectionResult> getJobCollection(io.pulumi.azurenative.scheduler.inputs.GetJobCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobCollectionResult> getJobCollection(GetJobCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJobCollection", TypeShape.of(GetJobCollectionResult.class), args, Utilities.withVersion(options));
     }
 }

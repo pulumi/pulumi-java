@@ -18,20 +18,20 @@ public final class XrayFunctions {
      * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.awsnative.xray.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.awsnative.xray.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
      * 
      */
-    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(io.pulumi.awsnative.xray.inputs.GetSamplingRuleArgs args) {
-        return getSamplingRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args) {
+        return getSamplingRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(io.pulumi.awsnative.xray.inputs.GetSamplingRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
     }
 }

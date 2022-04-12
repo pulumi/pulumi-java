@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
       private final @Nullable Output<String> structConfig;
 
     public Output<String> getStructConfig() {
-        return this.structConfig == null ? Output.empty() : this.structConfig;
+        return this.structConfig == null ? Codegen.empty() : this.structConfig;
     }
 
     public MetadataCredentialsFromPluginArgs(
@@ -48,8 +49,8 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
     }
 
     private MetadataCredentialsFromPluginArgs() {
-        this.name = Output.empty();
-        this.structConfig = Output.empty();
+        this.name = Codegen.empty();
+        this.structConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder structConfig(@Nullable Output<String> structConfig) {
@@ -87,7 +88,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
             return this;
         }
         public Builder structConfig(@Nullable String structConfig) {
-            this.structConfig = Output.ofNullable(structConfig);
+            this.structConfig = Codegen.ofNullable(structConfig);
             return this;
         }        public MetadataCredentialsFromPluginArgs build() {
             return new MetadataCredentialsFromPluginArgs(name, structConfig);

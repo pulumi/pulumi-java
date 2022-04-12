@@ -29,10 +29,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.servicefabricmesh.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.servicefabricmesh.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.servicefabricmesh.inputs.GetGatewayArgs args) {
-        return getGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+        return getGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.servicefabricmesh.inputs.GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.azurenative.servicefabricmesh.inputs.GetNetworkArgs args) {
-        return getNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+        return getNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.azurenative.servicefabricmesh.inputs.GetNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetSecretValueResult> getSecretValue(io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretValueArgs args) {
-        return getSecretValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretValueResult> getSecretValue(GetSecretValueArgs args) {
+        return getSecretValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretValueResult> getSecretValue(io.pulumi.azurenative.servicefabricmesh.inputs.GetSecretValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretValueResult> getSecretValue(GetSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.azurenative.servicefabricmesh.inputs.GetVolumeArgs args) {
-        return getVolume(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+        return getVolume(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.azurenative.servicefabricmesh.inputs.GetVolumeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListSecretValueResult> listSecretValue(io.pulumi.azurenative.servicefabricmesh.inputs.ListSecretValueArgs args) {
-        return listSecretValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSecretValueResult> listSecretValue(ListSecretValueArgs args) {
+        return listSecretValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSecretValueResult> listSecretValue(io.pulumi.azurenative.servicefabricmesh.inputs.ListSecretValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSecretValueResult> listSecretValue(ListSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args, Utilities.withVersion(options));
     }
 }

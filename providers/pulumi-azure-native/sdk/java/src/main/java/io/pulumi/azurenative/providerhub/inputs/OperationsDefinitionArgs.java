@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> actionType;
 
     public Output<String> getActionType() {
-        return this.actionType == null ? Output.empty() : this.actionType;
+        return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> isDataAction;
 
     public Output<Boolean> getIsDataAction() {
-        return this.isDataAction == null ? Output.empty() : this.isDataAction;
+        return this.isDataAction == null ? Codegen.empty() : this.isDataAction;
     }
 
     /**
@@ -65,14 +66,14 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public OperationsDefinitionArgs(
@@ -91,12 +92,12 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     }
 
     private OperationsDefinitionArgs() {
-        this.actionType = Output.empty();
-        this.display = Output.empty();
-        this.isDataAction = Output.empty();
-        this.name = Output.empty();
-        this.origin = Output.empty();
-        this.properties = Output.empty();
+        this.actionType = Codegen.empty();
+        this.display = Codegen.empty();
+        this.isDataAction = Codegen.empty();
+        this.name = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder actionType(@Nullable String actionType) {
-            this.actionType = Output.ofNullable(actionType);
+            this.actionType = Codegen.ofNullable(actionType);
             return this;
         }
         public Builder display(Output<OperationsDefinitionDisplayArgs> display) {
@@ -150,7 +151,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder isDataAction(@Nullable Boolean isDataAction) {
-            this.isDataAction = Output.ofNullable(isDataAction);
+            this.isDataAction = Codegen.ofNullable(isDataAction);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -166,7 +167,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder origin(@Nullable String origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder properties(@Nullable Output<Object> properties) {
@@ -174,7 +175,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public OperationsDefinitionArgs build() {
             return new OperationsDefinitionArgs(actionType, display, isDataAction, name, origin, properties);

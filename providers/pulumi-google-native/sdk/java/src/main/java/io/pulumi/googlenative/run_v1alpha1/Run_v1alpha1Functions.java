@@ -16,10 +16,10 @@ public final class Run_v1alpha1Functions {
      * Get information about a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.run_v1alpha1.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.run_v1alpha1.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1alpha1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
 }

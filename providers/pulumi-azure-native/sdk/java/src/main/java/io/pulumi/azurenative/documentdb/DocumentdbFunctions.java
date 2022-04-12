@@ -69,10 +69,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(io.pulumi.azurenative.documentdb.inputs.GetCassandraClusterArgs args) {
-        return getCassandraCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args) {
+        return getCassandraCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(io.pulumi.azurenative.documentdb.inputs.GetCassandraClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCassandraClusterResult> getCassandraCluster(GetCassandraClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraCluster", TypeShape.of(GetCassandraClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(io.pulumi.azurenative.documentdb.inputs.GetCassandraDataCenterArgs args) {
-        return getCassandraDataCenter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args) {
+        return getCassandraDataCenter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(io.pulumi.azurenative.documentdb.inputs.GetCassandraDataCenterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCassandraDataCenterResult> getCassandraDataCenter(GetCassandraDataCenterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraDataCenter", TypeShape.of(GetCassandraDataCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -91,10 +91,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraKeyspaceArgs args) {
-        return getCassandraResourceCassandraKeyspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args) {
+        return getCassandraResourceCassandraKeyspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraKeyspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCassandraResourceCassandraKeyspaceResult> getCassandraResourceCassandraKeyspace(GetCassandraResourceCassandraKeyspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraKeyspace", TypeShape.of(GetCassandraResourceCassandraKeyspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -102,10 +102,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraTableArgs args) {
-        return getCassandraResourceCassandraTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args) {
+        return getCassandraResourceCassandraTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCassandraResourceCassandraTableResult> getCassandraResourceCassandraTable(GetCassandraResourceCassandraTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraTable", TypeShape.of(GetCassandraResourceCassandraTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -113,10 +113,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraViewArgs args) {
-        return getCassandraResourceCassandraView(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args) {
+        return getCassandraResourceCassandraView(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(io.pulumi.azurenative.documentdb.inputs.GetCassandraResourceCassandraViewArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCassandraResourceCassandraViewResult> getCassandraResourceCassandraView(GetCassandraResourceCassandraViewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraView", TypeShape.of(GetCassandraResourceCassandraViewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -124,10 +124,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(io.pulumi.azurenative.documentdb.inputs.GetDatabaseAccountArgs args) {
-        return getDatabaseAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args) {
+        return getDatabaseAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(io.pulumi.azurenative.documentdb.inputs.GetDatabaseAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseAccountResult> getDatabaseAccount(GetDatabaseAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getDatabaseAccount", TypeShape.of(GetDatabaseAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -135,10 +135,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(io.pulumi.azurenative.documentdb.inputs.GetGraphResourceGraphArgs args) {
-        return getGraphResourceGraph(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args) {
+        return getGraphResourceGraph(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(io.pulumi.azurenative.documentdb.inputs.GetGraphResourceGraphArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGraphResourceGraphResult> getGraphResourceGraph(GetGraphResourceGraphArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGraphResourceGraph", TypeShape.of(GetGraphResourceGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,10 +146,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(io.pulumi.azurenative.documentdb.inputs.GetGremlinResourceGremlinDatabaseArgs args) {
-        return getGremlinResourceGremlinDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args) {
+        return getGremlinResourceGremlinDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(io.pulumi.azurenative.documentdb.inputs.GetGremlinResourceGremlinDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGremlinResourceGremlinDatabaseResult> getGremlinResourceGremlinDatabase(GetGremlinResourceGremlinDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinDatabase", TypeShape.of(GetGremlinResourceGremlinDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,10 +157,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(io.pulumi.azurenative.documentdb.inputs.GetGremlinResourceGremlinGraphArgs args) {
-        return getGremlinResourceGremlinGraph(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args) {
+        return getGremlinResourceGremlinGraph(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(io.pulumi.azurenative.documentdb.inputs.GetGremlinResourceGremlinGraphArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGremlinResourceGremlinGraphResult> getGremlinResourceGremlinGraph(GetGremlinResourceGremlinGraphArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinGraph", TypeShape.of(GetGremlinResourceGremlinGraphResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -168,10 +168,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoDBCollectionArgs args) {
-        return getMongoDBResourceMongoDBCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args) {
+        return getMongoDBResourceMongoDBCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoDBCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMongoDBResourceMongoDBCollectionResult> getMongoDBResourceMongoDBCollection(GetMongoDBResourceMongoDBCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoDBCollection", TypeShape.of(GetMongoDBResourceMongoDBCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,10 +179,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoDBDatabaseArgs args) {
-        return getMongoDBResourceMongoDBDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args) {
+        return getMongoDBResourceMongoDBDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoDBDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMongoDBResourceMongoDBDatabaseResult> getMongoDBResourceMongoDBDatabase(GetMongoDBResourceMongoDBDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoDBDatabase", TypeShape.of(GetMongoDBResourceMongoDBDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -190,10 +190,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoRoleDefinitionArgs args) {
-        return getMongoDBResourceMongoRoleDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args) {
+        return getMongoDBResourceMongoRoleDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoRoleDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> getMongoDBResourceMongoRoleDefinition(GetMongoDBResourceMongoRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoRoleDefinition", TypeShape.of(GetMongoDBResourceMongoRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,10 +201,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoUserDefinitionArgs args) {
-        return getMongoDBResourceMongoUserDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args) {
+        return getMongoDBResourceMongoUserDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(io.pulumi.azurenative.documentdb.inputs.GetMongoDBResourceMongoUserDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMongoDBResourceMongoUserDefinitionResult> getMongoDBResourceMongoUserDefinition(GetMongoDBResourceMongoUserDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoUserDefinition", TypeShape.of(GetMongoDBResourceMongoUserDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -212,10 +212,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(io.pulumi.azurenative.documentdb.inputs.GetNotebookWorkspaceArgs args) {
-        return getNotebookWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args) {
+        return getNotebookWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(io.pulumi.azurenative.documentdb.inputs.GetNotebookWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotebookWorkspaceResult> getNotebookWorkspace(GetNotebookWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getNotebookWorkspace", TypeShape.of(GetNotebookWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -223,10 +223,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.documentdb.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.documentdb.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -234,10 +234,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.documentdb.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.documentdb.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -245,10 +245,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlContainerArgs args) {
-        return getSqlResourceSqlContainer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args) {
+        return getSqlResourceSqlContainer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlContainerResult> getSqlResourceSqlContainer(GetSqlResourceSqlContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlContainer", TypeShape.of(GetSqlResourceSqlContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -256,10 +256,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlDatabaseArgs args) {
-        return getSqlResourceSqlDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args) {
+        return getSqlResourceSqlDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlDatabaseResult> getSqlResourceSqlDatabase(GetSqlResourceSqlDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlDatabase", TypeShape.of(GetSqlResourceSqlDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -267,10 +267,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlRoleAssignmentArgs args) {
-        return getSqlResourceSqlRoleAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args) {
+        return getSqlResourceSqlRoleAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlRoleAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> getSqlResourceSqlRoleAssignment(GetSqlResourceSqlRoleAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleAssignment", TypeShape.of(GetSqlResourceSqlRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -278,10 +278,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlRoleDefinitionArgs args) {
-        return getSqlResourceSqlRoleDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args) {
+        return getSqlResourceSqlRoleDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlRoleDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlRoleDefinitionResult> getSqlResourceSqlRoleDefinition(GetSqlResourceSqlRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleDefinition", TypeShape.of(GetSqlResourceSqlRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -289,10 +289,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlStoredProcedureArgs args) {
-        return getSqlResourceSqlStoredProcedure(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args) {
+        return getSqlResourceSqlStoredProcedure(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlStoredProcedureArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlStoredProcedureResult> getSqlResourceSqlStoredProcedure(GetSqlResourceSqlStoredProcedureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlStoredProcedure", TypeShape.of(GetSqlResourceSqlStoredProcedureResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -300,10 +300,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlTriggerArgs args) {
-        return getSqlResourceSqlTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args) {
+        return getSqlResourceSqlTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlTriggerResult> getSqlResourceSqlTrigger(GetSqlResourceSqlTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlTrigger", TypeShape.of(GetSqlResourceSqlTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -311,10 +311,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlUserDefinedFunctionArgs args) {
-        return getSqlResourceSqlUserDefinedFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args) {
+        return getSqlResourceSqlUserDefinedFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(io.pulumi.azurenative.documentdb.inputs.GetSqlResourceSqlUserDefinedFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> getSqlResourceSqlUserDefinedFunction(GetSqlResourceSqlUserDefinedFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlUserDefinedFunction", TypeShape.of(GetSqlResourceSqlUserDefinedFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -322,10 +322,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(io.pulumi.azurenative.documentdb.inputs.GetTableResourceTableArgs args) {
-        return getTableResourceTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args) {
+        return getTableResourceTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(io.pulumi.azurenative.documentdb.inputs.GetTableResourceTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResourceTableResult> getTableResourceTable(GetTableResourceTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getTableResourceTable", TypeShape.of(GetTableResourceTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -333,10 +333,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(io.pulumi.azurenative.documentdb.inputs.ListDatabaseAccountConnectionStringsArgs args) {
-        return listDatabaseAccountConnectionStrings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args) {
+        return listDatabaseAccountConnectionStrings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(io.pulumi.azurenative.documentdb.inputs.ListDatabaseAccountConnectionStringsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> listDatabaseAccountConnectionStrings(ListDatabaseAccountConnectionStringsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountConnectionStrings", TypeShape.of(ListDatabaseAccountConnectionStringsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -344,10 +344,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(io.pulumi.azurenative.documentdb.inputs.ListDatabaseAccountKeysArgs args) {
-        return listDatabaseAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args) {
+        return listDatabaseAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(io.pulumi.azurenative.documentdb.inputs.ListDatabaseAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDatabaseAccountKeysResult> listDatabaseAccountKeys(ListDatabaseAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountKeys", TypeShape.of(ListDatabaseAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -355,10 +355,10 @@ public final class DocumentdbFunctions {
      * API Version: 2021-03-15.
      * 
      */
-    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(io.pulumi.azurenative.documentdb.inputs.ListNotebookWorkspaceConnectionInfoArgs args) {
-        return listNotebookWorkspaceConnectionInfo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args) {
+        return listNotebookWorkspaceConnectionInfo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(io.pulumi.azurenative.documentdb.inputs.ListNotebookWorkspaceConnectionInfoArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> listNotebookWorkspaceConnectionInfo(ListNotebookWorkspaceConnectionInfoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listNotebookWorkspaceConnectionInfo", TypeShape.of(ListNotebookWorkspaceConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
 }

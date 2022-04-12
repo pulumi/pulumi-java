@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> disallowedCidrs;
 
     public Output<List<String>> getDisallowedCidrs() {
-        return this.disallowedCidrs == null ? Output.empty() : this.disallowedCidrs;
+        return this.disallowedCidrs == null ? Codegen.empty() : this.disallowedCidrs;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {
-        return this.netmaskLength == null ? Output.empty() : this.netmaskLength;
+        return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 
     public VpcIpamPreviewNextCidrArgs(
@@ -59,9 +60,9 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
     }
 
     private VpcIpamPreviewNextCidrArgs() {
-        this.disallowedCidrs = Output.empty();
-        this.ipamPoolId = Output.empty();
-        this.netmaskLength = Output.empty();
+        this.disallowedCidrs = Codegen.empty();
+        this.ipamPoolId = Codegen.empty();
+        this.netmaskLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = Output.ofNullable(disallowedCidrs);
+            this.disallowedCidrs = Codegen.ofNullable(disallowedCidrs);
             return this;
         }
         public Builder disallowedCidrs(String... disallowedCidrs) {
@@ -112,7 +113,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Output.ofNullable(netmaskLength);
+            this.netmaskLength = Codegen.ofNullable(netmaskLength);
             return this;
         }        public VpcIpamPreviewNextCidrArgs build() {
             return new VpcIpamPreviewNextCidrArgs(disallowedCidrs, ipamPoolId, netmaskLength);

@@ -17,10 +17,10 @@ public final class ChangeanalysisFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(io.pulumi.azurenative.changeanalysis.inputs.GetConfigurationProfileArgs args) {
-        return getConfigurationProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(GetConfigurationProfileArgs args) {
+        return getConfigurationProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(io.pulumi.azurenative.changeanalysis.inputs.GetConfigurationProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationProfileResult> getConfigurationProfile(GetConfigurationProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:changeanalysis:getConfigurationProfile", TypeShape.of(GetConfigurationProfileResult.class), args, Utilities.withVersion(options));
     }
 }

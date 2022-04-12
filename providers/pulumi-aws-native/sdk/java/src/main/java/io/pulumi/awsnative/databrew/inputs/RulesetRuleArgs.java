@@ -8,6 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValueArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetThresholdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,14 +35,14 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
 
     public Output<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
-        return this.columnSelectors == null ? Output.empty() : this.columnSelectors;
+        return this.columnSelectors == null ? Codegen.empty() : this.columnSelectors;
     }
 
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -59,14 +60,14 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
     public Output<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
-        return this.substitutionMap == null ? Output.empty() : this.substitutionMap;
+        return this.substitutionMap == null ? Codegen.empty() : this.substitutionMap;
     }
 
     @Import(name="threshold")
       private final @Nullable Output<RulesetThresholdArgs> threshold;
 
     public Output<RulesetThresholdArgs> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     public RulesetRuleArgs(
@@ -85,12 +86,12 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesetRuleArgs() {
-        this.checkExpression = Output.empty();
-        this.columnSelectors = Output.empty();
-        this.disabled = Output.empty();
-        this.name = Output.empty();
-        this.substitutionMap = Output.empty();
-        this.threshold = Output.empty();
+        this.checkExpression = Codegen.empty();
+        this.columnSelectors = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.substitutionMap = Codegen.empty();
+        this.threshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnSelectors(@Nullable List<RulesetColumnSelectorArgs> columnSelectors) {
-            this.columnSelectors = Output.ofNullable(columnSelectors);
+            this.columnSelectors = Codegen.ofNullable(columnSelectors);
             return this;
         }
         public Builder columnSelectors(RulesetColumnSelectorArgs... columnSelectors) {
@@ -147,7 +148,7 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -163,7 +164,7 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder substitutionMap(@Nullable List<RulesetSubstitutionValueArgs> substitutionMap) {
-            this.substitutionMap = Output.ofNullable(substitutionMap);
+            this.substitutionMap = Codegen.ofNullable(substitutionMap);
             return this;
         }
         public Builder substitutionMap(RulesetSubstitutionValueArgs... substitutionMap) {
@@ -174,7 +175,7 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threshold(@Nullable RulesetThresholdArgs threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }        public RulesetRuleArgs build() {
             return new RulesetRuleArgs(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);

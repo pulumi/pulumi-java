@@ -22,10 +22,10 @@ public final class ElasticacheFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.elasticache.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.elasticache.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class ElasticacheFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(io.pulumi.aws.elasticache.inputs.GetReplicationGroupArgs args) {
-        return getReplicationGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
+        return getReplicationGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(io.pulumi.aws.elasticache.inputs.GetReplicationGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,10 +46,10 @@ public final class ElasticacheFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.aws.elasticache.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.aws.elasticache.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

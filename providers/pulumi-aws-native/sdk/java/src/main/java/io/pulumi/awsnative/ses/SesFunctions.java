@@ -20,30 +20,30 @@ public final class SesFunctions {
      * Resource schema for AWS::SES::ConfigurationSet.
      * 
      */
-    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(io.pulumi.awsnative.ses.inputs.GetConfigurationSetArgs args) {
-        return getConfigurationSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args) {
+        return getConfigurationSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(io.pulumi.awsnative.ses.inputs.GetConfigurationSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SES::ContactList.
      * 
      */
-    public static CompletableFuture<GetContactListResult> getContactList(io.pulumi.awsnative.ses.inputs.GetContactListArgs args) {
-        return getContactList(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args) {
+        return getContactList(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactListResult> getContactList(io.pulumi.awsnative.ses.inputs.GetContactListArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactListResult> getContactList(GetContactListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getContactList", TypeShape.of(GetContactListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SES::Template
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.awsnative.ses.inputs.GetTemplateArgs args) {
-        return getTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
+        return getTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.awsnative.ses.inputs.GetTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

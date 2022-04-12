@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
     }
 
     private TransitGatewayPeeringAttachmentAccepterArgs() {
-        this.tags = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TransitGatewayPeeringAttachmentAccepterArgs extends io.pulumi
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {

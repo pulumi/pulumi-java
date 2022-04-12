@@ -8,6 +8,7 @@ import io.pulumi.aws.ec2.SecurityGroup;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.NodeGroupArgs;
 import io.pulumi.eks.Utilities;
 import java.lang.String;
@@ -99,7 +100,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeGroup(String name, NodeGroupArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

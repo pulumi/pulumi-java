@@ -24,10 +24,10 @@ public final class MskFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(io.pulumi.aws.msk.inputs.GetBrokerNodesArgs args) {
-        return getBrokerNodes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args) {
+        return getBrokerNodes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(io.pulumi.aws.msk.inputs.GetBrokerNodesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:msk/getBrokerNodes:getBrokerNodes", TypeShape.of(GetBrokerNodesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class MskFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.msk.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.msk.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:msk/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class MskFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.aws.msk.inputs.GetConfigurationArgs args) {
-        return getConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+        return getConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.aws.msk.inputs.GetConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:msk/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -61,12 +61,12 @@ public final class MskFunctions {
      * 
      */
     public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion() {
-        return getKafkaVersion(io.pulumi.aws.msk.inputs.GetKafkaVersionArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getKafkaVersion(GetKafkaVersionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(io.pulumi.aws.msk.inputs.GetKafkaVersionArgs args) {
-        return getKafkaVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args) {
+        return getKafkaVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(io.pulumi.aws.msk.inputs.GetKafkaVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion(GetKafkaVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:msk/getKafkaVersion:getKafkaVersion", TypeShape.of(GetKafkaVersionResult.class), args, Utilities.withVersion(options));
     }
 }

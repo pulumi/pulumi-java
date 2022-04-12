@@ -14,16 +14,16 @@ import io.pulumi.gcp.runtimeconfig.outputs.GetVariableResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class RuntimeconfigFunctions {
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.gcp.runtimeconfig.inputs.GetConfigArgs args) {
-        return getConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+        return getConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.gcp.runtimeconfig.inputs.GetConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.gcp.runtimeconfig.inputs.GetVariableArgs args) {
-        return getVariable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
+        return getVariable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.gcp.runtimeconfig.inputs.GetVariableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
 }

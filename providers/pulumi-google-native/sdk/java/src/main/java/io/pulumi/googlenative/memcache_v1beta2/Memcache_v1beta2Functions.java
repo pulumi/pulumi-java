@@ -16,10 +16,10 @@ public final class Memcache_v1beta2Functions {
      * Gets details of a single Instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.memcache_v1beta2.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.memcache_v1beta2.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:memcache/v1beta2:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

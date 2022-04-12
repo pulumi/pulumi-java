@@ -27,10 +27,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(io.pulumi.azurenative.deploymentmanager.inputs.GetArtifactSourceArgs args) {
-        return getArtifactSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args) {
+        return getArtifactSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(io.pulumi.azurenative.deploymentmanager.inputs.GetArtifactSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetRolloutResult> getRollout(io.pulumi.azurenative.deploymentmanager.inputs.GetRolloutArgs args) {
-        return getRollout(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args) {
+        return getRollout(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRolloutResult> getRollout(io.pulumi.azurenative.deploymentmanager.inputs.GetRolloutArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getRollout", TypeShape.of(GetRolloutResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceTopologyArgs args) {
-        return getServiceTopology(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(GetServiceTopologyArgs args) {
+        return getServiceTopology(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceTopologyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceTopologyResult> getServiceTopology(GetServiceTopologyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceTopology", TypeShape.of(GetServiceTopologyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,10 +71,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceUnitResult> getServiceUnit(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceUnitArgs args) {
-        return getServiceUnit(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceUnitResult> getServiceUnit(GetServiceUnitArgs args) {
+        return getServiceUnit(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceUnitResult> getServiceUnit(io.pulumi.azurenative.deploymentmanager.inputs.GetServiceUnitArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceUnitResult> getServiceUnit(GetServiceUnitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceUnit", TypeShape.of(GetServiceUnitResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,10 +82,10 @@ public final class DeploymentmanagerFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetStepResult> getStep(io.pulumi.azurenative.deploymentmanager.inputs.GetStepArgs args) {
-        return getStep(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStepResult> getStep(GetStepArgs args) {
+        return getStep(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStepResult> getStep(io.pulumi.azurenative.deploymentmanager.inputs.GetStepArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStepResult> getStep(GetStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getStep", TypeShape.of(GetStepResult.class), args, Utilities.withVersion(options));
     }
 }

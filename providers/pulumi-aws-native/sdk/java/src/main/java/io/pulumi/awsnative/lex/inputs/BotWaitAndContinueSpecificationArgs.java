@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotStillWaitingResponseSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> isActive;
 
     public Output<Boolean> getIsActive() {
-        return this.isActive == null ? Output.empty() : this.isActive;
+        return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
       private final @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
     public Output<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
-        return this.stillWaitingResponse == null ? Output.empty() : this.stillWaitingResponse;
+        return this.stillWaitingResponse == null ? Codegen.empty() : this.stillWaitingResponse;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     }
 
     private BotWaitAndContinueSpecificationArgs() {
-        this.continueResponse = Output.empty();
-        this.isActive = Output.empty();
-        this.stillWaitingResponse = Output.empty();
-        this.waitingResponse = Output.empty();
+        this.continueResponse = Codegen.empty();
+        this.isActive = Codegen.empty();
+        this.stillWaitingResponse = Codegen.empty();
+        this.waitingResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Output.ofNullable(isActive);
+            this.isActive = Codegen.ofNullable(isActive);
             return this;
         }
         public Builder stillWaitingResponse(@Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
@@ -129,7 +130,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
-            this.stillWaitingResponse = Output.ofNullable(stillWaitingResponse);
+            this.stillWaitingResponse = Codegen.ofNullable(stillWaitingResponse);
             return this;
         }
         public Builder waitingResponse(Output<BotResponseSpecificationArgs> waitingResponse) {

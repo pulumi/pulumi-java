@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.accountName = Output.empty();
-        this.metadata = Output.empty();
-        this.queueName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder queueName(@Nullable Output<String> queueName) {
@@ -124,7 +125,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

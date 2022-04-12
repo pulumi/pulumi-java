@@ -10,6 +10,7 @@ import io.pulumi.aws.guardduty.outputs.DetectorDatasources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -154,7 +155,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Detector(String name, @Nullable DetectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/detector:Detector", name, args == null ? DetectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:guardduty/detector:Detector", name, args == null ? DetectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Detector(String name, Output<String> id, @Nullable DetectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

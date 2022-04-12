@@ -117,10 +117,10 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.ec2.inputs.GetAmiArgs args) {
-        return getAmi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+        return getAmi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.ec2.inputs.GetAmiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,10 +129,10 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.ec2.inputs.GetAmiIdsArgs args) {
-        return getAmiIds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+        return getAmiIds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.ec2.inputs.GetAmiIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,12 +146,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetCoipPoolResult> getCoipPool() {
-        return getCoipPool(io.pulumi.aws.ec2.inputs.GetCoipPoolArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCoipPool(GetCoipPoolArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCoipPoolResult> getCoipPool(io.pulumi.aws.ec2.inputs.GetCoipPoolArgs args) {
-        return getCoipPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args) {
+        return getCoipPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCoipPoolResult> getCoipPool(io.pulumi.aws.ec2.inputs.GetCoipPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCoipPoolResult> getCoipPool(GetCoipPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getCoipPool:getCoipPool", TypeShape.of(GetCoipPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -159,12 +159,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetCoipPoolsResult> getCoipPools() {
-        return getCoipPools(io.pulumi.aws.ec2.inputs.GetCoipPoolsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCoipPools(GetCoipPoolsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(io.pulumi.aws.ec2.inputs.GetCoipPoolsArgs args) {
-        return getCoipPools(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args) {
+        return getCoipPools(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(io.pulumi.aws.ec2.inputs.GetCoipPoolsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCoipPoolsResult> getCoipPools(GetCoipPoolsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getCoipPools:getCoipPools", TypeShape.of(GetCoipPoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -174,12 +174,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway() {
-        return getCustomerGateway(io.pulumi.aws.ec2.inputs.GetCustomerGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCustomerGateway(GetCustomerGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(io.pulumi.aws.ec2.inputs.GetCustomerGatewayArgs args) {
-        return getCustomerGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args) {
+        return getCustomerGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(io.pulumi.aws.ec2.inputs.GetCustomerGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomerGatewayResult> getCustomerGateway(GetCustomerGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getCustomerGateway:getCustomerGateway", TypeShape.of(GetCustomerGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,12 +189,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost() {
-        return getDedicatedHost(io.pulumi.aws.ec2.inputs.GetDedicatedHostArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDedicatedHost(GetDedicatedHostArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(io.pulumi.aws.ec2.inputs.GetDedicatedHostArgs args) {
-        return getDedicatedHost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args) {
+        return getDedicatedHost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(io.pulumi.aws.ec2.inputs.GetDedicatedHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -204,12 +204,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetElasticIpResult> getElasticIp() {
-        return getElasticIp(io.pulumi.aws.ec2.inputs.GetElasticIpArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getElasticIp(GetElasticIpArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(io.pulumi.aws.ec2.inputs.GetElasticIpArgs args) {
-        return getElasticIp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
+        return getElasticIp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(io.pulumi.aws.ec2.inputs.GetElasticIpArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -220,12 +220,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInstanceResult> getInstance() {
-        return getInstance(io.pulumi.aws.ec2.inputs.GetInstanceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.ec2.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.ec2.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -234,10 +234,10 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(io.pulumi.aws.ec2.inputs.GetInstanceTypeArgs args) {
-        return getInstanceType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args) {
+        return getInstanceType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(io.pulumi.aws.ec2.inputs.GetInstanceTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTypeResult> getInstanceType(GetInstanceTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceType:getInstanceType", TypeShape.of(GetInstanceTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -247,12 +247,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering() {
-        return getInstanceTypeOffering(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstanceTypeOffering(GetInstanceTypeOfferingArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingArgs args) {
-        return getInstanceTypeOffering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args) {
+        return getInstanceTypeOffering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTypeOfferingResult> getInstanceTypeOffering(GetInstanceTypeOfferingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypeOffering:getInstanceTypeOffering", TypeShape.of(GetInstanceTypeOfferingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -262,12 +262,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings() {
-        return getInstanceTypeOfferings(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingsArgs args) {
-        return getInstanceTypeOfferings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args) {
+        return getInstanceTypeOfferings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTypeOfferingsResult> getInstanceTypeOfferings(GetInstanceTypeOfferingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypeOfferings:getInstanceTypeOfferings", TypeShape.of(GetInstanceTypeOfferingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -277,12 +277,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes() {
-        return getInstanceTypes(io.pulumi.aws.ec2.inputs.GetInstanceTypesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstanceTypes(GetInstanceTypesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(io.pulumi.aws.ec2.inputs.GetInstanceTypesArgs args) {
-        return getInstanceTypes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args) {
+        return getInstanceTypes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(io.pulumi.aws.ec2.inputs.GetInstanceTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTypesResult> getInstanceTypes(GetInstanceTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypes:getInstanceTypes", TypeShape.of(GetInstanceTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -296,12 +296,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInstancesResult> getInstances() {
-        return getInstances(io.pulumi.aws.ec2.inputs.GetInstancesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstances(GetInstancesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstancesResult> getInstances(io.pulumi.aws.ec2.inputs.GetInstancesArgs args) {
-        return getInstances(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args) {
+        return getInstances(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstancesResult> getInstances(io.pulumi.aws.ec2.inputs.GetInstancesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstancesResult> getInstances(GetInstancesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -311,18 +311,18 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetInternetGatewayResult> getInternetGateway() {
-        return getInternetGateway(io.pulumi.aws.ec2.inputs.GetInternetGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInternetGateway(GetInternetGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(io.pulumi.aws.ec2.inputs.GetInternetGatewayArgs args) {
-        return getInternetGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args) {
+        return getInternetGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(io.pulumi.aws.ec2.inputs.GetInternetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInternetGateway:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(io.pulumi.aws.ec2.inputs.GetIpamPreviewNextCidrArgs args) {
-        return getIpamPreviewNextCidr(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args) {
+        return getIpamPreviewNextCidr(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(io.pulumi.aws.ec2.inputs.GetIpamPreviewNextCidrArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getIpamPreviewNextCidr:getIpamPreviewNextCidr", TypeShape.of(GetIpamPreviewNextCidrResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -332,12 +332,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetKeyPairResult> getKeyPair() {
-        return getKeyPair(io.pulumi.aws.ec2.inputs.GetKeyPairArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getKeyPair(GetKeyPairArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyPairResult> getKeyPair(io.pulumi.aws.ec2.inputs.GetKeyPairArgs args) {
-        return getKeyPair(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args) {
+        return getKeyPair(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyPairResult> getKeyPair(io.pulumi.aws.ec2.inputs.GetKeyPairArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getKeyPair:getKeyPair", TypeShape.of(GetKeyPairResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -346,10 +346,10 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(io.pulumi.aws.ec2.inputs.GetLaunchConfigurationArgs args) {
-        return getLaunchConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args) {
+        return getLaunchConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(io.pulumi.aws.ec2.inputs.GetLaunchConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchConfiguration:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -359,12 +359,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate() {
-        return getLaunchTemplate(io.pulumi.aws.ec2.inputs.GetLaunchTemplateArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLaunchTemplate(GetLaunchTemplateArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(io.pulumi.aws.ec2.inputs.GetLaunchTemplateArgs args) {
-        return getLaunchTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args) {
+        return getLaunchTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(io.pulumi.aws.ec2.inputs.GetLaunchTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLaunchTemplateResult> getLaunchTemplate(GetLaunchTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchTemplate:getLaunchTemplate", TypeShape.of(GetLaunchTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -374,12 +374,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayResult> getLocalGateway() {
-        return getLocalGateway(io.pulumi.aws.ec2.inputs.GetLocalGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGateway(GetLocalGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(io.pulumi.aws.ec2.inputs.GetLocalGatewayArgs args) {
-        return getLocalGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args) {
+        return getLocalGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(io.pulumi.aws.ec2.inputs.GetLocalGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayResult> getLocalGateway(GetLocalGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGateway:getLocalGateway", TypeShape.of(GetLocalGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -392,12 +392,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable() {
-        return getLocalGatewayRouteTable(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableArgs args) {
-        return getLocalGatewayRouteTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args) {
+        return getLocalGatewayRouteTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayRouteTableResult> getLocalGatewayRouteTable(GetLocalGatewayRouteTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayRouteTable:getLocalGatewayRouteTable", TypeShape.of(GetLocalGatewayRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -405,12 +405,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables() {
-        return getLocalGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTablesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTablesArgs args) {
-        return getLocalGatewayRouteTables(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args) {
+        return getLocalGatewayRouteTables(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTablesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayRouteTablesResult> getLocalGatewayRouteTables(GetLocalGatewayRouteTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayRouteTables:getLocalGatewayRouteTables", TypeShape.of(GetLocalGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -420,12 +420,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface() {
-        return getLocalGatewayVirtualInterface(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceArgs args) {
-        return getLocalGatewayVirtualInterface(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args) {
+        return getLocalGatewayVirtualInterface(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> getLocalGatewayVirtualInterface(GetLocalGatewayVirtualInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterface:getLocalGatewayVirtualInterface", TypeShape.of(GetLocalGatewayVirtualInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -435,12 +435,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup() {
-        return getLocalGatewayVirtualInterfaceGroup(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupArgs args) {
-        return getLocalGatewayVirtualInterfaceGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args) {
+        return getLocalGatewayVirtualInterfaceGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupResult> getLocalGatewayVirtualInterfaceGroup(GetLocalGatewayVirtualInterfaceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterfaceGroup:getLocalGatewayVirtualInterfaceGroup", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -450,12 +450,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups() {
-        return getLocalGatewayVirtualInterfaceGroups(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsArgs args) {
-        return getLocalGatewayVirtualInterfaceGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args) {
+        return getLocalGatewayVirtualInterfaceGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> getLocalGatewayVirtualInterfaceGroups(GetLocalGatewayVirtualInterfaceGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterfaceGroups:getLocalGatewayVirtualInterfaceGroups", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -465,12 +465,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways() {
-        return getLocalGateways(io.pulumi.aws.ec2.inputs.GetLocalGatewaysArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLocalGateways(GetLocalGatewaysArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(io.pulumi.aws.ec2.inputs.GetLocalGatewaysArgs args) {
-        return getLocalGateways(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args) {
+        return getLocalGateways(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(io.pulumi.aws.ec2.inputs.GetLocalGatewaysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalGatewaysResult> getLocalGateways(GetLocalGatewaysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGateways:getLocalGateways", TypeShape.of(GetLocalGatewaysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -481,12 +481,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList() {
-        return getManagedPrefixList(io.pulumi.aws.ec2.inputs.GetManagedPrefixListArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getManagedPrefixList(GetManagedPrefixListArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(io.pulumi.aws.ec2.inputs.GetManagedPrefixListArgs args) {
-        return getManagedPrefixList(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args) {
+        return getManagedPrefixList(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(io.pulumi.aws.ec2.inputs.GetManagedPrefixListArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedPrefixListResult> getManagedPrefixList(GetManagedPrefixListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getManagedPrefixList:getManagedPrefixList", TypeShape.of(GetManagedPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -496,12 +496,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetNatGatewayResult> getNatGateway() {
-        return getNatGateway(io.pulumi.aws.ec2.inputs.GetNatGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNatGateway(GetNatGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(io.pulumi.aws.ec2.inputs.GetNatGatewayArgs args) {
-        return getNatGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+        return getNatGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(io.pulumi.aws.ec2.inputs.GetNatGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -509,12 +509,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls() {
-        return getNetworkAcls(io.pulumi.aws.ec2.inputs.GetNetworkAclsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNetworkAcls(GetNetworkAclsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(io.pulumi.aws.ec2.inputs.GetNetworkAclsArgs args) {
-        return getNetworkAcls(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args) {
+        return getNetworkAcls(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(io.pulumi.aws.ec2.inputs.GetNetworkAclsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkAclsResult> getNetworkAcls(GetNetworkAclsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkAcls:getNetworkAcls", TypeShape.of(GetNetworkAclsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -524,12 +524,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface() {
-        return getNetworkInterface(io.pulumi.aws.ec2.inputs.GetNetworkInterfaceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNetworkInterface(GetNetworkInterfaceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(io.pulumi.aws.ec2.inputs.GetNetworkInterfaceArgs args) {
-        return getNetworkInterface(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
+        return getNetworkInterface(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(io.pulumi.aws.ec2.inputs.GetNetworkInterfaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -537,21 +537,21 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces() {
-        return getNetworkInterfaces(io.pulumi.aws.ec2.inputs.GetNetworkInterfacesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNetworkInterfaces(GetNetworkInterfacesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(io.pulumi.aws.ec2.inputs.GetNetworkInterfacesArgs args) {
-        return getNetworkInterfaces(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args) {
+        return getNetworkInterfaces(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(io.pulumi.aws.ec2.inputs.GetNetworkInterfacesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterfaces:getNetworkInterfaces", TypeShape.of(GetNetworkInterfacesResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<GetPrefixListResult> getPrefixList() {
-        return getPrefixList(io.pulumi.aws.ec2.inputs.GetPrefixListArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(io.pulumi.aws.ec2.inputs.GetPrefixListArgs args) {
-        return getPrefixList(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
+        return getPrefixList(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(io.pulumi.aws.ec2.inputs.GetPrefixListArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -562,10 +562,10 @@ public final class Ec2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.aws.ec2.inputs.GetRouteArgs args) {
-        return getRoute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+        return getRoute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.aws.ec2.inputs.GetRouteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getRoute:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -577,12 +577,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetRouteTableResult> getRouteTable() {
-        return getRouteTable(io.pulumi.aws.ec2.inputs.GetRouteTableArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRouteTable(GetRouteTableArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.aws.ec2.inputs.GetRouteTableArgs args) {
-        return getRouteTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+        return getRouteTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.aws.ec2.inputs.GetRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -590,12 +590,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetRouteTablesResult> getRouteTables() {
-        return getRouteTables(io.pulumi.aws.ec2.inputs.GetRouteTablesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRouteTables(GetRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(io.pulumi.aws.ec2.inputs.GetRouteTablesArgs args) {
-        return getRouteTables(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args) {
+        return getRouteTables(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTablesResult> getRouteTables(io.pulumi.aws.ec2.inputs.GetRouteTablesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteTablesResult> getRouteTables(GetRouteTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -609,12 +609,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup() {
-        return getSecurityGroup(io.pulumi.aws.ec2.inputs.GetSecurityGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSecurityGroup(GetSecurityGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(io.pulumi.aws.ec2.inputs.GetSecurityGroupArgs args) {
-        return getSecurityGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args) {
+        return getSecurityGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(io.pulumi.aws.ec2.inputs.GetSecurityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -625,12 +625,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups() {
-        return getSecurityGroups(io.pulumi.aws.ec2.inputs.GetSecurityGroupsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSecurityGroups(GetSecurityGroupsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(io.pulumi.aws.ec2.inputs.GetSecurityGroupsArgs args) {
-        return getSecurityGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args) {
+        return getSecurityGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(io.pulumi.aws.ec2.inputs.GetSecurityGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityGroupsResult> getSecurityGroups(GetSecurityGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroups:getSecurityGroups", TypeShape.of(GetSecurityGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -640,12 +640,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetSpotPriceResult> getSpotPrice() {
-        return getSpotPrice(io.pulumi.aws.ec2.inputs.GetSpotPriceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSpotPrice(GetSpotPriceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(io.pulumi.aws.ec2.inputs.GetSpotPriceArgs args) {
-        return getSpotPrice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args) {
+        return getSpotPrice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(io.pulumi.aws.ec2.inputs.GetSpotPriceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSpotPriceResult> getSpotPrice(GetSpotPriceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSpotPrice:getSpotPrice", TypeShape.of(GetSpotPriceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -657,12 +657,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetSubnetResult> getSubnet() {
-        return getSubnet(io.pulumi.aws.ec2.inputs.GetSubnetArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSubnet(GetSubnetArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetResult> getSubnet(io.pulumi.aws.ec2.inputs.GetSubnetArgs args) {
-        return getSubnet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+        return getSubnet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetResult> getSubnet(io.pulumi.aws.ec2.inputs.GetSubnetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -671,10 +671,10 @@ public final class Ec2Functions {
      * This resource can be useful for getting back a set of subnet ids for a vpc.
      * 
      */
-    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs args) {
-        return getSubnetIds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args) {
+        return getSubnetIds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSubnetIds:getSubnetIds", TypeShape.of(GetSubnetIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -682,12 +682,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetSubnetsResult> getSubnets() {
-        return getSubnets(io.pulumi.aws.ec2.inputs.GetSubnetsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSubnets(GetSubnetsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetsResult> getSubnets(io.pulumi.aws.ec2.inputs.GetSubnetsArgs args) {
-        return getSubnets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args) {
+        return getSubnets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetsResult> getSubnets(io.pulumi.aws.ec2.inputs.GetSubnetsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetsResult> getSubnets(GetSubnetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSubnets:getSubnets", TypeShape.of(GetSubnetsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -697,12 +697,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables() {
-        return getTransitGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetTransitGatewayRouteTablesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetTransitGatewayRouteTablesArgs args) {
-        return getTransitGatewayRouteTables(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args) {
+        return getTransitGatewayRouteTables(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(io.pulumi.aws.ec2.inputs.GetTransitGatewayRouteTablesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransitGatewayRouteTablesResult> getTransitGatewayRouteTables(GetTransitGatewayRouteTablesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getTransitGatewayRouteTables:getTransitGatewayRouteTables", TypeShape.of(GetTransitGatewayRouteTablesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -714,12 +714,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcResult> getVpc() {
-        return getVpc(io.pulumi.aws.ec2.inputs.GetVpcArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpc(GetVpcArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcResult> getVpc(io.pulumi.aws.ec2.inputs.GetVpcArgs args) {
-        return getVpc(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcResult> getVpc(GetVpcArgs args) {
+        return getVpc(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcResult> getVpc(io.pulumi.aws.ec2.inputs.GetVpcArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcResult> getVpc(GetVpcArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpc:getVpc", TypeShape.of(GetVpcResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -729,12 +729,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions() {
-        return getVpcDhcpOptions(io.pulumi.aws.ec2.inputs.GetVpcDhcpOptionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcDhcpOptions(GetVpcDhcpOptionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(io.pulumi.aws.ec2.inputs.GetVpcDhcpOptionsArgs args) {
-        return getVpcDhcpOptions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args) {
+        return getVpcDhcpOptions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(io.pulumi.aws.ec2.inputs.GetVpcDhcpOptionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcDhcpOptionsResult> getVpcDhcpOptions(GetVpcDhcpOptionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcDhcpOptions:getVpcDhcpOptions", TypeShape.of(GetVpcDhcpOptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -745,12 +745,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint() {
-        return getVpcEndpoint(io.pulumi.aws.ec2.inputs.GetVpcEndpointArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcEndpoint(GetVpcEndpointArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(io.pulumi.aws.ec2.inputs.GetVpcEndpointArgs args) {
-        return getVpcEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args) {
+        return getVpcEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(io.pulumi.aws.ec2.inputs.GetVpcEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcEndpointResult> getVpcEndpoint(GetVpcEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpoint:getVpcEndpoint", TypeShape.of(GetVpcEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -761,12 +761,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService() {
-        return getVpcEndpointService(io.pulumi.aws.ec2.inputs.GetVpcEndpointServiceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcEndpointService(GetVpcEndpointServiceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(io.pulumi.aws.ec2.inputs.GetVpcEndpointServiceArgs args) {
-        return getVpcEndpointService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args) {
+        return getVpcEndpointService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(io.pulumi.aws.ec2.inputs.GetVpcEndpointServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcEndpointServiceResult> getVpcEndpointService(GetVpcEndpointServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpointService:getVpcEndpointService", TypeShape.of(GetVpcEndpointServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -780,12 +780,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool() {
-        return getVpcIamPool(io.pulumi.aws.ec2.inputs.GetVpcIamPoolArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcIamPool(GetVpcIamPoolArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(io.pulumi.aws.ec2.inputs.GetVpcIamPoolArgs args) {
-        return getVpcIamPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args) {
+        return getVpcIamPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(io.pulumi.aws.ec2.inputs.GetVpcIamPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcIamPoolResult> getVpcIamPool(GetVpcIamPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcIamPool:getVpcIamPool", TypeShape.of(GetVpcIamPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -796,12 +796,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection() {
-        return getVpcPeeringConnection(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcPeeringConnection(GetVpcPeeringConnectionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionArgs args) {
-        return getVpcPeeringConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args) {
+        return getVpcPeeringConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcPeeringConnectionResult> getVpcPeeringConnection(GetVpcPeeringConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcPeeringConnection:getVpcPeeringConnection", TypeShape.of(GetVpcPeeringConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -810,12 +810,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections() {
-        return getVpcPeeringConnections(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcPeeringConnections(GetVpcPeeringConnectionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsArgs args) {
-        return getVpcPeeringConnections(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args) {
+        return getVpcPeeringConnections(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcPeeringConnectionsResult> getVpcPeeringConnections(GetVpcPeeringConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcPeeringConnections:getVpcPeeringConnections", TypeShape.of(GetVpcPeeringConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -825,12 +825,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpcsResult> getVpcs() {
-        return getVpcs(io.pulumi.aws.ec2.inputs.GetVpcsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpcs(GetVpcsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcsResult> getVpcs(io.pulumi.aws.ec2.inputs.GetVpcsArgs args) {
-        return getVpcs(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcsResult> getVpcs(GetVpcsArgs args) {
+        return getVpcs(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcsResult> getVpcs(io.pulumi.aws.ec2.inputs.GetVpcsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcsResult> getVpcs(GetVpcsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcs:getVpcs", TypeShape.of(GetVpcsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -841,12 +841,12 @@ public final class Ec2Functions {
      * 
      */
     public static CompletableFuture<GetVpnGatewayResult> getVpnGateway() {
-        return getVpnGateway(io.pulumi.aws.ec2.inputs.GetVpnGatewayArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVpnGateway(GetVpnGatewayArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.aws.ec2.inputs.GetVpnGatewayArgs args) {
-        return getVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+        return getVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.aws.ec2.inputs.GetVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

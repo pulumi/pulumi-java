@@ -16,10 +16,10 @@ public final class Retail_v2Functions {
      * Gets a Product.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.retail_v2.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.retail_v2.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
 }

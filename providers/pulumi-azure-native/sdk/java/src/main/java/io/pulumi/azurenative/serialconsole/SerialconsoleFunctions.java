@@ -17,10 +17,10 @@ public final class SerialconsoleFunctions {
      * API Version: 2018-05-01.
      * 
      */
-    public static CompletableFuture<GetSerialPortResult> getSerialPort(io.pulumi.azurenative.serialconsole.inputs.GetSerialPortArgs args) {
-        return getSerialPort(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSerialPortResult> getSerialPort(GetSerialPortArgs args) {
+        return getSerialPort(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSerialPortResult> getSerialPort(io.pulumi.azurenative.serialconsole.inputs.GetSerialPortArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSerialPortResult> getSerialPort(GetSerialPortArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:serialconsole:getSerialPort", TypeShape.of(GetSerialPortResult.class), args, Utilities.withVersion(options));
     }
 }

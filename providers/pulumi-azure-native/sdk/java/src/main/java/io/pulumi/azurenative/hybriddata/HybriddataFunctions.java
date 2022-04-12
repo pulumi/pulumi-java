@@ -21,10 +21,10 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetDataManagerResult> getDataManager(io.pulumi.azurenative.hybriddata.inputs.GetDataManagerArgs args) {
-        return getDataManager(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataManagerResult> getDataManager(GetDataManagerArgs args) {
+        return getDataManager(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataManagerResult> getDataManager(io.pulumi.azurenative.hybriddata.inputs.GetDataManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataManagerResult> getDataManager(GetDataManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataManager", TypeShape.of(GetDataManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetDataStoreResult> getDataStore(io.pulumi.azurenative.hybriddata.inputs.GetDataStoreArgs args) {
-        return getDataStore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataStoreResult> getDataStore(GetDataStoreArgs args) {
+        return getDataStore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataStoreResult> getDataStore(io.pulumi.azurenative.hybriddata.inputs.GetDataStoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataStoreResult> getDataStore(GetDataStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataStore", TypeShape.of(GetDataStoreResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(io.pulumi.azurenative.hybriddata.inputs.GetJobDefinitionArgs args) {
-        return getJobDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(GetJobDefinitionArgs args) {
+        return getJobDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(io.pulumi.azurenative.hybriddata.inputs.GetJobDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobDefinitionResult> getJobDefinition(GetJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getJobDefinition", TypeShape.of(GetJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

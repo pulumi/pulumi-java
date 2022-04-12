@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
     }
 
     private ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs() {
-        this.s3Uri = Output.empty();
+        this.s3Uri = Codegen.empty();
     }
 
     public static Builder builder() {

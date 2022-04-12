@@ -7,6 +7,7 @@ import io.pulumi.aws.efs.inputs.AccessPointPosixUserGetArgs;
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileSystemArn;
 
     public Output<String> getFileSystemArn() {
-        return this.fileSystemArn == null ? Output.empty() : this.fileSystemArn;
+        return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
     }
 
     /**
@@ -47,14 +48,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
 
     public Output<AccessPointPosixUserGetArgs> getPosixUser() {
-        return this.posixUser == null ? Output.empty() : this.posixUser;
+        return this.posixUser == null ? Codegen.empty() : this.posixUser;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
 
     public Output<AccessPointRootDirectoryGetArgs> getRootDirectory() {
-        return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
+        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
     /**
@@ -87,14 +88,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public AccessPointState(
@@ -117,14 +118,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPointState() {
-        this.arn = Output.empty();
-        this.fileSystemArn = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.ownerId = Output.empty();
-        this.posixUser = Output.empty();
-        this.rootDirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.fileSystemArn = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.posixUser = Codegen.empty();
+        this.rootDirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
@@ -174,7 +175,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemArn(@Nullable String fileSystemArn) {
-            this.fileSystemArn = Output.ofNullable(fileSystemArn);
+            this.fileSystemArn = Codegen.ofNullable(fileSystemArn);
             return this;
         }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
@@ -182,7 +183,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -190,7 +191,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder posixUser(@Nullable Output<AccessPointPosixUserGetArgs> posixUser) {
@@ -198,7 +199,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixUser(@Nullable AccessPointPosixUserGetArgs posixUser) {
-            this.posixUser = Output.ofNullable(posixUser);
+            this.posixUser = Codegen.ofNullable(posixUser);
             return this;
         }
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory) {
@@ -206,7 +207,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootDirectory(@Nullable AccessPointRootDirectoryGetArgs rootDirectory) {
-            this.rootDirectory = Output.ofNullable(rootDirectory);
+            this.rootDirectory = Codegen.ofNullable(rootDirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -214,7 +215,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -222,7 +223,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public AccessPointState build() {
             return new AccessPointState(arn, fileSystemArn, fileSystemId, ownerId, posixUser, rootDirectory, tags, tagsAll);

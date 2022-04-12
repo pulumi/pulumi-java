@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigDefaultKeySpecGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> defaultKeySpecs;
 
     public Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> getDefaultKeySpecs() {
-        return this.defaultKeySpecs == null ? Output.empty() : this.defaultKeySpecs;
+        return this.defaultKeySpecs == null ? Codegen.empty() : this.defaultKeySpecs;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> nonExistence;
 
     public Output<String> getNonExistence() {
-        return this.nonExistence == null ? Output.empty() : this.nonExistence;
+        return this.nonExistence == null ? Codegen.empty() : this.nonExistence;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public ManagedZoneDnssecConfigGetArgs(
@@ -79,10 +80,10 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
     }
 
     private ManagedZoneDnssecConfigGetArgs() {
-        this.defaultKeySpecs = Output.empty();
-        this.kind = Output.empty();
-        this.nonExistence = Output.empty();
-        this.state = Output.empty();
+        this.defaultKeySpecs = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.nonExistence = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder defaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs> defaultKeySpecs) {
-            this.defaultKeySpecs = Output.ofNullable(defaultKeySpecs);
+            this.defaultKeySpecs = Codegen.ofNullable(defaultKeySpecs);
             return this;
         }
         public Builder defaultKeySpecs(ManagedZoneDnssecConfigDefaultKeySpecGetArgs... defaultKeySpecs) {
@@ -127,7 +128,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder nonExistence(@Nullable Output<String> nonExistence) {
@@ -135,7 +136,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder nonExistence(@Nullable String nonExistence) {
-            this.nonExistence = Output.ofNullable(nonExistence);
+            this.nonExistence = Codegen.ofNullable(nonExistence);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -143,7 +144,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public ManagedZoneDnssecConfigGetArgs build() {
             return new ManagedZoneDnssecConfigGetArgs(defaultKeySpecs, kind, nonExistence, state);

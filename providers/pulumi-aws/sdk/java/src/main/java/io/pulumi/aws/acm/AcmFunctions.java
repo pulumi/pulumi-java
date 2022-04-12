@@ -20,10 +20,10 @@ public final class AcmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.aws.acm.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.aws.acm.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:acm/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
 }

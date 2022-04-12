@@ -63,10 +63,10 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.azurenative.databoxedge.inputs.GetAddonArgs args) {
-        return getAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+        return getAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.azurenative.databoxedge.inputs.GetAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,10 +74,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetArcAddonResult> getArcAddon(io.pulumi.azurenative.databoxedge.inputs.GetArcAddonArgs args) {
-        return getArcAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArcAddonResult> getArcAddon(GetArcAddonArgs args) {
+        return getArcAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArcAddonResult> getArcAddon(io.pulumi.azurenative.databoxedge.inputs.GetArcAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArcAddonResult> getArcAddon(GetArcAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getArcAddon", TypeShape.of(GetArcAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,10 +85,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedule(io.pulumi.azurenative.databoxedge.inputs.GetBandwidthScheduleArgs args) {
-        return getBandwidthSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedule(GetBandwidthScheduleArgs args) {
+        return getBandwidthSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedule(io.pulumi.azurenative.databoxedge.inputs.GetBandwidthScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedule(GetBandwidthScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getBandwidthSchedule", TypeShape.of(GetBandwidthScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRole(io.pulumi.azurenative.databoxedge.inputs.GetCloudEdgeManagementRoleArgs args) {
-        return getCloudEdgeManagementRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRole(GetCloudEdgeManagementRoleArgs args) {
+        return getCloudEdgeManagementRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRole(io.pulumi.azurenative.databoxedge.inputs.GetCloudEdgeManagementRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRole(GetCloudEdgeManagementRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetContainerResult> getContainer(io.pulumi.azurenative.databoxedge.inputs.GetContainerArgs args) {
-        return getContainer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args) {
+        return getContainer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContainerResult> getContainer(io.pulumi.azurenative.databoxedge.inputs.GetContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,10 +118,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.azurenative.databoxedge.inputs.GetDeviceArgs args) {
-        return getDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.azurenative.databoxedge.inputs.GetDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,10 +129,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformation(io.pulumi.azurenative.databoxedge.inputs.GetDeviceExtendedInformationArgs args) {
-        return getDeviceExtendedInformation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformation(GetDeviceExtendedInformationArgs args) {
+        return getDeviceExtendedInformation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformation(io.pulumi.azurenative.databoxedge.inputs.GetDeviceExtendedInformationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformation(GetDeviceExtendedInformationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDeviceExtendedInformation", TypeShape.of(GetDeviceExtendedInformationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,10 +140,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTrigger(io.pulumi.azurenative.databoxedge.inputs.GetFileEventTriggerArgs args) {
-        return getFileEventTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTrigger(GetFileEventTriggerArgs args) {
+        return getFileEventTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTrigger(io.pulumi.azurenative.databoxedge.inputs.GetFileEventTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTrigger(GetFileEventTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getFileEventTrigger", TypeShape.of(GetFileEventTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -151,10 +151,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetIoTAddonResult> getIoTAddon(io.pulumi.azurenative.databoxedge.inputs.GetIoTAddonArgs args) {
-        return getIoTAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIoTAddonResult> getIoTAddon(GetIoTAddonArgs args) {
+        return getIoTAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIoTAddonResult> getIoTAddon(io.pulumi.azurenative.databoxedge.inputs.GetIoTAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIoTAddonResult> getIoTAddon(GetIoTAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTAddon", TypeShape.of(GetIoTAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -162,10 +162,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetIoTRoleResult> getIoTRole(io.pulumi.azurenative.databoxedge.inputs.GetIoTRoleArgs args) {
-        return getIoTRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIoTRoleResult> getIoTRole(GetIoTRoleArgs args) {
+        return getIoTRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIoTRoleResult> getIoTRole(io.pulumi.azurenative.databoxedge.inputs.GetIoTRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIoTRoleResult> getIoTRole(GetIoTRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTRole", TypeShape.of(GetIoTRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -173,10 +173,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRole(io.pulumi.azurenative.databoxedge.inputs.GetKubernetesRoleArgs args) {
-        return getKubernetesRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRole(GetKubernetesRoleArgs args) {
+        return getKubernetesRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRole(io.pulumi.azurenative.databoxedge.inputs.GetKubernetesRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRole(GetKubernetesRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getKubernetesRole", TypeShape.of(GetKubernetesRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -184,10 +184,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetMECRoleResult> getMECRole(io.pulumi.azurenative.databoxedge.inputs.GetMECRoleArgs args) {
-        return getMECRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMECRoleResult> getMECRole(GetMECRoleArgs args) {
+        return getMECRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMECRoleResult> getMECRole(io.pulumi.azurenative.databoxedge.inputs.GetMECRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMECRoleResult> getMECRole(GetMECRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMECRole", TypeShape.of(GetMECRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -195,10 +195,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfig(io.pulumi.azurenative.databoxedge.inputs.GetMonitoringConfigArgs args) {
-        return getMonitoringConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfig(GetMonitoringConfigArgs args) {
+        return getMonitoringConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfig(io.pulumi.azurenative.databoxedge.inputs.GetMonitoringConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfig(GetMonitoringConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMonitoringConfig", TypeShape.of(GetMonitoringConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -206,10 +206,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetOrderResult> getOrder(io.pulumi.azurenative.databoxedge.inputs.GetOrderArgs args) {
-        return getOrder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrderResult> getOrder(GetOrderArgs args) {
+        return getOrder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderResult> getOrder(io.pulumi.azurenative.databoxedge.inputs.GetOrderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrderResult> getOrder(GetOrderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getOrder", TypeShape.of(GetOrderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -217,10 +217,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTrigger(io.pulumi.azurenative.databoxedge.inputs.GetPeriodicTimerEventTriggerArgs args) {
-        return getPeriodicTimerEventTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTrigger(GetPeriodicTimerEventTriggerArgs args) {
+        return getPeriodicTimerEventTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTrigger(io.pulumi.azurenative.databoxedge.inputs.GetPeriodicTimerEventTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTrigger(GetPeriodicTimerEventTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getPeriodicTimerEventTrigger", TypeShape.of(GetPeriodicTimerEventTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -232,10 +232,10 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.azurenative.databoxedge.inputs.GetRoleArgs args) {
-        return getRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
+        return getRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.azurenative.databoxedge.inputs.GetRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -243,10 +243,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetShareResult> getShare(io.pulumi.azurenative.databoxedge.inputs.GetShareArgs args) {
-        return getShare(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args) {
+        return getShare(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetShareResult> getShare(io.pulumi.azurenative.databoxedge.inputs.GetShareArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -254,10 +254,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(io.pulumi.azurenative.databoxedge.inputs.GetStorageAccountArgs args) {
-        return getStorageAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args) {
+        return getStorageAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(io.pulumi.azurenative.databoxedge.inputs.GetStorageAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -265,10 +265,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredential(io.pulumi.azurenative.databoxedge.inputs.GetStorageAccountCredentialArgs args) {
-        return getStorageAccountCredential(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredential(GetStorageAccountCredentialArgs args) {
+        return getStorageAccountCredential(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredential(io.pulumi.azurenative.databoxedge.inputs.GetStorageAccountCredentialArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredential(GetStorageAccountCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -280,10 +280,10 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.azurenative.databoxedge.inputs.GetTriggerArgs args) {
-        return getTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+        return getTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.azurenative.databoxedge.inputs.GetTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -291,10 +291,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.databoxedge.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.databoxedge.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -302,10 +302,10 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCode(io.pulumi.azurenative.databoxedge.inputs.ListOrderDCAccessCodeArgs args) {
-        return listOrderDCAccessCode(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCode(ListOrderDCAccessCodeArgs args) {
+        return listOrderDCAccessCode(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCode(io.pulumi.azurenative.databoxedge.inputs.ListOrderDCAccessCodeArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCode(ListOrderDCAccessCodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:listOrderDCAccessCode", TypeShape.of(ListOrderDCAccessCodeResult.class), args, Utilities.withVersion(options));
     }
 }

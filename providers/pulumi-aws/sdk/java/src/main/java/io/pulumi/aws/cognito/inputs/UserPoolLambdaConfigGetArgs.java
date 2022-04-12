@@ -7,6 +7,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomEmailSenderGetArgs
 import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomSmsSenderGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> createAuthChallenge;
 
     public Output<String> getCreateAuthChallenge() {
-        return this.createAuthChallenge == null ? Output.empty() : this.createAuthChallenge;
+        return this.createAuthChallenge == null ? Codegen.empty() : this.createAuthChallenge;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserPoolLambdaConfigCustomEmailSenderGetArgs> customEmailSender;
 
     public Output<UserPoolLambdaConfigCustomEmailSenderGetArgs> getCustomEmailSender() {
-        return this.customEmailSender == null ? Output.empty() : this.customEmailSender;
+        return this.customEmailSender == null ? Codegen.empty() : this.customEmailSender;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customMessage;
 
     public Output<String> getCustomMessage() {
-        return this.customMessage == null ? Output.empty() : this.customMessage;
+        return this.customMessage == null ? Codegen.empty() : this.customMessage;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserPoolLambdaConfigCustomSmsSenderGetArgs> customSmsSender;
 
     public Output<UserPoolLambdaConfigCustomSmsSenderGetArgs> getCustomSmsSender() {
-        return this.customSmsSender == null ? Output.empty() : this.customSmsSender;
+        return this.customSmsSender == null ? Codegen.empty() : this.customSmsSender;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> defineAuthChallenge;
 
     public Output<String> getDefineAuthChallenge() {
-        return this.defineAuthChallenge == null ? Output.empty() : this.defineAuthChallenge;
+        return this.defineAuthChallenge == null ? Codegen.empty() : this.defineAuthChallenge;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> postAuthentication;
 
     public Output<String> getPostAuthentication() {
-        return this.postAuthentication == null ? Output.empty() : this.postAuthentication;
+        return this.postAuthentication == null ? Codegen.empty() : this.postAuthentication;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> postConfirmation;
 
     public Output<String> getPostConfirmation() {
-        return this.postConfirmation == null ? Output.empty() : this.postConfirmation;
+        return this.postConfirmation == null ? Codegen.empty() : this.postConfirmation;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> preAuthentication;
 
     public Output<String> getPreAuthentication() {
-        return this.preAuthentication == null ? Output.empty() : this.preAuthentication;
+        return this.preAuthentication == null ? Codegen.empty() : this.preAuthentication;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> preSignUp;
 
     public Output<String> getPreSignUp() {
-        return this.preSignUp == null ? Output.empty() : this.preSignUp;
+        return this.preSignUp == null ? Codegen.empty() : this.preSignUp;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> preTokenGeneration;
 
     public Output<String> getPreTokenGeneration() {
-        return this.preTokenGeneration == null ? Output.empty() : this.preTokenGeneration;
+        return this.preTokenGeneration == null ? Codegen.empty() : this.preTokenGeneration;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> userMigration;
 
     public Output<String> getUserMigration() {
-        return this.userMigration == null ? Output.empty() : this.userMigration;
+        return this.userMigration == null ? Codegen.empty() : this.userMigration;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> verifyAuthChallengeResponse;
 
     public Output<String> getVerifyAuthChallengeResponse() {
-        return this.verifyAuthChallengeResponse == null ? Output.empty() : this.verifyAuthChallengeResponse;
+        return this.verifyAuthChallengeResponse == null ? Codegen.empty() : this.verifyAuthChallengeResponse;
     }
 
     public UserPoolLambdaConfigGetArgs(
@@ -189,19 +190,19 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     private UserPoolLambdaConfigGetArgs() {
-        this.createAuthChallenge = Output.empty();
-        this.customEmailSender = Output.empty();
-        this.customMessage = Output.empty();
-        this.customSmsSender = Output.empty();
-        this.defineAuthChallenge = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.postAuthentication = Output.empty();
-        this.postConfirmation = Output.empty();
-        this.preAuthentication = Output.empty();
-        this.preSignUp = Output.empty();
-        this.preTokenGeneration = Output.empty();
-        this.userMigration = Output.empty();
-        this.verifyAuthChallengeResponse = Output.empty();
+        this.createAuthChallenge = Codegen.empty();
+        this.customEmailSender = Codegen.empty();
+        this.customMessage = Codegen.empty();
+        this.customSmsSender = Codegen.empty();
+        this.defineAuthChallenge = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.postAuthentication = Codegen.empty();
+        this.postConfirmation = Codegen.empty();
+        this.preAuthentication = Codegen.empty();
+        this.preSignUp = Codegen.empty();
+        this.preTokenGeneration = Codegen.empty();
+        this.userMigration = Codegen.empty();
+        this.verifyAuthChallengeResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder createAuthChallenge(@Nullable String createAuthChallenge) {
-            this.createAuthChallenge = Output.ofNullable(createAuthChallenge);
+            this.createAuthChallenge = Codegen.ofNullable(createAuthChallenge);
             return this;
         }
         public Builder customEmailSender(@Nullable Output<UserPoolLambdaConfigCustomEmailSenderGetArgs> customEmailSender) {
@@ -261,7 +262,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSenderGetArgs customEmailSender) {
-            this.customEmailSender = Output.ofNullable(customEmailSender);
+            this.customEmailSender = Codegen.ofNullable(customEmailSender);
             return this;
         }
         public Builder customMessage(@Nullable Output<String> customMessage) {
@@ -269,7 +270,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customMessage(@Nullable String customMessage) {
-            this.customMessage = Output.ofNullable(customMessage);
+            this.customMessage = Codegen.ofNullable(customMessage);
             return this;
         }
         public Builder customSmsSender(@Nullable Output<UserPoolLambdaConfigCustomSmsSenderGetArgs> customSmsSender) {
@@ -277,7 +278,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSenderGetArgs customSmsSender) {
-            this.customSmsSender = Output.ofNullable(customSmsSender);
+            this.customSmsSender = Codegen.ofNullable(customSmsSender);
             return this;
         }
         public Builder defineAuthChallenge(@Nullable Output<String> defineAuthChallenge) {
@@ -285,7 +286,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
-            this.defineAuthChallenge = Output.ofNullable(defineAuthChallenge);
+            this.defineAuthChallenge = Codegen.ofNullable(defineAuthChallenge);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -293,7 +294,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder postAuthentication(@Nullable Output<String> postAuthentication) {
@@ -301,7 +302,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder postAuthentication(@Nullable String postAuthentication) {
-            this.postAuthentication = Output.ofNullable(postAuthentication);
+            this.postAuthentication = Codegen.ofNullable(postAuthentication);
             return this;
         }
         public Builder postConfirmation(@Nullable Output<String> postConfirmation) {
@@ -309,7 +310,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder postConfirmation(@Nullable String postConfirmation) {
-            this.postConfirmation = Output.ofNullable(postConfirmation);
+            this.postConfirmation = Codegen.ofNullable(postConfirmation);
             return this;
         }
         public Builder preAuthentication(@Nullable Output<String> preAuthentication) {
@@ -317,7 +318,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder preAuthentication(@Nullable String preAuthentication) {
-            this.preAuthentication = Output.ofNullable(preAuthentication);
+            this.preAuthentication = Codegen.ofNullable(preAuthentication);
             return this;
         }
         public Builder preSignUp(@Nullable Output<String> preSignUp) {
@@ -325,7 +326,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder preSignUp(@Nullable String preSignUp) {
-            this.preSignUp = Output.ofNullable(preSignUp);
+            this.preSignUp = Codegen.ofNullable(preSignUp);
             return this;
         }
         public Builder preTokenGeneration(@Nullable Output<String> preTokenGeneration) {
@@ -333,7 +334,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
-            this.preTokenGeneration = Output.ofNullable(preTokenGeneration);
+            this.preTokenGeneration = Codegen.ofNullable(preTokenGeneration);
             return this;
         }
         public Builder userMigration(@Nullable Output<String> userMigration) {
@@ -341,7 +342,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder userMigration(@Nullable String userMigration) {
-            this.userMigration = Output.ofNullable(userMigration);
+            this.userMigration = Codegen.ofNullable(userMigration);
             return this;
         }
         public Builder verifyAuthChallengeResponse(@Nullable Output<String> verifyAuthChallengeResponse) {
@@ -349,7 +350,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
-            this.verifyAuthChallengeResponse = Output.ofNullable(verifyAuthChallengeResponse);
+            this.verifyAuthChallengeResponse = Codegen.ofNullable(verifyAuthChallengeResponse);
             return this;
         }        public UserPoolLambdaConfigGetArgs build() {
             return new UserPoolLambdaConfigGetArgs(createAuthChallenge, customEmailSender, customMessage, customSmsSender, defineAuthChallenge, kmsKeyId, postAuthentication, postConfirmation, preAuthentication, preSignUp, preTokenGeneration, userMigration, verifyAuthChallengeResponse);

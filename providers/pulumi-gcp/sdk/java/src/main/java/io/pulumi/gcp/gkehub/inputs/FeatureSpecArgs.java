@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecMulticlusteringressArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 
     public Output<FeatureSpecMulticlusteringressArgs> getMulticlusteringress() {
-        return this.multiclusteringress == null ? Output.empty() : this.multiclusteringress;
+        return this.multiclusteringress == null ? Codegen.empty() : this.multiclusteringress;
     }
 
     public FeatureSpecArgs(@Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress) {
@@ -31,7 +32,7 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureSpecArgs() {
-        this.multiclusteringress = Output.empty();
+        this.multiclusteringress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringressArgs multiclusteringress) {
-            this.multiclusteringress = Output.ofNullable(multiclusteringress);
+            this.multiclusteringress = Codegen.ofNullable(multiclusteringress);
             return this;
         }        public FeatureSpecArgs build() {
             return new FeatureSpecArgs(multiclusteringress);

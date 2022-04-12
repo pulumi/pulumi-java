@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -99,12 +100,12 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ActiveDirectoryPropertiesArgs() {
-        this.azureStorageSid = Output.empty();
-        this.domainGuid = Output.empty();
-        this.domainName = Output.empty();
-        this.domainSid = Output.empty();
-        this.forestName = Output.empty();
-        this.netBiosDomainName = Output.empty();
+        this.azureStorageSid = Codegen.empty();
+        this.domainGuid = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.domainSid = Codegen.empty();
+        this.forestName = Codegen.empty();
+        this.netBiosDomainName = Codegen.empty();
     }
 
     public static Builder builder() {

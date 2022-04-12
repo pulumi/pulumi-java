@@ -26,10 +26,10 @@ public final class ServicecatalogFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConstraintResult> getConstraint(io.pulumi.aws.servicecatalog.inputs.GetConstraintArgs args) {
-        return getConstraint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args) {
+        return getConstraint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConstraintResult> getConstraint(io.pulumi.aws.servicecatalog.inputs.GetConstraintArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getConstraint:getConstraint", TypeShape.of(GetConstraintResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class ServicecatalogFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(io.pulumi.aws.servicecatalog.inputs.GetLaunchPathsArgs args) {
-        return getLaunchPaths(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args) {
+        return getLaunchPaths(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(io.pulumi.aws.servicecatalog.inputs.GetLaunchPathsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getLaunchPaths:getLaunchPaths", TypeShape.of(GetLaunchPathsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -50,10 +50,10 @@ public final class ServicecatalogFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPortfolioResult> getPortfolio(io.pulumi.aws.servicecatalog.inputs.GetPortfolioArgs args) {
-        return getPortfolio(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args) {
+        return getPortfolio(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPortfolioResult> getPortfolio(io.pulumi.aws.servicecatalog.inputs.GetPortfolioArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolio:getPortfolio", TypeShape.of(GetPortfolioResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class ServicecatalogFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(io.pulumi.aws.servicecatalog.inputs.GetPortfolioConstraintsArgs args) {
-        return getPortfolioConstraints(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args) {
+        return getPortfolioConstraints(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(io.pulumi.aws.servicecatalog.inputs.GetPortfolioConstraintsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolioConstraints:getPortfolioConstraints", TypeShape.of(GetPortfolioConstraintsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -76,10 +76,10 @@ public final class ServicecatalogFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.aws.servicecatalog.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.aws.servicecatalog.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
 }

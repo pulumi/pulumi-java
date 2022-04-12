@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> allowInterrupt;
 
     public Output<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
+        return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     @Import(name="maxRetries", required=true)
@@ -56,9 +57,9 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
     }
 
     private BotPromptSpecificationArgs() {
-        this.allowInterrupt = Output.empty();
-        this.maxRetries = Output.empty();
-        this.messageGroupsList = Output.empty();
+        this.allowInterrupt = Codegen.empty();
+        this.maxRetries = Codegen.empty();
+        this.messageGroupsList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Output.ofNullable(allowInterrupt);
+            this.allowInterrupt = Codegen.ofNullable(allowInterrupt);
             return this;
         }
         public Builder maxRetries(Output<Integer> maxRetries) {

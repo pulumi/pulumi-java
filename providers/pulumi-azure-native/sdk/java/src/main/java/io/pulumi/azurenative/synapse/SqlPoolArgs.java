@@ -9,6 +9,7 @@ import io.pulumi.azurenative.synapse.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
-        return this.collation == null ? Output.empty() : this.collation;
+        return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Output.empty() : this.createMode;
+        return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
-        return this.creationDate == null ? Output.empty() : this.creationDate;
+        return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxSizeBytes;
 
     public Output<Double> getMaxSizeBytes() {
-        return this.maxSizeBytes == null ? Output.empty() : this.maxSizeBytes;
+        return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> recoverableDatabaseId;
 
     public Output<String> getRecoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Output.empty() : this.recoverableDatabaseId;
+        return this.recoverableDatabaseId == null ? Codegen.empty() : this.recoverableDatabaseId;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restorePointInTime;
 
     public Output<String> getRestorePointInTime() {
-        return this.restorePointInTime == null ? Output.empty() : this.restorePointInTime;
+        return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceDatabaseId;
 
     public Output<String> getSourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Output.empty() : this.sourceDatabaseId;
+        return this.sourceDatabaseId == null ? Codegen.empty() : this.sourceDatabaseId;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
-        return this.sqlPoolName == null ? Output.empty() : this.sqlPoolName;
+        return this.sqlPoolName == null ? Codegen.empty() : this.sqlPoolName;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -240,22 +241,22 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlPoolArgs() {
-        this.collation = Output.empty();
-        this.createMode = Output.empty();
-        this.creationDate = Output.empty();
-        this.location = Output.empty();
-        this.maxSizeBytes = Output.empty();
-        this.provisioningState = Output.empty();
-        this.recoverableDatabaseId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restorePointInTime = Output.empty();
-        this.sku = Output.empty();
-        this.sourceDatabaseId = Output.empty();
-        this.sqlPoolName = Output.empty();
-        this.status = Output.empty();
-        this.storageAccountType = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.collation = Codegen.empty();
+        this.createMode = Codegen.empty();
+        this.creationDate = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxSizeBytes = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.recoverableDatabaseId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restorePointInTime = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.sourceDatabaseId = Codegen.empty();
+        this.sqlPoolName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collation(@Nullable String collation) {
-            this.collation = Output.ofNullable(collation);
+            this.collation = Codegen.ofNullable(collation);
             return this;
         }
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
@@ -321,7 +322,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Output.ofNullable(createMode);
+            this.createMode = Codegen.ofNullable(createMode);
             return this;
         }
         public Builder creationDate(@Nullable Output<String> creationDate) {
@@ -329,7 +330,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Output.ofNullable(creationDate);
+            this.creationDate = Codegen.ofNullable(creationDate);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -337,7 +338,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
@@ -345,7 +346,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
+            this.maxSizeBytes = Codegen.ofNullable(maxSizeBytes);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -353,7 +354,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
@@ -361,7 +362,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
+            this.recoverableDatabaseId = Codegen.ofNullable(recoverableDatabaseId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -377,7 +378,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Output.ofNullable(restorePointInTime);
+            this.restorePointInTime = Codegen.ofNullable(restorePointInTime);
             return this;
         }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
@@ -385,7 +386,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
@@ -393,7 +394,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
+            this.sourceDatabaseId = Codegen.ofNullable(sourceDatabaseId);
             return this;
         }
         public Builder sqlPoolName(@Nullable Output<String> sqlPoolName) {
@@ -401,7 +402,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlPoolName(@Nullable String sqlPoolName) {
-            this.sqlPoolName = Output.ofNullable(sqlPoolName);
+            this.sqlPoolName = Codegen.ofNullable(sqlPoolName);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -409,7 +410,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
@@ -417,7 +418,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -425,7 +426,7 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

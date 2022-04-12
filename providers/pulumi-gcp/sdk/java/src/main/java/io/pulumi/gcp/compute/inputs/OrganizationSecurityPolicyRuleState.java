@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +28,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
 
     public Output<OrganizationSecurityPolicyRuleMatchGetArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<List<String>> targetResources;
 
     public Output<List<String>> getTargetResources() {
-        return this.targetResources == null ? Output.empty() : this.targetResources;
+        return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
     public Output<List<String>> getTargetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Output.empty() : this.targetServiceAccounts;
+        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 
     public OrganizationSecurityPolicyRuleState(
@@ -163,16 +164,16 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     }
 
     private OrganizationSecurityPolicyRuleState() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.direction = Output.empty();
-        this.enableLogging = Output.empty();
-        this.match = Output.empty();
-        this.policyId = Output.empty();
-        this.preview = Output.empty();
-        this.priority = Output.empty();
-        this.targetResources = Output.empty();
-        this.targetServiceAccounts = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.enableLogging = Codegen.empty();
+        this.match = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.targetResources = Codegen.empty();
+        this.targetServiceAccounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -226,7 +227,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder direction(@Nullable Output<String> direction) {
@@ -234,7 +235,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder direction(@Nullable String direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
@@ -242,7 +243,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder match(@Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
@@ -250,7 +251,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder match(@Nullable OrganizationSecurityPolicyRuleMatchGetArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -258,7 +259,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder preview(@Nullable Output<Boolean> preview) {
@@ -266,7 +267,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -274,7 +275,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
@@ -282,7 +283,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Output.ofNullable(targetResources);
+            this.targetResources = Codegen.ofNullable(targetResources);
             return this;
         }
         public Builder targetResources(String... targetResources) {
@@ -293,7 +294,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
             return this;
         }
         public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Output.ofNullable(targetServiceAccounts);
+            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
             return this;
         }
         public Builder targetServiceAccounts(String... targetServiceAccounts) {

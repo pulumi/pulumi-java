@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> exclusivePackages;
 
     public Output<List<String>> getExclusivePackages() {
-        return this.exclusivePackages == null ? Output.empty() : this.exclusivePackages;
+        return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public PatchDeploymentPatchConfigAptGetArgs(
@@ -61,9 +62,9 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
     }
 
     private PatchDeploymentPatchConfigAptGetArgs() {
-        this.excludes = Output.empty();
-        this.exclusivePackages = Output.empty();
-        this.type = Output.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePackages = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -106,7 +107,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Output.ofNullable(exclusivePackages);
+            this.exclusivePackages = Codegen.ofNullable(exclusivePackages);
             return this;
         }
         public Builder exclusivePackages(String... exclusivePackages) {
@@ -117,7 +118,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public PatchDeploymentPatchConfigAptGetArgs build() {
             return new PatchDeploymentPatchConfigAptGetArgs(excludes, exclusivePackages, type);

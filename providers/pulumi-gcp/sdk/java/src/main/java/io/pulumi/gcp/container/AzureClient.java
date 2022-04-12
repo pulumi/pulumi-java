@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AzureClientArgs;
 import io.pulumi.gcp.container.inputs.AzureClientState;
@@ -173,7 +174,7 @@ public class AzureClient extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzureClient(String name, AzureClientArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/azureClient:AzureClient", name, args == null ? AzureClientArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/azureClient:AzureClient", name, args == null ? AzureClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AzureClient(String name, Output<String> id, @Nullable AzureClientState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.EntityKeyArgs;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleArgs;
 import java.lang.String;
@@ -43,7 +44,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MembershipRoleArgs>> roles;
 
     public Output<List<MembershipRoleArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     public MembershipArgs(
@@ -56,9 +57,9 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MembershipArgs() {
-        this.groupId = Output.empty();
-        this.preferredMemberKey = Output.empty();
-        this.roles = Output.empty();
+        this.groupId = Codegen.empty();
+        this.preferredMemberKey = Codegen.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roles(@Nullable List<MembershipRoleArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(MembershipRoleArgs... roles) {

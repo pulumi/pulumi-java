@@ -17,10 +17,10 @@ public final class ManagementpartnerFunctions {
      * API Version: 2018-02-01.
      * 
      */
-    public static CompletableFuture<GetPartnerResult> getPartner(io.pulumi.azurenative.managementpartner.inputs.GetPartnerArgs args) {
-        return getPartner(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args) {
+        return getPartner(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartnerResult> getPartner(io.pulumi.azurenative.managementpartner.inputs.GetPartnerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managementpartner:getPartner", TypeShape.of(GetPartnerResult.class), args, Utilities.withVersion(options));
     }
 }

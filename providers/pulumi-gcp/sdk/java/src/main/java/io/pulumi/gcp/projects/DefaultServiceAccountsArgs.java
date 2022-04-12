@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> restorePolicy;
 
     public Output<String> getRestorePolicy() {
-        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
+        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
     public DefaultServiceAccountsArgs(
@@ -60,9 +61,9 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     }
 
     private DefaultServiceAccountsArgs() {
-        this.action = Output.empty();
-        this.project = Output.empty();
-        this.restorePolicy = Output.empty();
+        this.action = Codegen.empty();
+        this.project = Codegen.empty();
+        this.restorePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder restorePolicy(@Nullable String restorePolicy) {
-            this.restorePolicy = Output.ofNullable(restorePolicy);
+            this.restorePolicy = Codegen.ofNullable(restorePolicy);
             return this;
         }        public DefaultServiceAccountsArgs build() {
             return new DefaultServiceAccountsArgs(action, project, restorePolicy);

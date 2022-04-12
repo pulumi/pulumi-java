@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetDeltaTimeSessionWindowConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class DatasetLateDataRuleConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<DatasetDeltaTimeSessionWindowConfigurationArgs> deltaTimeSessionWindowConfiguration;
 
     public Output<DatasetDeltaTimeSessionWindowConfigurationArgs> getDeltaTimeSessionWindowConfiguration() {
-        return this.deltaTimeSessionWindowConfiguration == null ? Output.empty() : this.deltaTimeSessionWindowConfiguration;
+        return this.deltaTimeSessionWindowConfiguration == null ? Codegen.empty() : this.deltaTimeSessionWindowConfiguration;
     }
 
     public DatasetLateDataRuleConfigurationArgs(@Nullable Output<DatasetDeltaTimeSessionWindowConfigurationArgs> deltaTimeSessionWindowConfiguration) {
@@ -26,7 +27,7 @@ public final class DatasetLateDataRuleConfigurationArgs extends io.pulumi.resour
     }
 
     private DatasetLateDataRuleConfigurationArgs() {
-        this.deltaTimeSessionWindowConfiguration = Output.empty();
+        this.deltaTimeSessionWindowConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DatasetLateDataRuleConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder deltaTimeSessionWindowConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfigurationArgs deltaTimeSessionWindowConfiguration) {
-            this.deltaTimeSessionWindowConfiguration = Output.ofNullable(deltaTimeSessionWindowConfiguration);
+            this.deltaTimeSessionWindowConfiguration = Codegen.ofNullable(deltaTimeSessionWindowConfiguration);
             return this;
         }        public DatasetLateDataRuleConfigurationArgs build() {
             return new DatasetLateDataRuleConfigurationArgs(deltaTimeSessionWindowConfiguration);

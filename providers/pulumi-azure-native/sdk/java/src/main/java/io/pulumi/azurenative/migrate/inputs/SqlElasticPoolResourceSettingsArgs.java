@@ -7,6 +7,7 @@ import io.pulumi.azurenative.migrate.enums.ZoneRedundant;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -51,7 +52,7 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
       private final @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
     public Output<Either<String,ZoneRedundant>> getZoneRedundant() {
-        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
+        return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
     }
 
     public SqlElasticPoolResourceSettingsArgs(
@@ -64,9 +65,9 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
     }
 
     private SqlElasticPoolResourceSettingsArgs() {
-        this.resourceType = Output.empty();
-        this.targetResourceName = Output.empty();
-        this.zoneRedundant = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
+        this.zoneRedundant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder zoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
-            this.zoneRedundant = Output.ofNullable(zoneRedundant);
+            this.zoneRedundant = Codegen.ofNullable(zoneRedundant);
             return this;
         }        public SqlElasticPoolResourceSettingsArgs build() {
             return new SqlElasticPoolResourceSettingsArgs(resourceType, targetResourceName, zoneRedundant);

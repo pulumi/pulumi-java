@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
 
     public Output<BotAliasCodeHookSpecificationArgs> getCodeHookSpecification() {
-        return this.codeHookSpecification == null ? Output.empty() : this.codeHookSpecification;
+        return this.codeHookSpecification == null ? Codegen.empty() : this.codeHookSpecification;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private BotAliasLocaleSettingsArgs() {
-        this.codeHookSpecification = Output.empty();
-        this.enabled = Output.empty();
+        this.codeHookSpecification = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder codeHookSpecification(@Nullable BotAliasCodeHookSpecificationArgs codeHookSpecification) {
-            this.codeHookSpecification = Output.ofNullable(codeHookSpecification);
+            this.codeHookSpecification = Codegen.ofNullable(codeHookSpecification);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

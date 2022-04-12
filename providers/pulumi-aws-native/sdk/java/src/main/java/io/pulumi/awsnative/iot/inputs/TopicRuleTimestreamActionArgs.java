@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamDimensionArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTimestreamTimestampArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> batchMode;
 
     public Output<Boolean> getBatchMode() {
-        return this.batchMode == null ? Output.empty() : this.batchMode;
+        return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="databaseName", required=true)
@@ -57,7 +58,7 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
 
     public Output<TopicRuleTimestreamTimestampArgs> getTimestamp() {
-        return this.timestamp == null ? Output.empty() : this.timestamp;
+        return this.timestamp == null ? Codegen.empty() : this.timestamp;
     }
 
     public TopicRuleTimestreamActionArgs(
@@ -76,12 +77,12 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleTimestreamActionArgs() {
-        this.batchMode = Output.empty();
-        this.databaseName = Output.empty();
-        this.dimensions = Output.empty();
-        this.roleArn = Output.empty();
-        this.tableName = Output.empty();
-        this.timestamp = Output.empty();
+        this.batchMode = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.timestamp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Output.ofNullable(batchMode);
+            this.batchMode = Codegen.ofNullable(batchMode);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -162,7 +163,7 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder timestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
-            this.timestamp = Output.ofNullable(timestamp);
+            this.timestamp = Codegen.ofNullable(timestamp);
             return this;
         }        public TopicRuleTimestreamActionArgs build() {
             return new TopicRuleTimestreamActionArgs(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);

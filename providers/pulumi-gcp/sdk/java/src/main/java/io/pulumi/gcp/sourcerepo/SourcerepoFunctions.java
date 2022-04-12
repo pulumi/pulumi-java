@@ -12,10 +12,10 @@ import io.pulumi.gcp.sourcerepo.outputs.GetRepositoryResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class SourcerepoFunctions {
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.gcp.sourcerepo.inputs.GetRepositoryArgs args) {
-        return getRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+        return getRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.gcp.sourcerepo.inputs.GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

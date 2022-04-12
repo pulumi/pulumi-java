@@ -22,40 +22,40 @@ public final class AthenaFunctions {
      * Resource schema for AWS::Athena::DataCatalog
      * 
      */
-    public static CompletableFuture<GetDataCatalogResult> getDataCatalog(io.pulumi.awsnative.athena.inputs.GetDataCatalogArgs args) {
-        return getDataCatalog(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataCatalogResult> getDataCatalog(GetDataCatalogArgs args) {
+        return getDataCatalog(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataCatalogResult> getDataCatalog(io.pulumi.awsnative.athena.inputs.GetDataCatalogArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataCatalogResult> getDataCatalog(GetDataCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getDataCatalog", TypeShape.of(GetDataCatalogResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Athena::NamedQuery
      * 
      */
-    public static CompletableFuture<GetNamedQueryResult> getNamedQuery(io.pulumi.awsnative.athena.inputs.GetNamedQueryArgs args) {
-        return getNamedQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamedQueryResult> getNamedQuery(GetNamedQueryArgs args) {
+        return getNamedQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamedQueryResult> getNamedQuery(io.pulumi.awsnative.athena.inputs.GetNamedQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamedQueryResult> getNamedQuery(GetNamedQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getNamedQuery", TypeShape.of(GetNamedQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Athena::PreparedStatement
      * 
      */
-    public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(io.pulumi.awsnative.athena.inputs.GetPreparedStatementArgs args) {
-        return getPreparedStatement(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(GetPreparedStatementArgs args) {
+        return getPreparedStatement(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(io.pulumi.awsnative.athena.inputs.GetPreparedStatementArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(GetPreparedStatementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getPreparedStatement", TypeShape.of(GetPreparedStatementResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Athena::WorkGroup
      * 
      */
-    public static CompletableFuture<GetWorkGroupResult> getWorkGroup(io.pulumi.awsnative.athena.inputs.GetWorkGroupArgs args) {
-        return getWorkGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkGroupResult> getWorkGroup(GetWorkGroupArgs args) {
+        return getWorkGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkGroupResult> getWorkGroup(io.pulumi.awsnative.athena.inputs.GetWorkGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkGroupResult> getWorkGroup(GetWorkGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getWorkGroup", TypeShape.of(GetWorkGroupResult.class), args, Utilities.withVersion(options));
     }
 }

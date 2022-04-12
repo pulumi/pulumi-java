@@ -17,12 +17,12 @@ public final class IotFunctions {
      * 
      */
     public static CompletableFuture<GetEndpointResult> getEndpoint() {
-        return getEndpoint(io.pulumi.aws.iot.inputs.GetEndpointArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEndpoint(GetEndpointArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.aws.iot.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.aws.iot.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iot/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

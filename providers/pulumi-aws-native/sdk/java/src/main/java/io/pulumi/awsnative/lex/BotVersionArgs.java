@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex;
 import io.pulumi.awsnative.lex.inputs.BotVersionLocaleSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     public BotVersionArgs(
@@ -47,9 +48,9 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotVersionArgs() {
-        this.botId = Output.empty();
-        this.botVersionLocaleSpecification = Output.empty();
-        this.description = Output.empty();
+        this.botId = Codegen.empty();
+        this.botVersionLocaleSpecification = Codegen.empty();
+        this.description = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }        public BotVersionArgs build() {
             return new BotVersionArgs(botId, botVersionLocaleSpecification, description);

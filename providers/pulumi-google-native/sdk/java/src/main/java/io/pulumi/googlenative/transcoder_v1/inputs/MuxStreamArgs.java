@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> container;
 
     public Output<String> getContainer() {
-        return this.container == null ? Output.empty() : this.container;
+        return this.container == null ? Codegen.empty() : this.container;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> elementaryStreams;
 
     public Output<List<String>> getElementaryStreams() {
-        return this.elementaryStreams == null ? Output.empty() : this.elementaryStreams;
+        return this.elementaryStreams == null ? Codegen.empty() : this.elementaryStreams;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileName;
 
     public Output<String> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SegmentSettingsArgs> segmentSettings;
 
     public Output<SegmentSettingsArgs> getSegmentSettings() {
-        return this.segmentSettings == null ? Output.empty() : this.segmentSettings;
+        return this.segmentSettings == null ? Codegen.empty() : this.segmentSettings;
     }
 
     public MuxStreamArgs(
@@ -89,11 +90,11 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MuxStreamArgs() {
-        this.container = Output.empty();
-        this.elementaryStreams = Output.empty();
-        this.fileName = Output.empty();
-        this.key = Output.empty();
-        this.segmentSettings = Output.empty();
+        this.container = Codegen.empty();
+        this.elementaryStreams = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.key = Codegen.empty();
+        this.segmentSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder container(@Nullable String container) {
-            this.container = Output.ofNullable(container);
+            this.container = Codegen.ofNullable(container);
             return this;
         }
         public Builder elementaryStreams(@Nullable Output<List<String>> elementaryStreams) {
@@ -137,7 +138,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elementaryStreams(@Nullable List<String> elementaryStreams) {
-            this.elementaryStreams = Output.ofNullable(elementaryStreams);
+            this.elementaryStreams = Codegen.ofNullable(elementaryStreams);
             return this;
         }
         public Builder elementaryStreams(String... elementaryStreams) {
@@ -148,7 +149,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -156,7 +157,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder segmentSettings(@Nullable Output<SegmentSettingsArgs> segmentSettings) {
@@ -164,7 +165,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder segmentSettings(@Nullable SegmentSettingsArgs segmentSettings) {
-            this.segmentSettings = Output.ofNullable(segmentSettings);
+            this.segmentSettings = Codegen.ofNullable(segmentSettings);
             return this;
         }        public MuxStreamArgs build() {
             return new MuxStreamArgs(container, elementaryStreams, fileName, key, segmentSettings);

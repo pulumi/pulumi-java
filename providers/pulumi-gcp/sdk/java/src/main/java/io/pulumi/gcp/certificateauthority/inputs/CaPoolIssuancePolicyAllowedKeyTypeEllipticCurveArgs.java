@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
     }
 
     private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs() {
-        this.signatureAlgorithm = Output.empty();
+        this.signatureAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {

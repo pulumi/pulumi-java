@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NodeGroupAffinityArgs() {
-        this.nodeGroupUri = Output.empty();
+        this.nodeGroupUri = Codegen.empty();
     }
 
     public static Builder builder() {

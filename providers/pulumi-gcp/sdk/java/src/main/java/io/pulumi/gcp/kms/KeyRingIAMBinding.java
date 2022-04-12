@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMBindingArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMBindingState;
@@ -163,7 +164,7 @@ public class KeyRingIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingIAMBinding(String name, KeyRingIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRingIAMBinding:KeyRingIAMBinding", name, args == null ? KeyRingIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRingIAMBinding:KeyRingIAMBinding", name, args == null ? KeyRingIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingIAMBinding(String name, Output<String> id, @Nullable KeyRingIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

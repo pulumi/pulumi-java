@@ -16,10 +16,10 @@ public final class IotcoredeviceadvisorFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(io.pulumi.awsnative.iotcoredeviceadvisor.inputs.GetSuiteDefinitionArgs args) {
-        return getSuiteDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(GetSuiteDefinitionArgs args) {
+        return getSuiteDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(io.pulumi.awsnative.iotcoredeviceadvisor.inputs.GetSuiteDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSuiteDefinitionResult> getSuiteDefinition(GetSuiteDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotcoredeviceadvisor:getSuiteDefinition", TypeShape.of(GetSuiteDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

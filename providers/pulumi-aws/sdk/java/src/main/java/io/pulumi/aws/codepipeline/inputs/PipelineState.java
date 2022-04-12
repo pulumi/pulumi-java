@@ -7,6 +7,7 @@ import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreGetArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore;
 
     public Output<PipelineArtifactStoreGetArgs> getArtifactStore() {
-        return this.artifactStore == null ? Output.empty() : this.artifactStore;
+        return this.artifactStore == null ? Codegen.empty() : this.artifactStore;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PipelineStageGetArgs>> stages;
 
     public Output<List<PipelineStageGetArgs>> getStages() {
-        return this.stages == null ? Output.empty() : this.stages;
+        return this.stages == null ? Codegen.empty() : this.stages;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public PipelineState(
@@ -113,13 +114,13 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineState() {
-        this.arn = Output.empty();
-        this.artifactStore = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.stages = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.artifactStore = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stages = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder artifactStore(@Nullable Output<PipelineArtifactStoreGetArgs> artifactStore) {
@@ -167,7 +168,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactStore(@Nullable PipelineArtifactStoreGetArgs artifactStore) {
-            this.artifactStore = Output.ofNullable(artifactStore);
+            this.artifactStore = Codegen.ofNullable(artifactStore);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -175,7 +176,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -183,7 +184,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder stages(@Nullable Output<List<PipelineStageGetArgs>> stages) {
@@ -191,7 +192,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stages(@Nullable List<PipelineStageGetArgs> stages) {
-            this.stages = Output.ofNullable(stages);
+            this.stages = Codegen.ofNullable(stages);
             return this;
         }
         public Builder stages(PipelineStageGetArgs... stages) {
@@ -202,7 +203,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -210,7 +211,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public PipelineState build() {
             return new PipelineState(arn, artifactStore, name, roleArn, stages, tags, tagsAll);

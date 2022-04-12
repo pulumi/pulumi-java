@@ -18,20 +18,20 @@ public final class Bigqueryreservation_v1Functions {
      * Returns information about the capacity commitment.
      * 
      */
-    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(io.pulumi.googlenative.bigqueryreservation_v1.inputs.GetCapacityCommitmentArgs args) {
-        return getCapacityCommitment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args) {
+        return getCapacityCommitment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(io.pulumi.googlenative.bigqueryreservation_v1.inputs.GetCapacityCommitmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapacityCommitmentResult> getCapacityCommitment(GetCapacityCommitmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1:getCapacityCommitment", TypeShape.of(GetCapacityCommitmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about the reservation.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(io.pulumi.googlenative.bigqueryreservation_v1.inputs.GetReservationArgs args) {
-        return getReservation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
+        return getReservation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReservationResult> getReservation(io.pulumi.googlenative.bigqueryreservation_v1.inputs.GetReservationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigqueryreservation/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ public final class Apikeys_v2Functions {
      * Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.apikeys_v2.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.apikeys_v2.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apikeys/v2:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
 import java.lang.Double;
@@ -28,7 +29,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<BasicSliArgs> basicSliPerformance;
 
     public Output<BasicSliArgs> getBasicSliPerformance() {
-        return this.basicSliPerformance == null ? Output.empty() : this.basicSliPerformance;
+        return this.basicSliPerformance == null ? Codegen.empty() : this.basicSliPerformance;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<RequestBasedSliArgs> performance;
 
     public Output<RequestBasedSliArgs> getPerformance() {
-        return this.performance == null ? Output.empty() : this.performance;
+        return this.performance == null ? Codegen.empty() : this.performance;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     public PerformanceThresholdArgs(
@@ -63,9 +64,9 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
     }
 
     private PerformanceThresholdArgs() {
-        this.basicSliPerformance = Output.empty();
-        this.performance = Output.empty();
-        this.threshold = Output.empty();
+        this.basicSliPerformance = Codegen.empty();
+        this.performance = Codegen.empty();
+        this.threshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder basicSliPerformance(@Nullable BasicSliArgs basicSliPerformance) {
-            this.basicSliPerformance = Output.ofNullable(basicSliPerformance);
+            this.basicSliPerformance = Codegen.ofNullable(basicSliPerformance);
             return this;
         }
         public Builder performance(@Nullable Output<RequestBasedSliArgs> performance) {
@@ -105,7 +106,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder performance(@Nullable RequestBasedSliArgs performance) {
-            this.performance = Output.ofNullable(performance);
+            this.performance = Codegen.ofNullable(performance);
             return this;
         }
         public Builder threshold(@Nullable Output<Double> threshold) {
@@ -113,7 +114,7 @@ public final class PerformanceThresholdArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }        public PerformanceThresholdArgs build() {
             return new PerformanceThresholdArgs(basicSliPerformance, performance, threshold);

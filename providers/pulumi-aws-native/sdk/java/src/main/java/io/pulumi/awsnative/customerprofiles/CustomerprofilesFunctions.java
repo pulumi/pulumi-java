@@ -20,30 +20,30 @@ public final class CustomerprofilesFunctions {
      * A domain defined for 3rd party data source in Profile Service
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.customerprofiles.inputs.GetDomainArgs args) {
-        return getDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+        return getDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.customerprofiles.inputs.GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema for creating an Amazon Connect Customer Profiles Integration.
      * 
      */
-    public static CompletableFuture<GetIntegrationResult> getIntegration(io.pulumi.awsnative.customerprofiles.inputs.GetIntegrationArgs args) {
-        return getIntegration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationResult> getIntegration(GetIntegrationArgs args) {
+        return getIntegration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationResult> getIntegration(io.pulumi.awsnative.customerprofiles.inputs.GetIntegrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationResult> getIntegration(GetIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getIntegration", TypeShape.of(GetIntegrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An ObjectType resource of Amazon Connect Customer Profiles
      * 
      */
-    public static CompletableFuture<GetObjectTypeResult> getObjectType(io.pulumi.awsnative.customerprofiles.inputs.GetObjectTypeArgs args) {
-        return getObjectType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetObjectTypeResult> getObjectType(GetObjectTypeArgs args) {
+        return getObjectType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetObjectTypeResult> getObjectType(io.pulumi.awsnative.customerprofiles.inputs.GetObjectTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetObjectTypeResult> getObjectType(GetObjectTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:customerprofiles:getObjectType", TypeShape.of(GetObjectTypeResult.class), args, Utilities.withVersion(options));
     }
 }

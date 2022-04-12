@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1RenewalSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
       private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
     public Output<GoogleCloudChannelV1RenewalSettingsArgs> getRenewalSettings() {
-        return this.renewalSettings == null ? Output.empty() : this.renewalSettings;
+        return this.renewalSettings == null ? Codegen.empty() : this.renewalSettings;
     }
 
     public GoogleCloudChannelV1CommitmentSettingsArgs(@Nullable Output<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
@@ -34,7 +35,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
     }
 
     private GoogleCloudChannelV1CommitmentSettingsArgs() {
-        this.renewalSettings = Output.empty();
+        this.renewalSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
             return this;
         }
         public Builder renewalSettings(@Nullable GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
-            this.renewalSettings = Output.ofNullable(renewalSettings);
+            this.renewalSettings = Codegen.ofNullable(renewalSettings);
             return this;
         }        public GoogleCloudChannelV1CommitmentSettingsArgs build() {
             return new GoogleCloudChannelV1CommitmentSettingsArgs(renewalSettings);

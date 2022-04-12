@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> managementPolicyName;
 
     public Output<String> getManagementPolicyName() {
-        return this.managementPolicyName == null ? Output.empty() : this.managementPolicyName;
+        return this.managementPolicyName == null ? Codegen.empty() : this.managementPolicyName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ManagementPolicyArgs() {
-        this.accountName = Output.empty();
-        this.managementPolicyName = Output.empty();
-        this.policy = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.managementPolicyName = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder managementPolicyName(@Nullable String managementPolicyName) {
-            this.managementPolicyName = Output.ofNullable(managementPolicyName);
+            this.managementPolicyName = Codegen.ofNullable(managementPolicyName);
             return this;
         }
         public Builder policy(Output<ManagementPolicySchemaArgs> policy) {

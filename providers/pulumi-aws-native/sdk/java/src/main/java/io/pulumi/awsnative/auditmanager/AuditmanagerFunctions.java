@@ -16,10 +16,10 @@ public final class AuditmanagerFunctions {
      * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
      * 
      */
-    public static CompletableFuture<GetAssessmentResult> getAssessment(io.pulumi.awsnative.auditmanager.inputs.GetAssessmentArgs args) {
-        return getAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args) {
+        return getAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssessmentResult> getAssessment(io.pulumi.awsnative.auditmanager.inputs.GetAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:auditmanager:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -13,6 +13,7 @@ import io.pulumi.azurenative.importexport.inputs.ReturnShippingArgs;
 import io.pulumi.azurenative.importexport.inputs.ShippingInformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> backupDriveManifest;
 
     public Output<Boolean> getBackupDriveManifest() {
-        return this.backupDriveManifest == null ? Output.empty() : this.backupDriveManifest;
+        return this.backupDriveManifest == null ? Codegen.empty() : this.backupDriveManifest;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> cancelRequested;
 
     public Output<Boolean> getCancelRequested() {
-        return this.cancelRequested == null ? Output.empty() : this.cancelRequested;
+        return this.cancelRequested == null ? Codegen.empty() : this.cancelRequested;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeliveryPackageInformationArgs> deliveryPackage;
 
     public Output<DeliveryPackageInformationArgs> getDeliveryPackage() {
-        return this.deliveryPackage == null ? Output.empty() : this.deliveryPackage;
+        return this.deliveryPackage == null ? Codegen.empty() : this.deliveryPackage;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diagnosticsPath;
 
     public Output<String> getDiagnosticsPath() {
-        return this.diagnosticsPath == null ? Output.empty() : this.diagnosticsPath;
+        return this.diagnosticsPath == null ? Codegen.empty() : this.diagnosticsPath;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DriveStatusArgs>> driveList;
 
     public Output<List<DriveStatusArgs>> getDriveList() {
-        return this.driveList == null ? Output.empty() : this.driveList;
+        return this.driveList == null ? Codegen.empty() : this.driveList;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionKeyDetailsArgs> encryptionKey;
 
     public Output<EncryptionKeyDetailsArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExportArgs> export;
 
     public Output<ExportArgs> getExport() {
-        return this.export == null ? Output.empty() : this.export;
+        return this.export == null ? Codegen.empty() : this.export;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> incompleteBlobListUri;
 
     public Output<String> getIncompleteBlobListUri() {
-        return this.incompleteBlobListUri == null ? Output.empty() : this.incompleteBlobListUri;
+        return this.incompleteBlobListUri == null ? Codegen.empty() : this.incompleteBlobListUri;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobType;
 
     public Output<String> getJobType() {
-        return this.jobType == null ? Output.empty() : this.jobType;
+        return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> percentComplete;
 
     public Output<Integer> getPercentComplete() {
-        return this.percentComplete == null ? Output.empty() : this.percentComplete;
+        return this.percentComplete == null ? Codegen.empty() : this.percentComplete;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReturnAddressArgs> returnAddress;
 
     public Output<ReturnAddressArgs> getReturnAddress() {
-        return this.returnAddress == null ? Output.empty() : this.returnAddress;
+        return this.returnAddress == null ? Codegen.empty() : this.returnAddress;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PackageInformationArgs> returnPackage;
 
     public Output<PackageInformationArgs> getReturnPackage() {
-        return this.returnPackage == null ? Output.empty() : this.returnPackage;
+        return this.returnPackage == null ? Codegen.empty() : this.returnPackage;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReturnShippingArgs> returnShipping;
 
     public Output<ReturnShippingArgs> getReturnShipping() {
-        return this.returnShipping == null ? Output.empty() : this.returnShipping;
+        return this.returnShipping == null ? Codegen.empty() : this.returnShipping;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ShippingInformationArgs> shippingInformation;
 
     public Output<ShippingInformationArgs> getShippingInformation() {
-        return this.shippingInformation == null ? Output.empty() : this.shippingInformation;
+        return this.shippingInformation == null ? Codegen.empty() : this.shippingInformation;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
+        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
     public JobDetailsArgs(
@@ -246,8 +247,8 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<ShippingInformationArgs> shippingInformation,
         @Nullable Output<String> state,
         @Nullable Output<String> storageAccountId) {
-        this.backupDriveManifest = backupDriveManifest == null ? Output.ofNullable(false) : backupDriveManifest;
-        this.cancelRequested = cancelRequested == null ? Output.ofNullable(false) : cancelRequested;
+        this.backupDriveManifest = backupDriveManifest == null ? Codegen.ofNullable(false) : backupDriveManifest;
+        this.cancelRequested = cancelRequested == null ? Codegen.ofNullable(false) : cancelRequested;
         this.deliveryPackage = deliveryPackage;
         this.diagnosticsPath = diagnosticsPath;
         this.driveList = driveList;
@@ -262,29 +263,29 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
         this.returnPackage = returnPackage;
         this.returnShipping = returnShipping;
         this.shippingInformation = shippingInformation;
-        this.state = state == null ? Output.ofNullable("Creating") : state;
+        this.state = state == null ? Codegen.ofNullable("Creating") : state;
         this.storageAccountId = storageAccountId;
     }
 
     private JobDetailsArgs() {
-        this.backupDriveManifest = Output.empty();
-        this.cancelRequested = Output.empty();
-        this.deliveryPackage = Output.empty();
-        this.diagnosticsPath = Output.empty();
-        this.driveList = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.export = Output.empty();
-        this.incompleteBlobListUri = Output.empty();
-        this.jobType = Output.empty();
-        this.logLevel = Output.empty();
-        this.percentComplete = Output.empty();
-        this.provisioningState = Output.empty();
-        this.returnAddress = Output.empty();
-        this.returnPackage = Output.empty();
-        this.returnShipping = Output.empty();
-        this.shippingInformation = Output.empty();
-        this.state = Output.empty();
-        this.storageAccountId = Output.empty();
+        this.backupDriveManifest = Codegen.empty();
+        this.cancelRequested = Codegen.empty();
+        this.deliveryPackage = Codegen.empty();
+        this.diagnosticsPath = Codegen.empty();
+        this.driveList = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.export = Codegen.empty();
+        this.incompleteBlobListUri = Codegen.empty();
+        this.jobType = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.percentComplete = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.returnAddress = Codegen.empty();
+        this.returnPackage = Codegen.empty();
+        this.returnShipping = Codegen.empty();
+        this.shippingInformation = Codegen.empty();
+        this.state = Codegen.empty();
+        this.storageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -346,7 +347,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
-            this.backupDriveManifest = Output.ofNullable(backupDriveManifest);
+            this.backupDriveManifest = Codegen.ofNullable(backupDriveManifest);
             return this;
         }
         public Builder cancelRequested(@Nullable Output<Boolean> cancelRequested) {
@@ -354,7 +355,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cancelRequested(@Nullable Boolean cancelRequested) {
-            this.cancelRequested = Output.ofNullable(cancelRequested);
+            this.cancelRequested = Codegen.ofNullable(cancelRequested);
             return this;
         }
         public Builder deliveryPackage(@Nullable Output<DeliveryPackageInformationArgs> deliveryPackage) {
@@ -362,7 +363,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryPackage(@Nullable DeliveryPackageInformationArgs deliveryPackage) {
-            this.deliveryPackage = Output.ofNullable(deliveryPackage);
+            this.deliveryPackage = Codegen.ofNullable(deliveryPackage);
             return this;
         }
         public Builder diagnosticsPath(@Nullable Output<String> diagnosticsPath) {
@@ -370,7 +371,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
-            this.diagnosticsPath = Output.ofNullable(diagnosticsPath);
+            this.diagnosticsPath = Codegen.ofNullable(diagnosticsPath);
             return this;
         }
         public Builder driveList(@Nullable Output<List<DriveStatusArgs>> driveList) {
@@ -378,7 +379,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driveList(@Nullable List<DriveStatusArgs> driveList) {
-            this.driveList = Output.ofNullable(driveList);
+            this.driveList = Codegen.ofNullable(driveList);
             return this;
         }
         public Builder driveList(DriveStatusArgs... driveList) {
@@ -389,7 +390,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionKey(@Nullable EncryptionKeyDetailsArgs encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder export(@Nullable Output<ExportArgs> export) {
@@ -397,7 +398,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder export(@Nullable ExportArgs export) {
-            this.export = Output.ofNullable(export);
+            this.export = Codegen.ofNullable(export);
             return this;
         }
         public Builder incompleteBlobListUri(@Nullable Output<String> incompleteBlobListUri) {
@@ -405,7 +406,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
-            this.incompleteBlobListUri = Output.ofNullable(incompleteBlobListUri);
+            this.incompleteBlobListUri = Codegen.ofNullable(incompleteBlobListUri);
             return this;
         }
         public Builder jobType(@Nullable Output<String> jobType) {
@@ -413,7 +414,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobType(@Nullable String jobType) {
-            this.jobType = Output.ofNullable(jobType);
+            this.jobType = Codegen.ofNullable(jobType);
             return this;
         }
         public Builder logLevel(@Nullable Output<String> logLevel) {
@@ -421,7 +422,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
@@ -429,7 +430,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder percentComplete(@Nullable Integer percentComplete) {
-            this.percentComplete = Output.ofNullable(percentComplete);
+            this.percentComplete = Codegen.ofNullable(percentComplete);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -437,7 +438,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder returnAddress(@Nullable Output<ReturnAddressArgs> returnAddress) {
@@ -445,7 +446,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnAddress(@Nullable ReturnAddressArgs returnAddress) {
-            this.returnAddress = Output.ofNullable(returnAddress);
+            this.returnAddress = Codegen.ofNullable(returnAddress);
             return this;
         }
         public Builder returnPackage(@Nullable Output<PackageInformationArgs> returnPackage) {
@@ -453,7 +454,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnPackage(@Nullable PackageInformationArgs returnPackage) {
-            this.returnPackage = Output.ofNullable(returnPackage);
+            this.returnPackage = Codegen.ofNullable(returnPackage);
             return this;
         }
         public Builder returnShipping(@Nullable Output<ReturnShippingArgs> returnShipping) {
@@ -461,7 +462,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnShipping(@Nullable ReturnShippingArgs returnShipping) {
-            this.returnShipping = Output.ofNullable(returnShipping);
+            this.returnShipping = Codegen.ofNullable(returnShipping);
             return this;
         }
         public Builder shippingInformation(@Nullable Output<ShippingInformationArgs> shippingInformation) {
@@ -469,7 +470,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shippingInformation(@Nullable ShippingInformationArgs shippingInformation) {
-            this.shippingInformation = Output.ofNullable(shippingInformation);
+            this.shippingInformation = Codegen.ofNullable(shippingInformation);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -477,7 +478,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
@@ -485,7 +486,7 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Output.ofNullable(storageAccountId);
+            this.storageAccountId = Codegen.ofNullable(storageAccountId);
             return this;
         }        public JobDetailsArgs build() {
             return new JobDetailsArgs(backupDriveManifest, cancelRequested, deliveryPackage, diagnosticsPath, driveList, encryptionKey, export, incompleteBlobListUri, jobType, logLevel, percentComplete, provisioningState, returnAddress, returnPackage, returnShipping, shippingInformation, state, storageAccountId);

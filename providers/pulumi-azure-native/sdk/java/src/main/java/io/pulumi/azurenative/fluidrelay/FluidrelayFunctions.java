@@ -19,10 +19,10 @@ public final class FluidrelayFunctions {
      * API Version: 2021-03-12-preview.
      * 
      */
-    public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerArgs args) {
-        return getFluidRelayServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(GetFluidRelayServerArgs args) {
+        return getFluidRelayServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFluidRelayServerResult> getFluidRelayServer(GetFluidRelayServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServer", TypeShape.of(GetFluidRelayServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class FluidrelayFunctions {
      * API Version: 2021-03-12-preview.
      * 
      */
-    public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerKeysArgs args) {
-        return getFluidRelayServerKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(GetFluidRelayServerKeysArgs args) {
+        return getFluidRelayServerKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(io.pulumi.azurenative.fluidrelay.inputs.GetFluidRelayServerKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFluidRelayServerKeysResult> getFluidRelayServerKeys(GetFluidRelayServerKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServerKeys", TypeShape.of(GetFluidRelayServerKeysResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -20,30 +20,30 @@ public final class Connectors_v1Functions {
      * Gets details of a single Connection.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.googlenative.connectors_v1.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.googlenative.connectors_v1.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(io.pulumi.googlenative.connectors_v1.inputs.GetConnectionIamPolicyArgs args) {
-        return getConnectionIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args) {
+        return getConnectionIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(io.pulumi.googlenative.connectors_v1.inputs.GetConnectionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnectionIamPolicy", TypeShape.of(GetConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(io.pulumi.googlenative.connectors_v1.inputs.GetProviderIamPolicyArgs args) {
-        return getProviderIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args) {
+        return getProviderIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(io.pulumi.googlenative.connectors_v1.inputs.GetProviderIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getProviderIamPolicy", TypeShape.of(GetProviderIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

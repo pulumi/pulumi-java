@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> containerType;
 
     public Output<String> getContainerType() {
-        return this.containerType == null ? Output.empty() : this.containerType;
+        return this.containerType == null ? Codegen.empty() : this.containerType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sha1;
 
     public Output<String> getSha1() {
-        return this.sha1 == null ? Output.empty() : this.sha1;
+        return this.sha1 == null ? Codegen.empty() : this.sha1;
     }
 
     /**
@@ -65,9 +66,9 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRawDiskArgs() {
-        this.containerType = Output.empty();
-        this.sha1 = Output.empty();
-        this.source = Output.empty();
+        this.containerType = Codegen.empty();
+        this.sha1 = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerType(@Nullable String containerType) {
-            this.containerType = Output.ofNullable(containerType);
+            this.containerType = Codegen.ofNullable(containerType);
             return this;
         }
         public Builder sha1(@Nullable Output<String> sha1) {
@@ -107,7 +108,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sha1(@Nullable String sha1) {
-            this.sha1 = Output.ofNullable(sha1);
+            this.sha1 = Codegen.ofNullable(sha1);
             return this;
         }
         public Builder source(Output<String> source) {

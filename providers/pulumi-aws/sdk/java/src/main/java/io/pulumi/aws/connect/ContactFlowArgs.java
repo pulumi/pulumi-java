@@ -5,6 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
     public Output<String> getContentHash() {
-        return this.contentHash == null ? Output.empty() : this.contentHash;
+        return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
-        return this.filename == null ? Output.empty() : this.filename;
+        return this.filename == null ? Codegen.empty() : this.filename;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ContactFlowArgs(
@@ -119,14 +120,14 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactFlowArgs() {
-        this.content = Output.empty();
-        this.contentHash = Output.empty();
-        this.description = Output.empty();
-        this.filename = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.content = Codegen.empty();
+        this.contentHash = Codegen.empty();
+        this.description = Codegen.empty();
+        this.filename = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentHash(@Nullable Output<String> contentHash) {
@@ -176,7 +177,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = Output.ofNullable(contentHash);
+            this.contentHash = Codegen.ofNullable(contentHash);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -184,7 +185,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder filename(@Nullable Output<String> filename) {
@@ -192,7 +193,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filename(@Nullable String filename) {
-            this.filename = Output.ofNullable(filename);
+            this.filename = Codegen.ofNullable(filename);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -208,7 +209,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -216,7 +217,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -224,7 +225,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ContactFlowArgs build() {
             return new ContactFlowArgs(content, contentHash, description, filename, instanceId, name, tags, type);

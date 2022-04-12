@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
       private final @Nullable Output<String> hostPort;
 
     public Output<String> getHostPort() {
-        return this.hostPort == null ? Output.empty() : this.hostPort;
+        return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
       private final @Nullable Output<String> jMXURL;
 
     public Output<String> getJMXURL() {
-        return this.jMXURL == null ? Output.empty() : this.jMXURL;
+        return this.jMXURL == null ? Codegen.empty() : this.jMXURL;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
       private final @Nullable Output<String> prometheusPort;
 
     public Output<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
+        return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 
     public ApplicationJMXPrometheusExporterArgs(
@@ -61,9 +62,9 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
     }
 
     private ApplicationJMXPrometheusExporterArgs() {
-        this.hostPort = Output.empty();
-        this.jMXURL = Output.empty();
-        this.prometheusPort = Output.empty();
+        this.hostPort = Codegen.empty();
+        this.jMXURL = Codegen.empty();
+        this.prometheusPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
             return this;
         }
         public Builder hostPort(@Nullable String hostPort) {
-            this.hostPort = Output.ofNullable(hostPort);
+            this.hostPort = Codegen.ofNullable(hostPort);
             return this;
         }
         public Builder jMXURL(@Nullable Output<String> jMXURL) {
@@ -103,7 +104,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
             return this;
         }
         public Builder jMXURL(@Nullable String jMXURL) {
-            this.jMXURL = Output.ofNullable(jMXURL);
+            this.jMXURL = Codegen.ofNullable(jMXURL);
             return this;
         }
         public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
@@ -111,7 +112,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
             return this;
         }
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Output.ofNullable(prometheusPort);
+            this.prometheusPort = Codegen.ofNullable(prometheusPort);
             return this;
         }        public ApplicationJMXPrometheusExporterArgs build() {
             return new ApplicationJMXPrometheusExporterArgs(hostPort, jMXURL, prometheusPort);

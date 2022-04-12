@@ -17,10 +17,10 @@ public final class ConfidentialledgerFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetLedgerResult> getLedger(io.pulumi.azurenative.confidentialledger.inputs.GetLedgerArgs args) {
-        return getLedger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args) {
+        return getLedger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLedgerResult> getLedger(io.pulumi.azurenative.confidentialledger.inputs.GetLedgerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confidentialledger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }
 }

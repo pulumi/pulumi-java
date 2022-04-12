@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> multistepNumber;
 
     public Output<Integer> getMultistepNumber() {
-        return this.multistepNumber == null ? Output.empty() : this.multistepNumber;
+        return this.multistepNumber == null ? Codegen.empty() : this.multistepNumber;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PrimaryStepArgs> primaryStep;
 
     public Output<PrimaryStepArgs> getPrimaryStep() {
-        return this.primaryStep == null ? Output.empty() : this.primaryStep;
+        return this.primaryStep == null ? Codegen.empty() : this.primaryStep;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> primaryStepId;
 
     public Output<String> getPrimaryStepId() {
-        return this.primaryStepId == null ? Output.empty() : this.primaryStepId;
+        return this.primaryStepId == null ? Codegen.empty() : this.primaryStepId;
     }
 
     public MultiStepArgs(
@@ -63,9 +64,9 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MultiStepArgs() {
-        this.multistepNumber = Output.empty();
-        this.primaryStep = Output.empty();
-        this.primaryStepId = Output.empty();
+        this.multistepNumber = Codegen.empty();
+        this.primaryStep = Codegen.empty();
+        this.primaryStepId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
-            this.multistepNumber = Output.ofNullable(multistepNumber);
+            this.multistepNumber = Codegen.ofNullable(multistepNumber);
             return this;
         }
         public Builder primaryStep(@Nullable Output<PrimaryStepArgs> primaryStep) {
@@ -105,7 +106,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryStep(@Nullable PrimaryStepArgs primaryStep) {
-            this.primaryStep = Output.ofNullable(primaryStep);
+            this.primaryStep = Codegen.ofNullable(primaryStep);
             return this;
         }
         public Builder primaryStepId(@Nullable Output<String> primaryStepId) {
@@ -113,7 +114,7 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryStepId(@Nullable String primaryStepId) {
-            this.primaryStepId = Output.ofNullable(primaryStepId);
+            this.primaryStepId = Codegen.ofNullable(primaryStepId);
             return this;
         }        public MultiStepArgs build() {
             return new MultiStepArgs(multistepNumber, primaryStep, primaryStepId);

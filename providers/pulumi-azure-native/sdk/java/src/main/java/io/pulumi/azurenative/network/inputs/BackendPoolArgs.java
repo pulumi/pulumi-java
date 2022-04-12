@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.BackendArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BackendArgs>> backends;
 
     public Output<List<BackendArgs>> getBackends() {
-        return this.backends == null ? Output.empty() : this.backends;
+        return this.backends == null ? Codegen.empty() : this.backends;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> healthProbeSettings;
 
     public Output<SubResourceArgs> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
+        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
     public Output<SubResourceArgs> getLoadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Output.empty() : this.loadBalancingSettings;
+        return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public BackendPoolArgs(
@@ -90,11 +91,11 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendPoolArgs() {
-        this.backends = Output.empty();
-        this.healthProbeSettings = Output.empty();
-        this.id = Output.empty();
-        this.loadBalancingSettings = Output.empty();
-        this.name = Output.empty();
+        this.backends = Codegen.empty();
+        this.healthProbeSettings = Codegen.empty();
+        this.id = Codegen.empty();
+        this.loadBalancingSettings = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backends(@Nullable List<BackendArgs> backends) {
-            this.backends = Output.ofNullable(backends);
+            this.backends = Codegen.ofNullable(backends);
             return this;
         }
         public Builder backends(BackendArgs... backends) {
@@ -141,7 +142,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
-            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -149,7 +150,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder loadBalancingSettings(@Nullable Output<SubResourceArgs> loadBalancingSettings) {
@@ -157,7 +158,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
-            this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
+            this.loadBalancingSettings = Codegen.ofNullable(loadBalancingSettings);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public BackendPoolArgs build() {
             return new BackendPoolArgs(backends, healthProbeSettings, id, loadBalancingSettings, name);

@@ -18,20 +18,20 @@ public final class KinesisvideoFunctions {
      * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
      * 
      */
-    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(io.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelArgs args) {
-        return getSignalingChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args) {
+        return getSignalingChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(io.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::KinesisVideo::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.awsnative.kinesisvideo.inputs.GetStreamArgs args) {
-        return getStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+        return getStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.awsnative.kinesisvideo.inputs.GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

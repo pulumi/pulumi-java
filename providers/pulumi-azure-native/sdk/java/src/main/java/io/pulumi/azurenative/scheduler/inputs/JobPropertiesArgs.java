@@ -8,6 +8,7 @@ import io.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobActionArgs> action;
 
     public Output<JobActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobRecurrenceArgs> recurrence;
 
     public Output<JobRecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Output.empty() : this.recurrence;
+        return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobState> state;
 
     public Output<JobState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public JobPropertiesArgs(
@@ -73,10 +74,10 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobPropertiesArgs() {
-        this.action = Output.empty();
-        this.recurrence = Output.empty();
-        this.startTime = Output.empty();
-        this.state = Output.empty();
+        this.action = Codegen.empty();
+        this.recurrence = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable JobActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder recurrence(@Nullable Output<JobRecurrenceArgs> recurrence) {
@@ -118,7 +119,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recurrence(@Nullable JobRecurrenceArgs recurrence) {
-            this.recurrence = Output.ofNullable(recurrence);
+            this.recurrence = Codegen.ofNullable(recurrence);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -126,7 +127,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder state(@Nullable Output<JobState> state) {
@@ -134,7 +135,7 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable JobState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public JobPropertiesArgs build() {
             return new JobPropertiesArgs(action, recurrence, startTime, state);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> includeHttpHeaders;
 
     public Output<List<String>> getIncludeHttpHeaders() {
-        return this.includeHttpHeaders == null ? Output.empty() : this.includeHttpHeaders;
+        return this.includeHttpHeaders == null ? Codegen.empty() : this.includeHttpHeaders;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> queryStringWhitelist;
 
     public Output<List<String>> getQueryStringWhitelist() {
-        return this.queryStringWhitelist == null ? Output.empty() : this.queryStringWhitelist;
+        return this.queryStringWhitelist == null ? Codegen.empty() : this.queryStringWhitelist;
     }
 
     public BackendBucketCdnPolicyCacheKeyPolicyArgs(
@@ -49,8 +50,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     }
 
     private BackendBucketCdnPolicyCacheKeyPolicyArgs() {
-        this.includeHttpHeaders = Output.empty();
-        this.queryStringWhitelist = Output.empty();
+        this.includeHttpHeaders = Codegen.empty();
+        this.queryStringWhitelist = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
-            this.includeHttpHeaders = Output.ofNullable(includeHttpHeaders);
+            this.includeHttpHeaders = Codegen.ofNullable(includeHttpHeaders);
             return this;
         }
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
@@ -91,7 +92,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
-            this.queryStringWhitelist = Output.ofNullable(queryStringWhitelist);
+            this.queryStringWhitelist = Codegen.ofNullable(queryStringWhitelist);
             return this;
         }
         public Builder queryStringWhitelist(String... queryStringWhitelist) {

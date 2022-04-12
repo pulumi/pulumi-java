@@ -33,10 +33,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.azurenative.timeseriesinsights.inputs.GetAccessPolicyArgs args) {
-        return getAccessPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+        return getAccessPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.azurenative.timeseriesinsights.inputs.GetAccessPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.azurenative.timeseriesinsights.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.azurenative.timeseriesinsights.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,10 +59,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetEventHubEventSourceArgs args) {
-        return getEventHubEventSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args) {
+        return getEventHubEventSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetEventHubEventSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubEventSourceResult> getEventHubEventSource(GetEventHubEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventHubEventSource", TypeShape.of(GetEventHubEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,10 +74,10 @@ public final class TimeseriesinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
-    public static CompletableFuture<GetEventSourceResult> getEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetEventSourceArgs args) {
-        return getEventSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
+        return getEventSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSourceResult> getEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetEventSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,10 +85,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(io.pulumi.azurenative.timeseriesinsights.inputs.GetGen1EnvironmentArgs args) {
-        return getGen1Environment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args) {
+        return getGen1Environment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(io.pulumi.azurenative.timeseriesinsights.inputs.GetGen1EnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGen1EnvironmentResult> getGen1Environment(GetGen1EnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen1Environment", TypeShape.of(GetGen1EnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(io.pulumi.azurenative.timeseriesinsights.inputs.GetGen2EnvironmentArgs args) {
-        return getGen2Environment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args) {
+        return getGen2Environment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(io.pulumi.azurenative.timeseriesinsights.inputs.GetGen2EnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGen2EnvironmentResult> getGen2Environment(GetGen2EnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getGen2Environment", TypeShape.of(GetGen2EnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetIoTHubEventSourceArgs args) {
-        return getIoTHubEventSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args) {
+        return getIoTHubEventSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(io.pulumi.azurenative.timeseriesinsights.inputs.GetIoTHubEventSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIoTHubEventSourceResult> getIoTHubEventSource(GetIoTHubEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getIoTHubEventSource", TypeShape.of(GetIoTHubEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,10 +118,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2021-03-31-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.timeseriesinsights.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.timeseriesinsights.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,10 +129,10 @@ public final class TimeseriesinsightsFunctions {
      * API Version: 2020-05-15.
      * 
      */
-    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(io.pulumi.azurenative.timeseriesinsights.inputs.GetReferenceDataSetArgs args) {
-        return getReferenceDataSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args) {
+        return getReferenceDataSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(io.pulumi.azurenative.timeseriesinsights.inputs.GetReferenceDataSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReferenceDataSetResult> getReferenceDataSet(GetReferenceDataSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getReferenceDataSet", TypeShape.of(GetReferenceDataSetResult.class), args, Utilities.withVersion(options));
     }
 }

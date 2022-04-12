@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
       private final @Nullable Output<String> auth;
 
     public Output<String> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
     }
 
     private ClusterAddonsConfigIstioConfigArgs() {
-        this.auth = Output.empty();
-        this.disabled = Output.empty();
+        this.auth = Codegen.empty();
+        this.disabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder auth(@Nullable String auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder disabled(Output<Boolean> disabled) {

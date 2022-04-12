@@ -17,10 +17,10 @@ public final class WindowsesuFunctions {
      * API Version: 2019-09-16-preview.
      * 
      */
-    public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(io.pulumi.azurenative.windowsesu.inputs.GetMultipleActivationKeyArgs args) {
-        return getMultipleActivationKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(GetMultipleActivationKeyArgs args) {
+        return getMultipleActivationKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(io.pulumi.azurenative.windowsesu.inputs.GetMultipleActivationKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMultipleActivationKeyResult> getMultipleActivationKey(GetMultipleActivationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:windowsesu:getMultipleActivationKey", TypeShape.of(GetMultipleActivationKeyResult.class), args, Utilities.withVersion(options));
     }
 }

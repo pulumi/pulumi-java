@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidMatrixArgs() {
-        this.androidModelIds = Output.empty();
-        this.androidVersionIds = Output.empty();
-        this.locales = Output.empty();
-        this.orientations = Output.empty();
+        this.androidModelIds = Codegen.empty();
+        this.androidVersionIds = Codegen.empty();
+        this.locales = Codegen.empty();
+        this.orientations = Codegen.empty();
     }
 
     public static Builder builder() {

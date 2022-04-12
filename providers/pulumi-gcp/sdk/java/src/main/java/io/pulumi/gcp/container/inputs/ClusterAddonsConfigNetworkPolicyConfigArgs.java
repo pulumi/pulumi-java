@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class ClusterAddonsConfigNetworkPolicyConfigArgs extends io.pulumi.
     }
 
     private ClusterAddonsConfigNetworkPolicyConfigArgs() {
-        this.disabled = Output.empty();
+        this.disabled = Codegen.empty();
     }
 
     public static Builder builder() {

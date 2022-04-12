@@ -6,6 +6,7 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.labservices.inputs.ResourceSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
-        return this.environmentName == null ? Output.empty() : this.environmentName;
+        return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceSetArgs> resourceSets;
 
     public Output<ResourceSetArgs> getResourceSets() {
-        return this.resourceSets == null ? Output.empty() : this.resourceSets;
+        return this.resourceSets == null ? Codegen.empty() : this.resourceSets;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uniqueIdentifier;
 
     public Output<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
+        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 
     public EnvironmentArgs(
@@ -150,16 +151,16 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.environmentName = Output.empty();
-        this.environmentSettingName = Output.empty();
-        this.labAccountName = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceSets = Output.empty();
-        this.tags = Output.empty();
-        this.uniqueIdentifier = Output.empty();
+        this.environmentName = Codegen.empty();
+        this.environmentSettingName = Codegen.empty();
+        this.labAccountName = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceSets = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uniqueIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Output.ofNullable(environmentName);
+            this.environmentName = Codegen.ofNullable(environmentName);
             return this;
         }
         public Builder environmentSettingName(Output<String> environmentSettingName) {
@@ -237,7 +238,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -245,7 +246,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -261,7 +262,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSets(@Nullable ResourceSetArgs resourceSets) {
-            this.resourceSets = Output.ofNullable(resourceSets);
+            this.resourceSets = Codegen.ofNullable(resourceSets);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
@@ -277,7 +278,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(environmentName, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSets, tags, uniqueIdentifier);

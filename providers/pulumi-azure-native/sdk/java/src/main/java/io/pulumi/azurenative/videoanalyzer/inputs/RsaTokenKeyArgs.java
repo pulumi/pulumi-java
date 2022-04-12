@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRsaAlgo;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -89,11 +90,11 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RsaTokenKeyArgs() {
-        this.alg = Output.empty();
-        this.e = Output.empty();
-        this.kid = Output.empty();
-        this.n = Output.empty();
-        this.type = Output.empty();
+        this.alg = Codegen.empty();
+        this.e = Codegen.empty();
+        this.kid = Codegen.empty();
+        this.n = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

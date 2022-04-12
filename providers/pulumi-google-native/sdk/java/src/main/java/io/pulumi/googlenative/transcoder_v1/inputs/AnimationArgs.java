@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationEndArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationFadeArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticArgs;
@@ -28,7 +29,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AnimationEndArgs> animationEnd;
 
     public Output<AnimationEndArgs> getAnimationEnd() {
-        return this.animationEnd == null ? Output.empty() : this.animationEnd;
+        return this.animationEnd == null ? Codegen.empty() : this.animationEnd;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AnimationFadeArgs> animationFade;
 
     public Output<AnimationFadeArgs> getAnimationFade() {
-        return this.animationFade == null ? Output.empty() : this.animationFade;
+        return this.animationFade == null ? Codegen.empty() : this.animationFade;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AnimationStaticArgs> animationStatic;
 
     public Output<AnimationStaticArgs> getAnimationStatic() {
-        return this.animationStatic == null ? Output.empty() : this.animationStatic;
+        return this.animationStatic == null ? Codegen.empty() : this.animationStatic;
     }
 
     public AnimationArgs(
@@ -63,9 +64,9 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnimationArgs() {
-        this.animationEnd = Output.empty();
-        this.animationFade = Output.empty();
-        this.animationStatic = Output.empty();
+        this.animationEnd = Codegen.empty();
+        this.animationFade = Codegen.empty();
+        this.animationStatic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder animationEnd(@Nullable AnimationEndArgs animationEnd) {
-            this.animationEnd = Output.ofNullable(animationEnd);
+            this.animationEnd = Codegen.ofNullable(animationEnd);
             return this;
         }
         public Builder animationFade(@Nullable Output<AnimationFadeArgs> animationFade) {
@@ -105,7 +106,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder animationFade(@Nullable AnimationFadeArgs animationFade) {
-            this.animationFade = Output.ofNullable(animationFade);
+            this.animationFade = Codegen.ofNullable(animationFade);
             return this;
         }
         public Builder animationStatic(@Nullable Output<AnimationStaticArgs> animationStatic) {
@@ -113,7 +114,7 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder animationStatic(@Nullable AnimationStaticArgs animationStatic) {
-            this.animationStatic = Output.ofNullable(animationStatic);
+            this.animationStatic = Codegen.ofNullable(animationStatic);
             return this;
         }        public AnimationArgs build() {
             return new AnimationArgs(animationEnd, animationFade, animationStatic);

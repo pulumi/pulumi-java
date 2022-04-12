@@ -18,20 +18,20 @@ public final class DevopsguruFunctions {
      * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.awsnative.devopsguru.inputs.GetNotificationChannelArgs args) {
-        return getNotificationChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+        return getNotificationChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.awsnative.devopsguru.inputs.GetNotificationChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
      * 
      */
-    public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(io.pulumi.awsnative.devopsguru.inputs.GetResourceCollectionArgs args) {
-        return getResourceCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(GetResourceCollectionArgs args) {
+        return getResourceCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(io.pulumi.awsnative.devopsguru.inputs.GetResourceCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceCollectionResult> getResourceCollection(GetResourceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getResourceCollection", TypeShape.of(GetResourceCollectionResult.class), args, Utilities.withVersion(options));
     }
 }

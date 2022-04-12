@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -77,7 +78,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     public AccountAssignmentArgs(
@@ -96,12 +97,12 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountAssignmentArgs() {
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.targetId = Output.empty();
-        this.targetType = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }        public AccountAssignmentArgs build() {
             return new AccountAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);

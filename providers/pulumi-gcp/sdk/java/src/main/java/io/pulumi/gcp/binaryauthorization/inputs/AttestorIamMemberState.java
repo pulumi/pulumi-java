@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> attestor;
 
     public Output<String> getAttestor() {
-        return this.attestor == null ? Output.empty() : this.attestor;
+        return this.attestor == null ? Codegen.empty() : this.attestor;
     }
 
     @Import(name="condition")
       private final @Nullable Output<AttestorIamMemberConditionGetArgs> condition;
 
     public Output<AttestorIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -41,14 +42,14 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public AttestorIamMemberState(
@@ -92,12 +93,12 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private AttestorIamMemberState() {
-        this.attestor = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.attestor = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder attestor(@Nullable String attestor) {
-            this.attestor = Output.ofNullable(attestor);
+            this.attestor = Codegen.ofNullable(attestor);
             return this;
         }
         public Builder condition(@Nullable Output<AttestorIamMemberConditionGetArgs> condition) {
@@ -143,7 +144,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable AttestorIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -151,7 +152,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -159,7 +160,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -167,7 +168,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -175,7 +176,7 @@ public final class AttestorIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public AttestorIamMemberState build() {
             return new AttestorIamMemberState(attestor, condition, etag, member, project, role);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> insecureSkipVerification;
 
     public Output<Boolean> getInsecureSkipVerification() {
-        return this.insecureSkipVerification == null ? Output.empty() : this.insecureSkipVerification;
+        return this.insecureSkipVerification == null ? Codegen.empty() : this.insecureSkipVerification;
     }
 
     public IntegrationTlsConfigGetArgs(@Nullable Output<Boolean> insecureSkipVerification) {
@@ -30,7 +31,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     private IntegrationTlsConfigGetArgs() {
-        this.insecureSkipVerification = Output.empty();
+        this.insecureSkipVerification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
-            this.insecureSkipVerification = Output.ofNullable(insecureSkipVerification);
+            this.insecureSkipVerification = Codegen.ofNullable(insecureSkipVerification);
             return this;
         }        public IntegrationTlsConfigGetArgs build() {
             return new IntegrationTlsConfigGetArgs(insecureSkipVerification);

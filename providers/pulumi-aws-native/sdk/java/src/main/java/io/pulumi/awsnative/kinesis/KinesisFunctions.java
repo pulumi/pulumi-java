@@ -16,10 +16,10 @@ public final class KinesisFunctions {
      * Resource Type definition for AWS::Kinesis::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.awsnative.kinesis.inputs.GetStreamArgs args) {
-        return getStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+        return getStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.awsnative.kinesis.inputs.GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesis:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

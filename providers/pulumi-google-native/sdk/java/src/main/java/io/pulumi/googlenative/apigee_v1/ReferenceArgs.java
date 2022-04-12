@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
@@ -40,7 +41,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
@@ -69,7 +70,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public ReferenceArgs(
@@ -88,12 +89,12 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReferenceArgs() {
-        this.description = Output.empty();
-        this.environmentId = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.refers = Output.empty();
-        this.resourceType = Output.empty();
+        this.description = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.refers = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -147,7 +148,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -171,7 +172,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public ReferenceArgs build() {
             return new ReferenceArgs(description, environmentId, name, organizationId, refers, resourceType);

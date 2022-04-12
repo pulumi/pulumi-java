@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
     }
 
     private InstanceAcceleratorConfigArgs() {
-        this.coreCount = Output.empty();
-        this.type = Output.empty();
+        this.coreCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

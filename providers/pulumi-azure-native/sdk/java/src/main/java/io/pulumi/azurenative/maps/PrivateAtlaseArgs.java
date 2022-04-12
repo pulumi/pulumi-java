@@ -5,6 +5,7 @@ package io.pulumi.azurenative.maps;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateAtlasName;
 
     public Output<String> getPrivateAtlasName() {
-        return this.privateAtlasName == null ? Output.empty() : this.privateAtlasName;
+        return this.privateAtlasName == null ? Codegen.empty() : this.privateAtlasName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PrivateAtlaseArgs(
@@ -84,11 +85,11 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivateAtlaseArgs() {
-        this.accountName = Output.empty();
-        this.location = Output.empty();
-        this.privateAtlasName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.privateAtlasName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privateAtlasName(@Nullable Output<String> privateAtlasName) {
@@ -140,7 +141,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateAtlasName(@Nullable String privateAtlasName) {
-            this.privateAtlasName = Output.ofNullable(privateAtlasName);
+            this.privateAtlasName = Codegen.ofNullable(privateAtlasName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PrivateAtlaseArgs build() {
             return new PrivateAtlaseArgs(accountName, location, privateAtlasName, resourceGroupName, tags);

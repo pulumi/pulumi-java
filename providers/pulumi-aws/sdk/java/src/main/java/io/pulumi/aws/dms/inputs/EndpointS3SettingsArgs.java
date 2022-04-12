@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> bucketFolder;
 
     public Output<String> getBucketFolder() {
-        return this.bucketFolder == null ? Output.empty() : this.bucketFolder;
+        return this.bucketFolder == null ? Codegen.empty() : this.bucketFolder;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> compressionType;
 
     public Output<String> getCompressionType() {
-        return this.compressionType == null ? Output.empty() : this.compressionType;
+        return this.compressionType == null ? Codegen.empty() : this.compressionType;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> csvDelimiter;
 
     public Output<String> getCsvDelimiter() {
-        return this.csvDelimiter == null ? Output.empty() : this.csvDelimiter;
+        return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> csvRowDelimiter;
 
     public Output<String> getCsvRowDelimiter() {
-        return this.csvRowDelimiter == null ? Output.empty() : this.csvRowDelimiter;
+        return this.csvRowDelimiter == null ? Codegen.empty() : this.csvRowDelimiter;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> dataFormat;
 
     public Output<String> getDataFormat() {
-        return this.dataFormat == null ? Output.empty() : this.dataFormat;
+        return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> datePartitionEnabled;
 
     public Output<Boolean> getDatePartitionEnabled() {
-        return this.datePartitionEnabled == null ? Output.empty() : this.datePartitionEnabled;
+        return this.datePartitionEnabled == null ? Codegen.empty() : this.datePartitionEnabled;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> encryptionMode;
 
     public Output<String> getEncryptionMode() {
-        return this.encryptionMode == null ? Output.empty() : this.encryptionMode;
+        return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> externalTableDefinition;
 
     public Output<String> getExternalTableDefinition() {
-        return this.externalTableDefinition == null ? Output.empty() : this.externalTableDefinition;
+        return this.externalTableDefinition == null ? Codegen.empty() : this.externalTableDefinition;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> parquetTimestampInMillisecond;
 
     public Output<Boolean> getParquetTimestampInMillisecond() {
-        return this.parquetTimestampInMillisecond == null ? Output.empty() : this.parquetTimestampInMillisecond;
+        return this.parquetTimestampInMillisecond == null ? Codegen.empty() : this.parquetTimestampInMillisecond;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> parquetVersion;
 
     public Output<String> getParquetVersion() {
-        return this.parquetVersion == null ? Output.empty() : this.parquetVersion;
+        return this.parquetVersion == null ? Codegen.empty() : this.parquetVersion;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> serverSideEncryptionKmsKeyId;
 
     public Output<String> getServerSideEncryptionKmsKeyId() {
-        return this.serverSideEncryptionKmsKeyId == null ? Output.empty() : this.serverSideEncryptionKmsKeyId;
+        return this.serverSideEncryptionKmsKeyId == null ? Codegen.empty() : this.serverSideEncryptionKmsKeyId;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> serviceAccessRoleArn;
 
     public Output<String> getServiceAccessRoleArn() {
-        return this.serviceAccessRoleArn == null ? Output.empty() : this.serviceAccessRoleArn;
+        return this.serviceAccessRoleArn == null ? Codegen.empty() : this.serviceAccessRoleArn;
     }
 
     public EndpointS3SettingsArgs(
@@ -188,19 +189,19 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EndpointS3SettingsArgs() {
-        this.bucketFolder = Output.empty();
-        this.bucketName = Output.empty();
-        this.compressionType = Output.empty();
-        this.csvDelimiter = Output.empty();
-        this.csvRowDelimiter = Output.empty();
-        this.dataFormat = Output.empty();
-        this.datePartitionEnabled = Output.empty();
-        this.encryptionMode = Output.empty();
-        this.externalTableDefinition = Output.empty();
-        this.parquetTimestampInMillisecond = Output.empty();
-        this.parquetVersion = Output.empty();
-        this.serverSideEncryptionKmsKeyId = Output.empty();
-        this.serviceAccessRoleArn = Output.empty();
+        this.bucketFolder = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.compressionType = Codegen.empty();
+        this.csvDelimiter = Codegen.empty();
+        this.csvRowDelimiter = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.datePartitionEnabled = Codegen.empty();
+        this.encryptionMode = Codegen.empty();
+        this.externalTableDefinition = Codegen.empty();
+        this.parquetTimestampInMillisecond = Codegen.empty();
+        this.parquetVersion = Codegen.empty();
+        this.serverSideEncryptionKmsKeyId = Codegen.empty();
+        this.serviceAccessRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -252,7 +253,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder bucketFolder(@Nullable String bucketFolder) {
-            this.bucketFolder = Output.ofNullable(bucketFolder);
+            this.bucketFolder = Codegen.ofNullable(bucketFolder);
             return this;
         }
         public Builder bucketName(@Nullable Output<String> bucketName) {
@@ -260,7 +261,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder compressionType(@Nullable Output<String> compressionType) {
@@ -268,7 +269,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder compressionType(@Nullable String compressionType) {
-            this.compressionType = Output.ofNullable(compressionType);
+            this.compressionType = Codegen.ofNullable(compressionType);
             return this;
         }
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
@@ -276,7 +277,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Output.ofNullable(csvDelimiter);
+            this.csvDelimiter = Codegen.ofNullable(csvDelimiter);
             return this;
         }
         public Builder csvRowDelimiter(@Nullable Output<String> csvRowDelimiter) {
@@ -284,7 +285,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder csvRowDelimiter(@Nullable String csvRowDelimiter) {
-            this.csvRowDelimiter = Output.ofNullable(csvRowDelimiter);
+            this.csvRowDelimiter = Codegen.ofNullable(csvRowDelimiter);
             return this;
         }
         public Builder dataFormat(@Nullable Output<String> dataFormat) {
@@ -292,7 +293,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataFormat(@Nullable String dataFormat) {
-            this.dataFormat = Output.ofNullable(dataFormat);
+            this.dataFormat = Codegen.ofNullable(dataFormat);
             return this;
         }
         public Builder datePartitionEnabled(@Nullable Output<Boolean> datePartitionEnabled) {
@@ -300,7 +301,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder datePartitionEnabled(@Nullable Boolean datePartitionEnabled) {
-            this.datePartitionEnabled = Output.ofNullable(datePartitionEnabled);
+            this.datePartitionEnabled = Codegen.ofNullable(datePartitionEnabled);
             return this;
         }
         public Builder encryptionMode(@Nullable Output<String> encryptionMode) {
@@ -308,7 +309,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encryptionMode(@Nullable String encryptionMode) {
-            this.encryptionMode = Output.ofNullable(encryptionMode);
+            this.encryptionMode = Codegen.ofNullable(encryptionMode);
             return this;
         }
         public Builder externalTableDefinition(@Nullable Output<String> externalTableDefinition) {
@@ -316,7 +317,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder externalTableDefinition(@Nullable String externalTableDefinition) {
-            this.externalTableDefinition = Output.ofNullable(externalTableDefinition);
+            this.externalTableDefinition = Codegen.ofNullable(externalTableDefinition);
             return this;
         }
         public Builder parquetTimestampInMillisecond(@Nullable Output<Boolean> parquetTimestampInMillisecond) {
@@ -324,7 +325,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parquetTimestampInMillisecond(@Nullable Boolean parquetTimestampInMillisecond) {
-            this.parquetTimestampInMillisecond = Output.ofNullable(parquetTimestampInMillisecond);
+            this.parquetTimestampInMillisecond = Codegen.ofNullable(parquetTimestampInMillisecond);
             return this;
         }
         public Builder parquetVersion(@Nullable Output<String> parquetVersion) {
@@ -332,7 +333,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parquetVersion(@Nullable String parquetVersion) {
-            this.parquetVersion = Output.ofNullable(parquetVersion);
+            this.parquetVersion = Codegen.ofNullable(parquetVersion);
             return this;
         }
         public Builder serverSideEncryptionKmsKeyId(@Nullable Output<String> serverSideEncryptionKmsKeyId) {
@@ -340,7 +341,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder serverSideEncryptionKmsKeyId(@Nullable String serverSideEncryptionKmsKeyId) {
-            this.serverSideEncryptionKmsKeyId = Output.ofNullable(serverSideEncryptionKmsKeyId);
+            this.serverSideEncryptionKmsKeyId = Codegen.ofNullable(serverSideEncryptionKmsKeyId);
             return this;
         }
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
@@ -348,7 +349,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = Output.ofNullable(serviceAccessRoleArn);
+            this.serviceAccessRoleArn = Codegen.ofNullable(serviceAccessRoleArn);
             return this;
         }        public EndpointS3SettingsArgs build() {
             return new EndpointS3SettingsArgs(bucketFolder, bucketName, compressionType, csvDelimiter, csvRowDelimiter, dataFormat, datePartitionEnabled, encryptionMode, externalTableDefinition, parquetTimestampInMillisecond, parquetVersion, serverSideEncryptionKmsKeyId, serviceAccessRoleArn);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricWindowArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,9 +60,9 @@ public final class AssetModelMetricArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AssetModelMetricArgs() {
-        this.expression = Output.empty();
-        this.variables = Output.empty();
-        this.window = Output.empty();
+        this.expression = Codegen.empty();
+        this.variables = Codegen.empty();
+        this.window = Codegen.empty();
     }
 
     public static Builder builder() {

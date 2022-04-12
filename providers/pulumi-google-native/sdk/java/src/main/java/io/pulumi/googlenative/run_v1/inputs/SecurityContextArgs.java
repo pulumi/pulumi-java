@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> runAsUser;
 
     public Output<Integer> getRunAsUser() {
-        return this.runAsUser == null ? Output.empty() : this.runAsUser;
+        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
     public SecurityContextArgs(@Nullable Output<Integer> runAsUser) {
@@ -34,7 +35,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityContextArgs() {
-        this.runAsUser = Output.empty();
+        this.runAsUser = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Output.ofNullable(runAsUser);
+            this.runAsUser = Codegen.ofNullable(runAsUser);
             return this;
         }        public SecurityContextArgs build() {
             return new SecurityContextArgs(runAsUser);

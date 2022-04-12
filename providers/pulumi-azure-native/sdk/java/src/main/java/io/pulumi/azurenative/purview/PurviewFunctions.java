@@ -21,10 +21,10 @@ public final class PurviewFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.purview.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.purview.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:purview:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class PurviewFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.purview.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.purview.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:purview:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class PurviewFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.purview.inputs.ListAccountKeysArgs args) {
-        return listAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
+        return listAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.purview.inputs.ListAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:purview:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

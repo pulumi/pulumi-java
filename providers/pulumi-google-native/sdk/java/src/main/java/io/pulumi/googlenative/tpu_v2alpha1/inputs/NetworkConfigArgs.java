@@ -5,6 +5,7 @@ package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Output.empty() : this.canIpForward;
+        return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableExternalIps;
 
     public Output<Boolean> getEnableExternalIps() {
-        return this.enableExternalIps == null ? Output.empty() : this.enableExternalIps;
+        return this.enableExternalIps == null ? Codegen.empty() : this.enableExternalIps;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public NetworkConfigArgs(
@@ -75,10 +76,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkConfigArgs() {
-        this.canIpForward = Output.empty();
-        this.enableExternalIps = Output.empty();
-        this.network = Output.empty();
-        this.subnetwork = Output.empty();
+        this.canIpForward = Codegen.empty();
+        this.enableExternalIps = Codegen.empty();
+        this.network = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Output.ofNullable(canIpForward);
+            this.canIpForward = Codegen.ofNullable(canIpForward);
             return this;
         }
         public Builder enableExternalIps(@Nullable Output<Boolean> enableExternalIps) {
@@ -120,7 +121,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableExternalIps(@Nullable Boolean enableExternalIps) {
-            this.enableExternalIps = Output.ofNullable(enableExternalIps);
+            this.enableExternalIps = Codegen.ofNullable(enableExternalIps);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -128,7 +129,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -136,7 +137,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(canIpForward, enableExternalIps, network, subnetwork);

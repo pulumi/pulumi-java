@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinkAssociationArgs() {
-        this.deviceId = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.linkId = Output.empty();
+        this.deviceId = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.linkId = Codegen.empty();
     }
 
     public static Builder builder() {

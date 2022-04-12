@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<FileReferenceArgs> appApk;
 
     public Output<FileReferenceArgs> getAppApk() {
-        return this.appApk == null ? Output.empty() : this.appApk;
+        return this.appApk == null ? Codegen.empty() : this.appApk;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<AppBundleArgs> appBundle;
 
     public Output<AppBundleArgs> getAppBundle() {
-        return this.appBundle == null ? Output.empty() : this.appBundle;
+        return this.appBundle == null ? Codegen.empty() : this.appBundle;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> appPackageId;
 
     public Output<String> getAppPackageId() {
-        return this.appPackageId == null ? Output.empty() : this.appPackageId;
+        return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> scenarioLabels;
 
     public Output<List<String>> getScenarioLabels() {
-        return this.scenarioLabels == null ? Output.empty() : this.scenarioLabels;
+        return this.scenarioLabels == null ? Codegen.empty() : this.scenarioLabels;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<Integer>> scenarios;
 
     public Output<List<Integer>> getScenarios() {
-        return this.scenarios == null ? Output.empty() : this.scenarios;
+        return this.scenarios == null ? Codegen.empty() : this.scenarios;
     }
 
     public AndroidTestLoopArgs(
@@ -91,11 +92,11 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AndroidTestLoopArgs() {
-        this.appApk = Output.empty();
-        this.appBundle = Output.empty();
-        this.appPackageId = Output.empty();
-        this.scenarioLabels = Output.empty();
-        this.scenarios = Output.empty();
+        this.appApk = Codegen.empty();
+        this.appBundle = Codegen.empty();
+        this.appPackageId = Codegen.empty();
+        this.scenarioLabels = Codegen.empty();
+        this.scenarios = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Output.ofNullable(appApk);
+            this.appApk = Codegen.ofNullable(appApk);
             return this;
         }
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
@@ -139,7 +140,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Output.ofNullable(appBundle);
+            this.appBundle = Codegen.ofNullable(appBundle);
             return this;
         }
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
@@ -147,7 +148,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Output.ofNullable(appPackageId);
+            this.appPackageId = Codegen.ofNullable(appPackageId);
             return this;
         }
         public Builder scenarioLabels(@Nullable Output<List<String>> scenarioLabels) {
@@ -155,7 +156,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scenarioLabels(@Nullable List<String> scenarioLabels) {
-            this.scenarioLabels = Output.ofNullable(scenarioLabels);
+            this.scenarioLabels = Codegen.ofNullable(scenarioLabels);
             return this;
         }
         public Builder scenarioLabels(String... scenarioLabels) {
@@ -166,7 +167,7 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Output.ofNullable(scenarios);
+            this.scenarios = Codegen.ofNullable(scenarios);
             return this;
         }
         public Builder scenarios(Integer... scenarios) {

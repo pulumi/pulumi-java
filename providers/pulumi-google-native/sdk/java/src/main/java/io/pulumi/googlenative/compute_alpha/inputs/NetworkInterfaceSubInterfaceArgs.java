@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceSubInterfaceIpAllocationMode;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,14 +25,14 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="ipAllocationMode")
       private final @Nullable Output<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode;
 
     public Output<NetworkInterfaceSubInterfaceIpAllocationMode> getIpAllocationMode() {
-        return this.ipAllocationMode == null ? Output.empty() : this.ipAllocationMode;
+        return this.ipAllocationMode == null ? Codegen.empty() : this.ipAllocationMode;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> vlan;
 
     public Output<Integer> getVlan() {
-        return this.vlan == null ? Output.empty() : this.vlan;
+        return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 
     public NetworkInterfaceSubInterfaceArgs(
@@ -68,10 +69,10 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
     }
 
     private NetworkInterfaceSubInterfaceArgs() {
-        this.ipAddress = Output.empty();
-        this.ipAllocationMode = Output.empty();
-        this.subnetwork = Output.empty();
-        this.vlan = Output.empty();
+        this.ipAddress = Codegen.empty();
+        this.ipAllocationMode = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.vlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder ipAllocationMode(@Nullable Output<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode) {
@@ -113,7 +114,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ipAllocationMode(@Nullable NetworkInterfaceSubInterfaceIpAllocationMode ipAllocationMode) {
-            this.ipAllocationMode = Output.ofNullable(ipAllocationMode);
+            this.ipAllocationMode = Codegen.ofNullable(ipAllocationMode);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -121,7 +122,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder vlan(@Nullable Output<Integer> vlan) {
@@ -129,7 +130,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder vlan(@Nullable Integer vlan) {
-            this.vlan = Output.ofNullable(vlan);
+            this.vlan = Codegen.ofNullable(vlan);
             return this;
         }        public NetworkInterfaceSubInterfaceArgs build() {
             return new NetworkInterfaceSubInterfaceArgs(ipAddress, ipAllocationMode, subnetwork, vlan);

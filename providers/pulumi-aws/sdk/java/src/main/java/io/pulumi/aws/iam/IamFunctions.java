@@ -42,12 +42,12 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetAccountAliasResult> getAccountAlias() {
-        return getAccountAlias(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAccountAlias(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(io.pulumi.resources.InvokeArgs args) {
-        return getAccountAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(InvokeArgs args) {
+        return getAccountAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountAliasResult> getAccountAlias(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getAccountAlias:getAccountAlias", TypeShape.of(GetAccountAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.aws.iam.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.aws.iam.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -72,10 +72,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(io.pulumi.aws.iam.inputs.GetInstanceProfileArgs args) {
-        return getInstanceProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
+        return getInstanceProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(io.pulumi.aws.iam.inputs.GetInstanceProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getInstanceProfile:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,12 +86,12 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetPolicyResult> getPolicy() {
-        return getPolicy(io.pulumi.aws.iam.inputs.GetPolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPolicy(GetPolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.aws.iam.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.aws.iam.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getPolicy:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -103,12 +103,12 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument() {
-        return getPolicyDocument(io.pulumi.aws.iam.inputs.GetPolicyDocumentArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPolicyDocument(GetPolicyDocumentArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(io.pulumi.aws.iam.inputs.GetPolicyDocumentArgs args) {
-        return getPolicyDocument(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args) {
+        return getPolicyDocument(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(io.pulumi.aws.iam.inputs.GetPolicyDocumentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument(GetPolicyDocumentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getPolicyDocument:getPolicyDocument", TypeShape.of(GetPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -119,10 +119,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.aws.iam.inputs.GetRoleArgs args) {
-        return getRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
+        return getRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.aws.iam.inputs.GetRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getRole:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,12 +132,12 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetRolesResult> getRoles() {
-        return getRoles(io.pulumi.aws.iam.inputs.GetRolesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRoles(GetRolesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRolesResult> getRoles(io.pulumi.aws.iam.inputs.GetRolesArgs args) {
-        return getRoles(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRolesResult> getRoles(GetRolesArgs args) {
+        return getRoles(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRolesResult> getRoles(io.pulumi.aws.iam.inputs.GetRolesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRolesResult> getRoles(GetRolesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getRoles:getRoles", TypeShape.of(GetRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,18 +147,18 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetServerCertificateResult> getServerCertificate() {
-        return getServerCertificate(io.pulumi.aws.iam.inputs.GetServerCertificateArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getServerCertificate(GetServerCertificateArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(io.pulumi.aws.iam.inputs.GetServerCertificateArgs args) {
-        return getServerCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args) {
+        return getServerCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(io.pulumi.aws.iam.inputs.GetServerCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerCertificateResult> getServerCertificate(GetServerCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getServerCertificate:getServerCertificate", TypeShape.of(GetServerCertificateResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSessionContextResult> getSessionContext(io.pulumi.aws.iam.inputs.GetSessionContextArgs args) {
-        return getSessionContext(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSessionContextResult> getSessionContext(GetSessionContextArgs args) {
+        return getSessionContext(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionContextResult> getSessionContext(io.pulumi.aws.iam.inputs.GetSessionContextArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSessionContextResult> getSessionContext(GetSessionContextArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getSessionContext:getSessionContext", TypeShape.of(GetSessionContextResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -169,10 +169,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.aws.iam.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.aws.iam.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -181,10 +181,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(io.pulumi.aws.iam.inputs.GetUserSshKeyArgs args) {
-        return getUserSshKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args) {
+        return getUserSshKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(io.pulumi.aws.iam.inputs.GetUserSshKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getUserSshKey:getUserSshKey", TypeShape.of(GetUserSshKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -194,12 +194,12 @@ public final class IamFunctions {
      * 
      */
     public static CompletableFuture<GetUsersResult> getUsers() {
-        return getUsers(io.pulumi.aws.iam.inputs.GetUsersArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getUsers(GetUsersArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUsersResult> getUsers(io.pulumi.aws.iam.inputs.GetUsersArgs args) {
-        return getUsers(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args) {
+        return getUsers(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUsersResult> getUsers(io.pulumi.aws.iam.inputs.GetUsersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -34,10 +34,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(io.pulumi.gcp.kms.inputs.GetKMSCryptoKeyArgs args) {
-        return getKMSCryptoKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args) {
+        return getKMSCryptoKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(io.pulumi.gcp.kms.inputs.GetKMSCryptoKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKey:getKMSCryptoKey", TypeShape.of(GetKMSCryptoKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(io.pulumi.gcp.kms.inputs.GetKMSCryptoKeyVersionArgs args) {
-        return getKMSCryptoKeyVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args) {
+        return getKMSCryptoKeyVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(io.pulumi.gcp.kms.inputs.GetKMSCryptoKeyVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKeyVersion:getKMSCryptoKeyVersion", TypeShape.of(GetKMSCryptoKeyVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(io.pulumi.gcp.kms.inputs.GetKMSKeyRingArgs args) {
-        return getKMSKeyRing(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args) {
+        return getKMSKeyRing(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(io.pulumi.gcp.kms.inputs.GetKMSKeyRingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSKeyRing:getKMSKeyRing", TypeShape.of(GetKMSKeyRingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,16 +88,16 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(io.pulumi.gcp.kms.inputs.GetKMSSecretArgs args) {
-        return getKMSSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args) {
+        return getKMSSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(io.pulumi.gcp.kms.inputs.GetKMSSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSSecretResult> getKMSSecret(GetKMSSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecret:getKMSSecret", TypeShape.of(GetKMSSecretResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(io.pulumi.gcp.kms.inputs.GetKMSSecretAsymmetricArgs args) {
-        return getKMSSecretAsymmetric(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args) {
+        return getKMSSecretAsymmetric(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(io.pulumi.gcp.kms.inputs.GetKMSSecretAsymmetricArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSSecretAsymmetricResult> getKMSSecretAsymmetric(GetKMSSecretAsymmetricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretAsymmetric:getKMSSecretAsymmetric", TypeShape.of(GetKMSSecretAsymmetricResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -115,10 +115,10 @@ public final class KmsFunctions {
      * data outside of resource definitions.
      * 
      */
-    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(io.pulumi.gcp.kms.inputs.GetKMSSecretCiphertextArgs args) {
-        return getKMSSecretCiphertext(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args) {
+        return getKMSSecretCiphertext(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(io.pulumi.gcp.kms.inputs.GetKMSSecretCiphertextArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKMSSecretCiphertextResult> getKMSSecretCiphertext(GetKMSSecretCiphertextArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSSecretCiphertext:getKMSSecretCiphertext", TypeShape.of(GetKMSSecretCiphertextResult.class), args, Utilities.withVersion(options));
     }
 }

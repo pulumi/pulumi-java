@@ -6,6 +6,7 @@ package io.pulumi.awsnative.athena.inputs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
     public Output<String> getOutputLocation() {
-        return this.outputLocation == null ? Output.empty() : this.outputLocation;
+        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     public WorkGroupResultConfigurationArgs(
@@ -41,8 +42,8 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
     }
 
     private WorkGroupResultConfigurationArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.outputLocation = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.outputLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
@@ -80,7 +81,7 @@ public final class WorkGroupResultConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Output.ofNullable(outputLocation);
+            this.outputLocation = Codegen.ofNullable(outputLocation);
             return this;
         }        public WorkGroupResultConfigurationArgs build() {
             return new WorkGroupResultConfigurationArgs(encryptionConfiguration, outputLocation);

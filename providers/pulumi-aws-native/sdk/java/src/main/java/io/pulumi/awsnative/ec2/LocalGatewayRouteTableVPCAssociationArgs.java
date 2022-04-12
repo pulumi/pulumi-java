@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.LocalGatewayRouteTableVPCAssociationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
       private final @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
     public Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
     }
 
     private LocalGatewayRouteTableVPCAssociationArgs() {
-        this.localGatewayRouteTableId = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable List<LocalGatewayRouteTableVPCAssociationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LocalGatewayRouteTableVPCAssociationTagArgs... tags) {

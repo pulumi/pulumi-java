@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
     }
 
     private ContentKeyPolicyRsaTokenKeyArgs() {
-        this.exponent = Output.empty();
-        this.modulus = Output.empty();
-        this.odataType = Output.empty();
+        this.exponent = Codegen.empty();
+        this.modulus = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {

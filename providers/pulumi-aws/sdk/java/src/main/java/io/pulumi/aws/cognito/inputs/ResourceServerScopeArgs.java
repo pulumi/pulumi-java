@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceServerScopeArgs() {
-        this.scopeDescription = Output.empty();
-        this.scopeName = Output.empty();
+        this.scopeDescription = Codegen.empty();
+        this.scopeName = Codegen.empty();
     }
 
     public static Builder builder() {

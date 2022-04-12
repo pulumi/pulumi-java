@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
-        return this.groups == null ? Output.empty() : this.groups;
+        return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
       private final @Nullable Output<List<String>> roles;
 
     public Output<List<String>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {
-        return this.users == null ? Output.empty() : this.users;
+        return this.users == null ? Codegen.empty() : this.users;
     }
 
     public BudgetActionDefinitionIamActionDefinitionGetArgs(
@@ -71,10 +72,10 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
     }
 
     private BudgetActionDefinitionIamActionDefinitionGetArgs() {
-        this.groups = Output.empty();
-        this.policyArn = Output.empty();
-        this.roles = Output.empty();
-        this.users = Output.empty();
+        this.groups = Codegen.empty();
+        this.policyArn = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.users = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
             return this;
         }
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Output.ofNullable(groups);
+            this.groups = Codegen.ofNullable(groups);
             return this;
         }
         public Builder groups(String... groups) {
@@ -127,7 +128,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
             return this;
         }
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(String... roles) {
@@ -138,7 +139,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
             return this;
         }
         public Builder users(@Nullable List<String> users) {
-            this.users = Output.ofNullable(users);
+            this.users = Codegen.ofNullable(users);
             return this;
         }
         public Builder users(String... users) {

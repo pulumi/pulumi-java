@@ -8,6 +8,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.DiagnosticsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> actionRuleName;
 
     public Output<String> getActionRuleName() {
-        return this.actionRuleName == null ? Output.empty() : this.actionRuleName;
+        return this.actionRuleName == null ? Codegen.empty() : this.actionRuleName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ActionRuleByNameArgs(
@@ -88,11 +89,11 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ActionRuleByNameArgs() {
-        this.actionRuleName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.actionRuleName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder actionRuleName(@Nullable String actionRuleName) {
-            this.actionRuleName = Output.ofNullable(actionRuleName);
+            this.actionRuleName = Codegen.ofNullable(actionRuleName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -136,7 +137,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<Object> properties) {
@@ -144,7 +145,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -160,7 +161,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ActionRuleByNameArgs build() {
             return new ActionRuleByNameArgs(actionRuleName, location, properties, resourceGroupName, tags);

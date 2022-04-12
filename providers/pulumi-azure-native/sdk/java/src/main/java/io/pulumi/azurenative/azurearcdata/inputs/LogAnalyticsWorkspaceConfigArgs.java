@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     public LogAnalyticsWorkspaceConfigArgs(
@@ -48,8 +49,8 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
     }
 
     private LogAnalyticsWorkspaceConfigArgs() {
-        this.primaryKey = Output.empty();
-        this.workspaceId = Output.empty();
+        this.primaryKey = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
@@ -87,7 +88,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }        public LogAnalyticsWorkspaceConfigArgs build() {
             return new LogAnalyticsWorkspaceConfigArgs(primaryKey, workspaceId);

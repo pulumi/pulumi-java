@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
-        return this.computerName == null ? Output.empty() : this.computerName;
+        return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sshPublicKey;
 
     public Output<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
+        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
     }
 
     public OSProfileArgs(
@@ -48,8 +49,8 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OSProfileArgs() {
-        this.computerName = Output.empty();
-        this.sshPublicKey = Output.empty();
+        this.computerName = Codegen.empty();
+        this.sshPublicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Output.ofNullable(computerName);
+            this.computerName = Codegen.ofNullable(computerName);
             return this;
         }
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
@@ -87,7 +88,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Output.ofNullable(sshPublicKey);
+            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
             return this;
         }        public OSProfileArgs build() {
             return new OSProfileArgs(computerName, sshPublicKey);

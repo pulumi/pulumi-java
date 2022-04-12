@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.AddRemoveReplicaScalingMec
 import io.pulumi.azurenative.servicefabricmesh.inputs.AverageLoadScalingTriggerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,9 +63,9 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoScalingPolicyArgs() {
-        this.mechanism = Output.empty();
-        this.name = Output.empty();
-        this.trigger = Output.empty();
+        this.mechanism = Codegen.empty();
+        this.name = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {

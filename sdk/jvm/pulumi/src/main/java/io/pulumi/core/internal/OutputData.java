@@ -98,13 +98,15 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
     public static <T> OutputData<T> ofNullable(
             ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret
     ) {
+        // Identify special cases to reuse singleton objects. Everything should use this factory method to
+        // construct instances to take advantage of this optimization.
         if (resources.isEmpty() && value == null) {
             if (isKnown && !isSecret) {
-                return empty();
+                return (OutputData<T>) Empty;
             }
             //noinspection ConstantConditions
             if (isKnown && isSecret) {
-                return emptySecret();
+                return (OutputData<T>) EmptySecret;
             }
             //noinspection ConstantConditions
             if (!isKnown && !isSecret) {
@@ -115,21 +117,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
                 return unknownSecret();
             }
         }
-        if (value == null) {
-            // rare case, of unknown or empty value but with resources
-            return new OutputData<>(resources, null, isKnown, isSecret);
-        }
         return new OutputData<>(resources, value, isKnown, isSecret);
-    }
-
-    public static <T> OutputData<T> empty() {
-        //noinspection unchecked
-        return (OutputData<T>) Empty;
-    }
-
-    public static <T> OutputData<T> emptySecret() {
-        //noinspection unchecked
-        return (OutputData<T>) EmptySecret;
     }
 
     public static <T> OutputData<T> unknown() {
@@ -213,14 +201,6 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
         return this.secret;
     }
 
-    public boolean isPresent() {
-        return this.value != null;
-    }
-
-    public boolean isEmpty() {
-        return this.value == null;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -286,7 +266,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
             @SuppressWarnings("rawtypes") @Nullable Output obj
     ) {
         if (obj == null) {
-            return CompletableFuture.completedFuture(OutputData.empty());
+            return CompletableFuture.completedFuture(OutputData.ofNullable(null));
         }
         //noinspection unchecked,rawtypes
         return ((OutputInternal<Object>) obj).getDataAsync().copy();

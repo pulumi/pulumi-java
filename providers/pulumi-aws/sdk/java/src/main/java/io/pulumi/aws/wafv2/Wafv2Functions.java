@@ -24,10 +24,10 @@ public final class Wafv2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpSetResult> getIpSet(io.pulumi.aws.wafv2.inputs.GetIpSetArgs args) {
-        return getIpSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpSetResult> getIpSet(GetIpSetArgs args) {
+        return getIpSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpSetResult> getIpSet(io.pulumi.aws.wafv2.inputs.GetIpSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpSetResult> getIpSet(GetIpSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafv2/getIpSet:getIpSet", TypeShape.of(GetIpSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class Wafv2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(io.pulumi.aws.wafv2.inputs.GetRegexPatternSetArgs args) {
-        return getRegexPatternSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
+        return getRegexPatternSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(io.pulumi.aws.wafv2.inputs.GetRegexPatternSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafv2/getRegexPatternSet:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class Wafv2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.aws.wafv2.inputs.GetRuleGroupArgs args) {
-        return getRuleGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
+        return getRuleGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.aws.wafv2.inputs.GetRuleGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafv2/getRuleGroup:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class Wafv2Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(io.pulumi.aws.wafv2.inputs.GetWebAclArgs args) {
-        return getWebAcl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+        return getWebAcl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAclResult> getWebAcl(io.pulumi.aws.wafv2.inputs.GetWebAclArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafv2/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

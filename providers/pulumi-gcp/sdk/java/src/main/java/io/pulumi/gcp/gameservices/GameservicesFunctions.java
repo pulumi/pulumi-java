@@ -20,10 +20,10 @@ public final class GameservicesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(io.pulumi.gcp.gameservices.inputs.GetGameServerDeploymentRolloutArgs args) {
-        return getGameServerDeploymentRollout(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args) {
+        return getGameServerDeploymentRollout(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(io.pulumi.gcp.gameservices.inputs.GetGameServerDeploymentRolloutArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args, Utilities.withVersion(options));
     }
 }

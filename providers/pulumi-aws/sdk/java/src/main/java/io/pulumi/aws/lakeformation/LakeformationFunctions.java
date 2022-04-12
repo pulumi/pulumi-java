@@ -23,12 +23,12 @@ public final class LakeformationFunctions {
      * 
      */
     public static CompletableFuture<GetDataLakeSettingsResult> getDataLakeSettings() {
-        return getDataLakeSettings(io.pulumi.aws.lakeformation.inputs.GetDataLakeSettingsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDataLakeSettings(GetDataLakeSettingsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataLakeSettingsResult> getDataLakeSettings(io.pulumi.aws.lakeformation.inputs.GetDataLakeSettingsArgs args) {
-        return getDataLakeSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataLakeSettingsResult> getDataLakeSettings(GetDataLakeSettingsArgs args) {
+        return getDataLakeSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataLakeSettingsResult> getDataLakeSettings(io.pulumi.aws.lakeformation.inputs.GetDataLakeSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataLakeSettingsResult> getDataLakeSettings(GetDataLakeSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lakeformation/getDataLakeSettings:getDataLakeSettings", TypeShape.of(GetDataLakeSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -39,10 +39,10 @@ public final class LakeformationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPermissionsResult> getPermissions(io.pulumi.aws.lakeformation.inputs.GetPermissionsArgs args) {
-        return getPermissions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPermissionsResult> getPermissions(GetPermissionsArgs args) {
+        return getPermissions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPermissionsResult> getPermissions(io.pulumi.aws.lakeformation.inputs.GetPermissionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPermissionsResult> getPermissions(GetPermissionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lakeformation/getPermissions:getPermissions", TypeShape.of(GetPermissionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class LakeformationFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.lakeformation.inputs.GetResourceArgs args) {
-        return getResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+        return getResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.lakeformation.inputs.GetResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lakeformation/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
 }

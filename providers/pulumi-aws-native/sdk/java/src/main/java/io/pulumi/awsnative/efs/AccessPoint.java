@@ -11,6 +11,7 @@ import io.pulumi.awsnative.efs.outputs.AccessPointTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -118,7 +119,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:efs:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:efs:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

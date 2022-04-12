@@ -12,6 +12,7 @@ import io.pulumi.aws.organizations.outputs.OrganizationRoot;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -197,7 +198,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Organization(String name, @Nullable OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Organization(String name, Output<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

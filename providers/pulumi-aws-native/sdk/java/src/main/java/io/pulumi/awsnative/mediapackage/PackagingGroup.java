@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -114,7 +115,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackagingGroup(String name, @Nullable PackagingGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PackagingGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

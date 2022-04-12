@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.VideoStreamState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -199,7 +200,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VideoStream(String name, @Nullable VideoStreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/videoStream:VideoStream", name, args == null ? VideoStreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesis/videoStream:VideoStream", name, args == null ? VideoStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VideoStream(String name, Output<String> id, @Nullable VideoStreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

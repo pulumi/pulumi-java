@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.DiagnosticArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DiagnosticArgs>> diagnostics;
 
     public Output<List<DiagnosticArgs>> getDiagnostics() {
-        return this.diagnostics == null ? Output.empty() : this.diagnostics;
+        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> failCondition;
 
     public Output<String> getFailCondition() {
-        return this.failCondition == null ? Output.empty() : this.failCondition;
+        return this.failCondition == null ? Codegen.empty() : this.failCondition;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> finishCondition;
 
     public Output<String> getFinishCondition() {
-        return this.finishCondition == null ? Output.empty() : this.finishCondition;
+        return this.finishCondition == null ? Codegen.empty() : this.finishCondition;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pollingLink;
 
     public Output<String> getPollingLink() {
-        return this.pollingLink == null ? Output.empty() : this.pollingLink;
+        return this.pollingLink == null ? Codegen.empty() : this.pollingLink;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetLink;
 
     public Output<String> getTargetLink() {
-        return this.targetLink == null ? Output.empty() : this.targetLink;
+        return this.targetLink == null ? Codegen.empty() : this.targetLink;
     }
 
     public PollingOptionsArgs(
@@ -85,11 +86,11 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PollingOptionsArgs() {
-        this.diagnostics = Output.empty();
-        this.failCondition = Output.empty();
-        this.finishCondition = Output.empty();
-        this.pollingLink = Output.empty();
-        this.targetLink = Output.empty();
+        this.diagnostics = Codegen.empty();
+        this.failCondition = Codegen.empty();
+        this.finishCondition = Codegen.empty();
+        this.pollingLink = Codegen.empty();
+        this.targetLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnostics(@Nullable List<DiagnosticArgs> diagnostics) {
-            this.diagnostics = Output.ofNullable(diagnostics);
+            this.diagnostics = Codegen.ofNullable(diagnostics);
             return this;
         }
         public Builder diagnostics(DiagnosticArgs... diagnostics) {
@@ -136,7 +137,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failCondition(@Nullable String failCondition) {
-            this.failCondition = Output.ofNullable(failCondition);
+            this.failCondition = Codegen.ofNullable(failCondition);
             return this;
         }
         public Builder finishCondition(@Nullable Output<String> finishCondition) {
@@ -144,7 +145,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder finishCondition(@Nullable String finishCondition) {
-            this.finishCondition = Output.ofNullable(finishCondition);
+            this.finishCondition = Codegen.ofNullable(finishCondition);
             return this;
         }
         public Builder pollingLink(@Nullable Output<String> pollingLink) {
@@ -152,7 +153,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pollingLink(@Nullable String pollingLink) {
-            this.pollingLink = Output.ofNullable(pollingLink);
+            this.pollingLink = Codegen.ofNullable(pollingLink);
             return this;
         }
         public Builder targetLink(@Nullable Output<String> targetLink) {
@@ -160,7 +161,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetLink(@Nullable String targetLink) {
-            this.targetLink = Output.ofNullable(targetLink);
+            this.targetLink = Codegen.ofNullable(targetLink);
             return this;
         }        public PollingOptionsArgs build() {
             return new PollingOptionsArgs(diagnostics, failCondition, finishCondition, pollingLink, targetLink);

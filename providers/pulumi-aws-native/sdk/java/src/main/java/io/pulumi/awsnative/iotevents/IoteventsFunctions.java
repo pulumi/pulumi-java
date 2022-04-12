@@ -18,20 +18,20 @@ public final class IoteventsFunctions {
      * The AWS::IoTEvents::DetectorModel resource creates a detector model. You create a *detector model* (a model of your equipment or process) using *states*. For each state, you define conditional (Boolean) logic that evaluates the incoming inputs to detect significant events. When an event is detected, it can change the state or trigger custom-built or predefined actions using other AWS services. You can define additional events that trigger actions when entering or exiting a state and, optionally, when a condition is met. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
      * 
      */
-    public static CompletableFuture<GetDetectorModelResult> getDetectorModel(io.pulumi.awsnative.iotevents.inputs.GetDetectorModelArgs args) {
-        return getDetectorModel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDetectorModelResult> getDetectorModel(GetDetectorModelArgs args) {
+        return getDetectorModel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDetectorModelResult> getDetectorModel(io.pulumi.awsnative.iotevents.inputs.GetDetectorModelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDetectorModelResult> getDetectorModel(GetDetectorModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getDetectorModel", TypeShape.of(GetDetectorModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::IoTEvents::Input resource creates an input. To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT Events. This is done by sending messages as *inputs* to AWS IoT Events. For more information, see [How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*.
      * 
      */
-    public static CompletableFuture<GetInputResult> getInput(io.pulumi.awsnative.iotevents.inputs.GetInputArgs args) {
-        return getInput(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInputResult> getInput(GetInputArgs args) {
+        return getInput(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInputResult> getInput(io.pulumi.awsnative.iotevents.inputs.GetInputArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInputResult> getInput(GetInputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotevents:getInput", TypeShape.of(GetInputResult.class), args, Utilities.withVersion(options));
     }
 }

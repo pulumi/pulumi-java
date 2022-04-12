@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMAuditConfigArgs;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigState;
@@ -171,7 +172,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMAuditConfig(String name, IAMAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMAuditConfig(String name, Output<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

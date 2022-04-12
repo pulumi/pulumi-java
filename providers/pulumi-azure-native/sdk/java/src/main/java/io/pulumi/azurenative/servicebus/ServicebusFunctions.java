@@ -51,10 +51,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(io.pulumi.azurenative.servicebus.inputs.GetDisasterRecoveryConfigArgs args) {
-        return getDisasterRecoveryConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args) {
+        return getDisasterRecoveryConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(io.pulumi.azurenative.servicebus.inputs.GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(io.pulumi.azurenative.servicebus.inputs.GetMigrationConfigArgs args) {
-        return getMigrationConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args) {
+        return getMigrationConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(io.pulumi.azurenative.servicebus.inputs.GetMigrationConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMigrationConfigResult> getMigrationConfig(GetMigrationConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getMigrationConfig", TypeShape.of(GetMigrationConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.servicebus.inputs.GetNamespaceArgs args) {
-        return getNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+        return getNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.servicebus.inputs.GetNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceAuthorizationRuleArgs args) {
-        return getNamespaceAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+        return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceIpFilterRuleArgs args) {
-        return getNamespaceIpFilterRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args) {
+        return getNamespaceIpFilterRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,10 +106,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(io.pulumi.azurenative.servicebus.inputs.GetNamespaceNetworkRuleSetArgs args) {
-        return getNamespaceNetworkRuleSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args) {
+        return getNamespaceNetworkRuleSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(io.pulumi.azurenative.servicebus.inputs.GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -117,10 +117,10 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceVirtualNetworkRuleArgs args) {
-        return getNamespaceVirtualNetworkRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args) {
+        return getNamespaceVirtualNetworkRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(io.pulumi.azurenative.servicebus.inputs.GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -128,10 +128,10 @@ public final class ServicebusFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.servicebus.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.servicebus.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -139,10 +139,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.azurenative.servicebus.inputs.GetQueueArgs args) {
-        return getQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.azurenative.servicebus.inputs.GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -150,10 +150,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetQueueAuthorizationRuleArgs args) {
-        return getQueueAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args) {
+        return getQueueAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueAuthorizationRuleResult> getQueueAuthorizationRule(GetQueueAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -161,10 +161,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.azurenative.servicebus.inputs.GetRuleArgs args) {
-        return getRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+        return getRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.azurenative.servicebus.inputs.GetRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,10 +172,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.azurenative.servicebus.inputs.GetSubscriptionArgs args) {
-        return getSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+        return getSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.azurenative.servicebus.inputs.GetSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -183,10 +183,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.azurenative.servicebus.inputs.GetTopicArgs args) {
-        return getTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+        return getTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.azurenative.servicebus.inputs.GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -194,10 +194,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetTopicAuthorizationRuleArgs args) {
-        return getTopicAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args) {
+        return getTopicAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(io.pulumi.azurenative.servicebus.inputs.GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicAuthorizationRuleResult> getTopicAuthorizationRule(GetTopicAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopicAuthorizationRule", TypeShape.of(GetTopicAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -205,10 +205,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(io.pulumi.azurenative.servicebus.inputs.ListDisasterRecoveryConfigKeysArgs args) {
-        return listDisasterRecoveryConfigKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args) {
+        return listDisasterRecoveryConfigKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(io.pulumi.azurenative.servicebus.inputs.ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -216,10 +216,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.servicebus.inputs.ListNamespaceKeysArgs args) {
-        return listNamespaceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+        return listNamespaceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.servicebus.inputs.ListNamespaceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -227,10 +227,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(io.pulumi.azurenative.servicebus.inputs.ListQueueKeysArgs args) {
-        return listQueueKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args) {
+        return listQueueKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(io.pulumi.azurenative.servicebus.inputs.ListQueueKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListQueueKeysResult> listQueueKeys(ListQueueKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:listQueueKeys", TypeShape.of(ListQueueKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -238,10 +238,10 @@ public final class ServicebusFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(io.pulumi.azurenative.servicebus.inputs.ListTopicKeysArgs args) {
-        return listTopicKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args) {
+        return listTopicKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(io.pulumi.azurenative.servicebus.inputs.ListTopicKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTopicKeysResult> listTopicKeys(ListTopicKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:listTopicKeys", TypeShape.of(ListTopicKeysResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Output.empty() : this.infoTypes;
+        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     }
 
     private GooglePrivacyDlpV2InfoTypeTransformationArgs() {
-        this.infoTypes = Output.empty();
-        this.primitiveTransformation = Output.empty();
+        this.infoTypes = Codegen.empty();
+        this.primitiveTransformation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
             return this;
         }
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Output.ofNullable(infoTypes);
+            this.infoTypes = Codegen.ofNullable(infoTypes);
             return this;
         }
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {

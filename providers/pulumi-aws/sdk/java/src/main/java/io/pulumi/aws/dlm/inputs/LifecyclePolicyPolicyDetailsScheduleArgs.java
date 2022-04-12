@@ -8,6 +8,7 @@ import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionC
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> copyTags;
 
     public Output<Boolean> getCopyTags() {
-        return this.copyTags == null ? Output.empty() : this.copyTags;
+        return this.copyTags == null ? Codegen.empty() : this.copyTags;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
       private final @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules;
 
     public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> getCrossRegionCopyRules() {
-        return this.crossRegionCopyRules == null ? Output.empty() : this.crossRegionCopyRules;
+        return this.crossRegionCopyRules == null ? Codegen.empty() : this.crossRegionCopyRules;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
       private final @Nullable Output<Map<String,String>> tagsToAdd;
 
     public Output<Map<String,String>> getTagsToAdd() {
-        return this.tagsToAdd == null ? Output.empty() : this.tagsToAdd;
+        return this.tagsToAdd == null ? Codegen.empty() : this.tagsToAdd;
     }
 
     public LifecyclePolicyPolicyDetailsScheduleArgs(
@@ -102,12 +103,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
     }
 
     private LifecyclePolicyPolicyDetailsScheduleArgs() {
-        this.copyTags = Output.empty();
-        this.createRule = Output.empty();
-        this.crossRegionCopyRules = Output.empty();
-        this.name = Output.empty();
-        this.retainRule = Output.empty();
-        this.tagsToAdd = Output.empty();
+        this.copyTags = Codegen.empty();
+        this.createRule = Codegen.empty();
+        this.crossRegionCopyRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.retainRule = Codegen.empty();
+        this.tagsToAdd = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
             return this;
         }
         public Builder copyTags(@Nullable Boolean copyTags) {
-            this.copyTags = Output.ofNullable(copyTags);
+            this.copyTags = Codegen.ofNullable(copyTags);
             return this;
         }
         public Builder createRule(Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule) {
@@ -161,7 +162,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
             return this;
         }
         public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs> crossRegionCopyRules) {
-            this.crossRegionCopyRules = Output.ofNullable(crossRegionCopyRules);
+            this.crossRegionCopyRules = Codegen.ofNullable(crossRegionCopyRules);
             return this;
         }
         public Builder crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs... crossRegionCopyRules) {
@@ -188,7 +189,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
             return this;
         }
         public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
-            this.tagsToAdd = Output.ofNullable(tagsToAdd);
+            this.tagsToAdd = Codegen.ofNullable(tagsToAdd);
             return this;
         }        public LifecyclePolicyPolicyDetailsScheduleArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleArgs(copyTags, createRule, crossRegionCopyRules, name, retainRule, tagsToAdd);

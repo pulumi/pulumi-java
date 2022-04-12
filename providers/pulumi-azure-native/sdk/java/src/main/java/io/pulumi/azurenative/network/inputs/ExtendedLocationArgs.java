@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.ExtendedLocationTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExtendedLocationArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

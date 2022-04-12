@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
       private final @Nullable Output<Integer> recentSentencesCount;
 
     public Output<Integer> getRecentSentencesCount() {
-        return this.recentSentencesCount == null ? Output.empty() : this.recentSentencesCount;
+        return this.recentSentencesCount == null ? Codegen.empty() : this.recentSentencesCount;
     }
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(@Nullable Output<Integer> recentSentencesCount) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     }
 
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs() {
-        this.recentSentencesCount = Output.empty();
+        this.recentSentencesCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
             return this;
         }
         public Builder recentSentencesCount(@Nullable Integer recentSentencesCount) {
-            this.recentSentencesCount = Output.ofNullable(recentSentencesCount);
+            this.recentSentencesCount = Codegen.ofNullable(recentSentencesCount);
             return this;
         }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(recentSentencesCount);

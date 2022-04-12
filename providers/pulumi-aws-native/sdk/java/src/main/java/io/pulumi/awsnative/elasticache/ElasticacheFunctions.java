@@ -20,30 +20,30 @@ public final class ElasticacheFunctions {
      * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
      * 
      */
-    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroup(io.pulumi.awsnative.elasticache.inputs.GetGlobalReplicationGroupArgs args) {
-        return getGlobalReplicationGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroup(GetGlobalReplicationGroupArgs args) {
+        return getGlobalReplicationGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroup(io.pulumi.awsnative.elasticache.inputs.GetGlobalReplicationGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroup(GetGlobalReplicationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getGlobalReplicationGroup", TypeShape.of(GetGlobalReplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElastiCache::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.elasticache.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.elasticache.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElastiCache::UserGroup
      * 
      */
-    public static CompletableFuture<GetUserGroupResult> getUserGroup(io.pulumi.awsnative.elasticache.inputs.GetUserGroupArgs args) {
-        return getUserGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserGroupResult> getUserGroup(GetUserGroupArgs args) {
+        return getUserGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserGroupResult> getUserGroup(io.pulumi.awsnative.elasticache.inputs.GetUserGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserGroupResult> getUserGroup(GetUserGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUserGroup", TypeShape.of(GetUserGroupResult.class), args, Utilities.withVersion(options));
     }
 }

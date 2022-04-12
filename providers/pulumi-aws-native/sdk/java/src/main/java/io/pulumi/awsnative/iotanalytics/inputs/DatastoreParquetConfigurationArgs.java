@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreSchemaDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
     public Output<DatastoreSchemaDefinitionArgs> getSchemaDefinition() {
-        return this.schemaDefinition == null ? Output.empty() : this.schemaDefinition;
+        return this.schemaDefinition == null ? Codegen.empty() : this.schemaDefinition;
     }
 
     public DatastoreParquetConfigurationArgs(@Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition) {
@@ -26,7 +27,7 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
     }
 
     private DatastoreParquetConfigurationArgs() {
-        this.schemaDefinition = Output.empty();
+        this.schemaDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DatastoreParquetConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder schemaDefinition(@Nullable DatastoreSchemaDefinitionArgs schemaDefinition) {
-            this.schemaDefinition = Output.ofNullable(schemaDefinition);
+            this.schemaDefinition = Codegen.ofNullable(schemaDefinition);
             return this;
         }        public DatastoreParquetConfigurationArgs build() {
             return new DatastoreParquetConfigurationArgs(schemaDefinition);

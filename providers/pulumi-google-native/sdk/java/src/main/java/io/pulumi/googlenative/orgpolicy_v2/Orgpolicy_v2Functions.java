@@ -20,30 +20,30 @@ public final class Orgpolicy_v2Functions {
      * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
      * 
      */
-    public static CompletableFuture<GetFolderPolicyResult> getFolderPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetFolderPolicyArgs args) {
-        return getFolderPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderPolicyResult> getFolderPolicy(GetFolderPolicyArgs args) {
+        return getFolderPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderPolicyResult> getFolderPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetFolderPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderPolicyResult> getFolderPolicy(GetFolderPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:orgpolicy/v2:getFolderPolicy", TypeShape.of(GetFolderPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetOrganizationPolicyArgs args) {
-        return getOrganizationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
+        return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetOrganizationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:orgpolicy/v2:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.googlenative.orgpolicy_v2.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:orgpolicy/v2:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

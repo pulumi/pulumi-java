@@ -16,10 +16,10 @@ public final class Firestore_v1Functions {
      * Gets a composite index.
      * 
      */
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.googlenative.firestore_v1.inputs.GetIndexArgs args) {
-        return getIndex(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
+        return getIndex(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.googlenative.firestore_v1.inputs.GetIndexArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firestore/v1:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -27,10 +27,10 @@ public final class S3Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(io.pulumi.aws.s3.inputs.GetBucketArgs args) {
-        return getBucket(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+        return getBucket(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketResult> getBucket(io.pulumi.aws.s3.inputs.GetBucketArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,10 +42,10 @@ public final class S3Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(io.pulumi.aws.s3.inputs.GetBucketObjectArgs args) {
-        return getBucketObject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
+        return getBucketObject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(io.pulumi.aws.s3.inputs.GetBucketObjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -54,10 +54,10 @@ public final class S3Functions {
      * The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
      * 
      */
-    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(io.pulumi.aws.s3.inputs.GetBucketObjectsArgs args) {
-        return getBucketObjects(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args) {
+        return getBucketObjects(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(io.pulumi.aws.s3.inputs.GetBucketObjectsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObjects:getBucketObjects", TypeShape.of(GetBucketObjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,12 +68,12 @@ public final class S3Functions {
      * 
      */
     public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId() {
-        return getCanonicalUserId(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCanonicalUserId(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(io.pulumi.resources.InvokeArgs args) {
-        return getCanonicalUserId(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
+        return getCanonicalUserId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
 }

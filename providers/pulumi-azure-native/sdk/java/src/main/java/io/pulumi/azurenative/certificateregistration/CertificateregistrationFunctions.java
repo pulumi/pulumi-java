@@ -19,10 +19,10 @@ public final class CertificateregistrationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(io.pulumi.azurenative.certificateregistration.inputs.GetAppServiceCertificateOrderArgs args) {
-        return getAppServiceCertificateOrder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(GetAppServiceCertificateOrderArgs args) {
+        return getAppServiceCertificateOrder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(io.pulumi.azurenative.certificateregistration.inputs.GetAppServiceCertificateOrderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppServiceCertificateOrderResult> getAppServiceCertificateOrder(GetAppServiceCertificateOrderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:certificateregistration:getAppServiceCertificateOrder", TypeShape.of(GetAppServiceCertificateOrderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class CertificateregistrationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(io.pulumi.azurenative.certificateregistration.inputs.GetAppServiceCertificateOrderCertificateArgs args) {
-        return getAppServiceCertificateOrderCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(GetAppServiceCertificateOrderCertificateArgs args) {
+        return getAppServiceCertificateOrderCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(io.pulumi.azurenative.certificateregistration.inputs.GetAppServiceCertificateOrderCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> getAppServiceCertificateOrderCertificate(GetAppServiceCertificateOrderCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:certificateregistration:getAppServiceCertificateOrderCertificate", TypeShape.of(GetAppServiceCertificateOrderCertificateResult.class), args, Utilities.withVersion(options));
     }
 }

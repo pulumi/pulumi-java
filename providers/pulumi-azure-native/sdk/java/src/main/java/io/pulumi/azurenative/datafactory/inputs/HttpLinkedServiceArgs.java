@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> authHeaders;
 
     public Output<Object> getAuthHeaders() {
-        return this.authHeaders == null ? Output.empty() : this.authHeaders;
+        return this.authHeaders == null ? Codegen.empty() : this.authHeaders;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,HttpAuthenticationType>> authenticationType;
 
     public Output<Either<String,HttpAuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> certThumbprint;
 
     public Output<Object> getCertThumbprint() {
-        return this.certThumbprint == null ? Output.empty() : this.certThumbprint;
+        return this.certThumbprint == null ? Codegen.empty() : this.certThumbprint;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> embeddedCertData;
 
     public Output<Object> getEmbeddedCertData() {
-        return this.embeddedCertData == null ? Output.empty() : this.embeddedCertData;
+        return this.embeddedCertData == null ? Codegen.empty() : this.embeddedCertData;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
     public Output<Object> getEnableServerCertificateValidation() {
-        return this.enableServerCertificateValidation == null ? Output.empty() : this.enableServerCertificateValidation;
+        return this.enableServerCertificateValidation == null ? Codegen.empty() : this.enableServerCertificateValidation;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public HttpLinkedServiceArgs(
@@ -214,20 +215,20 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private HttpLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authHeaders = Output.empty();
-        this.authenticationType = Output.empty();
-        this.certThumbprint = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.embeddedCertData = Output.empty();
-        this.enableServerCertificateValidation = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.userName = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authHeaders = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.certThumbprint = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.embeddedCertData = Codegen.empty();
+        this.enableServerCertificateValidation = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -281,7 +282,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -292,7 +293,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authHeaders(@Nullable Object authHeaders) {
-            this.authHeaders = Output.ofNullable(authHeaders);
+            this.authHeaders = Codegen.ofNullable(authHeaders);
             return this;
         }
         public Builder authenticationType(@Nullable Output<Either<String,HttpAuthenticationType>> authenticationType) {
@@ -300,7 +301,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,HttpAuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder certThumbprint(@Nullable Output<Object> certThumbprint) {
@@ -308,7 +309,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder certThumbprint(@Nullable Object certThumbprint) {
-            this.certThumbprint = Output.ofNullable(certThumbprint);
+            this.certThumbprint = Codegen.ofNullable(certThumbprint);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -316,7 +317,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -324,7 +325,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder embeddedCertData(@Nullable Output<Object> embeddedCertData) {
@@ -332,7 +333,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder embeddedCertData(@Nullable Object embeddedCertData) {
-            this.embeddedCertData = Output.ofNullable(embeddedCertData);
+            this.embeddedCertData = Codegen.ofNullable(embeddedCertData);
             return this;
         }
         public Builder enableServerCertificateValidation(@Nullable Output<Object> enableServerCertificateValidation) {
@@ -340,7 +341,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
-            this.enableServerCertificateValidation = Output.ofNullable(enableServerCertificateValidation);
+            this.enableServerCertificateValidation = Codegen.ofNullable(enableServerCertificateValidation);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -348,7 +349,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -356,7 +357,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -364,7 +365,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -388,7 +389,7 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public HttpLinkedServiceArgs build() {
             return new HttpLinkedServiceArgs(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);

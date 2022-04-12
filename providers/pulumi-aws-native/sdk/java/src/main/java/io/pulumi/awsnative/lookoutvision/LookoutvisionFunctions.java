@@ -16,10 +16,10 @@ public final class LookoutvisionFunctions {
      * The AWS::LookoutVision::Project type creates an Amazon Lookout for Vision project. A project is a grouping of the resources needed to create and manage a Lookout for Vision model.
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.awsnative.lookoutvision.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.awsnative.lookoutvision.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutvision:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

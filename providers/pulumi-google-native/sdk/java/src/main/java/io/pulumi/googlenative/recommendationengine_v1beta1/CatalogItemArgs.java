@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs;
@@ -44,7 +45,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
     public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
-        return this.itemAttributes == null ? Output.empty() : this.itemAttributes;
+        return this.itemAttributes == null ? Codegen.empty() : this.itemAttributes;
     }
 
     /**
@@ -77,14 +78,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> itemGroupId;
 
     public Output<String> getItemGroupId() {
-        return this.itemGroupId == null ? Output.empty() : this.itemGroupId;
+        return this.itemGroupId == null ? Codegen.empty() : this.itemGroupId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,14 +96,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
-        return this.productMetadata == null ? Output.empty() : this.productMetadata;
+        return this.productMetadata == null ? Codegen.empty() : this.productMetadata;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -153,17 +154,17 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CatalogItemArgs() {
-        this.catalogId = Output.empty();
-        this.categoryHierarchies = Output.empty();
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.itemAttributes = Output.empty();
-        this.itemGroupId = Output.empty();
-        this.location = Output.empty();
-        this.productMetadata = Output.empty();
-        this.project = Output.empty();
-        this.tags = Output.empty();
-        this.title = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.categoryHierarchies = Codegen.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.itemAttributes = Codegen.empty();
+        this.itemGroupId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.productMetadata = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -246,7 +247,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder itemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
-            this.itemAttributes = Output.ofNullable(itemAttributes);
+            this.itemAttributes = Codegen.ofNullable(itemAttributes);
             return this;
         }
         public Builder itemGroupId(@Nullable Output<String> itemGroupId) {
@@ -254,7 +255,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder itemGroupId(@Nullable String itemGroupId) {
-            this.itemGroupId = Output.ofNullable(itemGroupId);
+            this.itemGroupId = Codegen.ofNullable(itemGroupId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -262,7 +263,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder productMetadata(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
@@ -270,7 +271,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
-            this.productMetadata = Output.ofNullable(productMetadata);
+            this.productMetadata = Codegen.ofNullable(productMetadata);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -278,7 +279,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -286,7 +287,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

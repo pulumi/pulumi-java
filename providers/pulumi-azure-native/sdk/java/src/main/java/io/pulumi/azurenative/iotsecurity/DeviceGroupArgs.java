@@ -5,6 +5,7 @@ package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceGroupName;
 
     public Output<String> getDeviceGroupName() {
-        return this.deviceGroupName == null ? Output.empty() : this.deviceGroupName;
+        return this.deviceGroupName == null ? Codegen.empty() : this.deviceGroupName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceGroupArgs() {
-        this.deviceGroupName = Output.empty();
-        this.iotDefenderLocation = Output.empty();
+        this.deviceGroupName = Codegen.empty();
+        this.iotDefenderLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceGroupName(@Nullable String deviceGroupName) {
-            this.deviceGroupName = Output.ofNullable(deviceGroupName);
+            this.deviceGroupName = Codegen.ofNullable(deviceGroupName);
             return this;
         }
         public Builder iotDefenderLocation(Output<String> iotDefenderLocation) {

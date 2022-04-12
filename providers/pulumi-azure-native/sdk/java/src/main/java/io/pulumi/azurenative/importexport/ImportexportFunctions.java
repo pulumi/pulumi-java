@@ -19,10 +19,10 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.importexport.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.importexport.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(io.pulumi.azurenative.importexport.inputs.ListBitLockerKeyArgs args) {
-        return listBitLockerKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args) {
+        return listBitLockerKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(io.pulumi.azurenative.importexport.inputs.ListBitLockerKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args, Utilities.withVersion(options));
     }
 }

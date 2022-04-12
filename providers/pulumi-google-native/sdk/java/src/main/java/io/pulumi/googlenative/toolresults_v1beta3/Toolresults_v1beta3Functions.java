@@ -22,40 +22,40 @@ public final class Toolresults_v1beta3Functions {
      * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
      * 
      */
-    public static CompletableFuture<GetExecutionResult> getExecution(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetExecutionArgs args) {
-        return getExecution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args) {
+        return getExecution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExecutionResult> getExecution(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetExecutionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExecutionResult> getExecution(GetExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
      * 
      */
-    public static CompletableFuture<GetHistoryResult> getHistory(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetHistoryArgs args) {
-        return getHistory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHistoryResult> getHistory(GetHistoryArgs args) {
+        return getHistory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHistoryResult> getHistory(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetHistoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHistoryResult> getHistory(GetHistoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getHistory", TypeShape.of(GetHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
      * 
      */
-    public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetPerfSampleSeriesArgs args) {
-        return getPerfSampleSeries(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(GetPerfSampleSeriesArgs args) {
+        return getPerfSampleSeries(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetPerfSampleSeriesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPerfSampleSeriesResult> getPerfSampleSeries(GetPerfSampleSeriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getPerfSampleSeries", TypeShape.of(GetPerfSampleSeriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
      * 
      */
-    public static CompletableFuture<GetStepResult> getStep(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetStepArgs args) {
-        return getStep(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStepResult> getStep(GetStepArgs args) {
+        return getStep(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStepResult> getStep(io.pulumi.googlenative.toolresults_v1beta3.inputs.GetStepArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStepResult> getStep(GetStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getStep", TypeShape.of(GetStepResult.class), args, Utilities.withVersion(options));
     }
 }

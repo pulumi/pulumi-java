@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {
-        return this.cidrs == null ? Output.empty() : this.cidrs;
+        return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Double> number;
 
     public Output<Double> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<Double>> numbers;
 
     public Output<List<Double>> getNumbers() {
-        return this.numbers == null ? Output.empty() : this.numbers;
+        return this.numbers == null ? Codegen.empty() : this.numbers;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<Integer>> ports;
 
     public Output<List<Integer>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> strings;
 
     public Output<List<String>> getStrings() {
-        return this.strings == null ? Output.empty() : this.strings;
+        return this.strings == null ? Codegen.empty() : this.strings;
     }
 
     public SecurityProfileMetricValueArgs(
@@ -103,12 +104,12 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
     }
 
     private SecurityProfileMetricValueArgs() {
-        this.cidrs = Output.empty();
-        this.count = Output.empty();
-        this.number = Output.empty();
-        this.numbers = Output.empty();
-        this.ports = Output.empty();
-        this.strings = Output.empty();
+        this.cidrs = Codegen.empty();
+        this.count = Codegen.empty();
+        this.number = Codegen.empty();
+        this.numbers = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.strings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Output.ofNullable(cidrs);
+            this.cidrs = Codegen.ofNullable(cidrs);
             return this;
         }
         public Builder cidrs(String... cidrs) {
@@ -157,7 +158,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder count(@Nullable String count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder number(@Nullable Output<Double> number) {
@@ -165,7 +166,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder number(@Nullable Double number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }
         public Builder numbers(@Nullable Output<List<Double>> numbers) {
@@ -173,7 +174,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder numbers(@Nullable List<Double> numbers) {
-            this.numbers = Output.ofNullable(numbers);
+            this.numbers = Codegen.ofNullable(numbers);
             return this;
         }
         public Builder numbers(Double... numbers) {
@@ -184,7 +185,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(Integer... ports) {
@@ -195,7 +196,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder strings(@Nullable List<String> strings) {
-            this.strings = Output.ofNullable(strings);
+            this.strings = Codegen.ofNullable(strings);
             return this;
         }
         public Builder strings(String... strings) {

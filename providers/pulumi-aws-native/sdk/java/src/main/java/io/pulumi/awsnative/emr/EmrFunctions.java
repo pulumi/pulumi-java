@@ -18,20 +18,20 @@ public final class EmrFunctions {
      * Resource schema for AWS::EMR::Studio
      * 
      */
-    public static CompletableFuture<GetStudioResult> getStudio(io.pulumi.awsnative.emr.inputs.GetStudioArgs args) {
-        return getStudio(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args) {
+        return getStudio(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStudioResult> getStudio(io.pulumi.awsnative.emr.inputs.GetStudioArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(io.pulumi.awsnative.emr.inputs.GetStudioSessionMappingArgs args) {
-        return getStudioSessionMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(GetStudioSessionMappingArgs args) {
+        return getStudioSessionMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(io.pulumi.awsnative.emr.inputs.GetStudioSessionMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(GetStudioSessionMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args, Utilities.withVersion(options));
     }
 }

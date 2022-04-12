@@ -22,40 +22,40 @@ public final class Datamigration_v1Functions {
      * Gets details of a single connection profile.
      * 
      */
-    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(io.pulumi.googlenative.datamigration_v1.inputs.GetConnectionProfileArgs args) {
-        return getConnectionProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args) {
+        return getConnectionProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(io.pulumi.googlenative.datamigration_v1.inputs.GetConnectionProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectionProfileIamPolicyResult> getConnectionProfileIamPolicy(io.pulumi.googlenative.datamigration_v1.inputs.GetConnectionProfileIamPolicyArgs args) {
-        return getConnectionProfileIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionProfileIamPolicyResult> getConnectionProfileIamPolicy(GetConnectionProfileIamPolicyArgs args) {
+        return getConnectionProfileIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionProfileIamPolicyResult> getConnectionProfileIamPolicy(io.pulumi.googlenative.datamigration_v1.inputs.GetConnectionProfileIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionProfileIamPolicyResult> getConnectionProfileIamPolicy(GetConnectionProfileIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getConnectionProfileIamPolicy", TypeShape.of(GetConnectionProfileIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single migration job.
      * 
      */
-    public static CompletableFuture<GetMigrationJobResult> getMigrationJob(io.pulumi.googlenative.datamigration_v1.inputs.GetMigrationJobArgs args) {
-        return getMigrationJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMigrationJobResult> getMigrationJob(GetMigrationJobArgs args) {
+        return getMigrationJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMigrationJobResult> getMigrationJob(io.pulumi.googlenative.datamigration_v1.inputs.GetMigrationJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMigrationJobResult> getMigrationJob(GetMigrationJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getMigrationJob", TypeShape.of(GetMigrationJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMigrationJobIamPolicyResult> getMigrationJobIamPolicy(io.pulumi.googlenative.datamigration_v1.inputs.GetMigrationJobIamPolicyArgs args) {
-        return getMigrationJobIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMigrationJobIamPolicyResult> getMigrationJobIamPolicy(GetMigrationJobIamPolicyArgs args) {
+        return getMigrationJobIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMigrationJobIamPolicyResult> getMigrationJobIamPolicy(io.pulumi.googlenative.datamigration_v1.inputs.GetMigrationJobIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMigrationJobIamPolicyResult> getMigrationJobIamPolicy(GetMigrationJobIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getMigrationJobIamPolicy", TypeShape.of(GetMigrationJobIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

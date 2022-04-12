@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appStoreId;
 
     public Output<String> getAppStoreId() {
-        return this.appStoreId == null ? Output.empty() : this.appStoreId;
+        return this.appStoreId == null ? Codegen.empty() : this.appStoreId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> teamId;
 
     public Output<String> getTeamId() {
-        return this.teamId == null ? Output.empty() : this.teamId;
+        return this.teamId == null ? Codegen.empty() : this.teamId;
     }
 
     public IosAppArgs(
@@ -109,13 +110,13 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosAppArgs() {
-        this.appId = Output.empty();
-        this.appStoreId = Output.empty();
-        this.bundleId = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.teamId = Output.empty();
+        this.appId = Codegen.empty();
+        this.appStoreId = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.teamId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appStoreId(@Nullable Output<String> appStoreId) {
@@ -163,7 +164,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appStoreId(@Nullable String appStoreId) {
-            this.appStoreId = Output.ofNullable(appStoreId);
+            this.appStoreId = Codegen.ofNullable(appStoreId);
             return this;
         }
         public Builder bundleId(@Nullable Output<String> bundleId) {
@@ -171,7 +172,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -179,7 +180,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -187,7 +188,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -195,7 +196,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder teamId(@Nullable Output<String> teamId) {
@@ -203,7 +204,7 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder teamId(@Nullable String teamId) {
-            this.teamId = Output.ofNullable(teamId);
+            this.teamId = Codegen.ofNullable(teamId);
             return this;
         }        public IosAppArgs build() {
             return new IosAppArgs(appId, appStoreId, bundleId, displayName, name, project, teamId);

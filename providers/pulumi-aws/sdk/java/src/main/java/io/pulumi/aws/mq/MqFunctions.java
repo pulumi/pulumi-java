@@ -19,12 +19,12 @@ public final class MqFunctions {
      * 
      */
     public static CompletableFuture<GetBrokerResult> getBroker() {
-        return getBroker(io.pulumi.aws.mq.inputs.GetBrokerArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getBroker(GetBrokerArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBrokerResult> getBroker(io.pulumi.aws.mq.inputs.GetBrokerArgs args) {
-        return getBroker(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args) {
+        return getBroker(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBrokerResult> getBroker(io.pulumi.aws.mq.inputs.GetBrokerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mq/getBroker:getBroker", TypeShape.of(GetBrokerResult.class), args, Utilities.withVersion(options));
     }
 }

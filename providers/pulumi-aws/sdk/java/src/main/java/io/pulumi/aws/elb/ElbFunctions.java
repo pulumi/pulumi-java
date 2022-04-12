@@ -24,12 +24,12 @@ public final class ElbFunctions {
      * 
      */
     public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId() {
-        return getHostedZoneId(io.pulumi.aws.elb.inputs.GetHostedZoneIdArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getHostedZoneId(GetHostedZoneIdArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(io.pulumi.aws.elb.inputs.GetHostedZoneIdArgs args) {
-        return getHostedZoneId(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args) {
+        return getHostedZoneId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(io.pulumi.aws.elb.inputs.GetHostedZoneIdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostedZoneIdResult> getHostedZoneId(GetHostedZoneIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elb/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,10 +44,10 @@ public final class ElbFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.elb.inputs.GetLoadBalancerArgs args) {
-        return getLoadBalancer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+        return getLoadBalancer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.elb.inputs.GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,12 +58,12 @@ public final class ElbFunctions {
      * 
      */
     public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
-        return getServiceAccount(io.pulumi.aws.elb.inputs.GetServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.elb.inputs.GetServiceAccountArgs args) {
-        return getServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+        return getServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.elb.inputs.GetServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elb/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionEFSVolumeConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionHostVolumePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,28 +22,28 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
     public Output<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
-        return this.dockerVolumeConfiguration == null ? Output.empty() : this.dockerVolumeConfiguration;
+        return this.dockerVolumeConfiguration == null ? Codegen.empty() : this.dockerVolumeConfiguration;
     }
 
     @Import(name="eFSVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
 
     public Output<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
-        return this.eFSVolumeConfiguration == null ? Output.empty() : this.eFSVolumeConfiguration;
+        return this.eFSVolumeConfiguration == null ? Codegen.empty() : this.eFSVolumeConfiguration;
     }
 
     @Import(name="host")
       private final @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host;
 
     public Output<TaskDefinitionHostVolumePropertiesArgs> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public TaskDefinitionVolumeArgs(
@@ -57,10 +58,10 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     }
 
     private TaskDefinitionVolumeArgs() {
-        this.dockerVolumeConfiguration = Output.empty();
-        this.eFSVolumeConfiguration = Output.empty();
-        this.host = Output.empty();
-        this.name = Output.empty();
+        this.dockerVolumeConfiguration = Codegen.empty();
+        this.eFSVolumeConfiguration = Codegen.empty();
+        this.host = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
-            this.dockerVolumeConfiguration = Output.ofNullable(dockerVolumeConfiguration);
+            this.dockerVolumeConfiguration = Codegen.ofNullable(dockerVolumeConfiguration);
             return this;
         }
         public Builder eFSVolumeConfiguration(@Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
@@ -102,7 +103,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfigurationArgs eFSVolumeConfiguration) {
-            this.eFSVolumeConfiguration = Output.ofNullable(eFSVolumeConfiguration);
+            this.eFSVolumeConfiguration = Codegen.ofNullable(eFSVolumeConfiguration);
             return this;
         }
         public Builder host(@Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host) {
@@ -110,7 +111,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder host(@Nullable TaskDefinitionHostVolumePropertiesArgs host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -118,7 +119,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public TaskDefinitionVolumeArgs build() {
             return new TaskDefinitionVolumeArgs(dockerVolumeConfiguration, eFSVolumeConfiguration, host, name);

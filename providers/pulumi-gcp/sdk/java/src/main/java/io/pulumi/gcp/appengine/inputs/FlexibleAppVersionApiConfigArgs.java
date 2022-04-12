@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> authFailAction;
 
     public Output<String> getAuthFailAction() {
-        return this.authFailAction == null ? Output.empty() : this.authFailAction;
+        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> securityLevel;
 
     public Output<String> getSecurityLevel() {
-        return this.securityLevel == null ? Output.empty() : this.securityLevel;
+        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public FlexibleAppVersionApiConfigArgs(
@@ -88,11 +89,11 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
     }
 
     private FlexibleAppVersionApiConfigArgs() {
-        this.authFailAction = Output.empty();
-        this.login = Output.empty();
-        this.script = Output.empty();
-        this.securityLevel = Output.empty();
-        this.url = Output.empty();
+        this.authFailAction = Codegen.empty();
+        this.login = Codegen.empty();
+        this.script = Codegen.empty();
+        this.securityLevel = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder authFailAction(@Nullable String authFailAction) {
-            this.authFailAction = Output.ofNullable(authFailAction);
+            this.authFailAction = Codegen.ofNullable(authFailAction);
             return this;
         }
         public Builder login(@Nullable Output<String> login) {
@@ -136,7 +137,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder login(@Nullable String login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder script(Output<String> script) {
@@ -152,7 +153,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder securityLevel(@Nullable String securityLevel) {
-            this.securityLevel = Output.ofNullable(securityLevel);
+            this.securityLevel = Codegen.ofNullable(securityLevel);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -160,7 +161,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public FlexibleAppVersionApiConfigArgs build() {
             return new FlexibleAppVersionApiConfigArgs(authFailAction, login, script, securityLevel, url);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.blueprint.enums.TemplateParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Object>> allowedValues;
 
     public Output<List<Object>> getAllowedValues() {
-        return this.allowedValues == null ? Output.empty() : this.allowedValues;
+        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> defaultValue;
 
     public Output<Object> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> strongType;
 
     public Output<String> getStrongType() {
-        return this.strongType == null ? Output.empty() : this.strongType;
+        return this.strongType == null ? Codegen.empty() : this.strongType;
     }
 
     /**
@@ -104,12 +105,12 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private ParameterDefinitionArgs() {
-        this.allowedValues = Output.empty();
-        this.defaultValue = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.strongType = Output.empty();
-        this.type = Output.empty();
+        this.allowedValues = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.strongType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Output.ofNullable(allowedValues);
+            this.allowedValues = Codegen.ofNullable(allowedValues);
             return this;
         }
         public Builder allowedValues(Object... allowedValues) {
@@ -158,7 +159,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -166,7 +167,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -174,7 +175,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder strongType(@Nullable Output<String> strongType) {
@@ -182,7 +183,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = Output.ofNullable(strongType);
+            this.strongType = Codegen.ofNullable(strongType);
             return this;
         }
         public Builder type(Output<Either<String,TemplateParameterType>> type) {

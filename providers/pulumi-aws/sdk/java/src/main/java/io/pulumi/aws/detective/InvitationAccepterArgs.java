@@ -5,6 +5,7 @@ package io.pulumi.aws.detective;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InvitationAccepterArgs() {
-        this.graphArn = Output.empty();
+        this.graphArn = Codegen.empty();
     }
 
     public static Builder builder() {

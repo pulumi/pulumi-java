@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kendra.enums.IndexOrder;
 import io.pulumi.awsnative.kendra.inputs.IndexValueImportanceItemArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,35 +24,35 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     @Import(name="freshness")
       private final @Nullable Output<Boolean> freshness;
 
     public Output<Boolean> getFreshness() {
-        return this.freshness == null ? Output.empty() : this.freshness;
+        return this.freshness == null ? Codegen.empty() : this.freshness;
     }
 
     @Import(name="importance")
       private final @Nullable Output<Integer> importance;
 
     public Output<Integer> getImportance() {
-        return this.importance == null ? Output.empty() : this.importance;
+        return this.importance == null ? Codegen.empty() : this.importance;
     }
 
     @Import(name="rankOrder")
       private final @Nullable Output<IndexOrder> rankOrder;
 
     public Output<IndexOrder> getRankOrder() {
-        return this.rankOrder == null ? Output.empty() : this.rankOrder;
+        return this.rankOrder == null ? Codegen.empty() : this.rankOrder;
     }
 
     @Import(name="valueImportanceItems")
       private final @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
     public Output<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {
-        return this.valueImportanceItems == null ? Output.empty() : this.valueImportanceItems;
+        return this.valueImportanceItems == null ? Codegen.empty() : this.valueImportanceItems;
     }
 
     public IndexRelevanceArgs(
@@ -68,11 +69,11 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexRelevanceArgs() {
-        this.duration = Output.empty();
-        this.freshness = Output.empty();
-        this.importance = Output.empty();
-        this.rankOrder = Output.empty();
-        this.valueImportanceItems = Output.empty();
+        this.duration = Codegen.empty();
+        this.freshness = Codegen.empty();
+        this.importance = Codegen.empty();
+        this.rankOrder = Codegen.empty();
+        this.valueImportanceItems = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder freshness(@Nullable Output<Boolean> freshness) {
@@ -116,7 +117,7 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder freshness(@Nullable Boolean freshness) {
-            this.freshness = Output.ofNullable(freshness);
+            this.freshness = Codegen.ofNullable(freshness);
             return this;
         }
         public Builder importance(@Nullable Output<Integer> importance) {
@@ -124,7 +125,7 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importance(@Nullable Integer importance) {
-            this.importance = Output.ofNullable(importance);
+            this.importance = Codegen.ofNullable(importance);
             return this;
         }
         public Builder rankOrder(@Nullable Output<IndexOrder> rankOrder) {
@@ -132,7 +133,7 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rankOrder(@Nullable IndexOrder rankOrder) {
-            this.rankOrder = Output.ofNullable(rankOrder);
+            this.rankOrder = Codegen.ofNullable(rankOrder);
             return this;
         }
         public Builder valueImportanceItems(@Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
@@ -140,7 +141,7 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
-            this.valueImportanceItems = Output.ofNullable(valueImportanceItems);
+            this.valueImportanceItems = Codegen.ofNullable(valueImportanceItems);
             return this;
         }
         public Builder valueImportanceItems(IndexValueImportanceItemArgs... valueImportanceItems) {

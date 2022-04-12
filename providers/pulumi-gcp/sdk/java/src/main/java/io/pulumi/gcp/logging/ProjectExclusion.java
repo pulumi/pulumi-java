@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectExclusionArgs;
 import io.pulumi.gcp.logging.inputs.ProjectExclusionState;
@@ -136,7 +137,7 @@ public class ProjectExclusion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectExclusion(String name, ProjectExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/projectExclusion:ProjectExclusion", name, args == null ? ProjectExclusionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/projectExclusion:ProjectExclusion", name, args == null ? ProjectExclusionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectExclusion(String name, Output<String> id, @Nullable ProjectExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

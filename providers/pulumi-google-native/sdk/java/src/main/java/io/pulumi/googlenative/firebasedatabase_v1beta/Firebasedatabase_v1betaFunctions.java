@@ -16,10 +16,10 @@ public final class Firebasedatabase_v1betaFunctions {
      * Gets the DatabaseInstance identified by the specified resource name.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.firebasedatabase_v1beta.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.firebasedatabase_v1beta.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasedatabase/v1beta:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.aws.signer.inputs;
 import io.pulumi.aws.signer.inputs.SigningJobSignedObjectS3Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class SigningJobSignedObjectArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<SigningJobSignedObjectS3Args>> s3s;
 
     public Output<List<SigningJobSignedObjectS3Args>> getS3s() {
-        return this.s3s == null ? Output.empty() : this.s3s;
+        return this.s3s == null ? Codegen.empty() : this.s3s;
     }
 
     public SigningJobSignedObjectArgs(@Nullable Output<List<SigningJobSignedObjectS3Args>> s3s) {
@@ -31,7 +32,7 @@ public final class SigningJobSignedObjectArgs extends io.pulumi.resources.Resour
     }
 
     private SigningJobSignedObjectArgs() {
-        this.s3s = Output.empty();
+        this.s3s = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class SigningJobSignedObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder s3s(@Nullable List<SigningJobSignedObjectS3Args> s3s) {
-            this.s3s = Output.ofNullable(s3s);
+            this.s3s = Codegen.ofNullable(s3s);
             return this;
         }
         public Builder s3s(SigningJobSignedObjectS3Args... s3s) {

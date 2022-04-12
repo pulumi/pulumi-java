@@ -24,10 +24,10 @@ public final class KinesisFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(io.pulumi.aws.kinesis.inputs.GetFirehoseDeliveryStreamArgs args) {
-        return getFirehoseDeliveryStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args) {
+        return getFirehoseDeliveryStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(io.pulumi.aws.kinesis.inputs.GetFirehoseDeliveryStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kinesis/getFirehoseDeliveryStream:getFirehoseDeliveryStream", TypeShape.of(GetFirehoseDeliveryStreamResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -39,10 +39,10 @@ public final class KinesisFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.aws.kinesis.inputs.GetStreamArgs args) {
-        return getStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+        return getStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamResult> getStream(io.pulumi.aws.kinesis.inputs.GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kinesis/getStream:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class KinesisFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(io.pulumi.aws.kinesis.inputs.GetStreamConsumerArgs args) {
-        return getStreamConsumer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args) {
+        return getStreamConsumer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(io.pulumi.aws.kinesis.inputs.GetStreamConsumerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kinesis/getStreamConsumer:getStreamConsumer", TypeShape.of(GetStreamConsumerResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.refactorspaces.inputs.ServiceTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceUrlEndpointInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,14 +31,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="endpointType")
       private final @Nullable Output<ServiceEndpointType> endpointType;
 
     public Output<ServiceEndpointType> getEndpointType() {
-        return this.endpointType == null ? Output.empty() : this.endpointType;
+        return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     @Import(name="environmentIdentifier", required=true)
@@ -51,14 +52,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
     public Output<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
-        return this.lambdaEndpoint == null ? Output.empty() : this.lambdaEndpoint;
+        return this.lambdaEndpoint == null ? Codegen.empty() : this.lambdaEndpoint;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,21 +70,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
     public Output<List<ServiceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="urlEndpoint")
       private final @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
 
     public Output<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
-        return this.urlEndpoint == null ? Output.empty() : this.urlEndpoint;
+        return this.urlEndpoint == null ? Codegen.empty() : this.urlEndpoint;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ServiceArgs(
@@ -108,15 +109,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.applicationIdentifier = Output.empty();
-        this.description = Output.empty();
-        this.endpointType = Output.empty();
-        this.environmentIdentifier = Output.empty();
-        this.lambdaEndpoint = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.urlEndpoint = Output.empty();
-        this.vpcId = Output.empty();
+        this.applicationIdentifier = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.environmentIdentifier = Codegen.empty();
+        this.lambdaEndpoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.urlEndpoint = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpointType(@Nullable Output<ServiceEndpointType> endpointType) {
@@ -176,7 +177,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointType(@Nullable ServiceEndpointType endpointType) {
-            this.endpointType = Output.ofNullable(endpointType);
+            this.endpointType = Codegen.ofNullable(endpointType);
             return this;
         }
         public Builder environmentIdentifier(Output<String> environmentIdentifier) {
@@ -192,7 +193,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaEndpoint(@Nullable ServiceLambdaEndpointInputArgs lambdaEndpoint) {
-            this.lambdaEndpoint = Output.ofNullable(lambdaEndpoint);
+            this.lambdaEndpoint = Codegen.ofNullable(lambdaEndpoint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -200,7 +201,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
@@ -208,7 +209,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ServiceTagArgs... tags) {
@@ -219,7 +220,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlEndpoint(@Nullable ServiceUrlEndpointInputArgs urlEndpoint) {
-            this.urlEndpoint = Output.ofNullable(urlEndpoint);
+            this.urlEndpoint = Codegen.ofNullable(urlEndpoint);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -227,7 +228,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(applicationIdentifier, description, endpointType, environmentIdentifier, lambdaEndpoint, name, tags, urlEndpoint, vpcId);

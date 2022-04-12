@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyInventoryFilterArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
 
     public Output<List<OSPolicyInventoryFilterArgs>> getInventoryFilters() {
-        return this.inventoryFilters == null ? Output.empty() : this.inventoryFilters;
+        return this.inventoryFilters == null ? Codegen.empty() : this.inventoryFilters;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private OSPolicyResourceGroupArgs() {
-        this.inventoryFilters = Output.empty();
-        this.resources = Output.empty();
+        this.inventoryFilters = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder inventoryFilters(@Nullable List<OSPolicyInventoryFilterArgs> inventoryFilters) {
-            this.inventoryFilters = Output.ofNullable(inventoryFilters);
+            this.inventoryFilters = Codegen.ofNullable(inventoryFilters);
             return this;
         }
         public Builder inventoryFilters(OSPolicyInventoryFilterArgs... inventoryFilters) {

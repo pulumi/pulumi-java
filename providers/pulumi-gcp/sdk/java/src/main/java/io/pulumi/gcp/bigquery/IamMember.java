@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.IamMemberArgs;
 import io.pulumi.gcp.bigquery.inputs.IamMemberState;
@@ -166,7 +167,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamMember(String name, IamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/iamMember:IamMember", name, args == null ? IamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/iamMember:IamMember", name, args == null ? IamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamMember(String name, Output<String> id, @Nullable IamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.coordination.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acquireTime;
 
     public Output<String> getAcquireTime() {
-        return this.acquireTime == null ? Output.empty() : this.acquireTime;
+        return this.acquireTime == null ? Codegen.empty() : this.acquireTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> holderIdentity;
 
     public Output<String> getHolderIdentity() {
-        return this.holderIdentity == null ? Output.empty() : this.holderIdentity;
+        return this.holderIdentity == null ? Codegen.empty() : this.holderIdentity;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> leaseDurationSeconds;
 
     public Output<Integer> getLeaseDurationSeconds() {
-        return this.leaseDurationSeconds == null ? Output.empty() : this.leaseDurationSeconds;
+        return this.leaseDurationSeconds == null ? Codegen.empty() : this.leaseDurationSeconds;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> leaseTransitions;
 
     public Output<Integer> getLeaseTransitions() {
-        return this.leaseTransitions == null ? Output.empty() : this.leaseTransitions;
+        return this.leaseTransitions == null ? Codegen.empty() : this.leaseTransitions;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> renewTime;
 
     public Output<String> getRenewTime() {
-        return this.renewTime == null ? Output.empty() : this.renewTime;
+        return this.renewTime == null ? Codegen.empty() : this.renewTime;
     }
 
     public LeaseSpecArgs(
@@ -88,11 +89,11 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LeaseSpecArgs() {
-        this.acquireTime = Output.empty();
-        this.holderIdentity = Output.empty();
-        this.leaseDurationSeconds = Output.empty();
-        this.leaseTransitions = Output.empty();
-        this.renewTime = Output.empty();
+        this.acquireTime = Codegen.empty();
+        this.holderIdentity = Codegen.empty();
+        this.leaseDurationSeconds = Codegen.empty();
+        this.leaseTransitions = Codegen.empty();
+        this.renewTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acquireTime(@Nullable String acquireTime) {
-            this.acquireTime = Output.ofNullable(acquireTime);
+            this.acquireTime = Codegen.ofNullable(acquireTime);
             return this;
         }
         public Builder holderIdentity(@Nullable Output<String> holderIdentity) {
@@ -136,7 +137,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder holderIdentity(@Nullable String holderIdentity) {
-            this.holderIdentity = Output.ofNullable(holderIdentity);
+            this.holderIdentity = Codegen.ofNullable(holderIdentity);
             return this;
         }
         public Builder leaseDurationSeconds(@Nullable Output<Integer> leaseDurationSeconds) {
@@ -144,7 +145,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
-            this.leaseDurationSeconds = Output.ofNullable(leaseDurationSeconds);
+            this.leaseDurationSeconds = Codegen.ofNullable(leaseDurationSeconds);
             return this;
         }
         public Builder leaseTransitions(@Nullable Output<Integer> leaseTransitions) {
@@ -152,7 +153,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
-            this.leaseTransitions = Output.ofNullable(leaseTransitions);
+            this.leaseTransitions = Codegen.ofNullable(leaseTransitions);
             return this;
         }
         public Builder renewTime(@Nullable Output<String> renewTime) {
@@ -160,7 +161,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder renewTime(@Nullable String renewTime) {
-            this.renewTime = Output.ofNullable(renewTime);
+            this.renewTime = Codegen.ofNullable(renewTime);
             return this;
         }        public LeaseSpecArgs build() {
             return new LeaseSpecArgs(acquireTime, holderIdentity, leaseDurationSeconds, leaseTransitions, renewTime);

@@ -19,10 +19,10 @@ public final class TransferFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.aws.transfer.inputs.GetServerArgs args) {
-        return getServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+        return getServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.aws.transfer.inputs.GetServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:transfer/getServer:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
 }

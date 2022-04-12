@@ -5,6 +5,7 @@ package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
     }
 
     private ListenerRuleActionRedirectGetArgs() {
-        this.host = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.query = Output.empty();
-        this.statusCode = Output.empty();
+        this.host = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.query = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -147,7 +148,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -155,7 +156,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -163,7 +164,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -171,7 +172,7 @@ public final class ListenerRuleActionRedirectGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder statusCode(Output<String> statusCode) {

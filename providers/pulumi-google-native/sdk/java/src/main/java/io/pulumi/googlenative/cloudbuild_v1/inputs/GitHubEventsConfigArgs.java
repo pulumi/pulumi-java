@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> enterpriseConfigResourceName;
 
     public Output<String> getEnterpriseConfigResourceName() {
-        return this.enterpriseConfigResourceName == null ? Output.empty() : this.enterpriseConfigResourceName;
+        return this.enterpriseConfigResourceName == null ? Codegen.empty() : this.enterpriseConfigResourceName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> installationId;
 
     public Output<String> getInstallationId() {
-        return this.installationId == null ? Output.empty() : this.installationId;
+        return this.installationId == null ? Codegen.empty() : this.installationId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
     public Output<PullRequestFilterArgs> getPullRequest() {
-        return this.pullRequest == null ? Output.empty() : this.pullRequest;
+        return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PushFilterArgs> push;
 
     public Output<PushFilterArgs> getPush() {
-        return this.push == null ? Output.empty() : this.push;
+        return this.push == null ? Codegen.empty() : this.push;
     }
 
     public GitHubEventsConfigArgs(
@@ -102,12 +103,12 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GitHubEventsConfigArgs() {
-        this.enterpriseConfigResourceName = Output.empty();
-        this.installationId = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.pullRequest = Output.empty();
-        this.push = Output.empty();
+        this.enterpriseConfigResourceName = Codegen.empty();
+        this.installationId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.pullRequest = Codegen.empty();
+        this.push = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
-            this.enterpriseConfigResourceName = Output.ofNullable(enterpriseConfigResourceName);
+            this.enterpriseConfigResourceName = Codegen.ofNullable(enterpriseConfigResourceName);
             return this;
         }
         public Builder installationId(@Nullable Output<String> installationId) {
@@ -153,7 +154,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder installationId(@Nullable String installationId) {
-            this.installationId = Output.ofNullable(installationId);
+            this.installationId = Codegen.ofNullable(installationId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -161,7 +162,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -169,7 +170,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
@@ -177,7 +178,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
-            this.pullRequest = Output.ofNullable(pullRequest);
+            this.pullRequest = Codegen.ofNullable(pullRequest);
             return this;
         }
         public Builder push(@Nullable Output<PushFilterArgs> push) {
@@ -185,7 +186,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder push(@Nullable PushFilterArgs push) {
-            this.push = Output.ofNullable(push);
+            this.push = Codegen.ofNullable(push);
             return this;
         }        public GitHubEventsConfigArgs build() {
             return new GitHubEventsConfigArgs(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);

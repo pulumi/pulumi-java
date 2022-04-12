@@ -5,6 +5,7 @@ package io.pulumi.gcp.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsGetArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcGetArgs;
 import java.lang.Boolean;
@@ -37,7 +38,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> attributeCondition;
 
     public Output<String> getAttributeCondition() {
-        return this.attributeCondition == null ? Output.empty() : this.attributeCondition;
+        return this.attributeCondition == null ? Codegen.empty() : this.attributeCondition;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
     public Output<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
+        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws;
 
     public Output<WorkloadIdentityPoolProviderAwsGetArgs> getAws() {
-        return this.aws == null ? Output.empty() : this.aws;
+        return this.aws == null ? Codegen.empty() : this.aws;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc;
 
     public Output<WorkloadIdentityPoolProviderOidcGetArgs> getOidc() {
-        return this.oidc == null ? Output.empty() : this.oidc;
+        return this.oidc == null ? Codegen.empty() : this.oidc;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> workloadIdentityPoolId;
 
     public Output<String> getWorkloadIdentityPoolId() {
-        return this.workloadIdentityPoolId == null ? Output.empty() : this.workloadIdentityPoolId;
+        return this.workloadIdentityPoolId == null ? Codegen.empty() : this.workloadIdentityPoolId;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
       private final @Nullable Output<String> workloadIdentityPoolProviderId;
 
     public Output<String> getWorkloadIdentityPoolProviderId() {
-        return this.workloadIdentityPoolProviderId == null ? Output.empty() : this.workloadIdentityPoolProviderId;
+        return this.workloadIdentityPoolProviderId == null ? Codegen.empty() : this.workloadIdentityPoolProviderId;
     }
 
     public WorkloadIdentityPoolProviderState(
@@ -237,18 +238,18 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
     }
 
     private WorkloadIdentityPoolProviderState() {
-        this.attributeCondition = Output.empty();
-        this.attributeMapping = Output.empty();
-        this.aws = Output.empty();
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.oidc = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.workloadIdentityPoolId = Output.empty();
-        this.workloadIdentityPoolProviderId = Output.empty();
+        this.attributeCondition = Codegen.empty();
+        this.attributeMapping = Codegen.empty();
+        this.aws = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.oidc = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.workloadIdentityPoolId = Codegen.empty();
+        this.workloadIdentityPoolProviderId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -298,7 +299,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder attributeCondition(@Nullable String attributeCondition) {
-            this.attributeCondition = Output.ofNullable(attributeCondition);
+            this.attributeCondition = Codegen.ofNullable(attributeCondition);
             return this;
         }
         public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
@@ -306,7 +307,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Output.ofNullable(attributeMapping);
+            this.attributeMapping = Codegen.ofNullable(attributeMapping);
             return this;
         }
         public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
@@ -314,7 +315,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder aws(@Nullable WorkloadIdentityPoolProviderAwsGetArgs aws) {
-            this.aws = Output.ofNullable(aws);
+            this.aws = Codegen.ofNullable(aws);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -322,7 +323,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -330,7 +331,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -338,7 +339,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -346,7 +347,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
@@ -354,7 +355,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder oidc(@Nullable WorkloadIdentityPoolProviderOidcGetArgs oidc) {
-            this.oidc = Output.ofNullable(oidc);
+            this.oidc = Codegen.ofNullable(oidc);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -362,7 +363,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -370,7 +371,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder workloadIdentityPoolId(@Nullable Output<String> workloadIdentityPoolId) {
@@ -378,7 +379,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder workloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Output.ofNullable(workloadIdentityPoolId);
+            this.workloadIdentityPoolId = Codegen.ofNullable(workloadIdentityPoolId);
             return this;
         }
         public Builder workloadIdentityPoolProviderId(@Nullable Output<String> workloadIdentityPoolProviderId) {
@@ -386,7 +387,7 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
             return this;
         }
         public Builder workloadIdentityPoolProviderId(@Nullable String workloadIdentityPoolProviderId) {
-            this.workloadIdentityPoolProviderId = Output.ofNullable(workloadIdentityPoolProviderId);
+            this.workloadIdentityPoolProviderId = Codegen.ofNullable(workloadIdentityPoolProviderId);
             return this;
         }        public WorkloadIdentityPoolProviderState build() {
             return new WorkloadIdentityPoolProviderState(attributeCondition, attributeMapping, aws, description, disabled, displayName, name, oidc, project, state, workloadIdentityPoolId, workloadIdentityPoolProviderId);

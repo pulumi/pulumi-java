@@ -16,10 +16,10 @@ public final class TransferFunctions {
      * Resource Type definition for AWS::Transfer::Workflow
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(io.pulumi.awsnative.transfer.inputs.GetWorkflowArgs args) {
-        return getWorkflow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
+        return getWorkflow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(io.pulumi.awsnative.transfer.inputs.GetWorkflowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:transfer:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }
 }

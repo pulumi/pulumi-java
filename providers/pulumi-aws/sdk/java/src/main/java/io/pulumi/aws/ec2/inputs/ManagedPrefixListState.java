@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
-        return this.addressFamily == null ? Output.empty() : this.addressFamily;
+        return this.addressFamily == null ? Codegen.empty() : this.addressFamily;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
 
     public Output<List<ManagedPrefixListEntryGetArgs>> getEntries() {
-        return this.entries == null ? Output.empty() : this.entries;
+        return this.entries == null ? Codegen.empty() : this.entries;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maxEntries;
 
     public Output<Integer> getMaxEntries() {
-        return this.maxEntries == null ? Output.empty() : this.maxEntries;
+        return this.maxEntries == null ? Codegen.empty() : this.maxEntries;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -92,14 +93,14 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ManagedPrefixListState(
@@ -135,15 +136,15 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedPrefixListState() {
-        this.addressFamily = Output.empty();
-        this.arn = Output.empty();
-        this.entries = Output.empty();
-        this.maxEntries = Output.empty();
-        this.name = Output.empty();
-        this.ownerId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.entries = Codegen.empty();
+        this.maxEntries = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -187,7 +188,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder addressFamily(@Nullable String addressFamily) {
-            this.addressFamily = Output.ofNullable(addressFamily);
+            this.addressFamily = Codegen.ofNullable(addressFamily);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -195,7 +196,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder entries(@Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries) {
@@ -203,7 +204,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder entries(@Nullable List<ManagedPrefixListEntryGetArgs> entries) {
-            this.entries = Output.ofNullable(entries);
+            this.entries = Codegen.ofNullable(entries);
             return this;
         }
         public Builder entries(ManagedPrefixListEntryGetArgs... entries) {
@@ -214,7 +215,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxEntries(@Nullable Integer maxEntries) {
-            this.maxEntries = Output.ofNullable(maxEntries);
+            this.maxEntries = Codegen.ofNullable(maxEntries);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -230,7 +231,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -238,7 +239,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -246,7 +247,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -254,7 +255,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ManagedPrefixListState build() {
             return new ManagedPrefixListState(addressFamily, arn, entries, maxEntries, name, ownerId, tags, tagsAll, version);

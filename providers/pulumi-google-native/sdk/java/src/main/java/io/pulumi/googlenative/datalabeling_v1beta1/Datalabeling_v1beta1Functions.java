@@ -24,50 +24,50 @@ public final class Datalabeling_v1beta1Functions {
      * Gets an annotation spec set by resource name.
      * 
      */
-    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetAnnotationSpecSetArgs args) {
-        return getAnnotationSpecSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args) {
+        return getAnnotationSpecSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetAnnotationSpecSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnnotationSpecSetResult> getAnnotationSpecSet(GetAnnotationSpecSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getAnnotationSpecSet", TypeShape.of(GetAnnotationSpecSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets dataset by resource name.
      * 
      */
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetDatasetArgs args) {
-        return getDataset(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
+        return getDataset(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatasetResult> getDataset(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetDatasetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an evaluation job by resource name.
      * 
      */
-    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetEvaluationJobArgs args) {
-        return getEvaluationJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args) {
+        return getEvaluationJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetEvaluationJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEvaluationJobResult> getEvaluationJob(GetEvaluationJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getEvaluationJob", TypeShape.of(GetEvaluationJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a FeedbackMessage object.
      * 
      */
-    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetFeedbackMessageArgs args) {
-        return getFeedbackMessage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args) {
+        return getFeedbackMessage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetFeedbackMessageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeedbackMessageResult> getFeedbackMessage(GetFeedbackMessageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getFeedbackMessage", TypeShape.of(GetFeedbackMessageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an instruction by resource name.
      * 
      */
-    public static CompletableFuture<GetInstructionResult> getInstruction(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetInstructionArgs args) {
-        return getInstruction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstructionResult> getInstruction(GetInstructionArgs args) {
+        return getInstruction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstructionResult> getInstruction(io.pulumi.googlenative.datalabeling_v1beta1.inputs.GetInstructionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstructionResult> getInstruction(GetInstructionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getInstruction", TypeShape.of(GetInstructionResult.class), args, Utilities.withVersion(options));
     }
 }

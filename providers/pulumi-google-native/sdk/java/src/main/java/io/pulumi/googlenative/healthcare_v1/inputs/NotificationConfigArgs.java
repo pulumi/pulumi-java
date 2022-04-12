@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
+        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
     public NotificationConfigArgs(@Nullable Output<String> pubsubTopic) {
@@ -34,7 +35,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NotificationConfigArgs() {
-        this.pubsubTopic = Output.empty();
+        this.pubsubTopic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Output.ofNullable(pubsubTopic);
+            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
             return this;
         }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsubTopic);

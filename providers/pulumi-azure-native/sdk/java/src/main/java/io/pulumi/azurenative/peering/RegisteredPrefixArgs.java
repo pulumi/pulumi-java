@@ -5,6 +5,7 @@ package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> registeredPrefixName;
 
     public Output<String> getRegisteredPrefixName() {
-        return this.registeredPrefixName == null ? Output.empty() : this.registeredPrefixName;
+        return this.registeredPrefixName == null ? Codegen.empty() : this.registeredPrefixName;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegisteredPrefixArgs() {
-        this.peeringName = Output.empty();
-        this.prefix = Output.empty();
-        this.registeredPrefixName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.peeringName = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.registeredPrefixName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder registeredPrefixName(@Nullable Output<String> registeredPrefixName) {
@@ -123,7 +124,7 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder registeredPrefixName(@Nullable String registeredPrefixName) {
-            this.registeredPrefixName = Output.ofNullable(registeredPrefixName);
+            this.registeredPrefixName = Codegen.ofNullable(registeredPrefixName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

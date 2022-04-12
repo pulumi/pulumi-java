@@ -18,20 +18,20 @@ public final class Sourcerepo_v1Functions {
      * Returns information about a repo.
      * 
      */
-    public static CompletableFuture<GetRepoResult> getRepo(io.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoArgs args) {
-        return getRepo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args) {
+        return getRepo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepoResult> getRepo(io.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepoResult> getRepo(GetRepoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(io.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoIamPolicyArgs args) {
-        return getRepoIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args) {
+        return getRepoIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(io.pulumi.googlenative.sourcerepo_v1.inputs.GetRepoIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepoIamPolicyResult> getRepoIamPolicy(GetRepoIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepoIamPolicy", TypeShape.of(GetRepoIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

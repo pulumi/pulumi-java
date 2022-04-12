@@ -7,6 +7,7 @@ import io.pulumi.azurenative.notificationhubs.enums.NamespaceType;
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
-        return this.critical == null ? Output.empty() : this.critical;
+        return this.critical == null ? Codegen.empty() : this.critical;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataCenter;
 
     public Output<String> getDataCenter() {
-        return this.dataCenter == null ? Output.empty() : this.dataCenter;
+        return this.dataCenter == null ? Codegen.empty() : this.dataCenter;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
-        return this.namespaceName == null ? Output.empty() : this.namespaceName;
+        return this.namespaceName == null ? Codegen.empty() : this.namespaceName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NamespaceType> namespaceType;
 
     public Output<NamespaceType> getNamespaceType() {
-        return this.namespaceType == null ? Output.empty() : this.namespaceType;
+        return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scaleUnit;
 
     public Output<String> getScaleUnit() {
-        return this.scaleUnit == null ? Output.empty() : this.scaleUnit;
+        return this.scaleUnit == null ? Codegen.empty() : this.scaleUnit;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceBusEndpoint;
 
     public Output<String> getServiceBusEndpoint() {
-        return this.serviceBusEndpoint == null ? Output.empty() : this.serviceBusEndpoint;
+        return this.serviceBusEndpoint == null ? Codegen.empty() : this.serviceBusEndpoint;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updatedAt;
 
     public Output<String> getUpdatedAt() {
-        return this.updatedAt == null ? Output.empty() : this.updatedAt;
+        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 
     public NamespaceArgs(
@@ -256,24 +257,24 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamespaceArgs() {
-        this.createdAt = Output.empty();
-        this.critical = Output.empty();
-        this.dataCenter = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.namespaceName = Output.empty();
-        this.namespaceType = Output.empty();
-        this.provisioningState = Output.empty();
-        this.region = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scaleUnit = Output.empty();
-        this.serviceBusEndpoint = Output.empty();
-        this.sku = Output.empty();
-        this.status = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tags = Output.empty();
-        this.updatedAt = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.critical = Codegen.empty();
+        this.dataCenter = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.namespaceType = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.region = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scaleUnit = Codegen.empty();
+        this.serviceBusEndpoint = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.updatedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -335,7 +336,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder critical(@Nullable Output<Boolean> critical) {
@@ -343,7 +344,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Output.ofNullable(critical);
+            this.critical = Codegen.ofNullable(critical);
             return this;
         }
         public Builder dataCenter(@Nullable Output<String> dataCenter) {
@@ -351,7 +352,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataCenter(@Nullable String dataCenter) {
-            this.dataCenter = Output.ofNullable(dataCenter);
+            this.dataCenter = Codegen.ofNullable(dataCenter);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -359,7 +360,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -367,7 +368,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -375,7 +376,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
@@ -383,7 +384,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespaceName(@Nullable String namespaceName) {
-            this.namespaceName = Output.ofNullable(namespaceName);
+            this.namespaceName = Codegen.ofNullable(namespaceName);
             return this;
         }
         public Builder namespaceType(@Nullable Output<NamespaceType> namespaceType) {
@@ -391,7 +392,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespaceType(@Nullable NamespaceType namespaceType) {
-            this.namespaceType = Output.ofNullable(namespaceType);
+            this.namespaceType = Codegen.ofNullable(namespaceType);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -399,7 +400,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -407,7 +408,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -423,7 +424,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scaleUnit(@Nullable String scaleUnit) {
-            this.scaleUnit = Output.ofNullable(scaleUnit);
+            this.scaleUnit = Codegen.ofNullable(scaleUnit);
             return this;
         }
         public Builder serviceBusEndpoint(@Nullable Output<String> serviceBusEndpoint) {
@@ -431,7 +432,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
-            this.serviceBusEndpoint = Output.ofNullable(serviceBusEndpoint);
+            this.serviceBusEndpoint = Codegen.ofNullable(serviceBusEndpoint);
             return this;
         }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
@@ -439,7 +440,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -447,7 +448,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -455,7 +456,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -463,7 +464,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
@@ -471,7 +472,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Output.ofNullable(updatedAt);
+            this.updatedAt = Codegen.ofNullable(updatedAt);
             return this;
         }        public NamespaceArgs build() {
             return new NamespaceArgs(createdAt, critical, dataCenter, enabled, location, name, namespaceName, namespaceType, provisioningState, region, resourceGroupName, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, updatedAt);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.AppProfileArgs;
 import io.pulumi.gcp.bigquery.inputs.AppProfileState;
@@ -187,7 +188,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AppProfile(String name, AppProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/appProfile:AppProfile", name, args == null ? AppProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/appProfile:AppProfile", name, args == null ? AppProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppProfile(String name, Output<String> id, @Nullable AppProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> indexName;
 
     public Output<String> getIndexName() {
-        return this.indexName == null ? Output.empty() : this.indexName;
+        return this.indexName == null ? Codegen.empty() : this.indexName;
     }
 
     @Import(name="indexStatus")
       private final @Nullable Output<String> indexStatus;
 
     public Output<String> getIndexStatus() {
-        return this.indexStatus == null ? Output.empty() : this.indexStatus;
+        return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> keys;
 
     public Output<List<String>> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     public PartitionIndexPartitionIndexGetArgs(
@@ -54,9 +55,9 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
     }
 
     private PartitionIndexPartitionIndexGetArgs() {
-        this.indexName = Output.empty();
-        this.indexStatus = Output.empty();
-        this.keys = Output.empty();
+        this.indexName = Codegen.empty();
+        this.indexStatus = Codegen.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder indexName(@Nullable String indexName) {
-            this.indexName = Output.ofNullable(indexName);
+            this.indexName = Codegen.ofNullable(indexName);
             return this;
         }
         public Builder indexStatus(@Nullable Output<String> indexStatus) {
@@ -96,7 +97,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Output.ofNullable(indexStatus);
+            this.indexStatus = Codegen.ofNullable(indexStatus);
             return this;
         }
         public Builder keys(@Nullable Output<List<String>> keys) {
@@ -104,7 +105,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder keys(String... keys) {

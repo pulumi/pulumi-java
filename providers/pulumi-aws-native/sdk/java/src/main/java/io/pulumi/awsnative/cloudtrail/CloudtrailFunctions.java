@@ -16,10 +16,10 @@ public final class CloudtrailFunctions {
      * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were created.
      * 
      */
-    public static CompletableFuture<GetTrailResult> getTrail(io.pulumi.awsnative.cloudtrail.inputs.GetTrailArgs args) {
-        return getTrail(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTrailResult> getTrail(GetTrailArgs args) {
+        return getTrail(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrailResult> getTrail(io.pulumi.awsnative.cloudtrail.inputs.GetTrailArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrailResult> getTrail(GetTrailArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudtrail:getTrail", TypeShape.of(GetTrailResult.class), args, Utilities.withVersion(options));
     }
 }

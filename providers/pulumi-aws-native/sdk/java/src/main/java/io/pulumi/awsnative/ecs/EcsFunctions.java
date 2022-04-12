@@ -28,70 +28,70 @@ public final class EcsFunctions {
      * Resource Type definition for AWS::ECS::CapacityProvider.
      * 
      */
-    public static CompletableFuture<GetCapacityProviderResult> getCapacityProvider(io.pulumi.awsnative.ecs.inputs.GetCapacityProviderArgs args) {
-        return getCapacityProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapacityProviderResult> getCapacityProvider(GetCapacityProviderArgs args) {
+        return getCapacityProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapacityProviderResult> getCapacityProvider(io.pulumi.awsnative.ecs.inputs.GetCapacityProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapacityProviderResult> getCapacityProvider(GetCapacityProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getCapacityProvider", TypeShape.of(GetCapacityProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create an Elastic Container Service (ECS) cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.ecs.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.ecs.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Associate a set of ECS Capacity Providers with a specified ECS Cluster
      * 
      */
-    public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> getClusterCapacityProviderAssociations(io.pulumi.awsnative.ecs.inputs.GetClusterCapacityProviderAssociationsArgs args) {
-        return getClusterCapacityProviderAssociations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> getClusterCapacityProviderAssociations(GetClusterCapacityProviderAssociationsArgs args) {
+        return getClusterCapacityProviderAssociations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> getClusterCapacityProviderAssociations(io.pulumi.awsnative.ecs.inputs.GetClusterCapacityProviderAssociationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterCapacityProviderAssociationsResult> getClusterCapacityProviderAssociations(GetClusterCapacityProviderAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getClusterCapacityProviderAssociations", TypeShape.of(GetClusterCapacityProviderAssociationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A pseudo-resource that manages which of your ECS task sets is primary.
      * 
      */
-    public static CompletableFuture<GetPrimaryTaskSetResult> getPrimaryTaskSet(io.pulumi.awsnative.ecs.inputs.GetPrimaryTaskSetArgs args) {
-        return getPrimaryTaskSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrimaryTaskSetResult> getPrimaryTaskSet(GetPrimaryTaskSetArgs args) {
+        return getPrimaryTaskSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrimaryTaskSetResult> getPrimaryTaskSet(io.pulumi.awsnative.ecs.inputs.GetPrimaryTaskSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrimaryTaskSetResult> getPrimaryTaskSet(GetPrimaryTaskSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getPrimaryTaskSet", TypeShape.of(GetPrimaryTaskSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ECS::Service
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.awsnative.ecs.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.awsnative.ecs.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema describing various properties for ECS TaskDefinition
      * 
      */
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.awsnative.ecs.inputs.GetTaskDefinitionArgs args) {
-        return getTaskDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {
+        return getTaskDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.awsnative.ecs.inputs.GetTaskDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create a task set in the specified cluster and service. This is used when a service uses the EXTERNAL deployment controller type. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.htmlin the Amazon Elastic Container Service Developer Guide.
      * 
      */
-    public static CompletableFuture<GetTaskSetResult> getTaskSet(io.pulumi.awsnative.ecs.inputs.GetTaskSetArgs args) {
-        return getTaskSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskSetResult> getTaskSet(GetTaskSetArgs args) {
+        return getTaskSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskSetResult> getTaskSet(io.pulumi.awsnative.ecs.inputs.GetTaskSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskSetResult> getTaskSet(GetTaskSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getTaskSet", TypeShape.of(GetTaskSetResult.class), args, Utilities.withVersion(options));
     }
 }

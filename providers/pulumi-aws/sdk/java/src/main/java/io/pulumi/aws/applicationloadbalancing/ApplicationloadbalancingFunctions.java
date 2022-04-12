@@ -31,12 +31,12 @@ public final class ApplicationloadbalancingFunctions {
      */
     @Deprecated /* aws.applicationloadbalancing.getListener has been deprecated in favor of aws.alb.getListener */
     public static CompletableFuture<GetListenerResult> getListener() {
-        return getListener(io.pulumi.aws.applicationloadbalancing.inputs.GetListenerArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getListener(GetListenerArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.aws.applicationloadbalancing.inputs.GetListenerArgs args) {
-        return getListener(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+        return getListener(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.aws.applicationloadbalancing.inputs.GetListenerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,12 +56,12 @@ public final class ApplicationloadbalancingFunctions {
      */
     @Deprecated /* aws.applicationloadbalancing.getLoadBalancer has been deprecated in favor of aws.alb.getLoadBalancer */
     public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer() {
-        return getLoadBalancer(io.pulumi.aws.applicationloadbalancing.inputs.GetLoadBalancerArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLoadBalancer(GetLoadBalancerArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.applicationloadbalancing.inputs.GetLoadBalancerArgs args) {
-        return getLoadBalancer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+        return getLoadBalancer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.applicationloadbalancing.inputs.GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,12 +81,12 @@ public final class ApplicationloadbalancingFunctions {
      */
     @Deprecated /* aws.applicationloadbalancing.getTargetGroup has been deprecated in favor of aws.alb.getTargetGroup */
     public static CompletableFuture<GetTargetGroupResult> getTargetGroup() {
-        return getTargetGroup(io.pulumi.aws.applicationloadbalancing.inputs.GetTargetGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTargetGroup(GetTargetGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(io.pulumi.aws.applicationloadbalancing.inputs.GetTargetGroupArgs args) {
-        return getTargetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
+        return getTargetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(io.pulumi.aws.applicationloadbalancing.inputs.GetTargetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:applicationloadbalancing/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -30,80 +30,80 @@ public final class IotwirelessFunctions {
      * Destination's resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetDestinationResult> getDestination(io.pulumi.awsnative.iotwireless.inputs.GetDestinationArgs args) {
-        return getDestination(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDestinationResult> getDestination(GetDestinationArgs args) {
+        return getDestination(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDestinationResult> getDestination(io.pulumi.awsnative.iotwireless.inputs.GetDestinationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDestinationResult> getDestination(GetDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDestination", TypeShape.of(GetDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Device Profile's resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfile(io.pulumi.awsnative.iotwireless.inputs.GetDeviceProfileArgs args) {
-        return getDeviceProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfile(GetDeviceProfileArgs args) {
+        return getDeviceProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfile(io.pulumi.awsnative.iotwireless.inputs.GetDeviceProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfile(GetDeviceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDeviceProfile", TypeShape.of(GetDeviceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage FUOTA tasks.
      * 
      */
-    public static CompletableFuture<GetFuotaTaskResult> getFuotaTask(io.pulumi.awsnative.iotwireless.inputs.GetFuotaTaskArgs args) {
-        return getFuotaTask(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFuotaTaskResult> getFuotaTask(GetFuotaTaskArgs args) {
+        return getFuotaTask(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFuotaTaskResult> getFuotaTask(io.pulumi.awsnative.iotwireless.inputs.GetFuotaTaskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFuotaTaskResult> getFuotaTask(GetFuotaTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getFuotaTask", TypeShape.of(GetFuotaTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage Multicast groups.
      * 
      */
-    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroup(io.pulumi.awsnative.iotwireless.inputs.GetMulticastGroupArgs args) {
-        return getMulticastGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroup(GetMulticastGroupArgs args) {
+        return getMulticastGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroup(io.pulumi.awsnative.iotwireless.inputs.GetMulticastGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroup(GetMulticastGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getMulticastGroup", TypeShape.of(GetMulticastGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetServiceProfileResult> getServiceProfile(io.pulumi.awsnative.iotwireless.inputs.GetServiceProfileArgs args) {
-        return getServiceProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceProfileResult> getServiceProfile(GetServiceProfileArgs args) {
+        return getServiceProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceProfileResult> getServiceProfile(io.pulumi.awsnative.iotwireless.inputs.GetServiceProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceProfileResult> getServiceProfile(GetServiceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getServiceProfile", TypeShape.of(GetServiceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates a gateway task definition.
      * 
      */
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.awsnative.iotwireless.inputs.GetTaskDefinitionArgs args) {
-        return getTaskDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {
+        return getTaskDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.awsnative.iotwireless.inputs.GetTaskDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage wireless gateways, including LoRa gateways.
      * 
      */
-    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevice(io.pulumi.awsnative.iotwireless.inputs.GetWirelessDeviceArgs args) {
-        return getWirelessDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevice(GetWirelessDeviceArgs args) {
+        return getWirelessDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevice(io.pulumi.awsnative.iotwireless.inputs.GetWirelessDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevice(GetWirelessDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessDevice", TypeShape.of(GetWirelessDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage wireless gateways, including LoRa gateways.
      * 
      */
-    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGateway(io.pulumi.awsnative.iotwireless.inputs.GetWirelessGatewayArgs args) {
-        return getWirelessGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGateway(GetWirelessGatewayArgs args) {
+        return getWirelessGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGateway(io.pulumi.awsnative.iotwireless.inputs.GetWirelessGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGateway(GetWirelessGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessGateway", TypeShape.of(GetWirelessGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

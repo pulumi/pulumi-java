@@ -24,50 +24,50 @@ public final class Appengine_v1betaFunctions {
      * Gets information about an application.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.googlenative.appengine_v1beta.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.googlenative.appengine_v1beta.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified SSL certificate.
      * 
      */
-    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(io.pulumi.googlenative.appengine_v1beta.inputs.GetAuthorizedCertificateArgs args) {
-        return getAuthorizedCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args) {
+        return getAuthorizedCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(io.pulumi.googlenative.appengine_v1beta.inputs.GetAuthorizedCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified domain mapping.
      * 
      */
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(io.pulumi.googlenative.appengine_v1beta.inputs.GetDomainMappingArgs args) {
-        return getDomainMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args) {
+        return getDomainMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(io.pulumi.googlenative.appengine_v1beta.inputs.GetDomainMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified firewall rule.
      * 
      */
-    public static CompletableFuture<GetIngressRuleResult> getIngressRule(io.pulumi.googlenative.appengine_v1beta.inputs.GetIngressRuleArgs args) {
-        return getIngressRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIngressRuleResult> getIngressRule(GetIngressRuleArgs args) {
+        return getIngressRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIngressRuleResult> getIngressRule(io.pulumi.googlenative.appengine_v1beta.inputs.GetIngressRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIngressRuleResult> getIngressRule(GetIngressRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getIngressRule", TypeShape.of(GetIngressRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource.
      * 
      */
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.appengine_v1beta.inputs.GetVersionArgs args) {
-        return getVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args) {
+        return getVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.appengine_v1beta.inputs.GetVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
     }
 }

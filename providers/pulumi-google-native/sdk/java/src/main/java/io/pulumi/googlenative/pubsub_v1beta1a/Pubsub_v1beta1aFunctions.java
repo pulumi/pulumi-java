@@ -18,20 +18,20 @@ public final class Pubsub_v1beta1aFunctions {
      * Gets the configuration details of a subscription.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.googlenative.pubsub_v1beta1a.inputs.GetSubscriptionArgs args) {
-        return getSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+        return getSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.googlenative.pubsub_v1beta1a.inputs.GetSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta1a:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.googlenative.pubsub_v1beta1a.inputs.GetTopicArgs args) {
-        return getTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+        return getTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.googlenative.pubsub_v1beta1a.inputs.GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta1a:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

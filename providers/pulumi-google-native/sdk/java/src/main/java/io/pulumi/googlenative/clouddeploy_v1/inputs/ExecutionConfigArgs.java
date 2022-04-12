@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.clouddeploy_v1.enums.ExecutionConfigUsagesItem;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.PrivatePoolArgs;
@@ -30,7 +31,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> artifactStorage;
 
     public Output<String> getArtifactStorage() {
-        return this.artifactStorage == null ? Output.empty() : this.artifactStorage;
+        return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<DefaultPoolArgs> defaultPool;
 
     public Output<DefaultPoolArgs> getDefaultPool() {
-        return this.defaultPool == null ? Output.empty() : this.defaultPool;
+        return this.defaultPool == null ? Codegen.empty() : this.defaultPool;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<PrivatePoolArgs> privatePool;
 
     public Output<PrivatePoolArgs> getPrivatePool() {
-        return this.privatePool == null ? Output.empty() : this.privatePool;
+        return this.privatePool == null ? Codegen.empty() : this.privatePool;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> workerPool;
 
     public Output<String> getWorkerPool() {
-        return this.workerPool == null ? Output.empty() : this.workerPool;
+        return this.workerPool == null ? Codegen.empty() : this.workerPool;
     }
 
     public ExecutionConfigArgs(
@@ -104,12 +105,12 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ExecutionConfigArgs() {
-        this.artifactStorage = Output.empty();
-        this.defaultPool = Output.empty();
-        this.privatePool = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.usages = Output.empty();
-        this.workerPool = Output.empty();
+        this.artifactStorage = Codegen.empty();
+        this.defaultPool = Codegen.empty();
+        this.privatePool = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.usages = Codegen.empty();
+        this.workerPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Output.ofNullable(artifactStorage);
+            this.artifactStorage = Codegen.ofNullable(artifactStorage);
             return this;
         }
         public Builder defaultPool(@Nullable Output<DefaultPoolArgs> defaultPool) {
@@ -155,7 +156,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder defaultPool(@Nullable DefaultPoolArgs defaultPool) {
-            this.defaultPool = Output.ofNullable(defaultPool);
+            this.defaultPool = Codegen.ofNullable(defaultPool);
             return this;
         }
         public Builder privatePool(@Nullable Output<PrivatePoolArgs> privatePool) {
@@ -163,7 +164,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privatePool(@Nullable PrivatePoolArgs privatePool) {
-            this.privatePool = Output.ofNullable(privatePool);
+            this.privatePool = Codegen.ofNullable(privatePool);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -171,7 +172,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder usages(Output<List<ExecutionConfigUsagesItem>> usages) {
@@ -190,7 +191,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder workerPool(@Nullable String workerPool) {
-            this.workerPool = Output.ofNullable(workerPool);
+            this.workerPool = Codegen.ofNullable(workerPool);
             return this;
         }        public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);

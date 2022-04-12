@@ -18,10 +18,10 @@ public final class FirebaseFunctions {
      * A Google Cloud Firebase web application instance
      * 
      */
-    public static CompletableFuture<GetWebAppResult> getWebApp(io.pulumi.gcp.firebase.inputs.GetWebAppArgs args) {
-        return getWebApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args) {
+        return getWebApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppResult> getWebApp(io.pulumi.gcp.firebase.inputs.GetWebAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:firebase/getWebApp:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class FirebaseFunctions {
      *     * [Official Documentation](https://firebase.google.com/)
      * 
      */
-    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(io.pulumi.gcp.firebase.inputs.GetWebAppConfigArgs args) {
-        return getWebAppConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(GetWebAppConfigArgs args) {
+        return getWebAppConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(io.pulumi.gcp.firebase.inputs.GetWebAppConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfig(GetWebAppConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:firebase/getWebAppConfig:getWebAppConfig", TypeShape.of(GetWebAppConfigResult.class), args, Utilities.withVersion(options));
     }
 }

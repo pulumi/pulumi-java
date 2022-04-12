@@ -18,20 +18,20 @@ public final class Cloudfunctions_v1Functions {
      * Returns a function with the given name from the requested project.
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.googlenative.cloudfunctions_v1.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.googlenative.cloudfunctions_v1.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v1:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM access control policy for a function. Returns an empty policy if the function exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(io.pulumi.googlenative.cloudfunctions_v1.inputs.GetFunctionIamPolicyArgs args) {
-        return getFunctionIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args) {
+        return getFunctionIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(io.pulumi.googlenative.cloudfunctions_v1.inputs.GetFunctionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v1:getFunctionIamPolicy", TypeShape.of(GetFunctionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

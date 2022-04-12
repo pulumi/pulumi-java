@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
       private final @Nullable Output<String> disk;
 
     public Output<String> getDisk() {
-        return this.disk == null ? Output.empty() : this.disk;
+        return this.disk == null ? Codegen.empty() : this.disk;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public RegionDiskResourcePolicyAttachmentState(
@@ -72,10 +73,10 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
     }
 
     private RegionDiskResourcePolicyAttachmentState() {
-        this.disk = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.disk = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
             return this;
         }
         public Builder disk(@Nullable String disk) {
-            this.disk = Output.ofNullable(disk);
+            this.disk = Codegen.ofNullable(disk);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -125,7 +126,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -133,7 +134,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public RegionDiskResourcePolicyAttachmentState build() {
             return new RegionDiskResourcePolicyAttachmentState(disk, name, project, region);

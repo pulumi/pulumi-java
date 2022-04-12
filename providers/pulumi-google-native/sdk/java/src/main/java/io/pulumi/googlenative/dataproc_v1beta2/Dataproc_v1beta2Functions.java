@@ -36,110 +36,110 @@ public final class Dataproc_v1beta2Functions {
      * Retrieves autoscaling policy.
      * 
      */
-    public static CompletableFuture<GetAutoscalingPolicyResult> getAutoscalingPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetAutoscalingPolicyArgs args) {
-        return getAutoscalingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutoscalingPolicyResult> getAutoscalingPolicy(GetAutoscalingPolicyArgs args) {
+        return getAutoscalingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoscalingPolicyResult> getAutoscalingPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetAutoscalingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoscalingPolicyResult> getAutoscalingPolicy(GetAutoscalingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getAutoscalingPolicy", TypeShape.of(GetAutoscalingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> getAutoscalingPolicyIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetAutoscalingPolicyIamPolicyArgs args) {
-        return getAutoscalingPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> getAutoscalingPolicyIamPolicy(GetAutoscalingPolicyIamPolicyArgs args) {
+        return getAutoscalingPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> getAutoscalingPolicyIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetAutoscalingPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> getAutoscalingPolicyIamPolicy(GetAutoscalingPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getAutoscalingPolicyIamPolicy", TypeShape.of(GetAutoscalingPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the resource representation for a cluster in a project.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the resource representation for a job in a project.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> getRegionAutoscalingPolicyIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionAutoscalingPolicyIamPolicyArgs args) {
-        return getRegionAutoscalingPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> getRegionAutoscalingPolicyIamPolicy(GetRegionAutoscalingPolicyIamPolicyArgs args) {
+        return getRegionAutoscalingPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> getRegionAutoscalingPolicyIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionAutoscalingPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> getRegionAutoscalingPolicyIamPolicy(GetRegionAutoscalingPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionAutoscalingPolicyIamPolicy", TypeShape.of(GetRegionAutoscalingPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegionClusterIamPolicyResult> getRegionClusterIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionClusterIamPolicyArgs args) {
-        return getRegionClusterIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionClusterIamPolicyResult> getRegionClusterIamPolicy(GetRegionClusterIamPolicyArgs args) {
+        return getRegionClusterIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionClusterIamPolicyResult> getRegionClusterIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionClusterIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionClusterIamPolicyResult> getRegionClusterIamPolicy(GetRegionClusterIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionClusterIamPolicy", TypeShape.of(GetRegionClusterIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegionJobIamPolicyResult> getRegionJobIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionJobIamPolicyArgs args) {
-        return getRegionJobIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionJobIamPolicyResult> getRegionJobIamPolicy(GetRegionJobIamPolicyArgs args) {
+        return getRegionJobIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionJobIamPolicyResult> getRegionJobIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionJobIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionJobIamPolicyResult> getRegionJobIamPolicy(GetRegionJobIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionJobIamPolicy", TypeShape.of(GetRegionJobIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegionOperationIamPolicyResult> getRegionOperationIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionOperationIamPolicyArgs args) {
-        return getRegionOperationIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionOperationIamPolicyResult> getRegionOperationIamPolicy(GetRegionOperationIamPolicyArgs args) {
+        return getRegionOperationIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionOperationIamPolicyResult> getRegionOperationIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionOperationIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionOperationIamPolicyResult> getRegionOperationIamPolicy(GetRegionOperationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionOperationIamPolicy", TypeShape.of(GetRegionOperationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> getRegionWorkflowTemplateIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionWorkflowTemplateIamPolicyArgs args) {
-        return getRegionWorkflowTemplateIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> getRegionWorkflowTemplateIamPolicy(GetRegionWorkflowTemplateIamPolicyArgs args) {
+        return getRegionWorkflowTemplateIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> getRegionWorkflowTemplateIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetRegionWorkflowTemplateIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> getRegionWorkflowTemplateIamPolicy(GetRegionWorkflowTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionWorkflowTemplateIamPolicy", TypeShape.of(GetRegionWorkflowTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
      * 
      */
-    public static CompletableFuture<GetWorkflowTemplateResult> getWorkflowTemplate(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetWorkflowTemplateArgs args) {
-        return getWorkflowTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkflowTemplateResult> getWorkflowTemplate(GetWorkflowTemplateArgs args) {
+        return getWorkflowTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkflowTemplateResult> getWorkflowTemplate(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetWorkflowTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkflowTemplateResult> getWorkflowTemplate(GetWorkflowTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getWorkflowTemplate", TypeShape.of(GetWorkflowTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> getWorkflowTemplateIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetWorkflowTemplateIamPolicyArgs args) {
-        return getWorkflowTemplateIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> getWorkflowTemplateIamPolicy(GetWorkflowTemplateIamPolicyArgs args) {
+        return getWorkflowTemplateIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> getWorkflowTemplateIamPolicy(io.pulumi.googlenative.dataproc_v1beta2.inputs.GetWorkflowTemplateIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkflowTemplateIamPolicyResult> getWorkflowTemplateIamPolicy(GetWorkflowTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getWorkflowTemplateIamPolicy", TypeShape.of(GetWorkflowTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

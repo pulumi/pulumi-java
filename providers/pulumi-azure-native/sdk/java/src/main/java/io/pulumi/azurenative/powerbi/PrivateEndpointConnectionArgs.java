@@ -9,6 +9,7 @@ import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
+        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> privateEndpointName;
 
     public Output<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
+        return this.privateEndpointName == null ? Codegen.empty() : this.privateEndpointName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
     public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.azureResourceName = Output.empty();
-        this.privateEndpoint = Output.empty();
-        this.privateEndpointName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.azureResourceName = Codegen.empty();
+        this.privateEndpoint = Codegen.empty();
+        this.privateEndpointName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Output.ofNullable(privateEndpoint);
+            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
             return this;
         }
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
@@ -159,7 +160,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Output.ofNullable(privateEndpointName);
+            this.privateEndpointName = Codegen.ofNullable(privateEndpointName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -167,7 +168,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
@@ -175,7 +176,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

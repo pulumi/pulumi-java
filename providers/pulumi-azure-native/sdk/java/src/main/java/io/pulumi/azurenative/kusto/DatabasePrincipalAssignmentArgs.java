@@ -8,6 +8,7 @@ import io.pulumi.azurenative.kusto.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> principalAssignmentName;
 
     public Output<String> getPrincipalAssignmentName() {
-        return this.principalAssignmentName == null ? Output.empty() : this.principalAssignmentName;
+        return this.principalAssignmentName == null ? Codegen.empty() : this.principalAssignmentName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public DatabasePrincipalAssignmentArgs(
@@ -125,14 +126,14 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
     }
 
     private DatabasePrincipalAssignmentArgs() {
-        this.clusterName = Output.empty();
-        this.databaseName = Output.empty();
-        this.principalAssignmentName = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.role = Output.empty();
-        this.tenantId = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.principalAssignmentName = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Output.ofNullable(principalAssignmentName);
+            this.principalAssignmentName = Codegen.ofNullable(principalAssignmentName);
             return this;
         }
         public Builder principalId(Output<String> principalId) {
@@ -230,7 +231,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public DatabasePrincipalAssignmentArgs build() {
             return new DatabasePrincipalAssignmentArgs(clusterName, databaseName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId);

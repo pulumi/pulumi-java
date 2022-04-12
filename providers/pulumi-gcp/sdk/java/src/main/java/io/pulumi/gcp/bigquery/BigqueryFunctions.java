@@ -27,12 +27,12 @@ public final class BigqueryFunctions {
      * 
      */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
-        return getDefaultServiceAccount(io.pulumi.gcp.bigquery.inputs.GetDefaultServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.bigquery.inputs.GetDefaultServiceAccountArgs args) {
-        return getDefaultServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
+        return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.bigquery.inputs.GetDefaultServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:bigquery/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

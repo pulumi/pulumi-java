@@ -17,10 +17,10 @@ public final class WindowsiotFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.windowsiot.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.windowsiot.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:windowsiot:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

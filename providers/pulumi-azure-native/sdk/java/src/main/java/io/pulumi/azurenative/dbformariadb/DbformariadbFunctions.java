@@ -27,10 +27,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.azurenative.dbformariadb.inputs.GetConfigurationArgs args) {
-        return getConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+        return getConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.azurenative.dbformariadb.inputs.GetConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.dbformariadb.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.dbformariadb.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.dbformariadb.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.dbformariadb.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.dbformariadb.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.dbformariadb.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,10 +71,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.dbformariadb.inputs.GetServerArgs args) {
-        return getServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+        return getServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.dbformariadb.inputs.GetServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,10 +82,10 @@ public final class DbformariadbFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.dbformariadb.inputs.GetVirtualNetworkRuleArgs args) {
-        return getVirtualNetworkRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
+        return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.dbformariadb.inputs.GetVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformariadb:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
 }

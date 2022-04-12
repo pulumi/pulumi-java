@@ -25,12 +25,12 @@ public final class WorkspacesFunctions {
      * 
      */
     public static CompletableFuture<GetBundleResult> getBundle() {
-        return getBundle(io.pulumi.aws.workspaces.inputs.GetBundleArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getBundle(GetBundleArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBundleResult> getBundle(io.pulumi.aws.workspaces.inputs.GetBundleArgs args) {
-        return getBundle(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBundleResult> getBundle(GetBundleArgs args) {
+        return getBundle(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBundleResult> getBundle(io.pulumi.aws.workspaces.inputs.GetBundleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBundleResult> getBundle(GetBundleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:workspaces/getBundle:getBundle", TypeShape.of(GetBundleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -39,10 +39,10 @@ public final class WorkspacesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(io.pulumi.aws.workspaces.inputs.GetDirectoryArgs args) {
-        return getDirectory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
+        return getDirectory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDirectoryResult> getDirectory(io.pulumi.aws.workspaces.inputs.GetDirectoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:workspaces/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class WorkspacesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.workspaces.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.aws.workspaces.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:workspaces/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,12 +64,12 @@ public final class WorkspacesFunctions {
      * 
      */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace() {
-        return getWorkspace(io.pulumi.aws.workspaces.inputs.GetWorkspaceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getWorkspace(GetWorkspaceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.aws.workspaces.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.aws.workspaces.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:workspaces/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -26,10 +26,10 @@ public final class LambdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.aws.lambda.inputs.GetAliasArgs args) {
-        return getAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+        return getAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.aws.lambda.inputs.GetAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class LambdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(io.pulumi.aws.lambda.inputs.GetCodeSigningConfigArgs args) {
-        return getCodeSigningConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
+        return getCodeSigningConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(io.pulumi.aws.lambda.inputs.GetCodeSigningConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getCodeSigningConfig:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,10 +52,10 @@ public final class LambdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.lambda.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.lambda.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class LambdaFunctions {
      * invocation type.
      * 
      */
-    public static CompletableFuture<GetInvocationResult> getInvocation(io.pulumi.aws.lambda.inputs.GetInvocationArgs args) {
-        return getInvocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInvocationResult> getInvocation(GetInvocationArgs args) {
+        return getInvocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInvocationResult> getInvocation(io.pulumi.aws.lambda.inputs.GetInvocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInvocationResult> getInvocation(GetInvocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getInvocation:getInvocation", TypeShape.of(GetInvocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -76,10 +76,10 @@ public final class LambdaFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(io.pulumi.aws.lambda.inputs.GetLayerVersionArgs args) {
-        return getLayerVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args) {
+        return getLayerVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(io.pulumi.aws.lambda.inputs.GetLayerVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getLayerVersion:getLayerVersion", TypeShape.of(GetLayerVersionResult.class), args, Utilities.withVersion(options));
     }
 }

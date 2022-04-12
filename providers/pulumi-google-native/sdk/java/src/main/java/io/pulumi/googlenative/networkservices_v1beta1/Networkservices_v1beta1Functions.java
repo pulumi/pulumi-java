@@ -22,40 +22,40 @@ public final class Networkservices_v1beta1Functions {
      * Gets details of a single EndpointPolicy.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetEndpointPolicyArgs args) {
-        return getEndpointPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args) {
+        return getEndpointPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetEndpointPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetEndpointPolicyIamPolicyArgs args) {
-        return getEndpointPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args) {
+        return getEndpointPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single ServiceBinding.
      * 
      */
-    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetServiceBindingArgs args) {
-        return getServiceBinding(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args) {
+        return getServiceBinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetServiceBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceBindingResult> getServiceBinding(GetServiceBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBinding", TypeShape.of(GetServiceBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetServiceBindingIamPolicyArgs args) {
-        return getServiceBindingIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args) {
+        return getServiceBindingIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(io.pulumi.googlenative.networkservices_v1beta1.inputs.GetServiceBindingIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceBindingIamPolicyResult> getServiceBindingIamPolicy(GetServiceBindingIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBindingIamPolicy", TypeShape.of(GetServiceBindingIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

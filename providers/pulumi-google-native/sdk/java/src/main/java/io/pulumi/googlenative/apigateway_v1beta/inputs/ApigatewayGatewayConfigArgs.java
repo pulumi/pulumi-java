@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBackendConfigArgs;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ApigatewayGatewayConfigArgs() {
-        this.backendConfig = Output.empty();
+        this.backendConfig = Codegen.empty();
     }
 
     public static Builder builder() {

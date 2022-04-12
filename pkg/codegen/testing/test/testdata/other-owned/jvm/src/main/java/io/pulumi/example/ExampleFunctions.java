@@ -13,12 +13,12 @@ import java.util.concurrent.CompletableFuture;
 
 public final class ExampleFunctions {
     public static CompletableFuture<ArgFunctionResult> argFunction() {
-        return argFunction(io.pulumi.example.inputs.ArgFunctionArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return argFunction(ArgFunctionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ArgFunctionResult> argFunction(io.pulumi.example.inputs.ArgFunctionArgs args) {
-        return argFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ArgFunctionResult> argFunction(ArgFunctionArgs args) {
+        return argFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ArgFunctionResult> argFunction(io.pulumi.example.inputs.ArgFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<ArgFunctionResult> argFunction(ArgFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args, Utilities.withVersion(options));
     }
 }

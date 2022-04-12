@@ -16,10 +16,10 @@ public final class ChatbotFunctions {
      * Resource schema for AWS::Chatbot::SlackChannelConfiguration.
      * 
      */
-    public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(io.pulumi.awsnative.chatbot.inputs.GetSlackChannelConfigurationArgs args) {
-        return getSlackChannelConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(GetSlackChannelConfigurationArgs args) {
+        return getSlackChannelConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(io.pulumi.awsnative.chatbot.inputs.GetSlackChannelConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSlackChannelConfigurationResult> getSlackChannelConfiguration(GetSlackChannelConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:chatbot:getSlackChannelConfiguration", TypeShape.of(GetSlackChannelConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

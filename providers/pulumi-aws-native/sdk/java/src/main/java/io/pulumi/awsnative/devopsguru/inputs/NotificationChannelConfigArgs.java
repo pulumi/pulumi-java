@@ -6,6 +6,7 @@ package io.pulumi.awsnative.devopsguru.inputs;
 import io.pulumi.awsnative.devopsguru.inputs.NotificationChannelSnsChannelConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
 
     public Output<NotificationChannelSnsChannelConfigArgs> getSns() {
-        return this.sns == null ? Output.empty() : this.sns;
+        return this.sns == null ? Codegen.empty() : this.sns;
     }
 
     public NotificationChannelConfigArgs(@Nullable Output<NotificationChannelSnsChannelConfigArgs> sns) {
@@ -30,7 +31,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     }
 
     private NotificationChannelConfigArgs() {
-        this.sns = Output.empty();
+        this.sns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
-            this.sns = Output.ofNullable(sns);
+            this.sns = Codegen.ofNullable(sns);
             return this;
         }        public NotificationChannelConfigArgs build() {
             return new NotificationChannelConfigArgs(sns);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sasUrlSettingName;
 
     public Output<String> getSasUrlSettingName() {
-        return this.sasUrlSettingName == null ? Output.empty() : this.sasUrlSettingName;
+        return this.sasUrlSettingName == null ? Codegen.empty() : this.sasUrlSettingName;
     }
 
     public BlobStorageTokenStoreArgs(@Nullable Output<String> sasUrlSettingName) {
@@ -34,7 +35,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
     }
 
     private BlobStorageTokenStoreArgs() {
-        this.sasUrlSettingName = Output.empty();
+        this.sasUrlSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sasUrlSettingName(@Nullable String sasUrlSettingName) {
-            this.sasUrlSettingName = Output.ofNullable(sasUrlSettingName);
+            this.sasUrlSettingName = Codegen.ofNullable(sasUrlSettingName);
             return this;
         }        public BlobStorageTokenStoreArgs build() {
             return new BlobStorageTokenStoreArgs(sasUrlSettingName);

@@ -36,110 +36,110 @@ public final class CloudformationFunctions {
      * Set a version as default version for a hook in CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetHookDefaultVersionArgs args) {
-        return getHookDefaultVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(GetHookDefaultVersionArgs args) {
+        return getHookDefaultVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetHookDefaultVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHookDefaultVersionResult> getHookDefaultVersion(GetHookDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookDefaultVersion", TypeShape.of(GetHookDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Specifies the configuration data for a registered hook in CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(io.pulumi.awsnative.cloudformation.inputs.GetHookTypeConfigArgs args) {
-        return getHookTypeConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(GetHookTypeConfigArgs args) {
+        return getHookTypeConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(io.pulumi.awsnative.cloudformation.inputs.GetHookTypeConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHookTypeConfigResult> getHookTypeConfig(GetHookTypeConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookTypeConfig", TypeShape.of(GetHookTypeConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Publishes new or first hook version to AWS CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetHookVersionResult> getHookVersion(io.pulumi.awsnative.cloudformation.inputs.GetHookVersionArgs args) {
-        return getHookVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHookVersionResult> getHookVersion(GetHookVersionArgs args) {
+        return getHookVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHookVersionResult> getHookVersion(io.pulumi.awsnative.cloudformation.inputs.GetHookVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHookVersionResult> getHookVersion(GetHookVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookVersion", TypeShape.of(GetHookVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A module that has been registered in the CloudFormation registry as the default version
      * 
      */
-    public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetModuleDefaultVersionArgs args) {
-        return getModuleDefaultVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(GetModuleDefaultVersionArgs args) {
+        return getModuleDefaultVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetModuleDefaultVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModuleDefaultVersionResult> getModuleDefaultVersion(GetModuleDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleDefaultVersion", TypeShape.of(GetModuleDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A module that has been registered in the CloudFormation registry.
      * 
      */
-    public static CompletableFuture<GetModuleVersionResult> getModuleVersion(io.pulumi.awsnative.cloudformation.inputs.GetModuleVersionArgs args) {
-        return getModuleVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModuleVersionResult> getModuleVersion(GetModuleVersionArgs args) {
+        return getModuleVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModuleVersionResult> getModuleVersion(io.pulumi.awsnative.cloudformation.inputs.GetModuleVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModuleVersionResult> getModuleVersion(GetModuleVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleVersion", TypeShape.of(GetModuleVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Test and Publish a resource that has been registered in the CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(io.pulumi.awsnative.cloudformation.inputs.GetPublicTypeVersionArgs args) {
-        return getPublicTypeVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(GetPublicTypeVersionArgs args) {
+        return getPublicTypeVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(io.pulumi.awsnative.cloudformation.inputs.GetPublicTypeVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicTypeVersionResult> getPublicTypeVersion(GetPublicTypeVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublicTypeVersion", TypeShape.of(GetPublicTypeVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Register as a publisher in the CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetPublisherResult> getPublisher(io.pulumi.awsnative.cloudformation.inputs.GetPublisherArgs args) {
-        return getPublisher(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublisherResult> getPublisher(GetPublisherArgs args) {
+        return getPublisher(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublisherResult> getPublisher(io.pulumi.awsnative.cloudformation.inputs.GetPublisherArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublisherResult> getPublisher(GetPublisherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getPublisher", TypeShape.of(GetPublisherResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The default version of a resource that has been registered in the CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetResourceDefaultVersionArgs args) {
-        return getResourceDefaultVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(GetResourceDefaultVersionArgs args) {
+        return getResourceDefaultVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(io.pulumi.awsnative.cloudformation.inputs.GetResourceDefaultVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceDefaultVersionResult> getResourceDefaultVersion(GetResourceDefaultVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceDefaultVersion", TypeShape.of(GetResourceDefaultVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A resource that has been registered in the CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetResourceVersionResult> getResourceVersion(io.pulumi.awsnative.cloudformation.inputs.GetResourceVersionArgs args) {
-        return getResourceVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceVersionResult> getResourceVersion(GetResourceVersionArgs args) {
+        return getResourceVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceVersionResult> getResourceVersion(io.pulumi.awsnative.cloudformation.inputs.GetResourceVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceVersionResult> getResourceVersion(GetResourceVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getResourceVersion", TypeShape.of(GetResourceVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances
      * 
      */
-    public static CompletableFuture<GetStackSetResult> getStackSet(io.pulumi.awsnative.cloudformation.inputs.GetStackSetArgs args) {
-        return getStackSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStackSetResult> getStackSet(GetStackSetArgs args) {
+        return getStackSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStackSetResult> getStackSet(io.pulumi.awsnative.cloudformation.inputs.GetStackSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStackSetResult> getStackSet(GetStackSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getStackSet", TypeShape.of(GetStackSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Enable a resource that has been published in the CloudFormation Registry.
      * 
      */
-    public static CompletableFuture<GetTypeActivationResult> getTypeActivation(io.pulumi.awsnative.cloudformation.inputs.GetTypeActivationArgs args) {
-        return getTypeActivation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTypeActivationResult> getTypeActivation(GetTypeActivationArgs args) {
+        return getTypeActivation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTypeActivationResult> getTypeActivation(io.pulumi.awsnative.cloudformation.inputs.GetTypeActivationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTypeActivationResult> getTypeActivation(GetTypeActivationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getTypeActivation", TypeShape.of(GetTypeActivationResult.class), args, Utilities.withVersion(options));
     }
 }

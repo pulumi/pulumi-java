@@ -16,10 +16,10 @@ public final class CertificatemanagerFunctions {
      * Resource schema for AWS::CertificateManager::Account.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.awsnative.certificatemanager.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.awsnative.certificatemanager.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:certificatemanager:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
 }

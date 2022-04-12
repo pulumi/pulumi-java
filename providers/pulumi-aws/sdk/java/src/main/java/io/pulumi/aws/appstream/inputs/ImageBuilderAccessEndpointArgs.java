@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> vpceId;
 
     public Output<String> getVpceId() {
-        return this.vpceId == null ? Output.empty() : this.vpceId;
+        return this.vpceId == null ? Codegen.empty() : this.vpceId;
     }
 
     public ImageBuilderAccessEndpointArgs(
@@ -44,8 +45,8 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
     }
 
     private ImageBuilderAccessEndpointArgs() {
-        this.endpointType = Output.empty();
-        this.vpceId = Output.empty();
+        this.endpointType = Codegen.empty();
+        this.vpceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder vpceId(@Nullable String vpceId) {
-            this.vpceId = Output.ofNullable(vpceId);
+            this.vpceId = Codegen.ofNullable(vpceId);
             return this;
         }        public ImageBuilderAccessEndpointArgs build() {
             return new ImageBuilderAccessEndpointArgs(endpointType, vpceId);

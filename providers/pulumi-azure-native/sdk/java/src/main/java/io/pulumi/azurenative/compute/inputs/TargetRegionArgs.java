@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.EncryptionImagesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionImagesArgs> encryption;
 
     public Output<EncryptionImagesArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> regionalReplicaCount;
 
     public Output<Integer> getRegionalReplicaCount() {
-        return this.regionalReplicaCount == null ? Output.empty() : this.regionalReplicaCount;
+        return this.regionalReplicaCount == null ? Codegen.empty() : this.regionalReplicaCount;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     public TargetRegionArgs(
@@ -78,10 +79,10 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetRegionArgs() {
-        this.encryption = Output.empty();
-        this.name = Output.empty();
-        this.regionalReplicaCount = Output.empty();
-        this.storageAccountType = Output.empty();
+        this.encryption = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regionalReplicaCount = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionImagesArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -131,7 +132,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
-            this.regionalReplicaCount = Output.ofNullable(regionalReplicaCount);
+            this.regionalReplicaCount = Codegen.ofNullable(regionalReplicaCount);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
@@ -139,7 +140,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }        public TargetRegionArgs build() {
             return new TargetRegionArgs(encryption, name, regionalReplicaCount, storageAccountType);

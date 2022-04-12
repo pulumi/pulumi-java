@@ -17,10 +17,10 @@ public final class EnterpriseknowledgegraphFunctions {
      * API Version: 2018-12-03.
      * 
      */
-    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(io.pulumi.azurenative.enterpriseknowledgegraph.inputs.GetEnterpriseKnowledgeGraphArgs args) {
-        return getEnterpriseKnowledgeGraph(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args) {
+        return getEnterpriseKnowledgeGraph(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(io.pulumi.azurenative.enterpriseknowledgegraph.inputs.GetEnterpriseKnowledgeGraphArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnterpriseKnowledgeGraphResult> getEnterpriseKnowledgeGraph(GetEnterpriseKnowledgeGraphArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:enterpriseknowledgegraph:getEnterpriseKnowledgeGraph", TypeShape.of(GetEnterpriseKnowledgeGraphResult.class), args, Utilities.withVersion(options));
     }
 }

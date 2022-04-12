@@ -17,10 +17,10 @@ public final class FeaturesFunctions {
      * API Version: 2021-07-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(io.pulumi.azurenative.features.inputs.GetSubscriptionFeatureRegistrationArgs args) {
-        return getSubscriptionFeatureRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args) {
+        return getSubscriptionFeatureRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(io.pulumi.azurenative.features.inputs.GetSubscriptionFeatureRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args, Utilities.withVersion(options));
     }
 }

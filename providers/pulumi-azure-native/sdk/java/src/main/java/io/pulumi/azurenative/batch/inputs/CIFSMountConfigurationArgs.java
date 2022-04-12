@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> mountOptions;
 
     public Output<String> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     @Import(name="password", required=true)
@@ -71,11 +72,11 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private CIFSMountConfigurationArgs() {
-        this.mountOptions = Output.empty();
-        this.password = Output.empty();
-        this.relativeMountPath = Output.empty();
-        this.source = Output.empty();
-        this.username = Output.empty();
+        this.mountOptions = Codegen.empty();
+        this.password = Codegen.empty();
+        this.relativeMountPath = Codegen.empty();
+        this.source = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder password(Output<String> password) {

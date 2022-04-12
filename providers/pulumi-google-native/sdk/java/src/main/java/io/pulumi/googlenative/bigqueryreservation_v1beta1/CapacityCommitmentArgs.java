@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentPlan;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentRenewalPlan;
 import java.lang.String;
@@ -20,21 +21,21 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> capacityCommitmentId;
 
     public Output<String> getCapacityCommitmentId() {
-        return this.capacityCommitmentId == null ? Output.empty() : this.capacityCommitmentId;
+        return this.capacityCommitmentId == null ? Codegen.empty() : this.capacityCommitmentId;
     }
 
     @Import(name="enforceSingleAdminProjectPerOrg")
       private final @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
     public Output<String> getEnforceSingleAdminProjectPerOrg() {
-        return this.enforceSingleAdminProjectPerOrg == null ? Output.empty() : this.enforceSingleAdminProjectPerOrg;
+        return this.enforceSingleAdminProjectPerOrg == null ? Codegen.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,14 +46,14 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CapacityCommitmentPlan> plan;
 
     public Output<CapacityCommitmentPlan> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
     public Output<CapacityCommitmentRenewalPlan> getRenewalPlan() {
-        return this.renewalPlan == null ? Output.empty() : this.renewalPlan;
+        return this.renewalPlan == null ? Codegen.empty() : this.renewalPlan;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> slotCount;
 
     public Output<String> getSlotCount() {
-        return this.slotCount == null ? Output.empty() : this.slotCount;
+        return this.slotCount == null ? Codegen.empty() : this.slotCount;
     }
 
     public CapacityCommitmentArgs(
@@ -95,13 +96,13 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CapacityCommitmentArgs() {
-        this.capacityCommitmentId = Output.empty();
-        this.enforceSingleAdminProjectPerOrg = Output.empty();
-        this.location = Output.empty();
-        this.plan = Output.empty();
-        this.project = Output.empty();
-        this.renewalPlan = Output.empty();
-        this.slotCount = Output.empty();
+        this.capacityCommitmentId = Codegen.empty();
+        this.enforceSingleAdminProjectPerOrg = Codegen.empty();
+        this.location = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.project = Codegen.empty();
+        this.renewalPlan = Codegen.empty();
+        this.slotCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder capacityCommitmentId(@Nullable String capacityCommitmentId) {
-            this.capacityCommitmentId = Output.ofNullable(capacityCommitmentId);
+            this.capacityCommitmentId = Codegen.ofNullable(capacityCommitmentId);
             return this;
         }
         public Builder enforceSingleAdminProjectPerOrg(@Nullable Output<String> enforceSingleAdminProjectPerOrg) {
@@ -149,7 +150,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
-            this.enforceSingleAdminProjectPerOrg = Output.ofNullable(enforceSingleAdminProjectPerOrg);
+            this.enforceSingleAdminProjectPerOrg = Codegen.ofNullable(enforceSingleAdminProjectPerOrg);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder plan(@Nullable Output<CapacityCommitmentPlan> plan) {
@@ -165,7 +166,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder plan(@Nullable CapacityCommitmentPlan plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -173,7 +174,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder renewalPlan(@Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan) {
@@ -181,7 +182,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder renewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
-            this.renewalPlan = Output.ofNullable(renewalPlan);
+            this.renewalPlan = Codegen.ofNullable(renewalPlan);
             return this;
         }
         public Builder slotCount(@Nullable Output<String> slotCount) {
@@ -189,7 +190,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder slotCount(@Nullable String slotCount) {
-            this.slotCount = Output.ofNullable(slotCount);
+            this.slotCount = Codegen.ofNullable(slotCount);
             return this;
         }        public CapacityCommitmentArgs build() {
             return new CapacityCommitmentArgs(capacityCommitmentId, enforceSingleAdminProjectPerOrg, location, plan, project, renewalPlan, slotCount);

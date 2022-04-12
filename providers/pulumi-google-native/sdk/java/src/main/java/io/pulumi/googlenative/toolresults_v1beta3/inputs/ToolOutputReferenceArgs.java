@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestCaseReferenceArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
@@ -28,7 +29,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<TimestampArgs> creationTime;
 
     public Output<TimestampArgs> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<FileReferenceArgs> output;
 
     public Output<FileReferenceArgs> getOutput() {
-        return this.output == null ? Output.empty() : this.output;
+        return this.output == null ? Codegen.empty() : this.output;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<TestCaseReferenceArgs> testCase;
 
     public Output<TestCaseReferenceArgs> getTestCase() {
-        return this.testCase == null ? Output.empty() : this.testCase;
+        return this.testCase == null ? Codegen.empty() : this.testCase;
     }
 
     public ToolOutputReferenceArgs(
@@ -63,9 +64,9 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ToolOutputReferenceArgs() {
-        this.creationTime = Output.empty();
-        this.output = Output.empty();
-        this.testCase = Output.empty();
+        this.creationTime = Codegen.empty();
+        this.output = Codegen.empty();
+        this.testCase = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder output(@Nullable Output<FileReferenceArgs> output) {
@@ -105,7 +106,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder output(@Nullable FileReferenceArgs output) {
-            this.output = Output.ofNullable(output);
+            this.output = Codegen.ofNullable(output);
             return this;
         }
         public Builder testCase(@Nullable Output<TestCaseReferenceArgs> testCase) {
@@ -113,7 +114,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder testCase(@Nullable TestCaseReferenceArgs testCase) {
-            this.testCase = Output.ofNullable(testCase);
+            this.testCase = Codegen.ofNullable(testCase);
             return this;
         }        public ToolOutputReferenceArgs build() {
             return new ToolOutputReferenceArgs(creationTime, output, testCase);

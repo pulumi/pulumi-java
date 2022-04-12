@@ -16,10 +16,10 @@ public final class BatchFunctions {
      * Resource Type schema for AWS::Batch::SchedulingPolicy
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(io.pulumi.awsnative.batch.inputs.GetSchedulingPolicyArgs args) {
-        return getSchedulingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
+        return getSchedulingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(io.pulumi.awsnative.batch.inputs.GetSchedulingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

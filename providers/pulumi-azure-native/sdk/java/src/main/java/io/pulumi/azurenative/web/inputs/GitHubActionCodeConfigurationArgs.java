@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> runtimeStack;
 
     public Output<String> getRuntimeStack() {
-        return this.runtimeStack == null ? Output.empty() : this.runtimeStack;
+        return this.runtimeStack == null ? Codegen.empty() : this.runtimeStack;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
+        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
     public GitHubActionCodeConfigurationArgs(
@@ -48,8 +49,8 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
     }
 
     private GitHubActionCodeConfigurationArgs() {
-        this.runtimeStack = Output.empty();
-        this.runtimeVersion = Output.empty();
+        this.runtimeStack = Codegen.empty();
+        this.runtimeVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder runtimeStack(@Nullable String runtimeStack) {
-            this.runtimeStack = Output.ofNullable(runtimeStack);
+            this.runtimeStack = Codegen.ofNullable(runtimeStack);
             return this;
         }
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
@@ -87,7 +88,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Output.ofNullable(runtimeVersion);
+            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
             return this;
         }        public GitHubActionCodeConfigurationArgs build() {
             return new GitHubActionCodeConfigurationArgs(runtimeStack, runtimeVersion);

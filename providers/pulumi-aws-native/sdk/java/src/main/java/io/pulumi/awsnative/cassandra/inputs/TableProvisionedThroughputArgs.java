@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -39,8 +40,8 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     }
 
     private TableProvisionedThroughputArgs() {
-        this.readCapacityUnits = Output.empty();
-        this.writeCapacityUnits = Output.empty();
+        this.readCapacityUnits = Codegen.empty();
+        this.writeCapacityUnits = Codegen.empty();
     }
 
     public static Builder builder() {

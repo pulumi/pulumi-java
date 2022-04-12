@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> gsuiteDomain;
 
     public Output<Boolean> getGsuiteDomain() {
-        return this.gsuiteDomain == null ? Output.empty() : this.gsuiteDomain;
+        return this.gsuiteDomain == null ? Codegen.empty() : this.gsuiteDomain;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> gsuiteGroupEmail;
 
     public Output<String> getGsuiteGroupEmail() {
-        return this.gsuiteGroupEmail == null ? Output.empty() : this.gsuiteGroupEmail;
+        return this.gsuiteGroupEmail == null ? Codegen.empty() : this.gsuiteGroupEmail;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> gsuiteUserEmail;
 
     public Output<String> getGsuiteUserEmail() {
-        return this.gsuiteUserEmail == null ? Output.empty() : this.gsuiteUserEmail;
+        return this.gsuiteUserEmail == null ? Codegen.empty() : this.gsuiteUserEmail;
     }
 
     public GSuitePrincipalArgs(
@@ -58,9 +59,9 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GSuitePrincipalArgs() {
-        this.gsuiteDomain = Output.empty();
-        this.gsuiteGroupEmail = Output.empty();
-        this.gsuiteUserEmail = Output.empty();
+        this.gsuiteDomain = Codegen.empty();
+        this.gsuiteGroupEmail = Codegen.empty();
+        this.gsuiteUserEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gsuiteDomain(@Nullable Boolean gsuiteDomain) {
-            this.gsuiteDomain = Output.ofNullable(gsuiteDomain);
+            this.gsuiteDomain = Codegen.ofNullable(gsuiteDomain);
             return this;
         }
         public Builder gsuiteGroupEmail(@Nullable Output<String> gsuiteGroupEmail) {
@@ -100,7 +101,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gsuiteGroupEmail(@Nullable String gsuiteGroupEmail) {
-            this.gsuiteGroupEmail = Output.ofNullable(gsuiteGroupEmail);
+            this.gsuiteGroupEmail = Codegen.ofNullable(gsuiteGroupEmail);
             return this;
         }
         public Builder gsuiteUserEmail(@Nullable Output<String> gsuiteUserEmail) {
@@ -108,7 +109,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gsuiteUserEmail(@Nullable String gsuiteUserEmail) {
-            this.gsuiteUserEmail = Output.ofNullable(gsuiteUserEmail);
+            this.gsuiteUserEmail = Codegen.ofNullable(gsuiteUserEmail);
             return this;
         }        public GSuitePrincipalArgs build() {
             return new GSuitePrincipalArgs(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);

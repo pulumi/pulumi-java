@@ -16,10 +16,10 @@ public final class Cloudsupport_v2betaFunctions {
      * Retrieve the specified case.
      * 
      */
-    public static CompletableFuture<GetCaseResult> getCase(io.pulumi.googlenative.cloudsupport_v2beta.inputs.GetCaseArgs args) {
-        return getCase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCaseResult> getCase(GetCaseArgs args) {
+        return getCase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCaseResult> getCase(io.pulumi.googlenative.cloudsupport_v2beta.inputs.GetCaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCaseResult> getCase(GetCaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsupport/v2beta:getCase", TypeShape.of(GetCaseResult.class), args, Utilities.withVersion(options));
     }
 }

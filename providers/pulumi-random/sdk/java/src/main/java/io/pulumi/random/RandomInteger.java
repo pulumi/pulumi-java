@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomIntegerArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIntegerState;
@@ -126,7 +127,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomInteger(String name, RandomIntegerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomInteger:RandomInteger", name, args == null ? RandomIntegerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomInteger:RandomInteger", name, args == null ? RandomIntegerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomInteger(String name, Output<String> id, @Nullable RandomIntegerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

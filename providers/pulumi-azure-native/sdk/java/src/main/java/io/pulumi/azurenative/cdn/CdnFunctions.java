@@ -47,10 +47,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAFDCustomDomainResult> getAFDCustomDomain(io.pulumi.azurenative.cdn.inputs.GetAFDCustomDomainArgs args) {
-        return getAFDCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAFDCustomDomainResult> getAFDCustomDomain(GetAFDCustomDomainArgs args) {
+        return getAFDCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAFDCustomDomainResult> getAFDCustomDomain(io.pulumi.azurenative.cdn.inputs.GetAFDCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAFDCustomDomainResult> getAFDCustomDomain(GetAFDCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDCustomDomain", TypeShape.of(GetAFDCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAFDEndpointResult> getAFDEndpoint(io.pulumi.azurenative.cdn.inputs.GetAFDEndpointArgs args) {
-        return getAFDEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAFDEndpointResult> getAFDEndpoint(GetAFDEndpointArgs args) {
+        return getAFDEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAFDEndpointResult> getAFDEndpoint(io.pulumi.azurenative.cdn.inputs.GetAFDEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAFDEndpointResult> getAFDEndpoint(GetAFDEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDEndpoint", TypeShape.of(GetAFDEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAFDOriginResult> getAFDOrigin(io.pulumi.azurenative.cdn.inputs.GetAFDOriginArgs args) {
-        return getAFDOrigin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAFDOriginResult> getAFDOrigin(GetAFDOriginArgs args) {
+        return getAFDOrigin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAFDOriginResult> getAFDOrigin(io.pulumi.azurenative.cdn.inputs.GetAFDOriginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAFDOriginResult> getAFDOrigin(GetAFDOriginArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDOrigin", TypeShape.of(GetAFDOriginResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAFDOriginGroupResult> getAFDOriginGroup(io.pulumi.azurenative.cdn.inputs.GetAFDOriginGroupArgs args) {
-        return getAFDOriginGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAFDOriginGroupResult> getAFDOriginGroup(GetAFDOriginGroupArgs args) {
+        return getAFDOriginGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAFDOriginGroupResult> getAFDOriginGroup(io.pulumi.azurenative.cdn.inputs.GetAFDOriginGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAFDOriginGroupResult> getAFDOriginGroup(GetAFDOriginGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDOriginGroup", TypeShape.of(GetAFDOriginGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -91,10 +91,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(io.pulumi.azurenative.cdn.inputs.GetCustomDomainArgs args) {
-        return getCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args) {
+        return getCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(io.pulumi.azurenative.cdn.inputs.GetCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -102,10 +102,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.cdn.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.cdn.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -113,10 +113,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetOriginResult> getOrigin(io.pulumi.azurenative.cdn.inputs.GetOriginArgs args) {
-        return getOrigin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginResult> getOrigin(GetOriginArgs args) {
+        return getOrigin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginResult> getOrigin(io.pulumi.azurenative.cdn.inputs.GetOriginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginResult> getOrigin(GetOriginArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getOrigin", TypeShape.of(GetOriginResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -124,10 +124,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetOriginGroupResult> getOriginGroup(io.pulumi.azurenative.cdn.inputs.GetOriginGroupArgs args) {
-        return getOriginGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginGroupResult> getOriginGroup(GetOriginGroupArgs args) {
+        return getOriginGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginGroupResult> getOriginGroup(io.pulumi.azurenative.cdn.inputs.GetOriginGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginGroupResult> getOriginGroup(GetOriginGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getOriginGroup", TypeShape.of(GetOriginGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -135,10 +135,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.cdn.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.cdn.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,10 +146,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.cdn.inputs.GetProfileArgs args) {
-        return getProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args) {
+        return getProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.cdn.inputs.GetProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,10 +157,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> getProfileSupportedOptimizationTypes(io.pulumi.azurenative.cdn.inputs.GetProfileSupportedOptimizationTypesArgs args) {
-        return getProfileSupportedOptimizationTypes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> getProfileSupportedOptimizationTypes(GetProfileSupportedOptimizationTypesArgs args) {
+        return getProfileSupportedOptimizationTypes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> getProfileSupportedOptimizationTypes(io.pulumi.azurenative.cdn.inputs.GetProfileSupportedOptimizationTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> getProfileSupportedOptimizationTypes(GetProfileSupportedOptimizationTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getProfileSupportedOptimizationTypes", TypeShape.of(GetProfileSupportedOptimizationTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -168,10 +168,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.azurenative.cdn.inputs.GetRouteArgs args) {
-        return getRoute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+        return getRoute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.azurenative.cdn.inputs.GetRouteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,10 +179,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.azurenative.cdn.inputs.GetRuleArgs args) {
-        return getRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+        return getRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.azurenative.cdn.inputs.GetRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -190,10 +190,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetRuleSetResult> getRuleSet(io.pulumi.azurenative.cdn.inputs.GetRuleSetArgs args) {
-        return getRuleSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleSetResult> getRuleSet(GetRuleSetArgs args) {
+        return getRuleSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleSetResult> getRuleSet(io.pulumi.azurenative.cdn.inputs.GetRuleSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleSetResult> getRuleSet(GetRuleSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRuleSet", TypeShape.of(GetRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,10 +201,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.cdn.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.cdn.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -212,10 +212,10 @@ public final class CdnFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(io.pulumi.azurenative.cdn.inputs.GetSecurityPolicyArgs args) {
-        return getSecurityPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(GetSecurityPolicyArgs args) {
+        return getSecurityPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(io.pulumi.azurenative.cdn.inputs.GetSecurityPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(GetSecurityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

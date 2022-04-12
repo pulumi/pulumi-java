@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CaPoolArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
@@ -114,7 +115,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPool(String name, CaPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CaPool", name, args == null ? CaPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CaPool", name, args == null ? CaPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CaPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

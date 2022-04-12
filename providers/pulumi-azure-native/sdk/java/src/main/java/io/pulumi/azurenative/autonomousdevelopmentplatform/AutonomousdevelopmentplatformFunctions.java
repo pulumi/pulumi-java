@@ -19,10 +19,10 @@ public final class AutonomousdevelopmentplatformFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AutonomousdevelopmentplatformFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataPoolResult> getDataPool(io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetDataPoolArgs args) {
-        return getDataPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args) {
+        return getDataPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataPoolResult> getDataPool(io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.GetDataPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataPoolResult> getDataPool(GetDataPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args, Utilities.withVersion(options));
     }
 }

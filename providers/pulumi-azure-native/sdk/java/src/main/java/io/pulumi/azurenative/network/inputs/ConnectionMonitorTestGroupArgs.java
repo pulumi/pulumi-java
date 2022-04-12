@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> disable;
 
     public Output<Boolean> getDisable() {
-        return this.disable == null ? Output.empty() : this.disable;
+        return this.disable == null ? Codegen.empty() : this.disable;
     }
 
     /**
@@ -89,11 +90,11 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     }
 
     private ConnectionMonitorTestGroupArgs() {
-        this.destinations = Output.empty();
-        this.disable = Output.empty();
-        this.name = Output.empty();
-        this.sources = Output.empty();
-        this.testConfigurations = Output.empty();
+        this.destinations = Codegen.empty();
+        this.disable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.testConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = Output.ofNullable(disable);
+            this.disable = Codegen.ofNullable(disable);
             return this;
         }
         public Builder name(Output<String> name) {

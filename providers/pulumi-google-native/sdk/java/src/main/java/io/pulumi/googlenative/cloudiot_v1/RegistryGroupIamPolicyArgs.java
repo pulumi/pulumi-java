@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<BindingArgs>> bindings;
 
     public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="groupId", required=true)
@@ -50,14 +51,14 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="registryId", required=true)
@@ -75,7 +76,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public RegistryGroupIamPolicyArgs(
@@ -96,13 +97,13 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private RegistryGroupIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.groupId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.registryId = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.registryId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -153,7 +154,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder groupId(Output<String> groupId) {
@@ -169,7 +170,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -177,7 +178,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder registryId(Output<String> registryId) {
@@ -193,7 +194,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public RegistryGroupIamPolicyArgs build() {
             return new RegistryGroupIamPolicyArgs(bindings, etag, groupId, location, project, registryId, version);

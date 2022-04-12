@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,9 +64,9 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     }
 
     private SafetyRuleGatingRuleArgs() {
-        this.gatingControls = Output.empty();
-        this.targetControls = Output.empty();
-        this.waitPeriodMs = Output.empty();
+        this.gatingControls = Codegen.empty();
+        this.targetControls = Codegen.empty();
+        this.waitPeriodMs = Codegen.empty();
     }
 
     public static Builder builder() {

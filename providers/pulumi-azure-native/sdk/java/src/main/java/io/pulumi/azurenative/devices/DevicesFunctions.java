@@ -37,10 +37,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.devices.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.devices.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificate(io.pulumi.azurenative.devices.inputs.GetDpsCertificateArgs args) {
-        return getDpsCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificate(GetDpsCertificateArgs args) {
+        return getDpsCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificate(io.pulumi.azurenative.devices.inputs.GetDpsCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificate(GetDpsCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getDpsCertificate", TypeShape.of(GetDpsCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,10 +59,10 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResource(io.pulumi.azurenative.devices.inputs.GetIotDpsResourceArgs args) {
-        return getIotDpsResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResource(GetIotDpsResourceArgs args) {
+        return getIotDpsResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResource(io.pulumi.azurenative.devices.inputs.GetIotDpsResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResource(GetIotDpsResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResource", TypeShape.of(GetIotDpsResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -70,10 +70,10 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnection(io.pulumi.azurenative.devices.inputs.GetIotDpsResourcePrivateEndpointConnectionArgs args) {
-        return getIotDpsResourcePrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnection(GetIotDpsResourcePrivateEndpointConnectionArgs args) {
+        return getIotDpsResourcePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnection(io.pulumi.azurenative.devices.inputs.GetIotDpsResourcePrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnection(GetIotDpsResourcePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResourcePrivateEndpointConnection", TypeShape.of(GetIotDpsResourcePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,10 +81,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<GetIotHubResourceResult> getIotHubResource(io.pulumi.azurenative.devices.inputs.GetIotHubResourceArgs args) {
-        return getIotHubResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotHubResourceResult> getIotHubResource(GetIotHubResourceArgs args) {
+        return getIotHubResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotHubResourceResult> getIotHubResource(io.pulumi.azurenative.devices.inputs.GetIotHubResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotHubResourceResult> getIotHubResource(GetIotHubResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResource", TypeShape.of(GetIotHubResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -92,10 +92,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroup(io.pulumi.azurenative.devices.inputs.GetIotHubResourceEventHubConsumerGroupArgs args) {
-        return getIotHubResourceEventHubConsumerGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroup(GetIotHubResourceEventHubConsumerGroupArgs args) {
+        return getIotHubResourceEventHubConsumerGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroup(io.pulumi.azurenative.devices.inputs.GetIotHubResourceEventHubConsumerGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroup(GetIotHubResourceEventHubConsumerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResourceEventHubConsumerGroup", TypeShape.of(GetIotHubResourceEventHubConsumerGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -103,10 +103,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.devices.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.devices.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -114,10 +114,10 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeys(io.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysArgs args) {
-        return listIotDpsResourceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeys(ListIotDpsResourceKeysArgs args) {
+        return listIotDpsResourceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeys(io.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeys(ListIotDpsResourceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeys", TypeShape.of(ListIotDpsResourceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -125,10 +125,10 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyName(io.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysForKeyNameArgs args) {
-        return listIotDpsResourceKeysForKeyName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyName(ListIotDpsResourceKeysForKeyNameArgs args) {
+        return listIotDpsResourceKeysForKeyName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyName(io.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysForKeyNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyName(ListIotDpsResourceKeysForKeyNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeysForKeyName", TypeShape.of(ListIotDpsResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -136,10 +136,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeys(io.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysArgs args) {
-        return listIotHubResourceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeys(ListIotHubResourceKeysArgs args) {
+        return listIotHubResourceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeys(io.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeys(ListIotHubResourceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeys", TypeShape.of(ListIotHubResourceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,10 +147,10 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
-    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyName(io.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysForKeyNameArgs args) {
-        return listIotHubResourceKeysForKeyName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyName(ListIotHubResourceKeysForKeyNameArgs args) {
+        return listIotHubResourceKeysForKeyName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyName(io.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysForKeyNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyName(ListIotHubResourceKeysForKeyNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeysForKeyName", TypeShape.of(ListIotHubResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
     }
 }

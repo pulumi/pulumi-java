@@ -41,10 +41,10 @@ public final class ResourcesFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAzureCliScriptResult> getAzureCliScript(io.pulumi.azurenative.resources.inputs.GetAzureCliScriptArgs args) {
-        return getAzureCliScript(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAzureCliScriptResult> getAzureCliScript(GetAzureCliScriptArgs args) {
+        return getAzureCliScript(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzureCliScriptResult> getAzureCliScript(io.pulumi.azurenative.resources.inputs.GetAzureCliScriptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAzureCliScriptResult> getAzureCliScript(GetAzureCliScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzureCliScript", TypeShape.of(GetAzureCliScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,10 +52,10 @@ public final class ResourcesFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAzurePowerShellScriptResult> getAzurePowerShellScript(io.pulumi.azurenative.resources.inputs.GetAzurePowerShellScriptArgs args) {
-        return getAzurePowerShellScript(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAzurePowerShellScriptResult> getAzurePowerShellScript(GetAzurePowerShellScriptArgs args) {
+        return getAzurePowerShellScript(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzurePowerShellScriptResult> getAzurePowerShellScript(io.pulumi.azurenative.resources.inputs.GetAzurePowerShellScriptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAzurePowerShellScriptResult> getAzurePowerShellScript(GetAzurePowerShellScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzurePowerShellScript", TypeShape.of(GetAzurePowerShellScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -63,10 +63,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.resources.inputs.GetDeploymentArgs args) {
-        return getDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+        return getDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.resources.inputs.GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,10 +74,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> getDeploymentAtManagementGroupScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtManagementGroupScopeArgs args) {
-        return getDeploymentAtManagementGroupScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> getDeploymentAtManagementGroupScope(GetDeploymentAtManagementGroupScopeArgs args) {
+        return getDeploymentAtManagementGroupScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> getDeploymentAtManagementGroupScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtManagementGroupScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> getDeploymentAtManagementGroupScope(GetDeploymentAtManagementGroupScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtManagementGroupScope", TypeShape.of(GetDeploymentAtManagementGroupScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,10 +85,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentAtScopeResult> getDeploymentAtScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtScopeArgs args) {
-        return getDeploymentAtScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentAtScopeResult> getDeploymentAtScope(GetDeploymentAtScopeArgs args) {
+        return getDeploymentAtScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentAtScopeResult> getDeploymentAtScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentAtScopeResult> getDeploymentAtScope(GetDeploymentAtScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtScope", TypeShape.of(GetDeploymentAtScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,10 +96,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentAtSubscriptionScopeResult> getDeploymentAtSubscriptionScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtSubscriptionScopeArgs args) {
-        return getDeploymentAtSubscriptionScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentAtSubscriptionScopeResult> getDeploymentAtSubscriptionScope(GetDeploymentAtSubscriptionScopeArgs args) {
+        return getDeploymentAtSubscriptionScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentAtSubscriptionScopeResult> getDeploymentAtSubscriptionScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtSubscriptionScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentAtSubscriptionScopeResult> getDeploymentAtSubscriptionScope(GetDeploymentAtSubscriptionScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtSubscriptionScope", TypeShape.of(GetDeploymentAtSubscriptionScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,10 +107,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentAtTenantScopeResult> getDeploymentAtTenantScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtTenantScopeArgs args) {
-        return getDeploymentAtTenantScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentAtTenantScopeResult> getDeploymentAtTenantScope(GetDeploymentAtTenantScopeArgs args) {
+        return getDeploymentAtTenantScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentAtTenantScopeResult> getDeploymentAtTenantScope(io.pulumi.azurenative.resources.inputs.GetDeploymentAtTenantScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentAtTenantScopeResult> getDeploymentAtTenantScope(GetDeploymentAtTenantScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtTenantScope", TypeShape.of(GetDeploymentAtTenantScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -122,10 +122,10 @@ public final class ResourcesFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: AzureCliScript, AzurePowerShellScript. */
-    public static CompletableFuture<GetDeploymentScriptResult> getDeploymentScript(io.pulumi.azurenative.resources.inputs.GetDeploymentScriptArgs args) {
-        return getDeploymentScript(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentScriptResult> getDeploymentScript(GetDeploymentScriptArgs args) {
+        return getDeploymentScript(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentScriptResult> getDeploymentScript(io.pulumi.azurenative.resources.inputs.GetDeploymentScriptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentScriptResult> getDeploymentScript(GetDeploymentScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentScript", TypeShape.of(GetDeploymentScriptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,10 +133,10 @@ public final class ResourcesFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.azurenative.resources.inputs.GetResourceArgs args) {
-        return getResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+        return getResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.azurenative.resources.inputs.GetResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -144,10 +144,10 @@ public final class ResourcesFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(io.pulumi.azurenative.resources.inputs.GetResourceGroupArgs args) {
-        return getResourceGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args) {
+        return getResourceGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(io.pulumi.azurenative.resources.inputs.GetResourceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -155,10 +155,10 @@ public final class ResourcesFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetTagAtScopeResult> getTagAtScope(io.pulumi.azurenative.resources.inputs.GetTagAtScopeArgs args) {
-        return getTagAtScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagAtScopeResult> getTagAtScope(GetTagAtScopeArgs args) {
+        return getTagAtScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagAtScopeResult> getTagAtScope(io.pulumi.azurenative.resources.inputs.GetTagAtScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagAtScopeResult> getTagAtScope(GetTagAtScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getTagAtScope", TypeShape.of(GetTagAtScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -166,10 +166,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-05-01.
      * 
      */
-    public static CompletableFuture<GetTemplateSpecResult> getTemplateSpec(io.pulumi.azurenative.resources.inputs.GetTemplateSpecArgs args) {
-        return getTemplateSpec(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateSpecResult> getTemplateSpec(GetTemplateSpecArgs args) {
+        return getTemplateSpec(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateSpecResult> getTemplateSpec(io.pulumi.azurenative.resources.inputs.GetTemplateSpecArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateSpecResult> getTemplateSpec(GetTemplateSpecArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getTemplateSpec", TypeShape.of(GetTemplateSpecResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -177,10 +177,10 @@ public final class ResourcesFunctions {
      * API Version: 2021-05-01.
      * 
      */
-    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(io.pulumi.azurenative.resources.inputs.GetTemplateSpecVersionArgs args) {
-        return getTemplateSpecVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args) {
+        return getTemplateSpecVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(io.pulumi.azurenative.resources.inputs.GetTemplateSpecVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getTemplateSpecVersion", TypeShape.of(GetTemplateSpecVersionResult.class), args, Utilities.withVersion(options));
     }
 }

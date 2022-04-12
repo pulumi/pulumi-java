@@ -45,10 +45,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetConnectorResult> getConnector(io.pulumi.azurenative.customerinsights.inputs.GetConnectorArgs args) {
-        return getConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
+        return getConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectorResult> getConnector(io.pulumi.azurenative.customerinsights.inputs.GetConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetConnectorMappingResult> getConnectorMapping(io.pulumi.azurenative.customerinsights.inputs.GetConnectorMappingArgs args) {
-        return getConnectorMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectorMappingResult> getConnectorMapping(GetConnectorMappingArgs args) {
+        return getConnectorMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectorMappingResult> getConnectorMapping(io.pulumi.azurenative.customerinsights.inputs.GetConnectorMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectorMappingResult> getConnectorMapping(GetConnectorMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnectorMapping", TypeShape.of(GetConnectorMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -67,10 +67,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetHubResult> getHub(io.pulumi.azurenative.customerinsights.inputs.GetHubArgs args) {
-        return getHub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args) {
+        return getHub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHubResult> getHub(io.pulumi.azurenative.customerinsights.inputs.GetHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -78,10 +78,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForData(io.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForDataArgs args) {
-        return getImageUploadUrlForData(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForData(GetImageUploadUrlForDataArgs args) {
+        return getImageUploadUrlForData(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForData(io.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForDataArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForData(GetImageUploadUrlForDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getImageUploadUrlForData", TypeShape.of(GetImageUploadUrlForDataResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,10 +89,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityType(io.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForEntityTypeArgs args) {
-        return getImageUploadUrlForEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityType(GetImageUploadUrlForEntityTypeArgs args) {
+        return getImageUploadUrlForEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityType(io.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityType(GetImageUploadUrlForEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getImageUploadUrlForEntityType", TypeShape.of(GetImageUploadUrlForEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -100,10 +100,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetKpiResult> getKpi(io.pulumi.azurenative.customerinsights.inputs.GetKpiArgs args) {
-        return getKpi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKpiResult> getKpi(GetKpiArgs args) {
+        return getKpi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKpiResult> getKpi(io.pulumi.azurenative.customerinsights.inputs.GetKpiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKpiResult> getKpi(GetKpiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getKpi", TypeShape.of(GetKpiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -111,10 +111,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetLinkResult> getLink(io.pulumi.azurenative.customerinsights.inputs.GetLinkArgs args) {
-        return getLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLinkResult> getLink(GetLinkArgs args) {
+        return getLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLinkResult> getLink(io.pulumi.azurenative.customerinsights.inputs.GetLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -122,10 +122,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetPredictionResult> getPrediction(io.pulumi.azurenative.customerinsights.inputs.GetPredictionArgs args) {
-        return getPrediction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPredictionResult> getPrediction(GetPredictionArgs args) {
+        return getPrediction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPredictionResult> getPrediction(io.pulumi.azurenative.customerinsights.inputs.GetPredictionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPredictionResult> getPrediction(GetPredictionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPrediction", TypeShape.of(GetPredictionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,10 +133,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatus(io.pulumi.azurenative.customerinsights.inputs.GetPredictionModelStatusArgs args) {
-        return getPredictionModelStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatus(GetPredictionModelStatusArgs args) {
+        return getPredictionModelStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatus(io.pulumi.azurenative.customerinsights.inputs.GetPredictionModelStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatus(GetPredictionModelStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionModelStatus", TypeShape.of(GetPredictionModelStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -144,10 +144,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResults(io.pulumi.azurenative.customerinsights.inputs.GetPredictionTrainingResultsArgs args) {
-        return getPredictionTrainingResults(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResults(GetPredictionTrainingResultsArgs args) {
+        return getPredictionTrainingResults(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResults(io.pulumi.azurenative.customerinsights.inputs.GetPredictionTrainingResultsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResults(GetPredictionTrainingResultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionTrainingResults", TypeShape.of(GetPredictionTrainingResultsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -155,10 +155,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.customerinsights.inputs.GetProfileArgs args) {
-        return getProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args) {
+        return getProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.customerinsights.inputs.GetProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -166,10 +166,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetRelationshipResult> getRelationship(io.pulumi.azurenative.customerinsights.inputs.GetRelationshipArgs args) {
-        return getRelationship(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRelationshipResult> getRelationship(GetRelationshipArgs args) {
+        return getRelationship(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRelationshipResult> getRelationship(io.pulumi.azurenative.customerinsights.inputs.GetRelationshipArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRelationshipResult> getRelationship(GetRelationshipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRelationship", TypeShape.of(GetRelationshipResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -177,10 +177,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLink(io.pulumi.azurenative.customerinsights.inputs.GetRelationshipLinkArgs args) {
-        return getRelationshipLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLink(GetRelationshipLinkArgs args) {
+        return getRelationshipLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLink(io.pulumi.azurenative.customerinsights.inputs.GetRelationshipLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLink(GetRelationshipLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRelationshipLink", TypeShape.of(GetRelationshipLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -188,10 +188,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(io.pulumi.azurenative.customerinsights.inputs.GetRoleAssignmentArgs args) {
-        return getRoleAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args) {
+        return getRoleAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(io.pulumi.azurenative.customerinsights.inputs.GetRoleAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -199,10 +199,10 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(io.pulumi.azurenative.customerinsights.inputs.GetViewArgs args) {
-        return getView(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
+        return getView(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetViewResult> getView(io.pulumi.azurenative.customerinsights.inputs.GetViewArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
 }

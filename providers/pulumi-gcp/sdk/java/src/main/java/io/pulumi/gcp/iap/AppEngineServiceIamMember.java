@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineServiceIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberState;
@@ -182,7 +183,7 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineServiceIamMember(String name, AppEngineServiceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineServiceIamMember:AppEngineServiceIamMember", name, args == null ? AppEngineServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineServiceIamMember:AppEngineServiceIamMember", name, args == null ? AppEngineServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineServiceIamMember(String name, Output<String> id, @Nullable AppEngineServiceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -195,7 +196,7 @@ public class RemediationAtSubscription extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public RemediationAtSubscription(String name, @Nullable RemediationAtSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:policyinsights:RemediationAtSubscription", name, args == null ? RemediationAtSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:policyinsights:RemediationAtSubscription", name, args == null ? RemediationAtSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RemediationAtSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

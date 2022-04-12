@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.PetArgs;
 import io.pulumi.example.Utilities;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class Pet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Pet(String name, @Nullable PetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Pet", name, args == null ? PetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Pet", name, args == null ? PetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Pet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.enums.DoubleEncryption;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
 
     public Output<Either<String,DoubleEncryption>> getDoubleEncryption() {
-        return this.doubleEncryption == null ? Output.empty() : this.doubleEncryption;
+        return this.doubleEncryption == null ? Codegen.empty() : this.doubleEncryption;
     }
 
     public EncryptionPreferencesArgs(@Nullable Output<Either<String,DoubleEncryption>> doubleEncryption) {
@@ -36,7 +37,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
     }
 
     private EncryptionPreferencesArgs() {
-        this.doubleEncryption = Output.empty();
+        this.doubleEncryption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder doubleEncryption(@Nullable Either<String,DoubleEncryption> doubleEncryption) {
-            this.doubleEncryption = Output.ofNullable(doubleEncryption);
+            this.doubleEncryption = Codegen.ofNullable(doubleEncryption);
             return this;
         }        public EncryptionPreferencesArgs build() {
             return new EncryptionPreferencesArgs(doubleEncryption);

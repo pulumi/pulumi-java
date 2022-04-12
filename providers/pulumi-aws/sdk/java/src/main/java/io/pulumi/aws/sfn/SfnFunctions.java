@@ -21,12 +21,12 @@ public final class SfnFunctions {
      * 
      */
     public static CompletableFuture<GetActivityResult> getActivity() {
-        return getActivity(io.pulumi.aws.sfn.inputs.GetActivityArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getActivity(GetActivityArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActivityResult> getActivity(io.pulumi.aws.sfn.inputs.GetActivityArgs args) {
-        return getActivity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args) {
+        return getActivity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActivityResult> getActivity(io.pulumi.aws.sfn.inputs.GetActivityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sfn/getActivity:getActivity", TypeShape.of(GetActivityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,10 +37,10 @@ public final class SfnFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(io.pulumi.aws.sfn.inputs.GetStateMachineArgs args) {
-        return getStateMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {
+        return getStateMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(io.pulumi.aws.sfn.inputs.GetStateMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sfn/getStateMachine:getStateMachine", TypeShape.of(GetStateMachineResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class SoftwareRecipeStepInstallDpkgArgs extends io.pulumi.resources
     }
 
     private SoftwareRecipeStepInstallDpkgArgs() {
-        this.artifactId = Output.empty();
+        this.artifactId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maximum;
 
     public Output<String> getMaximum() {
-        return this.maximum == null ? Output.empty() : this.maximum;
+        return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> minimum;
 
     public Output<String> getMinimum() {
-        return this.minimum == null ? Output.empty() : this.minimum;
+        return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public ResourceLimitArgs(
@@ -61,9 +62,9 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceLimitArgs() {
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
-        this.resourceType = Output.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximum(@Nullable String maximum) {
-            this.maximum = Output.ofNullable(maximum);
+            this.maximum = Codegen.ofNullable(maximum);
             return this;
         }
         public Builder minimum(@Nullable Output<String> minimum) {
@@ -103,7 +104,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimum(@Nullable String minimum) {
-            this.minimum = Output.ofNullable(minimum);
+            this.minimum = Codegen.ofNullable(minimum);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -111,7 +112,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public ResourceLimitArgs build() {
             return new ResourceLimitArgs(maximum, minimum, resourceType);

@@ -23,10 +23,10 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.datalakeanalytics.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.datalakeanalytics.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(io.pulumi.azurenative.datalakeanalytics.inputs.GetComputePolicyArgs args) {
-        return getComputePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args) {
+        return getComputePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(io.pulumi.azurenative.datalakeanalytics.inputs.GetComputePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getComputePolicy", TypeShape.of(GetComputePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.datalakeanalytics.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.datalakeanalytics.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(io.pulumi.azurenative.datalakeanalytics.inputs.ListStorageAccountSasTokensArgs args) {
-        return listStorageAccountSasTokens(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args) {
+        return listStorageAccountSasTokens(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(io.pulumi.azurenative.datalakeanalytics.inputs.ListStorageAccountSasTokensArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:listStorageAccountSasTokens", TypeShape.of(ListStorageAccountSasTokensResult.class), args, Utilities.withVersion(options));
     }
 }

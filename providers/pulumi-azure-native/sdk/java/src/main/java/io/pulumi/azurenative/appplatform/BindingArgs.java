@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.BindingResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bindingName;
 
     public Output<String> getBindingName() {
-        return this.bindingName == null ? Output.empty() : this.bindingName;
+        return this.bindingName == null ? Codegen.empty() : this.bindingName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BindingResourcePropertiesArgs> properties;
 
     public Output<BindingResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BindingArgs() {
-        this.appName = Output.empty();
-        this.bindingName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.appName = Codegen.empty();
+        this.bindingName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bindingName(@Nullable String bindingName) {
-            this.bindingName = Output.ofNullable(bindingName);
+            this.bindingName = Codegen.ofNullable(bindingName);
             return this;
         }
         public Builder properties(@Nullable Output<BindingResourcePropertiesArgs> properties) {
@@ -140,7 +141,7 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable BindingResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

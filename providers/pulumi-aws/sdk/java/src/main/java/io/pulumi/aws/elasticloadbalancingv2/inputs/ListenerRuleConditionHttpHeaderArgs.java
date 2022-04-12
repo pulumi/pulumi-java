@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ListenerRuleConditionHttpHeaderArgs extends io.pulumi.resourc
     }
 
     private ListenerRuleConditionHttpHeaderArgs() {
-        this.httpHeaderName = Output.empty();
-        this.values = Output.empty();
+        this.httpHeaderName = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -18,20 +18,20 @@ public final class ApprunnerFunctions {
      * The AWS::AppRunner::Service resource specifies an AppRunner Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.awsnative.apprunner.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.awsnative.apprunner.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::AppRunner::VpcConnector resource specifies an App Runner VpcConnector.
      * 
      */
-    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(io.pulumi.awsnative.apprunner.inputs.GetVpcConnectorArgs args) {
-        return getVpcConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args) {
+        return getVpcConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(io.pulumi.awsnative.apprunner.inputs.GetVpcConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpcConnectorResult> getVpcConnector(GetVpcConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apprunner:getVpcConnector", TypeShape.of(GetVpcConnectorResult.class), args, Utilities.withVersion(options));
     }
 }

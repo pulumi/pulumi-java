@@ -19,10 +19,10 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(io.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationAssignmentArgs args) {
-        return getGuestConfigurationAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args) {
+        return getGuestConfigurationAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(io.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
-    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(io.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentArgs args) {
-        return getGuestConfigurationHCRPAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args) {
+        return getGuestConfigurationHCRPAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(io.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

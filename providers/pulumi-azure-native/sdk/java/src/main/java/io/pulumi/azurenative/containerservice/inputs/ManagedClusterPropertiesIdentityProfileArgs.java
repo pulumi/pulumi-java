@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public ManagedClusterPropertiesIdentityProfileArgs(
@@ -57,9 +58,9 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
     }
 
     private ManagedClusterPropertiesIdentityProfileArgs() {
-        this.clientId = Output.empty();
-        this.objectId = Output.empty();
-        this.resourceId = Output.empty();
+        this.clientId = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder objectId(@Nullable Output<String> objectId) {
@@ -99,7 +100,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -107,7 +108,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public ManagedClusterPropertiesIdentityProfileArgs build() {
             return new ManagedClusterPropertiesIdentityProfileArgs(clientId, objectId, resourceId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
-        return this.checksum == null ? Output.empty() : this.checksum;
+        return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> names;
 
     public Output<List<String>> getNames() {
-        return this.names == null ? Output.empty() : this.names;
+        return this.names == null ? Codegen.empty() : this.names;
     }
 
     public ArtifactArgs(
@@ -62,9 +63,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactArgs() {
-        this.checksum = Output.empty();
-        this.id = Output.empty();
-        this.names = Output.empty();
+        this.checksum = Codegen.empty();
+        this.id = Codegen.empty();
+        this.names = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Output.ofNullable(checksum);
+            this.checksum = Codegen.ofNullable(checksum);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -104,7 +105,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder names(@Nullable Output<List<String>> names) {
@@ -112,7 +113,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder names(@Nullable List<String> names) {
-            this.names = Output.ofNullable(names);
+            this.names = Codegen.ofNullable(names);
             return this;
         }
         public Builder names(String... names) {

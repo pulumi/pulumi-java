@@ -40,130 +40,130 @@ public final class Dialogflow_v3Functions {
      * Retrieves the specified agent.
      * 
      */
-    public static CompletableFuture<GetAgentResult> getAgent(io.pulumi.googlenative.dialogflow_v3.inputs.GetAgentArgs args) {
-        return getAgent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args) {
+        return getAgent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAgentResult> getAgent(io.pulumi.googlenative.dialogflow_v3.inputs.GetAgentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getAgent", TypeShape.of(GetAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified entity type.
      * 
      */
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.googlenative.dialogflow_v3.inputs.GetEntityTypeArgs args) {
-        return getEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args) {
+        return getEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityTypeResult> getEntityType(io.pulumi.googlenative.dialogflow_v3.inputs.GetEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityTypeResult> getEntityType(GetEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getEntityType", TypeShape.of(GetEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified Environment.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.googlenative.dialogflow_v3.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.googlenative.dialogflow_v3.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified Experiment.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.googlenative.dialogflow_v3.inputs.GetExperimentArgs args) {
-        return getExperiment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
+        return getExperiment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.googlenative.dialogflow_v3.inputs.GetExperimentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified flow.
      * 
      */
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.googlenative.dialogflow_v3.inputs.GetFlowArgs args) {
-        return getFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args) {
+        return getFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.googlenative.dialogflow_v3.inputs.GetFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified intent.
      * 
      */
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.googlenative.dialogflow_v3.inputs.GetIntentArgs args) {
-        return getIntent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args) {
+        return getIntent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntentResult> getIntent(io.pulumi.googlenative.dialogflow_v3.inputs.GetIntentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntentResult> getIntent(GetIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getIntent", TypeShape.of(GetIntentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified page.
      * 
      */
-    public static CompletableFuture<GetPageResult> getPage(io.pulumi.googlenative.dialogflow_v3.inputs.GetPageArgs args) {
-        return getPage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPageResult> getPage(GetPageArgs args) {
+        return getPage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPageResult> getPage(io.pulumi.googlenative.dialogflow_v3.inputs.GetPageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPageResult> getPage(GetPageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getPage", TypeShape.of(GetPageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
      * 
      */
-    public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(io.pulumi.googlenative.dialogflow_v3.inputs.GetSecuritySettingArgs args) {
-        return getSecuritySetting(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(GetSecuritySettingArgs args) {
+        return getSecuritySetting(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(io.pulumi.googlenative.dialogflow_v3.inputs.GetSecuritySettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecuritySettingResult> getSecuritySetting(GetSecuritySettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getSecuritySetting", TypeShape.of(GetSecuritySettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified session entity type.
      * 
      */
-    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(io.pulumi.googlenative.dialogflow_v3.inputs.GetSessionEntityTypeArgs args) {
-        return getSessionEntityType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args) {
+        return getSessionEntityType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(io.pulumi.googlenative.dialogflow_v3.inputs.GetSessionEntityTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getSessionEntityType", TypeShape.of(GetSessionEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a test case.
      * 
      */
-    public static CompletableFuture<GetTestCaseResult> getTestCase(io.pulumi.googlenative.dialogflow_v3.inputs.GetTestCaseArgs args) {
-        return getTestCase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestCaseResult> getTestCase(GetTestCaseArgs args) {
+        return getTestCase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestCaseResult> getTestCase(io.pulumi.googlenative.dialogflow_v3.inputs.GetTestCaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestCaseResult> getTestCase(GetTestCaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTestCase", TypeShape.of(GetTestCaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified TransitionRouteGroup.
      * 
      */
-    public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(io.pulumi.googlenative.dialogflow_v3.inputs.GetTransitionRouteGroupArgs args) {
-        return getTransitionRouteGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(GetTransitionRouteGroupArgs args) {
+        return getTransitionRouteGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(io.pulumi.googlenative.dialogflow_v3.inputs.GetTransitionRouteGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransitionRouteGroupResult> getTransitionRouteGroup(GetTransitionRouteGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTransitionRouteGroup", TypeShape.of(GetTransitionRouteGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified Version.
      * 
      */
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.dialogflow_v3.inputs.GetVersionArgs args) {
-        return getVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args) {
+        return getVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVersionResult> getVersion(io.pulumi.googlenative.dialogflow_v3.inputs.GetVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVersionResult> getVersion(GetVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getVersion", TypeShape.of(GetVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified webhook.
      * 
      */
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.googlenative.dialogflow_v3.inputs.GetWebhookArgs args) {
-        return getWebhook(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
+        return getWebhook(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.googlenative.dialogflow_v3.inputs.GetWebhookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }
 }

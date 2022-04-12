@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
     }
 
     private BitbucketServerSecretsArgs() {
-        this.adminAccessTokenVersionName = Output.empty();
-        this.readAccessTokenVersionName = Output.empty();
-        this.webhookSecretVersionName = Output.empty();
+        this.adminAccessTokenVersionName = Codegen.empty();
+        this.readAccessTokenVersionName = Codegen.empty();
+        this.webhookSecretVersionName = Codegen.empty();
     }
 
     public static Builder builder() {

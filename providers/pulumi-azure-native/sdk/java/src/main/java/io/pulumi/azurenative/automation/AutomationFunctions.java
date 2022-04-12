@@ -57,10 +57,10 @@ public final class AutomationFunctions {
      * API Version: 2021-06-22.
      * 
      */
-    public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(io.pulumi.azurenative.automation.inputs.GetAutomationAccountArgs args) {
-        return getAutomationAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(GetAutomationAccountArgs args) {
+        return getAutomationAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(io.pulumi.azurenative.automation.inputs.GetAutomationAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutomationAccountResult> getAutomationAccount(GetAutomationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getAutomationAccount", TypeShape.of(GetAutomationAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,10 +68,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.automation.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.automation.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -79,10 +79,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.azurenative.automation.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.azurenative.automation.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionTypeResult> getConnectionType(io.pulumi.azurenative.automation.inputs.GetConnectionTypeArgs args) {
-        return getConnectionType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionTypeResult> getConnectionType(GetConnectionTypeArgs args) {
+        return getConnectionType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionTypeResult> getConnectionType(io.pulumi.azurenative.automation.inputs.GetConnectionTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionTypeResult> getConnectionType(GetConnectionTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnectionType", TypeShape.of(GetConnectionTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,10 +101,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetCredentialResult> getCredential(io.pulumi.azurenative.automation.inputs.GetCredentialArgs args) {
-        return getCredential(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCredentialResult> getCredential(GetCredentialArgs args) {
+        return getCredential(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCredentialResult> getCredential(io.pulumi.azurenative.automation.inputs.GetCredentialArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCredentialResult> getCredential(GetCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getCredential", TypeShape.of(GetCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -112,10 +112,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(io.pulumi.azurenative.automation.inputs.GetDscConfigurationArgs args) {
-        return getDscConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(GetDscConfigurationArgs args) {
+        return getDscConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(io.pulumi.azurenative.automation.inputs.GetDscConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDscConfigurationResult> getDscConfiguration(GetDscConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getDscConfiguration", TypeShape.of(GetDscConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -123,10 +123,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(io.pulumi.azurenative.automation.inputs.GetDscNodeConfigurationArgs args) {
-        return getDscNodeConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(GetDscNodeConfigurationArgs args) {
+        return getDscNodeConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(io.pulumi.azurenative.automation.inputs.GetDscNodeConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDscNodeConfigurationResult> getDscNodeConfiguration(GetDscNodeConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getDscNodeConfiguration", TypeShape.of(GetDscNodeConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -134,10 +134,10 @@ public final class AutomationFunctions {
      * API Version: 2021-06-22.
      * 
      */
-    public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerArgs args) {
-        return getHybridRunbookWorker(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(GetHybridRunbookWorkerArgs args) {
+        return getHybridRunbookWorker(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridRunbookWorkerResult> getHybridRunbookWorker(GetHybridRunbookWorkerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorker", TypeShape.of(GetHybridRunbookWorkerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -145,10 +145,10 @@ public final class AutomationFunctions {
      * API Version: 2021-06-22.
      * 
      */
-    public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerGroupArgs args) {
-        return getHybridRunbookWorkerGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(GetHybridRunbookWorkerGroupArgs args) {
+        return getHybridRunbookWorkerGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(io.pulumi.azurenative.automation.inputs.GetHybridRunbookWorkerGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridRunbookWorkerGroupResult> getHybridRunbookWorkerGroup(GetHybridRunbookWorkerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorkerGroup", TypeShape.of(GetHybridRunbookWorkerGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -156,10 +156,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetJobScheduleResult> getJobSchedule(io.pulumi.azurenative.automation.inputs.GetJobScheduleArgs args) {
-        return getJobSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobScheduleResult> getJobSchedule(GetJobScheduleArgs args) {
+        return getJobSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobScheduleResult> getJobSchedule(io.pulumi.azurenative.automation.inputs.GetJobScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobScheduleResult> getJobSchedule(GetJobScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getJobSchedule", TypeShape.of(GetJobScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -167,10 +167,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetModuleResult> getModule(io.pulumi.azurenative.automation.inputs.GetModuleArgs args) {
-        return getModule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModuleResult> getModule(GetModuleArgs args) {
+        return getModule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModuleResult> getModule(io.pulumi.azurenative.automation.inputs.GetModuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModuleResult> getModule(GetModuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getModule", TypeShape.of(GetModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -178,10 +178,10 @@ public final class AutomationFunctions {
      * API Version: 2020-01-13-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.automation.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.automation.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,10 +189,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetPython2PackageResult> getPython2Package(io.pulumi.azurenative.automation.inputs.GetPython2PackageArgs args) {
-        return getPython2Package(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPython2PackageResult> getPython2Package(GetPython2PackageArgs args) {
+        return getPython2Package(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPython2PackageResult> getPython2Package(io.pulumi.azurenative.automation.inputs.GetPython2PackageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPython2PackageResult> getPython2Package(GetPython2PackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getPython2Package", TypeShape.of(GetPython2PackageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -200,10 +200,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetRunbookResult> getRunbook(io.pulumi.azurenative.automation.inputs.GetRunbookArgs args) {
-        return getRunbook(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRunbookResult> getRunbook(GetRunbookArgs args) {
+        return getRunbook(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRunbookResult> getRunbook(io.pulumi.azurenative.automation.inputs.GetRunbookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRunbookResult> getRunbook(GetRunbookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getRunbook", TypeShape.of(GetRunbookResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -211,10 +211,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetScheduleResult> getSchedule(io.pulumi.azurenative.automation.inputs.GetScheduleArgs args) {
-        return getSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args) {
+        return getSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScheduleResult> getSchedule(io.pulumi.azurenative.automation.inputs.GetScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSchedule", TypeShape.of(GetScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -222,10 +222,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(io.pulumi.azurenative.automation.inputs.GetSoftwareUpdateConfigurationByNameArgs args) {
-        return getSoftwareUpdateConfigurationByName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(GetSoftwareUpdateConfigurationByNameArgs args) {
+        return getSoftwareUpdateConfigurationByName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(io.pulumi.azurenative.automation.inputs.GetSoftwareUpdateConfigurationByNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSoftwareUpdateConfigurationByNameResult> getSoftwareUpdateConfigurationByName(GetSoftwareUpdateConfigurationByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSoftwareUpdateConfigurationByName", TypeShape.of(GetSoftwareUpdateConfigurationByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -233,10 +233,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(io.pulumi.azurenative.automation.inputs.GetSourceControlArgs args) {
-        return getSourceControl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args) {
+        return getSourceControl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(io.pulumi.azurenative.automation.inputs.GetSourceControlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSourceControl", TypeShape.of(GetSourceControlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -244,10 +244,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.azurenative.automation.inputs.GetVariableArgs args) {
-        return getVariable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
+        return getVariable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVariableResult> getVariable(io.pulumi.azurenative.automation.inputs.GetVariableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -255,10 +255,10 @@ public final class AutomationFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetWatcherResult> getWatcher(io.pulumi.azurenative.automation.inputs.GetWatcherArgs args) {
-        return getWatcher(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWatcherResult> getWatcher(GetWatcherArgs args) {
+        return getWatcher(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWatcherResult> getWatcher(io.pulumi.azurenative.automation.inputs.GetWatcherArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWatcherResult> getWatcher(GetWatcherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWatcher", TypeShape.of(GetWatcherResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -266,20 +266,20 @@ public final class AutomationFunctions {
      * API Version: 2015-10-31.
      * 
      */
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.azurenative.automation.inputs.GetWebhookArgs args) {
-        return getWebhook(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args) {
+        return getWebhook(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebhookResult> getWebhook(io.pulumi.azurenative.automation.inputs.GetWebhookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebhookResult> getWebhook(GetWebhookArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWebhook", TypeShape.of(GetWebhookResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-06-22.
      * 
      */
-    public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(io.pulumi.azurenative.automation.inputs.ListKeyByAutomationAccountArgs args) {
-        return listKeyByAutomationAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(ListKeyByAutomationAccountArgs args) {
+        return listKeyByAutomationAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(io.pulumi.azurenative.automation.inputs.ListKeyByAutomationAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListKeyByAutomationAccountResult> listKeyByAutomationAccount(ListKeyByAutomationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:listKeyByAutomationAccount", TypeShape.of(ListKeyByAutomationAccountResult.class), args, Utilities.withVersion(options));
     }
 }

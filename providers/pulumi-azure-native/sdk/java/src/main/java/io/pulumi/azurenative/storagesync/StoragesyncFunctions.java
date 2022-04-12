@@ -27,10 +27,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetCloudEndpointResult> getCloudEndpoint(io.pulumi.azurenative.storagesync.inputs.GetCloudEndpointArgs args) {
-        return getCloudEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudEndpointResult> getCloudEndpoint(GetCloudEndpointArgs args) {
+        return getCloudEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudEndpointResult> getCloudEndpoint(io.pulumi.azurenative.storagesync.inputs.GetCloudEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudEndpointResult> getCloudEndpoint(GetCloudEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getCloudEndpoint", TypeShape.of(GetCloudEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.storagesync.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.storagesync.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredServerResult> getRegisteredServer(io.pulumi.azurenative.storagesync.inputs.GetRegisteredServerArgs args) {
-        return getRegisteredServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegisteredServerResult> getRegisteredServer(GetRegisteredServerArgs args) {
+        return getRegisteredServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegisteredServerResult> getRegisteredServer(io.pulumi.azurenative.storagesync.inputs.GetRegisteredServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegisteredServerResult> getRegisteredServer(GetRegisteredServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getRegisteredServer", TypeShape.of(GetRegisteredServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetServerEndpointResult> getServerEndpoint(io.pulumi.azurenative.storagesync.inputs.GetServerEndpointArgs args) {
-        return getServerEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerEndpointResult> getServerEndpoint(GetServerEndpointArgs args) {
+        return getServerEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerEndpointResult> getServerEndpoint(io.pulumi.azurenative.storagesync.inputs.GetServerEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerEndpointResult> getServerEndpoint(GetServerEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getServerEndpoint", TypeShape.of(GetServerEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,10 +71,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetStorageSyncServiceResult> getStorageSyncService(io.pulumi.azurenative.storagesync.inputs.GetStorageSyncServiceArgs args) {
-        return getStorageSyncService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageSyncServiceResult> getStorageSyncService(GetStorageSyncServiceArgs args) {
+        return getStorageSyncService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageSyncServiceResult> getStorageSyncService(io.pulumi.azurenative.storagesync.inputs.GetStorageSyncServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageSyncServiceResult> getStorageSyncService(GetStorageSyncServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getStorageSyncService", TypeShape.of(GetStorageSyncServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,10 +82,10 @@ public final class StoragesyncFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(io.pulumi.azurenative.storagesync.inputs.GetSyncGroupArgs args) {
-        return getSyncGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args) {
+        return getSyncGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(io.pulumi.azurenative.storagesync.inputs.GetSyncGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.EngineSplitTrafficArgs;
 import io.pulumi.gcp.appengine.inputs.EngineSplitTrafficState;
@@ -125,7 +126,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EngineSplitTraffic(String name, EngineSplitTrafficArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, args == null ? EngineSplitTrafficArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/engineSplitTraffic:EngineSplitTraffic", name, args == null ? EngineSplitTrafficArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EngineSplitTraffic(String name, Output<String> id, @Nullable EngineSplitTrafficState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

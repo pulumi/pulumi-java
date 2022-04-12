@@ -5,6 +5,7 @@ package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class BudgetsActionScpActionDefinitionArgs extends io.pulumi.resour
     }
 
     private BudgetsActionScpActionDefinitionArgs() {
-        this.policyId = Output.empty();
-        this.targetIds = Output.empty();
+        this.policyId = Codegen.empty();
+        this.targetIds = Codegen.empty();
     }
 
     public static Builder builder() {

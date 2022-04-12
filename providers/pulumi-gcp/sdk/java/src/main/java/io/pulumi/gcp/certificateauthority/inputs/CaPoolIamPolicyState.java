@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> caPool;
 
     public Output<String> getCaPool() {
-        return this.caPool == null ? Output.empty() : this.caPool;
+        return this.caPool == null ? Codegen.empty() : this.caPool;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public CaPoolIamPolicyState(
@@ -87,11 +88,11 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private CaPoolIamPolicyState() {
-        this.caPool = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.caPool = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder caPool(@Nullable String caPool) {
-            this.caPool = Output.ofNullable(caPool);
+            this.caPool = Codegen.ofNullable(caPool);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -135,7 +136,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -143,7 +144,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -151,7 +152,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -159,7 +160,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public CaPoolIamPolicyState build() {
             return new CaPoolIamPolicyState(caPool, etag, location, policyData, project);

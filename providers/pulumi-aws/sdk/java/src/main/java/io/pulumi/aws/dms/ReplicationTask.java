@@ -9,6 +9,7 @@ import io.pulumi.aws.dms.inputs.ReplicationTaskState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -220,7 +221,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationTask(String name, ReplicationTaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dms/replicationTask:ReplicationTask", name, args == null ? ReplicationTaskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationTask(String name, Output<String> id, @Nullable ReplicationTaskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

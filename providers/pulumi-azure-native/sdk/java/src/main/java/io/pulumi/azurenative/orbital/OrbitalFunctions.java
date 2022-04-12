@@ -23,10 +23,10 @@ public final class OrbitalFunctions {
      * API Version: 2021-04-04-preview.
      * 
      */
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.azurenative.orbital.inputs.GetContactArgs args) {
-        return getContact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
+        return getContact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.azurenative.orbital.inputs.GetContactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class OrbitalFunctions {
      * API Version: 2021-04-04-preview.
      * 
      */
-    public static CompletableFuture<GetContactProfileResult> getContactProfile(io.pulumi.azurenative.orbital.inputs.GetContactProfileArgs args) {
-        return getContactProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactProfileResult> getContactProfile(GetContactProfileArgs args) {
+        return getContactProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactProfileResult> getContactProfile(io.pulumi.azurenative.orbital.inputs.GetContactProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactProfileResult> getContactProfile(GetContactProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getContactProfile", TypeShape.of(GetContactProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class OrbitalFunctions {
      * API Version: 2021-04-04-preview.
      * 
      */
-    public static CompletableFuture<GetSpacecraftResult> getSpacecraft(io.pulumi.azurenative.orbital.inputs.GetSpacecraftArgs args) {
-        return getSpacecraft(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSpacecraftResult> getSpacecraft(GetSpacecraftArgs args) {
+        return getSpacecraft(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSpacecraftResult> getSpacecraft(io.pulumi.azurenative.orbital.inputs.GetSpacecraftArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSpacecraftResult> getSpacecraft(GetSpacecraftArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:getSpacecraft", TypeShape.of(GetSpacecraftResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class OrbitalFunctions {
      * API Version: 2021-04-04-preview.
      * 
      */
-    public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(io.pulumi.azurenative.orbital.inputs.ListSpacecraftAvailableContactsArgs args) {
-        return listSpacecraftAvailableContacts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(ListSpacecraftAvailableContactsArgs args) {
+        return listSpacecraftAvailableContacts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(io.pulumi.azurenative.orbital.inputs.ListSpacecraftAvailableContactsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSpacecraftAvailableContactsResult> listSpacecraftAvailableContacts(ListSpacecraftAvailableContactsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:listSpacecraftAvailableContacts", TypeShape.of(ListSpacecraftAvailableContactsResult.class), args, Utilities.withVersion(options));
     }
 }

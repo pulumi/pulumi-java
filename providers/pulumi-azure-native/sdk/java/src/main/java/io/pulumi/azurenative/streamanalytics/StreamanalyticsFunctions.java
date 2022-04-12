@@ -29,10 +29,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.streamanalytics.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.streamanalytics.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.azurenative.streamanalytics.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.azurenative.streamanalytics.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetInputResult> getInput(io.pulumi.azurenative.streamanalytics.inputs.GetInputArgs args) {
-        return getInput(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInputResult> getInput(GetInputArgs args) {
+        return getInput(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInputResult> getInput(io.pulumi.azurenative.streamanalytics.inputs.GetInputArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInputResult> getInput(GetInputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getInput", TypeShape.of(GetInputResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetOutputResult> getOutput(io.pulumi.azurenative.streamanalytics.inputs.GetOutputArgs args) {
-        return getOutput(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutputResult> getOutput(GetOutputArgs args) {
+        return getOutput(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutputResult> getOutput(io.pulumi.azurenative.streamanalytics.inputs.GetOutputArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutputResult> getOutput(GetOutputArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getOutput", TypeShape.of(GetOutputResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(io.pulumi.azurenative.streamanalytics.inputs.GetPrivateEndpointArgs args) {
-        return getPrivateEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args) {
+        return getPrivateEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(io.pulumi.azurenative.streamanalytics.inputs.GetPrivateEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetStreamingJobResult> getStreamingJob(io.pulumi.azurenative.streamanalytics.inputs.GetStreamingJobArgs args) {
-        return getStreamingJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamingJobResult> getStreamingJob(GetStreamingJobArgs args) {
+        return getStreamingJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamingJobResult> getStreamingJob(io.pulumi.azurenative.streamanalytics.inputs.GetStreamingJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamingJobResult> getStreamingJob(GetStreamingJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getStreamingJob", TypeShape.of(GetStreamingJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class StreamanalyticsFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(io.pulumi.azurenative.streamanalytics.inputs.ListClusterStreamingJobsArgs args) {
-        return listClusterStreamingJobs(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(ListClusterStreamingJobsArgs args) {
+        return listClusterStreamingJobs(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(io.pulumi.azurenative.streamanalytics.inputs.ListClusterStreamingJobsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListClusterStreamingJobsResult> listClusterStreamingJobs(ListClusterStreamingJobsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:listClusterStreamingJobs", TypeShape.of(ListClusterStreamingJobsResult.class), args, Utilities.withVersion(options));
     }
 }

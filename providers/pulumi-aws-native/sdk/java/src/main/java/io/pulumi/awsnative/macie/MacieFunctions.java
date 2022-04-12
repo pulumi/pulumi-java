@@ -20,30 +20,30 @@ public final class MacieFunctions {
      * Macie CustomDataIdentifier resource schema
      * 
      */
-    public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(io.pulumi.awsnative.macie.inputs.GetCustomDataIdentifierArgs args) {
-        return getCustomDataIdentifier(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(GetCustomDataIdentifierArgs args) {
+        return getCustomDataIdentifier(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(io.pulumi.awsnative.macie.inputs.GetCustomDataIdentifierArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(GetCustomDataIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getCustomDataIdentifier", TypeShape.of(GetCustomDataIdentifierResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Macie FindingsFilter resource schema.
      * 
      */
-    public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(io.pulumi.awsnative.macie.inputs.GetFindingsFilterArgs args) {
-        return getFindingsFilter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(GetFindingsFilterArgs args) {
+        return getFindingsFilter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(io.pulumi.awsnative.macie.inputs.GetFindingsFilterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(GetFindingsFilterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getFindingsFilter", TypeShape.of(GetFindingsFilterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
      * 
      */
-    public static CompletableFuture<GetSessionResult> getSession(io.pulumi.awsnative.macie.inputs.GetSessionArgs args) {
-        return getSession(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args) {
+        return getSession(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionResult> getSession(io.pulumi.awsnative.macie.inputs.GetSessionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -19,10 +19,10 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetDomainServiceResult> getDomainService(io.pulumi.azurenative.aad.inputs.GetDomainServiceArgs args) {
-        return getDomainService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args) {
+        return getDomainService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainServiceResult> getDomainService(io.pulumi.azurenative.aad.inputs.GetDomainServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetOuContainerResult> getOuContainer(io.pulumi.azurenative.aad.inputs.GetOuContainerArgs args) {
-        return getOuContainer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args) {
+        return getOuContainer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOuContainerResult> getOuContainer(io.pulumi.azurenative.aad.inputs.GetOuContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOuContainerResult> getOuContainer(GetOuContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
     }
 }

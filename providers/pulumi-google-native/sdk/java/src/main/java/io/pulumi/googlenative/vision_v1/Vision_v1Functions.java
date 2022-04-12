@@ -20,30 +20,30 @@ public final class Vision_v1Functions {
      * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product does not exist.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.vision_v1.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.vision_v1.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the ProductSet does not exist.
      * 
      */
-    public static CompletableFuture<GetProductSetResult> getProductSet(io.pulumi.googlenative.vision_v1.inputs.GetProductSetArgs args) {
-        return getProductSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductSetResult> getProductSet(GetProductSetArgs args) {
+        return getProductSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductSetResult> getProductSet(io.pulumi.googlenative.vision_v1.inputs.GetProductSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductSetResult> getProductSet(GetProductSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getProductSet", TypeShape.of(GetProductSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
      * 
      */
-    public static CompletableFuture<GetReferenceImageResult> getReferenceImage(io.pulumi.googlenative.vision_v1.inputs.GetReferenceImageArgs args) {
-        return getReferenceImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReferenceImageResult> getReferenceImage(GetReferenceImageArgs args) {
+        return getReferenceImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReferenceImageResult> getReferenceImage(io.pulumi.googlenative.vision_v1.inputs.GetReferenceImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReferenceImageResult> getReferenceImage(GetReferenceImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getReferenceImage", TypeShape.of(GetReferenceImageResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -17,10 +17,10 @@ public final class ConsumptionFunctions {
      * API Version: 2019-10-01.
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(io.pulumi.azurenative.consumption.inputs.GetBudgetArgs args) {
-        return getBudget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args) {
+        return getBudget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBudgetResult> getBudget(io.pulumi.azurenative.consumption.inputs.GetBudgetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:consumption:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
     }
 }

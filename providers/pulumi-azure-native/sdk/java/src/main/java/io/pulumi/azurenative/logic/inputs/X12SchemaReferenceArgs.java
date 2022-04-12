@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -59,7 +60,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> senderApplicationId;
 
     public Output<String> getSenderApplicationId() {
-        return this.senderApplicationId == null ? Output.empty() : this.senderApplicationId;
+        return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
     }
 
     public X12SchemaReferenceArgs(
@@ -74,10 +75,10 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private X12SchemaReferenceArgs() {
-        this.messageId = Output.empty();
-        this.schemaName = Output.empty();
-        this.schemaVersion = Output.empty();
-        this.senderApplicationId = Output.empty();
+        this.messageId = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.schemaVersion = Codegen.empty();
+        this.senderApplicationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Output.ofNullable(senderApplicationId);
+            this.senderApplicationId = Codegen.ofNullable(senderApplicationId);
             return this;
         }        public X12SchemaReferenceArgs build() {
             return new X12SchemaReferenceArgs(messageId, schemaName, schemaVersion, senderApplicationId);

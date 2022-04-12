@@ -10,6 +10,7 @@ import io.pulumi.aws.route53.outputs.ResolverEndpointIpAddress;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -172,7 +173,7 @@ public class ResolverEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverEndpoint(String name, ResolverEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverEndpoint:ResolverEndpoint", name, args == null ? ResolverEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverEndpoint:ResolverEndpoint", name, args == null ? ResolverEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverEndpoint(String name, Output<String> id, @Nullable ResolverEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -22,10 +22,10 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeysResult> getKeys(io.pulumi.gcp.dns.inputs.GetKeysArgs args) {
-        return getKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args) {
+        return getKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeysResult> getKeys(io.pulumi.gcp.dns.inputs.GetKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getKeys:getKeys", TypeShape.of(GetKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class DnsFunctions {
      * [API](https://cloud.google.com/dns/api/v1/managedZones).
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(io.pulumi.gcp.dns.inputs.GetManagedZoneArgs args) {
-        return getManagedZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
+        return getManagedZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(io.pulumi.gcp.dns.inputs.GetManagedZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
     }
 }

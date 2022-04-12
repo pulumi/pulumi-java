@@ -18,10 +18,10 @@ public final class QldbFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLedgerResult> getLedger(io.pulumi.aws.qldb.inputs.GetLedgerArgs args) {
-        return getLedger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args) {
+        return getLedger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLedgerResult> getLedger(io.pulumi.aws.qldb.inputs.GetLedgerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:qldb/getLedger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }
 }

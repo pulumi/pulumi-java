@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
       private final @Nullable Output<Boolean> enableTextToSpeech;
 
     public Output<Boolean> getEnableTextToSpeech() {
-        return this.enableTextToSpeech == null ? Output.empty() : this.enableTextToSpeech;
+        return this.enableTextToSpeech == null ? Codegen.empty() : this.enableTextToSpeech;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
       private final @Nullable Output<Integer> sampleRateHertz;
 
     public Output<Integer> getSampleRateHertz() {
-        return this.sampleRateHertz == null ? Output.empty() : this.sampleRateHertz;
+        return this.sampleRateHertz == null ? Codegen.empty() : this.sampleRateHertz;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
       private final @Nullable Output<Map<String,String>> synthesizeSpeechConfigs;
 
     public Output<Map<String,String>> getSynthesizeSpeechConfigs() {
-        return this.synthesizeSpeechConfigs == null ? Output.empty() : this.synthesizeSpeechConfigs;
+        return this.synthesizeSpeechConfigs == null ? Codegen.empty() : this.synthesizeSpeechConfigs;
     }
 
     public GoogleCloudDialogflowV2TextToSpeechSettingsArgs(
@@ -78,10 +79,10 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
     }
 
     private GoogleCloudDialogflowV2TextToSpeechSettingsArgs() {
-        this.enableTextToSpeech = Output.empty();
-        this.outputAudioEncoding = Output.empty();
-        this.sampleRateHertz = Output.empty();
-        this.synthesizeSpeechConfigs = Output.empty();
+        this.enableTextToSpeech = Codegen.empty();
+        this.outputAudioEncoding = Codegen.empty();
+        this.sampleRateHertz = Codegen.empty();
+        this.synthesizeSpeechConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
             return this;
         }
         public Builder enableTextToSpeech(@Nullable Boolean enableTextToSpeech) {
-            this.enableTextToSpeech = Output.ofNullable(enableTextToSpeech);
+            this.enableTextToSpeech = Codegen.ofNullable(enableTextToSpeech);
             return this;
         }
         public Builder outputAudioEncoding(Output<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
@@ -131,7 +132,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
             return this;
         }
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
-            this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
+            this.sampleRateHertz = Codegen.ofNullable(sampleRateHertz);
             return this;
         }
         public Builder synthesizeSpeechConfigs(@Nullable Output<Map<String,String>> synthesizeSpeechConfigs) {
@@ -139,7 +140,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
             return this;
         }
         public Builder synthesizeSpeechConfigs(@Nullable Map<String,String> synthesizeSpeechConfigs) {
-            this.synthesizeSpeechConfigs = Output.ofNullable(synthesizeSpeechConfigs);
+            this.synthesizeSpeechConfigs = Codegen.ofNullable(synthesizeSpeechConfigs);
             return this;
         }        public GoogleCloudDialogflowV2TextToSpeechSettingsArgs build() {
             return new GoogleCloudDialogflowV2TextToSpeechSettingsArgs(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);

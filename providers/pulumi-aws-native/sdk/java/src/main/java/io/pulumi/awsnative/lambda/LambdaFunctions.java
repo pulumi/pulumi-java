@@ -20,30 +20,30 @@ public final class LambdaFunctions {
      * Resource Type definition for AWS::Lambda::CodeSigningConfig.
      * 
      */
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(io.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigArgs args) {
-        return getCodeSigningConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
+        return getCodeSigningConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(io.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lambda::EventSourceMapping
      * 
      */
-    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(io.pulumi.awsnative.lambda.inputs.GetEventSourceMappingArgs args) {
-        return getEventSourceMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(GetEventSourceMappingArgs args) {
+        return getEventSourceMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(io.pulumi.awsnative.lambda.inputs.GetEventSourceMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMapping(GetEventSourceMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getEventSourceMapping", TypeShape.of(GetEventSourceMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lambda::Function
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.awsnative.lambda.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.awsnative.lambda.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
 }

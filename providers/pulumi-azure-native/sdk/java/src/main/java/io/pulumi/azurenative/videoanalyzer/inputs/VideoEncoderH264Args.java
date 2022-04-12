@@ -6,6 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoScaleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> bitrateKbps;
 
     public Output<String> getBitrateKbps() {
-        return this.bitrateKbps == null ? Output.empty() : this.bitrateKbps;
+        return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> frameRate;
 
     public Output<String> getFrameRate() {
-        return this.frameRate == null ? Output.empty() : this.frameRate;
+        return this.frameRate == null ? Codegen.empty() : this.frameRate;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<VideoScaleArgs> scale;
 
     public Output<VideoScaleArgs> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     }
 
     private VideoEncoderH264Args() {
-        this.bitrateKbps = Output.empty();
-        this.frameRate = Output.empty();
-        this.scale = Output.empty();
-        this.type = Output.empty();
+        this.bitrateKbps = Codegen.empty();
+        this.frameRate = Codegen.empty();
+        this.scale = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Output.ofNullable(bitrateKbps);
+            this.bitrateKbps = Codegen.ofNullable(bitrateKbps);
             return this;
         }
         public Builder frameRate(@Nullable Output<String> frameRate) {
@@ -121,7 +122,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Output.ofNullable(frameRate);
+            this.frameRate = Codegen.ofNullable(frameRate);
             return this;
         }
         public Builder scale(@Nullable Output<VideoScaleArgs> scale) {
@@ -129,7 +130,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scale(@Nullable VideoScaleArgs scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }
         public Builder type(Output<String> type) {

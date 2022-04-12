@@ -27,12 +27,12 @@ public final class LbFunctions {
      * 
      */
     public static CompletableFuture<GetListenerResult> getListener() {
-        return getListener(io.pulumi.aws.lb.inputs.GetListenerArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getListener(GetListenerArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.aws.lb.inputs.GetListenerArgs args) {
-        return getListener(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+        return getListener(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.aws.lb.inputs.GetListenerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lb/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,12 +48,12 @@ public final class LbFunctions {
      * 
      */
     public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer() {
-        return getLoadBalancer(io.pulumi.aws.lb.inputs.GetLoadBalancerArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLoadBalancer(GetLoadBalancerArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.lb.inputs.GetLoadBalancerArgs args) {
-        return getLoadBalancer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+        return getLoadBalancer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.aws.lb.inputs.GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,12 +69,12 @@ public final class LbFunctions {
      * 
      */
     public static CompletableFuture<GetTargetGroupResult> getTargetGroup() {
-        return getTargetGroup(io.pulumi.aws.lb.inputs.GetTargetGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTargetGroup(GetTargetGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(io.pulumi.aws.lb.inputs.GetTargetGroupArgs args) {
-        return getTargetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args) {
+        return getTargetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(io.pulumi.aws.lb.inputs.GetTargetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetGroupResult> getTargetGroup(GetTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lb/getTargetGroup:getTargetGroup", TypeShape.of(GetTargetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

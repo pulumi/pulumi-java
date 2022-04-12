@@ -33,10 +33,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.azurenative.dbformysql.inputs.GetConfigurationArgs args) {
-        return getConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
+        return getConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationResult> getConfiguration(io.pulumi.azurenative.dbformysql.inputs.GetConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,10 +44,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.dbformysql.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.dbformysql.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,10 +55,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.dbformysql.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.dbformysql.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -67,12 +67,12 @@ public final class DbformysqlFunctions {
      * 
      */
     public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> getGetPrivateDnsZoneSuffixExecute() {
-        return getGetPrivateDnsZoneSuffixExecute(io.pulumi.azurenative.dbformysql.inputs.GetGetPrivateDnsZoneSuffixExecuteArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getGetPrivateDnsZoneSuffixExecute(GetGetPrivateDnsZoneSuffixExecuteArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> getGetPrivateDnsZoneSuffixExecute(io.pulumi.azurenative.dbformysql.inputs.GetGetPrivateDnsZoneSuffixExecuteArgs args) {
-        return getGetPrivateDnsZoneSuffixExecute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> getGetPrivateDnsZoneSuffixExecute(GetGetPrivateDnsZoneSuffixExecuteArgs args) {
+        return getGetPrivateDnsZoneSuffixExecute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> getGetPrivateDnsZoneSuffixExecute(io.pulumi.azurenative.dbformysql.inputs.GetGetPrivateDnsZoneSuffixExecuteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> getGetPrivateDnsZoneSuffixExecute(GetGetPrivateDnsZoneSuffixExecuteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getGetPrivateDnsZoneSuffixExecute", TypeShape.of(GetGetPrivateDnsZoneSuffixExecuteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class DbformysqlFunctions {
      * API Version: 2018-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.dbformysql.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.dbformysql.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -91,10 +91,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.dbformysql.inputs.GetServerArgs args) {
-        return getServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+        return getServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.dbformysql.inputs.GetServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -102,10 +102,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(io.pulumi.azurenative.dbformysql.inputs.GetServerAdministratorArgs args) {
-        return getServerAdministrator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(GetServerAdministratorArgs args) {
+        return getServerAdministrator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(io.pulumi.azurenative.dbformysql.inputs.GetServerAdministratorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerAdministratorResult> getServerAdministrator(GetServerAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServerAdministrator", TypeShape.of(GetServerAdministratorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -113,10 +113,10 @@ public final class DbformysqlFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetServerKeyResult> getServerKey(io.pulumi.azurenative.dbformysql.inputs.GetServerKeyArgs args) {
-        return getServerKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args) {
+        return getServerKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerKeyResult> getServerKey(io.pulumi.azurenative.dbformysql.inputs.GetServerKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServerKey", TypeShape.of(GetServerKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -124,10 +124,10 @@ public final class DbformysqlFunctions {
      * API Version: 2017-12-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.dbformysql.inputs.GetVirtualNetworkRuleArgs args) {
-        return getVirtualNetworkRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
+        return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.dbformysql.inputs.GetVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
 }

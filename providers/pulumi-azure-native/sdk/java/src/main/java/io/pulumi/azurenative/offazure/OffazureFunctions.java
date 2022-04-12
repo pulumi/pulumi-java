@@ -21,10 +21,10 @@ public final class OffazureFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetHyperVSiteResult> getHyperVSite(io.pulumi.azurenative.offazure.inputs.GetHyperVSiteArgs args) {
-        return getHyperVSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHyperVSiteResult> getHyperVSite(GetHyperVSiteArgs args) {
+        return getHyperVSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHyperVSiteResult> getHyperVSite(io.pulumi.azurenative.offazure.inputs.GetHyperVSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHyperVSiteResult> getHyperVSite(GetHyperVSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getHyperVSite", TypeShape.of(GetHyperVSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class OffazureFunctions {
      * API Version: 2020-07-07.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.offazure.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.offazure.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class OffazureFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.azurenative.offazure.inputs.GetSiteArgs args) {
-        return getSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+        return getSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.azurenative.offazure.inputs.GetSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
 }

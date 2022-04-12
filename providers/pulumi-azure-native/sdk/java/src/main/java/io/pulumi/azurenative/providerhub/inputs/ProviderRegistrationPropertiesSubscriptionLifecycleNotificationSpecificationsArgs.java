@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.SubscriptionStateOverrideActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
       private final @Nullable Output<String> softDeleteTTL;
 
     public Output<String> getSoftDeleteTTL() {
-        return this.softDeleteTTL == null ? Output.empty() : this.softDeleteTTL;
+        return this.softDeleteTTL == null ? Codegen.empty() : this.softDeleteTTL;
     }
 
     @Import(name="subscriptionStateOverrideActions")
       private final @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
     public Output<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {
-        return this.subscriptionStateOverrideActions == null ? Output.empty() : this.subscriptionStateOverrideActions;
+        return this.subscriptionStateOverrideActions == null ? Codegen.empty() : this.subscriptionStateOverrideActions;
     }
 
     public ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(
@@ -38,8 +39,8 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
     }
 
     private ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs() {
-        this.softDeleteTTL = Output.empty();
-        this.subscriptionStateOverrideActions = Output.empty();
+        this.softDeleteTTL = Codegen.empty();
+        this.subscriptionStateOverrideActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
             return this;
         }
         public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
-            this.softDeleteTTL = Output.ofNullable(softDeleteTTL);
+            this.softDeleteTTL = Codegen.ofNullable(softDeleteTTL);
             return this;
         }
         public Builder subscriptionStateOverrideActions(@Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
@@ -77,7 +78,7 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
             return this;
         }
         public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
-            this.subscriptionStateOverrideActions = Output.ofNullable(subscriptionStateOverrideActions);
+            this.subscriptionStateOverrideActions = Codegen.ofNullable(subscriptionStateOverrideActions);
             return this;
         }
         public Builder subscriptionStateOverrideActions(SubscriptionStateOverrideActionArgs... subscriptionStateOverrideActions) {

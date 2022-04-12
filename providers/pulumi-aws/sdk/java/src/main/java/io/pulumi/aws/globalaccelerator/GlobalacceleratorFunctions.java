@@ -19,12 +19,12 @@ public final class GlobalacceleratorFunctions {
      * 
      */
     public static CompletableFuture<GetAcceleratorResult> getAccelerator() {
-        return getAccelerator(io.pulumi.aws.globalaccelerator.inputs.GetAcceleratorArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAccelerator(GetAcceleratorArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(io.pulumi.aws.globalaccelerator.inputs.GetAcceleratorArgs args) {
-        return getAccelerator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
+        return getAccelerator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(io.pulumi.aws.globalaccelerator.inputs.GetAcceleratorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:globalaccelerator/getAccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }
 }

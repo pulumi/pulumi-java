@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> divisor;
 
     public Output<String> getDivisor() {
-        return this.divisor == null ? Output.empty() : this.divisor;
+        return this.divisor == null ? Codegen.empty() : this.divisor;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     }
 
     private ResourceFieldSelectorArgs() {
-        this.containerName = Output.empty();
-        this.divisor = Output.empty();
-        this.resource = Output.empty();
+        this.containerName = Codegen.empty();
+        this.divisor = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder divisor(@Nullable Output<String> divisor) {
@@ -103,7 +104,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder divisor(@Nullable String divisor) {
-            this.divisor = Output.ofNullable(divisor);
+            this.divisor = Codegen.ofNullable(divisor);
             return this;
         }
         public Builder resource(Output<String> resource) {

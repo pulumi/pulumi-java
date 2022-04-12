@@ -31,10 +31,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(io.pulumi.azurenative.testbase.inputs.GetCustomerEventArgs args) {
-        return getCustomerEvent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(GetCustomerEventArgs args) {
+        return getCustomerEvent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(io.pulumi.azurenative.testbase.inputs.GetCustomerEventArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomerEventResult> getCustomerEvent(GetCustomerEventArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getCustomerEvent", TypeShape.of(GetCustomerEventResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,10 +42,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(io.pulumi.azurenative.testbase.inputs.GetFavoriteProcessArgs args) {
-        return getFavoriteProcess(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(GetFavoriteProcessArgs args) {
+        return getFavoriteProcess(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(io.pulumi.azurenative.testbase.inputs.GetFavoriteProcessArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFavoriteProcessResult> getFavoriteProcess(GetFavoriteProcessArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getFavoriteProcess", TypeShape.of(GetFavoriteProcessResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetPackageResult> getPackage(io.pulumi.azurenative.testbase.inputs.GetPackageArgs args) {
-        return getPackage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args) {
+        return getPackage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackageResult> getPackage(io.pulumi.azurenative.testbase.inputs.GetPackageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackageResult> getPackage(GetPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(io.pulumi.azurenative.testbase.inputs.GetPackageDownloadURLArgs args) {
-        return getPackageDownloadURL(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(GetPackageDownloadURLArgs args) {
+        return getPackageDownloadURL(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(io.pulumi.azurenative.testbase.inputs.GetPackageDownloadURLArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPackageDownloadURLResult> getPackageDownloadURL(GetPackageDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackageDownloadURL", TypeShape.of(GetPackageDownloadURLResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,10 +75,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(io.pulumi.azurenative.testbase.inputs.GetTestBaseAccountArgs args) {
-        return getTestBaseAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(GetTestBaseAccountArgs args) {
+        return getTestBaseAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(io.pulumi.azurenative.testbase.inputs.GetTestBaseAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestBaseAccountResult> getTestBaseAccount(GetTestBaseAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccount", TypeShape.of(GetTestBaseAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,10 +86,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(io.pulumi.azurenative.testbase.inputs.GetTestBaseAccountFileUploadUrlArgs args) {
-        return getTestBaseAccountFileUploadUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(GetTestBaseAccountFileUploadUrlArgs args) {
+        return getTestBaseAccountFileUploadUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(io.pulumi.azurenative.testbase.inputs.GetTestBaseAccountFileUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> getTestBaseAccountFileUploadUrl(GetTestBaseAccountFileUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccountFileUploadUrl", TypeShape.of(GetTestBaseAccountFileUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -97,10 +97,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(io.pulumi.azurenative.testbase.inputs.GetTestResultDownloadURLArgs args) {
-        return getTestResultDownloadURL(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(GetTestResultDownloadURLArgs args) {
+        return getTestResultDownloadURL(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(io.pulumi.azurenative.testbase.inputs.GetTestResultDownloadURLArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestResultDownloadURLResult> getTestResultDownloadURL(GetTestResultDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultDownloadURL", TypeShape.of(GetTestResultDownloadURLResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,10 +108,10 @@ public final class TestbaseFunctions {
      * API Version: 2020-12-16-preview.
      * 
      */
-    public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(io.pulumi.azurenative.testbase.inputs.GetTestResultVideoDownloadURLArgs args) {
-        return getTestResultVideoDownloadURL(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(GetTestResultVideoDownloadURLArgs args) {
+        return getTestResultVideoDownloadURL(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(io.pulumi.azurenative.testbase.inputs.GetTestResultVideoDownloadURLArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestResultVideoDownloadURLResult> getTestResultVideoDownloadURL(GetTestResultVideoDownloadURLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestResultVideoDownloadURL", TypeShape.of(GetTestResultVideoDownloadURLResult.class), args, Utilities.withVersion(options));
     }
 }

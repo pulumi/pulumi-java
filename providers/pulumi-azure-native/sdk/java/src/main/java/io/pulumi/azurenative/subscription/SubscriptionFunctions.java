@@ -17,10 +17,10 @@ public final class SubscriptionFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.azurenative.subscription.inputs.GetAliasArgs args) {
-        return getAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+        return getAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.azurenative.subscription.inputs.GetAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:subscription:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.devtestlab.inputs.LabSupportPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
 
     public Output<LabAnnouncementPropertiesArgs> getAnnouncement() {
-        return this.announcement == null ? Output.empty() : this.announcement;
+        return this.announcement == null ? Codegen.empty() : this.announcement;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
 
     public Output<Either<String,EnvironmentPermission>> getEnvironmentPermission() {
-        return this.environmentPermission == null ? Output.empty() : this.environmentPermission;
+        return this.environmentPermission == null ? Codegen.empty() : this.environmentPermission;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> extendedProperties;
 
     public Output<Map<String,String>> getExtendedProperties() {
-        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
+        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StorageType>> labStorageType;
 
     public Output<Either<String,StorageType>> getLabStorageType() {
-        return this.labStorageType == null ? Output.empty() : this.labStorageType;
+        return this.labStorageType == null ? Codegen.empty() : this.labStorageType;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
 
     public Output<List<String>> getMandatoryArtifactsResourceIdsLinux() {
-        return this.mandatoryArtifactsResourceIdsLinux == null ? Output.empty() : this.mandatoryArtifactsResourceIdsLinux;
+        return this.mandatoryArtifactsResourceIdsLinux == null ? Codegen.empty() : this.mandatoryArtifactsResourceIdsLinux;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
 
     public Output<List<String>> getMandatoryArtifactsResourceIdsWindows() {
-        return this.mandatoryArtifactsResourceIdsWindows == null ? Output.empty() : this.mandatoryArtifactsResourceIdsWindows;
+        return this.mandatoryArtifactsResourceIdsWindows == null ? Codegen.empty() : this.mandatoryArtifactsResourceIdsWindows;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
 
     public Output<Either<String,PremiumDataDisk>> getPremiumDataDisks() {
-        return this.premiumDataDisks == null ? Output.empty() : this.premiumDataDisks;
+        return this.premiumDataDisks == null ? Codegen.empty() : this.premiumDataDisks;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LabSupportPropertiesArgs> support;
 
     public Output<LabSupportPropertiesArgs> getSupport() {
-        return this.support == null ? Output.empty() : this.support;
+        return this.support == null ? Codegen.empty() : this.support;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LabArgs(
@@ -184,18 +185,18 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabArgs() {
-        this.announcement = Output.empty();
-        this.environmentPermission = Output.empty();
-        this.extendedProperties = Output.empty();
-        this.labStorageType = Output.empty();
-        this.location = Output.empty();
-        this.mandatoryArtifactsResourceIdsLinux = Output.empty();
-        this.mandatoryArtifactsResourceIdsWindows = Output.empty();
-        this.name = Output.empty();
-        this.premiumDataDisks = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.support = Output.empty();
-        this.tags = Output.empty();
+        this.announcement = Codegen.empty();
+        this.environmentPermission = Codegen.empty();
+        this.extendedProperties = Codegen.empty();
+        this.labStorageType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mandatoryArtifactsResourceIdsLinux = Codegen.empty();
+        this.mandatoryArtifactsResourceIdsWindows = Codegen.empty();
+        this.name = Codegen.empty();
+        this.premiumDataDisks = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.support = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -245,7 +246,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder announcement(@Nullable LabAnnouncementPropertiesArgs announcement) {
-            this.announcement = Output.ofNullable(announcement);
+            this.announcement = Codegen.ofNullable(announcement);
             return this;
         }
         public Builder environmentPermission(@Nullable Output<Either<String,EnvironmentPermission>> environmentPermission) {
@@ -253,7 +254,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
-            this.environmentPermission = Output.ofNullable(environmentPermission);
+            this.environmentPermission = Codegen.ofNullable(environmentPermission);
             return this;
         }
         public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
@@ -261,7 +262,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
-            this.extendedProperties = Output.ofNullable(extendedProperties);
+            this.extendedProperties = Codegen.ofNullable(extendedProperties);
             return this;
         }
         public Builder labStorageType(@Nullable Output<Either<String,StorageType>> labStorageType) {
@@ -269,7 +270,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labStorageType(@Nullable Either<String,StorageType> labStorageType) {
-            this.labStorageType = Output.ofNullable(labStorageType);
+            this.labStorageType = Codegen.ofNullable(labStorageType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -277,7 +278,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux) {
@@ -285,7 +286,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
-            this.mandatoryArtifactsResourceIdsLinux = Output.ofNullable(mandatoryArtifactsResourceIdsLinux);
+            this.mandatoryArtifactsResourceIdsLinux = Codegen.ofNullable(mandatoryArtifactsResourceIdsLinux);
             return this;
         }
         public Builder mandatoryArtifactsResourceIdsLinux(String... mandatoryArtifactsResourceIdsLinux) {
@@ -296,7 +297,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
-            this.mandatoryArtifactsResourceIdsWindows = Output.ofNullable(mandatoryArtifactsResourceIdsWindows);
+            this.mandatoryArtifactsResourceIdsWindows = Codegen.ofNullable(mandatoryArtifactsResourceIdsWindows);
             return this;
         }
         public Builder mandatoryArtifactsResourceIdsWindows(String... mandatoryArtifactsResourceIdsWindows) {
@@ -307,7 +308,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder premiumDataDisks(@Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks) {
@@ -315,7 +316,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder premiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
-            this.premiumDataDisks = Output.ofNullable(premiumDataDisks);
+            this.premiumDataDisks = Codegen.ofNullable(premiumDataDisks);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -331,7 +332,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder support(@Nullable LabSupportPropertiesArgs support) {
-            this.support = Output.ofNullable(support);
+            this.support = Codegen.ofNullable(support);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -339,7 +340,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LabArgs build() {
             return new LabArgs(announcement, environmentPermission, extendedProperties, labStorageType, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, premiumDataDisks, resourceGroupName, support, tags);

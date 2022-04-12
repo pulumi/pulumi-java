@@ -6,6 +6,7 @@ package io.pulumi.azurenative.managedservices;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
     public Output<RegistrationAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> registrationAssignmentId;
 
     public Output<String> getRegistrationAssignmentId() {
-        return this.registrationAssignmentId == null ? Output.empty() : this.registrationAssignmentId;
+        return this.registrationAssignmentId == null ? Codegen.empty() : this.registrationAssignmentId;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
     }
 
     private RegistrationAssignmentArgs() {
-        this.properties = Output.empty();
-        this.registrationAssignmentId = Output.empty();
-        this.scope = Output.empty();
+        this.properties = Codegen.empty();
+        this.registrationAssignmentId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder properties(@Nullable RegistrationAssignmentPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder registrationAssignmentId(@Nullable Output<String> registrationAssignmentId) {
@@ -100,7 +101,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder registrationAssignmentId(@Nullable String registrationAssignmentId) {
-            this.registrationAssignmentId = Output.ofNullable(registrationAssignmentId);
+            this.registrationAssignmentId = Codegen.ofNullable(registrationAssignmentId);
             return this;
         }
         public Builder scope(Output<String> scope) {

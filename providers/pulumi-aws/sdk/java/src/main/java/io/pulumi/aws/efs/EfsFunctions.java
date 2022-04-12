@@ -24,10 +24,10 @@ public final class EfsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.aws.efs.inputs.GetAccessPointArgs args) {
-        return getAccessPoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
+        return getAccessPoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.aws.efs.inputs.GetAccessPointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:efs/getAccessPoint:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class EfsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(io.pulumi.aws.efs.inputs.GetAccessPointsArgs args) {
-        return getAccessPoints(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args) {
+        return getAccessPoints(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(io.pulumi.aws.efs.inputs.GetAccessPointsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:efs/getAccessPoints:getAccessPoints", TypeShape.of(GetAccessPointsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,12 +49,12 @@ public final class EfsFunctions {
      * 
      */
     public static CompletableFuture<GetFileSystemResult> getFileSystem() {
-        return getFileSystem(io.pulumi.aws.efs.inputs.GetFileSystemArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getFileSystem(GetFileSystemArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(io.pulumi.aws.efs.inputs.GetFileSystemArgs args) {
-        return getFileSystem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args) {
+        return getFileSystem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(io.pulumi.aws.efs.inputs.GetFileSystemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:efs/getFileSystem:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,12 +64,12 @@ public final class EfsFunctions {
      * 
      */
     public static CompletableFuture<GetMountTargetResult> getMountTarget() {
-        return getMountTarget(io.pulumi.aws.efs.inputs.GetMountTargetArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getMountTarget(GetMountTargetArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(io.pulumi.aws.efs.inputs.GetMountTargetArgs args) {
-        return getMountTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args) {
+        return getMountTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(io.pulumi.aws.efs.inputs.GetMountTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:efs/getMountTarget:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
     }
 }

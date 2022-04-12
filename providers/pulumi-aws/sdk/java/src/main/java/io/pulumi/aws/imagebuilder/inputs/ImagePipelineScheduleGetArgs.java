@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> pipelineExecutionStartCondition;
 
     public Output<String> getPipelineExecutionStartCondition() {
-        return this.pipelineExecutionStartCondition == null ? Output.empty() : this.pipelineExecutionStartCondition;
+        return this.pipelineExecutionStartCondition == null ? Codegen.empty() : this.pipelineExecutionStartCondition;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
     }
 
     private ImagePipelineScheduleGetArgs() {
-        this.pipelineExecutionStartCondition = Output.empty();
-        this.scheduleExpression = Output.empty();
+        this.pipelineExecutionStartCondition = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = Output.ofNullable(pipelineExecutionStartCondition);
+            this.pipelineExecutionStartCondition = Codegen.ofNullable(pipelineExecutionStartCondition);
             return this;
         }
         public Builder scheduleExpression(Output<String> scheduleExpression) {

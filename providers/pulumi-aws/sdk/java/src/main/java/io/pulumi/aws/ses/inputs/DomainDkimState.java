@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> dkimTokens;
 
     public Output<List<String>> getDkimTokens() {
-        return this.dkimTokens == null ? Output.empty() : this.dkimTokens;
+        return this.dkimTokens == null ? Codegen.empty() : this.dkimTokens;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     public DomainDkimState(
@@ -50,8 +51,8 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainDkimState() {
-        this.dkimTokens = Output.empty();
-        this.domain = Output.empty();
+        this.dkimTokens = Codegen.empty();
+        this.domain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dkimTokens(@Nullable List<String> dkimTokens) {
-            this.dkimTokens = Output.ofNullable(dkimTokens);
+            this.dkimTokens = Codegen.ofNullable(dkimTokens);
             return this;
         }
         public Builder dkimTokens(String... dkimTokens) {
@@ -92,7 +93,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }        public DomainDkimState build() {
             return new DomainDkimState(dkimTokens, domain);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,8 +46,8 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClientArgs() {
-        this.brand = Output.empty();
-        this.displayName = Output.empty();
+        this.brand = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.web.inputs.IdentityProvidersArgs;
 import io.pulumi.azurenative.web.inputs.LoginArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<GlobalValidationArgs> globalValidation;
 
     public Output<GlobalValidationArgs> getGlobalValidation() {
-        return this.globalValidation == null ? Output.empty() : this.globalValidation;
+        return this.globalValidation == null ? Codegen.empty() : this.globalValidation;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<HttpSettingsArgs> httpSettings;
 
     public Output<HttpSettingsArgs> getHttpSettings() {
-        return this.httpSettings == null ? Output.empty() : this.httpSettings;
+        return this.httpSettings == null ? Codegen.empty() : this.httpSettings;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<IdentityProvidersArgs> identityProviders;
 
     public Output<IdentityProvidersArgs> getIdentityProviders() {
-        return this.identityProviders == null ? Output.empty() : this.identityProviders;
+        return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<LoginArgs> login;
 
     public Output<LoginArgs> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<AuthPlatformArgs> platform;
 
     public Output<AuthPlatformArgs> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -140,15 +141,15 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     }
 
     private WebAppAuthSettingsV2SlotArgs() {
-        this.globalValidation = Output.empty();
-        this.httpSettings = Output.empty();
-        this.identityProviders = Output.empty();
-        this.kind = Output.empty();
-        this.login = Output.empty();
-        this.name = Output.empty();
-        this.platform = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.slot = Output.empty();
+        this.globalValidation = Codegen.empty();
+        this.httpSettings = Codegen.empty();
+        this.identityProviders = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.login = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder globalValidation(@Nullable GlobalValidationArgs globalValidation) {
-            this.globalValidation = Output.ofNullable(globalValidation);
+            this.globalValidation = Codegen.ofNullable(globalValidation);
             return this;
         }
         public Builder httpSettings(@Nullable Output<HttpSettingsArgs> httpSettings) {
@@ -200,7 +201,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder httpSettings(@Nullable HttpSettingsArgs httpSettings) {
-            this.httpSettings = Output.ofNullable(httpSettings);
+            this.httpSettings = Codegen.ofNullable(httpSettings);
             return this;
         }
         public Builder identityProviders(@Nullable Output<IdentityProvidersArgs> identityProviders) {
@@ -208,7 +209,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder identityProviders(@Nullable IdentityProvidersArgs identityProviders) {
-            this.identityProviders = Output.ofNullable(identityProviders);
+            this.identityProviders = Codegen.ofNullable(identityProviders);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -216,7 +217,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder login(@Nullable Output<LoginArgs> login) {
@@ -224,7 +225,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder login(@Nullable LoginArgs login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -240,7 +241,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder platform(@Nullable AuthPlatformArgs platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

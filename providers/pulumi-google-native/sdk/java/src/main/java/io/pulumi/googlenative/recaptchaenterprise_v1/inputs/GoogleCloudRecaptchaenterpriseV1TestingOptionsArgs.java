@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
     public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
-        return this.testingChallenge == null ? Output.empty() : this.testingChallenge;
+        return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
       private final @Nullable Output<Double> testingScore;
 
     public Output<Double> getTestingScore() {
-        return this.testingScore == null ? Output.empty() : this.testingScore;
+        return this.testingScore == null ? Codegen.empty() : this.testingScore;
     }
 
     public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     }
 
     private GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs() {
-        this.testingChallenge = Output.empty();
-        this.testingScore = Output.empty();
+        this.testingChallenge = Codegen.empty();
+        this.testingScore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
             return this;
         }
         public Builder testingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
-            this.testingChallenge = Output.ofNullable(testingChallenge);
+            this.testingChallenge = Codegen.ofNullable(testingChallenge);
             return this;
         }
         public Builder testingScore(@Nullable Output<Double> testingScore) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
             return this;
         }
         public Builder testingScore(@Nullable Double testingScore) {
-            this.testingScore = Output.ofNullable(testingScore);
+            this.testingScore = Codegen.ofNullable(testingScore);
             return this;
         }        public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(testingChallenge, testingScore);

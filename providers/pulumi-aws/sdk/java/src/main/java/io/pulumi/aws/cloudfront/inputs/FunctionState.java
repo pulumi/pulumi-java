@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> liveStageEtag;
 
     public Output<String> getLiveStageEtag() {
-        return this.liveStageEtag == null ? Output.empty() : this.liveStageEtag;
+        return this.liveStageEtag == null ? Codegen.empty() : this.liveStageEtag;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> publish;
 
     public Output<Boolean> getPublish() {
-        return this.publish == null ? Output.empty() : this.publish;
+        return this.publish == null ? Codegen.empty() : this.publish;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
-        return this.runtime == null ? Output.empty() : this.runtime;
+        return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public FunctionState(
@@ -136,15 +137,15 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionState() {
-        this.arn = Output.empty();
-        this.code = Output.empty();
-        this.comment = Output.empty();
-        this.etag = Output.empty();
-        this.liveStageEtag = Output.empty();
-        this.name = Output.empty();
-        this.publish = Output.empty();
-        this.runtime = Output.empty();
-        this.status = Output.empty();
+        this.arn = Codegen.empty();
+        this.code = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.liveStageEtag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publish = Codegen.empty();
+        this.runtime = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder code(@Nullable Output<String> code) {
@@ -196,7 +197,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -204,7 +205,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -212,7 +213,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder liveStageEtag(@Nullable Output<String> liveStageEtag) {
@@ -220,7 +221,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder liveStageEtag(@Nullable String liveStageEtag) {
-            this.liveStageEtag = Output.ofNullable(liveStageEtag);
+            this.liveStageEtag = Codegen.ofNullable(liveStageEtag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -228,7 +229,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publish(@Nullable Output<Boolean> publish) {
@@ -236,7 +237,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publish(@Nullable Boolean publish) {
-            this.publish = Output.ofNullable(publish);
+            this.publish = Codegen.ofNullable(publish);
             return this;
         }
         public Builder runtime(@Nullable Output<String> runtime) {
@@ -244,7 +245,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Output.ofNullable(runtime);
+            this.runtime = Codegen.ofNullable(runtime);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -252,7 +253,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public FunctionState build() {
             return new FunctionState(arn, code, comment, etag, liveStageEtag, name, publish, runtime, status);

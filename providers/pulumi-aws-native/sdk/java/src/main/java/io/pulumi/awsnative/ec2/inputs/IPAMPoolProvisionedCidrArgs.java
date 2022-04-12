@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     }
 
     private IPAMPoolProvisionedCidrArgs() {
-        this.cidr = Output.empty();
+        this.cidr = Codegen.empty();
     }
 
     public static Builder builder() {

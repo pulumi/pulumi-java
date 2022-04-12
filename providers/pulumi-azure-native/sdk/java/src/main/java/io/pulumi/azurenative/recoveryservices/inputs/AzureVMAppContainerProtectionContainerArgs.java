@@ -10,6 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExten
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
     public Output<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
+        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
-        return this.healthStatus == null ? Output.empty() : this.healthStatus;
+        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<Either<String,OperationType>> operationType;
 
     public Output<Either<String,OperationType>> getOperationType() {
-        return this.operationType == null ? Output.empty() : this.operationType;
+        return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
+        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
+        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
       private final @Nullable Output<Either<String,WorkloadType>> workloadType;
 
     public Output<Either<String,WorkloadType>> getWorkloadType() {
-        return this.workloadType == null ? Output.empty() : this.workloadType;
+        return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 
     public AzureVMAppContainerProtectionContainerArgs(
@@ -161,16 +162,16 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
     }
 
     private AzureVMAppContainerProtectionContainerArgs() {
-        this.backupManagementType = Output.empty();
-        this.containerType = Output.empty();
-        this.extendedInfo = Output.empty();
-        this.friendlyName = Output.empty();
-        this.healthStatus = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.operationType = Output.empty();
-        this.registrationStatus = Output.empty();
-        this.sourceResourceId = Output.empty();
-        this.workloadType = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.extendedInfo = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.healthStatus = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.operationType = Codegen.empty();
+        this.registrationStatus = Codegen.empty();
+        this.sourceResourceId = Codegen.empty();
+        this.workloadType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder containerType(Output<String> containerType) {
@@ -232,7 +233,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Output.ofNullable(extendedInfo);
+            this.extendedInfo = Codegen.ofNullable(extendedInfo);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -240,7 +241,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
@@ -248,7 +249,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Output.ofNullable(healthStatus);
+            this.healthStatus = Codegen.ofNullable(healthStatus);
             return this;
         }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
@@ -256,7 +257,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder operationType(@Nullable Output<Either<String,OperationType>> operationType) {
@@ -264,7 +265,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder operationType(@Nullable Either<String,OperationType> operationType) {
-            this.operationType = Output.ofNullable(operationType);
+            this.operationType = Codegen.ofNullable(operationType);
             return this;
         }
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
@@ -272,7 +273,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Output.ofNullable(registrationStatus);
+            this.registrationStatus = Codegen.ofNullable(registrationStatus);
             return this;
         }
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
@@ -280,7 +281,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Output.ofNullable(sourceResourceId);
+            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
             return this;
         }
         public Builder workloadType(@Nullable Output<Either<String,WorkloadType>> workloadType) {
@@ -288,7 +289,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
             return this;
         }
         public Builder workloadType(@Nullable Either<String,WorkloadType> workloadType) {
-            this.workloadType = Output.ofNullable(workloadType);
+            this.workloadType = Codegen.ofNullable(workloadType);
             return this;
         }        public AzureVMAppContainerProtectionContainerArgs build() {
             return new AzureVMAppContainerProtectionContainerArgs(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
       private final @Nullable Output<String> kMSMasterKeyID;
 
     public Output<String> getKMSMasterKeyID() {
-        return this.kMSMasterKeyID == null ? Output.empty() : this.kMSMasterKeyID;
+        return this.kMSMasterKeyID == null ? Codegen.empty() : this.kMSMasterKeyID;
     }
 
     @Import(name="sSEAlgorithm", required=true)
@@ -45,8 +46,8 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
     }
 
     private BucketServerSideEncryptionByDefaultArgs() {
-        this.kMSMasterKeyID = Output.empty();
-        this.sSEAlgorithm = Output.empty();
+        this.kMSMasterKeyID = Codegen.empty();
+        this.sSEAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
             return this;
         }
         public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
-            this.kMSMasterKeyID = Output.ofNullable(kMSMasterKeyID);
+            this.kMSMasterKeyID = Codegen.ofNullable(kMSMasterKeyID);
             return this;
         }
         public Builder sSEAlgorithm(Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {

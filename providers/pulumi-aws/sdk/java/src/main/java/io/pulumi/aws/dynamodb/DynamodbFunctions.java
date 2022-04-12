@@ -18,10 +18,10 @@ public final class DynamodbFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.aws.dynamodb.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.aws.dynamodb.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:dynamodb/getTable:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ExternalDataConfigurationArgs;
@@ -34,7 +35,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusteringArgs> clustering;
 
     public Output<ClusteringArgs> getClustering() {
-        return this.clustering == null ? Output.empty() : this.clustering;
+        return this.clustering == null ? Codegen.empty() : this.clustering;
     }
 
     @Import(name="datasetId", required=true)
@@ -52,7 +53,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
 
     public Output<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
-        return this.externalDataConfiguration == null ? Output.empty() : this.externalDataConfiguration;
+        return this.externalDataConfiguration == null ? Codegen.empty() : this.externalDataConfiguration;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
 
     public Output<MaterializedViewDefinitionArgs> getMaterializedView() {
-        return this.materializedView == null ? Output.empty() : this.materializedView;
+        return this.materializedView == null ? Codegen.empty() : this.materializedView;
     }
 
     /**
@@ -129,14 +130,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ModelDefinitionArgs> model;
 
     public Output<ModelDefinitionArgs> getModel() {
-        return this.model == null ? Output.empty() : this.model;
+        return this.model == null ? Codegen.empty() : this.model;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
     public Output<RangePartitioningArgs> getRangePartitioning() {
-        return this.rangePartitioning == null ? Output.empty() : this.rangePartitioning;
+        return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
+        return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableSchemaArgs> schema;
 
     public Output<TableSchemaArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableReferenceArgs> tableReference;
 
     public Output<TableReferenceArgs> getTableReference() {
-        return this.tableReference == null ? Output.empty() : this.tableReference;
+        return this.tableReference == null ? Codegen.empty() : this.tableReference;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TimePartitioningArgs> timePartitioning;
 
     public Output<TimePartitioningArgs> getTimePartitioning() {
-        return this.timePartitioning == null ? Output.empty() : this.timePartitioning;
+        return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ViewDefinitionArgs> view;
 
     public Output<ViewDefinitionArgs> getView() {
-        return this.view == null ? Output.empty() : this.view;
+        return this.view == null ? Codegen.empty() : this.view;
     }
 
     public TableArgs(
@@ -243,23 +244,23 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.clustering = Output.empty();
-        this.datasetId = Output.empty();
-        this.description = Output.empty();
-        this.encryptionConfiguration = Output.empty();
-        this.expirationTime = Output.empty();
-        this.externalDataConfiguration = Output.empty();
-        this.friendlyName = Output.empty();
-        this.labels = Output.empty();
-        this.materializedView = Output.empty();
-        this.model = Output.empty();
-        this.project = Output.empty();
-        this.rangePartitioning = Output.empty();
-        this.requirePartitionFilter = Output.empty();
-        this.schema = Output.empty();
-        this.tableReference = Output.empty();
-        this.timePartitioning = Output.empty();
-        this.view = Output.empty();
+        this.clustering = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.expirationTime = Codegen.empty();
+        this.externalDataConfiguration = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.materializedView = Codegen.empty();
+        this.model = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rangePartitioning = Codegen.empty();
+        this.requirePartitionFilter = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.tableReference = Codegen.empty();
+        this.timePartitioning = Codegen.empty();
+        this.view = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -319,7 +320,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clustering(@Nullable ClusteringArgs clustering) {
-            this.clustering = Output.ofNullable(clustering);
+            this.clustering = Codegen.ofNullable(clustering);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {
@@ -335,7 +336,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration) {
@@ -343,7 +344,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfiguration(@Nullable EncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
@@ -351,7 +352,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder externalDataConfiguration(@Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration) {
@@ -359,7 +360,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalDataConfiguration(@Nullable ExternalDataConfigurationArgs externalDataConfiguration) {
-            this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
+            this.externalDataConfiguration = Codegen.ofNullable(externalDataConfiguration);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -367,7 +368,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -375,7 +376,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder materializedView(@Nullable Output<MaterializedViewDefinitionArgs> materializedView) {
@@ -383,7 +384,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder materializedView(@Nullable MaterializedViewDefinitionArgs materializedView) {
-            this.materializedView = Output.ofNullable(materializedView);
+            this.materializedView = Codegen.ofNullable(materializedView);
             return this;
         }
         public Builder model(@Nullable Output<ModelDefinitionArgs> model) {
@@ -391,7 +392,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder model(@Nullable ModelDefinitionArgs model) {
-            this.model = Output.ofNullable(model);
+            this.model = Codegen.ofNullable(model);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -399,7 +400,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
@@ -407,7 +408,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
-            this.rangePartitioning = Output.ofNullable(rangePartitioning);
+            this.rangePartitioning = Codegen.ofNullable(rangePartitioning);
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
@@ -415,7 +416,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Codegen.ofNullable(requirePartitionFilter);
             return this;
         }
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
@@ -423,7 +424,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable TableSchemaArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder tableReference(@Nullable Output<TableReferenceArgs> tableReference) {
@@ -431,7 +432,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableReference(@Nullable TableReferenceArgs tableReference) {
-            this.tableReference = Output.ofNullable(tableReference);
+            this.tableReference = Codegen.ofNullable(tableReference);
             return this;
         }
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
@@ -439,7 +440,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
-            this.timePartitioning = Output.ofNullable(timePartitioning);
+            this.timePartitioning = Codegen.ofNullable(timePartitioning);
             return this;
         }
         public Builder view(@Nullable Output<ViewDefinitionArgs> view) {
@@ -447,7 +448,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder view(@Nullable ViewDefinitionArgs view) {
-            this.view = Output.ofNullable(view);
+            this.view = Codegen.ofNullable(view);
             return this;
         }        public TableArgs build() {
             return new TableArgs(clustering, datasetId, description, encryptionConfiguration, expirationTime, externalDataConfiguration, friendlyName, labels, materializedView, model, project, rangePartitioning, requirePartitionFilter, schema, tableReference, timePartitioning, view);

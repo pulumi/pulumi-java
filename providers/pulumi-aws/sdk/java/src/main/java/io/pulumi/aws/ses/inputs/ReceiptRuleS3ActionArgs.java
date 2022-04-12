@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> objectKeyPrefix;
 
     public Output<String> getObjectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Output.empty() : this.objectKeyPrefix;
+        return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleS3ActionArgs(
@@ -84,11 +85,11 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private ReceiptRuleS3ActionArgs() {
-        this.bucketName = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.objectKeyPrefix = Output.empty();
-        this.position = Output.empty();
-        this.topicArn = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.objectKeyPrefix = Codegen.empty();
+        this.position = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
@@ -140,7 +141,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
+            this.objectKeyPrefix = Codegen.ofNullable(objectKeyPrefix);
             return this;
         }
         public Builder position(Output<Integer> position) {
@@ -156,7 +157,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleS3ActionArgs build() {
             return new ReceiptRuleS3ActionArgs(bucketName, kmsKeyArn, objectKeyPrefix, position, topicArn);

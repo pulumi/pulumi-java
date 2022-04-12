@@ -9,6 +9,7 @@ import io.pulumi.aws.ecr.inputs.LifecyclePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -97,7 +98,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LifecyclePolicy(String name, LifecyclePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/lifecyclePolicy:LifecyclePolicy", name, args == null ? LifecyclePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/lifecyclePolicy:LifecyclePolicy", name, args == null ? LifecyclePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LifecyclePolicy(String name, Output<String> id, @Nullable LifecyclePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

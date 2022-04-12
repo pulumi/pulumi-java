@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public ConnectorS3LogDeliveryArgs(
@@ -62,9 +63,9 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectorS3LogDeliveryArgs() {
-        this.bucket = Output.empty();
-        this.enabled = Output.empty();
-        this.prefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -112,7 +113,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public ConnectorS3LogDeliveryArgs build() {
             return new ConnectorS3LogDeliveryArgs(bucket, enabled, prefix);

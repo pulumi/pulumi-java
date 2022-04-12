@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> certificateThumbprint;
 
     public Output<String> getCertificateThumbprint() {
-        return this.certificateThumbprint == null ? Output.empty() : this.certificateThumbprint;
+        return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public WebServiceParameterArgs(
@@ -49,8 +50,8 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebServiceParameterArgs() {
-        this.certificateThumbprint = Output.empty();
-        this.value = Output.empty();
+        this.certificateThumbprint = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
+            this.certificateThumbprint = Codegen.ofNullable(certificateThumbprint);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -88,7 +89,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public WebServiceParameterArgs build() {
             return new WebServiceParameterArgs(certificateThumbprint, value);

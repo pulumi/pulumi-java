@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> error;
 
     public Output<String> getError() {
-        return this.error == null ? Output.empty() : this.error;
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     /**
@@ -66,9 +67,9 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortStatusArgs() {
-        this.error = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.error = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder error(@Nullable String error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }
         public Builder port(Output<Integer> port) {

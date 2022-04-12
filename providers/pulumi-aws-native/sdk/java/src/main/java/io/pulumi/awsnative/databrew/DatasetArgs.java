@@ -10,6 +10,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetPathOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetFormat> format;
 
     public Output<DatasetFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
 
     public Output<DatasetFormatOptionsArgs> getFormatOptions() {
-        return this.formatOptions == null ? Output.empty() : this.formatOptions;
+        return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,14 +73,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetPathOptionsArgs> pathOptions;
 
     public Output<DatasetPathOptionsArgs> getPathOptions() {
-        return this.pathOptions == null ? Output.empty() : this.pathOptions;
+        return this.pathOptions == null ? Codegen.empty() : this.pathOptions;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DatasetTagArgs>> tags;
 
     public Output<List<DatasetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatasetArgs(
@@ -98,12 +99,12 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.format = Output.empty();
-        this.formatOptions = Output.empty();
-        this.input = Output.empty();
-        this.name = Output.empty();
-        this.pathOptions = Output.empty();
-        this.tags = Output.empty();
+        this.format = Codegen.empty();
+        this.formatOptions = Codegen.empty();
+        this.input = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pathOptions = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable DatasetFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder formatOptions(@Nullable Output<DatasetFormatOptionsArgs> formatOptions) {
@@ -149,7 +150,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder formatOptions(@Nullable DatasetFormatOptionsArgs formatOptions) {
-            this.formatOptions = Output.ofNullable(formatOptions);
+            this.formatOptions = Codegen.ofNullable(formatOptions);
             return this;
         }
         public Builder input(Output<DatasetInputArgs> input) {
@@ -165,7 +166,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pathOptions(@Nullable Output<DatasetPathOptionsArgs> pathOptions) {
@@ -173,7 +174,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathOptions(@Nullable DatasetPathOptionsArgs pathOptions) {
-            this.pathOptions = Output.ofNullable(pathOptions);
+            this.pathOptions = Codegen.ofNullable(pathOptions);
             return this;
         }
         public Builder tags(@Nullable Output<List<DatasetTagArgs>> tags) {
@@ -181,7 +182,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DatasetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DatasetTagArgs... tags) {

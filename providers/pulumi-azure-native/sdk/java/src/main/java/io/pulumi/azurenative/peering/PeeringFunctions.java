@@ -29,10 +29,10 @@ public final class PeeringFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(io.pulumi.azurenative.peering.inputs.GetConnectionMonitorTestArgs args) {
-        return getConnectionMonitorTest(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args) {
+        return getConnectionMonitorTest(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(io.pulumi.azurenative.peering.inputs.GetConnectionMonitorTestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionMonitorTestResult> getConnectionMonitorTest(GetConnectionMonitorTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(io.pulumi.azurenative.peering.inputs.GetPeerAsnArgs args) {
-        return getPeerAsn(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args) {
+        return getPeerAsn(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(io.pulumi.azurenative.peering.inputs.GetPeerAsnArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeerAsnResult> getPeerAsn(GetPeerAsnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeerAsn", TypeShape.of(GetPeerAsnResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringResult> getPeering(io.pulumi.azurenative.peering.inputs.GetPeeringArgs args) {
-        return getPeering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args) {
+        return getPeering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeeringResult> getPeering(io.pulumi.azurenative.peering.inputs.GetPeeringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeeringResult> getPeering(GetPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeering", TypeShape.of(GetPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(io.pulumi.azurenative.peering.inputs.GetPeeringServiceArgs args) {
-        return getPeeringService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args) {
+        return getPeeringService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(io.pulumi.azurenative.peering.inputs.GetPeeringServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeeringServiceResult> getPeeringService(GetPeeringServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeeringService", TypeShape.of(GetPeeringServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPrefixResult> getPrefix(io.pulumi.azurenative.peering.inputs.GetPrefixArgs args) {
-        return getPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args) {
+        return getPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrefixResult> getPrefix(io.pulumi.azurenative.peering.inputs.GetPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrefixResult> getPrefix(GetPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPrefix", TypeShape.of(GetPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(io.pulumi.azurenative.peering.inputs.GetRegisteredAsnArgs args) {
-        return getRegisteredAsn(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args) {
+        return getRegisteredAsn(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(io.pulumi.azurenative.peering.inputs.GetRegisteredAsnArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegisteredAsnResult> getRegisteredAsn(GetRegisteredAsnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredAsn", TypeShape.of(GetRegisteredAsnResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -95,10 +95,10 @@ public final class PeeringFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(io.pulumi.azurenative.peering.inputs.GetRegisteredPrefixArgs args) {
-        return getRegisteredPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args) {
+        return getRegisteredPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(io.pulumi.azurenative.peering.inputs.GetRegisteredPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegisteredPrefixResult> getRegisteredPrefix(GetRegisteredPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -20,30 +20,30 @@ public final class Retail_v2alphaFunctions {
      * Gets a Control.
      * 
      */
-    public static CompletableFuture<GetControlResult> getControl(io.pulumi.googlenative.retail_v2alpha.inputs.GetControlArgs args) {
-        return getControl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetControlResult> getControl(GetControlArgs args) {
+        return getControl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetControlResult> getControl(io.pulumi.googlenative.retail_v2alpha.inputs.GetControlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetControlResult> getControl(GetControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2alpha:getControl", TypeShape.of(GetControlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a Product.
      * 
      */
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.retail_v2alpha.inputs.GetProductArgs args) {
-        return getProduct(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
+        return getProduct(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductResult> getProduct(io.pulumi.googlenative.retail_v2alpha.inputs.GetProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2alpha:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
      * 
      */
-    public static CompletableFuture<GetServingConfigResult> getServingConfig(io.pulumi.googlenative.retail_v2alpha.inputs.GetServingConfigArgs args) {
-        return getServingConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServingConfigResult> getServingConfig(GetServingConfigArgs args) {
+        return getServingConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServingConfigResult> getServingConfig(io.pulumi.googlenative.retail_v2alpha.inputs.GetServingConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServingConfigResult> getServingConfig(GetServingConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2alpha:getServingConfig", TypeShape.of(GetServingConfigResult.class), args, Utilities.withVersion(options));
     }
 }

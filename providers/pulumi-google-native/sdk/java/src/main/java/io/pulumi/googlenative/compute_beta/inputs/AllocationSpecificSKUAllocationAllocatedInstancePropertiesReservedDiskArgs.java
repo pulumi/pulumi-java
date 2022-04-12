@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
       private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;
 
     public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(
@@ -45,8 +46,8 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     }
 
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs() {
-        this.diskSizeGb = Output.empty();
-        this.interface_ = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.interface_ = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             return this;
         }
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder interface_(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_) {
@@ -84,7 +85,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             return this;
         }
         public Builder interface_(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(diskSizeGb, interface_);

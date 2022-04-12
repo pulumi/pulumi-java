@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
     public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
     public Output<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? Output.empty() : this.ruleGroupOverrides;
+        return this.ruleGroupOverrides == null ? Codegen.empty() : this.ruleGroupOverrides;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
     public Output<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
-        return this.ruleSetAction == null ? Output.empty() : this.ruleSetAction;
+        return this.ruleSetAction == null ? Codegen.empty() : this.ruleSetAction;
     }
 
     /**
@@ -92,11 +93,11 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     private FrontDoorManagedRuleSetArgs() {
-        this.exclusions = Output.empty();
-        this.ruleGroupOverrides = Output.empty();
-        this.ruleSetAction = Output.empty();
-        this.ruleSetType = Output.empty();
-        this.ruleSetVersion = Output.empty();
+        this.exclusions = Codegen.empty();
+        this.ruleGroupOverrides = Codegen.empty();
+        this.ruleSetAction = Codegen.empty();
+        this.ruleSetType = Codegen.empty();
+        this.ruleSetVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
@@ -143,7 +144,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
-            this.ruleGroupOverrides = Output.ofNullable(ruleGroupOverrides);
+            this.ruleGroupOverrides = Codegen.ofNullable(ruleGroupOverrides);
             return this;
         }
         public Builder ruleGroupOverrides(FrontDoorManagedRuleGroupOverrideArgs... ruleGroupOverrides) {
@@ -154,7 +155,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ruleSetAction(@Nullable Either<String,ManagedRuleSetActionType> ruleSetAction) {
-            this.ruleSetAction = Output.ofNullable(ruleSetAction);
+            this.ruleSetAction = Codegen.ofNullable(ruleSetAction);
             return this;
         }
         public Builder ruleSetType(Output<String> ruleSetType) {

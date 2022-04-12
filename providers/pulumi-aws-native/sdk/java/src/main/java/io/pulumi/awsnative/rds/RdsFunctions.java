@@ -22,40 +22,40 @@ public final class RdsFunctions {
      * Resource schema for AWS::RDS::DBProxy
      * 
      */
-    public static CompletableFuture<GetDBProxyResult> getDBProxy(io.pulumi.awsnative.rds.inputs.GetDBProxyArgs args) {
-        return getDBProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDBProxyResult> getDBProxy(GetDBProxyArgs args) {
+        return getDBProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDBProxyResult> getDBProxy(io.pulumi.awsnative.rds.inputs.GetDBProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDBProxyResult> getDBProxy(GetDBProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxy", TypeShape.of(GetDBProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::RDS::DBProxyEndpoint.
      * 
      */
-    public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(io.pulumi.awsnative.rds.inputs.GetDBProxyEndpointArgs args) {
-        return getDBProxyEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(GetDBProxyEndpointArgs args) {
+        return getDBProxyEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(io.pulumi.awsnative.rds.inputs.GetDBProxyEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDBProxyEndpointResult> getDBProxyEndpoint(GetDBProxyEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyEndpoint", TypeShape.of(GetDBProxyEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::RDS::DBProxyTargetGroup
      * 
      */
-    public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(io.pulumi.awsnative.rds.inputs.GetDBProxyTargetGroupArgs args) {
-        return getDBProxyTargetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(GetDBProxyTargetGroupArgs args) {
+        return getDBProxyTargetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(io.pulumi.awsnative.rds.inputs.GetDBProxyTargetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDBProxyTargetGroupResult> getDBProxyTargetGroup(GetDBProxyTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getDBProxyTargetGroup", TypeShape.of(GetDBProxyTargetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::RDS::GlobalCluster
      * 
      */
-    public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(io.pulumi.awsnative.rds.inputs.GetGlobalClusterArgs args) {
-        return getGlobalCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(GetGlobalClusterArgs args) {
+        return getGlobalCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(io.pulumi.awsnative.rds.inputs.GetGlobalClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalClusterResult> getGlobalCluster(GetGlobalClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getGlobalCluster", TypeShape.of(GetGlobalClusterResult.class), args, Utilities.withVersion(options));
     }
 }

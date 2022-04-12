@@ -5,6 +5,7 @@ package io.pulumi.azurenative.intune;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,77 +21,77 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> accessRecheckOfflineTimeout;
 
     public Output<String> getAccessRecheckOfflineTimeout() {
-        return this.accessRecheckOfflineTimeout == null ? Output.empty() : this.accessRecheckOfflineTimeout;
+        return this.accessRecheckOfflineTimeout == null ? Codegen.empty() : this.accessRecheckOfflineTimeout;
     }
 
     @Import(name="accessRecheckOnlineTimeout")
       private final @Nullable Output<String> accessRecheckOnlineTimeout;
 
     public Output<String> getAccessRecheckOnlineTimeout() {
-        return this.accessRecheckOnlineTimeout == null ? Output.empty() : this.accessRecheckOnlineTimeout;
+        return this.accessRecheckOnlineTimeout == null ? Codegen.empty() : this.accessRecheckOnlineTimeout;
     }
 
     @Import(name="appSharingFromLevel")
       private final @Nullable Output<String> appSharingFromLevel;
 
     public Output<String> getAppSharingFromLevel() {
-        return this.appSharingFromLevel == null ? Output.empty() : this.appSharingFromLevel;
+        return this.appSharingFromLevel == null ? Codegen.empty() : this.appSharingFromLevel;
     }
 
     @Import(name="appSharingToLevel")
       private final @Nullable Output<String> appSharingToLevel;
 
     public Output<String> getAppSharingToLevel() {
-        return this.appSharingToLevel == null ? Output.empty() : this.appSharingToLevel;
+        return this.appSharingToLevel == null ? Codegen.empty() : this.appSharingToLevel;
     }
 
     @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
     public Output<String> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     @Import(name="clipboardSharingLevel")
       private final @Nullable Output<String> clipboardSharingLevel;
 
     public Output<String> getClipboardSharingLevel() {
-        return this.clipboardSharingLevel == null ? Output.empty() : this.clipboardSharingLevel;
+        return this.clipboardSharingLevel == null ? Codegen.empty() : this.clipboardSharingLevel;
     }
 
     @Import(name="dataBackup")
       private final @Nullable Output<String> dataBackup;
 
     public Output<String> getDataBackup() {
-        return this.dataBackup == null ? Output.empty() : this.dataBackup;
+        return this.dataBackup == null ? Codegen.empty() : this.dataBackup;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="deviceCompliance")
       private final @Nullable Output<String> deviceCompliance;
 
     public Output<String> getDeviceCompliance() {
-        return this.deviceCompliance == null ? Output.empty() : this.deviceCompliance;
+        return this.deviceCompliance == null ? Codegen.empty() : this.deviceCompliance;
     }
 
     @Import(name="fileEncryptionLevel")
       private final @Nullable Output<String> fileEncryptionLevel;
 
     public Output<String> getFileEncryptionLevel() {
-        return this.fileEncryptionLevel == null ? Output.empty() : this.fileEncryptionLevel;
+        return this.fileEncryptionLevel == null ? Codegen.empty() : this.fileEncryptionLevel;
     }
 
     @Import(name="fileSharingSaveAs")
       private final @Nullable Output<String> fileSharingSaveAs;
 
     public Output<String> getFileSharingSaveAs() {
-        return this.fileSharingSaveAs == null ? Output.empty() : this.fileSharingSaveAs;
+        return this.fileSharingSaveAs == null ? Codegen.empty() : this.fileSharingSaveAs;
     }
 
     @Import(name="friendlyName", required=true)
@@ -119,35 +120,35 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="managedBrowser")
       private final @Nullable Output<String> managedBrowser;
 
     public Output<String> getManagedBrowser() {
-        return this.managedBrowser == null ? Output.empty() : this.managedBrowser;
+        return this.managedBrowser == null ? Codegen.empty() : this.managedBrowser;
     }
 
     @Import(name="offlineWipeTimeout")
       private final @Nullable Output<String> offlineWipeTimeout;
 
     public Output<String> getOfflineWipeTimeout() {
-        return this.offlineWipeTimeout == null ? Output.empty() : this.offlineWipeTimeout;
+        return this.offlineWipeTimeout == null ? Codegen.empty() : this.offlineWipeTimeout;
     }
 
     @Import(name="pin")
       private final @Nullable Output<String> pin;
 
     public Output<String> getPin() {
-        return this.pin == null ? Output.empty() : this.pin;
+        return this.pin == null ? Codegen.empty() : this.pin;
     }
 
     @Import(name="pinNumRetry")
       private final @Nullable Output<Integer> pinNumRetry;
 
     public Output<Integer> getPinNumRetry() {
-        return this.pinNumRetry == null ? Output.empty() : this.pinNumRetry;
+        return this.pinNumRetry == null ? Codegen.empty() : this.pinNumRetry;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -169,14 +170,14 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="touchId")
       private final @Nullable Output<String> touchId;
 
     public Output<String> getTouchId() {
-        return this.touchId == null ? Output.empty() : this.touchId;
+        return this.touchId == null ? Codegen.empty() : this.touchId;
     }
 
     public IoMAMPolicyByNameArgs(
@@ -203,49 +204,49 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<String> touchId) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
-        this.appSharingFromLevel = appSharingFromLevel == null ? Output.ofNullable("none") : appSharingFromLevel;
-        this.appSharingToLevel = appSharingToLevel == null ? Output.ofNullable("none") : appSharingToLevel;
-        this.authentication = authentication == null ? Output.ofNullable("required") : authentication;
-        this.clipboardSharingLevel = clipboardSharingLevel == null ? Output.ofNullable("blocked") : clipboardSharingLevel;
-        this.dataBackup = dataBackup == null ? Output.ofNullable("allow") : dataBackup;
+        this.appSharingFromLevel = appSharingFromLevel == null ? Codegen.ofNullable("none") : appSharingFromLevel;
+        this.appSharingToLevel = appSharingToLevel == null ? Codegen.ofNullable("none") : appSharingToLevel;
+        this.authentication = authentication == null ? Codegen.ofNullable("required") : authentication;
+        this.clipboardSharingLevel = clipboardSharingLevel == null ? Codegen.ofNullable("blocked") : clipboardSharingLevel;
+        this.dataBackup = dataBackup == null ? Codegen.ofNullable("allow") : dataBackup;
         this.description = description;
-        this.deviceCompliance = deviceCompliance == null ? Output.ofNullable("enable") : deviceCompliance;
-        this.fileEncryptionLevel = fileEncryptionLevel == null ? Output.ofNullable("deviceLocked") : fileEncryptionLevel;
-        this.fileSharingSaveAs = fileSharingSaveAs == null ? Output.ofNullable("allow") : fileSharingSaveAs;
+        this.deviceCompliance = deviceCompliance == null ? Codegen.ofNullable("enable") : deviceCompliance;
+        this.fileEncryptionLevel = fileEncryptionLevel == null ? Codegen.ofNullable("deviceLocked") : fileEncryptionLevel;
+        this.fileSharingSaveAs = fileSharingSaveAs == null ? Codegen.ofNullable("allow") : fileSharingSaveAs;
         this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.location = location;
-        this.managedBrowser = managedBrowser == null ? Output.ofNullable("required") : managedBrowser;
+        this.managedBrowser = managedBrowser == null ? Codegen.ofNullable("required") : managedBrowser;
         this.offlineWipeTimeout = offlineWipeTimeout;
-        this.pin = pin == null ? Output.ofNullable("required") : pin;
+        this.pin = pin == null ? Codegen.ofNullable("required") : pin;
         this.pinNumRetry = pinNumRetry;
         this.policyName = policyName;
         this.tags = tags;
-        this.touchId = touchId == null ? Output.ofNullable("enable") : touchId;
+        this.touchId = touchId == null ? Codegen.ofNullable("enable") : touchId;
     }
 
     private IoMAMPolicyByNameArgs() {
-        this.accessRecheckOfflineTimeout = Output.empty();
-        this.accessRecheckOnlineTimeout = Output.empty();
-        this.appSharingFromLevel = Output.empty();
-        this.appSharingToLevel = Output.empty();
-        this.authentication = Output.empty();
-        this.clipboardSharingLevel = Output.empty();
-        this.dataBackup = Output.empty();
-        this.description = Output.empty();
-        this.deviceCompliance = Output.empty();
-        this.fileEncryptionLevel = Output.empty();
-        this.fileSharingSaveAs = Output.empty();
-        this.friendlyName = Output.empty();
-        this.hostName = Output.empty();
-        this.location = Output.empty();
-        this.managedBrowser = Output.empty();
-        this.offlineWipeTimeout = Output.empty();
-        this.pin = Output.empty();
-        this.pinNumRetry = Output.empty();
-        this.policyName = Output.empty();
-        this.tags = Output.empty();
-        this.touchId = Output.empty();
+        this.accessRecheckOfflineTimeout = Codegen.empty();
+        this.accessRecheckOnlineTimeout = Codegen.empty();
+        this.appSharingFromLevel = Codegen.empty();
+        this.appSharingToLevel = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.clipboardSharingLevel = Codegen.empty();
+        this.dataBackup = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceCompliance = Codegen.empty();
+        this.fileEncryptionLevel = Codegen.empty();
+        this.fileSharingSaveAs = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedBrowser = Codegen.empty();
+        this.offlineWipeTimeout = Codegen.empty();
+        this.pin = Codegen.empty();
+        this.pinNumRetry = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.touchId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
-            this.accessRecheckOfflineTimeout = Output.ofNullable(accessRecheckOfflineTimeout);
+            this.accessRecheckOfflineTimeout = Codegen.ofNullable(accessRecheckOfflineTimeout);
             return this;
         }
         public Builder accessRecheckOnlineTimeout(@Nullable Output<String> accessRecheckOnlineTimeout) {
@@ -321,7 +322,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
-            this.accessRecheckOnlineTimeout = Output.ofNullable(accessRecheckOnlineTimeout);
+            this.accessRecheckOnlineTimeout = Codegen.ofNullable(accessRecheckOnlineTimeout);
             return this;
         }
         public Builder appSharingFromLevel(@Nullable Output<String> appSharingFromLevel) {
@@ -329,7 +330,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
-            this.appSharingFromLevel = Output.ofNullable(appSharingFromLevel);
+            this.appSharingFromLevel = Codegen.ofNullable(appSharingFromLevel);
             return this;
         }
         public Builder appSharingToLevel(@Nullable Output<String> appSharingToLevel) {
@@ -337,7 +338,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
-            this.appSharingToLevel = Output.ofNullable(appSharingToLevel);
+            this.appSharingToLevel = Codegen.ofNullable(appSharingToLevel);
             return this;
         }
         public Builder authentication(@Nullable Output<String> authentication) {
@@ -345,7 +346,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder clipboardSharingLevel(@Nullable Output<String> clipboardSharingLevel) {
@@ -353,7 +354,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
-            this.clipboardSharingLevel = Output.ofNullable(clipboardSharingLevel);
+            this.clipboardSharingLevel = Codegen.ofNullable(clipboardSharingLevel);
             return this;
         }
         public Builder dataBackup(@Nullable Output<String> dataBackup) {
@@ -361,7 +362,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataBackup(@Nullable String dataBackup) {
-            this.dataBackup = Output.ofNullable(dataBackup);
+            this.dataBackup = Codegen.ofNullable(dataBackup);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -369,7 +370,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceCompliance(@Nullable Output<String> deviceCompliance) {
@@ -377,7 +378,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deviceCompliance(@Nullable String deviceCompliance) {
-            this.deviceCompliance = Output.ofNullable(deviceCompliance);
+            this.deviceCompliance = Codegen.ofNullable(deviceCompliance);
             return this;
         }
         public Builder fileEncryptionLevel(@Nullable Output<String> fileEncryptionLevel) {
@@ -385,7 +386,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileEncryptionLevel(@Nullable String fileEncryptionLevel) {
-            this.fileEncryptionLevel = Output.ofNullable(fileEncryptionLevel);
+            this.fileEncryptionLevel = Codegen.ofNullable(fileEncryptionLevel);
             return this;
         }
         public Builder fileSharingSaveAs(@Nullable Output<String> fileSharingSaveAs) {
@@ -393,7 +394,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
-            this.fileSharingSaveAs = Output.ofNullable(fileSharingSaveAs);
+            this.fileSharingSaveAs = Codegen.ofNullable(fileSharingSaveAs);
             return this;
         }
         public Builder friendlyName(Output<String> friendlyName) {
@@ -417,7 +418,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedBrowser(@Nullable Output<String> managedBrowser) {
@@ -425,7 +426,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder managedBrowser(@Nullable String managedBrowser) {
-            this.managedBrowser = Output.ofNullable(managedBrowser);
+            this.managedBrowser = Codegen.ofNullable(managedBrowser);
             return this;
         }
         public Builder offlineWipeTimeout(@Nullable Output<String> offlineWipeTimeout) {
@@ -433,7 +434,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
-            this.offlineWipeTimeout = Output.ofNullable(offlineWipeTimeout);
+            this.offlineWipeTimeout = Codegen.ofNullable(offlineWipeTimeout);
             return this;
         }
         public Builder pin(@Nullable Output<String> pin) {
@@ -441,7 +442,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pin(@Nullable String pin) {
-            this.pin = Output.ofNullable(pin);
+            this.pin = Codegen.ofNullable(pin);
             return this;
         }
         public Builder pinNumRetry(@Nullable Output<Integer> pinNumRetry) {
@@ -449,7 +450,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
-            this.pinNumRetry = Output.ofNullable(pinNumRetry);
+            this.pinNumRetry = Codegen.ofNullable(pinNumRetry);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -457,7 +458,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -465,7 +466,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder touchId(@Nullable Output<String> touchId) {
@@ -473,7 +474,7 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder touchId(@Nullable String touchId) {
-            this.touchId = Output.ofNullable(touchId);
+            this.touchId = Codegen.ofNullable(touchId);
             return this;
         }        public IoMAMPolicyByNameArgs build() {
             return new IoMAMPolicyByNameArgs(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryptionLevel, fileSharingSaveAs, friendlyName, hostName, location, managedBrowser, offlineWipeTimeout, pin, pinNumRetry, policyName, tags, touchId);

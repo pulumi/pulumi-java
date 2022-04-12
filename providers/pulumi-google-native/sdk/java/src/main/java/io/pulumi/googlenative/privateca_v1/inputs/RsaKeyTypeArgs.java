@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maxModulusSize;
 
     public Output<String> getMaxModulusSize() {
-        return this.maxModulusSize == null ? Output.empty() : this.maxModulusSize;
+        return this.maxModulusSize == null ? Codegen.empty() : this.maxModulusSize;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> minModulusSize;
 
     public Output<String> getMinModulusSize() {
-        return this.minModulusSize == null ? Output.empty() : this.minModulusSize;
+        return this.minModulusSize == null ? Codegen.empty() : this.minModulusSize;
     }
 
     public RsaKeyTypeArgs(
@@ -48,8 +49,8 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RsaKeyTypeArgs() {
-        this.maxModulusSize = Output.empty();
-        this.minModulusSize = Output.empty();
+        this.maxModulusSize = Codegen.empty();
+        this.minModulusSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxModulusSize(@Nullable String maxModulusSize) {
-            this.maxModulusSize = Output.ofNullable(maxModulusSize);
+            this.maxModulusSize = Codegen.ofNullable(maxModulusSize);
             return this;
         }
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
@@ -87,7 +88,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minModulusSize(@Nullable String minModulusSize) {
-            this.minModulusSize = Output.ofNullable(minModulusSize);
+            this.minModulusSize = Codegen.ofNullable(minModulusSize);
             return this;
         }        public RsaKeyTypeArgs build() {
             return new RsaKeyTypeArgs(maxModulusSize, minModulusSize);

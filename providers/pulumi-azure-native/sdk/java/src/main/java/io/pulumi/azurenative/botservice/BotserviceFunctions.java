@@ -31,10 +31,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.azurenative.botservice.inputs.GetBotArgs args) {
-        return getBot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+        return getBot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.azurenative.botservice.inputs.GetBotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,10 +42,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetBotConnectionResult> getBotConnection(io.pulumi.azurenative.botservice.inputs.GetBotConnectionArgs args) {
-        return getBotConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args) {
+        return getBotConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotConnectionResult> getBotConnection(io.pulumi.azurenative.botservice.inputs.GetBotConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotConnectionResult> getBotConnection(GetBotConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getBotConnection", TypeShape.of(GetBotConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.azurenative.botservice.inputs.GetChannelArgs args) {
-        return getChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+        return getChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.azurenative.botservice.inputs.GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class BotserviceFunctions {
      * API Version: 2018-07-12.
      * 
      */
-    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(io.pulumi.azurenative.botservice.inputs.GetEnterpriseChannelArgs args) {
-        return getEnterpriseChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args) {
+        return getEnterpriseChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(io.pulumi.azurenative.botservice.inputs.GetEnterpriseChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnterpriseChannelResult> getEnterpriseChannel(GetEnterpriseChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getEnterpriseChannel", TypeShape.of(GetEnterpriseChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,10 +75,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.botservice.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.botservice.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -87,12 +87,12 @@ public final class BotserviceFunctions {
      * 
      */
     public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders() {
-        return listBotConnectionServiceProviders(io.pulumi.azurenative.botservice.inputs.ListBotConnectionServiceProvidersArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(io.pulumi.azurenative.botservice.inputs.ListBotConnectionServiceProvidersArgs args) {
-        return listBotConnectionServiceProviders(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args) {
+        return listBotConnectionServiceProviders(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(io.pulumi.azurenative.botservice.inputs.ListBotConnectionServiceProvidersArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBotConnectionServiceProvidersResult> listBotConnectionServiceProviders(ListBotConnectionServiceProvidersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionServiceProviders", TypeShape.of(ListBotConnectionServiceProvidersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -100,10 +100,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(io.pulumi.azurenative.botservice.inputs.ListBotConnectionWithSecretsArgs args) {
-        return listBotConnectionWithSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args) {
+        return listBotConnectionWithSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(io.pulumi.azurenative.botservice.inputs.ListBotConnectionWithSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBotConnectionWithSecretsResult> listBotConnectionWithSecrets(ListBotConnectionWithSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionWithSecrets", TypeShape.of(ListBotConnectionWithSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -111,10 +111,10 @@ public final class BotserviceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(io.pulumi.azurenative.botservice.inputs.ListChannelWithKeysArgs args) {
-        return listChannelWithKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args) {
+        return listChannelWithKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(io.pulumi.azurenative.botservice.inputs.ListChannelWithKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListChannelWithKeysResult> listChannelWithKeys(ListChannelWithKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listChannelWithKeys", TypeShape.of(ListChannelWithKeysResult.class), args, Utilities.withVersion(options));
     }
 }

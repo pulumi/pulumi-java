@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> certificateId;
 
     public Output<Integer> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
 
     public Output<ManagedSslCertificateManagedGetArgs> getManaged() {
-        return this.managed == null ? Output.empty() : this.managed;
+        return this.managed == null ? Codegen.empty() : this.managed;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
     public Output<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
+        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ManagedSslCertificateState(
@@ -163,16 +164,16 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
     }
 
     private ManagedSslCertificateState() {
-        this.certificateId = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.expireTime = Output.empty();
-        this.managed = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.subjectAlternativeNames = Output.empty();
-        this.type = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.managed = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.subjectAlternativeNames = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -226,7 +227,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -234,7 +235,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expireTime(@Nullable Output<String> expireTime) {
@@ -242,7 +243,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedGetArgs> managed) {
@@ -250,7 +251,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder managed(@Nullable ManagedSslCertificateManagedGetArgs managed) {
-            this.managed = Output.ofNullable(managed);
+            this.managed = Codegen.ofNullable(managed);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -258,7 +259,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -266,7 +267,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -274,7 +275,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
@@ -282,7 +283,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
             return this;
         }
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
@@ -293,7 +294,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ManagedSslCertificateState build() {
             return new ManagedSslCertificateState(certificateId, creationTimestamp, description, expireTime, managed, name, project, selfLink, subjectAlternativeNames, type);

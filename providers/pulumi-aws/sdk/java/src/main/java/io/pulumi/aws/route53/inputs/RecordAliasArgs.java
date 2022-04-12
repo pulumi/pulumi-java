@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordAliasArgs() {
-        this.evaluateTargetHealth = Output.empty();
-        this.name = Output.empty();
-        this.zoneId = Output.empty();
+        this.evaluateTargetHealth = Codegen.empty();
+        this.name = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {

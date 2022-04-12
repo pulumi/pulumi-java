@@ -6,6 +6,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,14 +28,14 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> recoveryWindow;
 
     public Output<Integer> getRecoveryWindow() {
-        return this.recoveryWindow == null ? Output.empty() : this.recoveryWindow;
+        return this.recoveryWindow == null ? Codegen.empty() : this.recoveryWindow;
     }
 
     @Import(name="state")
       private final @Nullable Output<FlowFailoverConfigState> state;
 
     public Output<FlowFailoverConfigState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public FlowFailoverConfigArgs(
@@ -45,8 +46,8 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FlowFailoverConfigArgs() {
-        this.recoveryWindow = Output.empty();
-        this.state = Output.empty();
+        this.recoveryWindow = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder recoveryWindow(@Nullable Integer recoveryWindow) {
-            this.recoveryWindow = Output.ofNullable(recoveryWindow);
+            this.recoveryWindow = Codegen.ofNullable(recoveryWindow);
             return this;
         }
         public Builder state(@Nullable Output<FlowFailoverConfigState> state) {
@@ -84,7 +85,7 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable FlowFailoverConfigState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public FlowFailoverConfigArgs build() {
             return new FlowFailoverConfigArgs(recoveryWindow, state);

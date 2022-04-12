@@ -5,6 +5,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -59,7 +60,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<String> adxTableName;
 
     public Output<String> getAdxTableName() {
-        return this.adxTableName == null ? Output.empty() : this.adxTableName;
+        return this.adxTableName == null ? Codegen.empty() : this.adxTableName;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<String> eventHubConsumerGroup;
 
     public Output<String> getEventHubConsumerGroup() {
-        return this.eventHubConsumerGroup == null ? Output.empty() : this.eventHubConsumerGroup;
+        return this.eventHubConsumerGroup == null ? Codegen.empty() : this.eventHubConsumerGroup;
     }
 
     /**
@@ -140,15 +141,15 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     }
 
     private AzureDataExplorerConnectionPropertiesArgs() {
-        this.adxDatabaseName = Output.empty();
-        this.adxEndpointUri = Output.empty();
-        this.adxResourceId = Output.empty();
-        this.adxTableName = Output.empty();
-        this.connectionType = Output.empty();
-        this.eventHubConsumerGroup = Output.empty();
-        this.eventHubEndpointUri = Output.empty();
-        this.eventHubEntityPath = Output.empty();
-        this.eventHubNamespaceResourceId = Output.empty();
+        this.adxDatabaseName = Codegen.empty();
+        this.adxEndpointUri = Codegen.empty();
+        this.adxResourceId = Codegen.empty();
+        this.adxTableName = Codegen.empty();
+        this.connectionType = Codegen.empty();
+        this.eventHubConsumerGroup = Codegen.empty();
+        this.eventHubEndpointUri = Codegen.empty();
+        this.eventHubEntityPath = Codegen.empty();
+        this.eventHubNamespaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder adxTableName(@Nullable String adxTableName) {
-            this.adxTableName = Output.ofNullable(adxTableName);
+            this.adxTableName = Codegen.ofNullable(adxTableName);
             return this;
         }
         public Builder connectionType(Output<String> connectionType) {
@@ -232,7 +233,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
-            this.eventHubConsumerGroup = Output.ofNullable(eventHubConsumerGroup);
+            this.eventHubConsumerGroup = Codegen.ofNullable(eventHubConsumerGroup);
             return this;
         }
         public Builder eventHubEndpointUri(Output<String> eventHubEndpointUri) {

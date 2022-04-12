@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> columnFamilies;
 
     public Output<Map<String,String>> getColumnFamilies() {
-        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
+        return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableGranularity> granularity;
 
     public Output<TableGranularity> getGranularity() {
-        return this.granularity == null ? Output.empty() : this.granularity;
+        return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SplitArgs>> initialSplits;
 
     public Output<List<SplitArgs>> getInitialSplits() {
-        return this.initialSplits == null ? Output.empty() : this.initialSplits;
+        return this.initialSplits == null ? Codegen.empty() : this.initialSplits;
     }
 
     @Import(name="instanceId", required=true)
@@ -66,14 +67,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -105,13 +106,13 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.columnFamilies = Output.empty();
-        this.granularity = Output.empty();
-        this.initialSplits = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.tableId = Output.empty();
+        this.columnFamilies = Codegen.empty();
+        this.granularity = Codegen.empty();
+        this.initialSplits = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnFamilies(@Nullable Map<String,String> columnFamilies) {
-            this.columnFamilies = Output.ofNullable(columnFamilies);
+            this.columnFamilies = Codegen.ofNullable(columnFamilies);
             return this;
         }
         public Builder granularity(@Nullable Output<TableGranularity> granularity) {
@@ -159,7 +160,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder granularity(@Nullable TableGranularity granularity) {
-            this.granularity = Output.ofNullable(granularity);
+            this.granularity = Codegen.ofNullable(granularity);
             return this;
         }
         public Builder initialSplits(@Nullable Output<List<SplitArgs>> initialSplits) {
@@ -167,7 +168,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialSplits(@Nullable List<SplitArgs> initialSplits) {
-            this.initialSplits = Output.ofNullable(initialSplits);
+            this.initialSplits = Codegen.ofNullable(initialSplits);
             return this;
         }
         public Builder initialSplits(SplitArgs... initialSplits) {
@@ -186,7 +187,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -194,7 +195,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tableId(Output<String> tableId) {

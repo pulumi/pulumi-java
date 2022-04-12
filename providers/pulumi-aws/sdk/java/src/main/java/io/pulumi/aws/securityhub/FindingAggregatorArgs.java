@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class FindingAggregatorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> specifiedRegions;
 
     public Output<List<String>> getSpecifiedRegions() {
-        return this.specifiedRegions == null ? Output.empty() : this.specifiedRegions;
+        return this.specifiedRegions == null ? Codegen.empty() : this.specifiedRegions;
     }
 
     public FindingAggregatorArgs(
@@ -45,8 +46,8 @@ public final class FindingAggregatorArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FindingAggregatorArgs() {
-        this.linkingMode = Output.empty();
-        this.specifiedRegions = Output.empty();
+        this.linkingMode = Codegen.empty();
+        this.specifiedRegions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FindingAggregatorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
-            this.specifiedRegions = Output.ofNullable(specifiedRegions);
+            this.specifiedRegions = Codegen.ofNullable(specifiedRegions);
             return this;
         }
         public Builder specifiedRegions(String... specifiedRegions) {

@@ -22,40 +22,40 @@ public final class NetworkfirewallFunctions {
      * Resource type definition for AWS::NetworkFirewall::Firewall
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(io.pulumi.awsnative.networkfirewall.inputs.GetFirewallArgs args) {
-        return getFirewall(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args) {
+        return getFirewall(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallResult> getFirewall(io.pulumi.awsnative.networkfirewall.inputs.GetFirewallArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.awsnative.networkfirewall.inputs.GetFirewallPolicyArgs args) {
-        return getFirewallPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+        return getFirewallPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.awsnative.networkfirewall.inputs.GetFirewallPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
      * 
      */
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(io.pulumi.awsnative.networkfirewall.inputs.GetLoggingConfigurationArgs args) {
-        return getLoggingConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args) {
+        return getLoggingConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(io.pulumi.awsnative.networkfirewall.inputs.GetLoggingConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::RuleGroup
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.awsnative.networkfirewall.inputs.GetRuleGroupArgs args) {
-        return getRuleGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
+        return getRuleGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.awsnative.networkfirewall.inputs.GetRuleGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
 }

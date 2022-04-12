@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ResourceAccessRuleArgs(
@@ -48,8 +49,8 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceAccessRuleArgs() {
-        this.resourceId = Output.empty();
-        this.tenantId = Output.empty();
+        this.resourceId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -87,7 +88,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ResourceAccessRuleArgs build() {
             return new ResourceAccessRuleArgs(resourceId, tenantId);

@@ -18,20 +18,20 @@ public final class S3objectlambdaFunctions {
      * The AWS::S3ObjectLambda::AccessPoint resource is an Amazon S3ObjectLambda resource type that you can use to add computation to S3 actions
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointArgs args) {
-        return getAccessPoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
+        return getAccessPoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
      * 
      */
-    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicy(io.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPolicyArgs args) {
-        return getAccessPointPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicy(GetAccessPointPolicyArgs args) {
+        return getAccessPointPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicy(io.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicy(GetAccessPointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPointPolicy", TypeShape.of(GetAccessPointPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

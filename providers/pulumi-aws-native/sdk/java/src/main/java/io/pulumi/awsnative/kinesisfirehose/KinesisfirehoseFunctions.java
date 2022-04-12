@@ -16,10 +16,10 @@ public final class KinesisfirehoseFunctions {
      * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
      * 
      */
-    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(io.pulumi.awsnative.kinesisfirehose.inputs.GetDeliveryStreamArgs args) {
-        return getDeliveryStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args) {
+        return getDeliveryStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(io.pulumi.awsnative.kinesisfirehose.inputs.GetDeliveryStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeliveryStreamResult> getDeliveryStream(GetDeliveryStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesisfirehose:getDeliveryStream", TypeShape.of(GetDeliveryStreamResult.class), args, Utilities.withVersion(options));
     }
 }

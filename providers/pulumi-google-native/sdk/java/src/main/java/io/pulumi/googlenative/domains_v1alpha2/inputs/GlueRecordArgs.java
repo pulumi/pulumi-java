@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipv4Addresses;
 
     public Output<List<String>> getIpv4Addresses() {
-        return this.ipv4Addresses == null ? Output.empty() : this.ipv4Addresses;
+        return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
+        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     public GlueRecordArgs(
@@ -62,9 +63,9 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlueRecordArgs() {
-        this.hostName = Output.empty();
-        this.ipv4Addresses = Output.empty();
-        this.ipv6Addresses = Output.empty();
+        this.hostName = Codegen.empty();
+        this.ipv4Addresses = Codegen.empty();
+        this.ipv6Addresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Output.ofNullable(ipv4Addresses);
+            this.ipv4Addresses = Codegen.ofNullable(ipv4Addresses);
             return this;
         }
         public Builder ipv4Addresses(String... ipv4Addresses) {
@@ -115,7 +116,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
             return this;
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {

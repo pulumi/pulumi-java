@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import io.pulumi.azurenative.documentdb.inputs.PermissionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> assignableScopes;
 
     public Output<List<String>> getAssignableScopes() {
-        return this.assignableScopes == null ? Output.empty() : this.assignableScopes;
+        return this.assignableScopes == null ? Codegen.empty() : this.assignableScopes;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
       private final @Nullable Output<List<PermissionArgs>> permissions;
 
     public Output<List<PermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
+        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
       private final @Nullable Output<RoleDefinitionType> type;
 
     public Output<RoleDefinitionType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SqlResourceSqlRoleDefinitionArgs(
@@ -112,13 +113,13 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
     }
 
     private SqlResourceSqlRoleDefinitionArgs() {
-        this.accountName = Output.empty();
-        this.assignableScopes = Output.empty();
-        this.permissions = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleDefinitionId = Output.empty();
-        this.roleName = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.assignableScopes = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder assignableScopes(@Nullable List<String> assignableScopes) {
-            this.assignableScopes = Output.ofNullable(assignableScopes);
+            this.assignableScopes = Codegen.ofNullable(assignableScopes);
             return this;
         }
         public Builder assignableScopes(String... assignableScopes) {
@@ -177,7 +178,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder permissions(@Nullable List<PermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(PermissionArgs... permissions) {
@@ -196,7 +197,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
             return this;
         }
         public Builder roleName(@Nullable Output<String> roleName) {
@@ -204,7 +205,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder type(@Nullable Output<RoleDefinitionType> type) {
@@ -212,7 +213,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder type(@Nullable RoleDefinitionType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SqlResourceSqlRoleDefinitionArgs build() {
             return new SqlResourceSqlRoleDefinitionArgs(accountName, assignableScopes, permissions, resourceGroupName, roleDefinitionId, roleName, type);

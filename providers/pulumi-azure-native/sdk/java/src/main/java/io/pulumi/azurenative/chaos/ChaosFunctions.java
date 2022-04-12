@@ -21,10 +21,10 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetCapabilityResult> getCapability(io.pulumi.azurenative.chaos.inputs.GetCapabilityArgs args) {
-        return getCapability(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args) {
+        return getCapability(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapabilityResult> getCapability(io.pulumi.azurenative.chaos.inputs.GetCapabilityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapabilityResult> getCapability(GetCapabilityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.azurenative.chaos.inputs.GetExperimentArgs args) {
-        return getExperiment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
+        return getExperiment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.azurenative.chaos.inputs.GetExperimentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class ChaosFunctions {
      * API Version: 2021-09-15-preview.
      * 
      */
-    public static CompletableFuture<GetTargetResult> getTarget(io.pulumi.azurenative.chaos.inputs.GetTargetArgs args) {
-        return getTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args) {
+        return getTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetResult> getTarget(io.pulumi.azurenative.chaos.inputs.GetTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getTarget", TypeShape.of(GetTargetResult.class), args, Utilities.withVersion(options));
     }
 }

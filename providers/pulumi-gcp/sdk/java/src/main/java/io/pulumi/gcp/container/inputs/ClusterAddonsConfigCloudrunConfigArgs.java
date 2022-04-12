@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
       private final @Nullable Output<String> loadBalancerType;
 
     public Output<String> getLoadBalancerType() {
-        return this.loadBalancerType == null ? Output.empty() : this.loadBalancerType;
+        return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
     }
 
     public ClusterAddonsConfigCloudrunConfigArgs(
@@ -47,8 +48,8 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
     }
 
     private ClusterAddonsConfigCloudrunConfigArgs() {
-        this.disabled = Output.empty();
-        this.loadBalancerType = Output.empty();
+        this.disabled = Codegen.empty();
+        this.loadBalancerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder loadBalancerType(@Nullable String loadBalancerType) {
-            this.loadBalancerType = Output.ofNullable(loadBalancerType);
+            this.loadBalancerType = Codegen.ofNullable(loadBalancerType);
             return this;
         }        public ClusterAddonsConfigCloudrunConfigArgs build() {
             return new ClusterAddonsConfigCloudrunConfigArgs(disabled, loadBalancerType);

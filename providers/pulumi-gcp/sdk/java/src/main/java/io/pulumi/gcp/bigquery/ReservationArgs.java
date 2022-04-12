@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ignoreIdleSlots;
 
     public Output<Boolean> getIgnoreIdleSlots() {
-        return this.ignoreIdleSlots == null ? Output.empty() : this.ignoreIdleSlots;
+        return this.ignoreIdleSlots == null ? Codegen.empty() : this.ignoreIdleSlots;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -90,11 +91,11 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReservationArgs() {
-        this.ignoreIdleSlots = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.slotCapacity = Output.empty();
+        this.ignoreIdleSlots = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.slotCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreIdleSlots(@Nullable Boolean ignoreIdleSlots) {
-            this.ignoreIdleSlots = Output.ofNullable(ignoreIdleSlots);
+            this.ignoreIdleSlots = Codegen.ofNullable(ignoreIdleSlots);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -138,7 +139,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -146,7 +147,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -154,7 +155,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder slotCapacity(Output<Integer> slotCapacity) {

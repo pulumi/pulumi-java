@@ -19,12 +19,12 @@ public final class AppengineFunctions {
      * 
      */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
-        return getDefaultServiceAccount(io.pulumi.gcp.appengine.inputs.GetDefaultServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.appengine.inputs.GetDefaultServiceAccountArgs args) {
-        return getDefaultServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
+        return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.appengine.inputs.GetDefaultServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:appengine/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

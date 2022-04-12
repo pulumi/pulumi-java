@@ -16,10 +16,10 @@ public final class Genomics_v1alpha2Functions {
      * Retrieves a pipeline based on ID. Caller must have READ permission to the project.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.googlenative.genomics_v1alpha2.inputs.GetPipelineArgs args) {
-        return getPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+        return getPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.googlenative.genomics_v1alpha2.inputs.GetPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:genomics/v1alpha2:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

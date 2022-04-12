@@ -21,10 +21,10 @@ public final class SolutionsFunctions {
      * API Version: 2019-07-01.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.solutions.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.solutions.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class SolutionsFunctions {
      * API Version: 2019-07-01.
      * 
      */
-    public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(io.pulumi.azurenative.solutions.inputs.GetApplicationDefinitionArgs args) {
-        return getApplicationDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(GetApplicationDefinitionArgs args) {
+        return getApplicationDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(io.pulumi.azurenative.solutions.inputs.GetApplicationDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationDefinitionResult> getApplicationDefinition(GetApplicationDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getApplicationDefinition", TypeShape.of(GetApplicationDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class SolutionsFunctions {
      * API Version: 2019-07-01.
      * 
      */
-    public static CompletableFuture<GetJitRequestResult> getJitRequest(io.pulumi.azurenative.solutions.inputs.GetJitRequestArgs args) {
-        return getJitRequest(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJitRequestResult> getJitRequest(GetJitRequestArgs args) {
+        return getJitRequest(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJitRequestResult> getJitRequest(io.pulumi.azurenative.solutions.inputs.GetJitRequestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJitRequestResult> getJitRequest(GetJitRequestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:solutions:getJitRequest", TypeShape.of(GetJitRequestResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -18,20 +18,20 @@ public final class Cloudsearch_v1Functions {
      * Gets a datasource. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.googlenative.cloudsearch_v1.inputs.GetDataSourceArgs args) {
-        return getDataSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+        return getDataSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.googlenative.cloudsearch_v1.inputs.GetDataSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified search application. **Note:** This API requires an admin account to execute.
      * 
      */
-    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(io.pulumi.googlenative.cloudsearch_v1.inputs.GetSearchApplicationArgs args) {
-        return getSearchApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args) {
+        return getSearchApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(io.pulumi.googlenative.cloudsearch_v1.inputs.GetSearchApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSearchApplicationResult> getSearchApplication(GetSearchApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

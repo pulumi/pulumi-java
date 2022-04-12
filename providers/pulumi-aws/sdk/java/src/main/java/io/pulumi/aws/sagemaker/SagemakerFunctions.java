@@ -20,10 +20,10 @@ public final class SagemakerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(io.pulumi.aws.sagemaker.inputs.GetPrebuiltEcrImageArgs args) {
-        return getPrebuiltEcrImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args) {
+        return getPrebuiltEcrImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(io.pulumi.aws.sagemaker.inputs.GetPrebuiltEcrImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sagemaker/getPrebuiltEcrImage:getPrebuiltEcrImage", TypeShape.of(GetPrebuiltEcrImageResult.class), args, Utilities.withVersion(options));
     }
 }

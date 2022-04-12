@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.SchedulingArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<OverheadArgs> overhead;
 
     public Output<OverheadArgs> getOverhead() {
-        return this.overhead == null ? Output.empty() : this.overhead;
+        return this.overhead == null ? Codegen.empty() : this.overhead;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SchedulingArgs> scheduling;
 
     public Output<SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Output.empty() : this.scheduling;
+        return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
     public RuntimeClassSpecArgs(
@@ -63,9 +64,9 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RuntimeClassSpecArgs() {
-        this.overhead = Output.empty();
-        this.runtimeHandler = Output.empty();
-        this.scheduling = Output.empty();
+        this.overhead = Codegen.empty();
+        this.runtimeHandler = Codegen.empty();
+        this.scheduling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder overhead(@Nullable OverheadArgs overhead) {
-            this.overhead = Output.ofNullable(overhead);
+            this.overhead = Codegen.ofNullable(overhead);
             return this;
         }
         public Builder runtimeHandler(Output<String> runtimeHandler) {
@@ -113,7 +114,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Output.ofNullable(scheduling);
+            this.scheduling = Codegen.ofNullable(scheduling);
             return this;
         }        public RuntimeClassSpecArgs build() {
             return new RuntimeClassSpecArgs(overhead, runtimeHandler, scheduling);

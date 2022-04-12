@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
     public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
-        return this.storedProcedureParameters == null ? Output.empty() : this.storedProcedureParameters;
+        return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public SqlServerStoredProcedureActivityArgs(
@@ -148,15 +149,15 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     }
 
     private SqlServerStoredProcedureActivityArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.storedProcedureName = Output.empty();
-        this.storedProcedureParameters = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.storedProcedureName = Codegen.empty();
+        this.storedProcedureParameters = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -211,7 +212,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -235,7 +236,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder storedProcedureName(Output<Object> storedProcedureName) {
@@ -251,7 +252,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
-            this.storedProcedureParameters = Output.ofNullable(storedProcedureParameters);
+            this.storedProcedureParameters = Codegen.ofNullable(storedProcedureParameters);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -267,7 +268,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VICredentialArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VICredentialArgs> credentials;
 
     public Output<VICredentialArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vcenterName;
 
     public Output<String> getVcenterName() {
-        return this.vcenterName == null ? Output.empty() : this.vcenterName;
+        return this.vcenterName == null ? Codegen.empty() : this.vcenterName;
     }
 
     public VCenterArgs(
@@ -139,15 +140,15 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VCenterArgs() {
-        this.credentials = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.fqdn = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.port = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vcenterName = Output.empty();
+        this.credentials = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.fqdn = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.port = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vcenterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable VICredentialArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
@@ -199,7 +200,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder fqdn(Output<String> fqdn) {
@@ -215,7 +216,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -223,7 +224,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -231,7 +232,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -247,7 +248,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vcenterName(@Nullable Output<String> vcenterName) {
@@ -255,7 +256,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vcenterName(@Nullable String vcenterName) {
-            this.vcenterName = Output.ofNullable(vcenterName);
+            this.vcenterName = Codegen.ofNullable(vcenterName);
             return this;
         }        public VCenterArgs build() {
             return new VCenterArgs(credentials, extendedLocation, fqdn, kind, location, port, resourceGroupName, tags, vcenterName);

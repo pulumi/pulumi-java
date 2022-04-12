@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.RegistryImageArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.RegistryImageState;
@@ -201,7 +202,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryImage(String name, @Nullable RegistryImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/registryImage:RegistryImage", name, args == null ? RegistryImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/registryImage:RegistryImage", name, args == null ? RegistryImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryImage(String name, Output<String> id, @Nullable RegistryImageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

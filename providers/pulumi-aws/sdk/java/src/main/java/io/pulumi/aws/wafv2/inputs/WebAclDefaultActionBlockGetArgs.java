@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockCustomResponseGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class WebAclDefaultActionBlockGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
 
     public Output<WebAclDefaultActionBlockCustomResponseGetArgs> getCustomResponse() {
-        return this.customResponse == null ? Output.empty() : this.customResponse;
+        return this.customResponse == null ? Codegen.empty() : this.customResponse;
     }
 
     public WebAclDefaultActionBlockGetArgs(@Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse) {
@@ -30,7 +31,7 @@ public final class WebAclDefaultActionBlockGetArgs extends io.pulumi.resources.R
     }
 
     private WebAclDefaultActionBlockGetArgs() {
-        this.customResponse = Output.empty();
+        this.customResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WebAclDefaultActionBlockGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customResponse(@Nullable WebAclDefaultActionBlockCustomResponseGetArgs customResponse) {
-            this.customResponse = Output.ofNullable(customResponse);
+            this.customResponse = Codegen.ofNullable(customResponse);
             return this;
         }        public WebAclDefaultActionBlockGetArgs build() {
             return new WebAclDefaultActionBlockGetArgs(customResponse);

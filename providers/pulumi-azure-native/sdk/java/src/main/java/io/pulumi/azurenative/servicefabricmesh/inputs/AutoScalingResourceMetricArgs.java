@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.enums.AutoScalingResourceMetricNa
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -50,8 +51,8 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
     }
 
     private AutoScalingResourceMetricArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

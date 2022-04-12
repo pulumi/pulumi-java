@@ -17,10 +17,10 @@ public final class VirtualmachineimagesFunctions {
      * API Version: 2020-02-14.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(io.pulumi.azurenative.virtualmachineimages.inputs.GetVirtualMachineImageTemplateArgs args) {
-        return getVirtualMachineImageTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args) {
+        return getVirtualMachineImageTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(io.pulumi.azurenative.virtualmachineimages.inputs.GetVirtualMachineImageTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:virtualmachineimages:getVirtualMachineImageTemplate", TypeShape.of(GetVirtualMachineImageTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

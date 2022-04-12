@@ -6,6 +6,7 @@ package io.pulumi.gcp.firestore;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firestore.DocumentArgs;
 import io.pulumi.gcp.firestore.inputs.DocumentState;
@@ -194,7 +195,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Document(String name, DocumentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firestore/document:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:firestore/document:Document", name, args == null ? DocumentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Document(String name, Output<String> id, @Nullable DocumentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.cloudfront.inputs.CachePolicyHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
       private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
     public Output<Boolean> getEnableAcceptEncodingBrotli() {
-        return this.enableAcceptEncodingBrotli == null ? Output.empty() : this.enableAcceptEncodingBrotli;
+        return this.enableAcceptEncodingBrotli == null ? Codegen.empty() : this.enableAcceptEncodingBrotli;
     }
 
     @Import(name="enableAcceptEncodingGzip", required=true)
@@ -66,11 +67,11 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginArgs() {
-        this.cookiesConfig = Output.empty();
-        this.enableAcceptEncodingBrotli = Output.empty();
-        this.enableAcceptEncodingGzip = Output.empty();
-        this.headersConfig = Output.empty();
-        this.queryStringsConfig = Output.empty();
+        this.cookiesConfig = Codegen.empty();
+        this.enableAcceptEncodingBrotli = Codegen.empty();
+        this.enableAcceptEncodingGzip = Codegen.empty();
+        this.headersConfig = Codegen.empty();
+        this.queryStringsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
             return this;
         }
         public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
-            this.enableAcceptEncodingBrotli = Output.ofNullable(enableAcceptEncodingBrotli);
+            this.enableAcceptEncodingBrotli = Codegen.ofNullable(enableAcceptEncodingBrotli);
             return this;
         }
         public Builder enableAcceptEncodingGzip(Output<Boolean> enableAcceptEncodingGzip) {

@@ -18,20 +18,20 @@ public final class Cloudresourcemanager_v2Functions {
      * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
      * 
      */
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.googlenative.cloudresourcemanager_v2.inputs.GetFolderArgs args) {
-        return getFolder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args) {
+        return getFolder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.googlenative.cloudresourcemanager_v2.inputs.GetFolderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v2:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder's resource name, e.g. "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
      * 
      */
-    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v2.inputs.GetFolderIamPolicyArgs args) {
-        return getFolderIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args) {
+        return getFolderIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v2.inputs.GetFolderIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v2:getFolderIamPolicy", TypeShape.of(GetFolderIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

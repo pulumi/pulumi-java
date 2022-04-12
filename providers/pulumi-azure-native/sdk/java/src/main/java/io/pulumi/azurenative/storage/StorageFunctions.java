@@ -55,10 +55,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerResult> getBlobContainer(io.pulumi.azurenative.storage.inputs.GetBlobContainerArgs args) {
-        return getBlobContainer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBlobContainerResult> getBlobContainer(GetBlobContainerArgs args) {
+        return getBlobContainer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBlobContainerResult> getBlobContainer(io.pulumi.azurenative.storage.inputs.GetBlobContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBlobContainerResult> getBlobContainer(GetBlobContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainer", TypeShape.of(GetBlobContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(io.pulumi.azurenative.storage.inputs.GetBlobContainerImmutabilityPolicyArgs args) {
-        return getBlobContainerImmutabilityPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(GetBlobContainerImmutabilityPolicyArgs args) {
+        return getBlobContainerImmutabilityPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(io.pulumi.azurenative.storage.inputs.GetBlobContainerImmutabilityPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> getBlobContainerImmutabilityPolicy(GetBlobContainerImmutabilityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainerImmutabilityPolicy", TypeShape.of(GetBlobContainerImmutabilityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,10 +77,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(io.pulumi.azurenative.storage.inputs.GetBlobInventoryPolicyArgs args) {
-        return getBlobInventoryPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(GetBlobInventoryPolicyArgs args) {
+        return getBlobInventoryPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(io.pulumi.azurenative.storage.inputs.GetBlobInventoryPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBlobInventoryPolicyResult> getBlobInventoryPolicy(GetBlobInventoryPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobInventoryPolicy", TypeShape.of(GetBlobInventoryPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(io.pulumi.azurenative.storage.inputs.GetBlobServicePropertiesArgs args) {
-        return getBlobServiceProperties(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(GetBlobServicePropertiesArgs args) {
+        return getBlobServiceProperties(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(io.pulumi.azurenative.storage.inputs.GetBlobServicePropertiesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBlobServicePropertiesResult> getBlobServiceProperties(GetBlobServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobServiceProperties", TypeShape.of(GetBlobServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(io.pulumi.azurenative.storage.inputs.GetEncryptionScopeArgs args) {
-        return getEncryptionScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args) {
+        return getEncryptionScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(io.pulumi.azurenative.storage.inputs.GetEncryptionScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEncryptionScopeResult> getEncryptionScope(GetEncryptionScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(io.pulumi.azurenative.storage.inputs.GetFileServicePropertiesArgs args) {
-        return getFileServiceProperties(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(GetFileServicePropertiesArgs args) {
+        return getFileServiceProperties(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(io.pulumi.azurenative.storage.inputs.GetFileServicePropertiesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileServicePropertiesResult> getFileServiceProperties(GetFileServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileServiceProperties", TypeShape.of(GetFileServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,10 +121,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetFileShareResult> getFileShare(io.pulumi.azurenative.storage.inputs.GetFileShareArgs args) {
-        return getFileShare(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileShareResult> getFileShare(GetFileShareArgs args) {
+        return getFileShare(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileShareResult> getFileShare(io.pulumi.azurenative.storage.inputs.GetFileShareArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileShareResult> getFileShare(GetFileShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileShare", TypeShape.of(GetFileShareResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,10 +132,10 @@ public final class StorageFunctions {
      * API Version: 2021-08-01.
      * 
      */
-    public static CompletableFuture<GetLocalUserResult> getLocalUser(io.pulumi.azurenative.storage.inputs.GetLocalUserArgs args) {
-        return getLocalUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalUserResult> getLocalUser(GetLocalUserArgs args) {
+        return getLocalUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalUserResult> getLocalUser(io.pulumi.azurenative.storage.inputs.GetLocalUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalUserResult> getLocalUser(GetLocalUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getLocalUser", TypeShape.of(GetLocalUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,10 +143,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(io.pulumi.azurenative.storage.inputs.GetManagementPolicyArgs args) {
-        return getManagementPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(GetManagementPolicyArgs args) {
+        return getManagementPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(io.pulumi.azurenative.storage.inputs.GetManagementPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementPolicyResult> getManagementPolicy(GetManagementPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getManagementPolicy", TypeShape.of(GetManagementPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,10 +154,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(io.pulumi.azurenative.storage.inputs.GetObjectReplicationPolicyArgs args) {
-        return getObjectReplicationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(GetObjectReplicationPolicyArgs args) {
+        return getObjectReplicationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(io.pulumi.azurenative.storage.inputs.GetObjectReplicationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetObjectReplicationPolicyResult> getObjectReplicationPolicy(GetObjectReplicationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getObjectReplicationPolicy", TypeShape.of(GetObjectReplicationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,20 +165,20 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.storage.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.storage.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.azurenative.storage.inputs.GetQueueArgs args) {
-        return getQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.azurenative.storage.inputs.GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -186,10 +186,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(io.pulumi.azurenative.storage.inputs.GetQueueServicePropertiesArgs args) {
-        return getQueueServiceProperties(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(GetQueueServicePropertiesArgs args) {
+        return getQueueServiceProperties(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(io.pulumi.azurenative.storage.inputs.GetQueueServicePropertiesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueServicePropertiesResult> getQueueServiceProperties(GetQueueServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueueServiceProperties", TypeShape.of(GetQueueServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -197,10 +197,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(io.pulumi.azurenative.storage.inputs.GetStorageAccountArgs args) {
-        return getStorageAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args) {
+        return getStorageAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(io.pulumi.azurenative.storage.inputs.GetStorageAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -208,10 +208,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.azurenative.storage.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.azurenative.storage.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -219,10 +219,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(io.pulumi.azurenative.storage.inputs.GetTableServicePropertiesArgs args) {
-        return getTableServiceProperties(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(GetTableServicePropertiesArgs args) {
+        return getTableServiceProperties(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(io.pulumi.azurenative.storage.inputs.GetTableServicePropertiesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableServicePropertiesResult> getTableServiceProperties(GetTableServicePropertiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTableServiceProperties", TypeShape.of(GetTableServicePropertiesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -230,10 +230,10 @@ public final class StorageFunctions {
      * API Version: 2021-08-01.
      * 
      */
-    public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(io.pulumi.azurenative.storage.inputs.ListLocalUserKeysArgs args) {
-        return listLocalUserKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(ListLocalUserKeysArgs args) {
+        return listLocalUserKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(io.pulumi.azurenative.storage.inputs.ListLocalUserKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListLocalUserKeysResult> listLocalUserKeys(ListLocalUserKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listLocalUserKeys", TypeShape.of(ListLocalUserKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -241,10 +241,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(io.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs args) {
-        return listStorageAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args) {
+        return listStorageAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(io.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStorageAccountKeysResult> listStorageAccountKeys(ListStorageAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -252,10 +252,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(io.pulumi.azurenative.storage.inputs.ListStorageAccountSASArgs args) {
-        return listStorageAccountSAS(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(ListStorageAccountSASArgs args) {
+        return listStorageAccountSAS(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(io.pulumi.azurenative.storage.inputs.ListStorageAccountSASArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStorageAccountSASResult> listStorageAccountSAS(ListStorageAccountSASArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountSAS", TypeShape.of(ListStorageAccountSASResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -263,10 +263,10 @@ public final class StorageFunctions {
      * API Version: 2021-02-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(io.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs args) {
-        return listStorageAccountServiceSAS(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(ListStorageAccountServiceSASArgs args) {
+        return listStorageAccountServiceSAS(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(io.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStorageAccountServiceSASResult> listStorageAccountServiceSAS(ListStorageAccountServiceSASArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountServiceSAS", TypeShape.of(ListStorageAccountServiceSASResult.class), args, Utilities.withVersion(options));
     }
 }

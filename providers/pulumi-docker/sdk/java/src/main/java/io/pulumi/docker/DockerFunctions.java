@@ -48,10 +48,10 @@ public final class DockerFunctions {
      * - **subnet** (String)
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.docker.inputs.GetNetworkArgs args) {
-        return getNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+        return getNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.docker.inputs.GetNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,12 +80,12 @@ public final class DockerFunctions {
      * 
      */
     public static CompletableFuture<GetPluginResult> getPlugin() {
-        return getPlugin(io.pulumi.docker.inputs.GetPluginArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPlugin(GetPluginArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPluginResult> getPlugin(io.pulumi.docker.inputs.GetPluginArgs args) {
-        return getPlugin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPluginResult> getPlugin(GetPluginArgs args) {
+        return getPlugin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPluginResult> getPlugin(io.pulumi.docker.inputs.GetPluginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPluginResult> getPlugin(GetPluginArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getPlugin:getPlugin", TypeShape.of(GetPluginResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,10 +108,10 @@ public final class DockerFunctions {
      * - **sha256_digest** (String) The content digest of the image, as stored in the registry.
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(io.pulumi.docker.inputs.GetRegistryImageArgs args) {
-        return getRegistryImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
+        return getRegistryImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(io.pulumi.docker.inputs.GetRegistryImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,10 +133,10 @@ public final class DockerFunctions {
      * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`. It may be empty in the edge case where the local image was pulled from a repo, tagged locally, and then referred to in the data source by that local name/tag.
      * 
      */
-    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(io.pulumi.docker.inputs.GetRemoteImageArgs args) {
-        return getRemoteImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args) {
+        return getRemoteImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(io.pulumi.docker.inputs.GetRemoteImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRemoteImageResult> getRemoteImage(GetRemoteImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getRemoteImage:getRemoteImage", TypeShape.of(GetRemoteImageResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -24,6 +24,7 @@ import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -59,7 +60,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> enableLogging;
 
     public Output<Object> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
     public Output<LogStorageSettingsArgs> getLogStorageSettings() {
-        return this.logStorageSettings == null ? Output.empty() : this.logStorageSettings;
+        return this.logStorageSettings == null ? Codegen.empty() : this.logStorageSettings;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxConcurrentConnections;
 
     public Output<Integer> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> recursive;
 
     public Output<Object> getRecursive() {
-        return this.recursive == null ? Output.empty() : this.recursive;
+        return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> storeSettings;
 
     public Output<Object> getStoreSettings() {
-        return this.storeSettings == null ? Output.empty() : this.storeSettings;
+        return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public DeleteActivityArgs(
@@ -214,19 +215,19 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeleteActivityArgs() {
-        this.dataset = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.enableLogging = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.logStorageSettings = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.recursive = Output.empty();
-        this.storeSettings = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.dataset = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableLogging = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.logStorageSettings = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.recursive = Codegen.empty();
+        this.storeSettings = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -286,7 +287,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -297,7 +298,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableLogging(@Nullable Output<Object> enableLogging) {
@@ -305,7 +306,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableLogging(@Nullable Object enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -313,7 +314,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
@@ -321,7 +322,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
-            this.logStorageSettings = Output.ofNullable(logStorageSettings);
+            this.logStorageSettings = Codegen.ofNullable(logStorageSettings);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Integer> maxConcurrentConnections) {
@@ -329,7 +330,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -345,7 +346,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder recursive(@Nullable Output<Object> recursive) {
@@ -353,7 +354,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Output.ofNullable(recursive);
+            this.recursive = Codegen.ofNullable(recursive);
             return this;
         }
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
@@ -361,7 +362,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Output.ofNullable(storeSettings);
+            this.storeSettings = Codegen.ofNullable(storeSettings);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -377,7 +378,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

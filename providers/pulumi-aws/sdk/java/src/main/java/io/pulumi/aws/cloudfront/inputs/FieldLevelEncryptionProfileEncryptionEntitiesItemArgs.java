@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -57,9 +58,9 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
     }
 
     private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs() {
-        this.fieldPatterns = Output.empty();
-        this.providerId = Output.empty();
-        this.publicKeyId = Output.empty();
+        this.fieldPatterns = Codegen.empty();
+        this.providerId = Codegen.empty();
+        this.publicKeyId = Codegen.empty();
     }
 
     public static Builder builder() {

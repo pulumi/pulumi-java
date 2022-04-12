@@ -18,20 +18,20 @@ public final class AppflowFunctions {
      * Resource Type definition for AWS::AppFlow::ConnectorProfile
      * 
      */
-    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfile(io.pulumi.awsnative.appflow.inputs.GetConnectorProfileArgs args) {
-        return getConnectorProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfile(GetConnectorProfileArgs args) {
+        return getConnectorProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfile(io.pulumi.awsnative.appflow.inputs.GetConnectorProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfile(GetConnectorProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appflow:getConnectorProfile", TypeShape.of(GetConnectorProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::AppFlow::Flow.
      * 
      */
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.awsnative.appflow.inputs.GetFlowArgs args) {
-        return getFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args) {
+        return getFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.awsnative.appflow.inputs.GetFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appflow:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
 }

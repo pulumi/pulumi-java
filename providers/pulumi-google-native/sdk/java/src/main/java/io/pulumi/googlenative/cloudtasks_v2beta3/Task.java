@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtasks_v2beta3.TaskArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AppEngineHttpRequestResponse;
@@ -213,7 +214,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Task(String name, TaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudtasks/v2beta3:Task", name, args == null ? TaskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudtasks/v2beta3:Task", name, args == null ? TaskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Task(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

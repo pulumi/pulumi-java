@@ -6,6 +6,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreKmsEncryptionConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     }
 
     private FHIRDatastoreSseConfigurationArgs() {
-        this.kmsEncryptionConfig = Output.empty();
+        this.kmsEncryptionConfig = Codegen.empty();
     }
 
     public static Builder builder() {

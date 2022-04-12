@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigCookiesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OriginRequestPolicyCookiesConfigGetArgs extends io.pulumi.res
       private final @Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies;
 
     public Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     public OriginRequestPolicyCookiesConfigGetArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyCookiesConfigGetArgs extends io.pulumi.res
     }
 
     private OriginRequestPolicyCookiesConfigGetArgs() {
-        this.cookieBehavior = Output.empty();
-        this.cookies = Output.empty();
+        this.cookieBehavior = Codegen.empty();
+        this.cookies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyCookiesConfigGetArgs extends io.pulumi.res
             return this;
         }
         public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookiesGetArgs cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }        public OriginRequestPolicyCookiesConfigGetArgs build() {
             return new OriginRequestPolicyCookiesConfigGetArgs(cookieBehavior, cookies);

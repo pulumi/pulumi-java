@@ -25,10 +25,10 @@ public final class AppconfigurationFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(io.pulumi.azurenative.appconfiguration.inputs.GetConfigurationStoreArgs args) {
-        return getConfigurationStore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args) {
+        return getConfigurationStore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(io.pulumi.azurenative.appconfiguration.inputs.GetConfigurationStoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationStoreResult> getConfigurationStore(GetConfigurationStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class AppconfigurationFunctions {
      * API Version: 2020-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetKeyValueResult> getKeyValue(io.pulumi.azurenative.appconfiguration.inputs.GetKeyValueArgs args) {
-        return getKeyValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyValueResult> getKeyValue(GetKeyValueArgs args) {
+        return getKeyValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyValueResult> getKeyValue(io.pulumi.azurenative.appconfiguration.inputs.GetKeyValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyValueResult> getKeyValue(GetKeyValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getKeyValue", TypeShape.of(GetKeyValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class AppconfigurationFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.appconfiguration.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.appconfiguration.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class AppconfigurationFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeyValueArgs args) {
-        return listConfigurationStoreKeyValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(ListConfigurationStoreKeyValueArgs args) {
+        return listConfigurationStoreKeyValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeyValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConfigurationStoreKeyValueResult> listConfigurationStoreKeyValue(ListConfigurationStoreKeyValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeyValue", TypeShape.of(ListConfigurationStoreKeyValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class AppconfigurationFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeysArgs args) {
-        return listConfigurationStoreKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(ListConfigurationStoreKeysArgs args) {
+        return listConfigurationStoreKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(io.pulumi.azurenative.appconfiguration.inputs.ListConfigurationStoreKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConfigurationStoreKeysResult> listConfigurationStoreKeys(ListConfigurationStoreKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeys", TypeShape.of(ListConfigurationStoreKeysResult.class), args, Utilities.withVersion(options));
     }
 }

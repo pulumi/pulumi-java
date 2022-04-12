@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCompression;
 
     public Output<Boolean> getIsCompression() {
-        return this.isCompression == null ? Output.empty() : this.isCompression;
+        return this.isCompression == null ? Codegen.empty() : this.isCompression;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> issqlcompression;
 
     public Output<Boolean> getIssqlcompression() {
-        return this.issqlcompression == null ? Output.empty() : this.issqlcompression;
+        return this.issqlcompression == null ? Codegen.empty() : this.issqlcompression;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public SettingsArgs(
@@ -63,9 +64,9 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SettingsArgs() {
-        this.isCompression = Output.empty();
-        this.issqlcompression = Output.empty();
-        this.timeZone = Output.empty();
+        this.isCompression = Codegen.empty();
+        this.issqlcompression = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCompression(@Nullable Boolean isCompression) {
-            this.isCompression = Output.ofNullable(isCompression);
+            this.isCompression = Codegen.ofNullable(isCompression);
             return this;
         }
         public Builder issqlcompression(@Nullable Output<Boolean> issqlcompression) {
@@ -105,7 +106,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issqlcompression(@Nullable Boolean issqlcompression) {
-            this.issqlcompression = Output.ofNullable(issqlcompression);
+            this.issqlcompression = Codegen.ofNullable(issqlcompression);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -113,7 +114,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public SettingsArgs build() {
             return new SettingsArgs(isCompression, issqlcompression, timeZone);

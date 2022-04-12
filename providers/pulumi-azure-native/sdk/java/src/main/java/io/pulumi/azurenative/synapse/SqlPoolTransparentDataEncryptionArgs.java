@@ -7,6 +7,7 @@ import io.pulumi.azurenative.synapse.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
     public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
       private final @Nullable Output<String> transparentDataEncryptionName;
 
     public Output<String> getTransparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Output.empty() : this.transparentDataEncryptionName;
+        return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
     }
 
     private SqlPoolTransparentDataEncryptionArgs() {
-        this.resourceGroupName = Output.empty();
-        this.sqlPoolName = Output.empty();
-        this.status = Output.empty();
-        this.transparentDataEncryptionName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlPoolName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.transparentDataEncryptionName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
             return this;
         }
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
@@ -149,7 +150,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
             return this;
         }
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
+            this.transparentDataEncryptionName = Codegen.ofNullable(transparentDataEncryptionName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

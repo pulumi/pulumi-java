@@ -25,10 +25,10 @@ public final class EcsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.ecs.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.ecs.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class EcsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(io.pulumi.aws.ecs.inputs.GetContainerDefinitionArgs args) {
-        return getContainerDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args) {
+        return getContainerDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(io.pulumi.aws.ecs.inputs.GetContainerDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getContainerDefinition:getContainerDefinition", TypeShape.of(GetContainerDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class EcsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.aws.ecs.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.aws.ecs.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class EcsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.aws.ecs.inputs.GetTaskDefinitionArgs args) {
-        return getTaskDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {
+        return getTaskDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(io.pulumi.aws.ecs.inputs.GetTaskDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getTaskDefinition:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

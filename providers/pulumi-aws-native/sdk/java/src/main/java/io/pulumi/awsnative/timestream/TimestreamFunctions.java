@@ -20,30 +20,30 @@ public final class TimestreamFunctions {
      * The AWS::Timestream::Database resource creates a Timestream database.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.awsnative.timestream.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.awsnative.timestream.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
      * 
      */
-    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(io.pulumi.awsnative.timestream.inputs.GetScheduledQueryArgs args) {
-        return getScheduledQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args) {
+        return getScheduledQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(io.pulumi.awsnative.timestream.inputs.GetScheduledQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Timestream::Table resource creates a Timestream Table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.awsnative.timestream.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.awsnative.timestream.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

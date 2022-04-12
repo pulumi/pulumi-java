@@ -16,10 +16,10 @@ public final class OpenenergyplatformFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(io.pulumi.azurenative.openenergyplatform.inputs.GetEnergyServiceArgs args) {
-        return getEnergyService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args) {
+        return getEnergyService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(io.pulumi.azurenative.openenergyplatform.inputs.GetEnergyServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:openenergyplatform:getEnergyService", TypeShape.of(GetEnergyServiceResult.class), args, Utilities.withVersion(options));
     }
 }

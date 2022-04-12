@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkteamNotificationConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
+        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 
     public WorkteamNotificationConfigurationGetArgs(@Nullable Output<String> notificationTopicArn) {
@@ -30,7 +31,7 @@ public final class WorkteamNotificationConfigurationGetArgs extends io.pulumi.re
     }
 
     private WorkteamNotificationConfigurationGetArgs() {
-        this.notificationTopicArn = Output.empty();
+        this.notificationTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkteamNotificationConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
             return this;
         }        public WorkteamNotificationConfigurationGetArgs build() {
             return new WorkteamNotificationConfigurationGetArgs(notificationTopicArn);

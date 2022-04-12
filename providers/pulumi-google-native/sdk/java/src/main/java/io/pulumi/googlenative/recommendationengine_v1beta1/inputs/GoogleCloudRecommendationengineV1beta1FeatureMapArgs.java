@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
       private final @Nullable Output<Map<String,String>> categoricalFeatures;
 
     public Output<Map<String,String>> getCategoricalFeatures() {
-        return this.categoricalFeatures == null ? Output.empty() : this.categoricalFeatures;
+        return this.categoricalFeatures == null ? Codegen.empty() : this.categoricalFeatures;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
       private final @Nullable Output<Map<String,String>> numericalFeatures;
 
     public Output<Map<String,String>> getNumericalFeatures() {
-        return this.numericalFeatures == null ? Output.empty() : this.numericalFeatures;
+        return this.numericalFeatures == null ? Codegen.empty() : this.numericalFeatures;
     }
 
     public GoogleCloudRecommendationengineV1beta1FeatureMapArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     }
 
     private GoogleCloudRecommendationengineV1beta1FeatureMapArgs() {
-        this.categoricalFeatures = Output.empty();
-        this.numericalFeatures = Output.empty();
+        this.categoricalFeatures = Codegen.empty();
+        this.numericalFeatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
             return this;
         }
         public Builder categoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
-            this.categoricalFeatures = Output.ofNullable(categoricalFeatures);
+            this.categoricalFeatures = Codegen.ofNullable(categoricalFeatures);
             return this;
         }
         public Builder numericalFeatures(@Nullable Output<Map<String,String>> numericalFeatures) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
             return this;
         }
         public Builder numericalFeatures(@Nullable Map<String,String> numericalFeatures) {
-            this.numericalFeatures = Output.ofNullable(numericalFeatures);
+            this.numericalFeatures = Codegen.ofNullable(numericalFeatures);
             return this;
         }        public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(categoricalFeatures, numericalFeatures);

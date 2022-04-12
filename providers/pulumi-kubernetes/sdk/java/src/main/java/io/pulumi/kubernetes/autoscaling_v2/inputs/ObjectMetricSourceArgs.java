@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricTargetArgs;
@@ -62,9 +63,9 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ObjectMetricSourceArgs() {
-        this.describedObject = Output.empty();
-        this.metric = Output.empty();
-        this.target = Output.empty();
+        this.describedObject = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

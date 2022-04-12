@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataloss;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateState;
@@ -142,7 +143,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public PreventionDeidentifyTemplate(String name, PreventionDeidentifyTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate", name, args == null ? PreventionDeidentifyTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate", name, args == null ? PreventionDeidentifyTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PreventionDeidentifyTemplate(String name, Output<String> id, @Nullable PreventionDeidentifyTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

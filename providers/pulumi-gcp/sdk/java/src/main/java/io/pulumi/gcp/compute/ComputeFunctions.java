@@ -77,10 +77,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAddressResult> getAddress(io.pulumi.gcp.compute.inputs.GetAddressArgs args) {
-        return getAddress(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args) {
+        return getAddress(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddressResult> getAddress(io.pulumi.gcp.compute.inputs.GetAddressArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getAddress:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,10 +89,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(io.pulumi.gcp.compute.inputs.GetBackendBucketArgs args) {
-        return getBackendBucket(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args) {
+        return getBackendBucket(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(io.pulumi.gcp.compute.inputs.GetBackendBucketArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendBucket:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,10 +101,10 @@ public final class ComputeFunctions {
      * and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
      * 
      */
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(io.pulumi.gcp.compute.inputs.GetBackendServiceArgs args) {
-        return getBackendService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args) {
+        return getBackendService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(io.pulumi.gcp.compute.inputs.GetBackendServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getBackendService:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -113,10 +113,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.gcp.compute.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.gcp.compute.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -126,12 +126,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {
-        return getDefaultServiceAccount(io.pulumi.gcp.compute.inputs.GetDefaultServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDefaultServiceAccount(GetDefaultServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.compute.inputs.GetDefaultServiceAccountArgs args) {
-        return getDefaultServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args) {
+        return getDefaultServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(io.pulumi.gcp.compute.inputs.GetDefaultServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount(GetDefaultServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,10 +140,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(io.pulumi.gcp.compute.inputs.GetForwardingRuleArgs args) {
-        return getForwardingRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args) {
+        return getForwardingRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(io.pulumi.gcp.compute.inputs.GetForwardingRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getForwardingRule:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -153,10 +153,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(io.pulumi.gcp.compute.inputs.GetGlobalAddressArgs args) {
-        return getGlobalAddress(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args) {
+        return getGlobalAddress(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(io.pulumi.gcp.compute.inputs.GetGlobalAddressArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalAddress:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,10 +165,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(io.pulumi.gcp.compute.inputs.GetGlobalForwardingRuleArgs args) {
-        return getGlobalForwardingRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args) {
+        return getGlobalForwardingRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(io.pulumi.gcp.compute.inputs.GetGlobalForwardingRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -177,10 +177,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(io.pulumi.gcp.compute.inputs.GetHcVpnGatewayArgs args) {
-        return getHcVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args) {
+        return getHcVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(io.pulumi.gcp.compute.inputs.GetHcVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHcVpnGatewayResult> getHcVpnGateway(GetHcVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getHcVpnGateway:getHcVpnGateway", TypeShape.of(GetHcVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,10 +189,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.gcp.compute.inputs.GetHealthCheckArgs args) {
-        return getHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
+        return getHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.gcp.compute.inputs.GetHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getHealthCheck:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -203,12 +203,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetImageResult> getImage() {
-        return getImage(io.pulumi.gcp.compute.inputs.GetImageArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getImage(GetImageArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.gcp.compute.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.gcp.compute.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -221,12 +221,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetInstanceResult> getInstance() {
-        return getInstance(io.pulumi.gcp.compute.inputs.GetInstanceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.gcp.compute.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.gcp.compute.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -236,12 +236,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup() {
-        return getInstanceGroup(io.pulumi.gcp.compute.inputs.GetInstanceGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstanceGroup(GetInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(io.pulumi.gcp.compute.inputs.GetInstanceGroupArgs args) {
-        return getInstanceGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args) {
+        return getInstanceGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(io.pulumi.gcp.compute.inputs.GetInstanceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceGroup:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -251,10 +251,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(io.pulumi.gcp.compute.inputs.GetInstanceSerialPortArgs args) {
-        return getInstanceSerialPort(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args) {
+        return getInstanceSerialPort(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(io.pulumi.gcp.compute.inputs.GetInstanceSerialPortArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceSerialPortResult> getInstanceSerialPort(GetInstanceSerialPortArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceSerialPort:getInstanceSerialPort", TypeShape.of(GetInstanceSerialPortResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -266,10 +266,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(io.pulumi.gcp.compute.inputs.GetInstanceTemplateArgs args) {
-        return getInstanceTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
+        return getInstanceTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(io.pulumi.gcp.compute.inputs.GetInstanceTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceTemplate:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -281,12 +281,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges() {
-        return getLBIPRanges(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLBIPRanges(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(io.pulumi.resources.InvokeArgs args) {
-        return getLBIPRanges(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args) {
+        return getLBIPRanges(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLBIPRangesResult> getLBIPRanges(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getLBIPRanges:getLBIPRanges", TypeShape.of(GetLBIPRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -296,12 +296,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges() {
-        return getNetblockIPRanges(io.pulumi.gcp.compute.inputs.GetNetblockIPRangesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNetblockIPRanges(GetNetblockIPRangesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(io.pulumi.gcp.compute.inputs.GetNetblockIPRangesArgs args) {
-        return getNetblockIPRanges(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args) {
+        return getNetblockIPRanges(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(io.pulumi.gcp.compute.inputs.GetNetblockIPRangesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetblockIPRangesResult> getNetblockIPRanges(GetNetblockIPRangesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -310,10 +310,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.gcp.compute.inputs.GetNetworkArgs args) {
-        return getNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+        return getNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.gcp.compute.inputs.GetNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -325,12 +325,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup() {
-        return getNetworkEndpointGroup(io.pulumi.gcp.compute.inputs.GetNetworkEndpointGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNetworkEndpointGroup(GetNetworkEndpointGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(io.pulumi.gcp.compute.inputs.GetNetworkEndpointGroupArgs args) {
-        return getNetworkEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args) {
+        return getNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(io.pulumi.gcp.compute.inputs.GetNetworkEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetworkEndpointGroup:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -341,12 +341,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetNodeTypesResult> getNodeTypes() {
-        return getNodeTypes(io.pulumi.gcp.compute.inputs.GetNodeTypesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getNodeTypes(GetNodeTypesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(io.pulumi.gcp.compute.inputs.GetNodeTypesArgs args) {
-        return getNodeTypes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args) {
+        return getNodeTypes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(io.pulumi.gcp.compute.inputs.GetNodeTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeTypesResult> getNodeTypes(GetNodeTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNodeTypes:getNodeTypes", TypeShape.of(GetNodeTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -357,12 +357,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup() {
-        return getRegionInstanceGroup(io.pulumi.gcp.compute.inputs.GetRegionInstanceGroupArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRegionInstanceGroup(GetRegionInstanceGroupArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(io.pulumi.gcp.compute.inputs.GetRegionInstanceGroupArgs args) {
-        return getRegionInstanceGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args) {
+        return getRegionInstanceGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(io.pulumi.gcp.compute.inputs.GetRegionInstanceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionInstanceGroupResult> getRegionInstanceGroup(GetRegionInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegionInstanceGroup:getRegionInstanceGroup", TypeShape.of(GetRegionInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -371,10 +371,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(io.pulumi.gcp.compute.inputs.GetRegionSslCertificateArgs args) {
-        return getRegionSslCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args) {
+        return getRegionSslCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(io.pulumi.gcp.compute.inputs.GetRegionSslCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegionSslCertificate:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -383,22 +383,22 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetRegionsResult> getRegions() {
-        return getRegions(io.pulumi.gcp.compute.inputs.GetRegionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionsResult> getRegions(io.pulumi.gcp.compute.inputs.GetRegionsArgs args) {
-        return getRegions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
+        return getRegions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionsResult> getRegions(io.pulumi.gcp.compute.inputs.GetRegionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.gcp.compute.inputs.GetResourcePolicyArgs args) {
-        return getResourcePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
+        return getResourcePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.gcp.compute.inputs.GetResourcePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getResourcePolicy:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -407,10 +407,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRouterResult> getRouter(io.pulumi.gcp.compute.inputs.GetRouterArgs args) {
-        return getRouter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args) {
+        return getRouter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouterResult> getRouter(io.pulumi.gcp.compute.inputs.GetRouterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRouter:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -420,10 +420,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(io.pulumi.gcp.compute.inputs.GetSSLPolicyArgs args) {
-        return getSSLPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args) {
+        return getSSLPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(io.pulumi.gcp.compute.inputs.GetSSLPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSSLPolicyResult> getSSLPolicy(GetSSLPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSSLPolicy:getSSLPolicy", TypeShape.of(GetSSLPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -433,12 +433,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetSubnetworkResult> getSubnetwork() {
-        return getSubnetwork(io.pulumi.gcp.compute.inputs.GetSubnetworkArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSubnetwork(GetSubnetworkArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(io.pulumi.gcp.compute.inputs.GetSubnetworkArgs args) {
-        return getSubnetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args) {
+        return getSubnetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(io.pulumi.gcp.compute.inputs.GetSubnetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSubnetwork:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -447,10 +447,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(io.pulumi.gcp.compute.inputs.GetVPNGatewayArgs args) {
-        return getVPNGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args) {
+        return getVPNGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(io.pulumi.gcp.compute.inputs.GetVPNGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVPNGatewayResult> getVPNGateway(GetVPNGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getVPNGateway:getVPNGateway", TypeShape.of(GetVPNGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -459,12 +459,12 @@ public final class ComputeFunctions {
      * 
      */
     public static CompletableFuture<GetZonesResult> getZones() {
-        return getZones(io.pulumi.gcp.compute.inputs.GetZonesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getZones(GetZonesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetZonesResult> getZones(io.pulumi.gcp.compute.inputs.GetZonesArgs args) {
-        return getZones(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args) {
+        return getZones(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetZonesResult> getZones(io.pulumi.gcp.compute.inputs.GetZonesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -478,10 +478,10 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<RouterStatusResult> routerStatus(io.pulumi.gcp.compute.inputs.RouterStatusArgs args) {
-        return routerStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args) {
+        return routerStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<RouterStatusResult> routerStatus(io.pulumi.gcp.compute.inputs.RouterStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<RouterStatusResult> routerStatus(RouterStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
+        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
     public ResponsePlanNotificationTargetItemArgs(@Nullable Output<String> snsTopicArn) {
@@ -30,7 +31,7 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
     }
 
     private ResponsePlanNotificationTargetItemArgs() {
-        this.snsTopicArn = Output.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
             return this;
         }
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Output.ofNullable(snsTopicArn);
+            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
             return this;
         }        public ResponsePlanNotificationTargetItemArgs build() {
             return new ResponsePlanNotificationTargetItemArgs(snsTopicArn);

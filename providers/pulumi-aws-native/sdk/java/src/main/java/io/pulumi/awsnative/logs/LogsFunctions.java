@@ -20,30 +20,30 @@ public final class LogsFunctions {
      * Resource schema for AWS::Logs::LogGroup
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(io.pulumi.awsnative.logs.inputs.GetLogGroupArgs args) {
-        return getLogGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
+        return getLogGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(io.pulumi.awsnative.logs.inputs.GetLogGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema for AWSLogs QueryDefinition
      * 
      */
-    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinition(io.pulumi.awsnative.logs.inputs.GetQueryDefinitionArgs args) {
-        return getQueryDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinition(GetQueryDefinitionArgs args) {
+        return getQueryDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinition(io.pulumi.awsnative.logs.inputs.GetQueryDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinition(GetQueryDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getQueryDefinition", TypeShape.of(GetQueryDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema for AWSLogs ResourcePolicy
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.awsnative.logs.inputs.GetResourcePolicyArgs args) {
-        return getResourcePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
+        return getResourcePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.awsnative.logs.inputs.GetResourcePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
 }

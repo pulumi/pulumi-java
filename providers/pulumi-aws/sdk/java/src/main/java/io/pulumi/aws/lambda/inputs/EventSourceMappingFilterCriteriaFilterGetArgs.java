@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EventSourceMappingFilterCriteriaFilterGetArgs extends io.pulu
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     public EventSourceMappingFilterCriteriaFilterGetArgs(@Nullable Output<String> pattern) {
@@ -30,7 +31,7 @@ public final class EventSourceMappingFilterCriteriaFilterGetArgs extends io.pulu
     }
 
     private EventSourceMappingFilterCriteriaFilterGetArgs() {
-        this.pattern = Output.empty();
+        this.pattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EventSourceMappingFilterCriteriaFilterGetArgs extends io.pulu
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }        public EventSourceMappingFilterCriteriaFilterGetArgs build() {
             return new EventSourceMappingFilterCriteriaFilterGetArgs(pattern);

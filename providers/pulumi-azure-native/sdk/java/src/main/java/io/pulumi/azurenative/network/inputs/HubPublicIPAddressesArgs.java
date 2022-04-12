@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallPublicIPAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
     public Output<List<AzureFirewallPublicIPAddressArgs>> getAddresses() {
-        return this.addresses == null ? Output.empty() : this.addresses;
+        return this.addresses == null ? Codegen.empty() : this.addresses;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public HubPublicIPAddressesArgs(
@@ -50,8 +51,8 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
     }
 
     private HubPublicIPAddressesArgs() {
-        this.addresses = Output.empty();
-        this.count = Output.empty();
+        this.addresses = Codegen.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
-            this.addresses = Output.ofNullable(addresses);
+            this.addresses = Codegen.ofNullable(addresses);
             return this;
         }
         public Builder addresses(AzureFirewallPublicIPAddressArgs... addresses) {
@@ -92,7 +93,7 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public HubPublicIPAddressesArgs build() {
             return new HubPublicIPAddressesArgs(addresses, count);

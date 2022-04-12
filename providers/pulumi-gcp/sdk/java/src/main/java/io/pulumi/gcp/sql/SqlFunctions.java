@@ -22,10 +22,10 @@ public final class SqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(io.pulumi.gcp.sql.inputs.GetBackupRunArgs args) {
-        return getBackupRun(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
+        return getBackupRun(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(io.pulumi.gcp.sql.inputs.GetBackupRunArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getBackupRun:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,10 +35,10 @@ public final class SqlFunctions {
      * [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
      * 
      */
-    public static CompletableFuture<GetCaCertsResult> getCaCerts(io.pulumi.gcp.sql.inputs.GetCaCertsArgs args) {
-        return getCaCerts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCaCertsResult> getCaCerts(GetCaCertsArgs args) {
+        return getCaCerts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCaCertsResult> getCaCerts(io.pulumi.gcp.sql.inputs.GetCaCertsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCaCertsResult> getCaCerts(GetCaCertsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getCaCerts:getCaCerts", TypeShape.of(GetCaCertsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class SqlFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(io.pulumi.gcp.sql.inputs.GetDatabaseInstanceArgs args) {
-        return getDatabaseInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args) {
+        return getDatabaseInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(io.pulumi.gcp.sql.inputs.GetDatabaseInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sql/getDatabaseInstance:getDatabaseInstance", TypeShape.of(GetDatabaseInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

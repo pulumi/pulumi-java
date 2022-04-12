@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> conversionReviewVersions;
 
     public Output<List<String>> getConversionReviewVersions() {
-        return this.conversionReviewVersions == null ? Output.empty() : this.conversionReviewVersions;
+        return this.conversionReviewVersions == null ? Codegen.empty() : this.conversionReviewVersions;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
     public Output<WebhookClientConfigArgs> getWebhookClientConfig() {
-        return this.webhookClientConfig == null ? Output.empty() : this.webhookClientConfig;
+        return this.webhookClientConfig == null ? Codegen.empty() : this.webhookClientConfig;
     }
 
     public CustomResourceConversionArgs(
@@ -64,9 +65,9 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     }
 
     private CustomResourceConversionArgs() {
-        this.conversionReviewVersions = Output.empty();
-        this.strategy = Output.empty();
-        this.webhookClientConfig = Output.empty();
+        this.conversionReviewVersions = Codegen.empty();
+        this.strategy = Codegen.empty();
+        this.webhookClientConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
-            this.conversionReviewVersions = Output.ofNullable(conversionReviewVersions);
+            this.conversionReviewVersions = Codegen.ofNullable(conversionReviewVersions);
             return this;
         }
         public Builder conversionReviewVersions(String... conversionReviewVersions) {
@@ -117,7 +118,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder webhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
-            this.webhookClientConfig = Output.ofNullable(webhookClientConfig);
+            this.webhookClientConfig = Codegen.ofNullable(webhookClientConfig);
             return this;
         }        public CustomResourceConversionArgs build() {
             return new CustomResourceConversionArgs(conversionReviewVersions, strategy, webhookClientConfig);

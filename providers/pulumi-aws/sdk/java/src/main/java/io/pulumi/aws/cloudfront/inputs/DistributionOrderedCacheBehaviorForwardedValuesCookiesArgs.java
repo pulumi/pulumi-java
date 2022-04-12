@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
       private final @Nullable Output<List<String>> whitelistedNames;
 
     public Output<List<String>> getWhitelistedNames() {
-        return this.whitelistedNames == null ? Output.empty() : this.whitelistedNames;
+        return this.whitelistedNames == null ? Codegen.empty() : this.whitelistedNames;
     }
 
     public DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs(
@@ -50,8 +51,8 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
     }
 
     private DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs() {
-        this.forward = Output.empty();
-        this.whitelistedNames = Output.empty();
+        this.forward = Codegen.empty();
+        this.whitelistedNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
             return this;
         }
         public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
-            this.whitelistedNames = Output.ofNullable(whitelistedNames);
+            this.whitelistedNames = Codegen.ofNullable(whitelistedNames);
             return this;
         }
         public Builder whitelistedNames(String... whitelistedNames) {

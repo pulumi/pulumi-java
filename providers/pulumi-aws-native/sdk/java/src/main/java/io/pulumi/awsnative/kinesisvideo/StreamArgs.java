@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kinesisvideo;
 import io.pulumi.awsnative.kinesisvideo.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> dataRetentionInHours;
 
     public Output<Integer> getDataRetentionInHours() {
-        return this.dataRetentionInHours == null ? Output.empty() : this.dataRetentionInHours;
+        return this.dataRetentionInHours == null ? Codegen.empty() : this.dataRetentionInHours;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mediaType;
 
     public Output<String> getMediaType() {
-        return this.mediaType == null ? Output.empty() : this.mediaType;
+        return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
     public Output<List<StreamTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamArgs(
@@ -99,12 +100,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.dataRetentionInHours = Output.empty();
-        this.deviceName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.mediaType = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.dataRetentionInHours = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.mediaType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
-            this.dataRetentionInHours = Output.ofNullable(dataRetentionInHours);
+            this.dataRetentionInHours = Codegen.ofNullable(dataRetentionInHours);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -150,7 +151,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -158,7 +159,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder mediaType(@Nullable Output<String> mediaType) {
@@ -166,7 +167,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Output.ofNullable(mediaType);
+            this.mediaType = Codegen.ofNullable(mediaType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
@@ -182,7 +183,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StreamTagArgs... tags) {

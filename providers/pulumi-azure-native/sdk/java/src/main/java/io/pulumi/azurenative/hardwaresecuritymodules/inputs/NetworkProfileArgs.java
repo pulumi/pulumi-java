@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hardwaresecuritymodules.inputs.ApiEntityReferenceAr
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApiEntityReferenceArgs> subnet;
 
     public Output<ApiEntityReferenceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public NetworkProfileArgs(
@@ -46,8 +47,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.networkInterfaces = Output.empty();
-        this.subnet = Output.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
@@ -88,7 +89,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkInterfaces, subnet);

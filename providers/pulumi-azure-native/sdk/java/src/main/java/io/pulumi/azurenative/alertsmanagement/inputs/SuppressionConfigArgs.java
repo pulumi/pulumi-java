@@ -8,6 +8,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<SuppressionScheduleArgs> schedule;
 
     public Output<SuppressionScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public SuppressionConfigArgs(
@@ -51,8 +52,8 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SuppressionConfigArgs() {
-        this.recurrenceType = Output.empty();
-        this.schedule = Output.empty();
+        this.recurrenceType = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder schedule(@Nullable SuppressionScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public SuppressionConfigArgs build() {
             return new SuppressionConfigArgs(recurrenceType, schedule);

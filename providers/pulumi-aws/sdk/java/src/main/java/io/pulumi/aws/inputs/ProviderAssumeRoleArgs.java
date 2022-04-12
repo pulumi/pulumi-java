@@ -5,6 +5,7 @@ package io.pulumi.aws.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,56 +22,56 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> durationSeconds;
 
     public Output<Integer> getDurationSeconds() {
-        return this.durationSeconds == null ? Output.empty() : this.durationSeconds;
+        return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
     }
 
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     @Import(name="policyArns")
       private final @Nullable Output<List<String>> policyArns;
 
     public Output<List<String>> getPolicyArns() {
-        return this.policyArns == null ? Output.empty() : this.policyArns;
+        return this.policyArns == null ? Codegen.empty() : this.policyArns;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
     public Output<String> getSessionName() {
-        return this.sessionName == null ? Output.empty() : this.sessionName;
+        return this.sessionName == null ? Codegen.empty() : this.sessionName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="transitiveTagKeys")
       private final @Nullable Output<List<String>> transitiveTagKeys;
 
     public Output<List<String>> getTransitiveTagKeys() {
-        return this.transitiveTagKeys == null ? Output.empty() : this.transitiveTagKeys;
+        return this.transitiveTagKeys == null ? Codegen.empty() : this.transitiveTagKeys;
     }
 
     public ProviderAssumeRoleArgs(
@@ -93,14 +94,14 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ProviderAssumeRoleArgs() {
-        this.durationSeconds = Output.empty();
-        this.externalId = Output.empty();
-        this.policy = Output.empty();
-        this.policyArns = Output.empty();
-        this.roleArn = Output.empty();
-        this.sessionName = Output.empty();
-        this.tags = Output.empty();
-        this.transitiveTagKeys = Output.empty();
+        this.durationSeconds = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.policyArns = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.sessionName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transitiveTagKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Output.ofNullable(durationSeconds);
+            this.durationSeconds = Codegen.ofNullable(durationSeconds);
             return this;
         }
         public Builder externalId(@Nullable Output<String> externalId) {
@@ -150,7 +151,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -158,7 +159,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder policyArns(@Nullable Output<List<String>> policyArns) {
@@ -166,7 +167,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyArns(@Nullable List<String> policyArns) {
-            this.policyArns = Output.ofNullable(policyArns);
+            this.policyArns = Codegen.ofNullable(policyArns);
             return this;
         }
         public Builder policyArns(String... policyArns) {
@@ -177,7 +178,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder sessionName(@Nullable Output<String> sessionName) {
@@ -185,7 +186,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Output.ofNullable(sessionName);
+            this.sessionName = Codegen.ofNullable(sessionName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -193,7 +194,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
@@ -201,7 +202,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
-            this.transitiveTagKeys = Output.ofNullable(transitiveTagKeys);
+            this.transitiveTagKeys = Codegen.ofNullable(transitiveTagKeys);
             return this;
         }
         public Builder transitiveTagKeys(String... transitiveTagKeys) {

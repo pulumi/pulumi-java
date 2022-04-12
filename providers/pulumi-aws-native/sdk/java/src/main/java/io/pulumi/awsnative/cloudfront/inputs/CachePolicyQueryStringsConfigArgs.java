@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> queryStrings;
 
     public Output<List<String>> getQueryStrings() {
-        return this.queryStrings == null ? Output.empty() : this.queryStrings;
+        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
     public CachePolicyQueryStringsConfigArgs(
@@ -37,8 +38,8 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     }
 
     private CachePolicyQueryStringsConfigArgs() {
-        this.queryStringBehavior = Output.empty();
-        this.queryStrings = Output.empty();
+        this.queryStringBehavior = Codegen.empty();
+        this.queryStrings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder queryStrings(@Nullable List<String> queryStrings) {
-            this.queryStrings = Output.ofNullable(queryStrings);
+            this.queryStrings = Codegen.ofNullable(queryStrings);
             return this;
         }
         public Builder queryStrings(String... queryStrings) {

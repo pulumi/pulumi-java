@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dataSetName;
 
     public Output<String> getDataSetName() {
-        return this.dataSetName == null ? Output.empty() : this.dataSetName;
+        return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
     /**
@@ -149,16 +150,16 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BlobFolderDataSetArgs() {
-        this.accountName = Output.empty();
-        this.containerName = Output.empty();
-        this.dataSetName = Output.empty();
-        this.kind = Output.empty();
-        this.prefix = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.dataSetName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Output.ofNullable(dataSetName);
+            this.dataSetName = Codegen.ofNullable(dataSetName);
             return this;
         }
         public Builder kind(Output<String> kind) {

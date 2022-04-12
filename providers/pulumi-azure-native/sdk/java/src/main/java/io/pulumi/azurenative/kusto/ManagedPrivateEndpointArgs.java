@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> managedPrivateEndpointName;
 
     public Output<String> getManagedPrivateEndpointName() {
-        return this.managedPrivateEndpointName == null ? Output.empty() : this.managedPrivateEndpointName;
+        return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> privateLinkResourceRegion;
 
     public Output<String> getPrivateLinkResourceRegion() {
-        return this.privateLinkResourceRegion == null ? Output.empty() : this.privateLinkResourceRegion;
+        return this.privateLinkResourceRegion == null ? Codegen.empty() : this.privateLinkResourceRegion;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
-        return this.requestMessage == null ? Output.empty() : this.requestMessage;
+        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
     /**
@@ -109,13 +110,13 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedPrivateEndpointArgs() {
-        this.clusterName = Output.empty();
-        this.groupId = Output.empty();
-        this.managedPrivateEndpointName = Output.empty();
-        this.privateLinkResourceId = Output.empty();
-        this.privateLinkResourceRegion = Output.empty();
-        this.requestMessage = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.managedPrivateEndpointName = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
+        this.privateLinkResourceRegion = Codegen.empty();
+        this.requestMessage = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Output.ofNullable(managedPrivateEndpointName);
+            this.managedPrivateEndpointName = Codegen.ofNullable(managedPrivateEndpointName);
             return this;
         }
         public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
@@ -187,7 +188,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder privateLinkResourceRegion(@Nullable String privateLinkResourceRegion) {
-            this.privateLinkResourceRegion = Output.ofNullable(privateLinkResourceRegion);
+            this.privateLinkResourceRegion = Codegen.ofNullable(privateLinkResourceRegion);
             return this;
         }
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
@@ -195,7 +196,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Output.ofNullable(requestMessage);
+            this.requestMessage = Codegen.ofNullable(requestMessage);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

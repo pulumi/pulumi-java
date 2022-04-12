@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AlertLambdaConfigurationArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertSNSConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
 
     public Output<AlertLambdaConfigurationArgs> getLambdaConfiguration() {
-        return this.lambdaConfiguration == null ? Output.empty() : this.lambdaConfiguration;
+        return this.lambdaConfiguration == null ? Codegen.empty() : this.lambdaConfiguration;
     }
 
     @Import(name="sNSConfiguration")
       private final @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
     public Output<AlertSNSConfigurationArgs> getSNSConfiguration() {
-        return this.sNSConfiguration == null ? Output.empty() : this.sNSConfiguration;
+        return this.sNSConfiguration == null ? Codegen.empty() : this.sNSConfiguration;
     }
 
     public AlertActionArgs(
@@ -37,8 +38,8 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertActionArgs() {
-        this.lambdaConfiguration = Output.empty();
-        this.sNSConfiguration = Output.empty();
+        this.lambdaConfiguration = Codegen.empty();
+        this.sNSConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaConfiguration(@Nullable AlertLambdaConfigurationArgs lambdaConfiguration) {
-            this.lambdaConfiguration = Output.ofNullable(lambdaConfiguration);
+            this.lambdaConfiguration = Codegen.ofNullable(lambdaConfiguration);
             return this;
         }
         public Builder sNSConfiguration(@Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration) {
@@ -76,7 +77,7 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sNSConfiguration(@Nullable AlertSNSConfigurationArgs sNSConfiguration) {
-            this.sNSConfiguration = Output.ofNullable(sNSConfiguration);
+            this.sNSConfiguration = Codegen.ofNullable(sNSConfiguration);
             return this;
         }        public AlertActionArgs build() {
             return new AlertActionArgs(lambdaConfiguration, sNSConfiguration);

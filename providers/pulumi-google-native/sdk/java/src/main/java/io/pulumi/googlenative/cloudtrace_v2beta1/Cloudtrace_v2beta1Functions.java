@@ -16,10 +16,10 @@ public final class Cloudtrace_v2beta1Functions {
      * Get a trace sink by name under the parent resource (GCP project).
      * 
      */
-    public static CompletableFuture<GetTraceSinkResult> getTraceSink(io.pulumi.googlenative.cloudtrace_v2beta1.inputs.GetTraceSinkArgs args) {
-        return getTraceSink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTraceSinkResult> getTraceSink(GetTraceSinkArgs args) {
+        return getTraceSink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTraceSinkResult> getTraceSink(io.pulumi.googlenative.cloudtrace_v2beta1.inputs.GetTraceSinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTraceSinkResult> getTraceSink(GetTraceSinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtrace/v2beta1:getTraceSink", TypeShape.of(GetTraceSinkResult.class), args, Utilities.withVersion(options));
     }
 }

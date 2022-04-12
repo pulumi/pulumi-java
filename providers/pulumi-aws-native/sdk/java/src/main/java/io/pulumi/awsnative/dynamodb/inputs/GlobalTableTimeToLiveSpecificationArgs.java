@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
       private final @Nullable Output<String> attributeName;
 
     public Output<String> getAttributeName() {
-        return this.attributeName == null ? Output.empty() : this.attributeName;
+        return this.attributeName == null ? Codegen.empty() : this.attributeName;
     }
 
     @Import(name="enabled", required=true)
@@ -37,8 +38,8 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     }
 
     private GlobalTableTimeToLiveSpecificationArgs() {
-        this.attributeName = Output.empty();
-        this.enabled = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
             return this;
         }
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Output.ofNullable(attributeName);
+            this.attributeName = Codegen.ofNullable(attributeName);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

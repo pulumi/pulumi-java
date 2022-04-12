@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.BackendEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backendHostHeader;
 
     public Output<String> getBackendHostHeader() {
-        return this.backendHostHeader == null ? Output.empty() : this.backendHostHeader;
+        return this.backendHostHeader == null ? Codegen.empty() : this.backendHostHeader;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,BackendEnabledState>> enabledState;
 
     public Output<Either<String,BackendEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
-        return this.httpPort == null ? Output.empty() : this.httpPort;
+        return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
-        return this.httpsPort == null ? Output.empty() : this.httpsPort;
+        return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateLinkAlias;
 
     public Output<String> getPrivateLinkAlias() {
-        return this.privateLinkAlias == null ? Output.empty() : this.privateLinkAlias;
+        return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
     public Output<String> getPrivateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Output.empty() : this.privateLinkApprovalMessage;
+        return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateLinkLocation;
 
     public Output<String> getPrivateLinkLocation() {
-        return this.privateLinkLocation == null ? Output.empty() : this.privateLinkLocation;
+        return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
+        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public BackendArgs(
@@ -168,17 +169,17 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendArgs() {
-        this.address = Output.empty();
-        this.backendHostHeader = Output.empty();
-        this.enabledState = Output.empty();
-        this.httpPort = Output.empty();
-        this.httpsPort = Output.empty();
-        this.priority = Output.empty();
-        this.privateLinkAlias = Output.empty();
-        this.privateLinkApprovalMessage = Output.empty();
-        this.privateLinkLocation = Output.empty();
-        this.privateLinkResourceId = Output.empty();
-        this.weight = Output.empty();
+        this.address = Codegen.empty();
+        this.backendHostHeader = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.httpPort = Codegen.empty();
+        this.httpsPort = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.privateLinkAlias = Codegen.empty();
+        this.privateLinkApprovalMessage = Codegen.empty();
+        this.privateLinkLocation = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder backendHostHeader(@Nullable Output<String> backendHostHeader) {
@@ -234,7 +235,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
-            this.backendHostHeader = Output.ofNullable(backendHostHeader);
+            this.backendHostHeader = Codegen.ofNullable(backendHostHeader);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,BackendEnabledState>> enabledState) {
@@ -242,7 +243,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
@@ -250,7 +251,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Output.ofNullable(httpPort);
+            this.httpPort = Codegen.ofNullable(httpPort);
             return this;
         }
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
@@ -258,7 +259,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Output.ofNullable(httpsPort);
+            this.httpsPort = Codegen.ofNullable(httpsPort);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -266,7 +267,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
@@ -274,7 +275,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
+            this.privateLinkAlias = Codegen.ofNullable(privateLinkAlias);
             return this;
         }
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
@@ -282,7 +283,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
+            this.privateLinkApprovalMessage = Codegen.ofNullable(privateLinkApprovalMessage);
             return this;
         }
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
@@ -290,7 +291,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
+            this.privateLinkLocation = Codegen.ofNullable(privateLinkLocation);
             return this;
         }
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
@@ -298,7 +299,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -306,7 +307,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public BackendArgs build() {
             return new BackendArgs(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);

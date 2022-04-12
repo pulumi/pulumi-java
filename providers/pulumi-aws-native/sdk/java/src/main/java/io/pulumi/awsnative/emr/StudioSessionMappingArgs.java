@@ -6,6 +6,7 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -70,10 +71,10 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     }
 
     private StudioSessionMappingArgs() {
-        this.identityName = Output.empty();
-        this.identityType = Output.empty();
-        this.sessionPolicyArn = Output.empty();
-        this.studioId = Output.empty();
+        this.identityName = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.sessionPolicyArn = Codegen.empty();
+        this.studioId = Codegen.empty();
     }
 
     public static Builder builder() {

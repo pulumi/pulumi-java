@@ -5,6 +5,7 @@ package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +36,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     public LoadBalancerAccessLogsGetArgs(
@@ -72,10 +73,10 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
     }
 
     private LoadBalancerAccessLogsGetArgs() {
-        this.bucket = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.enabled = Output.empty();
-        this.interval = Output.empty();
+        this.bucket = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.interval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -125,7 +126,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -133,7 +134,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }        public LoadBalancerAccessLogsGetArgs build() {
             return new LoadBalancerAccessLogsGetArgs(bucket, bucketPrefix, enabled, interval);

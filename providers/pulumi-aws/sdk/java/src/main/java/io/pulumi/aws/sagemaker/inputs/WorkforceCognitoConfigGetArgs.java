@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private WorkforceCognitoConfigGetArgs() {
-        this.clientId = Output.empty();
-        this.userPool = Output.empty();
+        this.clientId = Codegen.empty();
+        this.userPool = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
     public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
+        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
     public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
-        return this.responseBasedOriginErrorDetectionSettings == null ? Output.empty() : this.responseBasedOriginErrorDetectionSettings;
+        return this.responseBasedOriginErrorDetectionSettings == null ? Codegen.empty() : this.responseBasedOriginErrorDetectionSettings;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Output.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Codegen.empty() : this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 
     public DeepCreatedOriginGroupArgs(
@@ -92,11 +93,11 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
     }
 
     private DeepCreatedOriginGroupArgs() {
-        this.healthProbeSettings = Output.empty();
-        this.name = Output.empty();
-        this.origins = Output.empty();
-        this.responseBasedOriginErrorDetectionSettings = Output.empty();
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.empty();
+        this.healthProbeSettings = Codegen.empty();
+        this.name = Codegen.empty();
+        this.origins = Codegen.empty();
+        this.responseBasedOriginErrorDetectionSettings = Codegen.empty();
+        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
-            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -159,7 +160,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
-            this.responseBasedOriginErrorDetectionSettings = Output.ofNullable(responseBasedOriginErrorDetectionSettings);
+            this.responseBasedOriginErrorDetectionSettings = Codegen.ofNullable(responseBasedOriginErrorDetectionSettings);
             return this;
         }
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
@@ -167,7 +168,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Output.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Codegen.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }        public DeepCreatedOriginGroupArgs build() {
             return new DeepCreatedOriginGroupArgs(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);

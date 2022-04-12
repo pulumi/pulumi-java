@@ -5,6 +5,7 @@ package io.pulumi.awsnative.efs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="securityGroups", required=true)
@@ -55,10 +56,10 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MountTargetArgs() {
-        this.fileSystemId = Output.empty();
-        this.ipAddress = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnetId = Output.empty();
+        this.fileSystemId = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder securityGroups(Output<List<String>> securityGroups) {

@@ -16,10 +16,10 @@ public final class Firebaseappcheck_v1betaFunctions {
      * Gets the specified DebugToken. For security reasons, the `token` field is never populated in the response.
      * 
      */
-    public static CompletableFuture<GetDebugTokenResult> getDebugToken(io.pulumi.googlenative.firebaseappcheck_v1beta.inputs.GetDebugTokenArgs args) {
-        return getDebugToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDebugTokenResult> getDebugToken(GetDebugTokenArgs args) {
+        return getDebugToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDebugTokenResult> getDebugToken(io.pulumi.googlenative.firebaseappcheck_v1beta.inputs.GetDebugTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDebugTokenResult> getDebugToken(GetDebugTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaseappcheck/v1beta:getDebugToken", TypeShape.of(GetDebugTokenResult.class), args, Utilities.withVersion(options));
     }
 }

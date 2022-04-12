@@ -10,6 +10,7 @@ import io.pulumi.aws.rds.outputs.ProxyAuth;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -238,7 +239,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Proxy(String name, ProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/proxy:Proxy", name, args == null ? ProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/proxy:Proxy", name, args == null ? ProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Proxy(String name, Output<String> id, @Nullable ProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

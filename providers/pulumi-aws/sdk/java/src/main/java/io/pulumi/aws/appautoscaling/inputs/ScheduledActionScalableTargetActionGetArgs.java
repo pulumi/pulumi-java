@@ -5,6 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
       private final @Nullable Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
       private final @Nullable Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
-        return this.minCapacity == null ? Output.empty() : this.minCapacity;
+        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
     public ScheduledActionScalableTargetActionGetArgs(
@@ -44,8 +45,8 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
     }
 
     private ScheduledActionScalableTargetActionGetArgs() {
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
             return this;
         }
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
@@ -83,7 +84,7 @@ public final class ScheduledActionScalableTargetActionGetArgs extends io.pulumi.
             return this;
         }
         public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Output.ofNullable(minCapacity);
+            this.minCapacity = Codegen.ofNullable(minCapacity);
             return this;
         }        public ScheduledActionScalableTargetActionGetArgs build() {
             return new ScheduledActionScalableTargetActionGetArgs(maxCapacity, minCapacity);

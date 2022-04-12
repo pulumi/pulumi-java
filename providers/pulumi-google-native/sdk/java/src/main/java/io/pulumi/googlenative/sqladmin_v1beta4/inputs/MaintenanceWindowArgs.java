@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.MaintenanceWindowUpdateTrack;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> hour;
 
     public Output<Integer> getHour() {
-        return this.hour == null ? Output.empty() : this.hour;
+        return this.hour == null ? Codegen.empty() : this.hour;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
     public Output<MaintenanceWindowUpdateTrack> getUpdateTrack() {
-        return this.updateTrack == null ? Output.empty() : this.updateTrack;
+        return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
     }
 
     public MaintenanceWindowArgs(
@@ -76,10 +77,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.day = Output.empty();
-        this.hour = Output.empty();
-        this.kind = Output.empty();
-        this.updateTrack = Output.empty();
+        this.day = Codegen.empty();
+        this.hour = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.updateTrack = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder day(@Nullable Integer day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder hour(@Nullable Output<Integer> hour) {
@@ -121,7 +122,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Output.ofNullable(hour);
+            this.hour = Codegen.ofNullable(hour);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -129,7 +130,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder updateTrack(@Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
@@ -137,7 +138,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder updateTrack(@Nullable MaintenanceWindowUpdateTrack updateTrack) {
-            this.updateTrack = Output.ofNullable(updateTrack);
+            this.updateTrack = Codegen.ofNullable(updateTrack);
             return this;
         }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(day, hour, kind, updateTrack);

@@ -20,30 +20,30 @@ public final class EcrFunctions {
      * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
      * 
      */
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(io.pulumi.awsnative.ecr.inputs.GetRegistryPolicyArgs args) {
-        return getRegistryPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args) {
+        return getRegistryPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(io.pulumi.awsnative.ecr.inputs.GetRegistryPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecr:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
      * 
      */
-    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfiguration(io.pulumi.awsnative.ecr.inputs.GetReplicationConfigurationArgs args) {
-        return getReplicationConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfiguration(GetReplicationConfigurationArgs args) {
+        return getReplicationConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfiguration(io.pulumi.awsnative.ecr.inputs.GetReplicationConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfiguration(GetReplicationConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecr:getReplicationConfiguration", TypeShape.of(GetReplicationConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.awsnative.ecr.inputs.GetRepositoryArgs args) {
-        return getRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+        return getRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRepositoryResult> getRepository(io.pulumi.awsnative.ecr.inputs.GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecr:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

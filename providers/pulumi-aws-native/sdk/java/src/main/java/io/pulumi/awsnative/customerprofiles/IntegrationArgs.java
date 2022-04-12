@@ -8,6 +8,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationObjectTypeMappingA
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
 
     public Output<IntegrationFlowDefinitionArgs> getFlowDefinition() {
-        return this.flowDefinition == null ? Output.empty() : this.flowDefinition;
+        return this.flowDefinition == null ? Codegen.empty() : this.flowDefinition;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectTypeName;
 
     public Output<String> getObjectTypeName() {
-        return this.objectTypeName == null ? Output.empty() : this.objectTypeName;
+        return this.objectTypeName == null ? Codegen.empty() : this.objectTypeName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
     public Output<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
-        return this.objectTypeNames == null ? Output.empty() : this.objectTypeNames;
+        return this.objectTypeNames == null ? Codegen.empty() : this.objectTypeNames;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IntegrationTagArgs>> tags;
 
     public Output<List<IntegrationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public IntegrationArgs(
@@ -96,12 +97,12 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntegrationArgs() {
-        this.domainName = Output.empty();
-        this.flowDefinition = Output.empty();
-        this.objectTypeName = Output.empty();
-        this.objectTypeNames = Output.empty();
-        this.tags = Output.empty();
-        this.uri = Output.empty();
+        this.domainName = Codegen.empty();
+        this.flowDefinition = Codegen.empty();
+        this.objectTypeName = Codegen.empty();
+        this.objectTypeNames = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
-            this.flowDefinition = Output.ofNullable(flowDefinition);
+            this.flowDefinition = Codegen.ofNullable(flowDefinition);
             return this;
         }
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
@@ -155,7 +156,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectTypeName(@Nullable String objectTypeName) {
-            this.objectTypeName = Output.ofNullable(objectTypeName);
+            this.objectTypeName = Codegen.ofNullable(objectTypeName);
             return this;
         }
         public Builder objectTypeNames(@Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
@@ -163,7 +164,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
-            this.objectTypeNames = Output.ofNullable(objectTypeNames);
+            this.objectTypeNames = Codegen.ofNullable(objectTypeNames);
             return this;
         }
         public Builder objectTypeNames(IntegrationObjectTypeMappingArgs... objectTypeNames) {
@@ -174,7 +175,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IntegrationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IntegrationTagArgs... tags) {
@@ -185,7 +186,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public IntegrationArgs build() {
             return new IntegrationArgs(domainName, flowDefinition, objectTypeName, objectTypeNames, tags, uri);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelInstanceIAMMemberArgs;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMMemberState;
@@ -174,7 +175,7 @@ public class TunnelInstanceIAMMember extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelInstanceIAMMember(String name, TunnelInstanceIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelInstanceIAMMember:TunnelInstanceIAMMember", name, args == null ? TunnelInstanceIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/tunnelInstanceIAMMember:TunnelInstanceIAMMember", name, args == null ? TunnelInstanceIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TunnelInstanceIAMMember(String name, Output<String> id, @Nullable TunnelInstanceIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
       private final @Nullable Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
-        return this.portfolioId == null ? Output.empty() : this.portfolioId;
+        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
       private final @Nullable Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
-        return this.principalArn == null ? Output.empty() : this.principalArn;
+        return this.principalArn == null ? Codegen.empty() : this.principalArn;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
       private final @Nullable Output<String> principalType;
 
     public Output<String> getPrincipalType() {
-        return this.principalType == null ? Output.empty() : this.principalType;
+        return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
     public PrincipalPortfolioAssociationState(
@@ -70,10 +71,10 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
     }
 
     private PrincipalPortfolioAssociationState() {
-        this.acceptLanguage = Output.empty();
-        this.portfolioId = Output.empty();
-        this.principalArn = Output.empty();
-        this.principalType = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.principalArn = Codegen.empty();
+        this.principalType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
@@ -115,7 +116,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
             return this;
         }
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Output.ofNullable(portfolioId);
+            this.portfolioId = Codegen.ofNullable(portfolioId);
             return this;
         }
         public Builder principalArn(@Nullable Output<String> principalArn) {
@@ -123,7 +124,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
             return this;
         }
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Output.ofNullable(principalArn);
+            this.principalArn = Codegen.ofNullable(principalArn);
             return this;
         }
         public Builder principalType(@Nullable Output<String> principalType) {
@@ -131,7 +132,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
             return this;
         }
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Output.ofNullable(principalType);
+            this.principalType = Codegen.ofNullable(principalType);
             return this;
         }        public PrincipalPortfolioAssociationState build() {
             return new PrincipalPortfolioAssociationState(acceptLanguage, portfolioId, principalArn, principalType);

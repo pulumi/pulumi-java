@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.HashingAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dispositionNotificationTo;
 
     public Output<String> getDispositionNotificationTo() {
-        return this.dispositionNotificationTo == null ? Output.empty() : this.dispositionNotificationTo;
+        return this.dispositionNotificationTo == null ? Codegen.empty() : this.dispositionNotificationTo;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mdnText;
 
     public Output<String> getMdnText() {
-        return this.mdnText == null ? Output.empty() : this.mdnText;
+        return this.mdnText == null ? Codegen.empty() : this.mdnText;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> receiptDeliveryUrl;
 
     public Output<String> getReceiptDeliveryUrl() {
-        return this.receiptDeliveryUrl == null ? Output.empty() : this.receiptDeliveryUrl;
+        return this.receiptDeliveryUrl == null ? Codegen.empty() : this.receiptDeliveryUrl;
     }
 
     /**
@@ -142,15 +143,15 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AS2MdnSettingsArgs() {
-        this.dispositionNotificationTo = Output.empty();
-        this.mdnText = Output.empty();
-        this.micHashingAlgorithm = Output.empty();
-        this.needMDN = Output.empty();
-        this.receiptDeliveryUrl = Output.empty();
-        this.sendInboundMDNToMessageBox = Output.empty();
-        this.sendMDNAsynchronously = Output.empty();
-        this.signMDN = Output.empty();
-        this.signOutboundMDNIfOptional = Output.empty();
+        this.dispositionNotificationTo = Codegen.empty();
+        this.mdnText = Codegen.empty();
+        this.micHashingAlgorithm = Codegen.empty();
+        this.needMDN = Codegen.empty();
+        this.receiptDeliveryUrl = Codegen.empty();
+        this.sendInboundMDNToMessageBox = Codegen.empty();
+        this.sendMDNAsynchronously = Codegen.empty();
+        this.signMDN = Codegen.empty();
+        this.signOutboundMDNIfOptional = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
-            this.dispositionNotificationTo = Output.ofNullable(dispositionNotificationTo);
+            this.dispositionNotificationTo = Codegen.ofNullable(dispositionNotificationTo);
             return this;
         }
         public Builder mdnText(@Nullable Output<String> mdnText) {
@@ -202,7 +203,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mdnText(@Nullable String mdnText) {
-            this.mdnText = Output.ofNullable(mdnText);
+            this.mdnText = Codegen.ofNullable(mdnText);
             return this;
         }
         public Builder micHashingAlgorithm(Output<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
@@ -226,7 +227,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
-            this.receiptDeliveryUrl = Output.ofNullable(receiptDeliveryUrl);
+            this.receiptDeliveryUrl = Codegen.ofNullable(receiptDeliveryUrl);
             return this;
         }
         public Builder sendInboundMDNToMessageBox(Output<Boolean> sendInboundMDNToMessageBox) {

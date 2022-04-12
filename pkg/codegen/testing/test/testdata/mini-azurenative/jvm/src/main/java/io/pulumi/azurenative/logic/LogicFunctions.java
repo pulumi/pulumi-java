@@ -17,10 +17,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs args) {
-        return listIntegrationAccountKeyVaultKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args) {
+        return listIntegrationAccountKeyVaultKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }
 }

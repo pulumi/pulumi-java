@@ -19,12 +19,12 @@ public final class GuarddutyFunctions {
      * 
      */
     public static CompletableFuture<GetDetectorResult> getDetector() {
-        return getDetector(io.pulumi.aws.guardduty.inputs.GetDetectorArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDetector(GetDetectorArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDetectorResult> getDetector(io.pulumi.aws.guardduty.inputs.GetDetectorArgs args) {
-        return getDetector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args) {
+        return getDetector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDetectorResult> getDetector(io.pulumi.aws.guardduty.inputs.GetDetectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDetectorResult> getDetector(GetDetectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:guardduty/getDetector:getDetector", TypeShape.of(GetDetectorResult.class), args, Utilities.withVersion(options));
     }
 }

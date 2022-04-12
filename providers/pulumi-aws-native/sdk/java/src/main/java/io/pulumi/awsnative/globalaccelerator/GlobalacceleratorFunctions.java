@@ -20,30 +20,30 @@ public final class GlobalacceleratorFunctions {
      * Resource Type definition for AWS::GlobalAccelerator::Accelerator
      * 
      */
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(io.pulumi.awsnative.globalaccelerator.inputs.GetAcceleratorArgs args) {
-        return getAccelerator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args) {
+        return getAccelerator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAcceleratorResult> getAccelerator(io.pulumi.awsnative.globalaccelerator.inputs.GetAcceleratorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAcceleratorResult> getAccelerator(GetAcceleratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::EndpointGroup
      * 
      */
-    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(io.pulumi.awsnative.globalaccelerator.inputs.GetEndpointGroupArgs args) {
-        return getEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args) {
+        return getEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(io.pulumi.awsnative.globalaccelerator.inputs.GetEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointGroupResult> getEndpointGroup(GetEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getEndpointGroup", TypeShape.of(GetEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::GlobalAccelerator::Listener
      * 
      */
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.awsnative.globalaccelerator.inputs.GetListenerArgs args) {
-        return getListener(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args) {
+        return getListener(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetListenerResult> getListener(io.pulumi.awsnative.globalaccelerator.inputs.GetListenerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetListenerResult> getListener(GetListenerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
 }

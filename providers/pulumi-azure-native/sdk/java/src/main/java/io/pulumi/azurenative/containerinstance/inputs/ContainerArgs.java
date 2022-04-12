@@ -10,6 +10,7 @@ import io.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerProbeArgs> livenessProbe;
 
     public Output<ContainerProbeArgs> getLivenessProbe() {
-        return this.livenessProbe == null ? Output.empty() : this.livenessProbe;
+        return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContainerPortArgs>> ports;
 
     public Output<List<ContainerPortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerProbeArgs> readinessProbe;
 
     public Output<ContainerProbeArgs> getReadinessProbe() {
-        return this.readinessProbe == null ? Output.empty() : this.readinessProbe;
+        return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
     public Output<List<VolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
+        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
     public ContainerArgs(
@@ -145,15 +146,15 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.command = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.image = Output.empty();
-        this.livenessProbe = Output.empty();
-        this.name = Output.empty();
-        this.ports = Output.empty();
-        this.readinessProbe = Output.empty();
-        this.resources = Output.empty();
-        this.volumeMounts = Output.empty();
+        this.command = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.image = Codegen.empty();
+        this.livenessProbe = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.readinessProbe = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.volumeMounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -208,7 +209,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
@@ -227,7 +228,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder livenessProbe(@Nullable ContainerProbeArgs livenessProbe) {
-            this.livenessProbe = Output.ofNullable(livenessProbe);
+            this.livenessProbe = Codegen.ofNullable(livenessProbe);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -243,7 +244,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ContainerPortArgs... ports) {
@@ -254,7 +255,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readinessProbe(@Nullable ContainerProbeArgs readinessProbe) {
-            this.readinessProbe = Output.ofNullable(readinessProbe);
+            this.readinessProbe = Codegen.ofNullable(readinessProbe);
             return this;
         }
         public Builder resources(Output<ResourceRequirementsArgs> resources) {
@@ -270,7 +271,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Output.ofNullable(volumeMounts);
+            this.volumeMounts = Codegen.ofNullable(volumeMounts);
             return this;
         }
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {

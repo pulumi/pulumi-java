@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEncryptionKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowEncryptionAlgorithm> algorithm;
 
     public Output<FlowEncryptionAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> constantInitializationVector;
 
     public Output<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
+        return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceId;
 
     public Output<String> getDeviceId() {
-        return this.deviceId == null ? Output.empty() : this.deviceId;
+        return this.deviceId == null ? Codegen.empty() : this.deviceId;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowEncryptionKeyType> keyType;
 
     public Output<FlowEncryptionKeyType> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public FlowEncryptionArgs(
@@ -141,15 +142,15 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowEncryptionArgs() {
-        this.algorithm = Output.empty();
-        this.constantInitializationVector = Output.empty();
-        this.deviceId = Output.empty();
-        this.keyType = Output.empty();
-        this.region = Output.empty();
-        this.resourceId = Output.empty();
-        this.roleArn = Output.empty();
-        this.secretArn = Output.empty();
-        this.url = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.constantInitializationVector = Codegen.empty();
+        this.deviceId = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.region = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder algorithm(@Nullable FlowEncryptionAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
@@ -201,7 +202,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Codegen.ofNullable(constantInitializationVector);
             return this;
         }
         public Builder deviceId(@Nullable Output<String> deviceId) {
@@ -209,7 +210,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = Output.ofNullable(deviceId);
+            this.deviceId = Codegen.ofNullable(deviceId);
             return this;
         }
         public Builder keyType(@Nullable Output<FlowEncryptionKeyType> keyType) {
@@ -217,7 +218,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyType(@Nullable FlowEncryptionKeyType keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -225,7 +226,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -233,7 +234,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -249,7 +250,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -257,7 +258,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public FlowEncryptionArgs build() {
             return new FlowEncryptionArgs(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);

@@ -16,10 +16,10 @@ public final class Datapipelines_v1Functions {
      * Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.googlenative.datapipelines_v1.inputs.GetPipelineArgs args) {
-        return getPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+        return getPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.googlenative.datapipelines_v1.inputs.GetPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datapipelines/v1:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

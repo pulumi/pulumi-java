@@ -6,6 +6,7 @@ package io.pulumi.awsnative.evidently.inputs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentToWeightArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
       private final @Nullable Output<String> controlTreatmentName;
 
     public Output<String> getControlTreatmentName() {
-        return this.controlTreatmentName == null ? Output.empty() : this.controlTreatmentName;
+        return this.controlTreatmentName == null ? Codegen.empty() : this.controlTreatmentName;
     }
 
     @Import(name="treatmentWeights")
       private final @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
     public Output<List<ExperimentTreatmentToWeightArgs>> getTreatmentWeights() {
-        return this.treatmentWeights == null ? Output.empty() : this.treatmentWeights;
+        return this.treatmentWeights == null ? Codegen.empty() : this.treatmentWeights;
     }
 
     public ExperimentOnlineAbConfigObjectArgs(
@@ -38,8 +39,8 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     }
 
     private ExperimentOnlineAbConfigObjectArgs() {
-        this.controlTreatmentName = Output.empty();
-        this.treatmentWeights = Output.empty();
+        this.controlTreatmentName = Codegen.empty();
+        this.treatmentWeights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
             return this;
         }
         public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
-            this.controlTreatmentName = Output.ofNullable(controlTreatmentName);
+            this.controlTreatmentName = Codegen.ofNullable(controlTreatmentName);
             return this;
         }
         public Builder treatmentWeights(@Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
@@ -77,7 +78,7 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
             return this;
         }
         public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
-            this.treatmentWeights = Output.ofNullable(treatmentWeights);
+            this.treatmentWeights = Codegen.ofNullable(treatmentWeights);
             return this;
         }
         public Builder treatmentWeights(ExperimentTreatmentToWeightArgs... treatmentWeights) {

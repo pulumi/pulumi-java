@@ -20,10 +20,10 @@ public final class CloudfunctionsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.gcp.cloudfunctions.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.gcp.cloudfunctions.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudfunctions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
 }

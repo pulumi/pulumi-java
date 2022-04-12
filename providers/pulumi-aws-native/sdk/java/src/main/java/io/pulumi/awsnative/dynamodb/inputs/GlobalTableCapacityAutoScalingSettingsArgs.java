@@ -6,6 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTargetTrackingScalingPolicyConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
       private final @Nullable Output<Integer> seedCapacity;
 
     public Output<Integer> getSeedCapacity() {
-        return this.seedCapacity == null ? Output.empty() : this.seedCapacity;
+        return this.seedCapacity == null ? Codegen.empty() : this.seedCapacity;
     }
 
     @Import(name="targetTrackingScalingPolicyConfiguration", required=true)
@@ -55,10 +56,10 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
     }
 
     private GlobalTableCapacityAutoScalingSettingsArgs() {
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
-        this.seedCapacity = Output.empty();
-        this.targetTrackingScalingPolicyConfiguration = Output.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
+        this.seedCapacity = Codegen.empty();
+        this.targetTrackingScalingPolicyConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class GlobalTableCapacityAutoScalingSettingsArgs extends io.pulumi.
             return this;
         }
         public Builder seedCapacity(@Nullable Integer seedCapacity) {
-            this.seedCapacity = Output.ofNullable(seedCapacity);
+            this.seedCapacity = Codegen.ofNullable(seedCapacity);
             return this;
         }
         public Builder targetTrackingScalingPolicyConfiguration(Output<GlobalTableTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {

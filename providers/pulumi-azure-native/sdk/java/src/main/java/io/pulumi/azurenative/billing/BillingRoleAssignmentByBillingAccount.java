@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -221,7 +222,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingRoleAssignmentByBillingAccount(String name, BillingRoleAssignmentByBillingAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:billing:BillingRoleAssignmentByBillingAccount", name, args == null ? BillingRoleAssignmentByBillingAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:billing:BillingRoleAssignmentByBillingAccount", name, args == null ? BillingRoleAssignmentByBillingAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingRoleAssignmentByBillingAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

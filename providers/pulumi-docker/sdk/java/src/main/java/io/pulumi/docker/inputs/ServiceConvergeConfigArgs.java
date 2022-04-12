@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ServiceConvergeConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> delay;
 
     public Output<String> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ServiceConvergeConfigArgs(
@@ -36,8 +37,8 @@ public final class ServiceConvergeConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceConvergeConfigArgs() {
-        this.delay = Output.empty();
-        this.timeout = Output.empty();
+        this.delay = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceConvergeConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder delay(@Nullable String delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -75,7 +76,7 @@ public final class ServiceConvergeConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ServiceConvergeConfigArgs build() {
             return new ServiceConvergeConfigArgs(delay, timeout);

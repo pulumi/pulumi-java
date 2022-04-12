@@ -22,10 +22,10 @@ public final class GlueFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.aws.glue.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.aws.glue.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class GlueFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsArgs args) {
-        return getDataCatalogEncryptionSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args) {
+        return getDataCatalogEncryptionSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> getDataCatalogEncryptionSettings(GetDataCatalogEncryptionSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getDataCatalogEncryptionSettings:getDataCatalogEncryptionSettings", TypeShape.of(GetDataCatalogEncryptionSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,10 +46,10 @@ public final class GlueFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetScriptResult> getScript(io.pulumi.aws.glue.inputs.GetScriptArgs args) {
-        return getScript(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args) {
+        return getScript(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScriptResult> getScript(io.pulumi.aws.glue.inputs.GetScriptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScriptResult> getScript(GetScriptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getScript:getScript", TypeShape.of(GetScriptResult.class), args, Utilities.withVersion(options));
     }
 }

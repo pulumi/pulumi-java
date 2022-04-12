@@ -5,6 +5,7 @@ package io.pulumi.aws.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> licenseCount;
 
     public Output<Integer> getLicenseCount() {
-        return this.licenseCount == null ? Output.empty() : this.licenseCount;
+        return this.licenseCount == null ? Codegen.empty() : this.licenseCount;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> licenseCountHardLimit;
 
     public Output<Boolean> getLicenseCountHardLimit() {
-        return this.licenseCountHardLimit == null ? Output.empty() : this.licenseCountHardLimit;
+        return this.licenseCountHardLimit == null ? Codegen.empty() : this.licenseCountHardLimit;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> licenseCountingType;
 
     public Output<String> getLicenseCountingType() {
-        return this.licenseCountingType == null ? Output.empty() : this.licenseCountingType;
+        return this.licenseCountingType == null ? Codegen.empty() : this.licenseCountingType;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> licenseRules;
 
     public Output<List<String>> getLicenseRules() {
-        return this.licenseRules == null ? Output.empty() : this.licenseRules;
+        return this.licenseRules == null ? Codegen.empty() : this.licenseRules;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
+        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public LicenseConfigurationState(
@@ -152,16 +153,16 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
     }
 
     private LicenseConfigurationState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.licenseCount = Output.empty();
-        this.licenseCountHardLimit = Output.empty();
-        this.licenseCountingType = Output.empty();
-        this.licenseRules = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.licenseCount = Codegen.empty();
+        this.licenseCountHardLimit = Codegen.empty();
+        this.licenseCountingType = Codegen.empty();
+        this.licenseRules = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -215,7 +216,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder licenseCount(@Nullable Output<Integer> licenseCount) {
@@ -223,7 +224,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder licenseCount(@Nullable Integer licenseCount) {
-            this.licenseCount = Output.ofNullable(licenseCount);
+            this.licenseCount = Codegen.ofNullable(licenseCount);
             return this;
         }
         public Builder licenseCountHardLimit(@Nullable Output<Boolean> licenseCountHardLimit) {
@@ -231,7 +232,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
-            this.licenseCountHardLimit = Output.ofNullable(licenseCountHardLimit);
+            this.licenseCountHardLimit = Codegen.ofNullable(licenseCountHardLimit);
             return this;
         }
         public Builder licenseCountingType(@Nullable Output<String> licenseCountingType) {
@@ -239,7 +240,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder licenseCountingType(@Nullable String licenseCountingType) {
-            this.licenseCountingType = Output.ofNullable(licenseCountingType);
+            this.licenseCountingType = Codegen.ofNullable(licenseCountingType);
             return this;
         }
         public Builder licenseRules(@Nullable Output<List<String>> licenseRules) {
@@ -247,7 +248,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder licenseRules(@Nullable List<String> licenseRules) {
-            this.licenseRules = Output.ofNullable(licenseRules);
+            this.licenseRules = Codegen.ofNullable(licenseRules);
             return this;
         }
         public Builder licenseRules(String... licenseRules) {
@@ -258,7 +259,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
@@ -266,7 +267,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Output.ofNullable(ownerAccountId);
+            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -274,7 +275,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -282,7 +283,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public LicenseConfigurationState build() {
             return new LicenseConfigurationState(arn, description, licenseCount, licenseCountHardLimit, licenseCountingType, licenseRules, name, ownerAccountId, tags, tagsAll);

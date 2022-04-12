@@ -19,10 +19,10 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
-    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(io.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointCredentialsArgs args) {
-        return listEndpointCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args) {
+        return listEndpointCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(io.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

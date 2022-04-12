@@ -5,6 +5,7 @@ package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> collection;
 
     public Output<String> getCollection() {
-        return this.collection == null ? Output.empty() : this.collection;
+        return this.collection == null ? Codegen.empty() : this.collection;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> documentId;
 
     public Output<String> getDocumentId() {
-        return this.documentId == null ? Output.empty() : this.documentId;
+        return this.documentId == null ? Codegen.empty() : this.documentId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fields;
 
     public Output<String> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public DocumentState(
@@ -137,15 +138,15 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentState() {
-        this.collection = Output.empty();
-        this.createTime = Output.empty();
-        this.database = Output.empty();
-        this.documentId = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.project = Output.empty();
-        this.updateTime = Output.empty();
+        this.collection = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.database = Codegen.empty();
+        this.documentId = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.project = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collection(@Nullable String collection) {
-            this.collection = Output.ofNullable(collection);
+            this.collection = Codegen.ofNullable(collection);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -197,7 +198,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder database(@Nullable Output<String> database) {
@@ -205,7 +206,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder documentId(@Nullable Output<String> documentId) {
@@ -213,7 +214,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentId(@Nullable String documentId) {
-            this.documentId = Output.ofNullable(documentId);
+            this.documentId = Codegen.ofNullable(documentId);
             return this;
         }
         public Builder fields(@Nullable Output<String> fields) {
@@ -221,7 +222,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable String fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -237,7 +238,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -245,7 +246,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -253,7 +254,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public DocumentState build() {
             return new DocumentState(collection, createTime, database, documentId, fields, name, path, project, updateTime);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
-        return this.identifyingFields == null ? Output.empty() : this.identifyingFields;
+        return this.identifyingFields == null ? Codegen.empty() : this.identifyingFields;
     }
 
     public GooglePrivacyDlpV2TableOptionsArgs(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
@@ -35,7 +36,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
     }
 
     private GooglePrivacyDlpV2TableOptionsArgs() {
-        this.identifyingFields = Output.empty();
+        this.identifyingFields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
             return this;
         }
         public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
-            this.identifyingFields = Output.ofNullable(identifyingFields);
+            this.identifyingFields = Codegen.ofNullable(identifyingFields);
             return this;
         }
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdArgs... identifyingFields) {

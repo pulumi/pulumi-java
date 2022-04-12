@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends io.pulumi.resources
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters;
 
     public Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public GoogleCloudDialogflowCxV3FormArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends io.pulumi.resources
     }
 
     private GoogleCloudDialogflowCxV3FormArgs() {
-        this.parameters = Output.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends io.pulumi.resources
             return this;
         }
         public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3FormParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GoogleCloudDialogflowCxV3FormParameterArgs... parameters) {

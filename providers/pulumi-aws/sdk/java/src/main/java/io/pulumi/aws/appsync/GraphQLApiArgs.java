@@ -10,6 +10,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders;
 
     public Output<List<GraphQLApiAdditionalAuthenticationProviderArgs>> getAdditionalAuthenticationProviders() {
-        return this.additionalAuthenticationProviders == null ? Output.empty() : this.additionalAuthenticationProviders;
+        return this.additionalAuthenticationProviders == null ? Codegen.empty() : this.additionalAuthenticationProviders;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
     public Output<GraphQLApiLambdaAuthorizerConfigArgs> getLambdaAuthorizerConfig() {
-        return this.lambdaAuthorizerConfig == null ? Output.empty() : this.lambdaAuthorizerConfig;
+        return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GraphQLApiLogConfigArgs> logConfig;
 
     public Output<GraphQLApiLogConfigArgs> getLogConfig() {
-        return this.logConfig == null ? Output.empty() : this.logConfig;
+        return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig;
 
     public Output<GraphQLApiOpenidConnectConfigArgs> getOpenidConnectConfig() {
-        return this.openidConnectConfig == null ? Output.empty() : this.openidConnectConfig;
+        return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig;
 
     public Output<GraphQLApiUserPoolConfigArgs> getUserPoolConfig() {
-        return this.userPoolConfig == null ? Output.empty() : this.userPoolConfig;
+        return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> xrayEnabled;
 
     public Output<Boolean> getXrayEnabled() {
-        return this.xrayEnabled == null ? Output.empty() : this.xrayEnabled;
+        return this.xrayEnabled == null ? Codegen.empty() : this.xrayEnabled;
     }
 
     public GraphQLApiArgs(
@@ -156,16 +157,16 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphQLApiArgs() {
-        this.additionalAuthenticationProviders = Output.empty();
-        this.authenticationType = Output.empty();
-        this.lambdaAuthorizerConfig = Output.empty();
-        this.logConfig = Output.empty();
-        this.name = Output.empty();
-        this.openidConnectConfig = Output.empty();
-        this.schema = Output.empty();
-        this.tags = Output.empty();
-        this.userPoolConfig = Output.empty();
-        this.xrayEnabled = Output.empty();
+        this.additionalAuthenticationProviders = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.lambdaAuthorizerConfig = Codegen.empty();
+        this.logConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.openidConnectConfig = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userPoolConfig = Codegen.empty();
+        this.xrayEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalAuthenticationProviders(@Nullable List<GraphQLApiAdditionalAuthenticationProviderArgs> additionalAuthenticationProviders) {
-            this.additionalAuthenticationProviders = Output.ofNullable(additionalAuthenticationProviders);
+            this.additionalAuthenticationProviders = Codegen.ofNullable(additionalAuthenticationProviders);
             return this;
         }
         public Builder additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProviderArgs... additionalAuthenticationProviders) {
@@ -230,7 +231,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiLambdaAuthorizerConfigArgs lambdaAuthorizerConfig) {
-            this.lambdaAuthorizerConfig = Output.ofNullable(lambdaAuthorizerConfig);
+            this.lambdaAuthorizerConfig = Codegen.ofNullable(lambdaAuthorizerConfig);
             return this;
         }
         public Builder logConfig(@Nullable Output<GraphQLApiLogConfigArgs> logConfig) {
@@ -238,7 +239,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logConfig(@Nullable GraphQLApiLogConfigArgs logConfig) {
-            this.logConfig = Output.ofNullable(logConfig);
+            this.logConfig = Codegen.ofNullable(logConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -246,7 +247,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig) {
@@ -254,7 +255,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder openidConnectConfig(@Nullable GraphQLApiOpenidConnectConfigArgs openidConnectConfig) {
-            this.openidConnectConfig = Output.ofNullable(openidConnectConfig);
+            this.openidConnectConfig = Codegen.ofNullable(openidConnectConfig);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -262,7 +263,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -270,7 +271,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userPoolConfig(@Nullable Output<GraphQLApiUserPoolConfigArgs> userPoolConfig) {
@@ -278,7 +279,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userPoolConfig(@Nullable GraphQLApiUserPoolConfigArgs userPoolConfig) {
-            this.userPoolConfig = Output.ofNullable(userPoolConfig);
+            this.userPoolConfig = Codegen.ofNullable(userPoolConfig);
             return this;
         }
         public Builder xrayEnabled(@Nullable Output<Boolean> xrayEnabled) {
@@ -286,7 +287,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xrayEnabled(@Nullable Boolean xrayEnabled) {
-            this.xrayEnabled = Output.ofNullable(xrayEnabled);
+            this.xrayEnabled = Codegen.ofNullable(xrayEnabled);
             return this;
         }        public GraphQLApiArgs build() {
             return new GraphQLApiArgs(additionalAuthenticationProviders, authenticationType, lambdaAuthorizerConfig, logConfig, name, openidConnectConfig, schema, tags, userPoolConfig, xrayEnabled);

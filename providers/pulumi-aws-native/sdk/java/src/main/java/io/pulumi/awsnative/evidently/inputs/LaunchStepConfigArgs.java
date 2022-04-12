@@ -6,6 +6,7 @@ package io.pulumi.awsnative.evidently.inputs;
 import io.pulumi.awsnative.evidently.inputs.LaunchGroupToWeightArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,8 +38,8 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LaunchStepConfigArgs() {
-        this.groupWeights = Output.empty();
-        this.startTime = Output.empty();
+        this.groupWeights = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

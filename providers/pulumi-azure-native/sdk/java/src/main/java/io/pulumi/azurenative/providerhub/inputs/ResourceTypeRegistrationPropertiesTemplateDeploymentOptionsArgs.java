@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.PreflightOption;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,14 +23,14 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
       private final @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions;
 
     public Output<List<Either<String,PreflightOption>>> getPreflightOptions() {
-        return this.preflightOptions == null ? Output.empty() : this.preflightOptions;
+        return this.preflightOptions == null ? Codegen.empty() : this.preflightOptions;
     }
 
     @Import(name="preflightSupported")
       private final @Nullable Output<Boolean> preflightSupported;
 
     public Output<Boolean> getPreflightSupported() {
-        return this.preflightSupported == null ? Output.empty() : this.preflightSupported;
+        return this.preflightSupported == null ? Codegen.empty() : this.preflightSupported;
     }
 
     public ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs(
@@ -40,8 +41,8 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
     }
 
     private ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs() {
-        this.preflightOptions = Output.empty();
-        this.preflightSupported = Output.empty();
+        this.preflightOptions = Codegen.empty();
+        this.preflightSupported = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
             return this;
         }
         public Builder preflightOptions(@Nullable List<Either<String,PreflightOption>> preflightOptions) {
-            this.preflightOptions = Output.ofNullable(preflightOptions);
+            this.preflightOptions = Codegen.ofNullable(preflightOptions);
             return this;
         }
         public Builder preflightOptions(Either<String,PreflightOption>... preflightOptions) {
@@ -82,7 +83,7 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
             return this;
         }
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
-            this.preflightSupported = Output.ofNullable(preflightSupported);
+            this.preflightSupported = Codegen.ofNullable(preflightSupported);
             return this;
         }        public ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs(preflightOptions, preflightSupported);

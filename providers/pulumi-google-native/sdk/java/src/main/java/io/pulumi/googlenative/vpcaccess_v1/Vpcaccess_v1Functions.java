@@ -16,10 +16,10 @@ public final class Vpcaccess_v1Functions {
      * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
      * 
      */
-    public static CompletableFuture<GetConnectorResult> getConnector(io.pulumi.googlenative.vpcaccess_v1.inputs.GetConnectorArgs args) {
-        return getConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
+        return getConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectorResult> getConnector(io.pulumi.googlenative.vpcaccess_v1.inputs.GetConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vpcaccess/v1:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
 }

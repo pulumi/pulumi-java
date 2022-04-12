@@ -18,20 +18,20 @@ public final class Container_v1beta1Functions {
      * Gets the details for a specific cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.container_v1beta1.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.googlenative.container_v1beta1.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:container/v1beta1:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the requested node pool.
      * 
      */
-    public static CompletableFuture<GetNodePoolResult> getNodePool(io.pulumi.googlenative.container_v1beta1.inputs.GetNodePoolArgs args) {
-        return getNodePool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args) {
+        return getNodePool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodePoolResult> getNodePool(io.pulumi.googlenative.container_v1beta1.inputs.GetNodePoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodePoolResult> getNodePool(GetNodePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:container/v1beta1:getNodePool", TypeShape.of(GetNodePoolResult.class), args, Utilities.withVersion(options));
     }
 }

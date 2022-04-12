@@ -12,10 +12,10 @@ import io.pulumi.gcp.servicenetworking.outputs.GetPeeredDnsDomainResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class ServicenetworkingFunctions {
-    public static CompletableFuture<GetPeeredDnsDomainResult> getPeeredDnsDomain(io.pulumi.gcp.servicenetworking.inputs.GetPeeredDnsDomainArgs args) {
-        return getPeeredDnsDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPeeredDnsDomainResult> getPeeredDnsDomain(GetPeeredDnsDomainArgs args) {
+        return getPeeredDnsDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPeeredDnsDomainResult> getPeeredDnsDomain(io.pulumi.gcp.servicenetworking.inputs.GetPeeredDnsDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPeeredDnsDomainResult> getPeeredDnsDomain(GetPeeredDnsDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:servicenetworking/getPeeredDnsDomain:getPeeredDnsDomain", TypeShape.of(GetPeeredDnsDomainResult.class), args, Utilities.withVersion(options));
     }
 }

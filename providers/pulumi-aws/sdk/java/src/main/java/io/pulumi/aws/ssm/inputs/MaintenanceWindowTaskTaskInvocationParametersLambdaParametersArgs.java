@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
       private final @Nullable Output<String> clientContext;
 
     public Output<String> getClientContext() {
-        return this.clientContext == null ? Output.empty() : this.clientContext;
+        return this.clientContext == null ? Codegen.empty() : this.clientContext;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {
-        return this.qualifier == null ? Output.empty() : this.qualifier;
+        return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs(
@@ -57,9 +58,9 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs() {
-        this.clientContext = Output.empty();
-        this.payload = Output.empty();
-        this.qualifier = Output.empty();
+        this.clientContext = Codegen.empty();
+        this.payload = Codegen.empty();
+        this.qualifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
             return this;
         }
         public Builder clientContext(@Nullable String clientContext) {
-            this.clientContext = Output.ofNullable(clientContext);
+            this.clientContext = Codegen.ofNullable(clientContext);
             return this;
         }
         public Builder payload(@Nullable Output<String> payload) {
@@ -99,7 +100,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
             return this;
         }
         public Builder payload(@Nullable String payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder qualifier(@Nullable Output<String> qualifier) {
@@ -107,7 +108,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
             return this;
         }
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Output.ofNullable(qualifier);
+            this.qualifier = Codegen.ofNullable(qualifier);
             return this;
         }        public MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs(clientContext, payload, qualifier);

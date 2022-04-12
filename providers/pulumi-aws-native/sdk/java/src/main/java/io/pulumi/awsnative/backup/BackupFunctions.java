@@ -24,50 +24,50 @@ public final class BackupFunctions {
      * Resource Type definition for AWS::Backup::BackupPlan
      * 
      */
-    public static CompletableFuture<GetBackupPlanResult> getBackupPlan(io.pulumi.awsnative.backup.inputs.GetBackupPlanArgs args) {
-        return getBackupPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args) {
+        return getBackupPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupPlanResult> getBackupPlan(io.pulumi.awsnative.backup.inputs.GetBackupPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupPlanResult> getBackupPlan(GetBackupPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupPlan", TypeShape.of(GetBackupPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Backup::BackupSelection
      * 
      */
-    public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(io.pulumi.awsnative.backup.inputs.GetBackupSelectionArgs args) {
-        return getBackupSelection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(GetBackupSelectionArgs args) {
+        return getBackupSelection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(io.pulumi.awsnative.backup.inputs.GetBackupSelectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupSelectionResult> getBackupSelection(GetBackupSelectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupSelection", TypeShape.of(GetBackupSelectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Backup::BackupVault
      * 
      */
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(io.pulumi.awsnative.backup.inputs.GetBackupVaultArgs args) {
-        return getBackupVault(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args) {
+        return getBackupVault(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupVaultResult> getBackupVault(io.pulumi.awsnative.backup.inputs.GetBackupVaultArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupVaultResult> getBackupVault(GetBackupVaultArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupVault", TypeShape.of(GetBackupVaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
      * 
      */
-    public static CompletableFuture<GetFrameworkResult> getFramework(io.pulumi.awsnative.backup.inputs.GetFrameworkArgs args) {
-        return getFramework(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
+        return getFramework(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFrameworkResult> getFramework(io.pulumi.awsnative.backup.inputs.GetFrameworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getFramework", TypeShape.of(GetFrameworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains detailed information about a report plan in AWS Backup Audit Manager.
      * 
      */
-    public static CompletableFuture<GetReportPlanResult> getReportPlan(io.pulumi.awsnative.backup.inputs.GetReportPlanArgs args) {
-        return getReportPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
+        return getReportPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReportPlanResult> getReportPlan(io.pulumi.awsnative.backup.inputs.GetReportPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getReportPlan", TypeShape.of(GetReportPlanResult.class), args, Utilities.withVersion(options));
     }
 }

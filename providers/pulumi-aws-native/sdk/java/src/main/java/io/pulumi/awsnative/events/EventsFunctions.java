@@ -20,30 +20,30 @@ public final class EventsFunctions {
      * Resource Type definition for AWS::Events::ApiDestination.
      * 
      */
-    public static CompletableFuture<GetApiDestinationResult> getApiDestination(io.pulumi.awsnative.events.inputs.GetApiDestinationArgs args) {
-        return getApiDestination(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiDestinationResult> getApiDestination(GetApiDestinationArgs args) {
+        return getApiDestination(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiDestinationResult> getApiDestination(io.pulumi.awsnative.events.inputs.GetApiDestinationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiDestinationResult> getApiDestination(GetApiDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getApiDestination", TypeShape.of(GetApiDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Events::Archive
      * 
      */
-    public static CompletableFuture<GetArchiveResult> getArchive(io.pulumi.awsnative.events.inputs.GetArchiveArgs args) {
-        return getArchive(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArchiveResult> getArchive(GetArchiveArgs args) {
+        return getArchive(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArchiveResult> getArchive(io.pulumi.awsnative.events.inputs.GetArchiveArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArchiveResult> getArchive(GetArchiveArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getArchive", TypeShape.of(GetArchiveResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Events::Connection.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.awsnative.events.inputs.GetConnectionArgs args) {
-        return getConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+        return getConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionResult> getConnection(io.pulumi.awsnative.events.inputs.GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

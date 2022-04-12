@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
       private final @Nullable Output<String> sha1Sum;
 
     public Output<String> getSha1Sum() {
-        return this.sha1Sum == null ? Output.empty() : this.sha1Sum;
+        return this.sha1Sum == null ? Codegen.empty() : this.sha1Sum;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
     }
 
     private StandardAppVersionDeploymentFileArgs() {
-        this.name = Output.empty();
-        this.sha1Sum = Output.empty();
-        this.sourceUrl = Output.empty();
+        this.name = Codegen.empty();
+        this.sha1Sum = Codegen.empty();
+        this.sourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
             return this;
         }
         public Builder sha1Sum(@Nullable String sha1Sum) {
-            this.sha1Sum = Output.ofNullable(sha1Sum);
+            this.sha1Sum = Codegen.ofNullable(sha1Sum);
             return this;
         }
         public Builder sourceUrl(Output<String> sourceUrl) {

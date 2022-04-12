@@ -5,6 +5,7 @@ package io.pulumi.gcp.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
+        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
     }
 
     private WorkloadIdentityPoolProviderOidcArgs() {
-        this.allowedAudiences = Output.empty();
-        this.issuerUri = Output.empty();
+        this.allowedAudiences = Codegen.empty();
+        this.issuerUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
             return this;
         }
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Output.ofNullable(allowedAudiences);
+            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
             return this;
         }
         public Builder allowedAudiences(String... allowedAudiences) {

@@ -31,12 +31,12 @@ public final class CloudfrontFunctions {
      * 
      */
     public static CompletableFuture<GetCachePolicyResult> getCachePolicy() {
-        return getCachePolicy(io.pulumi.aws.cloudfront.inputs.GetCachePolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCachePolicy(GetCachePolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(io.pulumi.aws.cloudfront.inputs.GetCachePolicyArgs args) {
-        return getCachePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args) {
+        return getCachePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(io.pulumi.aws.cloudfront.inputs.GetCachePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getCachePolicy:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class CloudfrontFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDistributionResult> getDistribution(io.pulumi.aws.cloudfront.inputs.GetDistributionArgs args) {
-        return getDistribution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args) {
+        return getDistribution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributionResult> getDistribution(io.pulumi.aws.cloudfront.inputs.GetDistributionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getDistribution:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -57,10 +57,10 @@ public final class CloudfrontFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.cloudfront.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.cloudfront.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,18 +71,18 @@ public final class CloudfrontFunctions {
      * 
      */
     public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId() {
-        return getLogDeliveryCanonicalUserId(io.pulumi.aws.cloudfront.inputs.GetLogDeliveryCanonicalUserIdArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(io.pulumi.aws.cloudfront.inputs.GetLogDeliveryCanonicalUserIdArgs args) {
-        return getLogDeliveryCanonicalUserId(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args) {
+        return getLogDeliveryCanonicalUserId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(io.pulumi.aws.cloudfront.inputs.GetLogDeliveryCanonicalUserIdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId(GetLogDeliveryCanonicalUserIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getLogDeliveryCanonicalUserId:getLogDeliveryCanonicalUserId", TypeShape.of(GetLogDeliveryCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(io.pulumi.aws.cloudfront.inputs.GetOriginAccessIdentityArgs args) {
-        return getOriginAccessIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args) {
+        return getOriginAccessIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(io.pulumi.aws.cloudfront.inputs.GetOriginAccessIdentityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginAccessIdentityResult> getOriginAccessIdentity(GetOriginAccessIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginAccessIdentity:getOriginAccessIdentity", TypeShape.of(GetOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,12 +90,12 @@ public final class CloudfrontFunctions {
      * 
      */
     public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy() {
-        return getOriginRequestPolicy(io.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOriginRequestPolicy(GetOriginRequestPolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(io.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyArgs args) {
-        return getOriginRequestPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args) {
+        return getOriginRequestPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(io.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginRequestPolicy:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,12 +105,12 @@ public final class CloudfrontFunctions {
      * 
      */
     public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy() {
-        return getResponseHeadersPolicy(io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getResponseHeadersPolicy(GetResponseHeadersPolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicyArgs args) {
-        return getResponseHeadersPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args) {
+        return getResponseHeadersPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getResponseHeadersPolicy:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

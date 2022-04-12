@@ -6,6 +6,7 @@ package io.pulumi.awsnative.xray.inputs;
 import io.pulumi.awsnative.xray.inputs.SamplingRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> modifiedAt;
 
     public Output<String> getModifiedAt() {
-        return this.modifiedAt == null ? Output.empty() : this.modifiedAt;
+        return this.modifiedAt == null ? Codegen.empty() : this.modifiedAt;
     }
 
     @Import(name="samplingRule")
       private final @Nullable Output<SamplingRuleArgs> samplingRule;
 
     public Output<SamplingRuleArgs> getSamplingRule() {
-        return this.samplingRule == null ? Output.empty() : this.samplingRule;
+        return this.samplingRule == null ? Codegen.empty() : this.samplingRule;
     }
 
     public SamplingRuleRecordArgs(
@@ -54,9 +55,9 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SamplingRuleRecordArgs() {
-        this.createdAt = Output.empty();
-        this.modifiedAt = Output.empty();
-        this.samplingRule = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.modifiedAt = Codegen.empty();
+        this.samplingRule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
@@ -96,7 +97,7 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Output.ofNullable(modifiedAt);
+            this.modifiedAt = Codegen.ofNullable(modifiedAt);
             return this;
         }
         public Builder samplingRule(@Nullable Output<SamplingRuleArgs> samplingRule) {
@@ -104,7 +105,7 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder samplingRule(@Nullable SamplingRuleArgs samplingRule) {
-            this.samplingRule = Output.ofNullable(samplingRule);
+            this.samplingRule = Codegen.ofNullable(samplingRule);
             return this;
         }        public SamplingRuleRecordArgs build() {
             return new SamplingRuleRecordArgs(createdAt, modifiedAt, samplingRule);

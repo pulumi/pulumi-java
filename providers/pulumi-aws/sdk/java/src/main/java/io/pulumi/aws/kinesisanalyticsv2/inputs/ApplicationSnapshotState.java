@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> applicationVersionId;
 
     public Output<Integer> getApplicationVersionId() {
-        return this.applicationVersionId == null ? Output.empty() : this.applicationVersionId;
+        return this.applicationVersionId == null ? Codegen.empty() : this.applicationVersionId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> snapshotCreationTimestamp;
 
     public Output<String> getSnapshotCreationTimestamp() {
-        return this.snapshotCreationTimestamp == null ? Output.empty() : this.snapshotCreationTimestamp;
+        return this.snapshotCreationTimestamp == null ? Codegen.empty() : this.snapshotCreationTimestamp;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
-        return this.snapshotName == null ? Output.empty() : this.snapshotName;
+        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
     public ApplicationSnapshotState(
@@ -71,10 +72,10 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     }
 
     private ApplicationSnapshotState() {
-        this.applicationName = Output.empty();
-        this.applicationVersionId = Output.empty();
-        this.snapshotCreationTimestamp = Output.empty();
-        this.snapshotName = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.applicationVersionId = Codegen.empty();
+        this.snapshotCreationTimestamp = Codegen.empty();
+        this.snapshotName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder applicationVersionId(@Nullable Output<Integer> applicationVersionId) {
@@ -116,7 +117,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder applicationVersionId(@Nullable Integer applicationVersionId) {
-            this.applicationVersionId = Output.ofNullable(applicationVersionId);
+            this.applicationVersionId = Codegen.ofNullable(applicationVersionId);
             return this;
         }
         public Builder snapshotCreationTimestamp(@Nullable Output<String> snapshotCreationTimestamp) {
@@ -124,7 +125,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder snapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
-            this.snapshotCreationTimestamp = Output.ofNullable(snapshotCreationTimestamp);
+            this.snapshotCreationTimestamp = Codegen.ofNullable(snapshotCreationTimestamp);
             return this;
         }
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
@@ -132,7 +133,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Output.ofNullable(snapshotName);
+            this.snapshotName = Codegen.ofNullable(snapshotName);
             return this;
         }        public ApplicationSnapshotState build() {
             return new ApplicationSnapshotState(applicationName, applicationVersionId, snapshotCreationTimestamp, snapshotName);

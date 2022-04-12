@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.GcsDestinationConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
     public Output<GcsDestinationConfigArgs> getGcsDestinationConfig() {
-        return this.gcsDestinationConfig == null ? Output.empty() : this.gcsDestinationConfig;
+        return this.gcsDestinationConfig == null ? Codegen.empty() : this.gcsDestinationConfig;
     }
 
     public DestinationConfigArgs(
@@ -49,8 +50,8 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DestinationConfigArgs() {
-        this.destinationConnectionProfileName = Output.empty();
-        this.gcsDestinationConfig = Output.empty();
+        this.destinationConnectionProfileName = Codegen.empty();
+        this.gcsDestinationConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gcsDestinationConfig(@Nullable GcsDestinationConfigArgs gcsDestinationConfig) {
-            this.gcsDestinationConfig = Output.ofNullable(gcsDestinationConfig);
+            this.gcsDestinationConfig = Codegen.ofNullable(gcsDestinationConfig);
             return this;
         }        public DestinationConfigArgs build() {
             return new DestinationConfigArgs(destinationConnectionProfileName, gcsDestinationConfig);

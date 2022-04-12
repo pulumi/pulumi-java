@@ -6,6 +6,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastorePreloadDataConfigPreloadDataType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -33,7 +34,7 @@ public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resource
     }
 
     private FHIRDatastorePreloadDataConfigArgs() {
-        this.preloadDataType = Output.empty();
+        this.preloadDataType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
       private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
     public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
-        return this.resourceStatement == null ? Output.empty() : this.resourceStatement;
+        return this.resourceStatement == null ? Codegen.empty() : this.resourceStatement;
     }
 
     public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
@@ -26,7 +27,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     }
 
     private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs() {
-        this.resourceStatement = Output.empty();
+        this.resourceStatement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
             return this;
         }
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
-            this.resourceStatement = Output.ofNullable(resourceStatement);
+            this.resourceStatement = Codegen.ofNullable(resourceStatement);
             return this;
         }        public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {
             return new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(resourceStatement);

@@ -5,6 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
       private final @Nullable Output<Double> weightFactor;
 
     public Output<Double> getWeightFactor() {
-        return this.weightFactor == null ? Output.empty() : this.weightFactor;
+        return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
     }
 
     public SchedulingPolicyFairSharePolicyShareDistributionArgs(
@@ -45,8 +46,8 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
     }
 
     private SchedulingPolicyFairSharePolicyShareDistributionArgs() {
-        this.shareIdentifier = Output.empty();
-        this.weightFactor = Output.empty();
+        this.shareIdentifier = Codegen.empty();
+        this.weightFactor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
             return this;
         }
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Output.ofNullable(weightFactor);
+            this.weightFactor = Codegen.ofNullable(weightFactor);
             return this;
         }        public SchedulingPolicyFairSharePolicyShareDistributionArgs build() {
             return new SchedulingPolicyFairSharePolicyShareDistributionArgs(shareIdentifier, weightFactor);

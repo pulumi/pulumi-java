@@ -24,10 +24,10 @@ public final class CloudtrailFunctions {
      * 
      */
     @Deprecated /* aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.cloudtrail.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.aws.cloudtrail.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudtrail/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,12 +38,12 @@ public final class CloudtrailFunctions {
      * 
      */
     public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
-        return getServiceAccount(io.pulumi.aws.cloudtrail.inputs.GetServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.cloudtrail.inputs.GetServiceAccountArgs args) {
-        return getServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+        return getServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.cloudtrail.inputs.GetServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudtrail/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -51,10 +51,10 @@ public final class AuthorizationFunctions {
      * API Version: 2021-11-16-preview.
      * 
      */
-    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(io.pulumi.azurenative.authorization.inputs.GetAccessReviewHistoryDefinitionByIdArgs args) {
-        return getAccessReviewHistoryDefinitionById(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(GetAccessReviewHistoryDefinitionByIdArgs args) {
+        return getAccessReviewHistoryDefinitionById(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(io.pulumi.azurenative.authorization.inputs.GetAccessReviewHistoryDefinitionByIdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessReviewHistoryDefinitionByIdResult> getAccessReviewHistoryDefinitionById(GetAccessReviewHistoryDefinitionByIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewHistoryDefinitionById", TypeShape.of(GetAccessReviewHistoryDefinitionByIdResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class AuthorizationFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(io.pulumi.azurenative.authorization.inputs.GetAccessReviewScheduleDefinitionByIdArgs args) {
-        return getAccessReviewScheduleDefinitionById(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(GetAccessReviewScheduleDefinitionByIdArgs args) {
+        return getAccessReviewScheduleDefinitionById(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(io.pulumi.azurenative.authorization.inputs.GetAccessReviewScheduleDefinitionByIdArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> getAccessReviewScheduleDefinitionById(GetAccessReviewScheduleDefinitionByIdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewScheduleDefinitionById", TypeShape.of(GetAccessReviewScheduleDefinitionByIdResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,12 +73,12 @@ public final class AuthorizationFunctions {
      * 
      */
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
-        return getClientConfig(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(io.pulumi.resources.InvokeArgs args) {
-        return getClientConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
+        return getClientConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,12 +86,12 @@ public final class AuthorizationFunctions {
      * 
      */
     public static CompletableFuture<GetClientTokenResult> getClientToken() {
-        return getClientToken(io.pulumi.azurenative.authorization.inputs.GetClientTokenArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClientToken(GetClientTokenArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientTokenResult> getClientToken(io.pulumi.azurenative.authorization.inputs.GetClientTokenArgs args) {
-        return getClientToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientTokenResult> getClientToken(GetClientTokenArgs args) {
+        return getClientToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientTokenResult> getClientToken(io.pulumi.azurenative.authorization.inputs.GetClientTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientTokenResult> getClientToken(GetClientTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class AuthorizationFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtResourceGroupLevelArgs args) {
-        return getManagementLockAtResourceGroupLevel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(GetManagementLockAtResourceGroupLevelArgs args) {
+        return getManagementLockAtResourceGroupLevel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtResourceGroupLevelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> getManagementLockAtResourceGroupLevel(GetManagementLockAtResourceGroupLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceGroupLevel", TypeShape.of(GetManagementLockAtResourceGroupLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class AuthorizationFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtResourceLevelArgs args) {
-        return getManagementLockAtResourceLevel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(GetManagementLockAtResourceLevelArgs args) {
+        return getManagementLockAtResourceLevel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtResourceLevelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementLockAtResourceLevelResult> getManagementLockAtResourceLevel(GetManagementLockAtResourceLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceLevel", TypeShape.of(GetManagementLockAtResourceLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,10 +121,10 @@ public final class AuthorizationFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtSubscriptionLevelArgs args) {
-        return getManagementLockAtSubscriptionLevel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(GetManagementLockAtSubscriptionLevelArgs args) {
+        return getManagementLockAtSubscriptionLevel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(io.pulumi.azurenative.authorization.inputs.GetManagementLockAtSubscriptionLevelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementLockAtSubscriptionLevelResult> getManagementLockAtSubscriptionLevel(GetManagementLockAtSubscriptionLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtSubscriptionLevel", TypeShape.of(GetManagementLockAtSubscriptionLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -132,10 +132,10 @@ public final class AuthorizationFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(io.pulumi.azurenative.authorization.inputs.GetManagementLockByScopeArgs args) {
-        return getManagementLockByScope(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(GetManagementLockByScopeArgs args) {
+        return getManagementLockByScope(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(io.pulumi.azurenative.authorization.inputs.GetManagementLockByScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementLockByScopeResult> getManagementLockByScope(GetManagementLockByScopeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockByScope", TypeShape.of(GetManagementLockByScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,10 +143,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(io.pulumi.azurenative.authorization.inputs.GetPolicyAssignmentArgs args) {
-        return getPolicyAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(GetPolicyAssignmentArgs args) {
+        return getPolicyAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(io.pulumi.azurenative.authorization.inputs.GetPolicyAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyAssignmentResult> getPolicyAssignment(GetPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyAssignment", TypeShape.of(GetPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -154,10 +154,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(io.pulumi.azurenative.authorization.inputs.GetPolicyDefinitionArgs args) {
-        return getPolicyDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(GetPolicyDefinitionArgs args) {
+        return getPolicyDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(io.pulumi.azurenative.authorization.inputs.GetPolicyDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyDefinitionResult> getPolicyDefinition(GetPolicyDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyDefinition", TypeShape.of(GetPolicyDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,10 +165,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(io.pulumi.azurenative.authorization.inputs.GetPolicyDefinitionAtManagementGroupArgs args) {
-        return getPolicyDefinitionAtManagementGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(GetPolicyDefinitionAtManagementGroupArgs args) {
+        return getPolicyDefinitionAtManagementGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(io.pulumi.azurenative.authorization.inputs.GetPolicyDefinitionAtManagementGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyDefinitionAtManagementGroupResult> getPolicyDefinitionAtManagementGroup(GetPolicyDefinitionAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyDefinitionAtManagementGroup", TypeShape.of(GetPolicyDefinitionAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -176,10 +176,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-07-01-preview.
      * 
      */
-    public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(io.pulumi.azurenative.authorization.inputs.GetPolicyExemptionArgs args) {
-        return getPolicyExemption(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(GetPolicyExemptionArgs args) {
+        return getPolicyExemption(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(io.pulumi.azurenative.authorization.inputs.GetPolicyExemptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyExemptionResult> getPolicyExemption(GetPolicyExemptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyExemption", TypeShape.of(GetPolicyExemptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -187,10 +187,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(io.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionArgs args) {
-        return getPolicySetDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args) {
+        return getPolicySetDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(io.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicySetDefinitionResult> getPolicySetDefinition(GetPolicySetDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -198,20 +198,20 @@ public final class AuthorizationFunctions {
      * API Version: 2020-09-01.
      * 
      */
-    public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(io.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionAtManagementGroupArgs args) {
-        return getPolicySetDefinitionAtManagementGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(GetPolicySetDefinitionAtManagementGroupArgs args) {
+        return getPolicySetDefinitionAtManagementGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(io.pulumi.azurenative.authorization.inputs.GetPolicySetDefinitionAtManagementGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicySetDefinitionAtManagementGroupResult> getPolicySetDefinitionAtManagementGroup(GetPolicySetDefinitionAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinitionAtManagementGroup", TypeShape.of(GetPolicySetDefinitionAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(io.pulumi.azurenative.authorization.inputs.GetResourceManagementPrivateLinkArgs args) {
-        return getResourceManagementPrivateLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(GetResourceManagementPrivateLinkArgs args) {
+        return getResourceManagementPrivateLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(io.pulumi.azurenative.authorization.inputs.GetResourceManagementPrivateLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceManagementPrivateLinkResult> getResourceManagementPrivateLink(GetResourceManagementPrivateLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getResourceManagementPrivateLink", TypeShape.of(GetResourceManagementPrivateLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -219,10 +219,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(io.pulumi.azurenative.authorization.inputs.GetRoleAssignmentArgs args) {
-        return getRoleAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args) {
+        return getRoleAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(io.pulumi.azurenative.authorization.inputs.GetRoleAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -230,10 +230,10 @@ public final class AuthorizationFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(io.pulumi.azurenative.authorization.inputs.GetRoleDefinitionArgs args) {
-        return getRoleDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
+        return getRoleDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(io.pulumi.azurenative.authorization.inputs.GetRoleDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -241,10 +241,10 @@ public final class AuthorizationFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(io.pulumi.azurenative.authorization.inputs.GetRoleManagementPolicyAssignmentArgs args) {
-        return getRoleManagementPolicyAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(GetRoleManagementPolicyAssignmentArgs args) {
+        return getRoleManagementPolicyAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(io.pulumi.azurenative.authorization.inputs.GetRoleManagementPolicyAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> getRoleManagementPolicyAssignment(GetRoleManagementPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleManagementPolicyAssignment", TypeShape.of(GetRoleManagementPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -50,10 +50,10 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmi has been deprecated in favor of aws.ec2.getAmi */
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.inputs.GetAmiArgs args) {
-        return getAmi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+        return getAmi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.inputs.GetAmiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class AwsFunctions {
      * 
      */
     @Deprecated /* aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds */
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.inputs.GetAmiIdsArgs args) {
-        return getAmiIds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+        return getAmiIds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.inputs.GetAmiIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -78,10 +78,10 @@ public final class AwsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetArnResult> getArn(io.pulumi.aws.inputs.GetArnArgs args) {
-        return getArn(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArnResult> getArn(GetArnArgs args) {
+        return getArn(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArnResult> getArn(io.pulumi.aws.inputs.GetArnArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArnResult> getArn(GetArnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getArn:getArn", TypeShape.of(GetArnResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,12 +96,12 @@ public final class AwsFunctions {
      */
     @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
     public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups() {
-        return getAutoscalingGroups(io.pulumi.aws.inputs.GetAutoscalingGroupsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAutoscalingGroups(GetAutoscalingGroupsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(io.pulumi.aws.inputs.GetAutoscalingGroupsArgs args) {
-        return getAutoscalingGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args) {
+        return getAutoscalingGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(io.pulumi.aws.inputs.GetAutoscalingGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoscalingGroupsResult> getAutoscalingGroups(GetAutoscalingGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAutoscalingGroups:getAutoscalingGroups", TypeShape.of(GetAutoscalingGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -119,12 +119,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone() {
-        return getAvailabilityZone(io.pulumi.aws.inputs.GetAvailabilityZoneArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAvailabilityZone(GetAvailabilityZoneArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(io.pulumi.aws.inputs.GetAvailabilityZoneArgs args) {
-        return getAvailabilityZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args) {
+        return getAvailabilityZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(io.pulumi.aws.inputs.GetAvailabilityZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAvailabilityZoneResult> getAvailabilityZone(GetAvailabilityZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAvailabilityZone:getAvailabilityZone", TypeShape.of(GetAvailabilityZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,12 +141,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones() {
-        return getAvailabilityZones(io.pulumi.aws.inputs.GetAvailabilityZonesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAvailabilityZones(GetAvailabilityZonesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(io.pulumi.aws.inputs.GetAvailabilityZonesArgs args) {
-        return getAvailabilityZones(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args) {
+        return getAvailabilityZones(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(io.pulumi.aws.inputs.GetAvailabilityZonesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones(GetAvailabilityZonesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAvailabilityZones:getAvailabilityZones", TypeShape.of(GetAvailabilityZonesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -156,12 +156,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount() {
-        return getBillingServiceAccount(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getBillingServiceAccount(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(io.pulumi.resources.InvokeArgs args) {
-        return getBillingServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args) {
+        return getBillingServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getBillingServiceAccount:getBillingServiceAccount", TypeShape.of(GetBillingServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,12 +172,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity() {
-        return getCallerIdentity(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCallerIdentity(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(io.pulumi.resources.InvokeArgs args) {
-        return getCallerIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args) {
+        return getCallerIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getCallerIdentity:getCallerIdentity", TypeShape.of(GetCallerIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -192,21 +192,21 @@ public final class AwsFunctions {
      */
     @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
     public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId() {
-        return getCanonicalUserId(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCanonicalUserId(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(io.pulumi.resources.InvokeArgs args) {
-        return getCanonicalUserId(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args) {
+        return getCanonicalUserId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
     public static CompletableFuture<GetDefaultTagsResult> getDefaultTags() {
-        return getDefaultTags(io.pulumi.aws.inputs.GetDefaultTagsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDefaultTags(GetDefaultTagsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(io.pulumi.aws.inputs.GetDefaultTagsArgs args) {
-        return getDefaultTags(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args) {
+        return getDefaultTags(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(io.pulumi.aws.inputs.GetDefaultTagsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultTagsResult> getDefaultTags(GetDefaultTagsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getDefaultTags:getDefaultTags", TypeShape.of(GetDefaultTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -220,12 +220,12 @@ public final class AwsFunctions {
      */
     @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
     public static CompletableFuture<GetElasticIpResult> getElasticIp() {
-        return getElasticIp(io.pulumi.aws.inputs.GetElasticIpArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getElasticIp(GetElasticIpArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(io.pulumi.aws.inputs.GetElasticIpArgs args) {
-        return getElasticIp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args) {
+        return getElasticIp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetElasticIpResult> getElasticIp(io.pulumi.aws.inputs.GetElasticIpArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetElasticIpResult> getElasticIp(GetElasticIpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -234,10 +234,10 @@ public final class AwsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpRangesResult> getIpRanges(io.pulumi.aws.inputs.GetIpRangesArgs args) {
-        return getIpRanges(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpRangesResult> getIpRanges(GetIpRangesArgs args) {
+        return getIpRanges(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpRangesResult> getIpRanges(io.pulumi.aws.inputs.GetIpRangesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpRangesResult> getIpRanges(GetIpRangesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getIpRanges:getIpRanges", TypeShape.of(GetIpRangesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -247,12 +247,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetPartitionResult> getPartition() {
-        return getPartition(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPartition(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartitionResult> getPartition(io.pulumi.resources.InvokeArgs args) {
-        return getPartition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args) {
+        return getPartition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartitionResult> getPartition(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getPartition:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -263,12 +263,12 @@ public final class AwsFunctions {
      */
     @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
     public static CompletableFuture<GetPrefixListResult> getPrefixList() {
-        return getPrefixList(io.pulumi.aws.inputs.GetPrefixListArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(io.pulumi.aws.inputs.GetPrefixListArgs args) {
-        return getPrefixList(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
+        return getPrefixList(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrefixListResult> getPrefixList(io.pulumi.aws.inputs.GetPrefixListArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -283,12 +283,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetRegionResult> getRegion() {
-        return getRegion(io.pulumi.aws.inputs.GetRegionArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRegion(GetRegionArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionResult> getRegion(io.pulumi.aws.inputs.GetRegionArgs args) {
-        return getRegion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionResult> getRegion(GetRegionArgs args) {
+        return getRegion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionResult> getRegion(io.pulumi.aws.inputs.GetRegionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionResult> getRegion(GetRegionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getRegion:getRegion", TypeShape.of(GetRegionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -298,12 +298,12 @@ public final class AwsFunctions {
      * 
      */
     public static CompletableFuture<GetRegionsResult> getRegions() {
-        return getRegions(io.pulumi.aws.inputs.GetRegionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionsResult> getRegions(io.pulumi.aws.inputs.GetRegionsArgs args) {
-        return getRegions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
+        return getRegions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionsResult> getRegions(io.pulumi.aws.inputs.GetRegionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> alternateName;
 
     public Output<String> getAlternateName() {
-        return this.alternateName == null ? Output.empty() : this.alternateName;
+        return this.alternateName == null ? Codegen.empty() : this.alternateName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> partnerNamespace;
 
     public Output<String> getPartnerNamespace() {
-        return this.partnerNamespace == null ? Output.empty() : this.partnerNamespace;
+        return this.partnerNamespace == null ? Codegen.empty() : this.partnerNamespace;
     }
 
     /**
@@ -83,11 +84,11 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
     }
 
     private DisasterRecoveryConfigArgs() {
-        this.alias = Output.empty();
-        this.alternateName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.partnerNamespace = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.alias = Codegen.empty();
+        this.alternateName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.partnerNamespace = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder alternateName(@Nullable Output<String> alternateName) {
@@ -131,7 +132,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder alternateName(@Nullable String alternateName) {
-            this.alternateName = Output.ofNullable(alternateName);
+            this.alternateName = Codegen.ofNullable(alternateName);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -147,7 +148,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder partnerNamespace(@Nullable String partnerNamespace) {
-            this.partnerNamespace = Output.ofNullable(partnerNamespace);
+            this.partnerNamespace = Codegen.ofNullable(partnerNamespace);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudWatchRoleArn;
 
     public Output<String> getCloudWatchRoleArn() {
-        return this.cloudWatchRoleArn == null ? Output.empty() : this.cloudWatchRoleArn;
+        return this.cloudWatchRoleArn == null ? Codegen.empty() : this.cloudWatchRoleArn;
     }
 
     public AccountArgs(@Nullable Output<String> cloudWatchRoleArn) {
@@ -30,7 +31,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.cloudWatchRoleArn = Output.empty();
+        this.cloudWatchRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudWatchRoleArn(@Nullable String cloudWatchRoleArn) {
-            this.cloudWatchRoleArn = Output.ofNullable(cloudWatchRoleArn);
+            this.cloudWatchRoleArn = Codegen.ofNullable(cloudWatchRoleArn);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(cloudWatchRoleArn);

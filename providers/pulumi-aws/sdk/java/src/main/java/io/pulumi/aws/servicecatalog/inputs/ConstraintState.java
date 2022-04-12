@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
-        return this.portfolioId == null ? Output.empty() : this.portfolioId;
+        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
     /**
@@ -77,14 +78,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
-        return this.productId == null ? Output.empty() : this.productId;
+        return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConstraintState(
@@ -118,14 +119,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConstraintState() {
-        this.acceptLanguage = Output.empty();
-        this.description = Output.empty();
-        this.owner = Output.empty();
-        this.parameters = Output.empty();
-        this.portfolioId = Output.empty();
-        this.productId = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.description = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -175,7 +176,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -183,7 +184,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder parameters(@Nullable Output<String> parameters) {
@@ -191,7 +192,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
@@ -199,7 +200,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Output.ofNullable(portfolioId);
+            this.portfolioId = Codegen.ofNullable(portfolioId);
             return this;
         }
         public Builder productId(@Nullable Output<String> productId) {
@@ -207,7 +208,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productId(@Nullable String productId) {
-            this.productId = Output.ofNullable(productId);
+            this.productId = Codegen.ofNullable(productId);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -215,7 +216,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -223,7 +224,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConstraintState build() {
             return new ConstraintState(acceptLanguage, description, owner, parameters, portfolioId, productId, status, type);

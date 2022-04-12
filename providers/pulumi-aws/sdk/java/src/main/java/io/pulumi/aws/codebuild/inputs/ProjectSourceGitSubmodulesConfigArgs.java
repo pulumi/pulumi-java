@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
     }
 
     private ProjectSourceGitSubmodulesConfigArgs() {
-        this.fetchSubmodules = Output.empty();
+        this.fetchSubmodules = Codegen.empty();
     }
 
     public static Builder builder() {

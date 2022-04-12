@@ -19,12 +19,12 @@ public final class TpuFunctions {
      * 
      */
     public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions() {
-        return getTensorflowVersions(io.pulumi.gcp.tpu.inputs.GetTensorflowVersionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTensorflowVersions(GetTensorflowVersionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(io.pulumi.gcp.tpu.inputs.GetTensorflowVersionsArgs args) {
-        return getTensorflowVersions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args) {
+        return getTensorflowVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(io.pulumi.gcp.tpu.inputs.GetTensorflowVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTensorflowVersionsResult> getTensorflowVersions(GetTensorflowVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:tpu/getTensorflowVersions:getTensorflowVersions", TypeShape.of(GetTensorflowVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

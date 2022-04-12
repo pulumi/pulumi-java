@@ -16,10 +16,10 @@ public final class Firebaseml_v1beta2Functions {
      * Gets a model resource.
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(io.pulumi.googlenative.firebaseml_v1beta2.inputs.GetModelArgs args) {
-        return getModel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
+        return getModel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelResult> getModel(io.pulumi.googlenative.firebaseml_v1beta2.inputs.GetModelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaseml/v1beta2:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
 }

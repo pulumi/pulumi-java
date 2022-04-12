@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
       private final @Nullable Output<Object> environment;
 
     public Output<Object> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
     }
 
     private ModelBiasJobDefinitionModelBiasAppSpecificationArgs() {
-        this.configUri = Output.empty();
-        this.environment = Output.empty();
-        this.imageUri = Output.empty();
+        this.configUri = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.imageUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
             return this;
         }
         public Builder environment(@Nullable Object environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder imageUri(Output<String> imageUri) {

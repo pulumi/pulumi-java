@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Object> preserveZipFileNameAsFolder;
 
     public Output<Object> getPreserveZipFileNameAsFolder() {
-        return this.preserveZipFileNameAsFolder == null ? Output.empty() : this.preserveZipFileNameAsFolder;
+        return this.preserveZipFileNameAsFolder == null ? Codegen.empty() : this.preserveZipFileNameAsFolder;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private ZipDeflateReadSettingsArgs() {
-        this.preserveZipFileNameAsFolder = Output.empty();
-        this.type = Output.empty();
+        this.preserveZipFileNameAsFolder = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
-            this.preserveZipFileNameAsFolder = Output.ofNullable(preserveZipFileNameAsFolder);
+            this.preserveZipFileNameAsFolder = Codegen.ofNullable(preserveZipFileNameAsFolder);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -18,20 +18,20 @@ public final class SignerFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(io.pulumi.awsnative.signer.inputs.GetProfilePermissionArgs args) {
-        return getProfilePermission(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(GetProfilePermissionArgs args) {
+        return getProfilePermission(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(io.pulumi.awsnative.signer.inputs.GetProfilePermissionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfilePermissionResult> getProfilePermission(GetProfilePermissionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getProfilePermission", TypeShape.of(GetProfilePermissionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
      * 
      */
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(io.pulumi.awsnative.signer.inputs.GetSigningProfileArgs args) {
-        return getSigningProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args) {
+        return getSigningProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(io.pulumi.awsnative.signer.inputs.GetSigningProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:signer:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args, Utilities.withVersion(options));
     }
 }

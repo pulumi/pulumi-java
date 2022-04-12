@@ -5,6 +5,7 @@ package io.pulumi.azurenative.powerbidedicated.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     public DedicatedCapacityAdministratorsArgs(@Nullable Output<List<String>> members) {
@@ -35,7 +36,7 @@ public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resourc
     }
 
     private DedicatedCapacityAdministratorsArgs() {
-        this.members = Output.empty();
+        this.members = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DedicatedCapacityAdministratorsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {

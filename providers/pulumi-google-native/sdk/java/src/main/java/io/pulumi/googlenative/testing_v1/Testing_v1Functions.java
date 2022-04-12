@@ -16,10 +16,10 @@ public final class Testing_v1Functions {
      * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
      * 
      */
-    public static CompletableFuture<GetTestMatrixResult> getTestMatrix(io.pulumi.googlenative.testing_v1.inputs.GetTestMatrixArgs args) {
-        return getTestMatrix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestMatrixResult> getTestMatrix(GetTestMatrixArgs args) {
+        return getTestMatrix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestMatrixResult> getTestMatrix(io.pulumi.googlenative.testing_v1.inputs.GetTestMatrixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestMatrixResult> getTestMatrix(GetTestMatrixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:testing/v1:getTestMatrix", TypeShape.of(GetTestMatrixResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.FlowLogDestinationOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowLogDestinationOptionsArgs> destinationOptions;
 
     public Output<FlowLogDestinationOptionsArgs> getDestinationOptions() {
-        return this.destinationOptions == null ? Output.empty() : this.destinationOptions;
+        return this.destinationOptions == null ? Codegen.empty() : this.destinationOptions;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eniId;
 
     public Output<String> getEniId() {
-        return this.eniId == null ? Output.empty() : this.eniId;
+        return this.eniId == null ? Codegen.empty() : this.eniId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
+        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logDestination;
 
     public Output<String> getLogDestination() {
-        return this.logDestination == null ? Output.empty() : this.logDestination;
+        return this.logDestination == null ? Codegen.empty() : this.logDestination;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logDestinationType;
 
     public Output<String> getLogDestinationType() {
-        return this.logDestinationType == null ? Output.empty() : this.logDestinationType;
+        return this.logDestinationType == null ? Codegen.empty() : this.logDestinationType;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logFormat;
 
     public Output<String> getLogFormat() {
-        return this.logFormat == null ? Output.empty() : this.logFormat;
+        return this.logFormat == null ? Codegen.empty() : this.logFormat;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     @Deprecated /* use 'log_destination' argument instead */
     public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxAggregationInterval;
 
     public Output<Integer> getMaxAggregationInterval() {
-        return this.maxAggregationInterval == null ? Output.empty() : this.maxAggregationInterval;
+        return this.maxAggregationInterval == null ? Codegen.empty() : this.maxAggregationInterval;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public FlowLogArgs(
@@ -185,18 +186,18 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowLogArgs() {
-        this.destinationOptions = Output.empty();
-        this.eniId = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.logDestination = Output.empty();
-        this.logDestinationType = Output.empty();
-        this.logFormat = Output.empty();
-        this.logGroupName = Output.empty();
-        this.maxAggregationInterval = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.trafficType = Output.empty();
-        this.vpcId = Output.empty();
+        this.destinationOptions = Codegen.empty();
+        this.eniId = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.logDestination = Codegen.empty();
+        this.logDestinationType = Codegen.empty();
+        this.logFormat = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.maxAggregationInterval = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.trafficType = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationOptions(@Nullable FlowLogDestinationOptionsArgs destinationOptions) {
-            this.destinationOptions = Output.ofNullable(destinationOptions);
+            this.destinationOptions = Codegen.ofNullable(destinationOptions);
             return this;
         }
         public Builder eniId(@Nullable Output<String> eniId) {
@@ -254,7 +255,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eniId(@Nullable String eniId) {
-            this.eniId = Output.ofNullable(eniId);
+            this.eniId = Codegen.ofNullable(eniId);
             return this;
         }
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
@@ -262,7 +263,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Output.ofNullable(iamRoleArn);
+            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
             return this;
         }
         public Builder logDestination(@Nullable Output<String> logDestination) {
@@ -270,7 +271,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logDestination(@Nullable String logDestination) {
-            this.logDestination = Output.ofNullable(logDestination);
+            this.logDestination = Codegen.ofNullable(logDestination);
             return this;
         }
         public Builder logDestinationType(@Nullable Output<String> logDestinationType) {
@@ -278,7 +279,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logDestinationType(@Nullable String logDestinationType) {
-            this.logDestinationType = Output.ofNullable(logDestinationType);
+            this.logDestinationType = Codegen.ofNullable(logDestinationType);
             return this;
         }
         public Builder logFormat(@Nullable Output<String> logFormat) {
@@ -286,7 +287,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logFormat(@Nullable String logFormat) {
-            this.logFormat = Output.ofNullable(logFormat);
+            this.logFormat = Codegen.ofNullable(logFormat);
             return this;
         }
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
@@ -294,7 +295,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder maxAggregationInterval(@Nullable Output<Integer> maxAggregationInterval) {
@@ -302,7 +303,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
-            this.maxAggregationInterval = Output.ofNullable(maxAggregationInterval);
+            this.maxAggregationInterval = Codegen.ofNullable(maxAggregationInterval);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -310,7 +311,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -318,7 +319,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder trafficType(Output<String> trafficType) {
@@ -334,7 +335,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public FlowLogArgs build() {
             return new FlowLogArgs(destinationOptions, eniId, iamRoleArn, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, subnetId, tags, trafficType, vpcId);

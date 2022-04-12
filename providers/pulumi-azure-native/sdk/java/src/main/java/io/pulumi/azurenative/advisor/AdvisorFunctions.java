@@ -17,10 +17,10 @@ public final class AdvisorFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetSuppressionResult> getSuppression(io.pulumi.azurenative.advisor.inputs.GetSuppressionArgs args) {
-        return getSuppression(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args) {
+        return getSuppression(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSuppressionResult> getSuppression(io.pulumi.azurenative.advisor.inputs.GetSuppressionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSuppressionResult> getSuppression(GetSuppressionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args, Utilities.withVersion(options));
     }
 }

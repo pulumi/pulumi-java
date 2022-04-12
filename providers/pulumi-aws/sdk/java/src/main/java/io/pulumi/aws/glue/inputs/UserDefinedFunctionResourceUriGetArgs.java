@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class UserDefinedFunctionResourceUriGetArgs extends io.pulumi.resou
     }
 
     private UserDefinedFunctionResourceUriGetArgs() {
-        this.resourceType = Output.empty();
-        this.uri = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

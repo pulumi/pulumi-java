@@ -18,20 +18,20 @@ public final class Domains_v1alpha2Functions {
      * Gets the details of a `Registration` resource.
      * 
      */
-    public static CompletableFuture<GetRegistrationResult> getRegistration(io.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationArgs args) {
-        return getRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args) {
+        return getRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistrationResult> getRegistration(io.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistrationResult> getRegistration(GetRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:domains/v1alpha2:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(io.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationIamPolicyArgs args) {
-        return getRegistrationIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(GetRegistrationIamPolicyArgs args) {
+        return getRegistrationIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(io.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(GetRegistrationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:domains/v1alpha2:getRegistrationIamPolicy", TypeShape.of(GetRegistrationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

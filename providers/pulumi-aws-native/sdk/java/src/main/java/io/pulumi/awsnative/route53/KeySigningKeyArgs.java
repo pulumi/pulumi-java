@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeySigningKeyArgs() {
-        this.hostedZoneId = Output.empty();
-        this.keyManagementServiceArn = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.keyManagementServiceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(Output<KeySigningKeyStatus> status) {

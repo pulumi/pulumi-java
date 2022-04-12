@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
     public Output<LinkedServiceReferenceArgs> getLinkedService() {
-        return this.linkedService == null ? Output.empty() : this.linkedService;
+        return this.linkedService == null ? Codegen.empty() : this.linkedService;
     }
 
     public DataFlowStagingInfoArgs(
@@ -49,8 +50,8 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private DataFlowStagingInfoArgs() {
-        this.folderPath = Output.empty();
-        this.linkedService = Output.empty();
+        this.folderPath = Codegen.empty();
+        this.linkedService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
@@ -88,7 +89,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Output.ofNullable(linkedService);
+            this.linkedService = Codegen.ofNullable(linkedService);
             return this;
         }        public DataFlowStagingInfoArgs build() {
             return new DataFlowStagingInfoArgs(folderPath, linkedService);

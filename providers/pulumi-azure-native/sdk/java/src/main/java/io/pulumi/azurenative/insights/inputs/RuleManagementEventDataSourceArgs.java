@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventClaimsDataSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<RuleManagementEventClaimsDataSourceArgs> claims;
 
     public Output<RuleManagementEventClaimsDataSourceArgs> getClaims() {
-        return this.claims == null ? Output.empty() : this.claims;
+        return this.claims == null ? Codegen.empty() : this.claims;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> eventName;
 
     public Output<String> getEventName() {
-        return this.eventName == null ? Output.empty() : this.eventName;
+        return this.eventName == null ? Codegen.empty() : this.eventName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> eventSource;
 
     public Output<String> getEventSource() {
-        return this.eventSource == null ? Output.empty() : this.eventSource;
+        return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> legacyResourceId;
 
     public Output<String> getLegacyResourceId() {
-        return this.legacyResourceId == null ? Output.empty() : this.legacyResourceId;
+        return this.legacyResourceId == null ? Codegen.empty() : this.legacyResourceId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
+        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> operationName;
 
     public Output<String> getOperationName() {
-        return this.operationName == null ? Output.empty() : this.operationName;
+        return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
+        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceLocation;
 
     public Output<String> getResourceLocation() {
-        return this.resourceLocation == null ? Output.empty() : this.resourceLocation;
+        return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceProviderName;
 
     public Output<String> getResourceProviderName() {
-        return this.resourceProviderName == null ? Output.empty() : this.resourceProviderName;
+        return this.resourceProviderName == null ? Codegen.empty() : this.resourceProviderName;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
       private final @Nullable Output<String> subStatus;
 
     public Output<String> getSubStatus() {
-        return this.subStatus == null ? Output.empty() : this.subStatus;
+        return this.subStatus == null ? Codegen.empty() : this.subStatus;
     }
 
     public RuleManagementEventDataSourceArgs(
@@ -206,20 +207,20 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
     }
 
     private RuleManagementEventDataSourceArgs() {
-        this.claims = Output.empty();
-        this.eventName = Output.empty();
-        this.eventSource = Output.empty();
-        this.legacyResourceId = Output.empty();
-        this.level = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.odataType = Output.empty();
-        this.operationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceLocation = Output.empty();
-        this.resourceProviderName = Output.empty();
-        this.resourceUri = Output.empty();
-        this.status = Output.empty();
-        this.subStatus = Output.empty();
+        this.claims = Codegen.empty();
+        this.eventName = Codegen.empty();
+        this.eventSource = Codegen.empty();
+        this.legacyResourceId = Codegen.empty();
+        this.level = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.operationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceLocation = Codegen.empty();
+        this.resourceProviderName = Codegen.empty();
+        this.resourceUri = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -273,7 +274,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder claims(@Nullable RuleManagementEventClaimsDataSourceArgs claims) {
-            this.claims = Output.ofNullable(claims);
+            this.claims = Codegen.ofNullable(claims);
             return this;
         }
         public Builder eventName(@Nullable Output<String> eventName) {
@@ -281,7 +282,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder eventName(@Nullable String eventName) {
-            this.eventName = Output.ofNullable(eventName);
+            this.eventName = Codegen.ofNullable(eventName);
             return this;
         }
         public Builder eventSource(@Nullable Output<String> eventSource) {
@@ -289,7 +290,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder eventSource(@Nullable String eventSource) {
-            this.eventSource = Output.ofNullable(eventSource);
+            this.eventSource = Codegen.ofNullable(eventSource);
             return this;
         }
         public Builder legacyResourceId(@Nullable Output<String> legacyResourceId) {
@@ -297,7 +298,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
-            this.legacyResourceId = Output.ofNullable(legacyResourceId);
+            this.legacyResourceId = Codegen.ofNullable(legacyResourceId);
             return this;
         }
         public Builder level(@Nullable Output<String> level) {
@@ -305,7 +306,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder level(@Nullable String level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
@@ -313,7 +314,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Output.ofNullable(metricNamespace);
+            this.metricNamespace = Codegen.ofNullable(metricNamespace);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -329,7 +330,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = Output.ofNullable(operationName);
+            this.operationName = Codegen.ofNullable(operationName);
             return this;
         }
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
@@ -337,7 +338,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Output.ofNullable(resourceGroupName);
+            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
             return this;
         }
         public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
@@ -345,7 +346,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = Output.ofNullable(resourceLocation);
+            this.resourceLocation = Codegen.ofNullable(resourceLocation);
             return this;
         }
         public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
@@ -353,7 +354,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
-            this.resourceProviderName = Output.ofNullable(resourceProviderName);
+            this.resourceProviderName = Codegen.ofNullable(resourceProviderName);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -361,7 +362,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -369,7 +370,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subStatus(@Nullable Output<String> subStatus) {
@@ -377,7 +378,7 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
             return this;
         }
         public Builder subStatus(@Nullable String subStatus) {
-            this.subStatus = Output.ofNullable(subStatus);
+            this.subStatus = Codegen.ofNullable(subStatus);
             return this;
         }        public RuleManagementEventDataSourceArgs build() {
             return new RuleManagementEventDataSourceArgs(claims, eventName, eventSource, legacyResourceId, level, metricNamespace, odataType, operationName, resourceGroupName, resourceLocation, resourceProviderName, resourceUri, status, subStatus);

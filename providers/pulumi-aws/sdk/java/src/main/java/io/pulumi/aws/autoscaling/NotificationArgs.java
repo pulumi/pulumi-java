@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,9 +59,9 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.groupNames = Output.empty();
-        this.notifications = Output.empty();
-        this.topicArn = Output.empty();
+        this.groupNames = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {

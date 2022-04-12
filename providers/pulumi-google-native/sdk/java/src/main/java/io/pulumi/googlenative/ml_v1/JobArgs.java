@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionInputArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionOutputArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingInputArgs;
@@ -27,7 +28,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
     public Output<GoogleCloudMlV1__PredictionInputArgs> getPredictionInput() {
-        return this.predictionInput == null ? Output.empty() : this.predictionInput;
+        return this.predictionInput == null ? Codegen.empty() : this.predictionInput;
     }
 
     /**
@@ -71,14 +72,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
     public Output<GoogleCloudMlV1__PredictionOutputArgs> getPredictionOutput() {
-        return this.predictionOutput == null ? Output.empty() : this.predictionOutput;
+        return this.predictionOutput == null ? Codegen.empty() : this.predictionOutput;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
     public Output<GoogleCloudMlV1__TrainingInputArgs> getTrainingInput() {
-        return this.trainingInput == null ? Output.empty() : this.trainingInput;
+        return this.trainingInput == null ? Codegen.empty() : this.trainingInput;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 
     public Output<GoogleCloudMlV1__TrainingOutputArgs> getTrainingOutput() {
-        return this.trainingOutput == null ? Output.empty() : this.trainingOutput;
+        return this.trainingOutput == null ? Codegen.empty() : this.trainingOutput;
     }
 
     public JobArgs(
@@ -123,14 +124,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.etag = Output.empty();
-        this.jobId = Output.empty();
-        this.labels = Output.empty();
-        this.predictionInput = Output.empty();
-        this.predictionOutput = Output.empty();
-        this.project = Output.empty();
-        this.trainingInput = Output.empty();
-        this.trainingOutput = Output.empty();
+        this.etag = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.predictionInput = Codegen.empty();
+        this.predictionOutput = Codegen.empty();
+        this.project = Codegen.empty();
+        this.trainingInput = Codegen.empty();
+        this.trainingOutput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder jobId(Output<String> jobId) {
@@ -188,7 +189,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder predictionInput(@Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
@@ -196,7 +197,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predictionInput(@Nullable GoogleCloudMlV1__PredictionInputArgs predictionInput) {
-            this.predictionInput = Output.ofNullable(predictionInput);
+            this.predictionInput = Codegen.ofNullable(predictionInput);
             return this;
         }
         public Builder predictionOutput(@Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
@@ -204,7 +205,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predictionOutput(@Nullable GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
-            this.predictionOutput = Output.ofNullable(predictionOutput);
+            this.predictionOutput = Codegen.ofNullable(predictionOutput);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -212,7 +213,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder trainingInput(@Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
@@ -220,7 +221,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trainingInput(@Nullable GoogleCloudMlV1__TrainingInputArgs trainingInput) {
-            this.trainingInput = Output.ofNullable(trainingInput);
+            this.trainingInput = Codegen.ofNullable(trainingInput);
             return this;
         }
         public Builder trainingOutput(@Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
@@ -228,7 +229,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trainingOutput(@Nullable GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
-            this.trainingOutput = Output.ofNullable(trainingOutput);
+            this.trainingOutput = Codegen.ofNullable(trainingOutput);
             return this;
         }        public JobArgs build() {
             return new JobArgs(etag, jobId, labels, predictionInput, predictionOutput, project, trainingInput, trainingOutput);

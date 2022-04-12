@@ -20,30 +20,30 @@ public final class GroundstationFunctions {
      * AWS Ground Station config resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.awsnative.groundstation.inputs.GetConfigArgs args) {
-        return getConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+        return getConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.awsnative.groundstation.inputs.GetConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
      * 
      */
-    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(io.pulumi.awsnative.groundstation.inputs.GetDataflowEndpointGroupArgs args) {
-        return getDataflowEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args) {
+        return getDataflowEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(io.pulumi.awsnative.groundstation.inputs.GetDataflowEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataflowEndpointGroupResult> getDataflowEndpointGroup(GetDataflowEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getDataflowEndpointGroup", TypeShape.of(GetDataflowEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Ground Station Mission Profile resource type for CloudFormation.
      * 
      */
-    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(io.pulumi.awsnative.groundstation.inputs.GetMissionProfileArgs args) {
-        return getMissionProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args) {
+        return getMissionProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(io.pulumi.awsnative.groundstation.inputs.GetMissionProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMissionProfileResult> getMissionProfile(GetMissionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getMissionProfile", TypeShape.of(GetMissionProfileResult.class), args, Utilities.withVersion(options));
     }
 }

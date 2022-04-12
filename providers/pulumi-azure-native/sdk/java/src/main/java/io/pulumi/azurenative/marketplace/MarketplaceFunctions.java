@@ -21,10 +21,10 @@ public final class MarketplaceFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateStoreCollectionResult> getPrivateStoreCollection(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionArgs args) {
-        return getPrivateStoreCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateStoreCollectionResult> getPrivateStoreCollection(GetPrivateStoreCollectionArgs args) {
+        return getPrivateStoreCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateStoreCollectionResult> getPrivateStoreCollection(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateStoreCollectionResult> getPrivateStoreCollection(GetPrivateStoreCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreCollection", TypeShape.of(GetPrivateStoreCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class MarketplaceFunctions {
      * API Version: 2021-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateStoreCollectionOfferResult> getPrivateStoreCollectionOffer(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionOfferArgs args) {
-        return getPrivateStoreCollectionOffer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateStoreCollectionOfferResult> getPrivateStoreCollectionOffer(GetPrivateStoreCollectionOfferArgs args) {
+        return getPrivateStoreCollectionOffer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateStoreCollectionOfferResult> getPrivateStoreCollectionOffer(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreCollectionOfferArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateStoreCollectionOfferResult> getPrivateStoreCollectionOffer(GetPrivateStoreCollectionOfferArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreCollectionOffer", TypeShape.of(GetPrivateStoreCollectionOfferResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class MarketplaceFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetPrivateStoreOfferResult> getPrivateStoreOffer(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreOfferArgs args) {
-        return getPrivateStoreOffer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateStoreOfferResult> getPrivateStoreOffer(GetPrivateStoreOfferArgs args) {
+        return getPrivateStoreOffer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateStoreOfferResult> getPrivateStoreOffer(io.pulumi.azurenative.marketplace.inputs.GetPrivateStoreOfferArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateStoreOfferResult> getPrivateStoreOffer(GetPrivateStoreOfferArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreOffer", TypeShape.of(GetPrivateStoreOfferResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
       private final @Nullable Output<String> perimeterName;
 
     public Output<String> getPerimeterName() {
-        return this.perimeterName == null ? Output.empty() : this.perimeterName;
+        return this.perimeterName == null ? Codegen.empty() : this.perimeterName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     public ServicePerimeterResourceState(
@@ -46,8 +47,8 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     }
 
     private ServicePerimeterResourceState() {
-        this.perimeterName = Output.empty();
-        this.resource = Output.empty();
+        this.perimeterName = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
             return this;
         }
         public Builder perimeterName(@Nullable String perimeterName) {
-            this.perimeterName = Output.ofNullable(perimeterName);
+            this.perimeterName = Codegen.ofNullable(perimeterName);
             return this;
         }
         public Builder resource(@Nullable Output<String> resource) {
@@ -85,7 +86,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }        public ServicePerimeterResourceState build() {
             return new ServicePerimeterResourceState(perimeterName, resource);

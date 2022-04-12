@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
     public Output<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
+        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> rangeKey;
 
     public Output<String> getRangeKey() {
-        return this.rangeKey == null ? Output.empty() : this.rangeKey;
+        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> readCapacity;
 
     public Output<Integer> getReadCapacity() {
-        return this.readCapacity == null ? Output.empty() : this.readCapacity;
+        return this.readCapacity == null ? Codegen.empty() : this.readCapacity;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> writeCapacity;
 
     public Output<Integer> getWriteCapacity() {
-        return this.writeCapacity == null ? Output.empty() : this.writeCapacity;
+        return this.writeCapacity == null ? Codegen.empty() : this.writeCapacity;
     }
 
     public TableGlobalSecondaryIndexGetArgs(
@@ -118,13 +119,13 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
     }
 
     private TableGlobalSecondaryIndexGetArgs() {
-        this.hashKey = Output.empty();
-        this.name = Output.empty();
-        this.nonKeyAttributes = Output.empty();
-        this.projectionType = Output.empty();
-        this.rangeKey = Output.empty();
-        this.readCapacity = Output.empty();
-        this.writeCapacity = Output.empty();
+        this.hashKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nonKeyAttributes = Codegen.empty();
+        this.projectionType = Codegen.empty();
+        this.rangeKey = Codegen.empty();
+        this.readCapacity = Codegen.empty();
+        this.writeCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
             return this;
         }
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
@@ -199,7 +200,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Output.ofNullable(rangeKey);
+            this.rangeKey = Codegen.ofNullable(rangeKey);
             return this;
         }
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
@@ -207,7 +208,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Output.ofNullable(readCapacity);
+            this.readCapacity = Codegen.ofNullable(readCapacity);
             return this;
         }
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
@@ -215,7 +216,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Output.ofNullable(writeCapacity);
+            this.writeCapacity = Codegen.ofNullable(writeCapacity);
             return this;
         }        public TableGlobalSecondaryIndexGetArgs build() {
             return new TableGlobalSecondaryIndexGetArgs(hashKey, name, nonKeyAttributes, projectionType, rangeKey, readCapacity, writeCapacity);

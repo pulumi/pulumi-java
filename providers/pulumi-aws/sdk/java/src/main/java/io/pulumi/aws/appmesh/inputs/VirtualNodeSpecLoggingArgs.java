@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
 
     public Output<VirtualNodeSpecLoggingAccessLogArgs> getAccessLog() {
-        return this.accessLog == null ? Output.empty() : this.accessLog;
+        return this.accessLog == null ? Codegen.empty() : this.accessLog;
     }
 
     public VirtualNodeSpecLoggingArgs(@Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog) {
@@ -30,7 +31,7 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
     }
 
     private VirtualNodeSpecLoggingArgs() {
-        this.accessLog = Output.empty();
+        this.accessLog = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLogArgs accessLog) {
-            this.accessLog = Output.ofNullable(accessLog);
+            this.accessLog = Codegen.ofNullable(accessLog);
             return this;
         }        public VirtualNodeSpecLoggingArgs build() {
             return new VirtualNodeSpecLoggingArgs(accessLog);

@@ -18,20 +18,20 @@ public final class CloudwatchFunctions {
      * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
      * 
      */
-    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(io.pulumi.awsnative.cloudwatch.inputs.GetCompositeAlarmArgs args) {
-        return getCompositeAlarm(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args) {
+        return getCompositeAlarm(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(io.pulumi.awsnative.cloudwatch.inputs.GetCompositeAlarmArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getCompositeAlarm", TypeShape.of(GetCompositeAlarmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for Metric Stream
      * 
      */
-    public static CompletableFuture<GetMetricStreamResult> getMetricStream(io.pulumi.awsnative.cloudwatch.inputs.GetMetricStreamArgs args) {
-        return getMetricStream(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args) {
+        return getMetricStream(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMetricStreamResult> getMetricStream(io.pulumi.awsnative.cloudwatch.inputs.GetMetricStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getMetricStream", TypeShape.of(GetMetricStreamResult.class), args, Utilities.withVersion(options));
     }
 }

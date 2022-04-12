@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> sizeInGiB;
 
     public Output<Integer> getSizeInGiB() {
-        return this.sizeInGiB == null ? Output.empty() : this.sizeInGiB;
+        return this.sizeInGiB == null ? Codegen.empty() : this.sizeInGiB;
     }
 
     public TaskDefinitionEphemeralStorageArgs(@Nullable Output<Integer> sizeInGiB) {
@@ -26,7 +27,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     }
 
     private TaskDefinitionEphemeralStorageArgs() {
-        this.sizeInGiB = Output.empty();
+        this.sizeInGiB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
             return this;
         }
         public Builder sizeInGiB(@Nullable Integer sizeInGiB) {
-            this.sizeInGiB = Output.ofNullable(sizeInGiB);
+            this.sizeInGiB = Codegen.ofNullable(sizeInGiB);
             return this;
         }        public TaskDefinitionEphemeralStorageArgs build() {
             return new TaskDefinitionEphemeralStorageArgs(sizeInGiB);

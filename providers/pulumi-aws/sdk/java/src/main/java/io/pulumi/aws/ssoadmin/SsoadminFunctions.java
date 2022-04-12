@@ -19,22 +19,22 @@ public final class SsoadminFunctions {
      * 
      */
     public static CompletableFuture<GetInstancesResult> getInstances() {
-        return getInstances(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getInstances(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstancesResult> getInstances(io.pulumi.resources.InvokeArgs args) {
-        return getInstances(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstancesResult> getInstances(InvokeArgs args) {
+        return getInstances(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstancesResult> getInstances(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstancesResult> getInstances(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssoadmin/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a Single Sign-On (SSO) Permission Set.
      * 
      */
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(io.pulumi.aws.ssoadmin.inputs.GetPermissionSetArgs args) {
-        return getPermissionSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args) {
+        return getPermissionSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(io.pulumi.aws.ssoadmin.inputs.GetPermissionSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssoadmin/getPermissionSet:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args, Utilities.withVersion(options));
     }
 }

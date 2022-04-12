@@ -18,10 +18,10 @@ public final class ServicediscoveryFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(io.pulumi.aws.servicediscovery.inputs.GetDnsNamespaceArgs args) {
-        return getDnsNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args) {
+        return getDnsNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(io.pulumi.aws.servicediscovery.inputs.GetDnsNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDnsNamespaceResult> getDnsNamespace(GetDnsNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicediscovery/getDnsNamespace:getDnsNamespace", TypeShape.of(GetDnsNamespaceResult.class), args, Utilities.withVersion(options));
     }
 }

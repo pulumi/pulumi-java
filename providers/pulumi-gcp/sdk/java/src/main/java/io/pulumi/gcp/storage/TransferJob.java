@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.TransferJobArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobState;
@@ -188,7 +189,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransferJob(String name, TransferJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/transferJob:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/transferJob:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransferJob(String name, Output<String> id, @Nullable TransferJobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

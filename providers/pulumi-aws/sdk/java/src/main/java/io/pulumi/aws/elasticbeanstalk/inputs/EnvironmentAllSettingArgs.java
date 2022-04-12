@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class EnvironmentAllSettingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     @Import(name="value", required=true)
@@ -59,10 +60,10 @@ public final class EnvironmentAllSettingArgs extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentAllSettingArgs() {
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.resource = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EnvironmentAllSettingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resource(@Nullable String resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder value(Output<String> value) {

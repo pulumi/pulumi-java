@@ -18,10 +18,10 @@ public final class DirectoryserviceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDirectoryResult> getDirectory(io.pulumi.aws.directoryservice.inputs.GetDirectoryArgs args) {
-        return getDirectory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
+        return getDirectory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDirectoryResult> getDirectory(io.pulumi.aws.directoryservice.inputs.GetDirectoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directoryservice/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }
 }

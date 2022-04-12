@@ -24,50 +24,50 @@ public final class ConfigurationFunctions {
      * Resource Type definition for AWS::Config::AggregationAuthorization
      * 
      */
-    public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(io.pulumi.awsnative.configuration.inputs.GetAggregationAuthorizationArgs args) {
-        return getAggregationAuthorization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(GetAggregationAuthorizationArgs args) {
+        return getAggregationAuthorization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(io.pulumi.awsnative.configuration.inputs.GetAggregationAuthorizationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAggregationAuthorizationResult> getAggregationAuthorization(GetAggregationAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getAggregationAuthorization", TypeShape.of(GetAggregationAuthorizationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Config::ConfigurationAggregator
      * 
      */
-    public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(io.pulumi.awsnative.configuration.inputs.GetConfigurationAggregatorArgs args) {
-        return getConfigurationAggregator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(GetConfigurationAggregatorArgs args) {
+        return getConfigurationAggregator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(io.pulumi.awsnative.configuration.inputs.GetConfigurationAggregatorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationAggregatorResult> getConfigurationAggregator(GetConfigurationAggregatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConfigurationAggregator", TypeShape.of(GetConfigurationAggregatorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
      * 
      */
-    public static CompletableFuture<GetConformancePackResult> getConformancePack(io.pulumi.awsnative.configuration.inputs.GetConformancePackArgs args) {
-        return getConformancePack(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConformancePackResult> getConformancePack(GetConformancePackArgs args) {
+        return getConformancePack(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConformancePackResult> getConformancePack(io.pulumi.awsnative.configuration.inputs.GetConformancePackArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConformancePackResult> getConformancePack(GetConformancePackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConformancePack", TypeShape.of(GetConformancePackResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Config::OrganizationConformancePack.
      * 
      */
-    public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(io.pulumi.awsnative.configuration.inputs.GetOrganizationConformancePackArgs args) {
-        return getOrganizationConformancePack(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(GetOrganizationConformancePackArgs args) {
+        return getOrganizationConformancePack(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(io.pulumi.awsnative.configuration.inputs.GetOrganizationConformancePackArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationConformancePackResult> getOrganizationConformancePack(GetOrganizationConformancePackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getOrganizationConformancePack", TypeShape.of(GetOrganizationConformancePackResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Config::StoredQuery
      * 
      */
-    public static CompletableFuture<GetStoredQueryResult> getStoredQuery(io.pulumi.awsnative.configuration.inputs.GetStoredQueryArgs args) {
-        return getStoredQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStoredQueryResult> getStoredQuery(GetStoredQueryArgs args) {
+        return getStoredQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStoredQueryResult> getStoredQuery(io.pulumi.awsnative.configuration.inputs.GetStoredQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStoredQueryResult> getStoredQuery(GetStoredQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getStoredQuery", TypeShape.of(GetStoredQueryResult.class), args, Utilities.withVersion(options));
     }
 }

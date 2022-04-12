@@ -21,10 +21,10 @@ public final class HanaonazureFunctions {
      * API Version: 2017-11-03-preview.
      * 
      */
-    public static CompletableFuture<GetHanaInstanceResult> getHanaInstance(io.pulumi.azurenative.hanaonazure.inputs.GetHanaInstanceArgs args) {
-        return getHanaInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHanaInstanceResult> getHanaInstance(GetHanaInstanceArgs args) {
+        return getHanaInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHanaInstanceResult> getHanaInstance(io.pulumi.azurenative.hanaonazure.inputs.GetHanaInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHanaInstanceResult> getHanaInstance(GetHanaInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getHanaInstance", TypeShape.of(GetHanaInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class HanaonazureFunctions {
      * API Version: 2020-02-07-preview.
      * 
      */
-    public static CompletableFuture<GetProviderInstanceResult> getProviderInstance(io.pulumi.azurenative.hanaonazure.inputs.GetProviderInstanceArgs args) {
-        return getProviderInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProviderInstanceResult> getProviderInstance(GetProviderInstanceArgs args) {
+        return getProviderInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProviderInstanceResult> getProviderInstance(io.pulumi.azurenative.hanaonazure.inputs.GetProviderInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProviderInstanceResult> getProviderInstance(GetProviderInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getProviderInstance", TypeShape.of(GetProviderInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class HanaonazureFunctions {
      * API Version: 2020-02-07-preview.
      * 
      */
-    public static CompletableFuture<GetSapMonitorResult> getSapMonitor(io.pulumi.azurenative.hanaonazure.inputs.GetSapMonitorArgs args) {
-        return getSapMonitor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSapMonitorResult> getSapMonitor(GetSapMonitorArgs args) {
+        return getSapMonitor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSapMonitorResult> getSapMonitor(io.pulumi.azurenative.hanaonazure.inputs.GetSapMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSapMonitorResult> getSapMonitor(GetSapMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getSapMonitor", TypeShape.of(GetSapMonitorResult.class), args, Utilities.withVersion(options));
     }
 }

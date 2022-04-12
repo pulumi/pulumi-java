@@ -10,6 +10,7 @@ import io.pulumi.aws.wafregional.outputs.GeoMatchSetGeoMatchConstraint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -81,7 +82,7 @@ public class GeoMatchSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GeoMatchSet(String name, @Nullable GeoMatchSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/geoMatchSet:GeoMatchSet", name, args == null ? GeoMatchSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/geoMatchSet:GeoMatchSet", name, args == null ? GeoMatchSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GeoMatchSet(String name, Output<String> id, @Nullable GeoMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

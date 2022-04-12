@@ -21,10 +21,10 @@ public final class KubernetesFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(io.pulumi.azurenative.kubernetes.inputs.GetConnectedClusterArgs args) {
-        return getConnectedCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(GetConnectedClusterArgs args) {
+        return getConnectedCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(io.pulumi.azurenative.kubernetes.inputs.GetConnectedClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectedClusterResult> getConnectedCluster(GetConnectedClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:getConnectedCluster", TypeShape.of(GetConnectedClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class KubernetesFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(io.pulumi.azurenative.kubernetes.inputs.ListConnectedClusterUserCredentialArgs args) {
-        return listConnectedClusterUserCredential(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(ListConnectedClusterUserCredentialArgs args) {
+        return listConnectedClusterUserCredential(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(io.pulumi.azurenative.kubernetes.inputs.ListConnectedClusterUserCredentialArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConnectedClusterUserCredentialResult> listConnectedClusterUserCredential(ListConnectedClusterUserCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:listConnectedClusterUserCredential", TypeShape.of(ListConnectedClusterUserCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,10 +43,10 @@ public final class KubernetesFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(io.pulumi.azurenative.kubernetes.inputs.ListConnectedClusterUserCredentialsArgs args) {
-        return listConnectedClusterUserCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(ListConnectedClusterUserCredentialsArgs args) {
+        return listConnectedClusterUserCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(io.pulumi.azurenative.kubernetes.inputs.ListConnectedClusterUserCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConnectedClusterUserCredentialsResult> listConnectedClusterUserCredentials(ListConnectedClusterUserCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:listConnectedClusterUserCredentials", TypeShape.of(ListConnectedClusterUserCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

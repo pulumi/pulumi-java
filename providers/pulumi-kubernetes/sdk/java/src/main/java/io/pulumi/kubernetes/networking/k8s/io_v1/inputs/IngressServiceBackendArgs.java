@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.ServiceBackendPortArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ServiceBackendPortArgs> port;
 
     public Output<ServiceBackendPortArgs> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public IngressServiceBackendArgs(
@@ -49,8 +50,8 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
     }
 
     private IngressServiceBackendArgs() {
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder port(@Nullable ServiceBackendPortArgs port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public IngressServiceBackendArgs build() {
             return new IngressServiceBackendArgs(name, port);

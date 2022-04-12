@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public RangePartitioningRangeArgs(
@@ -61,9 +62,9 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     }
 
     private RangePartitioningRangeArgs() {
-        this.end = Output.empty();
-        this.interval = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder end(@Nullable String end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder interval(@Nullable Output<String> interval) {
@@ -103,7 +104,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder interval(@Nullable String interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder start(@Nullable Output<String> start) {
@@ -111,7 +112,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder start(@Nullable String start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public RangePartitioningRangeArgs build() {
             return new RangePartitioningRangeArgs(end, interval, start);

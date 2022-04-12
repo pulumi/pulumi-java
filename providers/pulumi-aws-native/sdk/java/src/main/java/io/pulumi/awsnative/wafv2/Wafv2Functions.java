@@ -26,60 +26,60 @@ public final class Wafv2Functions {
      * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
      * 
      */
-    public static CompletableFuture<GetIPSetResult> getIPSet(io.pulumi.awsnative.wafv2.inputs.GetIPSetArgs args) {
-        return getIPSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIPSetResult> getIPSet(GetIPSetArgs args) {
+        return getIPSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIPSetResult> getIPSet(io.pulumi.awsnative.wafv2.inputs.GetIPSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIPSetResult> getIPSet(GetIPSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getIPSet", TypeShape.of(GetIPSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A WAFv2 Logging Configuration Resource Provider
      * 
      */
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(io.pulumi.awsnative.wafv2.inputs.GetLoggingConfigurationArgs args) {
-        return getLoggingConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args) {
+        return getLoggingConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(io.pulumi.awsnative.wafv2.inputs.GetLoggingConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains a list of Regular expressions based on the provided inputs. RegexPatternSet can be used with other WAF entities with RegexPatternSetReferenceStatement to perform other actions .
      * 
      */
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(io.pulumi.awsnative.wafv2.inputs.GetRegexPatternSetArgs args) {
-        return getRegexPatternSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
+        return getRegexPatternSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(io.pulumi.awsnative.wafv2.inputs.GetRegexPatternSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getRegexPatternSet", TypeShape.of(GetRegexPatternSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a RuleGroup, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a RuleGroup, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the RuleGroup with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a RuleGroup, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.awsnative.wafv2.inputs.GetRuleGroupArgs args) {
-        return getRuleGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
+        return getRuleGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(io.pulumi.awsnative.wafv2.inputs.GetRuleGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contains the Rules that identify the requests that you want to allow, block, or count. In a WebACL, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a WebACL, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the WebACL with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a WebACL, a request needs to match only one of the specifications to be allowed, blocked, or counted.
      * 
      */
-    public static CompletableFuture<GetWebACLResult> getWebACL(io.pulumi.awsnative.wafv2.inputs.GetWebACLArgs args) {
-        return getWebACL(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebACLResult> getWebACL(GetWebACLArgs args) {
+        return getWebACL(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebACLResult> getWebACL(io.pulumi.awsnative.wafv2.inputs.GetWebACLArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebACLResult> getWebACL(GetWebACLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getWebACL", TypeShape.of(GetWebACLResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
      * 
      */
-    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(io.pulumi.awsnative.wafv2.inputs.GetWebACLAssociationArgs args) {
-        return getWebACLAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args) {
+        return getWebACLAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(io.pulumi.awsnative.wafv2.inputs.GetWebACLAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebACLAssociationResult> getWebACLAssociation(GetWebACLAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getWebACLAssociation", TypeShape.of(GetWebACLAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

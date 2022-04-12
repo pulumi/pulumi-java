@@ -11,6 +11,7 @@ import io.pulumi.aws.backup.outputs.PlanRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -153,7 +154,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Plan(String name, PlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/plan:Plan", name, args == null ? PlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/plan:Plan", name, args == null ? PlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Plan(String name, Output<String> id, @Nullable PlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

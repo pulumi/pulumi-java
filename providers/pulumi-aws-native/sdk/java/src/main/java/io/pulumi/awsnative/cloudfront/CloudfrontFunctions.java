@@ -32,90 +32,90 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::CachePolicy
      * 
      */
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(io.pulumi.awsnative.cloudfront.inputs.GetCachePolicyArgs args) {
-        return getCachePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args) {
+        return getCachePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(io.pulumi.awsnative.cloudfront.inputs.GetCachePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
      * 
      */
-    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentity(io.pulumi.awsnative.cloudfront.inputs.GetCloudFrontOriginAccessIdentityArgs args) {
-        return getCloudFrontOriginAccessIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentity(GetCloudFrontOriginAccessIdentityArgs args) {
+        return getCloudFrontOriginAccessIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentity(io.pulumi.awsnative.cloudfront.inputs.GetCloudFrontOriginAccessIdentityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentity(GetCloudFrontOriginAccessIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCloudFrontOriginAccessIdentity", TypeShape.of(GetCloudFrontOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::Distribution
      * 
      */
-    public static CompletableFuture<GetDistributionResult> getDistribution(io.pulumi.awsnative.cloudfront.inputs.GetDistributionArgs args) {
-        return getDistribution(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args) {
+        return getDistribution(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributionResult> getDistribution(io.pulumi.awsnative.cloudfront.inputs.GetDistributionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::Function
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.awsnative.cloudfront.inputs.GetFunctionArgs args) {
-        return getFunction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+        return getFunction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFunctionResult> getFunction(io.pulumi.awsnative.cloudfront.inputs.GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::KeyGroup
      * 
      */
-    public static CompletableFuture<GetKeyGroupResult> getKeyGroup(io.pulumi.awsnative.cloudfront.inputs.GetKeyGroupArgs args) {
-        return getKeyGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyGroupResult> getKeyGroup(GetKeyGroupArgs args) {
+        return getKeyGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyGroupResult> getKeyGroup(io.pulumi.awsnative.cloudfront.inputs.GetKeyGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyGroupResult> getKeyGroup(GetKeyGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getKeyGroup", TypeShape.of(GetKeyGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
      * 
      */
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(io.pulumi.awsnative.cloudfront.inputs.GetOriginRequestPolicyArgs args) {
-        return getOriginRequestPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args) {
+        return getOriginRequestPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(io.pulumi.awsnative.cloudfront.inputs.GetOriginRequestPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::PublicKey
      * 
      */
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(io.pulumi.awsnative.cloudfront.inputs.GetPublicKeyArgs args) {
-        return getPublicKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args) {
+        return getPublicKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(io.pulumi.awsnative.cloudfront.inputs.GetPublicKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
      * 
      */
-    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(io.pulumi.awsnative.cloudfront.inputs.GetRealtimeLogConfigArgs args) {
-        return getRealtimeLogConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args) {
+        return getRealtimeLogConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(io.pulumi.awsnative.cloudfront.inputs.GetRealtimeLogConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
      * 
      */
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(io.pulumi.awsnative.cloudfront.inputs.GetResponseHeadersPolicyArgs args) {
-        return getResponseHeadersPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args) {
+        return getResponseHeadersPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(io.pulumi.awsnative.cloudfront.inputs.GetResponseHeadersPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ public final class RumFunctions {
      * Resource Type definition for AWS::RUM::AppMonitor
      * 
      */
-    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(io.pulumi.awsnative.rum.inputs.GetAppMonitorArgs args) {
-        return getAppMonitor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args) {
+        return getAppMonitor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(io.pulumi.awsnative.rum.inputs.GetAppMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppMonitorResult> getAppMonitor(GetAppMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rum:getAppMonitor", TypeShape.of(GetAppMonitorResult.class), args, Utilities.withVersion(options));
     }
 }

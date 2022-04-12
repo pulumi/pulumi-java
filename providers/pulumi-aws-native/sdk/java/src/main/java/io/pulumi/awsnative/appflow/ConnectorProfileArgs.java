@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
 
     public Output<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
-        return this.connectorProfileConfig == null ? Output.empty() : this.connectorProfileConfig;
+        return this.connectorProfileConfig == null ? Codegen.empty() : this.connectorProfileConfig;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> connectorProfileName;
 
     public Output<String> getConnectorProfileName() {
-        return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
+        return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kMSArn;
 
     public Output<String> getKMSArn() {
-        return this.kMSArn == null ? Output.empty() : this.kMSArn;
+        return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
     }
 
     public ConnectorProfileArgs(
@@ -86,11 +87,11 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectorProfileArgs() {
-        this.connectionMode = Output.empty();
-        this.connectorProfileConfig = Output.empty();
-        this.connectorProfileName = Output.empty();
-        this.connectorType = Output.empty();
-        this.kMSArn = Output.empty();
+        this.connectionMode = Codegen.empty();
+        this.connectorProfileConfig = Codegen.empty();
+        this.connectorProfileName = Codegen.empty();
+        this.connectorType = Codegen.empty();
+        this.kMSArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
-            this.connectorProfileConfig = Output.ofNullable(connectorProfileConfig);
+            this.connectorProfileConfig = Codegen.ofNullable(connectorProfileConfig);
             return this;
         }
         public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
@@ -142,7 +143,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Output.ofNullable(connectorProfileName);
+            this.connectorProfileName = Codegen.ofNullable(connectorProfileName);
             return this;
         }
         public Builder connectorType(Output<ConnectorProfileConnectorType> connectorType) {
@@ -158,7 +159,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Output.ofNullable(kMSArn);
+            this.kMSArn = Codegen.ofNullable(kMSArn);
             return this;
         }        public ConnectorProfileArgs build() {
             return new ConnectorProfileArgs(connectionMode, connectorProfileConfig, connectorProfileName, connectorType, kMSArn);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionMonitoringOutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
     }
 
     private DataQualityJobDefinitionMonitoringOutputConfigArgs() {
-        this.kmsKeyId = Output.empty();
-        this.monitoringOutputs = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.monitoringOutputs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends io
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder monitoringOutputs(Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {

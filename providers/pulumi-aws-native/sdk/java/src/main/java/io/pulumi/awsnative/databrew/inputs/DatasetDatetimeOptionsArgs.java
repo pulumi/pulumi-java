@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> localeCode;
 
     public Output<String> getLocaleCode() {
-        return this.localeCode == null ? Output.empty() : this.localeCode;
+        return this.localeCode == null ? Codegen.empty() : this.localeCode;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> timezoneOffset;
 
     public Output<String> getTimezoneOffset() {
-        return this.timezoneOffset == null ? Output.empty() : this.timezoneOffset;
+        return this.timezoneOffset == null ? Codegen.empty() : this.timezoneOffset;
     }
 
     public DatasetDatetimeOptionsArgs(
@@ -57,9 +58,9 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
     }
 
     private DatasetDatetimeOptionsArgs() {
-        this.format = Output.empty();
-        this.localeCode = Output.empty();
-        this.timezoneOffset = Output.empty();
+        this.format = Codegen.empty();
+        this.localeCode = Codegen.empty();
+        this.timezoneOffset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder localeCode(@Nullable String localeCode) {
-            this.localeCode = Output.ofNullable(localeCode);
+            this.localeCode = Codegen.ofNullable(localeCode);
             return this;
         }
         public Builder timezoneOffset(@Nullable Output<String> timezoneOffset) {
@@ -107,7 +108,7 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
-            this.timezoneOffset = Output.ofNullable(timezoneOffset);
+            this.timezoneOffset = Codegen.ofNullable(timezoneOffset);
             return this;
         }        public DatasetDatetimeOptionsArgs build() {
             return new DatasetDatetimeOptionsArgs(format, localeCode, timezoneOffset);

@@ -20,30 +20,30 @@ public final class AmplifyFunctions {
      * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.amplify.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.amplify.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Amplify::Branch resource creates a new branch within an app.
      * 
      */
-    public static CompletableFuture<GetBranchResult> getBranch(io.pulumi.awsnative.amplify.inputs.GetBranchArgs args) {
-        return getBranch(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args) {
+        return getBranch(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBranchResult> getBranch(io.pulumi.awsnative.amplify.inputs.GetBranchArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getBranch", TypeShape.of(GetBranchResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.amplify.inputs.GetDomainArgs args) {
-        return getDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+        return getDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainResult> getDomain(io.pulumi.awsnative.amplify.inputs.GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

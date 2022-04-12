@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class DirectoryConfigServiceAccountCredentialsArgs extends io.pulum
     }
 
     private DirectoryConfigServiceAccountCredentialsArgs() {
-        this.accountName = Output.empty();
-        this.accountPassword = Output.empty();
+        this.accountName = Codegen.empty();
+        this.accountPassword = Codegen.empty();
     }
 
     public static Builder builder() {

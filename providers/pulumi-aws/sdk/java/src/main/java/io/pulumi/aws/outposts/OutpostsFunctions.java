@@ -29,22 +29,22 @@ public final class OutpostsFunctions {
      * 
      */
     public static CompletableFuture<GetOutpostResult> getOutpost() {
-        return getOutpost(io.pulumi.aws.outposts.inputs.GetOutpostArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOutpost(GetOutpostArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostResult> getOutpost(io.pulumi.aws.outposts.inputs.GetOutpostArgs args) {
-        return getOutpost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args) {
+        return getOutpost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostResult> getOutpost(io.pulumi.aws.outposts.inputs.GetOutpostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutpostResult> getOutpost(GetOutpostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpost:getOutpost", TypeShape.of(GetOutpostResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Information about single Outpost Instance Type.
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(io.pulumi.aws.outposts.inputs.GetOutpostInstanceTypeArgs args) {
-        return getOutpostInstanceType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args) {
+        return getOutpostInstanceType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(io.pulumi.aws.outposts.inputs.GetOutpostInstanceTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutpostInstanceTypeResult> getOutpostInstanceType(GetOutpostInstanceTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceType:getOutpostInstanceType", TypeShape.of(GetOutpostInstanceTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class OutpostsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(io.pulumi.aws.outposts.inputs.GetOutpostInstanceTypesArgs args) {
-        return getOutpostInstanceTypes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args) {
+        return getOutpostInstanceTypes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(io.pulumi.aws.outposts.inputs.GetOutpostInstanceTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceTypes:getOutpostInstanceTypes", TypeShape.of(GetOutpostInstanceTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,12 +66,12 @@ public final class OutpostsFunctions {
      * 
      */
     public static CompletableFuture<GetOutpostsResult> getOutposts() {
-        return getOutposts(io.pulumi.aws.outposts.inputs.GetOutpostsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOutposts(GetOutpostsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostsResult> getOutposts(io.pulumi.aws.outposts.inputs.GetOutpostsArgs args) {
-        return getOutposts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args) {
+        return getOutposts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutpostsResult> getOutposts(io.pulumi.aws.outposts.inputs.GetOutpostsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutpostsResult> getOutposts(GetOutpostsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutposts:getOutposts", TypeShape.of(GetOutpostsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,12 +81,12 @@ public final class OutpostsFunctions {
      * 
      */
     public static CompletableFuture<GetSiteResult> getSite() {
-        return getSite(io.pulumi.aws.outposts.inputs.GetSiteArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSite(GetSiteArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.aws.outposts.inputs.GetSiteArgs args) {
-        return getSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+        return getSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSiteResult> getSite(io.pulumi.aws.outposts.inputs.GetSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,12 +96,12 @@ public final class OutpostsFunctions {
      * 
      */
     public static CompletableFuture<GetSitesResult> getSites() {
-        return getSites(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSites(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSitesResult> getSites(io.pulumi.resources.InvokeArgs args) {
-        return getSites(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args) {
+        return getSites(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSitesResult> getSites(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSitesResult> getSites(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> azureTableDefaultPartitionKeyValue;
 
     public Output<Object> getAzureTableDefaultPartitionKeyValue() {
-        return this.azureTableDefaultPartitionKeyValue == null ? Output.empty() : this.azureTableDefaultPartitionKeyValue;
+        return this.azureTableDefaultPartitionKeyValue == null ? Codegen.empty() : this.azureTableDefaultPartitionKeyValue;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> azureTableInsertType;
 
     public Output<Object> getAzureTableInsertType() {
-        return this.azureTableInsertType == null ? Output.empty() : this.azureTableInsertType;
+        return this.azureTableInsertType == null ? Codegen.empty() : this.azureTableInsertType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> azureTablePartitionKeyName;
 
     public Output<Object> getAzureTablePartitionKeyName() {
-        return this.azureTablePartitionKeyName == null ? Output.empty() : this.azureTablePartitionKeyName;
+        return this.azureTablePartitionKeyName == null ? Codegen.empty() : this.azureTablePartitionKeyName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> azureTableRowKeyName;
 
     public Output<Object> getAzureTableRowKeyName() {
-        return this.azureTableRowKeyName == null ? Output.empty() : this.azureTableRowKeyName;
+        return this.azureTableRowKeyName == null ? Codegen.empty() : this.azureTableRowKeyName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryCount;
 
     public Output<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
+        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryWait;
 
     public Output<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
+        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchSize;
 
     public Output<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
+        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchTimeout;
 
     public Output<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
+        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
     public AzureTableSinkArgs(
@@ -167,17 +168,17 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureTableSinkArgs() {
-        this.azureTableDefaultPartitionKeyValue = Output.empty();
-        this.azureTableInsertType = Output.empty();
-        this.azureTablePartitionKeyName = Output.empty();
-        this.azureTableRowKeyName = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.sinkRetryCount = Output.empty();
-        this.sinkRetryWait = Output.empty();
-        this.type = Output.empty();
-        this.writeBatchSize = Output.empty();
-        this.writeBatchTimeout = Output.empty();
+        this.azureTableDefaultPartitionKeyValue = Codegen.empty();
+        this.azureTableInsertType = Codegen.empty();
+        this.azureTablePartitionKeyName = Codegen.empty();
+        this.azureTableRowKeyName = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.sinkRetryCount = Codegen.empty();
+        this.sinkRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
+        this.writeBatchSize = Codegen.empty();
+        this.writeBatchTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
-            this.azureTableDefaultPartitionKeyValue = Output.ofNullable(azureTableDefaultPartitionKeyValue);
+            this.azureTableDefaultPartitionKeyValue = Codegen.ofNullable(azureTableDefaultPartitionKeyValue);
             return this;
         }
         public Builder azureTableInsertType(@Nullable Output<Object> azureTableInsertType) {
@@ -233,7 +234,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
-            this.azureTableInsertType = Output.ofNullable(azureTableInsertType);
+            this.azureTableInsertType = Codegen.ofNullable(azureTableInsertType);
             return this;
         }
         public Builder azureTablePartitionKeyName(@Nullable Output<Object> azureTablePartitionKeyName) {
@@ -241,7 +242,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
-            this.azureTablePartitionKeyName = Output.ofNullable(azureTablePartitionKeyName);
+            this.azureTablePartitionKeyName = Codegen.ofNullable(azureTablePartitionKeyName);
             return this;
         }
         public Builder azureTableRowKeyName(@Nullable Output<Object> azureTableRowKeyName) {
@@ -249,7 +250,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
-            this.azureTableRowKeyName = Output.ofNullable(azureTableRowKeyName);
+            this.azureTableRowKeyName = Codegen.ofNullable(azureTableRowKeyName);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -257,7 +258,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -265,7 +266,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
@@ -273,7 +274,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
             return this;
         }
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
@@ -281,7 +282,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -297,7 +298,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Output.ofNullable(writeBatchSize);
+            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
@@ -305,7 +306,7 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
             return this;
         }        public AzureTableSinkArgs build() {
             return new AzureTableSinkArgs(azureTableDefaultPartitionKeyValue, azureTableInsertType, azureTablePartitionKeyName, azureTableRowKeyName, disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);

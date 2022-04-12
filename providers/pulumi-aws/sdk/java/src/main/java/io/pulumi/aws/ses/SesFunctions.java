@@ -23,12 +23,12 @@ public final class SesFunctions {
      * 
      */
     public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet() {
-        return getActiveReceiptRuleSet(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getActiveReceiptRuleSet(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(io.pulumi.resources.InvokeArgs args) {
-        return getActiveReceiptRuleSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args) {
+        return getActiveReceiptRuleSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ses/getActiveReceiptRuleSet:getActiveReceiptRuleSet", TypeShape.of(GetActiveReceiptRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,10 +37,10 @@ public final class SesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(io.pulumi.aws.ses.inputs.GetDomainIdentityArgs args) {
-        return getDomainIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args) {
+        return getDomainIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(io.pulumi.aws.ses.inputs.GetDomainIdentityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ses/getDomainIdentity:getDomainIdentity", TypeShape.of(GetDomainIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class SesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(io.pulumi.aws.ses.inputs.GetEmailIdentityArgs args) {
-        return getEmailIdentity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args) {
+        return getEmailIdentity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(io.pulumi.aws.ses.inputs.GetEmailIdentityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ses/getEmailIdentity:getEmailIdentity", TypeShape.of(GetEmailIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

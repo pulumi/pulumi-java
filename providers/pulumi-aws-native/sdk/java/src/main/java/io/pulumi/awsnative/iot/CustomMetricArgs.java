@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import io.pulumi.awsnative.iot.inputs.CustomMetricTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
-        return this.metricName == null ? Output.empty() : this.metricName;
+        return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CustomMetricTagArgs>> tags;
 
     public Output<List<CustomMetricTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CustomMetricArgs(
@@ -73,10 +74,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomMetricArgs() {
-        this.displayName = Output.empty();
-        this.metricName = Output.empty();
-        this.metricType = Output.empty();
-        this.tags = Output.empty();
+        this.displayName = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder metricName(@Nullable Output<String> metricName) {
@@ -118,7 +119,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Output.ofNullable(metricName);
+            this.metricName = Codegen.ofNullable(metricName);
             return this;
         }
         public Builder metricType(Output<CustomMetricMetricType> metricType) {
@@ -134,7 +135,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<CustomMetricTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(CustomMetricTagArgs... tags) {

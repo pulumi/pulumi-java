@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> volumeId;
 
     public Output<String> getVolumeId() {
-        return this.volumeId == null ? Output.empty() : this.volumeId;
+        return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public InstanceRootBlockDeviceArgs(
@@ -151,16 +152,16 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
     }
 
     private InstanceRootBlockDeviceArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.deviceName = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.tags = Output.empty();
-        this.throughput = Output.empty();
-        this.volumeId = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throughput = Codegen.empty();
+        this.volumeId = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -214,7 +215,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -222,7 +223,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -230,7 +231,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -238,7 +239,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -246,7 +247,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -254,7 +255,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }
         public Builder volumeId(@Nullable Output<String> volumeId) {
@@ -262,7 +263,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Output.ofNullable(volumeId);
+            this.volumeId = Codegen.ofNullable(volumeId);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -270,7 +271,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -278,7 +279,7 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public InstanceRootBlockDeviceArgs build() {
             return new InstanceRootBlockDeviceArgs(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, tags, throughput, volumeId, volumeSize, volumeType);

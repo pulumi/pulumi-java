@@ -6,6 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.TagTagGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Output.empty() : this.autoscalingGroupName;
+        return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TagTagGetArgs> tag;
 
     public Output<TagTagGetArgs> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public TagState(
@@ -45,8 +46,8 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagState() {
-        this.autoscalingGroupName = Output.empty();
-        this.tag = Output.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
+            this.autoscalingGroupName = Codegen.ofNullable(autoscalingGroupName);
             return this;
         }
         public Builder tag(@Nullable Output<TagTagGetArgs> tag) {
@@ -84,7 +85,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable TagTagGetArgs tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public TagState build() {
             return new TagState(autoscalingGroupName, tag);

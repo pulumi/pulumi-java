@@ -28,12 +28,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey() {
-        return getDefaultKmsKey(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDefaultKmsKey(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(io.pulumi.resources.InvokeArgs args) {
-        return getDefaultKmsKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args) {
+        return getDefaultKmsKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getDefaultKmsKey:getDefaultKmsKey", TypeShape.of(GetDefaultKmsKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,12 +43,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes() {
-        return getEbsVolumes(io.pulumi.aws.ebs.inputs.GetEbsVolumesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEbsVolumes(GetEbsVolumesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(io.pulumi.aws.ebs.inputs.GetEbsVolumesArgs args) {
-        return getEbsVolumes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args) {
+        return getEbsVolumes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(io.pulumi.aws.ebs.inputs.GetEbsVolumesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getEbsVolumes:getEbsVolumes", TypeShape.of(GetEbsVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,12 +58,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault() {
-        return getEncryptionByDefault(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEncryptionByDefault(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(io.pulumi.resources.InvokeArgs args) {
-        return getEncryptionByDefault(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args) {
+        return getEncryptionByDefault(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,12 +73,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetSnapshotResult> getSnapshot() {
-        return getSnapshot(io.pulumi.aws.ebs.inputs.GetSnapshotArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSnapshot(GetSnapshotArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.aws.ebs.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.aws.ebs.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,12 +89,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds() {
-        return getSnapshotIds(io.pulumi.aws.ebs.inputs.GetSnapshotIdsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSnapshotIds(GetSnapshotIdsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(io.pulumi.aws.ebs.inputs.GetSnapshotIdsArgs args) {
-        return getSnapshotIds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args) {
+        return getSnapshotIds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(io.pulumi.aws.ebs.inputs.GetSnapshotIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshotIds:getSnapshotIds", TypeShape.of(GetSnapshotIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,12 +105,12 @@ public final class EbsFunctions {
      * 
      */
     public static CompletableFuture<GetVolumeResult> getVolume() {
-        return getVolume(io.pulumi.aws.ebs.inputs.GetVolumeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getVolume(GetVolumeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.aws.ebs.inputs.GetVolumeArgs args) {
-        return getVolume(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+        return getVolume(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVolumeResult> getVolume(io.pulumi.aws.ebs.inputs.GetVolumeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
 }

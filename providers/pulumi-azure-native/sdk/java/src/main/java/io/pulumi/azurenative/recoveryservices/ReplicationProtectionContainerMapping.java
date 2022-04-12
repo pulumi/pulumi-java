@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -110,7 +111,7 @@ public class ReplicationProtectionContainerMapping extends io.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationProtectionContainerMapping(String name, ReplicationProtectionContainerMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ReplicationProtectionContainerMapping", name, args == null ? ReplicationProtectionContainerMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:recoveryservices:ReplicationProtectionContainerMapping", name, args == null ? ReplicationProtectionContainerMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationProtectionContainerMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

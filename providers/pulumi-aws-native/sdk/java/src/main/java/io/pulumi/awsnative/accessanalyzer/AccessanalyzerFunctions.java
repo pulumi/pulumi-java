@@ -16,10 +16,10 @@ public final class AccessanalyzerFunctions {
      * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user's account
      * 
      */
-    public static CompletableFuture<GetAnalyzerResult> getAnalyzer(io.pulumi.awsnative.accessanalyzer.inputs.GetAnalyzerArgs args) {
-        return getAnalyzer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args) {
+        return getAnalyzer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAnalyzerResult> getAnalyzer(io.pulumi.awsnative.accessanalyzer.inputs.GetAnalyzerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:accessanalyzer:getAnalyzer", TypeShape.of(GetAnalyzerResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountBindOptionsArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsArgs;
@@ -22,21 +23,21 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsArgs> bindOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountBindOptionsArgs> getBindOptions() {
-        return this.bindOptions == null ? Output.empty() : this.bindOptions;
+        return this.bindOptions == null ? Codegen.empty() : this.bindOptions;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="target", required=true)
@@ -50,7 +51,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> tmpfsOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> getTmpfsOptions() {
-        return this.tmpfsOptions == null ? Output.empty() : this.tmpfsOptions;
+        return this.tmpfsOptions == null ? Codegen.empty() : this.tmpfsOptions;
     }
 
     @Import(name="type", required=true)
@@ -64,7 +65,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> volumeOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> getVolumeOptions() {
-        return this.volumeOptions == null ? Output.empty() : this.volumeOptions;
+        return this.volumeOptions == null ? Codegen.empty() : this.volumeOptions;
     }
 
     public ServiceTaskSpecContainerSpecMountArgs(
@@ -85,13 +86,13 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
     }
 
     private ServiceTaskSpecContainerSpecMountArgs() {
-        this.bindOptions = Output.empty();
-        this.readOnly = Output.empty();
-        this.source = Output.empty();
-        this.target = Output.empty();
-        this.tmpfsOptions = Output.empty();
-        this.type = Output.empty();
-        this.volumeOptions = Output.empty();
+        this.bindOptions = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.source = Codegen.empty();
+        this.target = Codegen.empty();
+        this.tmpfsOptions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.volumeOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder bindOptions(@Nullable ServiceTaskSpecContainerSpecMountBindOptionsArgs bindOptions) {
-            this.bindOptions = Output.ofNullable(bindOptions);
+            this.bindOptions = Codegen.ofNullable(bindOptions);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -139,7 +140,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -147,7 +148,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder target(Output<String> target) {
@@ -163,7 +164,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder tmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs tmpfsOptions) {
-            this.tmpfsOptions = Output.ofNullable(tmpfsOptions);
+            this.tmpfsOptions = Codegen.ofNullable(tmpfsOptions);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -179,7 +180,7 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
             return this;
         }
         public Builder volumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptionsArgs volumeOptions) {
-            this.volumeOptions = Output.ofNullable(volumeOptions);
+            this.volumeOptions = Codegen.ofNullable(volumeOptions);
             return this;
         }        public ServiceTaskSpecContainerSpecMountArgs build() {
             return new ServiceTaskSpecContainerSpecMountArgs(bindOptions, readOnly, source, target, tmpfsOptions, type, volumeOptions);

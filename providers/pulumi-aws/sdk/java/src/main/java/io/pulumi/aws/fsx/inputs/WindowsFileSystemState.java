@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> activeDirectoryId;
 
     public Output<String> getActiveDirectoryId() {
-        return this.activeDirectoryId == null ? Output.empty() : this.activeDirectoryId;
+        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
-        return this.aliases == null ? Output.empty() : this.aliases;
+        return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
 
     public Output<WindowsFileSystemAuditLogConfigurationGetArgs> getAuditLogConfiguration() {
-        return this.auditLogConfiguration == null ? Output.empty() : this.auditLogConfiguration;
+        return this.auditLogConfiguration == null ? Codegen.empty() : this.auditLogConfiguration;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
+        return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
-        return this.backupId == null ? Output.empty() : this.backupId;
+        return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
     public Output<Boolean> getCopyTagsToBackups() {
-        return this.copyTagsToBackups == null ? Output.empty() : this.copyTagsToBackups;
+        return this.copyTagsToBackups == null ? Codegen.empty() : this.copyTagsToBackups;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
+        return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
-        return this.deploymentType == null ? Output.empty() : this.deploymentType;
+        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Output.empty() : this.networkInterfaceIds;
+        return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> preferredFileServerIp;
 
     public Output<String> getPreferredFileServerIp() {
-        return this.preferredFileServerIp == null ? Output.empty() : this.preferredFileServerIp;
+        return this.preferredFileServerIp == null ? Codegen.empty() : this.preferredFileServerIp;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> preferredSubnetId;
 
     public Output<String> getPreferredSubnetId() {
-        return this.preferredSubnetId == null ? Output.empty() : this.preferredSubnetId;
+        return this.preferredSubnetId == null ? Codegen.empty() : this.preferredSubnetId;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> remoteAdministrationEndpoint;
 
     public Output<String> getRemoteAdministrationEndpoint() {
-        return this.remoteAdministrationEndpoint == null ? Output.empty() : this.remoteAdministrationEndpoint;
+        return this.remoteAdministrationEndpoint == null ? Codegen.empty() : this.remoteAdministrationEndpoint;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
 
     public Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> getSelfManagedActiveDirectory() {
-        return this.selfManagedActiveDirectory == null ? Output.empty() : this.selfManagedActiveDirectory;
+        return this.selfManagedActiveDirectory == null ? Codegen.empty() : this.selfManagedActiveDirectory;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> skipFinalBackup;
 
     public Output<Boolean> getSkipFinalBackup() {
-        return this.skipFinalBackup == null ? Output.empty() : this.skipFinalBackup;
+        return this.skipFinalBackup == null ? Codegen.empty() : this.skipFinalBackup;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
+        return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
     /**
@@ -248,7 +249,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -259,7 +260,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -270,7 +271,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -281,7 +282,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -292,7 +293,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> throughputCapacity;
 
     public Output<Integer> getThroughputCapacity() {
-        return this.throughputCapacity == null ? Output.empty() : this.throughputCapacity;
+        return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 
     /**
@@ -303,7 +304,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -314,7 +315,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
+        return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public WindowsFileSystemState(
@@ -375,33 +376,33 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
     }
 
     private WindowsFileSystemState() {
-        this.activeDirectoryId = Output.empty();
-        this.aliases = Output.empty();
-        this.arn = Output.empty();
-        this.auditLogConfiguration = Output.empty();
-        this.automaticBackupRetentionDays = Output.empty();
-        this.backupId = Output.empty();
-        this.copyTagsToBackups = Output.empty();
-        this.dailyAutomaticBackupStartTime = Output.empty();
-        this.deploymentType = Output.empty();
-        this.dnsName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.networkInterfaceIds = Output.empty();
-        this.ownerId = Output.empty();
-        this.preferredFileServerIp = Output.empty();
-        this.preferredSubnetId = Output.empty();
-        this.remoteAdministrationEndpoint = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.selfManagedActiveDirectory = Output.empty();
-        this.skipFinalBackup = Output.empty();
-        this.storageCapacity = Output.empty();
-        this.storageType = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.throughputCapacity = Output.empty();
-        this.vpcId = Output.empty();
-        this.weeklyMaintenanceStartTime = Output.empty();
+        this.activeDirectoryId = Codegen.empty();
+        this.aliases = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.auditLogConfiguration = Codegen.empty();
+        this.automaticBackupRetentionDays = Codegen.empty();
+        this.backupId = Codegen.empty();
+        this.copyTagsToBackups = Codegen.empty();
+        this.dailyAutomaticBackupStartTime = Codegen.empty();
+        this.deploymentType = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.networkInterfaceIds = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.preferredFileServerIp = Codegen.empty();
+        this.preferredSubnetId = Codegen.empty();
+        this.remoteAdministrationEndpoint = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.selfManagedActiveDirectory = Codegen.empty();
+        this.skipFinalBackup = Codegen.empty();
+        this.storageCapacity = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.throughputCapacity = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.weeklyMaintenanceStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -481,7 +482,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
+            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
             return this;
         }
         public Builder aliases(@Nullable Output<List<String>> aliases) {
@@ -489,7 +490,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Output.ofNullable(aliases);
+            this.aliases = Codegen.ofNullable(aliases);
             return this;
         }
         public Builder aliases(String... aliases) {
@@ -500,7 +501,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder auditLogConfiguration(@Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration) {
@@ -508,7 +509,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder auditLogConfiguration(@Nullable WindowsFileSystemAuditLogConfigurationGetArgs auditLogConfiguration) {
-            this.auditLogConfiguration = Output.ofNullable(auditLogConfiguration);
+            this.auditLogConfiguration = Codegen.ofNullable(auditLogConfiguration);
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
@@ -516,7 +517,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Codegen.ofNullable(automaticBackupRetentionDays);
             return this;
         }
         public Builder backupId(@Nullable Output<String> backupId) {
@@ -524,7 +525,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Output.ofNullable(backupId);
+            this.backupId = Codegen.ofNullable(backupId);
             return this;
         }
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
@@ -532,7 +533,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
-            this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
+            this.copyTagsToBackups = Codegen.ofNullable(copyTagsToBackups);
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
@@ -540,7 +541,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Codegen.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
@@ -548,7 +549,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Output.ofNullable(deploymentType);
+            this.deploymentType = Codegen.ofNullable(deploymentType);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -556,7 +557,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -564,7 +565,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
@@ -572,7 +573,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Output.ofNullable(networkInterfaceIds);
+            this.networkInterfaceIds = Codegen.ofNullable(networkInterfaceIds);
             return this;
         }
         public Builder networkInterfaceIds(String... networkInterfaceIds) {
@@ -583,7 +584,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder preferredFileServerIp(@Nullable Output<String> preferredFileServerIp) {
@@ -591,7 +592,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder preferredFileServerIp(@Nullable String preferredFileServerIp) {
-            this.preferredFileServerIp = Output.ofNullable(preferredFileServerIp);
+            this.preferredFileServerIp = Codegen.ofNullable(preferredFileServerIp);
             return this;
         }
         public Builder preferredSubnetId(@Nullable Output<String> preferredSubnetId) {
@@ -599,7 +600,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder preferredSubnetId(@Nullable String preferredSubnetId) {
-            this.preferredSubnetId = Output.ofNullable(preferredSubnetId);
+            this.preferredSubnetId = Codegen.ofNullable(preferredSubnetId);
             return this;
         }
         public Builder remoteAdministrationEndpoint(@Nullable Output<String> remoteAdministrationEndpoint) {
@@ -607,7 +608,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder remoteAdministrationEndpoint(@Nullable String remoteAdministrationEndpoint) {
-            this.remoteAdministrationEndpoint = Output.ofNullable(remoteAdministrationEndpoint);
+            this.remoteAdministrationEndpoint = Codegen.ofNullable(remoteAdministrationEndpoint);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -615,7 +616,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -626,7 +627,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder selfManagedActiveDirectory(@Nullable WindowsFileSystemSelfManagedActiveDirectoryGetArgs selfManagedActiveDirectory) {
-            this.selfManagedActiveDirectory = Output.ofNullable(selfManagedActiveDirectory);
+            this.selfManagedActiveDirectory = Codegen.ofNullable(selfManagedActiveDirectory);
             return this;
         }
         public Builder skipFinalBackup(@Nullable Output<Boolean> skipFinalBackup) {
@@ -634,7 +635,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder skipFinalBackup(@Nullable Boolean skipFinalBackup) {
-            this.skipFinalBackup = Output.ofNullable(skipFinalBackup);
+            this.skipFinalBackup = Codegen.ofNullable(skipFinalBackup);
             return this;
         }
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
@@ -642,7 +643,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Output.ofNullable(storageCapacity);
+            this.storageCapacity = Codegen.ofNullable(storageCapacity);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -650,7 +651,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -658,7 +659,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -669,7 +670,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -677,7 +678,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
@@ -685,7 +686,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
-            this.throughputCapacity = Output.ofNullable(throughputCapacity);
+            this.throughputCapacity = Codegen.ofNullable(throughputCapacity);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -693,7 +694,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
@@ -701,7 +702,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Codegen.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }        public WindowsFileSystemState build() {
             return new WindowsFileSystemState(activeDirectoryId, aliases, arn, auditLogConfiguration, automaticBackupRetentionDays, backupId, copyTagsToBackups, dailyAutomaticBackupStartTime, deploymentType, dnsName, kmsKeyId, networkInterfaceIds, ownerId, preferredFileServerIp, preferredSubnetId, remoteAdministrationEndpoint, securityGroupIds, selfManagedActiveDirectory, skipFinalBackup, storageCapacity, storageType, subnetIds, tags, tagsAll, throughputCapacity, vpcId, weeklyMaintenanceStartTime);

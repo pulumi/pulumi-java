@@ -18,20 +18,20 @@ public final class Run_v2Functions {
      * Gets information about a Service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.googlenative.run_v2.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.googlenative.run_v2.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v2:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given Cloud Run Service. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(io.pulumi.googlenative.run_v2.inputs.GetServiceIamPolicyArgs args) {
-        return getServiceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
+        return getServiceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(io.pulumi.googlenative.run_v2.inputs.GetServiceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v2:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

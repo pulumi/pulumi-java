@@ -8,6 +8,7 @@ import io.pulumi.aws.ec2.SecurityGroupRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.NodeGroupSecurityGroupArgs;
 import io.pulumi.eks.Utilities;
 import javax.annotation.Nullable;
@@ -69,7 +70,7 @@ public class NodeGroupSecurityGroup extends io.pulumi.resources.ComponentResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeGroupSecurityGroup(String name, NodeGroupSecurityGroupArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:NodeGroupSecurityGroup", name, args == null ? NodeGroupSecurityGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:NodeGroupSecurityGroup", name, args == null ? NodeGroupSecurityGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
     }
 
     private BucketReplicationConfigRuleDestinationReplicationTimeGetArgs() {
-        this.status = Output.empty();
-        this.time = Output.empty();
+        this.status = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {

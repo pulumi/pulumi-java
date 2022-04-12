@@ -5,6 +5,7 @@ package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.redis_v1beta1.inputs.WeeklyMaintenanceWindowArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
     public Output<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {
-        return this.weeklyMaintenanceWindow == null ? Output.empty() : this.weeklyMaintenanceWindow;
+        return this.weeklyMaintenanceWindow == null ? Codegen.empty() : this.weeklyMaintenanceWindow;
     }
 
     public MaintenancePolicyArgs(
@@ -50,8 +51,8 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenancePolicyArgs() {
-        this.description = Output.empty();
-        this.weeklyMaintenanceWindow = Output.empty();
+        this.description = Codegen.empty();
+        this.weeklyMaintenanceWindow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder weeklyMaintenanceWindow(@Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
@@ -89,7 +90,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder weeklyMaintenanceWindow(@Nullable List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
-            this.weeklyMaintenanceWindow = Output.ofNullable(weeklyMaintenanceWindow);
+            this.weeklyMaintenanceWindow = Codegen.ofNullable(weeklyMaintenanceWindow);
             return this;
         }
         public Builder weeklyMaintenanceWindow(WeeklyMaintenanceWindowArgs... weeklyMaintenanceWindow) {

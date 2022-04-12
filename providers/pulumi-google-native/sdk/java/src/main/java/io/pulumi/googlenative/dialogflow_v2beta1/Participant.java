@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.ParticipantArgs;
 import java.lang.String;
@@ -99,7 +100,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Participant(String name, ParticipantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Participant", name, args == null ? ParticipantArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Participant", name, args == null ? ParticipantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Participant(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

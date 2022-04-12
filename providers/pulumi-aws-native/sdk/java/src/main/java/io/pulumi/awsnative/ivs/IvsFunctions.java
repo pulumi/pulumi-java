@@ -22,40 +22,40 @@ public final class IvsFunctions {
      * Resource Type definition for AWS::IVS::Channel
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.awsnative.ivs.inputs.GetChannelArgs args) {
-        return getChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+        return getChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.awsnative.ivs.inputs.GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IVS::PlaybackKeyPair
      * 
      */
-    public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(io.pulumi.awsnative.ivs.inputs.GetPlaybackKeyPairArgs args) {
-        return getPlaybackKeyPair(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(GetPlaybackKeyPairArgs args) {
+        return getPlaybackKeyPair(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(io.pulumi.awsnative.ivs.inputs.GetPlaybackKeyPairArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPlaybackKeyPairResult> getPlaybackKeyPair(GetPlaybackKeyPairArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getPlaybackKeyPair", TypeShape.of(GetPlaybackKeyPairResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IVS::RecordingConfiguration
      * 
      */
-    public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(io.pulumi.awsnative.ivs.inputs.GetRecordingConfigurationArgs args) {
-        return getRecordingConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(GetRecordingConfigurationArgs args) {
+        return getRecordingConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(io.pulumi.awsnative.ivs.inputs.GetRecordingConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRecordingConfigurationResult> getRecordingConfiguration(GetRecordingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getRecordingConfiguration", TypeShape.of(GetRecordingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IVS::StreamKey
      * 
      */
-    public static CompletableFuture<GetStreamKeyResult> getStreamKey(io.pulumi.awsnative.ivs.inputs.GetStreamKeyArgs args) {
-        return getStreamKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamKeyResult> getStreamKey(GetStreamKeyArgs args) {
+        return getStreamKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamKeyResult> getStreamKey(io.pulumi.awsnative.ivs.inputs.GetStreamKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamKeyResult> getStreamKey(GetStreamKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ivs:getStreamKey", TypeShape.of(GetStreamKeyResult.class), args, Utilities.withVersion(options));
     }
 }

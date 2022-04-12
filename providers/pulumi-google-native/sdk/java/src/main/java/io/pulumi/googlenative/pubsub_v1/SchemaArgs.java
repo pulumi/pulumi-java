@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> definition;
 
     public Output<String> getDefinition() {
-        return this.definition == null ? Output.empty() : this.definition;
+        return this.definition == null ? Codegen.empty() : this.definition;
     }
 
     /**
@@ -34,21 +35,21 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
-        return this.schemaId == null ? Output.empty() : this.schemaId;
+        return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaType> type;
 
     public Output<SchemaType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SchemaArgs(
@@ -76,11 +77,11 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.definition = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.schemaId = Output.empty();
-        this.type = Output.empty();
+        this.definition = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schemaId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder definition(@Nullable String definition) {
-            this.definition = Output.ofNullable(definition);
+            this.definition = Codegen.ofNullable(definition);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -124,7 +125,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -132,7 +133,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schemaId(@Nullable Output<String> schemaId) {
@@ -140,7 +141,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Output.ofNullable(schemaId);
+            this.schemaId = Codegen.ofNullable(schemaId);
             return this;
         }
         public Builder type(@Nullable Output<SchemaType> type) {
@@ -148,7 +149,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable SchemaType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SchemaArgs build() {
             return new SchemaArgs(definition, name, project, schemaId, type);

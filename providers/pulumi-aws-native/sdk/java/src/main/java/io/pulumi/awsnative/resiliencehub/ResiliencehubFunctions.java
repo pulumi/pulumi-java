@@ -18,20 +18,20 @@ public final class ResiliencehubFunctions {
      * Resource Type Definition for AWS::ResilienceHub::App.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.resiliencehub.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.awsnative.resiliencehub.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resiliencehub:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for Resiliency Policy.
      * 
      */
-    public static CompletableFuture<GetResiliencyPolicyResult> getResiliencyPolicy(io.pulumi.awsnative.resiliencehub.inputs.GetResiliencyPolicyArgs args) {
-        return getResiliencyPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResiliencyPolicyResult> getResiliencyPolicy(GetResiliencyPolicyArgs args) {
+        return getResiliencyPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResiliencyPolicyResult> getResiliencyPolicy(io.pulumi.awsnative.resiliencehub.inputs.GetResiliencyPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResiliencyPolicyResult> getResiliencyPolicy(GetResiliencyPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resiliencehub:getResiliencyPolicy", TypeShape.of(GetResiliencyPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

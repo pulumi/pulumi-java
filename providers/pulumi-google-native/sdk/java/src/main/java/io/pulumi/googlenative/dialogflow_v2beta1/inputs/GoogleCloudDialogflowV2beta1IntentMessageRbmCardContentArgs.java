@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> getMedia() {
-        return this.media == null ? Output.empty() : this.media;
+        return this.media == null ? Codegen.empty() : this.media;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getSuggestions() {
-        return this.suggestions == null ? Output.empty() : this.suggestions;
+        return this.suggestions == null ? Codegen.empty() : this.suggestions;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs(
@@ -77,10 +78,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs() {
-        this.description = Output.empty();
-        this.media = Output.empty();
-        this.suggestions = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.media = Codegen.empty();
+        this.suggestions = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder media(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media) {
@@ -122,7 +123,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             return this;
         }
         public Builder media(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs media) {
-            this.media = Output.ofNullable(media);
+            this.media = Codegen.ofNullable(media);
             return this;
         }
         public Builder suggestions(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions) {
@@ -130,7 +131,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             return this;
         }
         public Builder suggestions(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> suggestions) {
-            this.suggestions = Output.ofNullable(suggestions);
+            this.suggestions = Codegen.ofNullable(suggestions);
             return this;
         }
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... suggestions) {
@@ -141,7 +142,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs(description, media, suggestions, title);

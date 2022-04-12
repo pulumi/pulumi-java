@@ -27,10 +27,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.batch.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.batch.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -38,10 +38,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(io.pulumi.azurenative.batch.inputs.GetApplicationPackageArgs args) {
-        return getApplicationPackage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(GetApplicationPackageArgs args) {
+        return getApplicationPackage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(io.pulumi.azurenative.batch.inputs.GetApplicationPackageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationPackageResult> getApplicationPackage(GetApplicationPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getApplicationPackage", TypeShape.of(GetApplicationPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,10 +49,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetBatchAccountResult> getBatchAccount(io.pulumi.azurenative.batch.inputs.GetBatchAccountArgs args) {
-        return getBatchAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBatchAccountResult> getBatchAccount(GetBatchAccountArgs args) {
+        return getBatchAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBatchAccountResult> getBatchAccount(io.pulumi.azurenative.batch.inputs.GetBatchAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBatchAccountResult> getBatchAccount(GetBatchAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getBatchAccount", TypeShape.of(GetBatchAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.batch.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.batch.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,10 +71,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetPoolResult> getPool(io.pulumi.azurenative.batch.inputs.GetPoolArgs args) {
-        return getPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args) {
+        return getPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPoolResult> getPool(io.pulumi.azurenative.batch.inputs.GetPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPoolResult> getPool(GetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getPool", TypeShape.of(GetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,10 +82,10 @@ public final class BatchFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(io.pulumi.azurenative.batch.inputs.ListBatchAccountKeysArgs args) {
-        return listBatchAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(ListBatchAccountKeysArgs args) {
+        return listBatchAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(io.pulumi.azurenative.batch.inputs.ListBatchAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBatchAccountKeysResult> listBatchAccountKeys(ListBatchAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:listBatchAccountKeys", TypeShape.of(ListBatchAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

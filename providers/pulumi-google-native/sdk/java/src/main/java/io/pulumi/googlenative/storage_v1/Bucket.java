@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.BucketArgs;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
@@ -463,7 +464,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bucket(String name, @Nullable BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Bucket(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

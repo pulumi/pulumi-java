@@ -18,20 +18,20 @@ public final class LicensemanagerFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetGrantResult> getGrant(io.pulumi.awsnative.licensemanager.inputs.GetGrantArgs args) {
-        return getGrant(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGrantResult> getGrant(GetGrantArgs args) {
+        return getGrant(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGrantResult> getGrant(io.pulumi.awsnative.licensemanager.inputs.GetGrantArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGrantResult> getGrant(GetGrantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getGrant", TypeShape.of(GetGrantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::LicenseManager::License
      * 
      */
-    public static CompletableFuture<GetLicenseResult> getLicense(io.pulumi.awsnative.licensemanager.inputs.GetLicenseArgs args) {
-        return getLicense(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args) {
+        return getLicense(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLicenseResult> getLicense(io.pulumi.awsnative.licensemanager.inputs.GetLicenseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:licensemanager:getLicense", TypeShape.of(GetLicenseResult.class), args, Utilities.withVersion(options));
     }
 }

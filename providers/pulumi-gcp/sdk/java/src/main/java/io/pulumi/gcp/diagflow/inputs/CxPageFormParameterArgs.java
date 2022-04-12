@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> entityType;
 
     public Output<String> getEntityType() {
-        return this.entityType == null ? Output.empty() : this.entityType;
+        return this.entityType == null ? Codegen.empty() : this.entityType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior;
 
     public Output<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
-        return this.fillBehavior == null ? Output.empty() : this.fillBehavior;
+        return this.fillBehavior == null ? Codegen.empty() : this.fillBehavior;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> isList;
 
     public Output<Boolean> getIsList() {
-        return this.isList == null ? Output.empty() : this.isList;
+        return this.isList == null ? Codegen.empty() : this.isList;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {
-        return this.redact == null ? Output.empty() : this.redact;
+        return this.redact == null ? Codegen.empty() : this.redact;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> required;
 
     public Output<Boolean> getRequired() {
-        return this.required == null ? Output.empty() : this.required;
+        return this.required == null ? Codegen.empty() : this.required;
     }
 
     public CxPageFormParameterArgs(
@@ -102,12 +103,12 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     private CxPageFormParameterArgs() {
-        this.displayName = Output.empty();
-        this.entityType = Output.empty();
-        this.fillBehavior = Output.empty();
-        this.isList = Output.empty();
-        this.redact = Output.empty();
-        this.required = Output.empty();
+        this.displayName = Codegen.empty();
+        this.entityType = Codegen.empty();
+        this.fillBehavior = Codegen.empty();
+        this.isList = Codegen.empty();
+        this.redact = Codegen.empty();
+        this.required = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entityType(@Nullable Output<String> entityType) {
@@ -153,7 +154,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder entityType(@Nullable String entityType) {
-            this.entityType = Output.ofNullable(entityType);
+            this.entityType = Codegen.ofNullable(entityType);
             return this;
         }
         public Builder fillBehavior(@Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
@@ -161,7 +162,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fillBehavior(@Nullable CxPageFormParameterFillBehaviorArgs fillBehavior) {
-            this.fillBehavior = Output.ofNullable(fillBehavior);
+            this.fillBehavior = Codegen.ofNullable(fillBehavior);
             return this;
         }
         public Builder isList(@Nullable Output<Boolean> isList) {
@@ -169,7 +170,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Output.ofNullable(isList);
+            this.isList = Codegen.ofNullable(isList);
             return this;
         }
         public Builder redact(@Nullable Output<Boolean> redact) {
@@ -177,7 +178,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Output.ofNullable(redact);
+            this.redact = Codegen.ofNullable(redact);
             return this;
         }
         public Builder required(@Nullable Output<Boolean> required) {
@@ -185,7 +186,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder required(@Nullable Boolean required) {
-            this.required = Output.ofNullable(required);
+            this.required = Codegen.ofNullable(required);
             return this;
         }        public CxPageFormParameterArgs build() {
             return new CxPageFormParameterArgs(displayName, entityType, fillBehavior, isList, redact, required);

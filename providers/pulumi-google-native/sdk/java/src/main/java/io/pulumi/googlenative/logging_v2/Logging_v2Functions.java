@@ -18,20 +18,20 @@ public final class Logging_v2Functions {
      * Gets the description of an exclusion in the _Default sink.
      * 
      */
-    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusion(io.pulumi.googlenative.logging_v2.inputs.GetBillingAccountExclusionArgs args) {
-        return getBillingAccountExclusion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusion(GetBillingAccountExclusionArgs args) {
+        return getBillingAccountExclusion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusion(io.pulumi.googlenative.logging_v2.inputs.GetBillingAccountExclusionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusion(GetBillingAccountExclusionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountExclusion", TypeShape.of(GetBillingAccountExclusionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a sink.
      * 
      */
-    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSink(io.pulumi.googlenative.logging_v2.inputs.GetBillingAccountSinkArgs args) {
-        return getBillingAccountSink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSink(GetBillingAccountSinkArgs args) {
+        return getBillingAccountSink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSink(io.pulumi.googlenative.logging_v2.inputs.GetBillingAccountSinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSink(GetBillingAccountSinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountSink", TypeShape.of(GetBillingAccountSinkResult.class), args, Utilities.withVersion(options));
     }
 }

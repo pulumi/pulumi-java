@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> gradeName;
 
     public Output<String> getGradeName() {
-        return this.gradeName == null ? Output.empty() : this.gradeName;
+        return this.gradeName == null ? Codegen.empty() : this.gradeName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> maxScoreThreshold;
 
     public Output<Integer> getMaxScoreThreshold() {
-        return this.maxScoreThreshold == null ? Output.empty() : this.maxScoreThreshold;
+        return this.maxScoreThreshold == null ? Codegen.empty() : this.maxScoreThreshold;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> minScoreThreshold;
 
     public Output<Integer> getMinScoreThreshold() {
-        return this.minScoreThreshold == null ? Output.empty() : this.minScoreThreshold;
+        return this.minScoreThreshold == null ? Codegen.empty() : this.minScoreThreshold;
     }
 
     public PredictionGradesArgs(
@@ -62,9 +63,9 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PredictionGradesArgs() {
-        this.gradeName = Output.empty();
-        this.maxScoreThreshold = Output.empty();
-        this.minScoreThreshold = Output.empty();
+        this.gradeName = Codegen.empty();
+        this.maxScoreThreshold = Codegen.empty();
+        this.minScoreThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder gradeName(@Nullable String gradeName) {
-            this.gradeName = Output.ofNullable(gradeName);
+            this.gradeName = Codegen.ofNullable(gradeName);
             return this;
         }
         public Builder maxScoreThreshold(@Nullable Output<Integer> maxScoreThreshold) {
@@ -104,7 +105,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
-            this.maxScoreThreshold = Output.ofNullable(maxScoreThreshold);
+            this.maxScoreThreshold = Codegen.ofNullable(maxScoreThreshold);
             return this;
         }
         public Builder minScoreThreshold(@Nullable Output<Integer> minScoreThreshold) {
@@ -112,7 +113,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
-            this.minScoreThreshold = Output.ofNullable(minScoreThreshold);
+            this.minScoreThreshold = Codegen.ofNullable(minScoreThreshold);
             return this;
         }        public PredictionGradesArgs build() {
             return new PredictionGradesArgs(gradeName, maxScoreThreshold, minScoreThreshold);

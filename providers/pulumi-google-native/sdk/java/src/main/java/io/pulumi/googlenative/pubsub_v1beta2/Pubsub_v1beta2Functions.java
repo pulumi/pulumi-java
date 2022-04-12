@@ -22,40 +22,40 @@ public final class Pubsub_v1beta2Functions {
      * Gets the configuration details of a subscription.
      * 
      */
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetSubscriptionArgs args) {
-        return getSubscription(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
+        return getSubscription(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionResult> getSubscription(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetSubscriptionIamPolicyArgs args) {
-        return getSubscriptionIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args) {
+        return getSubscriptionIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetSubscriptionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionIamPolicyResult> getSubscriptionIamPolicy(GetSubscriptionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getSubscriptionIamPolicy", TypeShape.of(GetSubscriptionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the configuration of a topic.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetTopicArgs args) {
-        return getTopic(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+        return getTopic(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicResult> getTopic(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetTopicIamPolicyArgs args) {
-        return getTopicIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args) {
+        return getTopicIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(io.pulumi.googlenative.pubsub_v1beta2.inputs.GetTopicIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicIamPolicyResult> getTopicIamPolicy(GetTopicIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getTopicIamPolicy", TypeShape.of(GetTopicIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

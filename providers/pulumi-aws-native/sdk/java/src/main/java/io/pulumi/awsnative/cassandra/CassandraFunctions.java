@@ -18,20 +18,20 @@ public final class CassandraFunctions {
      * Resource schema for AWS::Cassandra::Keyspace
      * 
      */
-    public static CompletableFuture<GetKeyspaceResult> getKeyspace(io.pulumi.awsnative.cassandra.inputs.GetKeyspaceArgs args) {
-        return getKeyspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args) {
+        return getKeyspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyspaceResult> getKeyspace(io.pulumi.awsnative.cassandra.inputs.GetKeyspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getKeyspace", TypeShape.of(GetKeyspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Cassandra::Table
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.awsnative.cassandra.inputs.GetTableArgs args) {
-        return getTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+        return getTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTableResult> getTable(io.pulumi.awsnative.cassandra.inputs.GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

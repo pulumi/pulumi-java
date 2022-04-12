@@ -33,10 +33,10 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetActiveFolderResult> getActiveFolder(io.pulumi.gcp.organizations.inputs.GetActiveFolderArgs args) {
-        return getActiveFolder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActiveFolderResult> getActiveFolder(GetActiveFolderArgs args) {
+        return getActiveFolder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActiveFolderResult> getActiveFolder(io.pulumi.gcp.organizations.inputs.GetActiveFolderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActiveFolderResult> getActiveFolder(GetActiveFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getActiveFolder:getActiveFolder", TypeShape.of(GetActiveFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,12 +44,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetBillingAccountResult> getBillingAccount() {
-        return getBillingAccount(io.pulumi.gcp.organizations.inputs.GetBillingAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getBillingAccount(GetBillingAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingAccountResult> getBillingAccount(io.pulumi.gcp.organizations.inputs.GetBillingAccountArgs args) {
-        return getBillingAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args) {
+        return getBillingAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBillingAccountResult> getBillingAccount(io.pulumi.gcp.organizations.inputs.GetBillingAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBillingAccountResult> getBillingAccount(GetBillingAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getBillingAccount:getBillingAccount", TypeShape.of(GetBillingAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,12 +59,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
-        return getClientConfig(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClientConfig(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(io.pulumi.resources.InvokeArgs args) {
-        return getClientConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args) {
+        return getClientConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientConfigResult> getClientConfig(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,22 +84,22 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo() {
-        return getClientOpenIdUserInfo(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClientOpenIdUserInfo(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(io.pulumi.resources.InvokeArgs args) {
-        return getClientOpenIdUserInfo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(InvokeArgs args) {
+        return getClientOpenIdUserInfo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientOpenIdUserInfoResult> getClientOpenIdUserInfo(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getClientOpenIdUserInfo:getClientOpenIdUserInfo", TypeShape.of(GetClientOpenIdUserInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about a Google Cloud Folder.
      * 
      */
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.gcp.organizations.inputs.GetFolderArgs args) {
-        return getFolder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args) {
+        return getFolder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.gcp.organizations.inputs.GetFolderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFoldersResult> getFolders(io.pulumi.gcp.organizations.inputs.GetFoldersArgs args) {
-        return getFolders(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFoldersResult> getFolders(GetFoldersArgs args) {
+        return getFolders(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFoldersResult> getFolders(io.pulumi.gcp.organizations.inputs.GetFoldersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFoldersResult> getFolders(GetFoldersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getFolders:getFolders", TypeShape.of(GetFoldersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -128,12 +128,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy() {
-        return getIAMPolicy(io.pulumi.gcp.organizations.inputs.GetIAMPolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getIAMPolicy(GetIAMPolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(io.pulumi.gcp.organizations.inputs.GetIAMPolicyArgs args) {
-        return getIAMPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(GetIAMPolicyArgs args) {
+        return getIAMPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(io.pulumi.gcp.organizations.inputs.GetIAMPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIAMPolicyResult> getIAMPolicy(GetIAMPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getIAMPolicy:getIAMPolicy", TypeShape.of(GetIAMPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,12 +141,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetOrganizationResult> getOrganization() {
-        return getOrganization(io.pulumi.gcp.organizations.inputs.GetOrganizationArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOrganization(GetOrganizationArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.gcp.organizations.inputs.GetOrganizationArgs args) {
-        return getOrganization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
+        return getOrganization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.gcp.organizations.inputs.GetOrganizationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -158,12 +158,12 @@ public final class OrganizationsFunctions {
      * 
      */
     public static CompletableFuture<GetProjectResult> getProject() {
-        return getProject(io.pulumi.gcp.organizations.inputs.GetProjectArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getProject(GetProjectArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.gcp.organizations.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.gcp.organizations.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

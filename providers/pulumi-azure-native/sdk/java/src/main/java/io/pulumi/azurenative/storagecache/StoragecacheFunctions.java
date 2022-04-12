@@ -19,10 +19,10 @@ public final class StoragecacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetCacheResult> getCache(io.pulumi.azurenative.storagecache.inputs.GetCacheArgs args) {
-        return getCache(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args) {
+        return getCache(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCacheResult> getCache(io.pulumi.azurenative.storagecache.inputs.GetCacheArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class StoragecacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(io.pulumi.azurenative.storagecache.inputs.GetStorageTargetArgs args) {
-        return getStorageTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args) {
+        return getStorageTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(io.pulumi.azurenative.storagecache.inputs.GetStorageTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageTargetResult> getStorageTarget(GetStorageTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getStorageTarget", TypeShape.of(GetStorageTargetResult.class), args, Utilities.withVersion(options));
     }
 }

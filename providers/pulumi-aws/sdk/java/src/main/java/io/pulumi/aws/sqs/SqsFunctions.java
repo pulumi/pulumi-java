@@ -20,10 +20,10 @@ public final class SqsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.aws.sqs.inputs.GetQueueArgs args) {
-        return getQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.aws.sqs.inputs.GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sqs/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
 }

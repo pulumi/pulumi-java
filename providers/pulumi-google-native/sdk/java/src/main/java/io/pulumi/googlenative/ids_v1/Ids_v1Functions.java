@@ -18,20 +18,20 @@ public final class Ids_v1Functions {
      * Gets details of a single Endpoint.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.googlenative.ids_v1.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.googlenative.ids_v1.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ids/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(io.pulumi.googlenative.ids_v1.inputs.GetEndpointIamPolicyArgs args) {
-        return getEndpointIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(GetEndpointIamPolicyArgs args) {
+        return getEndpointIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(io.pulumi.googlenative.ids_v1.inputs.GetEndpointIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointIamPolicyResult> getEndpointIamPolicy(GetEndpointIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ids/v1:getEndpointIamPolicy", TypeShape.of(GetEndpointIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

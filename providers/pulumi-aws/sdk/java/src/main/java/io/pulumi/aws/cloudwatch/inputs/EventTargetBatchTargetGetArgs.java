@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> arraySize;
 
     public Output<Integer> getArraySize() {
-        return this.arraySize == null ? Output.empty() : this.arraySize;
+        return this.arraySize == null ? Codegen.empty() : this.arraySize;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> jobAttempts;
 
     public Output<Integer> getJobAttempts() {
-        return this.jobAttempts == null ? Output.empty() : this.jobAttempts;
+        return this.jobAttempts == null ? Codegen.empty() : this.jobAttempts;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
     }
 
     private EventTargetBatchTargetGetArgs() {
-        this.arraySize = Output.empty();
-        this.jobAttempts = Output.empty();
-        this.jobDefinition = Output.empty();
-        this.jobName = Output.empty();
+        this.arraySize = Codegen.empty();
+        this.jobAttempts = Codegen.empty();
+        this.jobDefinition = Codegen.empty();
+        this.jobName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder arraySize(@Nullable Integer arraySize) {
-            this.arraySize = Output.ofNullable(arraySize);
+            this.arraySize = Codegen.ofNullable(arraySize);
             return this;
         }
         public Builder jobAttempts(@Nullable Output<Integer> jobAttempts) {
@@ -116,7 +117,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder jobAttempts(@Nullable Integer jobAttempts) {
-            this.jobAttempts = Output.ofNullable(jobAttempts);
+            this.jobAttempts = Codegen.ofNullable(jobAttempts);
             return this;
         }
         public Builder jobDefinition(Output<String> jobDefinition) {

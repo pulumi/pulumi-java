@@ -7,6 +7,7 @@ import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
     public Output<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
+        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SessionStatus> status;
 
     public Output<SessionStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public SessionArgs(
@@ -45,8 +46,8 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SessionArgs() {
-        this.findingPublishingFrequency = Output.empty();
-        this.status = Output.empty();
+        this.findingPublishingFrequency = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
-            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
             return this;
         }
         public Builder status(@Nullable Output<SessionStatus> status) {
@@ -84,7 +85,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable SessionStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public SessionArgs build() {
             return new SessionArgs(findingPublishingFrequency, status);

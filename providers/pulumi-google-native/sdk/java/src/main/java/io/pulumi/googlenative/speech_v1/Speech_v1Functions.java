@@ -18,20 +18,20 @@ public final class Speech_v1Functions {
      * Get a custom class.
      * 
      */
-    public static CompletableFuture<GetCustomClassResult> getCustomClass(io.pulumi.googlenative.speech_v1.inputs.GetCustomClassArgs args) {
-        return getCustomClass(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomClassResult> getCustomClass(GetCustomClassArgs args) {
+        return getCustomClass(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomClassResult> getCustomClass(io.pulumi.googlenative.speech_v1.inputs.GetCustomClassArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomClassResult> getCustomClass(GetCustomClassArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getCustomClass", TypeShape.of(GetCustomClassResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a phrase set.
      * 
      */
-    public static CompletableFuture<GetPhraseSetResult> getPhraseSet(io.pulumi.googlenative.speech_v1.inputs.GetPhraseSetArgs args) {
-        return getPhraseSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPhraseSetResult> getPhraseSet(GetPhraseSetArgs args) {
+        return getPhraseSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPhraseSetResult> getPhraseSet(io.pulumi.googlenative.speech_v1.inputs.GetPhraseSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPhraseSetResult> getPhraseSet(GetPhraseSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getPhraseSet", TypeShape.of(GetPhraseSetResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ public final class DynamodbFunctions {
      * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
      * 
      */
-    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(io.pulumi.awsnative.dynamodb.inputs.GetGlobalTableArgs args) {
-        return getGlobalTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args) {
+        return getGlobalTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(io.pulumi.awsnative.dynamodb.inputs.GetGlobalTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:dynamodb:getGlobalTable", TypeShape.of(GetGlobalTableResult.class), args, Utilities.withVersion(options));
     }
 }

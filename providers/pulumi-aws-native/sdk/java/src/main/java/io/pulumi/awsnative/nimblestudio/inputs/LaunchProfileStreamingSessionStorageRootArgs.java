@@ -5,6 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
       private final @Nullable Output<String> linux;
 
     public Output<String> getLinux() {
-        return this.linux == null ? Output.empty() : this.linux;
+        return this.linux == null ? Codegen.empty() : this.linux;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
       private final @Nullable Output<String> windows;
 
     public Output<String> getWindows() {
-        return this.windows == null ? Output.empty() : this.windows;
+        return this.windows == null ? Codegen.empty() : this.windows;
     }
 
     public LaunchProfileStreamingSessionStorageRootArgs(
@@ -49,8 +50,8 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
     }
 
     private LaunchProfileStreamingSessionStorageRootArgs() {
-        this.linux = Output.empty();
-        this.windows = Output.empty();
+        this.linux = Codegen.empty();
+        this.windows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
             return this;
         }
         public Builder linux(@Nullable String linux) {
-            this.linux = Output.ofNullable(linux);
+            this.linux = Codegen.ofNullable(linux);
             return this;
         }
         public Builder windows(@Nullable Output<String> windows) {
@@ -88,7 +89,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
             return this;
         }
         public Builder windows(@Nullable String windows) {
-            this.windows = Output.ofNullable(windows);
+            this.windows = Codegen.ofNullable(windows);
             return this;
         }        public LaunchProfileStreamingSessionStorageRootArgs build() {
             return new LaunchProfileStreamingSessionStorageRootArgs(linux, windows);

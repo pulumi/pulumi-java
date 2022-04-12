@@ -28,10 +28,10 @@ public final class Route53Functions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(io.pulumi.aws.route53.inputs.GetDelegationSetArgs args) {
-        return getDelegationSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args) {
+        return getDelegationSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(io.pulumi.aws.route53.inputs.GetDelegationSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDelegationSetResult> getDelegationSet(GetDelegationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getDelegationSet:getDelegationSet", TypeShape.of(GetDelegationSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,12 +43,12 @@ public final class Route53Functions {
      * 
      */
     public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint() {
-        return getResolverEndpoint(io.pulumi.aws.route53.inputs.GetResolverEndpointArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getResolverEndpoint(GetResolverEndpointArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(io.pulumi.aws.route53.inputs.GetResolverEndpointArgs args) {
-        return getResolverEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
+        return getResolverEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(io.pulumi.aws.route53.inputs.GetResolverEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,12 +58,12 @@ public final class Route53Functions {
      * 
      */
     public static CompletableFuture<GetResolverRuleResult> getResolverRule() {
-        return getResolverRule(io.pulumi.aws.route53.inputs.GetResolverRuleArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getResolverRule(GetResolverRuleArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverRuleResult> getResolverRule(io.pulumi.aws.route53.inputs.GetResolverRuleArgs args) {
-        return getResolverRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args) {
+        return getResolverRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverRuleResult> getResolverRule(io.pulumi.aws.route53.inputs.GetResolverRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getResolverRule:getResolverRule", TypeShape.of(GetResolverRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,12 +73,12 @@ public final class Route53Functions {
      * 
      */
     public static CompletableFuture<GetResolverRulesResult> getResolverRules() {
-        return getResolverRules(io.pulumi.aws.route53.inputs.GetResolverRulesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getResolverRules(GetResolverRulesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverRulesResult> getResolverRules(io.pulumi.aws.route53.inputs.GetResolverRulesArgs args) {
-        return getResolverRules(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args) {
+        return getResolverRules(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResolverRulesResult> getResolverRules(io.pulumi.aws.route53.inputs.GetResolverRulesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getResolverRules:getResolverRules", TypeShape.of(GetResolverRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,12 +90,12 @@ public final class Route53Functions {
      * 
      */
     public static CompletableFuture<GetZoneResult> getZone() {
-        return getZone(io.pulumi.aws.route53.inputs.GetZoneArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getZone(GetZoneArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetZoneResult> getZone(io.pulumi.aws.route53.inputs.GetZoneArgs args) {
-        return getZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args) {
+        return getZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetZoneResult> getZone(io.pulumi.aws.route53.inputs.GetZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
 }

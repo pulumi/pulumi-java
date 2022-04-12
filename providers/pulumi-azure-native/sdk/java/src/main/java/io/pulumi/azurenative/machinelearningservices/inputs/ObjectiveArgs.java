@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.Goal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectiveArgs() {
-        this.goal = Output.empty();
-        this.primaryMetric = Output.empty();
+        this.goal = Codegen.empty();
+        this.primaryMetric = Codegen.empty();
     }
 
     public static Builder builder() {

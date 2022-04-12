@@ -28,10 +28,10 @@ public final class EksFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.aws.eks.inputs.GetAddonArgs args) {
-        return getAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+        return getAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.aws.eks.inputs.GetAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getAddon:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class EksFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.eks.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.eks.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,10 +55,10 @@ public final class EksFunctions {
      * server configured.
      * 
      */
-    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(io.pulumi.aws.eks.inputs.GetClusterAuthArgs args) {
-        return getClusterAuth(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args) {
+        return getClusterAuth(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(io.pulumi.aws.eks.inputs.GetClusterAuthArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusterAuth:getClusterAuth", TypeShape.of(GetClusterAuthResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,12 +66,12 @@ public final class EksFunctions {
      * 
      */
     public static CompletableFuture<GetClustersResult> getClusters() {
-        return getClusters(io.pulumi.resources.InvokeArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClusters(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClustersResult> getClusters(io.pulumi.resources.InvokeArgs args) {
-        return getClusters(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args) {
+        return getClusters(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClustersResult> getClusters(io.pulumi.resources.InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,20 +80,20 @@ public final class EksFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(io.pulumi.aws.eks.inputs.GetNodeGroupArgs args) {
-        return getNodeGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {
+        return getNodeGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(io.pulumi.aws.eks.inputs.GetNodeGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroup:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve the EKS Node Groups associated with a named EKS cluster. This will allow you to pass a list of Node Group names to other resources.
      * 
      */
-    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(io.pulumi.aws.eks.inputs.GetNodeGroupsArgs args) {
-        return getNodeGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args) {
+        return getNodeGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(io.pulumi.aws.eks.inputs.GetNodeGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroups:getNodeGroups", TypeShape.of(GetNodeGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

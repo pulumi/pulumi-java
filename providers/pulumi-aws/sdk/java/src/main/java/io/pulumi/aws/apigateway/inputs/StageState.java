@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
     public Output<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
-        return this.accessLogSettings == null ? Output.empty() : this.accessLogSettings;
+        return this.accessLogSettings == null ? Codegen.empty() : this.accessLogSettings;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
+        return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
+        return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
+        return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deployment;
 
     public Output<String> getDeployment() {
-        return this.deployment == null ? Output.empty() : this.deployment;
+        return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
+        return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
-        return this.executionArn == null ? Output.empty() : this.executionArn;
+        return this.executionArn == null ? Codegen.empty() : this.executionArn;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invokeUrl;
 
     public Output<String> getInvokeUrl() {
-        return this.invokeUrl == null ? Output.empty() : this.invokeUrl;
+        return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> webAclArn;
 
     public Output<String> getWebAclArn() {
-        return this.webAclArn == null ? Output.empty() : this.webAclArn;
+        return this.webAclArn == null ? Codegen.empty() : this.webAclArn;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> xrayTracingEnabled;
 
     public Output<Boolean> getXrayTracingEnabled() {
-        return this.xrayTracingEnabled == null ? Output.empty() : this.xrayTracingEnabled;
+        return this.xrayTracingEnabled == null ? Codegen.empty() : this.xrayTracingEnabled;
     }
 
     public StageState(
@@ -245,23 +246,23 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageState() {
-        this.accessLogSettings = Output.empty();
-        this.arn = Output.empty();
-        this.cacheClusterEnabled = Output.empty();
-        this.cacheClusterSize = Output.empty();
-        this.clientCertificateId = Output.empty();
-        this.deployment = Output.empty();
-        this.description = Output.empty();
-        this.documentationVersion = Output.empty();
-        this.executionArn = Output.empty();
-        this.invokeUrl = Output.empty();
-        this.restApi = Output.empty();
-        this.stageName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.variables = Output.empty();
-        this.webAclArn = Output.empty();
-        this.xrayTracingEnabled = Output.empty();
+        this.accessLogSettings = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.cacheClusterEnabled = Codegen.empty();
+        this.cacheClusterSize = Codegen.empty();
+        this.clientCertificateId = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentationVersion = Codegen.empty();
+        this.executionArn = Codegen.empty();
+        this.invokeUrl = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.stageName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.variables = Codegen.empty();
+        this.webAclArn = Codegen.empty();
+        this.xrayTracingEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -321,7 +322,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
-            this.accessLogSettings = Output.ofNullable(accessLogSettings);
+            this.accessLogSettings = Codegen.ofNullable(accessLogSettings);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -329,7 +330,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
@@ -337,7 +338,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Codegen.ofNullable(cacheClusterEnabled);
             return this;
         }
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
@@ -345,7 +346,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Codegen.ofNullable(cacheClusterSize);
             return this;
         }
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
@@ -353,7 +354,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Output.ofNullable(clientCertificateId);
+            this.clientCertificateId = Codegen.ofNullable(clientCertificateId);
             return this;
         }
         public Builder deployment(@Nullable Output<String> deployment) {
@@ -365,7 +366,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
@@ -373,7 +374,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Output.ofNullable(documentationVersion);
+            this.documentationVersion = Codegen.ofNullable(documentationVersion);
             return this;
         }
         public Builder executionArn(@Nullable Output<String> executionArn) {
@@ -381,7 +382,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Output.ofNullable(executionArn);
+            this.executionArn = Codegen.ofNullable(executionArn);
             return this;
         }
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
@@ -389,7 +390,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Output.ofNullable(invokeUrl);
+            this.invokeUrl = Codegen.ofNullable(invokeUrl);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -401,7 +402,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -409,7 +410,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -417,7 +418,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
@@ -425,7 +426,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }
         public Builder webAclArn(@Nullable Output<String> webAclArn) {
@@ -433,7 +434,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webAclArn(@Nullable String webAclArn) {
-            this.webAclArn = Output.ofNullable(webAclArn);
+            this.webAclArn = Codegen.ofNullable(webAclArn);
             return this;
         }
         public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
@@ -441,7 +442,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
-            this.xrayTracingEnabled = Output.ofNullable(xrayTracingEnabled);
+            this.xrayTracingEnabled = Codegen.ofNullable(xrayTracingEnabled);
             return this;
         }        public StageState build() {
             return new StageState(accessLogSettings, arn, cacheClusterEnabled, cacheClusterSize, clientCertificateId, deployment, description, documentationVersion, executionArn, invokeUrl, restApi, stageName, tags, tagsAll, variables, webAclArn, xrayTracingEnabled);

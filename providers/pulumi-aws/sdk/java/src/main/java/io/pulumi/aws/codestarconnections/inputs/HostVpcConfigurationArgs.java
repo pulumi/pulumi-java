@@ -5,6 +5,7 @@ package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class HostVpcConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> tlsCertificate;
 
     public Output<String> getTlsCertificate() {
-        return this.tlsCertificate == null ? Output.empty() : this.tlsCertificate;
+        return this.tlsCertificate == null ? Codegen.empty() : this.tlsCertificate;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class HostVpcConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private HostVpcConfigurationArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tlsCertificate = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tlsCertificate = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class HostVpcConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tlsCertificate(@Nullable String tlsCertificate) {
-            this.tlsCertificate = Output.ofNullable(tlsCertificate);
+            this.tlsCertificate = Codegen.ofNullable(tlsCertificate);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

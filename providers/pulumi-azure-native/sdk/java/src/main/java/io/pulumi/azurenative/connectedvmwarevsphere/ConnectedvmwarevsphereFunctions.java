@@ -39,10 +39,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -50,10 +50,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatastoreResult> getDatastore(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetDatastoreArgs args) {
-        return getDatastore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args) {
+        return getDatastore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatastoreResult> getDatastore(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetDatastoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -61,10 +61,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetGuestAgentArgs args) {
-        return getGuestAgent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args) {
+        return getGuestAgent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetGuestAgentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGuestAgentResult> getGuestAgent(GetGuestAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getGuestAgent", TypeShape.of(GetGuestAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -72,10 +72,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHostResult> getHost(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHostArgs args) {
-        return getHost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostResult> getHost(GetHostArgs args) {
+        return getHost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostResult> getHost(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostResult> getHost(GetHostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHost", TypeShape.of(GetHostResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -83,10 +83,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHybridIdentityMetadatumArgs args) {
-        return getHybridIdentityMetadatum(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args) {
+        return getHybridIdentityMetadatum(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetHybridIdentityMetadatumArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridIdentityMetadatumResult> getHybridIdentityMetadatum(GetHybridIdentityMetadatumArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHybridIdentityMetadatum", TypeShape.of(GetHybridIdentityMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -94,10 +94,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetInventoryItemArgs args) {
-        return getInventoryItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args) {
+        return getInventoryItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetInventoryItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInventoryItemResult> getInventoryItem(GetInventoryItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,10 +105,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetMachineExtensionArgs args) {
-        return getMachineExtension(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args) {
+        return getMachineExtension(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetMachineExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMachineExtensionResult> getMachineExtension(GetMachineExtensionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getMachineExtension", TypeShape.of(GetMachineExtensionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -116,10 +116,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetResourcePoolResult> getResourcePool(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetResourcePoolArgs args) {
-        return getResourcePool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args) {
+        return getResourcePool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePoolResult> getResourcePool(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetResourcePoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePoolResult> getResourcePool(GetResourcePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getResourcePool", TypeShape.of(GetResourcePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -127,10 +127,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVCenterResult> getVCenter(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVCenterArgs args) {
-        return getVCenter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVCenterResult> getVCenter(GetVCenterArgs args) {
+        return getVCenter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVCenterResult> getVCenter(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVCenterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVCenterResult> getVCenter(GetVCenterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVCenter", TypeShape.of(GetVCenterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -138,10 +138,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualMachineArgs args) {
-        return getVirtualMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+        return getVirtualMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -149,10 +149,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualMachineTemplateArgs args) {
-        return getVirtualMachineTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args) {
+        return getVirtualMachineTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualMachineTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineTemplateResult> getVirtualMachineTemplate(GetVirtualMachineTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -160,10 +160,10 @@ public final class ConnectedvmwarevsphereFunctions {
      * API Version: 2020-10-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualNetworkArgs args) {
-        return getVirtualNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+        return getVirtualNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.connectedvmwarevsphere.inputs.GetVirtualNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
 }

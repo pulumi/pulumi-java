@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     }
 
     private CertificateInformationArgs() {
-        this.expiry = Output.empty();
-        this.subject = Output.empty();
-        this.thumbprint = Output.empty();
+        this.expiry = Codegen.empty();
+        this.subject = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {

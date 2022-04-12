@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> serverNameToVerify;
 
     public Output<String> getServerNameToVerify() {
-        return this.serverNameToVerify == null ? Output.empty() : this.serverNameToVerify;
+        return this.serverNameToVerify == null ? Codegen.empty() : this.serverNameToVerify;
     }
 
     public IntegrationTlsConfigGetArgs(@Nullable Output<String> serverNameToVerify) {
@@ -30,7 +31,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     private IntegrationTlsConfigGetArgs() {
-        this.serverNameToVerify = Output.empty();
+        this.serverNameToVerify = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
-            this.serverNameToVerify = Output.ofNullable(serverNameToVerify);
+            this.serverNameToVerify = Codegen.ofNullable(serverNameToVerify);
             return this;
         }        public IntegrationTlsConfigGetArgs build() {
             return new IntegrationTlsConfigGetArgs(serverNameToVerify);

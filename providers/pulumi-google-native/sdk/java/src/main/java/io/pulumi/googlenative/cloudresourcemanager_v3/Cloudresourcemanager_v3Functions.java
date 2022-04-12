@@ -34,40 +34,40 @@ public final class Cloudresourcemanager_v3Functions {
      * Retrieves a folder identified by the supplied resource name. Valid folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
      * 
      */
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetFolderArgs args) {
-        return getFolder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args) {
+        return getFolder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderResult> getFolder(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetFolderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the folder's resource name, for example: "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
      * 
      */
-    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetFolderIamPolicyArgs args) {
-        return getFolderIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args) {
+        return getFolderIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetFolderIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getFolderIamPolicy", TypeShape.of(GetFolderIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.get`
      * 
      */
-    public static CompletableFuture<GetLienResult> getLien(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetLienArgs args) {
-        return getLien(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLienResult> getLien(GetLienArgs args) {
+        return getLien(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLienResult> getLien(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetLienArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLienResult> getLien(GetLienArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getLien", TypeShape.of(GetLienResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for an organization resource. The policy may be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, for example: "organizations/123". Authorization requires the IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization.
      * 
      */
-    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetOrganizationIamPolicyArgs args) {
-        return getOrganizationIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args) {
+        return getOrganizationIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetOrganizationIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getOrganizationIamPolicy", TypeShape.of(GetOrganizationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,12 +75,12 @@ public final class Cloudresourcemanager_v3Functions {
      * 
      */
     public static CompletableFuture<GetProjectResult> getProject() {
-        return getProject(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getProject(GetProjectArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,52 +88,52 @@ public final class Cloudresourcemanager_v3Functions {
      * 
      */
     public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy() {
-        return getProjectIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectIamPolicyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getProjectIamPolicy(GetProjectIamPolicyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectIamPolicyArgs args) {
-        return getProjectIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(GetProjectIamPolicyArgs args) {
+        return getProjectIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetProjectIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(GetProjectIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getProjectIamPolicy", TypeShape.of(GetProjectIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
      * 
      */
-    public static CompletableFuture<GetTagKeyResult> getTagKey(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagKeyArgs args) {
-        return getTagKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagKeyResult> getTagKey(GetTagKeyArgs args) {
+        return getTagKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagKeyResult> getTagKey(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagKeyResult> getTagKey(GetTagKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagKey", TypeShape.of(GetTagKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a TagKey. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagKey's resource name. For example, "tagKeys/1234". The caller must have `cloudresourcemanager.googleapis.com/tagKeys.getIamPolicy` permission on the specified TagKey.
      * 
      */
-    public static CompletableFuture<GetTagKeyIamPolicyResult> getTagKeyIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagKeyIamPolicyArgs args) {
-        return getTagKeyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagKeyIamPolicyResult> getTagKeyIamPolicy(GetTagKeyIamPolicyArgs args) {
+        return getTagKeyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagKeyIamPolicyResult> getTagKeyIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagKeyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagKeyIamPolicyResult> getTagKeyIamPolicy(GetTagKeyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagKeyIamPolicy", TypeShape.of(GetTagKeyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
      * 
      */
-    public static CompletableFuture<GetTagValueResult> getTagValue(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagValueArgs args) {
-        return getTagValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagValueResult> getTagValue(GetTagValueArgs args) {
+        return getTagValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagValueResult> getTagValue(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagValueResult> getTagValue(GetTagValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValue", TypeShape.of(GetTagValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
      * 
      */
-    public static CompletableFuture<GetTagValueIamPolicyResult> getTagValueIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagValueIamPolicyArgs args) {
-        return getTagValueIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTagValueIamPolicyResult> getTagValueIamPolicy(GetTagValueIamPolicyArgs args) {
+        return getTagValueIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTagValueIamPolicyResult> getTagValueIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v3.inputs.GetTagValueIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagValueIamPolicyResult> getTagValueIamPolicy(GetTagValueIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValueIamPolicy", TypeShape.of(GetTagValueIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

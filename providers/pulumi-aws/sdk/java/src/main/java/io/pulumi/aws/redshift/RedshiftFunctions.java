@@ -22,10 +22,10 @@ public final class RedshiftFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.redshift.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.redshift.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:redshift/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,12 +35,12 @@ public final class RedshiftFunctions {
      * 
      */
     public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster() {
-        return getOrderableCluster(io.pulumi.aws.redshift.inputs.GetOrderableClusterArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getOrderableCluster(GetOrderableClusterArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(io.pulumi.aws.redshift.inputs.GetOrderableClusterArgs args) {
-        return getOrderableCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args) {
+        return getOrderableCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(io.pulumi.aws.redshift.inputs.GetOrderableClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrderableClusterResult> getOrderableCluster(GetOrderableClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:redshift/getOrderableCluster:getOrderableCluster", TypeShape.of(GetOrderableClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,12 +51,12 @@ public final class RedshiftFunctions {
      * 
      */
     public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {
-        return getServiceAccount(io.pulumi.aws.redshift.inputs.GetServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getServiceAccount(GetServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.redshift.inputs.GetServiceAccountArgs args) {
-        return getServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+        return getServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.aws.redshift.inputs.GetServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:redshift/getServiceAccount:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
 }

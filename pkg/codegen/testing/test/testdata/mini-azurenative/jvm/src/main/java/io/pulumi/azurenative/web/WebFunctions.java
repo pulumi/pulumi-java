@@ -17,10 +17,10 @@ public final class WebFunctions {
      * API Version: 2020-12-01.
      * 
      */
-    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(io.pulumi.azurenative.web.inputs.GetWebAppSlotArgs args) {
-        return getWebAppSlot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args) {
+        return getWebAppSlot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(io.pulumi.azurenative.web.inputs.GetWebAppSlotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAppSlotResult> getWebAppSlot(GetWebAppSlotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args, Utilities.withVersion(options));
     }
 }

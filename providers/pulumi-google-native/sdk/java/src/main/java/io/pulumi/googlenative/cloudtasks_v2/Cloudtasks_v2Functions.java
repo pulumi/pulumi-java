@@ -20,30 +20,30 @@ public final class Cloudtasks_v2Functions {
      * Gets a queue.
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.googlenative.cloudtasks_v2.inputs.GetQueueArgs args) {
-        return getQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueResult> getQueue(io.pulumi.googlenative.cloudtasks_v2.inputs.GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
      * 
      */
-    public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(io.pulumi.googlenative.cloudtasks_v2.inputs.GetQueueIamPolicyArgs args) {
-        return getQueueIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(GetQueueIamPolicyArgs args) {
+        return getQueueIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(io.pulumi.googlenative.cloudtasks_v2.inputs.GetQueueIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueIamPolicyResult> getQueueIamPolicy(GetQueueIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2:getQueueIamPolicy", TypeShape.of(GetQueueIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a task.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.googlenative.cloudtasks_v2.inputs.GetTaskArgs args) {
-        return getTask(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
+        return getTask(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.googlenative.cloudtasks_v2.inputs.GetTaskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
 }

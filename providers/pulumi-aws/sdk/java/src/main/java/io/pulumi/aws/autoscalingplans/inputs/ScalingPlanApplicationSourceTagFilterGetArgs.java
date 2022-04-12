@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ScalingPlanApplicationSourceTagFilterGetArgs(
@@ -45,8 +46,8 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
     }
 
     private ScalingPlanApplicationSourceTagFilterGetArgs() {
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

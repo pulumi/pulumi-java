@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
 
     public Output<List<InstanceGroupNamedPortArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Output.empty() : this.namedPorts;
+        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceGroupArgs(
@@ -119,13 +120,13 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupArgs() {
-        this.description = Output.empty();
-        this.instances = Output.empty();
-        this.name = Output.empty();
-        this.namedPorts = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.description = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namedPorts = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instances(@Nullable Output<List<String>> instances) {
@@ -173,7 +174,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -184,7 +185,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts) {
@@ -192,7 +193,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namedPorts(@Nullable List<InstanceGroupNamedPortArgs> namedPorts) {
-            this.namedPorts = Output.ofNullable(namedPorts);
+            this.namedPorts = Codegen.ofNullable(namedPorts);
             return this;
         }
         public Builder namedPorts(InstanceGroupNamedPortArgs... namedPorts) {
@@ -203,7 +204,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -211,7 +212,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -219,7 +220,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceGroupArgs build() {
             return new InstanceGroupArgs(description, instances, name, namedPorts, network, project, zone);

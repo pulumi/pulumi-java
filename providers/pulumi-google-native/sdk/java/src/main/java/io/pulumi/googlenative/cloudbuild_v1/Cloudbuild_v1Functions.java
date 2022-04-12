@@ -24,50 +24,50 @@ public final class Cloudbuild_v1Functions {
      * Retrieve a `BitbucketServerConfig`. This API is experimental.
      * 
      */
-    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfig(io.pulumi.googlenative.cloudbuild_v1.inputs.GetBitbucketServerConfigArgs args) {
-        return getBitbucketServerConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfig(GetBitbucketServerConfigArgs args) {
+        return getBitbucketServerConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfig(io.pulumi.googlenative.cloudbuild_v1.inputs.GetBitbucketServerConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfig(GetBitbucketServerConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBitbucketServerConfig", TypeShape.of(GetBitbucketServerConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
      * 
      */
-    public static CompletableFuture<GetBuildResult> getBuild(io.pulumi.googlenative.cloudbuild_v1.inputs.GetBuildArgs args) {
-        return getBuild(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildResult> getBuild(GetBuildArgs args) {
+        return getBuild(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildResult> getBuild(io.pulumi.googlenative.cloudbuild_v1.inputs.GetBuildArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildResult> getBuild(GetBuildArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBuild", TypeShape.of(GetBuildResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve a GitHubEnterpriseConfig.
      * 
      */
-    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfig(io.pulumi.googlenative.cloudbuild_v1.inputs.GetGithubEnterpriseConfigArgs args) {
-        return getGithubEnterpriseConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfig(GetGithubEnterpriseConfigArgs args) {
+        return getGithubEnterpriseConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfig(io.pulumi.googlenative.cloudbuild_v1.inputs.GetGithubEnterpriseConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfig(GetGithubEnterpriseConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getGithubEnterpriseConfig", TypeShape.of(GetGithubEnterpriseConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about a `BuildTrigger`. This API is experimental.
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.cloudbuild_v1.inputs.GetTriggerArgs args) {
-        return getTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+        return getTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.cloudbuild_v1.inputs.GetTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns details of a `WorkerPool`.
      * 
      */
-    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(io.pulumi.googlenative.cloudbuild_v1.inputs.GetWorkerPoolArgs args) {
-        return getWorkerPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args) {
+        return getWorkerPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(io.pulumi.googlenative.cloudbuild_v1.inputs.GetWorkerPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }
 }

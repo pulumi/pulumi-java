@@ -8,6 +8,7 @@ import io.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobUserPausedDetailGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> customDataIdentifierIds;
 
     public Output<List<String>> getCustomDataIdentifierIds() {
-        return this.customDataIdentifierIds == null ? Output.empty() : this.customDataIdentifierIds;
+        return this.customDataIdentifierIds == null ? Codegen.empty() : this.customDataIdentifierIds;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,21 +63,21 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> initialRun;
 
     public Output<Boolean> getInitialRun() {
-        return this.initialRun == null ? Output.empty() : this.initialRun;
+        return this.initialRun == null ? Codegen.empty() : this.initialRun;
     }
 
     @Import(name="jobArn")
       private final @Nullable Output<String> jobArn;
 
     public Output<String> getJobArn() {
-        return this.jobArn == null ? Output.empty() : this.jobArn;
+        return this.jobArn == null ? Codegen.empty() : this.jobArn;
     }
 
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> jobStatus;
 
     public Output<String> getJobStatus() {
-        return this.jobStatus == null ? Output.empty() : this.jobStatus;
+        return this.jobStatus == null ? Codegen.empty() : this.jobStatus;
     }
 
     /**
@@ -98,14 +99,14 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> jobType;
 
     public Output<String> getJobType() {
-        return this.jobType == null ? Output.empty() : this.jobType;
+        return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
 
     public Output<ClassificationJobS3JobDefinitionGetArgs> getS3JobDefinition() {
-        return this.s3JobDefinition == null ? Output.empty() : this.s3JobDefinition;
+        return this.s3JobDefinition == null ? Codegen.empty() : this.s3JobDefinition;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> samplingPercentage;
 
     public Output<Integer> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
+        return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
 
     public Output<ClassificationJobScheduleFrequencyGetArgs> getScheduleFrequency() {
-        return this.scheduleFrequency == null ? Output.empty() : this.scheduleFrequency;
+        return this.scheduleFrequency == null ? Codegen.empty() : this.scheduleFrequency;
     }
 
     /**
@@ -160,14 +161,14 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
 
     public Output<List<ClassificationJobUserPausedDetailGetArgs>> getUserPausedDetails() {
-        return this.userPausedDetails == null ? Output.empty() : this.userPausedDetails;
+        return this.userPausedDetails == null ? Codegen.empty() : this.userPausedDetails;
     }
 
     public ClassificationJobState(
@@ -217,22 +218,22 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
     }
 
     private ClassificationJobState() {
-        this.createdAt = Output.empty();
-        this.customDataIdentifierIds = Output.empty();
-        this.description = Output.empty();
-        this.initialRun = Output.empty();
-        this.jobArn = Output.empty();
-        this.jobId = Output.empty();
-        this.jobStatus = Output.empty();
-        this.jobType = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.s3JobDefinition = Output.empty();
-        this.samplingPercentage = Output.empty();
-        this.scheduleFrequency = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userPausedDetails = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.customDataIdentifierIds = Codegen.empty();
+        this.description = Codegen.empty();
+        this.initialRun = Codegen.empty();
+        this.jobArn = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.jobStatus = Codegen.empty();
+        this.jobType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.s3JobDefinition = Codegen.empty();
+        this.samplingPercentage = Codegen.empty();
+        this.scheduleFrequency = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userPausedDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -290,7 +291,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder customDataIdentifierIds(@Nullable Output<List<String>> customDataIdentifierIds) {
@@ -298,7 +299,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
-            this.customDataIdentifierIds = Output.ofNullable(customDataIdentifierIds);
+            this.customDataIdentifierIds = Codegen.ofNullable(customDataIdentifierIds);
             return this;
         }
         public Builder customDataIdentifierIds(String... customDataIdentifierIds) {
@@ -309,7 +310,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder initialRun(@Nullable Output<Boolean> initialRun) {
@@ -317,7 +318,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder initialRun(@Nullable Boolean initialRun) {
-            this.initialRun = Output.ofNullable(initialRun);
+            this.initialRun = Codegen.ofNullable(initialRun);
             return this;
         }
         public Builder jobArn(@Nullable Output<String> jobArn) {
@@ -325,7 +326,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder jobArn(@Nullable String jobArn) {
-            this.jobArn = Output.ofNullable(jobArn);
+            this.jobArn = Codegen.ofNullable(jobArn);
             return this;
         }
         public Builder jobId(@Nullable Output<String> jobId) {
@@ -333,7 +334,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder jobStatus(@Nullable Output<String> jobStatus) {
@@ -341,7 +342,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder jobStatus(@Nullable String jobStatus) {
-            this.jobStatus = Output.ofNullable(jobStatus);
+            this.jobStatus = Codegen.ofNullable(jobStatus);
             return this;
         }
         public Builder jobType(@Nullable Output<String> jobType) {
@@ -349,7 +350,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder jobType(@Nullable String jobType) {
-            this.jobType = Output.ofNullable(jobType);
+            this.jobType = Codegen.ofNullable(jobType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -357,7 +358,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -365,7 +366,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder s3JobDefinition(@Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
@@ -373,7 +374,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder s3JobDefinition(@Nullable ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
-            this.s3JobDefinition = Output.ofNullable(s3JobDefinition);
+            this.s3JobDefinition = Codegen.ofNullable(s3JobDefinition);
             return this;
         }
         public Builder samplingPercentage(@Nullable Output<Integer> samplingPercentage) {
@@ -381,7 +382,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
-            this.samplingPercentage = Output.ofNullable(samplingPercentage);
+            this.samplingPercentage = Codegen.ofNullable(samplingPercentage);
             return this;
         }
         public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
@@ -389,7 +390,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
-            this.scheduleFrequency = Output.ofNullable(scheduleFrequency);
+            this.scheduleFrequency = Codegen.ofNullable(scheduleFrequency);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -397,7 +398,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -405,7 +406,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userPausedDetails(@Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
@@ -413,7 +414,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userPausedDetails(@Nullable List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
-            this.userPausedDetails = Output.ofNullable(userPausedDetails);
+            this.userPausedDetails = Codegen.ofNullable(userPausedDetails);
             return this;
         }
         public Builder userPausedDetails(ClassificationJobUserPausedDetailGetArgs... userPausedDetails) {

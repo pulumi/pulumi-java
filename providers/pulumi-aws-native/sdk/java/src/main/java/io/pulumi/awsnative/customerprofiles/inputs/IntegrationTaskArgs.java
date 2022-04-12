@@ -8,6 +8,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationConnectorOperatorA
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskPropertiesMapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +23,14 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator;
 
     public Output<IntegrationConnectorOperatorArgs> getConnectorOperator() {
-        return this.connectorOperator == null ? Output.empty() : this.connectorOperator;
+        return this.connectorOperator == null ? Codegen.empty() : this.connectorOperator;
     }
 
     @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
 
     public Output<String> getDestinationField() {
-        return this.destinationField == null ? Output.empty() : this.destinationField;
+        return this.destinationField == null ? Codegen.empty() : this.destinationField;
     }
 
     @Import(name="sourceFields", required=true)
@@ -43,7 +44,7 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
 
     public Output<List<IntegrationTaskPropertiesMapArgs>> getTaskProperties() {
-        return this.taskProperties == null ? Output.empty() : this.taskProperties;
+        return this.taskProperties == null ? Codegen.empty() : this.taskProperties;
     }
 
     @Import(name="taskType", required=true)
@@ -67,11 +68,11 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IntegrationTaskArgs() {
-        this.connectorOperator = Output.empty();
-        this.destinationField = Output.empty();
-        this.sourceFields = Output.empty();
-        this.taskProperties = Output.empty();
-        this.taskType = Output.empty();
+        this.connectorOperator = Codegen.empty();
+        this.destinationField = Codegen.empty();
+        this.sourceFields = Codegen.empty();
+        this.taskProperties = Codegen.empty();
+        this.taskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder connectorOperator(@Nullable IntegrationConnectorOperatorArgs connectorOperator) {
-            this.connectorOperator = Output.ofNullable(connectorOperator);
+            this.connectorOperator = Codegen.ofNullable(connectorOperator);
             return this;
         }
         public Builder destinationField(@Nullable Output<String> destinationField) {
@@ -115,7 +116,7 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder destinationField(@Nullable String destinationField) {
-            this.destinationField = Output.ofNullable(destinationField);
+            this.destinationField = Codegen.ofNullable(destinationField);
             return this;
         }
         public Builder sourceFields(Output<List<String>> sourceFields) {
@@ -134,7 +135,7 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder taskProperties(@Nullable List<IntegrationTaskPropertiesMapArgs> taskProperties) {
-            this.taskProperties = Output.ofNullable(taskProperties);
+            this.taskProperties = Codegen.ofNullable(taskProperties);
             return this;
         }
         public Builder taskProperties(IntegrationTaskPropertiesMapArgs... taskProperties) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleConditionApplicationProtocolArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> destinationAddresses;
 
     public Output<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
+        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> fqdnTags;
 
     public Output<List<String>> getFqdnTags() {
-        return this.fqdnTags == null ? Output.empty() : this.fqdnTags;
+        return this.fqdnTags == null ? Codegen.empty() : this.fqdnTags;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> protocols;
 
     public Output<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> getProtocols() {
-        return this.protocols == null ? Output.empty() : this.protocols;
+        return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> sourceAddresses;
 
     public Output<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
+        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> sourceIpGroups;
 
     public Output<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
+        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> targetFqdns;
 
     public Output<List<String>> getTargetFqdns() {
-        return this.targetFqdns == null ? Output.empty() : this.targetFqdns;
+        return this.targetFqdns == null ? Codegen.empty() : this.targetFqdns;
     }
 
     public ApplicationRuleConditionArgs(
@@ -142,15 +143,15 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
     }
 
     private ApplicationRuleConditionArgs() {
-        this.description = Output.empty();
-        this.destinationAddresses = Output.empty();
-        this.fqdnTags = Output.empty();
-        this.name = Output.empty();
-        this.protocols = Output.empty();
-        this.ruleConditionType = Output.empty();
-        this.sourceAddresses = Output.empty();
-        this.sourceIpGroups = Output.empty();
-        this.targetFqdns = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationAddresses = Codegen.empty();
+        this.fqdnTags = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocols = Codegen.empty();
+        this.ruleConditionType = Codegen.empty();
+        this.sourceAddresses = Codegen.empty();
+        this.sourceIpGroups = Codegen.empty();
+        this.targetFqdns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
@@ -202,7 +203,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Output.ofNullable(destinationAddresses);
+            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
             return this;
         }
         public Builder destinationAddresses(String... destinationAddresses) {
@@ -213,7 +214,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
-            this.fqdnTags = Output.ofNullable(fqdnTags);
+            this.fqdnTags = Codegen.ofNullable(fqdnTags);
             return this;
         }
         public Builder fqdnTags(String... fqdnTags) {
@@ -224,7 +225,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocols(@Nullable Output<List<FirewallPolicyRuleConditionApplicationProtocolArgs>> protocols) {
@@ -232,7 +233,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protocols(@Nullable List<FirewallPolicyRuleConditionApplicationProtocolArgs> protocols) {
-            this.protocols = Output.ofNullable(protocols);
+            this.protocols = Codegen.ofNullable(protocols);
             return this;
         }
         public Builder protocols(FirewallPolicyRuleConditionApplicationProtocolArgs... protocols) {
@@ -251,7 +252,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Output.ofNullable(sourceAddresses);
+            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
             return this;
         }
         public Builder sourceAddresses(String... sourceAddresses) {
@@ -262,7 +263,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
             return this;
         }
         public Builder sourceIpGroups(String... sourceIpGroups) {
@@ -273,7 +274,7 @@ public final class ApplicationRuleConditionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
-            this.targetFqdns = Output.ofNullable(targetFqdns);
+            this.targetFqdns = Codegen.ofNullable(targetFqdns);
             return this;
         }
         public Builder targetFqdns(String... targetFqdns) {

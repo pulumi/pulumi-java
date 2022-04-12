@@ -5,6 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<String> customSecurityGroupId;
 
     public Output<String> getCustomSecurityGroupId() {
-        return this.customSecurityGroupId == null ? Output.empty() : this.customSecurityGroupId;
+        return this.customSecurityGroupId == null ? Codegen.empty() : this.customSecurityGroupId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<String> defaultOu;
 
     public Output<String> getDefaultOu() {
-        return this.defaultOu == null ? Output.empty() : this.defaultOu;
+        return this.defaultOu == null ? Codegen.empty() : this.defaultOu;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> enableInternetAccess;
 
     public Output<Boolean> getEnableInternetAccess() {
-        return this.enableInternetAccess == null ? Output.empty() : this.enableInternetAccess;
+        return this.enableInternetAccess == null ? Codegen.empty() : this.enableInternetAccess;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> enableMaintenanceMode;
 
     public Output<Boolean> getEnableMaintenanceMode() {
-        return this.enableMaintenanceMode == null ? Output.empty() : this.enableMaintenanceMode;
+        return this.enableMaintenanceMode == null ? Codegen.empty() : this.enableMaintenanceMode;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
 
     public Output<Boolean> getUserEnabledAsLocalAdministrator() {
-        return this.userEnabledAsLocalAdministrator == null ? Output.empty() : this.userEnabledAsLocalAdministrator;
+        return this.userEnabledAsLocalAdministrator == null ? Codegen.empty() : this.userEnabledAsLocalAdministrator;
     }
 
     public DirectoryWorkspaceCreationPropertiesArgs(
@@ -84,11 +85,11 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     }
 
     private DirectoryWorkspaceCreationPropertiesArgs() {
-        this.customSecurityGroupId = Output.empty();
-        this.defaultOu = Output.empty();
-        this.enableInternetAccess = Output.empty();
-        this.enableMaintenanceMode = Output.empty();
-        this.userEnabledAsLocalAdministrator = Output.empty();
+        this.customSecurityGroupId = Codegen.empty();
+        this.defaultOu = Codegen.empty();
+        this.enableInternetAccess = Codegen.empty();
+        this.enableMaintenanceMode = Codegen.empty();
+        this.userEnabledAsLocalAdministrator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder customSecurityGroupId(@Nullable String customSecurityGroupId) {
-            this.customSecurityGroupId = Output.ofNullable(customSecurityGroupId);
+            this.customSecurityGroupId = Codegen.ofNullable(customSecurityGroupId);
             return this;
         }
         public Builder defaultOu(@Nullable Output<String> defaultOu) {
@@ -132,7 +133,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder defaultOu(@Nullable String defaultOu) {
-            this.defaultOu = Output.ofNullable(defaultOu);
+            this.defaultOu = Codegen.ofNullable(defaultOu);
             return this;
         }
         public Builder enableInternetAccess(@Nullable Output<Boolean> enableInternetAccess) {
@@ -140,7 +141,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
-            this.enableInternetAccess = Output.ofNullable(enableInternetAccess);
+            this.enableInternetAccess = Codegen.ofNullable(enableInternetAccess);
             return this;
         }
         public Builder enableMaintenanceMode(@Nullable Output<Boolean> enableMaintenanceMode) {
@@ -148,7 +149,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
-            this.enableMaintenanceMode = Output.ofNullable(enableMaintenanceMode);
+            this.enableMaintenanceMode = Codegen.ofNullable(enableMaintenanceMode);
             return this;
         }
         public Builder userEnabledAsLocalAdministrator(@Nullable Output<Boolean> userEnabledAsLocalAdministrator) {
@@ -156,7 +157,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
-            this.userEnabledAsLocalAdministrator = Output.ofNullable(userEnabledAsLocalAdministrator);
+            this.userEnabledAsLocalAdministrator = Codegen.ofNullable(userEnabledAsLocalAdministrator);
             return this;
         }        public DirectoryWorkspaceCreationPropertiesArgs build() {
             return new DirectoryWorkspaceCreationPropertiesArgs(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);

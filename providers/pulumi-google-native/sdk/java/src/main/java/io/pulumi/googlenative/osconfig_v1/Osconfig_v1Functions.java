@@ -18,20 +18,20 @@ public final class Osconfig_v1Functions {
      * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
      * 
      */
-    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(io.pulumi.googlenative.osconfig_v1.inputs.GetOsPolicyAssignmentArgs args) {
-        return getOsPolicyAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(GetOsPolicyAssignmentArgs args) {
+        return getOsPolicyAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(io.pulumi.googlenative.osconfig_v1.inputs.GetOsPolicyAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignment(GetOsPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an OS Config patch deployment.
      * 
      */
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(io.pulumi.googlenative.osconfig_v1.inputs.GetPatchDeploymentArgs args) {
-        return getPatchDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args) {
+        return getPatchDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(io.pulumi.googlenative.osconfig_v1.inputs.GetPatchDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
     }
 }

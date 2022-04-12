@@ -6,6 +6,7 @@ package io.pulumi.azurenative.softwareplan;
 import io.pulumi.azurenative.softwareplan.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
-        return this.planId == null ? Output.empty() : this.planId;
+        return this.planId == null ? Codegen.empty() : this.planId;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HybridUseBenefitArgs() {
-        this.planId = Output.empty();
-        this.scope = Output.empty();
-        this.sku = Output.empty();
+        this.planId = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder planId(@Nullable String planId) {
-            this.planId = Output.ofNullable(planId);
+            this.planId = Codegen.ofNullable(planId);
             return this;
         }
         public Builder scope(Output<String> scope) {

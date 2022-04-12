@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> credentialName;
 
     public Output<String> getCredentialName() {
-        return this.credentialName == null ? Output.empty() : this.credentialName;
+        return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobCredentialArgs() {
-        this.credentialName = Output.empty();
-        this.jobAgentName = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.username = Output.empty();
+        this.credentialName = Codegen.empty();
+        this.jobAgentName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Output.ofNullable(credentialName);
+            this.credentialName = Codegen.ofNullable(credentialName);
             return this;
         }
         public Builder jobAgentName(Output<String> jobAgentName) {

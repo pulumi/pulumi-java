@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableProxy;
 
     public Output<Boolean> getEnableProxy() {
-        return this.enableProxy == null ? Output.empty() : this.enableProxy;
+        return this.enableProxy == null ? Codegen.empty() : this.enableProxy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requireProxyForNetworkRules;
 
     public Output<Boolean> getRequireProxyForNetworkRules() {
-        return this.requireProxyForNetworkRules == null ? Output.empty() : this.requireProxyForNetworkRules;
+        return this.requireProxyForNetworkRules == null ? Codegen.empty() : this.requireProxyForNetworkRules;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> servers;
 
     public Output<List<String>> getServers() {
-        return this.servers == null ? Output.empty() : this.servers;
+        return this.servers == null ? Codegen.empty() : this.servers;
     }
 
     public DnsSettingsArgs(
@@ -63,9 +64,9 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DnsSettingsArgs() {
-        this.enableProxy = Output.empty();
-        this.requireProxyForNetworkRules = Output.empty();
-        this.servers = Output.empty();
+        this.enableProxy = Codegen.empty();
+        this.requireProxyForNetworkRules = Codegen.empty();
+        this.servers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableProxy(@Nullable Boolean enableProxy) {
-            this.enableProxy = Output.ofNullable(enableProxy);
+            this.enableProxy = Codegen.ofNullable(enableProxy);
             return this;
         }
         public Builder requireProxyForNetworkRules(@Nullable Output<Boolean> requireProxyForNetworkRules) {
@@ -105,7 +106,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
-            this.requireProxyForNetworkRules = Output.ofNullable(requireProxyForNetworkRules);
+            this.requireProxyForNetworkRules = Codegen.ofNullable(requireProxyForNetworkRules);
             return this;
         }
         public Builder servers(@Nullable Output<List<String>> servers) {
@@ -113,7 +114,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servers(@Nullable List<String> servers) {
-            this.servers = Output.ofNullable(servers);
+            this.servers = Codegen.ofNullable(servers);
             return this;
         }
         public Builder servers(String... servers) {

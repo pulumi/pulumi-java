@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> end;
 
     public Output<Integer> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> start;
 
     public Output<Integer> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public QosPortRangeArgs(
@@ -48,8 +49,8 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QosPortRangeArgs() {
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder end(@Nullable Integer end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder start(@Nullable Output<Integer> start) {
@@ -87,7 +88,7 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder start(@Nullable Integer start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public QosPortRangeArgs build() {
             return new QosPortRangeArgs(end, start);

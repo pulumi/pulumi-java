@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -49,8 +50,8 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
     }
 
     private WebAnonymousAuthenticationArgs() {
-        this.authenticationType = Output.empty();
-        this.url = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

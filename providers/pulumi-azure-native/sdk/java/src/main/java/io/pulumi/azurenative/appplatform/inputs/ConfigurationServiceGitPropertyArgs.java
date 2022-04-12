@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitRepositoryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
       private final @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
     public Output<List<ConfigurationServiceGitRepositoryArgs>> getRepositories() {
-        return this.repositories == null ? Output.empty() : this.repositories;
+        return this.repositories == null ? Codegen.empty() : this.repositories;
     }
 
     public ConfigurationServiceGitPropertyArgs(@Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories) {
@@ -35,7 +36,7 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
     }
 
     private ConfigurationServiceGitPropertyArgs() {
-        this.repositories = Output.empty();
+        this.repositories = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder repositories(@Nullable List<ConfigurationServiceGitRepositoryArgs> repositories) {
-            this.repositories = Output.ofNullable(repositories);
+            this.repositories = Codegen.ofNullable(repositories);
             return this;
         }
         public Builder repositories(ConfigurationServiceGitRepositoryArgs... repositories) {

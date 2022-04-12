@@ -24,50 +24,50 @@ public final class Securitycenter_v1Functions {
      * Gets a mute config.
      * 
      */
-    public static CompletableFuture<GetMuteConfigResult> getMuteConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetMuteConfigArgs args) {
-        return getMuteConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMuteConfigResult> getMuteConfig(GetMuteConfigArgs args) {
+        return getMuteConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMuteConfigResult> getMuteConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetMuteConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMuteConfigResult> getMuteConfig(GetMuteConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getMuteConfig", TypeShape.of(GetMuteConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a notification config.
      * 
      */
-    public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetNotificationConfigArgs args) {
-        return getNotificationConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(GetNotificationConfigArgs args) {
+        return getNotificationConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetNotificationConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationConfigResult> getNotificationConfig(GetNotificationConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getNotificationConfig", TypeShape.of(GetNotificationConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a mute config.
      * 
      */
-    public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetOrganizationMuteConfigArgs args) {
-        return getOrganizationMuteConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(GetOrganizationMuteConfigArgs args) {
+        return getOrganizationMuteConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(io.pulumi.googlenative.securitycenter_v1.inputs.GetOrganizationMuteConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationMuteConfigResult> getOrganizationMuteConfig(GetOrganizationMuteConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationMuteConfig", TypeShape.of(GetOrganizationMuteConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy on the specified Source.
      * 
      */
-    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(io.pulumi.googlenative.securitycenter_v1.inputs.GetOrganizationSourceIamPolicyArgs args) {
-        return getOrganizationSourceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args) {
+        return getOrganizationSourceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(io.pulumi.googlenative.securitycenter_v1.inputs.GetOrganizationSourceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a source.
      * 
      */
-    public static CompletableFuture<GetSourceResult> getSource(io.pulumi.googlenative.securitycenter_v1.inputs.GetSourceArgs args) {
-        return getSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args) {
+        return getSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSourceResult> getSource(io.pulumi.googlenative.securitycenter_v1.inputs.GetSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSourceResult> getSource(GetSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getSource", TypeShape.of(GetSourceResult.class), args, Utilities.withVersion(options));
     }
 }

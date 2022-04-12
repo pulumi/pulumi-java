@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sqs;
 import io.pulumi.awsnative.sqs.inputs.QueueTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -27,7 +28,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
     public Output<Boolean> getContentBasedDeduplication() {
-        return this.contentBasedDeduplication == null ? Output.empty() : this.contentBasedDeduplication;
+        return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deduplicationScope;
 
     public Output<String> getDeduplicationScope() {
-        return this.deduplicationScope == null ? Output.empty() : this.deduplicationScope;
+        return this.deduplicationScope == null ? Codegen.empty() : this.deduplicationScope;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> delaySeconds;
 
     public Output<Integer> getDelaySeconds() {
-        return this.delaySeconds == null ? Output.empty() : this.delaySeconds;
+        return this.delaySeconds == null ? Codegen.empty() : this.delaySeconds;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> fifoQueue;
 
     public Output<Boolean> getFifoQueue() {
-        return this.fifoQueue == null ? Output.empty() : this.fifoQueue;
+        return this.fifoQueue == null ? Codegen.empty() : this.fifoQueue;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fifoThroughputLimit;
 
     public Output<String> getFifoThroughputLimit() {
-        return this.fifoThroughputLimit == null ? Output.empty() : this.fifoThroughputLimit;
+        return this.fifoThroughputLimit == null ? Codegen.empty() : this.fifoThroughputLimit;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
 
     public Output<Integer> getKmsDataKeyReusePeriodSeconds() {
-        return this.kmsDataKeyReusePeriodSeconds == null ? Output.empty() : this.kmsDataKeyReusePeriodSeconds;
+        return this.kmsDataKeyReusePeriodSeconds == null ? Codegen.empty() : this.kmsDataKeyReusePeriodSeconds;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsMasterKeyId;
 
     public Output<String> getKmsMasterKeyId() {
-        return this.kmsMasterKeyId == null ? Output.empty() : this.kmsMasterKeyId;
+        return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maximumMessageSize;
 
     public Output<Integer> getMaximumMessageSize() {
-        return this.maximumMessageSize == null ? Output.empty() : this.maximumMessageSize;
+        return this.maximumMessageSize == null ? Codegen.empty() : this.maximumMessageSize;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> messageRetentionPeriod;
 
     public Output<Integer> getMessageRetentionPeriod() {
-        return this.messageRetentionPeriod == null ? Output.empty() : this.messageRetentionPeriod;
+        return this.messageRetentionPeriod == null ? Codegen.empty() : this.messageRetentionPeriod;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> receiveMessageWaitTimeSeconds;
 
     public Output<Integer> getReceiveMessageWaitTimeSeconds() {
-        return this.receiveMessageWaitTimeSeconds == null ? Output.empty() : this.receiveMessageWaitTimeSeconds;
+        return this.receiveMessageWaitTimeSeconds == null ? Codegen.empty() : this.receiveMessageWaitTimeSeconds;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> redriveAllowPolicy;
 
     public Output<Object> getRedriveAllowPolicy() {
-        return this.redriveAllowPolicy == null ? Output.empty() : this.redriveAllowPolicy;
+        return this.redriveAllowPolicy == null ? Codegen.empty() : this.redriveAllowPolicy;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> redrivePolicy;
 
     public Output<Object> getRedrivePolicy() {
-        return this.redrivePolicy == null ? Output.empty() : this.redrivePolicy;
+        return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<QueueTagArgs>> tags;
 
     public Output<List<QueueTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> visibilityTimeout;
 
     public Output<Integer> getVisibilityTimeout() {
-        return this.visibilityTimeout == null ? Output.empty() : this.visibilityTimeout;
+        return this.visibilityTimeout == null ? Codegen.empty() : this.visibilityTimeout;
     }
 
     public QueueArgs(
@@ -218,21 +219,21 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.contentBasedDeduplication = Output.empty();
-        this.deduplicationScope = Output.empty();
-        this.delaySeconds = Output.empty();
-        this.fifoQueue = Output.empty();
-        this.fifoThroughputLimit = Output.empty();
-        this.kmsDataKeyReusePeriodSeconds = Output.empty();
-        this.kmsMasterKeyId = Output.empty();
-        this.maximumMessageSize = Output.empty();
-        this.messageRetentionPeriod = Output.empty();
-        this.queueName = Output.empty();
-        this.receiveMessageWaitTimeSeconds = Output.empty();
-        this.redriveAllowPolicy = Output.empty();
-        this.redrivePolicy = Output.empty();
-        this.tags = Output.empty();
-        this.visibilityTimeout = Output.empty();
+        this.contentBasedDeduplication = Codegen.empty();
+        this.deduplicationScope = Codegen.empty();
+        this.delaySeconds = Codegen.empty();
+        this.fifoQueue = Codegen.empty();
+        this.fifoThroughputLimit = Codegen.empty();
+        this.kmsDataKeyReusePeriodSeconds = Codegen.empty();
+        this.kmsMasterKeyId = Codegen.empty();
+        this.maximumMessageSize = Codegen.empty();
+        this.messageRetentionPeriod = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.receiveMessageWaitTimeSeconds = Codegen.empty();
+        this.redriveAllowPolicy = Codegen.empty();
+        this.redrivePolicy = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.visibilityTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -288,7 +289,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
-            this.contentBasedDeduplication = Output.ofNullable(contentBasedDeduplication);
+            this.contentBasedDeduplication = Codegen.ofNullable(contentBasedDeduplication);
             return this;
         }
         public Builder deduplicationScope(@Nullable Output<String> deduplicationScope) {
@@ -296,7 +297,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deduplicationScope(@Nullable String deduplicationScope) {
-            this.deduplicationScope = Output.ofNullable(deduplicationScope);
+            this.deduplicationScope = Codegen.ofNullable(deduplicationScope);
             return this;
         }
         public Builder delaySeconds(@Nullable Output<Integer> delaySeconds) {
@@ -304,7 +305,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delaySeconds(@Nullable Integer delaySeconds) {
-            this.delaySeconds = Output.ofNullable(delaySeconds);
+            this.delaySeconds = Codegen.ofNullable(delaySeconds);
             return this;
         }
         public Builder fifoQueue(@Nullable Output<Boolean> fifoQueue) {
@@ -312,7 +313,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fifoQueue(@Nullable Boolean fifoQueue) {
-            this.fifoQueue = Output.ofNullable(fifoQueue);
+            this.fifoQueue = Codegen.ofNullable(fifoQueue);
             return this;
         }
         public Builder fifoThroughputLimit(@Nullable Output<String> fifoThroughputLimit) {
@@ -320,7 +321,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
-            this.fifoThroughputLimit = Output.ofNullable(fifoThroughputLimit);
+            this.fifoThroughputLimit = Codegen.ofNullable(fifoThroughputLimit);
             return this;
         }
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Output<Integer> kmsDataKeyReusePeriodSeconds) {
@@ -328,7 +329,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
-            this.kmsDataKeyReusePeriodSeconds = Output.ofNullable(kmsDataKeyReusePeriodSeconds);
+            this.kmsDataKeyReusePeriodSeconds = Codegen.ofNullable(kmsDataKeyReusePeriodSeconds);
             return this;
         }
         public Builder kmsMasterKeyId(@Nullable Output<String> kmsMasterKeyId) {
@@ -336,7 +337,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
-            this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
+            this.kmsMasterKeyId = Codegen.ofNullable(kmsMasterKeyId);
             return this;
         }
         public Builder maximumMessageSize(@Nullable Output<Integer> maximumMessageSize) {
@@ -344,7 +345,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximumMessageSize(@Nullable Integer maximumMessageSize) {
-            this.maximumMessageSize = Output.ofNullable(maximumMessageSize);
+            this.maximumMessageSize = Codegen.ofNullable(maximumMessageSize);
             return this;
         }
         public Builder messageRetentionPeriod(@Nullable Output<Integer> messageRetentionPeriod) {
@@ -352,7 +353,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
-            this.messageRetentionPeriod = Output.ofNullable(messageRetentionPeriod);
+            this.messageRetentionPeriod = Codegen.ofNullable(messageRetentionPeriod);
             return this;
         }
         public Builder queueName(@Nullable Output<String> queueName) {
@@ -360,7 +361,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder receiveMessageWaitTimeSeconds(@Nullable Output<Integer> receiveMessageWaitTimeSeconds) {
@@ -368,7 +369,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder receiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
-            this.receiveMessageWaitTimeSeconds = Output.ofNullable(receiveMessageWaitTimeSeconds);
+            this.receiveMessageWaitTimeSeconds = Codegen.ofNullable(receiveMessageWaitTimeSeconds);
             return this;
         }
         public Builder redriveAllowPolicy(@Nullable Output<Object> redriveAllowPolicy) {
@@ -376,7 +377,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
-            this.redriveAllowPolicy = Output.ofNullable(redriveAllowPolicy);
+            this.redriveAllowPolicy = Codegen.ofNullable(redriveAllowPolicy);
             return this;
         }
         public Builder redrivePolicy(@Nullable Output<Object> redrivePolicy) {
@@ -384,7 +385,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redrivePolicy(@Nullable Object redrivePolicy) {
-            this.redrivePolicy = Output.ofNullable(redrivePolicy);
+            this.redrivePolicy = Codegen.ofNullable(redrivePolicy);
             return this;
         }
         public Builder tags(@Nullable Output<List<QueueTagArgs>> tags) {
@@ -392,7 +393,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<QueueTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(QueueTagArgs... tags) {
@@ -403,7 +404,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder visibilityTimeout(@Nullable Integer visibilityTimeout) {
-            this.visibilityTimeout = Output.ofNullable(visibilityTimeout);
+            this.visibilityTimeout = Codegen.ofNullable(visibilityTimeout);
             return this;
         }        public QueueArgs build() {
             return new QueueArgs(contentBasedDeduplication, deduplicationScope, delaySeconds, fifoQueue, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueName, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);

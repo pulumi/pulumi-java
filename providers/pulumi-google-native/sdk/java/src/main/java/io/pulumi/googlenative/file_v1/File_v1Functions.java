@@ -20,30 +20,30 @@ public final class File_v1Functions {
      * Gets the details of a specific backup.
      * 
      */
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.file_v1.inputs.GetBackupArgs args) {
-        return getBackup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
+        return getBackup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.file_v1.inputs.GetBackupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the details of a specific instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.file_v1.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.file_v1.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the details of a specific snapshot.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.file_v1.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.file_v1.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
 }

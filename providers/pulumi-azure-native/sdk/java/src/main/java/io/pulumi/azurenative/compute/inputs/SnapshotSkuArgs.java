@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.SnapshotStorageAccountTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
 
     public Output<Either<String,SnapshotStorageAccountTypes>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SnapshotSkuArgs(@Nullable Output<Either<String,SnapshotStorageAccountTypes>> name) {
@@ -36,7 +37,7 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotSkuArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,SnapshotStorageAccountTypes> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SnapshotSkuArgs build() {
             return new SnapshotSkuArgs(name);

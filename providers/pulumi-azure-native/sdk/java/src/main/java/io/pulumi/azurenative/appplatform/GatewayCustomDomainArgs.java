@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.GatewayCustomDomainPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<GatewayCustomDomainPropertiesArgs> properties;
 
     public Output<GatewayCustomDomainPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
     }
 
     private GatewayCustomDomainArgs() {
-        this.domainName = Output.empty();
-        this.gatewayName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.domainName = Codegen.empty();
+        this.gatewayName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder gatewayName(Output<String> gatewayName) {
@@ -140,7 +141,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder properties(@Nullable GatewayCustomDomainPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

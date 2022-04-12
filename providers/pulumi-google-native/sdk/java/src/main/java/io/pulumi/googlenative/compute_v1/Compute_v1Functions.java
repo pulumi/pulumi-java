@@ -176,810 +176,810 @@ public final class Compute_v1Functions {
      * Returns the specified address resource.
      * 
      */
-    public static CompletableFuture<GetAddressResult> getAddress(io.pulumi.googlenative.compute_v1.inputs.GetAddressArgs args) {
-        return getAddress(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args) {
+        return getAddress(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddressResult> getAddress(io.pulumi.googlenative.compute_v1.inputs.GetAddressArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
      * 
      */
-    public static CompletableFuture<GetAutoscalerResult> getAutoscaler(io.pulumi.googlenative.compute_v1.inputs.GetAutoscalerArgs args) {
-        return getAutoscaler(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutoscalerResult> getAutoscaler(GetAutoscalerArgs args) {
+        return getAutoscaler(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoscalerResult> getAutoscaler(io.pulumi.googlenative.compute_v1.inputs.GetAutoscalerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoscalerResult> getAutoscaler(GetAutoscalerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getAutoscaler", TypeShape.of(GetAutoscalerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
      * 
      */
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(io.pulumi.googlenative.compute_v1.inputs.GetBackendBucketArgs args) {
-        return getBackendBucket(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args) {
+        return getBackendBucket(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(io.pulumi.googlenative.compute_v1.inputs.GetBackendBucketArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified BackendService resource. Gets a list of available backend services.
      * 
      */
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(io.pulumi.googlenative.compute_v1.inputs.GetBackendServiceArgs args) {
-        return getBackendService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args) {
+        return getBackendService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackendServiceResult> getBackendService(io.pulumi.googlenative.compute_v1.inputs.GetBackendServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.googlenative.compute_v1.inputs.GetDiskArgs args) {
-        return getDisk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
+        return getDisk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.googlenative.compute_v1.inputs.GetDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetDiskIamPolicyArgs args) {
-        return getDiskIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicy(GetDiskIamPolicyArgs args) {
+        return getDiskIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetDiskIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicy(GetDiskIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getDiskIamPolicy", TypeShape.of(GetDiskIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
      * 
      */
-    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetExternalVpnGatewayArgs args) {
-        return getExternalVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGateway(GetExternalVpnGatewayArgs args) {
+        return getExternalVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetExternalVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGateway(GetExternalVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getExternalVpnGateway", TypeShape.of(GetExternalVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified firewall.
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(io.pulumi.googlenative.compute_v1.inputs.GetFirewallArgs args) {
-        return getFirewall(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args) {
+        return getFirewall(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallResult> getFirewall(io.pulumi.googlenative.compute_v1.inputs.GetFirewallArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified firewall policy.
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.googlenative.compute_v1.inputs.GetFirewallPolicyArgs args) {
-        return getFirewallPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+        return getFirewallPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.googlenative.compute_v1.inputs.GetFirewallPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetFirewallPolicyIamPolicyArgs args) {
-        return getFirewallPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicy(GetFirewallPolicyIamPolicyArgs args) {
+        return getFirewallPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicy(GetFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getFirewallPolicyIamPolicy", TypeShape.of(GetFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified ForwardingRule resource.
      * 
      */
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(io.pulumi.googlenative.compute_v1.inputs.GetForwardingRuleArgs args) {
-        return getForwardingRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args) {
+        return getForwardingRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(io.pulumi.googlenative.compute_v1.inputs.GetForwardingRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified address resource. Gets a list of available addresses by making a list() request.
      * 
      */
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(io.pulumi.googlenative.compute_v1.inputs.GetGlobalAddressArgs args) {
-        return getGlobalAddress(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args) {
+        return getGlobalAddress(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(io.pulumi.googlenative.compute_v1.inputs.GetGlobalAddressArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
      * 
      */
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(io.pulumi.googlenative.compute_v1.inputs.GetGlobalForwardingRuleArgs args) {
-        return getGlobalForwardingRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args) {
+        return getGlobalForwardingRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(io.pulumi.googlenative.compute_v1.inputs.GetGlobalForwardingRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
-    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetGlobalNetworkEndpointGroupArgs args) {
-        return getGlobalNetworkEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroup(GetGlobalNetworkEndpointGroupArgs args) {
+        return getGlobalNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetGlobalNetworkEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroup(GetGlobalNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getGlobalNetworkEndpointGroup", TypeShape.of(GetGlobalNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified global PublicDelegatedPrefix resource.
      * 
      */
-    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetGlobalPublicDelegatedPrefixArgs args) {
-        return getGlobalPublicDelegatedPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefix(GetGlobalPublicDelegatedPrefixArgs args) {
+        return getGlobalPublicDelegatedPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetGlobalPublicDelegatedPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefix(GetGlobalPublicDelegatedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getGlobalPublicDelegatedPrefix", TypeShape.of(GetGlobalPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHealthCheckArgs args) {
-        return getHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
+        return getHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHttpHealthCheckArgs args) {
-        return getHttpHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheck(GetHttpHealthCheckArgs args) {
+        return getHttpHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHttpHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheck(GetHttpHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getHttpHealthCheck", TypeShape.of(GetHttpHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHttpsHealthCheckArgs args) {
-        return getHttpsHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheck(GetHttpsHealthCheckArgs args) {
+        return getHttpsHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetHttpsHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheck(GetHttpsHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getHttpsHealthCheck", TypeShape.of(GetHttpsHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified image. Gets a list of available images by making a list() request.
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.googlenative.compute_v1.inputs.GetImageArgs args) {
-        return getImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+        return getImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageResult> getImage(io.pulumi.googlenative.compute_v1.inputs.GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetImageIamPolicyArgs args) {
-        return getImageIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicy(GetImageIamPolicyArgs args) {
+        return getImageIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetImageIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicy(GetImageIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getImageIamPolicy", TypeShape.of(GetImageIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Instance resource. Gets a list of available instances by making a list() request.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.compute_v1.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.compute_v1.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
      * 
      */
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(io.pulumi.googlenative.compute_v1.inputs.GetInstanceGroupArgs args) {
-        return getInstanceGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args) {
+        return getInstanceGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(io.pulumi.googlenative.compute_v1.inputs.GetInstanceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
      * 
      */
-    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManager(io.pulumi.googlenative.compute_v1.inputs.GetInstanceGroupManagerArgs args) {
-        return getInstanceGroupManager(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManager(GetInstanceGroupManagerArgs args) {
+        return getInstanceGroupManager(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManager(io.pulumi.googlenative.compute_v1.inputs.GetInstanceGroupManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManager(GetInstanceGroupManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstanceGroupManager", TypeShape.of(GetInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetInstanceIamPolicyArgs args) {
-        return getInstanceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args) {
+        return getInstanceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetInstanceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(io.pulumi.googlenative.compute_v1.inputs.GetInstanceTemplateArgs args) {
-        return getInstanceTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
+        return getInstanceTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(io.pulumi.googlenative.compute_v1.inputs.GetInstanceTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetInstanceTemplateIamPolicyArgs args) {
-        return getInstanceTemplateIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicy(GetInstanceTemplateIamPolicyArgs args) {
+        return getInstanceTemplateIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetInstanceTemplateIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicy(GetInstanceTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInstanceTemplateIamPolicy", TypeShape.of(GetInstanceTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
      * 
      */
-    public static CompletableFuture<GetInterconnectResult> getInterconnect(io.pulumi.googlenative.compute_v1.inputs.GetInterconnectArgs args) {
-        return getInterconnect(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInterconnectResult> getInterconnect(GetInterconnectArgs args) {
+        return getInterconnect(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInterconnectResult> getInterconnect(io.pulumi.googlenative.compute_v1.inputs.GetInterconnectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInterconnectResult> getInterconnect(GetInterconnectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInterconnect", TypeShape.of(GetInterconnectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified interconnect attachment.
      * 
      */
-    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachment(io.pulumi.googlenative.compute_v1.inputs.GetInterconnectAttachmentArgs args) {
-        return getInterconnectAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachment(GetInterconnectAttachmentArgs args) {
+        return getInterconnectAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachment(io.pulumi.googlenative.compute_v1.inputs.GetInterconnectAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachment(GetInterconnectAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInterconnectAttachment", TypeShape.of(GetInterconnectAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 
      */
-    public static CompletableFuture<GetLicenseResult> getLicense(io.pulumi.googlenative.compute_v1.inputs.GetLicenseArgs args) {
-        return getLicense(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args) {
+        return getLicense(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLicenseResult> getLicense(io.pulumi.googlenative.compute_v1.inputs.GetLicenseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLicenseResult> getLicense(GetLicenseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getLicense", TypeShape.of(GetLicenseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 
      */
-    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetLicenseIamPolicyArgs args) {
-        return getLicenseIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicy(GetLicenseIamPolicyArgs args) {
+        return getLicenseIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetLicenseIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicy(GetLicenseIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getLicenseIamPolicy", TypeShape.of(GetLicenseIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified machine image. Gets a list of available machine images by making a list() request.
      * 
      */
-    public static CompletableFuture<GetMachineImageResult> getMachineImage(io.pulumi.googlenative.compute_v1.inputs.GetMachineImageArgs args) {
-        return getMachineImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMachineImageResult> getMachineImage(GetMachineImageArgs args) {
+        return getMachineImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMachineImageResult> getMachineImage(io.pulumi.googlenative.compute_v1.inputs.GetMachineImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMachineImageResult> getMachineImage(GetMachineImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getMachineImage", TypeShape.of(GetMachineImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetMachineImageIamPolicyArgs args) {
-        return getMachineImageIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicy(GetMachineImageIamPolicyArgs args) {
+        return getMachineImageIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetMachineImageIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicy(GetMachineImageIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getMachineImageIamPolicy", TypeShape.of(GetMachineImageIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network. Gets a list of available networks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.googlenative.compute_v1.inputs.GetNetworkArgs args) {
-        return getNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args) {
+        return getNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkResult> getNetwork(io.pulumi.googlenative.compute_v1.inputs.GetNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetNetworkEndpointGroupArgs args) {
-        return getNetworkEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args) {
+        return getNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetNetworkEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
      * 
      */
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(io.pulumi.googlenative.compute_v1.inputs.GetNodeGroupArgs args) {
-        return getNodeGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {
+        return getNodeGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(io.pulumi.googlenative.compute_v1.inputs.GetNodeGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetNodeGroupIamPolicyArgs args) {
-        return getNodeGroupIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicy(GetNodeGroupIamPolicyArgs args) {
+        return getNodeGroupIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetNodeGroupIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicy(GetNodeGroupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNodeGroupIamPolicy", TypeShape.of(GetNodeGroupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified node template. Gets a list of available node templates by making a list() request.
      * 
      */
-    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplate(io.pulumi.googlenative.compute_v1.inputs.GetNodeTemplateArgs args) {
-        return getNodeTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplate(GetNodeTemplateArgs args) {
+        return getNodeTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplate(io.pulumi.googlenative.compute_v1.inputs.GetNodeTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplate(GetNodeTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNodeTemplate", TypeShape.of(GetNodeTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetNodeTemplateIamPolicyArgs args) {
-        return getNodeTemplateIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicy(GetNodeTemplateIamPolicyArgs args) {
+        return getNodeTemplateIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetNodeTemplateIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicy(GetNodeTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNodeTemplateIamPolicy", TypeShape.of(GetNodeTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PacketMirroring resource.
      * 
      */
-    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroring(io.pulumi.googlenative.compute_v1.inputs.GetPacketMirroringArgs args) {
-        return getPacketMirroring(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroring(GetPacketMirroringArgs args) {
+        return getPacketMirroring(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroring(io.pulumi.googlenative.compute_v1.inputs.GetPacketMirroringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroring(GetPacketMirroringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getPacketMirroring", TypeShape.of(GetPacketMirroringResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PublicAdvertisedPrefix resource.
      * 
      */
-    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetPublicAdvertisedPrefixArgs args) {
-        return getPublicAdvertisedPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefix(GetPublicAdvertisedPrefixArgs args) {
+        return getPublicAdvertisedPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetPublicAdvertisedPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefix(GetPublicAdvertisedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getPublicAdvertisedPrefix", TypeShape.of(GetPublicAdvertisedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PublicDelegatedPrefix resource in the given region.
      * 
      */
-    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetPublicDelegatedPrefixArgs args) {
-        return getPublicDelegatedPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefix(GetPublicDelegatedPrefixArgs args) {
+        return getPublicDelegatedPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefix(io.pulumi.googlenative.compute_v1.inputs.GetPublicDelegatedPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefix(GetPublicDelegatedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getPublicDelegatedPrefix", TypeShape.of(GetPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified autoscaler.
      * 
      */
-    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscaler(io.pulumi.googlenative.compute_v1.inputs.GetRegionAutoscalerArgs args) {
-        return getRegionAutoscaler(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscaler(GetRegionAutoscalerArgs args) {
+        return getRegionAutoscaler(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscaler(io.pulumi.googlenative.compute_v1.inputs.GetRegionAutoscalerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscaler(GetRegionAutoscalerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionAutoscaler", TypeShape.of(GetRegionAutoscalerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified regional BackendService resource.
      * 
      */
-    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendService(io.pulumi.googlenative.compute_v1.inputs.GetRegionBackendServiceArgs args) {
-        return getRegionBackendService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendService(GetRegionBackendServiceArgs args) {
+        return getRegionBackendService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendService(io.pulumi.googlenative.compute_v1.inputs.GetRegionBackendServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendService(GetRegionBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionBackendService", TypeShape.of(GetRegionBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitment(io.pulumi.googlenative.compute_v1.inputs.GetRegionCommitmentArgs args) {
-        return getRegionCommitment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitment(GetRegionCommitmentArgs args) {
+        return getRegionCommitment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitment(io.pulumi.googlenative.compute_v1.inputs.GetRegionCommitmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitment(GetRegionCommitmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionCommitment", TypeShape.of(GetRegionCommitmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a specified regional persistent disk.
      * 
      */
-    public static CompletableFuture<GetRegionDiskResult> getRegionDisk(io.pulumi.googlenative.compute_v1.inputs.GetRegionDiskArgs args) {
-        return getRegionDisk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionDiskResult> getRegionDisk(GetRegionDiskArgs args) {
+        return getRegionDisk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionDiskResult> getRegionDisk(io.pulumi.googlenative.compute_v1.inputs.GetRegionDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionDiskResult> getRegionDisk(GetRegionDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionDisk", TypeShape.of(GetRegionDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetRegionDiskIamPolicyArgs args) {
-        return getRegionDiskIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicy(GetRegionDiskIamPolicyArgs args) {
+        return getRegionDiskIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetRegionDiskIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicy(GetRegionDiskIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionDiskIamPolicy", TypeShape.of(GetRegionDiskIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckArgs args) {
-        return getRegionHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheck(GetRegionHealthCheckArgs args) {
+        return getRegionHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheck(io.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheck(GetRegionHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionHealthCheck", TypeShape.of(GetRegionHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified regional HealthCheckService resource.
      * 
      */
-    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckService(io.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckServiceArgs args) {
-        return getRegionHealthCheckService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckService(GetRegionHealthCheckServiceArgs args) {
+        return getRegionHealthCheckService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckService(io.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckService(GetRegionHealthCheckServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionHealthCheckService", TypeShape.of(GetRegionHealthCheckServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns all of the details about the specified managed instance group.
      * 
      */
-    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManager(io.pulumi.googlenative.compute_v1.inputs.GetRegionInstanceGroupManagerArgs args) {
-        return getRegionInstanceGroupManager(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManager(GetRegionInstanceGroupManagerArgs args) {
+        return getRegionInstanceGroupManager(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManager(io.pulumi.googlenative.compute_v1.inputs.GetRegionInstanceGroupManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManager(GetRegionInstanceGroupManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionInstanceGroupManager", TypeShape.of(GetRegionInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetRegionNetworkEndpointGroupArgs args) {
-        return getRegionNetworkEndpointGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroup(GetRegionNetworkEndpointGroupArgs args) {
+        return getRegionNetworkEndpointGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroup(io.pulumi.googlenative.compute_v1.inputs.GetRegionNetworkEndpointGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroup(GetRegionNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNetworkEndpointGroup", TypeShape.of(GetRegionNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified NotificationEndpoint resource in the given region.
      * 
      */
-    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(io.pulumi.googlenative.compute_v1.inputs.GetRegionNotificationEndpointArgs args) {
-        return getRegionNotificationEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(GetRegionNotificationEndpointArgs args) {
+        return getRegionNotificationEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(io.pulumi.googlenative.compute_v1.inputs.GetRegionNotificationEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(GetRegionNotificationEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNotificationEndpoint", TypeShape.of(GetRegionNotificationEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(io.pulumi.googlenative.compute_v1.inputs.GetRegionSslCertificateArgs args) {
-        return getRegionSslCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args) {
+        return getRegionSslCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(io.pulumi.googlenative.compute_v1.inputs.GetRegionSslCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxy(io.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpProxyArgs args) {
-        return getRegionTargetHttpProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxy(GetRegionTargetHttpProxyArgs args) {
+        return getRegionTargetHttpProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxy(io.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxy(GetRegionTargetHttpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionTargetHttpProxy", TypeShape.of(GetRegionTargetHttpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(io.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpsProxyArgs args) {
-        return getRegionTargetHttpsProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(GetRegionTargetHttpsProxyArgs args) {
+        return getRegionTargetHttpsProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(io.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpsProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(GetRegionTargetHttpsProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionTargetHttpsProxy", TypeShape.of(GetRegionTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMap(io.pulumi.googlenative.compute_v1.inputs.GetRegionUrlMapArgs args) {
-        return getRegionUrlMap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMap(GetRegionUrlMapArgs args) {
+        return getRegionUrlMap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMap(io.pulumi.googlenative.compute_v1.inputs.GetRegionUrlMapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMap(GetRegionUrlMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionUrlMap", TypeShape.of(GetRegionUrlMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves information about the specified reservation.
      * 
      */
-    public static CompletableFuture<GetReservationResult> getReservation(io.pulumi.googlenative.compute_v1.inputs.GetReservationArgs args) {
-        return getReservation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args) {
+        return getReservation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReservationResult> getReservation(io.pulumi.googlenative.compute_v1.inputs.GetReservationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetReservationIamPolicyArgs args) {
-        return getReservationIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicy(GetReservationIamPolicyArgs args) {
+        return getReservationIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetReservationIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicy(GetReservationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getReservationIamPolicy", TypeShape.of(GetReservationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves all information of the specified resource policy.
      * 
      */
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.googlenative.compute_v1.inputs.GetResourcePolicyArgs args) {
-        return getResourcePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args) {
+        return getResourcePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(io.pulumi.googlenative.compute_v1.inputs.GetResourcePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetResourcePolicyIamPolicyArgs args) {
-        return getResourcePolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicy(GetResourcePolicyIamPolicyArgs args) {
+        return getResourcePolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetResourcePolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicy(GetResourcePolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getResourcePolicyIamPolicy", TypeShape.of(GetResourcePolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Route resource. Gets a list of available routes by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.googlenative.compute_v1.inputs.GetRouteArgs args) {
-        return getRoute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+        return getRoute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.googlenative.compute_v1.inputs.GetRouteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Router resource. Gets a list of available routers by making a list() request.
      * 
      */
-    public static CompletableFuture<GetRouterResult> getRouter(io.pulumi.googlenative.compute_v1.inputs.GetRouterArgs args) {
-        return getRouter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args) {
+        return getRouter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouterResult> getRouter(io.pulumi.googlenative.compute_v1.inputs.GetRouterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List all of the ordered rules present in a single specified policy.
      * 
      */
-    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSecurityPolicyArgs args) {
-        return getSecurityPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(GetSecurityPolicyArgs args) {
+        return getSecurityPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSecurityPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicy(GetSecurityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified ServiceAttachment resource in the given scope.
      * 
      */
-    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachment(io.pulumi.googlenative.compute_v1.inputs.GetServiceAttachmentArgs args) {
-        return getServiceAttachment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachment(GetServiceAttachmentArgs args) {
+        return getServiceAttachment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachment(io.pulumi.googlenative.compute_v1.inputs.GetServiceAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachment(GetServiceAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getServiceAttachment", TypeShape.of(GetServiceAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetServiceAttachmentIamPolicyArgs args) {
-        return getServiceAttachmentIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicy(GetServiceAttachmentIamPolicyArgs args) {
+        return getServiceAttachmentIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetServiceAttachmentIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicy(GetServiceAttachmentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getServiceAttachmentIamPolicy", TypeShape.of(GetServiceAttachmentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.compute_v1.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.googlenative.compute_v1.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSnapshotIamPolicyArgs args) {
-        return getSnapshotIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args) {
+        return getSnapshotIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSnapshotIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
      * 
      */
-    public static CompletableFuture<GetSslCertificateResult> getSslCertificate(io.pulumi.googlenative.compute_v1.inputs.GetSslCertificateArgs args) {
-        return getSslCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSslCertificateResult> getSslCertificate(GetSslCertificateArgs args) {
+        return getSslCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSslCertificateResult> getSslCertificate(io.pulumi.googlenative.compute_v1.inputs.GetSslCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSslCertificateResult> getSslCertificate(GetSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSslCertificate", TypeShape.of(GetSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Lists all of the ordered rules present in a single specified policy.
      * 
      */
-    public static CompletableFuture<GetSslPolicyResult> getSslPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSslPolicyArgs args) {
-        return getSslPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSslPolicyResult> getSslPolicy(GetSslPolicyArgs args) {
+        return getSslPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSslPolicyResult> getSslPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSslPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSslPolicyResult> getSslPolicy(GetSslPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSslPolicy", TypeShape.of(GetSslPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
      * 
      */
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(io.pulumi.googlenative.compute_v1.inputs.GetSubnetworkArgs args) {
-        return getSubnetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args) {
+        return getSubnetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(io.pulumi.googlenative.compute_v1.inputs.GetSubnetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
-    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSubnetworkIamPolicyArgs args) {
-        return getSubnetworkIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicy(GetSubnetworkIamPolicyArgs args) {
+        return getSubnetworkIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicy(io.pulumi.googlenative.compute_v1.inputs.GetSubnetworkIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicy(GetSubnetworkIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSubnetworkIamPolicy", TypeShape.of(GetSubnetworkIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetGrpcProxy resource in the given scope.
      * 
      */
-    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetGrpcProxyArgs args) {
-        return getTargetGrpcProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxy(GetTargetGrpcProxyArgs args) {
+        return getTargetGrpcProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetGrpcProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxy(GetTargetGrpcProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetGrpcProxy", TypeShape.of(GetTargetGrpcProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetHttpProxyArgs args) {
-        return getTargetHttpProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxy(GetTargetHttpProxyArgs args) {
+        return getTargetHttpProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetHttpProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxy(GetTargetHttpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetHttpProxy", TypeShape.of(GetTargetHttpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetHttpsProxyArgs args) {
-        return getTargetHttpsProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxy(GetTargetHttpsProxyArgs args) {
+        return getTargetHttpsProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetHttpsProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxy(GetTargetHttpsProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetHttpsProxy", TypeShape.of(GetTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetInstanceResult> getTargetInstance(io.pulumi.googlenative.compute_v1.inputs.GetTargetInstanceArgs args) {
-        return getTargetInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetInstanceResult> getTargetInstance(GetTargetInstanceArgs args) {
+        return getTargetInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetInstanceResult> getTargetInstance(io.pulumi.googlenative.compute_v1.inputs.GetTargetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetInstanceResult> getTargetInstance(GetTargetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetInstance", TypeShape.of(GetTargetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified target pool. Gets a list of available target pools by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetPoolResult> getTargetPool(io.pulumi.googlenative.compute_v1.inputs.GetTargetPoolArgs args) {
-        return getTargetPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetPoolResult> getTargetPool(GetTargetPoolArgs args) {
+        return getTargetPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetPoolResult> getTargetPool(io.pulumi.googlenative.compute_v1.inputs.GetTargetPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetPoolResult> getTargetPool(GetTargetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetPool", TypeShape.of(GetTargetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetSslProxyArgs args) {
-        return getTargetSslProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxy(GetTargetSslProxyArgs args) {
+        return getTargetSslProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetSslProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxy(GetTargetSslProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetSslProxy", TypeShape.of(GetTargetSslProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetTcpProxyArgs args) {
-        return getTargetTcpProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxy(GetTargetTcpProxyArgs args) {
+        return getTargetTcpProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxy(io.pulumi.googlenative.compute_v1.inputs.GetTargetTcpProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxy(GetTargetTcpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetTcpProxy", TypeShape.of(GetTargetTcpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
      * 
      */
-    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetTargetVpnGatewayArgs args) {
-        return getTargetVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGateway(GetTargetVpnGatewayArgs args) {
+        return getTargetVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetTargetVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGateway(GetTargetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetVpnGateway", TypeShape.of(GetTargetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 
      */
-    public static CompletableFuture<GetUrlMapResult> getUrlMap(io.pulumi.googlenative.compute_v1.inputs.GetUrlMapArgs args) {
-        return getUrlMap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUrlMapResult> getUrlMap(GetUrlMapArgs args) {
+        return getUrlMap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUrlMapResult> getUrlMap(io.pulumi.googlenative.compute_v1.inputs.GetUrlMapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUrlMapResult> getUrlMap(GetUrlMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getUrlMap", TypeShape.of(GetUrlMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetVpnGatewayArgs args) {
-        return getVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+        return getVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.googlenative.compute_v1.inputs.GetVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
      * 
      */
-    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnel(io.pulumi.googlenative.compute_v1.inputs.GetVpnTunnelArgs args) {
-        return getVpnTunnel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnel(GetVpnTunnelArgs args) {
+        return getVpnTunnel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnel(io.pulumi.googlenative.compute_v1.inputs.GetVpnTunnelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnel(GetVpnTunnelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getVpnTunnel", TypeShape.of(GetVpnTunnelResult.class), args, Utilities.withVersion(options));
     }
 }

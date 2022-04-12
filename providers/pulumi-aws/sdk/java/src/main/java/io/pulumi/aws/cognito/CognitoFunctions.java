@@ -24,10 +24,10 @@ public final class CognitoFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserPoolClientResult> getUserPoolClient(io.pulumi.aws.cognito.inputs.GetUserPoolClientArgs args) {
-        return getUserPoolClient(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserPoolClientResult> getUserPoolClient(GetUserPoolClientArgs args) {
+        return getUserPoolClient(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserPoolClientResult> getUserPoolClient(io.pulumi.aws.cognito.inputs.GetUserPoolClientArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserPoolClientResult> getUserPoolClient(GetUserPoolClientArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cognito/getUserPoolClient:getUserPoolClient", TypeShape.of(GetUserPoolClientResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class CognitoFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserPoolClientsResult> getUserPoolClients(io.pulumi.aws.cognito.inputs.GetUserPoolClientsArgs args) {
-        return getUserPoolClients(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserPoolClientsResult> getUserPoolClients(GetUserPoolClientsArgs args) {
+        return getUserPoolClients(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserPoolClientsResult> getUserPoolClients(io.pulumi.aws.cognito.inputs.GetUserPoolClientsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserPoolClientsResult> getUserPoolClients(GetUserPoolClientsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cognito/getUserPoolClients:getUserPoolClients", TypeShape.of(GetUserPoolClientsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class CognitoFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserPoolSigningCertificateResult> getUserPoolSigningCertificate(io.pulumi.aws.cognito.inputs.GetUserPoolSigningCertificateArgs args) {
-        return getUserPoolSigningCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserPoolSigningCertificateResult> getUserPoolSigningCertificate(GetUserPoolSigningCertificateArgs args) {
+        return getUserPoolSigningCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserPoolSigningCertificateResult> getUserPoolSigningCertificate(io.pulumi.aws.cognito.inputs.GetUserPoolSigningCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserPoolSigningCertificateResult> getUserPoolSigningCertificate(GetUserPoolSigningCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cognito/getUserPoolSigningCertificate:getUserPoolSigningCertificate", TypeShape.of(GetUserPoolSigningCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class CognitoFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserPoolsResult> getUserPools(io.pulumi.aws.cognito.inputs.GetUserPoolsArgs args) {
-        return getUserPools(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserPoolsResult> getUserPools(GetUserPoolsArgs args) {
+        return getUserPools(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserPoolsResult> getUserPools(io.pulumi.aws.cognito.inputs.GetUserPoolsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserPoolsResult> getUserPools(GetUserPoolsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cognito/getUserPools:getUserPools", TypeShape.of(GetUserPoolsResult.class), args, Utilities.withVersion(options));
     }
 }

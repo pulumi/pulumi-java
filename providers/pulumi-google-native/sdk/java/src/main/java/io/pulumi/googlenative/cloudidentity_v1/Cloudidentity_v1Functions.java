@@ -20,30 +20,30 @@ public final class Cloudidentity_v1Functions {
      * Retrieves the specified device.
      * 
      */
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.googlenative.cloudidentity_v1.inputs.GetDeviceArgs args) {
-        return getDevice(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeviceResult> getDevice(io.pulumi.googlenative.cloudidentity_v1.inputs.GetDeviceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a `Group`.
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.googlenative.cloudidentity_v1.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.googlenative.cloudidentity_v1.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a `Membership`.
      * 
      */
-    public static CompletableFuture<GetMembershipResult> getMembership(io.pulumi.googlenative.cloudidentity_v1.inputs.GetMembershipArgs args) {
-        return getMembership(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args) {
+        return getMembership(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMembershipResult> getMembership(io.pulumi.googlenative.cloudidentity_v1.inputs.GetMembershipArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }
 }

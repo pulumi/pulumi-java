@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.VPCTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +37,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
     public Output<Boolean> getEnableDnsHostnames() {
-        return this.enableDnsHostnames == null ? Output.empty() : this.enableDnsHostnames;
+        return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDnsSupport;
 
     public Output<Boolean> getEnableDnsSupport() {
-        return this.enableDnsSupport == null ? Output.empty() : this.enableDnsSupport;
+        return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceTenancy;
 
     public Output<String> getInstanceTenancy() {
-        return this.instanceTenancy == null ? Output.empty() : this.instanceTenancy;
+        return this.instanceTenancy == null ? Codegen.empty() : this.instanceTenancy;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VPCTagArgs>> tags;
 
     public Output<List<VPCTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VPCArgs(
@@ -92,11 +93,11 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VPCArgs() {
-        this.cidrBlock = Output.empty();
-        this.enableDnsHostnames = Output.empty();
-        this.enableDnsSupport = Output.empty();
-        this.instanceTenancy = Output.empty();
-        this.tags = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.enableDnsHostnames = Codegen.empty();
+        this.enableDnsSupport = Codegen.empty();
+        this.instanceTenancy = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
-            this.enableDnsHostnames = Output.ofNullable(enableDnsHostnames);
+            this.enableDnsHostnames = Codegen.ofNullable(enableDnsHostnames);
             return this;
         }
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
@@ -148,7 +149,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
-            this.enableDnsSupport = Output.ofNullable(enableDnsSupport);
+            this.enableDnsSupport = Codegen.ofNullable(enableDnsSupport);
             return this;
         }
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
@@ -156,7 +157,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceTenancy(@Nullable String instanceTenancy) {
-            this.instanceTenancy = Output.ofNullable(instanceTenancy);
+            this.instanceTenancy = Codegen.ofNullable(instanceTenancy);
             return this;
         }
         public Builder tags(@Nullable Output<List<VPCTagArgs>> tags) {
@@ -164,7 +165,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<VPCTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(VPCTagArgs... tags) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapacit
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,9 +49,9 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     }
 
     private ClusterCapacityProviderAssociationsArgs() {
-        this.capacityProviders = Output.empty();
-        this.cluster = Output.empty();
-        this.defaultCapacityProviderStrategy = Output.empty();
+        this.capacityProviders = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.defaultCapacityProviderStrategy = Codegen.empty();
     }
 
     public static Builder builder() {

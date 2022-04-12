@@ -61,10 +61,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(io.pulumi.azurenative.devtestlab.inputs.GetArtifactSourceArgs args) {
-        return getArtifactSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args) {
+        return getArtifactSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(io.pulumi.azurenative.devtestlab.inputs.GetArtifactSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetArtifactSourceResult> getArtifactSource(GetArtifactSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -72,10 +72,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetCustomImageResult> getCustomImage(io.pulumi.azurenative.devtestlab.inputs.GetCustomImageArgs args) {
-        return getCustomImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomImageResult> getCustomImage(GetCustomImageArgs args) {
+        return getCustomImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomImageResult> getCustomImage(io.pulumi.azurenative.devtestlab.inputs.GetCustomImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomImageResult> getCustomImage(GetCustomImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getCustomImage", TypeShape.of(GetCustomImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -83,10 +83,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.azurenative.devtestlab.inputs.GetDiskArgs args) {
-        return getDisk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
+        return getDisk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskResult> getDisk(io.pulumi.azurenative.devtestlab.inputs.GetDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -94,10 +94,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.azurenative.devtestlab.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.azurenative.devtestlab.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,10 +105,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetFormulaResult> getFormula(io.pulumi.azurenative.devtestlab.inputs.GetFormulaArgs args) {
-        return getFormula(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFormulaResult> getFormula(GetFormulaArgs args) {
+        return getFormula(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFormulaResult> getFormula(io.pulumi.azurenative.devtestlab.inputs.GetFormulaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFormulaResult> getFormula(GetFormulaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getFormula", TypeShape.of(GetFormulaResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -116,10 +116,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetGlobalScheduleResult> getGlobalSchedule(io.pulumi.azurenative.devtestlab.inputs.GetGlobalScheduleArgs args) {
-        return getGlobalSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGlobalScheduleResult> getGlobalSchedule(GetGlobalScheduleArgs args) {
+        return getGlobalSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGlobalScheduleResult> getGlobalSchedule(io.pulumi.azurenative.devtestlab.inputs.GetGlobalScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalScheduleResult> getGlobalSchedule(GetGlobalScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getGlobalSchedule", TypeShape.of(GetGlobalScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -127,10 +127,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetLabResult> getLab(io.pulumi.azurenative.devtestlab.inputs.GetLabArgs args) {
-        return getLab(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLabResult> getLab(GetLabArgs args) {
+        return getLab(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLabResult> getLab(io.pulumi.azurenative.devtestlab.inputs.GetLabArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLabResult> getLab(GetLabArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getLab", TypeShape.of(GetLabResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -138,10 +138,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.azurenative.devtestlab.inputs.GetNotificationChannelArgs args) {
-        return getNotificationChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+        return getNotificationChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.azurenative.devtestlab.inputs.GetNotificationChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -149,10 +149,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.devtestlab.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.devtestlab.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -160,10 +160,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetScheduleResult> getSchedule(io.pulumi.azurenative.devtestlab.inputs.GetScheduleArgs args) {
-        return getSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args) {
+        return getSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScheduleResult> getSchedule(io.pulumi.azurenative.devtestlab.inputs.GetScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduleResult> getSchedule(GetScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getSchedule", TypeShape.of(GetScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -171,10 +171,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.devtestlab.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.azurenative.devtestlab.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -182,10 +182,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetServiceFabricResult> getServiceFabric(io.pulumi.azurenative.devtestlab.inputs.GetServiceFabricArgs args) {
-        return getServiceFabric(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceFabricResult> getServiceFabric(GetServiceFabricArgs args) {
+        return getServiceFabric(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceFabricResult> getServiceFabric(io.pulumi.azurenative.devtestlab.inputs.GetServiceFabricArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceFabricResult> getServiceFabric(GetServiceFabricArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceFabric", TypeShape.of(GetServiceFabricResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -193,10 +193,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetServiceFabricScheduleResult> getServiceFabricSchedule(io.pulumi.azurenative.devtestlab.inputs.GetServiceFabricScheduleArgs args) {
-        return getServiceFabricSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceFabricScheduleResult> getServiceFabricSchedule(GetServiceFabricScheduleArgs args) {
+        return getServiceFabricSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceFabricScheduleResult> getServiceFabricSchedule(io.pulumi.azurenative.devtestlab.inputs.GetServiceFabricScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceFabricScheduleResult> getServiceFabricSchedule(GetServiceFabricScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceFabricSchedule", TypeShape.of(GetServiceFabricScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -204,10 +204,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetServiceRunnerResult> getServiceRunner(io.pulumi.azurenative.devtestlab.inputs.GetServiceRunnerArgs args) {
-        return getServiceRunner(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceRunnerResult> getServiceRunner(GetServiceRunnerArgs args) {
+        return getServiceRunner(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceRunnerResult> getServiceRunner(io.pulumi.azurenative.devtestlab.inputs.GetServiceRunnerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceRunnerResult> getServiceRunner(GetServiceRunnerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceRunner", TypeShape.of(GetServiceRunnerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -215,10 +215,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.devtestlab.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.azurenative.devtestlab.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -226,10 +226,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineArgs args) {
-        return getVirtualMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args) {
+        return getVirtualMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineResult> getVirtualMachine(GetVirtualMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getVirtualMachine", TypeShape.of(GetVirtualMachineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -237,10 +237,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> getVirtualMachineRdpFileContents(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineRdpFileContentsArgs args) {
-        return getVirtualMachineRdpFileContents(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> getVirtualMachineRdpFileContents(GetVirtualMachineRdpFileContentsArgs args) {
+        return getVirtualMachineRdpFileContents(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> getVirtualMachineRdpFileContents(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineRdpFileContentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> getVirtualMachineRdpFileContents(GetVirtualMachineRdpFileContentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getVirtualMachineRdpFileContents", TypeShape.of(GetVirtualMachineRdpFileContentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -248,10 +248,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineScheduleResult> getVirtualMachineSchedule(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineScheduleArgs args) {
-        return getVirtualMachineSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualMachineScheduleResult> getVirtualMachineSchedule(GetVirtualMachineScheduleArgs args) {
+        return getVirtualMachineSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualMachineScheduleResult> getVirtualMachineSchedule(io.pulumi.azurenative.devtestlab.inputs.GetVirtualMachineScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineScheduleResult> getVirtualMachineSchedule(GetVirtualMachineScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getVirtualMachineSchedule", TypeShape.of(GetVirtualMachineScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -259,10 +259,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.devtestlab.inputs.GetVirtualNetworkArgs args) {
-        return getVirtualNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+        return getVirtualNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.devtestlab.inputs.GetVirtualNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -270,10 +270,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<ListLabVhdsResult> listLabVhds(io.pulumi.azurenative.devtestlab.inputs.ListLabVhdsArgs args) {
-        return listLabVhds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListLabVhdsResult> listLabVhds(ListLabVhdsArgs args) {
+        return listLabVhds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListLabVhdsResult> listLabVhds(io.pulumi.azurenative.devtestlab.inputs.ListLabVhdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListLabVhdsResult> listLabVhds(ListLabVhdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listLabVhds", TypeShape.of(ListLabVhdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -281,10 +281,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<ListScheduleApplicableResult> listScheduleApplicable(io.pulumi.azurenative.devtestlab.inputs.ListScheduleApplicableArgs args) {
-        return listScheduleApplicable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListScheduleApplicableResult> listScheduleApplicable(ListScheduleApplicableArgs args) {
+        return listScheduleApplicable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListScheduleApplicableResult> listScheduleApplicable(io.pulumi.azurenative.devtestlab.inputs.ListScheduleApplicableArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListScheduleApplicableResult> listScheduleApplicable(ListScheduleApplicableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listScheduleApplicable", TypeShape.of(ListScheduleApplicableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -292,10 +292,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<ListServiceFabricApplicableSchedulesResult> listServiceFabricApplicableSchedules(io.pulumi.azurenative.devtestlab.inputs.ListServiceFabricApplicableSchedulesArgs args) {
-        return listServiceFabricApplicableSchedules(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListServiceFabricApplicableSchedulesResult> listServiceFabricApplicableSchedules(ListServiceFabricApplicableSchedulesArgs args) {
+        return listServiceFabricApplicableSchedules(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListServiceFabricApplicableSchedulesResult> listServiceFabricApplicableSchedules(io.pulumi.azurenative.devtestlab.inputs.ListServiceFabricApplicableSchedulesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListServiceFabricApplicableSchedulesResult> listServiceFabricApplicableSchedules(ListServiceFabricApplicableSchedulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listServiceFabricApplicableSchedules", TypeShape.of(ListServiceFabricApplicableSchedulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -303,10 +303,10 @@ public final class DevtestlabFunctions {
      * API Version: 2018-09-15.
      * 
      */
-    public static CompletableFuture<ListVirtualMachineApplicableSchedulesResult> listVirtualMachineApplicableSchedules(io.pulumi.azurenative.devtestlab.inputs.ListVirtualMachineApplicableSchedulesArgs args) {
-        return listVirtualMachineApplicableSchedules(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListVirtualMachineApplicableSchedulesResult> listVirtualMachineApplicableSchedules(ListVirtualMachineApplicableSchedulesArgs args) {
+        return listVirtualMachineApplicableSchedules(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListVirtualMachineApplicableSchedulesResult> listVirtualMachineApplicableSchedules(io.pulumi.azurenative.devtestlab.inputs.ListVirtualMachineApplicableSchedulesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListVirtualMachineApplicableSchedulesResult> listVirtualMachineApplicableSchedules(ListVirtualMachineApplicableSchedulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listVirtualMachineApplicableSchedules", TypeShape.of(ListVirtualMachineApplicableSchedulesResult.class), args, Utilities.withVersion(options));
     }
 }

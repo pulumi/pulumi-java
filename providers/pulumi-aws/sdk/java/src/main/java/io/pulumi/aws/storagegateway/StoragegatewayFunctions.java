@@ -18,10 +18,10 @@ public final class StoragegatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLocalDiskResult> getLocalDisk(io.pulumi.aws.storagegateway.inputs.GetLocalDiskArgs args) {
-        return getLocalDisk(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalDiskResult> getLocalDisk(GetLocalDiskArgs args) {
+        return getLocalDisk(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalDiskResult> getLocalDisk(io.pulumi.aws.storagegateway.inputs.GetLocalDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalDiskResult> getLocalDisk(GetLocalDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:storagegateway/getLocalDisk:getLocalDisk", TypeShape.of(GetLocalDiskResult.class), args, Utilities.withVersion(options));
     }
 }

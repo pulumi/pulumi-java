@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.inputs.RestRequestArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,7 +51,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<RestResponseArgs> response;
 
     public Output<RestResponseArgs> getResponse() {
-        return this.response == null ? Output.empty() : this.response;
+        return this.response == null ? Codegen.empty() : this.response;
     }
 
     public RestHealthCheckArgs(
@@ -63,9 +64,9 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RestHealthCheckArgs() {
-        this.name = Output.empty();
-        this.request = Output.empty();
-        this.response = Output.empty();
+        this.name = Codegen.empty();
+        this.request = Codegen.empty();
+        this.response = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder response(@Nullable RestResponseArgs response) {
-            this.response = Output.ofNullable(response);
+            this.response = Codegen.ofNullable(response);
             return this;
         }        public RestHealthCheckArgs build() {
             return new RestHealthCheckArgs(name, request, response);

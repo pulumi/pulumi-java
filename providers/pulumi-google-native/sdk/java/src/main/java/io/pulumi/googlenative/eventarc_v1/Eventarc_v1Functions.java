@@ -22,40 +22,40 @@ public final class Eventarc_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetChannelConnectionIamPolicyArgs args) {
-        return getChannelConnectionIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(GetChannelConnectionIamPolicyArgs args) {
+        return getChannelConnectionIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetChannelConnectionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelConnectionIamPolicyResult> getChannelConnectionIamPolicy(GetChannelConnectionIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getChannelConnectionIamPolicy", TypeShape.of(GetChannelConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetChannelIamPolicyArgs args) {
-        return getChannelIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(GetChannelIamPolicyArgs args) {
+        return getChannelIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetChannelIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelIamPolicyResult> getChannelIamPolicy(GetChannelIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getChannelIamPolicy", TypeShape.of(GetChannelIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a single trigger.
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.eventarc_v1.inputs.GetTriggerArgs args) {
-        return getTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+        return getTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.eventarc_v1.inputs.GetTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetTriggerIamPolicyArgs args) {
-        return getTriggerIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args) {
+        return getTriggerIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(io.pulumi.googlenative.eventarc_v1.inputs.GetTriggerIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1:getTriggerIamPolicy", TypeShape.of(GetTriggerIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

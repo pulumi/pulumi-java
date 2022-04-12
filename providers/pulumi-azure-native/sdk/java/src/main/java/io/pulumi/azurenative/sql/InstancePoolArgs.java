@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instancePoolName;
 
     public Output<String> getInstancePoolName() {
-        return this.instancePoolName == null ? Output.empty() : this.instancePoolName;
+        return this.instancePoolName == null ? Codegen.empty() : this.instancePoolName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -127,14 +128,14 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstancePoolArgs() {
-        this.instancePoolName = Output.empty();
-        this.licenseType = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.vCores = Output.empty();
+        this.instancePoolName = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vCores = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instancePoolName(@Nullable String instancePoolName) {
-            this.instancePoolName = Output.ofNullable(instancePoolName);
+            this.instancePoolName = Codegen.ofNullable(instancePoolName);
             return this;
         }
         public Builder licenseType(Output<Either<String,InstancePoolLicenseType>> licenseType) {
@@ -192,7 +193,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -208,7 +209,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {
@@ -224,7 +225,7 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vCores(Output<Integer> vCores) {

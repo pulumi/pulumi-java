@@ -5,6 +5,7 @@ package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gatewayResourceId;
 
     public Output<String> getGatewayResourceId() {
-        return this.gatewayResourceId == null ? Output.empty() : this.gatewayResourceId;
+        return this.gatewayResourceId == null ? Codegen.empty() : this.gatewayResourceId;
     }
 
     public GatewayDetailsArgs(@Nullable Output<String> gatewayResourceId) {
@@ -34,7 +35,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayDetailsArgs() {
-        this.gatewayResourceId = Output.empty();
+        this.gatewayResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
-            this.gatewayResourceId = Output.ofNullable(gatewayResourceId);
+            this.gatewayResourceId = Codegen.ofNullable(gatewayResourceId);
             return this;
         }        public GatewayDetailsArgs build() {
             return new GatewayDetailsArgs(gatewayResourceId);

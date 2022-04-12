@@ -18,20 +18,20 @@ public final class Eventarc_v1beta1Functions {
      * Get a single trigger.
      * 
      */
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.eventarc_v1beta1.inputs.GetTriggerArgs args) {
-        return getTrigger(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args) {
+        return getTrigger(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerResult> getTrigger(io.pulumi.googlenative.eventarc_v1beta1.inputs.GetTriggerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1beta1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(io.pulumi.googlenative.eventarc_v1beta1.inputs.GetTriggerIamPolicyArgs args) {
-        return getTriggerIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args) {
+        return getTriggerIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(io.pulumi.googlenative.eventarc_v1beta1.inputs.GetTriggerIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTriggerIamPolicyResult> getTriggerIamPolicy(GetTriggerIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1beta1:getTriggerIamPolicy", TypeShape.of(GetTriggerIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

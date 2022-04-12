@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs() {
-        this.buttonId = Output.empty();
-        this.deploymentId = Output.empty();
-        this.endpointDomain = Output.empty();
-        this.organizationId = Output.empty();
+        this.buttonId = Codegen.empty();
+        this.deploymentId = Codegen.empty();
+        this.endpointDomain = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {

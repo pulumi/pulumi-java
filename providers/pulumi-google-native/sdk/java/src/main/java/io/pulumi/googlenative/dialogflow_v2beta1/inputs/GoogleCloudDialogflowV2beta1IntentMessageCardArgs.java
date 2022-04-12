@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> getButtons() {
-        return this.buttons == null ? Output.empty() : this.buttons;
+        return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
-        return this.imageUri == null ? Output.empty() : this.imageUri;
+        return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageCardArgs(
@@ -76,10 +77,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageCardArgs() {
-        this.buttons = Output.empty();
-        this.imageUri = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.buttons = Codegen.empty();
+        this.imageUri = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             return this;
         }
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs> buttons) {
-            this.buttons = Output.ofNullable(buttons);
+            this.buttons = Codegen.ofNullable(buttons);
             return this;
         }
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs... buttons) {
@@ -124,7 +125,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             return this;
         }
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Output.ofNullable(imageUri);
+            this.imageUri = Codegen.ofNullable(imageUri);
             return this;
         }
         public Builder subtitle(@Nullable Output<String> subtitle) {
@@ -132,7 +133,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -140,7 +141,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardArgs(buttons, imageUri, subtitle, title);

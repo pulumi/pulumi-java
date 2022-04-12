@@ -16,10 +16,10 @@ public final class Monitoring_v1Functions {
      * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.googlenative.monitoring_v1.inputs.GetDashboardArgs args) {
-        return getDashboard(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+        return getDashboard(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.googlenative.monitoring_v1.inputs.GetDashboardArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v1:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
 }

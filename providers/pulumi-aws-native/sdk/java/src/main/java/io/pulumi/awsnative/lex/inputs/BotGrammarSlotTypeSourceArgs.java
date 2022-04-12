@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
     }
 
     private BotGrammarSlotTypeSourceArgs() {
-        this.kmsKeyArn = Output.empty();
-        this.s3BucketName = Output.empty();
-        this.s3ObjectKey = Output.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3ObjectKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder s3BucketName(Output<String> s3BucketName) {

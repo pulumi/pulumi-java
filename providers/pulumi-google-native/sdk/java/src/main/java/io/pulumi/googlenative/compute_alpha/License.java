@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.LicenseArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.LicenseResourceRequirementsResponse;
@@ -160,7 +161,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public License(String name, @Nullable LicenseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:License", name, args == null ? LicenseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private License(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

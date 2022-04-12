@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
     public Output<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
-        return this.applicationConsistentSnapshotFrequencyInHours == null ? Output.empty() : this.applicationConsistentSnapshotFrequencyInHours;
+        return this.applicationConsistentSnapshotFrequencyInHours == null ? Codegen.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<String> onlineReplicationStartTime;
 
     public Output<String> getOnlineReplicationStartTime() {
-        return this.onlineReplicationStartTime == null ? Output.empty() : this.onlineReplicationStartTime;
+        return this.onlineReplicationStartTime == null ? Codegen.empty() : this.onlineReplicationStartTime;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> recoveryPointHistoryDuration;
 
     public Output<Integer> getRecoveryPointHistoryDuration() {
-        return this.recoveryPointHistoryDuration == null ? Output.empty() : this.recoveryPointHistoryDuration;
+        return this.recoveryPointHistoryDuration == null ? Codegen.empty() : this.recoveryPointHistoryDuration;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> replicationInterval;
 
     public Output<Integer> getReplicationInterval() {
-        return this.replicationInterval == null ? Output.empty() : this.replicationInterval;
+        return this.replicationInterval == null ? Codegen.empty() : this.replicationInterval;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> storageAccounts;
 
     public Output<List<String>> getStorageAccounts() {
-        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
+        return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
     public HyperVReplicaAzurePolicyInputArgs(
@@ -103,12 +104,12 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
     }
 
     private HyperVReplicaAzurePolicyInputArgs() {
-        this.applicationConsistentSnapshotFrequencyInHours = Output.empty();
-        this.instanceType = Output.empty();
-        this.onlineReplicationStartTime = Output.empty();
-        this.recoveryPointHistoryDuration = Output.empty();
-        this.replicationInterval = Output.empty();
-        this.storageAccounts = Output.empty();
+        this.applicationConsistentSnapshotFrequencyInHours = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.onlineReplicationStartTime = Codegen.empty();
+        this.recoveryPointHistoryDuration = Codegen.empty();
+        this.replicationInterval = Codegen.empty();
+        this.storageAccounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = Output.ofNullable(applicationConsistentSnapshotFrequencyInHours);
+            this.applicationConsistentSnapshotFrequencyInHours = Codegen.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -154,7 +155,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
@@ -162,7 +163,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = Output.ofNullable(onlineReplicationStartTime);
+            this.onlineReplicationStartTime = Codegen.ofNullable(onlineReplicationStartTime);
             return this;
         }
         public Builder recoveryPointHistoryDuration(@Nullable Output<Integer> recoveryPointHistoryDuration) {
@@ -170,7 +171,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder recoveryPointHistoryDuration(@Nullable Integer recoveryPointHistoryDuration) {
-            this.recoveryPointHistoryDuration = Output.ofNullable(recoveryPointHistoryDuration);
+            this.recoveryPointHistoryDuration = Codegen.ofNullable(recoveryPointHistoryDuration);
             return this;
         }
         public Builder replicationInterval(@Nullable Output<Integer> replicationInterval) {
@@ -178,7 +179,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder replicationInterval(@Nullable Integer replicationInterval) {
-            this.replicationInterval = Output.ofNullable(replicationInterval);
+            this.replicationInterval = Codegen.ofNullable(replicationInterval);
             return this;
         }
         public Builder storageAccounts(@Nullable Output<List<String>> storageAccounts) {
@@ -186,7 +187,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
             return this;
         }
         public Builder storageAccounts(@Nullable List<String> storageAccounts) {
-            this.storageAccounts = Output.ofNullable(storageAccounts);
+            this.storageAccounts = Codegen.ofNullable(storageAccounts);
             return this;
         }
         public Builder storageAccounts(String... storageAccounts) {

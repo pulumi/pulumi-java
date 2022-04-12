@@ -15,6 +15,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
+        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> addressPrefixes;
 
     public Output<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
+        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
 
     public Output<List<ApplicationGatewayIPConfigurationArgs>> getApplicationGatewayIpConfigurations() {
-        return this.applicationGatewayIpConfigurations == null ? Output.empty() : this.applicationGatewayIpConfigurations;
+        return this.applicationGatewayIpConfigurations == null ? Codegen.empty() : this.applicationGatewayIpConfigurations;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DelegationArgs>> delegations;
 
     public Output<List<DelegationArgs>> getDelegations() {
-        return this.delegations == null ? Output.empty() : this.delegations;
+        return this.delegations == null ? Codegen.empty() : this.delegations;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
     public Output<List<SubResourceArgs>> getIpAllocations() {
-        return this.ipAllocations == null ? Output.empty() : this.ipAllocations;
+        return this.ipAllocations == null ? Codegen.empty() : this.ipAllocations;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> natGateway;
 
     public Output<SubResourceArgs> getNatGateway() {
-        return this.natGateway == null ? Output.empty() : this.natGateway;
+        return this.natGateway == null ? Codegen.empty() : this.natGateway;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
     public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Output.empty() : this.networkSecurityGroup;
+        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
 
     public Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> getPrivateEndpointNetworkPolicies() {
-        return this.privateEndpointNetworkPolicies == null ? Output.empty() : this.privateEndpointNetworkPolicies;
+        return this.privateEndpointNetworkPolicies == null ? Codegen.empty() : this.privateEndpointNetworkPolicies;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
 
     public Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> getPrivateLinkServiceNetworkPolicies() {
-        return this.privateLinkServiceNetworkPolicies == null ? Output.empty() : this.privateLinkServiceNetworkPolicies;
+        return this.privateLinkServiceNetworkPolicies == null ? Codegen.empty() : this.privateLinkServiceNetworkPolicies;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RouteTableArgs> routeTable;
 
     public Output<RouteTableArgs> getRouteTable() {
-        return this.routeTable == null ? Output.empty() : this.routeTable;
+        return this.routeTable == null ? Codegen.empty() : this.routeTable;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
 
     public Output<List<ServiceEndpointPolicyArgs>> getServiceEndpointPolicies() {
-        return this.serviceEndpointPolicies == null ? Output.empty() : this.serviceEndpointPolicies;
+        return this.serviceEndpointPolicies == null ? Codegen.empty() : this.serviceEndpointPolicies;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
 
     public Output<List<ServiceEndpointPropertiesFormatArgs>> getServiceEndpoints() {
-        return this.serviceEndpoints == null ? Output.empty() : this.serviceEndpoints;
+        return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SubnetArgs(
@@ -228,21 +229,21 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetArgs() {
-        this.addressPrefix = Output.empty();
-        this.addressPrefixes = Output.empty();
-        this.applicationGatewayIpConfigurations = Output.empty();
-        this.delegations = Output.empty();
-        this.id = Output.empty();
-        this.ipAllocations = Output.empty();
-        this.name = Output.empty();
-        this.natGateway = Output.empty();
-        this.networkSecurityGroup = Output.empty();
-        this.privateEndpointNetworkPolicies = Output.empty();
-        this.privateLinkServiceNetworkPolicies = Output.empty();
-        this.routeTable = Output.empty();
-        this.serviceEndpointPolicies = Output.empty();
-        this.serviceEndpoints = Output.empty();
-        this.type = Output.empty();
+        this.addressPrefix = Codegen.empty();
+        this.addressPrefixes = Codegen.empty();
+        this.applicationGatewayIpConfigurations = Codegen.empty();
+        this.delegations = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipAllocations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natGateway = Codegen.empty();
+        this.networkSecurityGroup = Codegen.empty();
+        this.privateEndpointNetworkPolicies = Codegen.empty();
+        this.privateLinkServiceNetworkPolicies = Codegen.empty();
+        this.routeTable = Codegen.empty();
+        this.serviceEndpointPolicies = Codegen.empty();
+        this.serviceEndpoints = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -298,7 +299,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Output.ofNullable(addressPrefix);
+            this.addressPrefix = Codegen.ofNullable(addressPrefix);
             return this;
         }
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
@@ -306,7 +307,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Output.ofNullable(addressPrefixes);
+            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
             return this;
         }
         public Builder addressPrefixes(String... addressPrefixes) {
@@ -317,7 +318,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
-            this.applicationGatewayIpConfigurations = Output.ofNullable(applicationGatewayIpConfigurations);
+            this.applicationGatewayIpConfigurations = Codegen.ofNullable(applicationGatewayIpConfigurations);
             return this;
         }
         public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationArgs... applicationGatewayIpConfigurations) {
@@ -328,7 +329,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delegations(@Nullable List<DelegationArgs> delegations) {
-            this.delegations = Output.ofNullable(delegations);
+            this.delegations = Codegen.ofNullable(delegations);
             return this;
         }
         public Builder delegations(DelegationArgs... delegations) {
@@ -339,7 +340,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
@@ -347,7 +348,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
-            this.ipAllocations = Output.ofNullable(ipAllocations);
+            this.ipAllocations = Codegen.ofNullable(ipAllocations);
             return this;
         }
         public Builder ipAllocations(SubResourceArgs... ipAllocations) {
@@ -358,7 +359,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natGateway(@Nullable Output<SubResourceArgs> natGateway) {
@@ -366,7 +367,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder natGateway(@Nullable SubResourceArgs natGateway) {
-            this.natGateway = Output.ofNullable(natGateway);
+            this.natGateway = Codegen.ofNullable(natGateway);
             return this;
         }
         public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
@@ -374,7 +375,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
+            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
             return this;
         }
         public Builder privateEndpointNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
@@ -382,7 +383,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
-            this.privateEndpointNetworkPolicies = Output.ofNullable(privateEndpointNetworkPolicies);
+            this.privateEndpointNetworkPolicies = Codegen.ofNullable(privateEndpointNetworkPolicies);
             return this;
         }
         public Builder privateLinkServiceNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
@@ -390,7 +391,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
-            this.privateLinkServiceNetworkPolicies = Output.ofNullable(privateLinkServiceNetworkPolicies);
+            this.privateLinkServiceNetworkPolicies = Codegen.ofNullable(privateLinkServiceNetworkPolicies);
             return this;
         }
         public Builder routeTable(@Nullable Output<RouteTableArgs> routeTable) {
@@ -398,7 +399,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeTable(@Nullable RouteTableArgs routeTable) {
-            this.routeTable = Output.ofNullable(routeTable);
+            this.routeTable = Codegen.ofNullable(routeTable);
             return this;
         }
         public Builder serviceEndpointPolicies(@Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
@@ -406,7 +407,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
-            this.serviceEndpointPolicies = Output.ofNullable(serviceEndpointPolicies);
+            this.serviceEndpointPolicies = Codegen.ofNullable(serviceEndpointPolicies);
             return this;
         }
         public Builder serviceEndpointPolicies(ServiceEndpointPolicyArgs... serviceEndpointPolicies) {
@@ -417,7 +418,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
-            this.serviceEndpoints = Output.ofNullable(serviceEndpoints);
+            this.serviceEndpoints = Codegen.ofNullable(serviceEndpoints);
             return this;
         }
         public Builder serviceEndpoints(ServiceEndpointPropertiesFormatArgs... serviceEndpoints) {
@@ -428,7 +429,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SubnetArgs build() {
             return new SubnetArgs(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, id, ipAllocations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateLinkServiceNetworkPolicies, routeTable, serviceEndpointPolicies, serviceEndpoints, type);

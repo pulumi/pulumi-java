@@ -44,150 +44,150 @@ public final class ApigatewayFunctions {
      * Resource Type definition for AWS::ApiGateway::Account
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.awsnative.apigateway.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.awsnative.apigateway.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::ApiKey
      * 
      */
-    public static CompletableFuture<GetApiKeyResult> getApiKey(io.pulumi.awsnative.apigateway.inputs.GetApiKeyArgs args) {
-        return getApiKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiKeyResult> getApiKey(GetApiKeyArgs args) {
+        return getApiKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiKeyResult> getApiKey(io.pulumi.awsnative.apigateway.inputs.GetApiKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiKeyResult> getApiKey(GetApiKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getApiKey", TypeShape.of(GetApiKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
      * 
      */
-    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(io.pulumi.awsnative.apigateway.inputs.GetAuthorizerArgs args) {
-        return getAuthorizer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args) {
+        return getAuthorizer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(io.pulumi.awsnative.apigateway.inputs.GetAuthorizerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::BasePathMapping
      * 
      */
-    public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(io.pulumi.awsnative.apigateway.inputs.GetBasePathMappingArgs args) {
-        return getBasePathMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(GetBasePathMappingArgs args) {
+        return getBasePathMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(io.pulumi.awsnative.apigateway.inputs.GetBasePathMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(GetBasePathMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getBasePathMapping", TypeShape.of(GetBasePathMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::ClientCertificate
      * 
      */
-    public static CompletableFuture<GetClientCertificateResult> getClientCertificate(io.pulumi.awsnative.apigateway.inputs.GetClientCertificateArgs args) {
-        return getClientCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClientCertificateResult> getClientCertificate(GetClientCertificateArgs args) {
+        return getClientCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClientCertificateResult> getClientCertificate(io.pulumi.awsnative.apigateway.inputs.GetClientCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClientCertificateResult> getClientCertificate(GetClientCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getClientCertificate", TypeShape.of(GetClientCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::Deployment
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.awsnative.apigateway.inputs.GetDeploymentArgs args) {
-        return getDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+        return getDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.awsnative.apigateway.inputs.GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A snapshot of the documentation of an API.
      * 
      */
-    public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(io.pulumi.awsnative.apigateway.inputs.GetDocumentationVersionArgs args) {
-        return getDocumentationVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(GetDocumentationVersionArgs args) {
+        return getDocumentationVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(io.pulumi.awsnative.apigateway.inputs.GetDocumentationVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(GetDocumentationVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDocumentationVersion", TypeShape.of(GetDocumentationVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::DomainName.
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(io.pulumi.awsnative.apigateway.inputs.GetDomainNameArgs args) {
-        return getDomainName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
+        return getDomainName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainNameResult> getDomainName(io.pulumi.awsnative.apigateway.inputs.GetDomainNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::Method
      * 
      */
-    public static CompletableFuture<GetMethodResult> getMethod(io.pulumi.awsnative.apigateway.inputs.GetMethodArgs args) {
-        return getMethod(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMethodResult> getMethod(GetMethodArgs args) {
+        return getMethod(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMethodResult> getMethod(io.pulumi.awsnative.apigateway.inputs.GetMethodArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMethodResult> getMethod(GetMethodArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getMethod", TypeShape.of(GetMethodResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::Model
      * 
      */
-    public static CompletableFuture<GetModelResult> getModel(io.pulumi.awsnative.apigateway.inputs.GetModelArgs args) {
-        return getModel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
+        return getModel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetModelResult> getModel(io.pulumi.awsnative.apigateway.inputs.GetModelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::RequestValidator
      * 
      */
-    public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(io.pulumi.awsnative.apigateway.inputs.GetRequestValidatorArgs args) {
-        return getRequestValidator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(GetRequestValidatorArgs args) {
+        return getRequestValidator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(io.pulumi.awsnative.apigateway.inputs.GetRequestValidatorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(GetRequestValidatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getRequestValidator", TypeShape.of(GetRequestValidatorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::Resource
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.awsnative.apigateway.inputs.GetResourceArgs args) {
-        return getResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+        return getResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.awsnative.apigateway.inputs.GetResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::Stage
      * 
      */
-    public static CompletableFuture<GetStageResult> getStage(io.pulumi.awsnative.apigateway.inputs.GetStageArgs args) {
-        return getStage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStageResult> getStage(GetStageArgs args) {
+        return getStage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStageResult> getStage(io.pulumi.awsnative.apigateway.inputs.GetStageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStageResult> getStage(GetStageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getStage", TypeShape.of(GetStageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::UsagePlan
      * 
      */
-    public static CompletableFuture<GetUsagePlanResult> getUsagePlan(io.pulumi.awsnative.apigateway.inputs.GetUsagePlanArgs args) {
-        return getUsagePlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUsagePlanResult> getUsagePlan(GetUsagePlanArgs args) {
+        return getUsagePlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUsagePlanResult> getUsagePlan(io.pulumi.awsnative.apigateway.inputs.GetUsagePlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUsagePlanResult> getUsagePlan(GetUsagePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlan", TypeShape.of(GetUsagePlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ApiGateway::UsagePlanKey
      * 
      */
-    public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(io.pulumi.awsnative.apigateway.inputs.GetUsagePlanKeyArgs args) {
-        return getUsagePlanKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(GetUsagePlanKeyArgs args) {
+        return getUsagePlanKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(io.pulumi.awsnative.apigateway.inputs.GetUsagePlanKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(GetUsagePlanKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlanKey", TypeShape.of(GetUsagePlanKeyResult.class), args, Utilities.withVersion(options));
     }
 }

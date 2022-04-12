@@ -131,10 +131,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(io.pulumi.azurenative.sql.inputs.GetBackupShortTermRetentionPolicyArgs args) {
-        return getBackupShortTermRetentionPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(GetBackupShortTermRetentionPolicyArgs args) {
+        return getBackupShortTermRetentionPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(io.pulumi.azurenative.sql.inputs.GetBackupShortTermRetentionPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> getBackupShortTermRetentionPolicy(GetBackupShortTermRetentionPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getBackupShortTermRetentionPolicy", TypeShape.of(GetBackupShortTermRetentionPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -142,10 +142,10 @@ public final class SqlFunctions {
      * API Version: 2014-04-01.
      * 
      */
-    public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(io.pulumi.azurenative.sql.inputs.GetDataMaskingPolicyArgs args) {
-        return getDataMaskingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(GetDataMaskingPolicyArgs args) {
+        return getDataMaskingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(io.pulumi.azurenative.sql.inputs.GetDataMaskingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataMaskingPolicyResult> getDataMaskingPolicy(GetDataMaskingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDataMaskingPolicy", TypeShape.of(GetDataMaskingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -153,10 +153,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.sql.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.sql.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -164,10 +164,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(io.pulumi.azurenative.sql.inputs.GetDatabaseAdvisorArgs args) {
-        return getDatabaseAdvisor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(GetDatabaseAdvisorArgs args) {
+        return getDatabaseAdvisor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(io.pulumi.azurenative.sql.inputs.GetDatabaseAdvisorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseAdvisorResult> getDatabaseAdvisor(GetDatabaseAdvisorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseAdvisor", TypeShape.of(GetDatabaseAdvisorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -175,10 +175,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetDatabaseBlobAuditingPolicyArgs args) {
-        return getDatabaseBlobAuditingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(GetDatabaseBlobAuditingPolicyArgs args) {
+        return getDatabaseBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseBlobAuditingPolicyResult> getDatabaseBlobAuditingPolicy(GetDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseBlobAuditingPolicy", TypeShape.of(GetDatabaseBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -186,10 +186,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(io.pulumi.azurenative.sql.inputs.GetDatabaseSecurityAlertPolicyArgs args) {
-        return getDatabaseSecurityAlertPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(GetDatabaseSecurityAlertPolicyArgs args) {
+        return getDatabaseSecurityAlertPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(io.pulumi.azurenative.sql.inputs.GetDatabaseSecurityAlertPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> getDatabaseSecurityAlertPolicy(GetDatabaseSecurityAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseSecurityAlertPolicy", TypeShape.of(GetDatabaseSecurityAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -197,10 +197,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetDatabaseVulnerabilityAssessmentArgs args) {
-        return getDatabaseVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(GetDatabaseVulnerabilityAssessmentArgs args) {
+        return getDatabaseVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentResult> getDatabaseVulnerabilityAssessment(GetDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseVulnerabilityAssessment", TypeShape.of(GetDatabaseVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -208,10 +208,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.sql.inputs.GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
-        return getDatabaseVulnerabilityAssessmentRuleBaseline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
+        return getDatabaseVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.sql.inputs.GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseVulnerabilityAssessmentRuleBaselineResult> getDatabaseVulnerabilityAssessmentRuleBaseline(GetDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetDatabaseVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -219,10 +219,10 @@ public final class SqlFunctions {
      * API Version: 2014-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(io.pulumi.azurenative.sql.inputs.GetDisasterRecoveryConfigurationArgs args) {
-        return getDisasterRecoveryConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(GetDisasterRecoveryConfigurationArgs args) {
+        return getDisasterRecoveryConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(io.pulumi.azurenative.sql.inputs.GetDisasterRecoveryConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDisasterRecoveryConfigurationResult> getDisasterRecoveryConfiguration(GetDisasterRecoveryConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDisasterRecoveryConfiguration", TypeShape.of(GetDisasterRecoveryConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -230,10 +230,10 @@ public final class SqlFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(io.pulumi.azurenative.sql.inputs.GetDistributedAvailabilityGroupArgs args) {
-        return getDistributedAvailabilityGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(GetDistributedAvailabilityGroupArgs args) {
+        return getDistributedAvailabilityGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(io.pulumi.azurenative.sql.inputs.GetDistributedAvailabilityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributedAvailabilityGroupResult> getDistributedAvailabilityGroup(GetDistributedAvailabilityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDistributedAvailabilityGroup", TypeShape.of(GetDistributedAvailabilityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -241,10 +241,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetElasticPoolResult> getElasticPool(io.pulumi.azurenative.sql.inputs.GetElasticPoolArgs args) {
-        return getElasticPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args) {
+        return getElasticPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetElasticPoolResult> getElasticPool(io.pulumi.azurenative.sql.inputs.GetElasticPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetElasticPoolResult> getElasticPool(GetElasticPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getElasticPool", TypeShape.of(GetElasticPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -252,10 +252,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(io.pulumi.azurenative.sql.inputs.GetEncryptionProtectorArgs args) {
-        return getEncryptionProtector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(GetEncryptionProtectorArgs args) {
+        return getEncryptionProtector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(io.pulumi.azurenative.sql.inputs.GetEncryptionProtectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEncryptionProtectorResult> getEncryptionProtector(GetEncryptionProtectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getEncryptionProtector", TypeShape.of(GetEncryptionProtectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -263,10 +263,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetExtendedDatabaseBlobAuditingPolicyArgs args) {
-        return getExtendedDatabaseBlobAuditingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(GetExtendedDatabaseBlobAuditingPolicyArgs args) {
+        return getExtendedDatabaseBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetExtendedDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtendedDatabaseBlobAuditingPolicyResult> getExtendedDatabaseBlobAuditingPolicy(GetExtendedDatabaseBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getExtendedDatabaseBlobAuditingPolicy", TypeShape.of(GetExtendedDatabaseBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -274,10 +274,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetExtendedServerBlobAuditingPolicyArgs args) {
-        return getExtendedServerBlobAuditingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(GetExtendedServerBlobAuditingPolicyArgs args) {
+        return getExtendedServerBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetExtendedServerBlobAuditingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtendedServerBlobAuditingPolicyResult> getExtendedServerBlobAuditingPolicy(GetExtendedServerBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getExtendedServerBlobAuditingPolicy", TypeShape.of(GetExtendedServerBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -285,10 +285,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(io.pulumi.azurenative.sql.inputs.GetFailoverGroupArgs args) {
-        return getFailoverGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(GetFailoverGroupArgs args) {
+        return getFailoverGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(io.pulumi.azurenative.sql.inputs.GetFailoverGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFailoverGroupResult> getFailoverGroup(GetFailoverGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getFailoverGroup", TypeShape.of(GetFailoverGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -296,10 +296,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.sql.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.sql.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -307,10 +307,10 @@ public final class SqlFunctions {
      * API Version: 2014-04-01.
      * 
      */
-    public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(io.pulumi.azurenative.sql.inputs.GetGeoBackupPolicyArgs args) {
-        return getGeoBackupPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(GetGeoBackupPolicyArgs args) {
+        return getGeoBackupPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(io.pulumi.azurenative.sql.inputs.GetGeoBackupPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGeoBackupPolicyResult> getGeoBackupPolicy(GetGeoBackupPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getGeoBackupPolicy", TypeShape.of(GetGeoBackupPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -318,10 +318,10 @@ public final class SqlFunctions {
      * API Version: 2021-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(io.pulumi.azurenative.sql.inputs.GetIPv6FirewallRuleArgs args) {
-        return getIPv6FirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(GetIPv6FirewallRuleArgs args) {
+        return getIPv6FirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(io.pulumi.azurenative.sql.inputs.GetIPv6FirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIPv6FirewallRuleResult> getIPv6FirewallRule(GetIPv6FirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getIPv6FirewallRule", TypeShape.of(GetIPv6FirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -329,10 +329,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(io.pulumi.azurenative.sql.inputs.GetInstanceFailoverGroupArgs args) {
-        return getInstanceFailoverGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(GetInstanceFailoverGroupArgs args) {
+        return getInstanceFailoverGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(io.pulumi.azurenative.sql.inputs.GetInstanceFailoverGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceFailoverGroupResult> getInstanceFailoverGroup(GetInstanceFailoverGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstanceFailoverGroup", TypeShape.of(GetInstanceFailoverGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -340,10 +340,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetInstancePoolResult> getInstancePool(io.pulumi.azurenative.sql.inputs.GetInstancePoolArgs args) {
-        return getInstancePool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args) {
+        return getInstancePool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstancePoolResult> getInstancePool(io.pulumi.azurenative.sql.inputs.GetInstancePoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstancePoolResult> getInstancePool(GetInstancePoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstancePool", TypeShape.of(GetInstancePoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -351,10 +351,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.sql.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.sql.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -362,10 +362,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobAgentResult> getJobAgent(io.pulumi.azurenative.sql.inputs.GetJobAgentArgs args) {
-        return getJobAgent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobAgentResult> getJobAgent(GetJobAgentArgs args) {
+        return getJobAgent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobAgentResult> getJobAgent(io.pulumi.azurenative.sql.inputs.GetJobAgentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobAgentResult> getJobAgent(GetJobAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobAgent", TypeShape.of(GetJobAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -373,10 +373,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobCredentialResult> getJobCredential(io.pulumi.azurenative.sql.inputs.GetJobCredentialArgs args) {
-        return getJobCredential(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobCredentialResult> getJobCredential(GetJobCredentialArgs args) {
+        return getJobCredential(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobCredentialResult> getJobCredential(io.pulumi.azurenative.sql.inputs.GetJobCredentialArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobCredentialResult> getJobCredential(GetJobCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobCredential", TypeShape.of(GetJobCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -384,10 +384,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobStepResult> getJobStep(io.pulumi.azurenative.sql.inputs.GetJobStepArgs args) {
-        return getJobStep(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobStepResult> getJobStep(GetJobStepArgs args) {
+        return getJobStep(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobStepResult> getJobStep(io.pulumi.azurenative.sql.inputs.GetJobStepArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobStepResult> getJobStep(GetJobStepArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobStep", TypeShape.of(GetJobStepResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -395,10 +395,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(io.pulumi.azurenative.sql.inputs.GetJobTargetGroupArgs args) {
-        return getJobTargetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(GetJobTargetGroupArgs args) {
+        return getJobTargetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(io.pulumi.azurenative.sql.inputs.GetJobTargetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobTargetGroupResult> getJobTargetGroup(GetJobTargetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobTargetGroup", TypeShape.of(GetJobTargetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -406,10 +406,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(io.pulumi.azurenative.sql.inputs.GetLongTermRetentionPolicyArgs args) {
-        return getLongTermRetentionPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(GetLongTermRetentionPolicyArgs args) {
+        return getLongTermRetentionPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(io.pulumi.azurenative.sql.inputs.GetLongTermRetentionPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLongTermRetentionPolicyResult> getLongTermRetentionPolicy(GetLongTermRetentionPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getLongTermRetentionPolicy", TypeShape.of(GetLongTermRetentionPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -417,10 +417,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseArgs args) {
-        return getManagedDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args) {
+        return getManagedDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedDatabaseResult> getManagedDatabase(GetManagedDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -428,10 +428,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseSensitivityLabelArgs args) {
-        return getManagedDatabaseSensitivityLabel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(GetManagedDatabaseSensitivityLabelArgs args) {
+        return getManagedDatabaseSensitivityLabel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseSensitivityLabelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedDatabaseSensitivityLabelResult> getManagedDatabaseSensitivityLabel(GetManagedDatabaseSensitivityLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseSensitivityLabel", TypeShape.of(GetManagedDatabaseSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -439,10 +439,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseVulnerabilityAssessmentArgs args) {
-        return getManagedDatabaseVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(GetManagedDatabaseVulnerabilityAssessmentArgs args) {
+        return getManagedDatabaseVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentResult> getManagedDatabaseVulnerabilityAssessment(GetManagedDatabaseVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseVulnerabilityAssessment", TypeShape.of(GetManagedDatabaseVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -450,10 +450,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
-        return getManagedDatabaseVulnerabilityAssessmentRuleBaseline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args) {
+        return getManagedDatabaseVulnerabilityAssessmentRuleBaseline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(io.pulumi.azurenative.sql.inputs.GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult> getManagedDatabaseVulnerabilityAssessmentRuleBaseline(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabaseVulnerabilityAssessmentRuleBaseline", TypeShape.of(GetManagedDatabaseVulnerabilityAssessmentRuleBaselineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -461,10 +461,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(io.pulumi.azurenative.sql.inputs.GetManagedInstanceArgs args) {
-        return getManagedInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
+        return getManagedInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(io.pulumi.azurenative.sql.inputs.GetManagedInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -472,10 +472,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(io.pulumi.azurenative.sql.inputs.GetManagedInstanceAdministratorArgs args) {
-        return getManagedInstanceAdministrator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(GetManagedInstanceAdministratorArgs args) {
+        return getManagedInstanceAdministrator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(io.pulumi.azurenative.sql.inputs.GetManagedInstanceAdministratorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceAdministratorResult> getManagedInstanceAdministrator(GetManagedInstanceAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAdministrator", TypeShape.of(GetManagedInstanceAdministratorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -483,10 +483,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(io.pulumi.azurenative.sql.inputs.GetManagedInstanceAzureADOnlyAuthenticationArgs args) {
-        return getManagedInstanceAzureADOnlyAuthentication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(GetManagedInstanceAzureADOnlyAuthenticationArgs args) {
+        return getManagedInstanceAzureADOnlyAuthentication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(io.pulumi.azurenative.sql.inputs.GetManagedInstanceAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> getManagedInstanceAzureADOnlyAuthentication(GetManagedInstanceAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAzureADOnlyAuthentication", TypeShape.of(GetManagedInstanceAzureADOnlyAuthenticationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -494,10 +494,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(io.pulumi.azurenative.sql.inputs.GetManagedInstanceKeyArgs args) {
-        return getManagedInstanceKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(GetManagedInstanceKeyArgs args) {
+        return getManagedInstanceKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(io.pulumi.azurenative.sql.inputs.GetManagedInstanceKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceKeyResult> getManagedInstanceKey(GetManagedInstanceKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceKey", TypeShape.of(GetManagedInstanceKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -505,10 +505,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(io.pulumi.azurenative.sql.inputs.GetManagedInstancePrivateEndpointConnectionArgs args) {
-        return getManagedInstancePrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(GetManagedInstancePrivateEndpointConnectionArgs args) {
+        return getManagedInstancePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(io.pulumi.azurenative.sql.inputs.GetManagedInstancePrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> getManagedInstancePrivateEndpointConnection(GetManagedInstancePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstancePrivateEndpointConnection", TypeShape.of(GetManagedInstancePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -516,10 +516,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetManagedInstanceVulnerabilityAssessmentArgs args) {
-        return getManagedInstanceVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(GetManagedInstanceVulnerabilityAssessmentArgs args) {
+        return getManagedInstanceVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetManagedInstanceVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceVulnerabilityAssessmentResult> getManagedInstanceVulnerabilityAssessment(GetManagedInstanceVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceVulnerabilityAssessment", TypeShape.of(GetManagedInstanceVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -527,10 +527,10 @@ public final class SqlFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(io.pulumi.azurenative.sql.inputs.GetOutboundFirewallRuleArgs args) {
-        return getOutboundFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(GetOutboundFirewallRuleArgs args) {
+        return getOutboundFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(io.pulumi.azurenative.sql.inputs.GetOutboundFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOutboundFirewallRuleResult> getOutboundFirewallRule(GetOutboundFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getOutboundFirewallRule", TypeShape.of(GetOutboundFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -538,10 +538,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.sql.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.sql.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -549,10 +549,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(io.pulumi.azurenative.sql.inputs.GetSensitivityLabelArgs args) {
-        return getSensitivityLabel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(GetSensitivityLabelArgs args) {
+        return getSensitivityLabel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(io.pulumi.azurenative.sql.inputs.GetSensitivityLabelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSensitivityLabelResult> getSensitivityLabel(GetSensitivityLabelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSensitivityLabel", TypeShape.of(GetSensitivityLabelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -560,10 +560,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.sql.inputs.GetServerArgs args) {
-        return getServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+        return getServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerResult> getServer(io.pulumi.azurenative.sql.inputs.GetServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -571,10 +571,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(io.pulumi.azurenative.sql.inputs.GetServerAdvisorArgs args) {
-        return getServerAdvisor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(GetServerAdvisorArgs args) {
+        return getServerAdvisor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(io.pulumi.azurenative.sql.inputs.GetServerAdvisorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerAdvisorResult> getServerAdvisor(GetServerAdvisorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAdvisor", TypeShape.of(GetServerAdvisorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -582,10 +582,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(io.pulumi.azurenative.sql.inputs.GetServerAzureADAdministratorArgs args) {
-        return getServerAzureADAdministrator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(GetServerAzureADAdministratorArgs args) {
+        return getServerAzureADAdministrator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(io.pulumi.azurenative.sql.inputs.GetServerAzureADAdministratorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerAzureADAdministratorResult> getServerAzureADAdministrator(GetServerAzureADAdministratorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADAdministrator", TypeShape.of(GetServerAzureADAdministratorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -593,10 +593,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(io.pulumi.azurenative.sql.inputs.GetServerAzureADOnlyAuthenticationArgs args) {
-        return getServerAzureADOnlyAuthentication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(GetServerAzureADOnlyAuthenticationArgs args) {
+        return getServerAzureADOnlyAuthentication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(io.pulumi.azurenative.sql.inputs.GetServerAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> getServerAzureADOnlyAuthentication(GetServerAzureADOnlyAuthenticationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADOnlyAuthentication", TypeShape.of(GetServerAzureADOnlyAuthenticationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -604,10 +604,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetServerBlobAuditingPolicyArgs args) {
-        return getServerBlobAuditingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(GetServerBlobAuditingPolicyArgs args) {
+        return getServerBlobAuditingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(io.pulumi.azurenative.sql.inputs.GetServerBlobAuditingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerBlobAuditingPolicyResult> getServerBlobAuditingPolicy(GetServerBlobAuditingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerBlobAuditingPolicy", TypeShape.of(GetServerBlobAuditingPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -615,10 +615,10 @@ public final class SqlFunctions {
      * API Version: 2014-04-01.
      * 
      */
-    public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(io.pulumi.azurenative.sql.inputs.GetServerCommunicationLinkArgs args) {
-        return getServerCommunicationLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(GetServerCommunicationLinkArgs args) {
+        return getServerCommunicationLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(io.pulumi.azurenative.sql.inputs.GetServerCommunicationLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerCommunicationLinkResult> getServerCommunicationLink(GetServerCommunicationLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerCommunicationLink", TypeShape.of(GetServerCommunicationLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -626,10 +626,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(io.pulumi.azurenative.sql.inputs.GetServerDnsAliasArgs args) {
-        return getServerDnsAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(GetServerDnsAliasArgs args) {
+        return getServerDnsAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(io.pulumi.azurenative.sql.inputs.GetServerDnsAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerDnsAliasResult> getServerDnsAlias(GetServerDnsAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerDnsAlias", TypeShape.of(GetServerDnsAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -637,10 +637,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerKeyResult> getServerKey(io.pulumi.azurenative.sql.inputs.GetServerKeyArgs args) {
-        return getServerKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args) {
+        return getServerKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerKeyResult> getServerKey(io.pulumi.azurenative.sql.inputs.GetServerKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerKeyResult> getServerKey(GetServerKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerKey", TypeShape.of(GetServerKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -648,10 +648,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(io.pulumi.azurenative.sql.inputs.GetServerSecurityAlertPolicyArgs args) {
-        return getServerSecurityAlertPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args) {
+        return getServerSecurityAlertPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(io.pulumi.azurenative.sql.inputs.GetServerSecurityAlertPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerSecurityAlertPolicyResult> getServerSecurityAlertPolicy(GetServerSecurityAlertPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerSecurityAlertPolicy", TypeShape.of(GetServerSecurityAlertPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -659,10 +659,10 @@ public final class SqlFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(io.pulumi.azurenative.sql.inputs.GetServerTrustCertificateArgs args) {
-        return getServerTrustCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(GetServerTrustCertificateArgs args) {
+        return getServerTrustCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(io.pulumi.azurenative.sql.inputs.GetServerTrustCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerTrustCertificateResult> getServerTrustCertificate(GetServerTrustCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustCertificate", TypeShape.of(GetServerTrustCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -670,10 +670,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(io.pulumi.azurenative.sql.inputs.GetServerTrustGroupArgs args) {
-        return getServerTrustGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(GetServerTrustGroupArgs args) {
+        return getServerTrustGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(io.pulumi.azurenative.sql.inputs.GetServerTrustGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerTrustGroupResult> getServerTrustGroup(GetServerTrustGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustGroup", TypeShape.of(GetServerTrustGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -681,10 +681,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetServerVulnerabilityAssessmentArgs args) {
-        return getServerVulnerabilityAssessment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(GetServerVulnerabilityAssessmentArgs args) {
+        return getServerVulnerabilityAssessment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(io.pulumi.azurenative.sql.inputs.GetServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(GetServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerVulnerabilityAssessment", TypeShape.of(GetServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -692,10 +692,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetSyncAgentResult> getSyncAgent(io.pulumi.azurenative.sql.inputs.GetSyncAgentArgs args) {
-        return getSyncAgent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSyncAgentResult> getSyncAgent(GetSyncAgentArgs args) {
+        return getSyncAgent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSyncAgentResult> getSyncAgent(io.pulumi.azurenative.sql.inputs.GetSyncAgentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSyncAgentResult> getSyncAgent(GetSyncAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncAgent", TypeShape.of(GetSyncAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -703,10 +703,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(io.pulumi.azurenative.sql.inputs.GetSyncGroupArgs args) {
-        return getSyncGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args) {
+        return getSyncGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(io.pulumi.azurenative.sql.inputs.GetSyncGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSyncGroupResult> getSyncGroup(GetSyncGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -714,10 +714,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetSyncMemberResult> getSyncMember(io.pulumi.azurenative.sql.inputs.GetSyncMemberArgs args) {
-        return getSyncMember(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSyncMemberResult> getSyncMember(GetSyncMemberArgs args) {
+        return getSyncMember(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSyncMemberResult> getSyncMember(io.pulumi.azurenative.sql.inputs.GetSyncMemberArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSyncMemberResult> getSyncMember(GetSyncMemberArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncMember", TypeShape.of(GetSyncMemberResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -725,10 +725,10 @@ public final class SqlFunctions {
      * API Version: 2014-04-01.
      * 
      */
-    public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(io.pulumi.azurenative.sql.inputs.GetTransparentDataEncryptionArgs args) {
-        return getTransparentDataEncryption(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(GetTransparentDataEncryptionArgs args) {
+        return getTransparentDataEncryption(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(io.pulumi.azurenative.sql.inputs.GetTransparentDataEncryptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransparentDataEncryptionResult> getTransparentDataEncryption(GetTransparentDataEncryptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getTransparentDataEncryption", TypeShape.of(GetTransparentDataEncryptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -736,10 +736,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.sql.inputs.GetVirtualNetworkRuleArgs args) {
-        return getVirtualNetworkRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
+        return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.sql.inputs.GetVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -747,10 +747,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(io.pulumi.azurenative.sql.inputs.GetWorkloadClassifierArgs args) {
-        return getWorkloadClassifier(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(GetWorkloadClassifierArgs args) {
+        return getWorkloadClassifier(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(io.pulumi.azurenative.sql.inputs.GetWorkloadClassifierArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadClassifierResult> getWorkloadClassifier(GetWorkloadClassifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getWorkloadClassifier", TypeShape.of(GetWorkloadClassifierResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -758,10 +758,10 @@ public final class SqlFunctions {
      * API Version: 2020-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(io.pulumi.azurenative.sql.inputs.GetWorkloadGroupArgs args) {
-        return getWorkloadGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(GetWorkloadGroupArgs args) {
+        return getWorkloadGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(io.pulumi.azurenative.sql.inputs.GetWorkloadGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadGroupResult> getWorkloadGroup(GetWorkloadGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getWorkloadGroup", TypeShape.of(GetWorkloadGroupResult.class), args, Utilities.withVersion(options));
     }
 }

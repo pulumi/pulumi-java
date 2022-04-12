@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsub_v1beta1a;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1beta1a.SubscriptionArgs;
 import io.pulumi.googlenative.pubsub_v1beta1a.outputs.PushConfigResponse;
@@ -98,7 +99,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Subscription(String name, @Nullable SubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsub/v1beta1a:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsub/v1beta1a:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Subscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

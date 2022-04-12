@@ -5,6 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> clientCertEnabled;
 
     public Output<Boolean> getClientCertEnabled() {
-        return this.clientCertEnabled == null ? Output.empty() : this.clientCertEnabled;
+        return this.clientCertEnabled == null ? Codegen.empty() : this.clientCertEnabled;
     }
 
     public WebPubSubTlsSettingsArgs(@Nullable Output<Boolean> clientCertEnabled) {
-        this.clientCertEnabled = clientCertEnabled == null ? Output.ofNullable(true) : clientCertEnabled;
+        this.clientCertEnabled = clientCertEnabled == null ? Codegen.ofNullable(true) : clientCertEnabled;
     }
 
     private WebPubSubTlsSettingsArgs() {
-        this.clientCertEnabled = Output.empty();
+        this.clientCertEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
-            this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
+            this.clientCertEnabled = Codegen.ofNullable(clientCertEnabled);
             return this;
         }        public WebPubSubTlsSettingsArgs build() {
             return new WebPubSubTlsSettingsArgs(clientCertEnabled);

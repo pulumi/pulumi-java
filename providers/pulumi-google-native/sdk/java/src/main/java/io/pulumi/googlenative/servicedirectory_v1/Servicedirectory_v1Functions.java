@@ -24,50 +24,50 @@ public final class Servicedirectory_v1Functions {
      * Gets an endpoint.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.googlenative.servicedirectory_v1.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.googlenative.servicedirectory_v1.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a namespace.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceArgs args) {
-        return getNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+        return getNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM Policy for a resource (namespace or service only).
      * 
      */
-    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicy(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceIamPolicyArgs args) {
-        return getNamespaceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicy(GetNamespaceIamPolicyArgs args) {
+        return getNamespaceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicy(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicy(GetNamespaceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespaceIamPolicy", TypeShape.of(GetNamespaceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM Policy for a resource (namespace or service only).
      * 
      */
-    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicy(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceServiceIamPolicyArgs args) {
-        return getNamespaceServiceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicy(GetNamespaceServiceIamPolicyArgs args) {
+        return getNamespaceServiceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicy(io.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceServiceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicy(GetNamespaceServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespaceServiceIamPolicy", TypeShape.of(GetNamespaceServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.googlenative.servicedirectory_v1.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.googlenative.servicedirectory_v1.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

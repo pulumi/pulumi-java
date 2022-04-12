@@ -25,10 +25,10 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubArgs args) {
-        return getWebPubSub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args) {
+        return getWebPubSub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSub", TypeShape.of(GetWebPubSubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class WebpubsubFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubHubArgs args) {
-        return getWebPubSubHub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args) {
+        return getWebPubSubHub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubHub", TypeShape.of(GetWebPubSubHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubPrivateEndpointConnectionArgs args) {
-        return getWebPubSubPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args) {
+        return getWebPubSubPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubPrivateEndpointConnection", TypeShape.of(GetWebPubSubPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubSharedPrivateLinkResourceArgs args) {
-        return getWebPubSubSharedPrivateLinkResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args) {
+        return getWebPubSubSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(io.pulumi.azurenative.webpubsub.inputs.GetWebPubSubSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubSharedPrivateLinkResource", TypeShape.of(GetWebPubSubSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(io.pulumi.azurenative.webpubsub.inputs.ListWebPubSubKeysArgs args) {
-        return listWebPubSubKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args) {
+        return listWebPubSubKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(io.pulumi.azurenative.webpubsub.inputs.ListWebPubSubKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:listWebPubSubKeys", TypeShape.of(ListWebPubSubKeysResult.class), args, Utilities.withVersion(options));
     }
 }

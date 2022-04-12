@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressPolicyArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressPolicyArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.VpcAccessibleServicesArgs;
@@ -30,7 +31,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> accessLevels;
 
     public Output<List<String>> getAccessLevels() {
-        return this.accessLevels == null ? Output.empty() : this.accessLevels;
+        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<EgressPolicyArgs>> egressPolicies;
 
     public Output<List<EgressPolicyArgs>> getEgressPolicies() {
-        return this.egressPolicies == null ? Output.empty() : this.egressPolicies;
+        return this.egressPolicies == null ? Codegen.empty() : this.egressPolicies;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<IngressPolicyArgs>> ingressPolicies;
 
     public Output<List<IngressPolicyArgs>> getIngressPolicies() {
-        return this.ingressPolicies == null ? Output.empty() : this.ingressPolicies;
+        return this.ingressPolicies == null ? Codegen.empty() : this.ingressPolicies;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> restrictedServices;
 
     public Output<List<String>> getRestrictedServices() {
-        return this.restrictedServices == null ? Output.empty() : this.restrictedServices;
+        return this.restrictedServices == null ? Codegen.empty() : this.restrictedServices;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<VpcAccessibleServicesArgs> vpcAccessibleServices;
 
     public Output<VpcAccessibleServicesArgs> getVpcAccessibleServices() {
-        return this.vpcAccessibleServices == null ? Output.empty() : this.vpcAccessibleServices;
+        return this.vpcAccessibleServices == null ? Codegen.empty() : this.vpcAccessibleServices;
     }
 
     public ServicePerimeterConfigArgs(
@@ -104,12 +105,12 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
     }
 
     private ServicePerimeterConfigArgs() {
-        this.accessLevels = Output.empty();
-        this.egressPolicies = Output.empty();
-        this.ingressPolicies = Output.empty();
-        this.resources = Output.empty();
-        this.restrictedServices = Output.empty();
-        this.vpcAccessibleServices = Output.empty();
+        this.accessLevels = Codegen.empty();
+        this.egressPolicies = Codegen.empty();
+        this.ingressPolicies = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.restrictedServices = Codegen.empty();
+        this.vpcAccessibleServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder accessLevels(@Nullable List<String> accessLevels) {
-            this.accessLevels = Output.ofNullable(accessLevels);
+            this.accessLevels = Codegen.ofNullable(accessLevels);
             return this;
         }
         public Builder accessLevels(String... accessLevels) {
@@ -158,7 +159,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder egressPolicies(@Nullable List<EgressPolicyArgs> egressPolicies) {
-            this.egressPolicies = Output.ofNullable(egressPolicies);
+            this.egressPolicies = Codegen.ofNullable(egressPolicies);
             return this;
         }
         public Builder egressPolicies(EgressPolicyArgs... egressPolicies) {
@@ -169,7 +170,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ingressPolicies(@Nullable List<IngressPolicyArgs> ingressPolicies) {
-            this.ingressPolicies = Output.ofNullable(ingressPolicies);
+            this.ingressPolicies = Codegen.ofNullable(ingressPolicies);
             return this;
         }
         public Builder ingressPolicies(IngressPolicyArgs... ingressPolicies) {
@@ -180,7 +181,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -191,7 +192,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
-            this.restrictedServices = Output.ofNullable(restrictedServices);
+            this.restrictedServices = Codegen.ofNullable(restrictedServices);
             return this;
         }
         public Builder restrictedServices(String... restrictedServices) {
@@ -202,7 +203,7 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpcAccessibleServices(@Nullable VpcAccessibleServicesArgs vpcAccessibleServices) {
-            this.vpcAccessibleServices = Output.ofNullable(vpcAccessibleServices);
+            this.vpcAccessibleServices = Codegen.ofNullable(vpcAccessibleServices);
             return this;
         }        public ServicePerimeterConfigArgs build() {
             return new ServicePerimeterConfigArgs(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);

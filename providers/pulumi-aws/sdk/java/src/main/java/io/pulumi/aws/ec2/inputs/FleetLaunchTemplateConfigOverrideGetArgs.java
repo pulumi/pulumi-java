@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<String> maxPrice;
 
     public Output<String> getMaxPrice() {
-        return this.maxPrice == null ? Output.empty() : this.maxPrice;
+        return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<Double> priority;
 
     public Output<Double> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public FleetLaunchTemplateConfigOverrideGetArgs(
@@ -97,12 +98,12 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
     }
 
     private FleetLaunchTemplateConfigOverrideGetArgs() {
-        this.availabilityZone = Output.empty();
-        this.instanceType = Output.empty();
-        this.maxPrice = Output.empty();
-        this.priority = Output.empty();
-        this.subnetId = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.maxPrice = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -148,7 +149,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
@@ -156,7 +157,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder maxPrice(@Nullable String maxPrice) {
-            this.maxPrice = Output.ofNullable(maxPrice);
+            this.maxPrice = Codegen.ofNullable(maxPrice);
             return this;
         }
         public Builder priority(@Nullable Output<Double> priority) {
@@ -164,7 +165,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder priority(@Nullable Double priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -172,7 +173,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
@@ -180,7 +181,7 @@ public final class FleetLaunchTemplateConfigOverrideGetArgs extends io.pulumi.re
             return this;
         }
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public FleetLaunchTemplateConfigOverrideGetArgs build() {
             return new FleetLaunchTemplateConfigOverrideGetArgs(availabilityZone, instanceType, maxPrice, priority, subnetId, weightedCapacity);

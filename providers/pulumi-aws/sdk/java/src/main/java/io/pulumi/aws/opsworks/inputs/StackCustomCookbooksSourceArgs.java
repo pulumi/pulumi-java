@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> sshKey;
 
     public Output<String> getSshKey() {
-        return this.sshKey == null ? Output.empty() : this.sshKey;
+        return this.sshKey == null ? Codegen.empty() : this.sshKey;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public StackCustomCookbooksSourceArgs(
@@ -96,12 +97,12 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
     }
 
     private StackCustomCookbooksSourceArgs() {
-        this.password = Output.empty();
-        this.revision = Output.empty();
-        this.sshKey = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.revision = Codegen.empty();
+        this.sshKey = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder revision(@Nullable Output<String> revision) {
@@ -147,7 +148,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder revision(@Nullable String revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder sshKey(@Nullable Output<String> sshKey) {
@@ -155,7 +156,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Output.ofNullable(sshKey);
+            this.sshKey = Codegen.ofNullable(sshKey);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -179,7 +180,7 @@ public final class StackCustomCookbooksSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public StackCustomCookbooksSourceArgs build() {
             return new StackCustomCookbooksSourceArgs(password, revision, sshKey, type, url, username);

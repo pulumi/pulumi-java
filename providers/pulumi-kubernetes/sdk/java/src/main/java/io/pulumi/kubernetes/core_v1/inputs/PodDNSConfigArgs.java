@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PodDNSConfigOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> nameservers;
 
     public Output<List<String>> getNameservers() {
-        return this.nameservers == null ? Output.empty() : this.nameservers;
+        return this.nameservers == null ? Codegen.empty() : this.nameservers;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PodDNSConfigOptionArgs>> options;
 
     public Output<List<PodDNSConfigOptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> searches;
 
     public Output<List<String>> getSearches() {
-        return this.searches == null ? Output.empty() : this.searches;
+        return this.searches == null ? Codegen.empty() : this.searches;
     }
 
     public PodDNSConfigArgs(
@@ -63,9 +64,9 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PodDNSConfigArgs() {
-        this.nameservers = Output.empty();
-        this.options = Output.empty();
-        this.searches = Output.empty();
+        this.nameservers = Codegen.empty();
+        this.options = Codegen.empty();
+        this.searches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nameservers(@Nullable List<String> nameservers) {
-            this.nameservers = Output.ofNullable(nameservers);
+            this.nameservers = Codegen.ofNullable(nameservers);
             return this;
         }
         public Builder nameservers(String... nameservers) {
@@ -108,7 +109,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<PodDNSConfigOptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(PodDNSConfigOptionArgs... options) {
@@ -119,7 +120,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder searches(@Nullable List<String> searches) {
-            this.searches = Output.ofNullable(searches);
+            this.searches = Codegen.ofNullable(searches);
             return this;
         }
         public Builder searches(String... searches) {

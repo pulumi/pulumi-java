@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionEndpointInputA
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -40,8 +41,8 @@ public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi
     }
 
     private ModelBiasJobDefinitionModelBiasJobInputArgs() {
-        this.endpointInput = Output.empty();
-        this.groundTruthS3Input = Output.empty();
+        this.endpointInput = Codegen.empty();
+        this.groundTruthS3Input = Codegen.empty();
     }
 
     public static Builder builder() {

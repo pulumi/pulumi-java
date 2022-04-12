@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> vpnConnectionId;
 
     public Output<String> getVpnConnectionId() {
-        return this.vpnConnectionId == null ? Output.empty() : this.vpnConnectionId;
+        return this.vpnConnectionId == null ? Codegen.empty() : this.vpnConnectionId;
     }
 
     public VpnConnectionRouteState(
@@ -44,8 +45,8 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
     }
 
     private VpnConnectionRouteState() {
-        this.destinationCidrBlock = Output.empty();
-        this.vpnConnectionId = Output.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.vpnConnectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder vpnConnectionId(@Nullable Output<String> vpnConnectionId) {
@@ -83,7 +84,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
-            this.vpnConnectionId = Output.ofNullable(vpnConnectionId);
+            this.vpnConnectionId = Codegen.ofNullable(vpnConnectionId);
             return this;
         }        public VpnConnectionRouteState build() {
             return new VpnConnectionRouteState(destinationCidrBlock, vpnConnectionId);

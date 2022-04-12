@@ -12,10 +12,10 @@ import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class Ec2_getAmiFunctions {
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.ec2_getAmi.inputs.GetAmiArgs args) {
-        return getAmi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+        return getAmi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiResult> getAmi(io.pulumi.aws.ec2_getAmi.inputs.GetAmiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 import io.pulumi.awsnative.groundstation.enums.ConfigFrequencyUnits;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ConfigFrequencyUnits> units;
 
     public Output<ConfigFrequencyUnits> getUnits() {
-        return this.units == null ? Output.empty() : this.units;
+        return this.units == null ? Codegen.empty() : this.units;
     }
 
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ConfigFrequencyArgs(
@@ -37,8 +38,8 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConfigFrequencyArgs() {
-        this.units = Output.empty();
-        this.value = Output.empty();
+        this.units = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder units(@Nullable ConfigFrequencyUnits units) {
-            this.units = Output.ofNullable(units);
+            this.units = Codegen.ofNullable(units);
             return this;
         }
         public Builder value(@Nullable Output<Double> value) {
@@ -76,7 +77,7 @@ public final class ConfigFrequencyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ConfigFrequencyArgs build() {
             return new ConfigFrequencyArgs(units, value);

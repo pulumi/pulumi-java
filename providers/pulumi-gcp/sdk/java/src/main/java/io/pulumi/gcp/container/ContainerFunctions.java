@@ -29,12 +29,12 @@ public final class ContainerFunctions {
      * 
      */
     public static CompletableFuture<GetAwsVersionsResult> getAwsVersions() {
-        return getAwsVersions(io.pulumi.gcp.container.inputs.GetAwsVersionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAwsVersions(GetAwsVersionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(io.pulumi.gcp.container.inputs.GetAwsVersionsArgs args) {
-        return getAwsVersions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args) {
+        return getAwsVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(io.pulumi.gcp.container.inputs.GetAwsVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAwsVersionsResult> getAwsVersions(GetAwsVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAwsVersions:getAwsVersions", TypeShape.of(GetAwsVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,12 +44,12 @@ public final class ContainerFunctions {
      * 
      */
     public static CompletableFuture<GetAzureVersionsResult> getAzureVersions() {
-        return getAzureVersions(io.pulumi.gcp.container.inputs.GetAzureVersionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAzureVersions(GetAzureVersionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(io.pulumi.gcp.container.inputs.GetAzureVersionsArgs args) {
-        return getAzureVersions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args) {
+        return getAzureVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(io.pulumi.gcp.container.inputs.GetAzureVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAzureVersionsResult> getAzureVersions(GetAzureVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAzureVersions:getAzureVersions", TypeShape.of(GetAzureVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class ContainerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.gcp.container.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.gcp.container.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,12 +77,12 @@ public final class ContainerFunctions {
      * 
      */
     public static CompletableFuture<GetEngineVersionsResult> getEngineVersions() {
-        return getEngineVersions(io.pulumi.gcp.container.inputs.GetEngineVersionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEngineVersions(GetEngineVersionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(io.pulumi.gcp.container.inputs.GetEngineVersionsArgs args) {
-        return getEngineVersions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args) {
+        return getEngineVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(io.pulumi.gcp.container.inputs.GetEngineVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEngineVersionsResult> getEngineVersions(GetEngineVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getEngineVersions:getEngineVersions", TypeShape.of(GetEngineVersionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -93,10 +93,10 @@ public final class ContainerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(io.pulumi.gcp.container.inputs.GetRegistryImageArgs args) {
-        return getRegistryImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args) {
+        return getRegistryImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(io.pulumi.gcp.container.inputs.GetRegistryImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryImageResult> getRegistryImage(GetRegistryImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,12 +108,12 @@ public final class ContainerFunctions {
      * 
      */
     public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository() {
-        return getRegistryRepository(io.pulumi.gcp.container.inputs.GetRegistryRepositoryArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getRegistryRepository(GetRegistryRepositoryArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(io.pulumi.gcp.container.inputs.GetRegistryRepositoryArgs args) {
-        return getRegistryRepository(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args) {
+        return getRegistryRepository(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(io.pulumi.gcp.container.inputs.GetRegistryRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegistryRepositoryResult> getRegistryRepository(GetRegistryRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getRegistryRepository:getRegistryRepository", TypeShape.of(GetRegistryRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

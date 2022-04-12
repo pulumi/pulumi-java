@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHt
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +26,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
       private final @Nullable Output<EventConnectionAuthParametersApiKeyArgs> apiKey;
 
     public Output<EventConnectionAuthParametersApiKeyArgs> getApiKey() {
-        return this.apiKey == null ? Output.empty() : this.apiKey;
+        return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
       private final @Nullable Output<EventConnectionAuthParametersBasicArgs> basic;
 
     public Output<EventConnectionAuthParametersBasicArgs> getBasic() {
-        return this.basic == null ? Output.empty() : this.basic;
+        return this.basic == null ? Codegen.empty() : this.basic;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
       private final @Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters;
 
     public Output<EventConnectionAuthParametersInvocationHttpParametersArgs> getInvocationHttpParameters() {
-        return this.invocationHttpParameters == null ? Output.empty() : this.invocationHttpParameters;
+        return this.invocationHttpParameters == null ? Codegen.empty() : this.invocationHttpParameters;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
       private final @Nullable Output<EventConnectionAuthParametersOauthArgs> oauth;
 
     public Output<EventConnectionAuthParametersOauthArgs> getOauth() {
-        return this.oauth == null ? Output.empty() : this.oauth;
+        return this.oauth == null ? Codegen.empty() : this.oauth;
     }
 
     public EventConnectionAuthParametersArgs(
@@ -73,10 +74,10 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
     }
 
     private EventConnectionAuthParametersArgs() {
-        this.apiKey = Output.empty();
-        this.basic = Output.empty();
-        this.invocationHttpParameters = Output.empty();
-        this.oauth = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.basic = Codegen.empty();
+        this.invocationHttpParameters = Codegen.empty();
+        this.oauth = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder apiKey(@Nullable EventConnectionAuthParametersApiKeyArgs apiKey) {
-            this.apiKey = Output.ofNullable(apiKey);
+            this.apiKey = Codegen.ofNullable(apiKey);
             return this;
         }
         public Builder basic(@Nullable Output<EventConnectionAuthParametersBasicArgs> basic) {
@@ -118,7 +119,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder basic(@Nullable EventConnectionAuthParametersBasicArgs basic) {
-            this.basic = Output.ofNullable(basic);
+            this.basic = Codegen.ofNullable(basic);
             return this;
         }
         public Builder invocationHttpParameters(@Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters) {
@@ -126,7 +127,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder invocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParametersArgs invocationHttpParameters) {
-            this.invocationHttpParameters = Output.ofNullable(invocationHttpParameters);
+            this.invocationHttpParameters = Codegen.ofNullable(invocationHttpParameters);
             return this;
         }
         public Builder oauth(@Nullable Output<EventConnectionAuthParametersOauthArgs> oauth) {
@@ -134,7 +135,7 @@ public final class EventConnectionAuthParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder oauth(@Nullable EventConnectionAuthParametersOauthArgs oauth) {
-            this.oauth = Output.ofNullable(oauth);
+            this.oauth = Codegen.ofNullable(oauth);
             return this;
         }        public EventConnectionAuthParametersArgs build() {
             return new EventConnectionAuthParametersArgs(apiKey, basic, invocationHttpParameters, oauth);

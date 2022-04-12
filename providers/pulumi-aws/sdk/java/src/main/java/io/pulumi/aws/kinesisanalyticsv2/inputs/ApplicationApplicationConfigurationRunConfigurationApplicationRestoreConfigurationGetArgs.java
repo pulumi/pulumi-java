@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
       private final @Nullable Output<String> applicationRestoreType;
 
     public Output<String> getApplicationRestoreType() {
-        return this.applicationRestoreType == null ? Output.empty() : this.applicationRestoreType;
+        return this.applicationRestoreType == null ? Codegen.empty() : this.applicationRestoreType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
-        return this.snapshotName == null ? Output.empty() : this.snapshotName;
+        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
     public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(
@@ -44,8 +45,8 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     }
 
     private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs() {
-        this.applicationRestoreType = Output.empty();
-        this.snapshotName = Output.empty();
+        this.applicationRestoreType = Codegen.empty();
+        this.snapshotName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
             return this;
         }
         public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
-            this.applicationRestoreType = Output.ofNullable(applicationRestoreType);
+            this.applicationRestoreType = Codegen.ofNullable(applicationRestoreType);
             return this;
         }
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
@@ -83,7 +84,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
             return this;
         }
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Output.ofNullable(snapshotName);
+            this.snapshotName = Codegen.ofNullable(snapshotName);
             return this;
         }        public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(applicationRestoreType, snapshotName);

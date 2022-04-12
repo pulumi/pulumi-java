@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DataSetGeoSpatialColumnGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
     public Output<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
-        return this.geoSpatialColumnGroup == null ? Output.empty() : this.geoSpatialColumnGroup;
+        return this.geoSpatialColumnGroup == null ? Codegen.empty() : this.geoSpatialColumnGroup;
     }
 
     public DataSetColumnGroupArgs(@Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
@@ -32,7 +33,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataSetColumnGroupArgs() {
-        this.geoSpatialColumnGroup = Output.empty();
+        this.geoSpatialColumnGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
-            this.geoSpatialColumnGroup = Output.ofNullable(geoSpatialColumnGroup);
+            this.geoSpatialColumnGroup = Codegen.ofNullable(geoSpatialColumnGroup);
             return this;
         }        public DataSetColumnGroupArgs build() {
             return new DataSetColumnGroupArgs(geoSpatialColumnGroup);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> fixed;
 
     public Output<Integer> getFixed() {
-        return this.fixed == null ? Output.empty() : this.fixed;
+        return this.fixed == null ? Codegen.empty() : this.fixed;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {
-        return this.percent == null ? Output.empty() : this.percent;
+        return this.percent == null ? Codegen.empty() : this.percent;
     }
 
     public FixedOrPercentArgs(
@@ -48,8 +49,8 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FixedOrPercentArgs() {
-        this.fixed = Output.empty();
-        this.percent = Output.empty();
+        this.fixed = Codegen.empty();
+        this.percent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Output.ofNullable(fixed);
+            this.fixed = Codegen.ofNullable(fixed);
             return this;
         }
         public Builder percent(@Nullable Output<Integer> percent) {
@@ -87,7 +88,7 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder percent(@Nullable Integer percent) {
-            this.percent = Output.ofNullable(percent);
+            this.percent = Codegen.ofNullable(percent);
             return this;
         }        public FixedOrPercentArgs build() {
             return new FixedOrPercentArgs(fixed, percent);

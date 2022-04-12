@@ -26,60 +26,60 @@ public final class Clouddeploy_v1Functions {
      * Gets details of a single DeliveryPipeline.
      * 
      */
-    public static CompletableFuture<GetDeliveryPipelineResult> getDeliveryPipeline(io.pulumi.googlenative.clouddeploy_v1.inputs.GetDeliveryPipelineArgs args) {
-        return getDeliveryPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeliveryPipelineResult> getDeliveryPipeline(GetDeliveryPipelineArgs args) {
+        return getDeliveryPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeliveryPipelineResult> getDeliveryPipeline(io.pulumi.googlenative.clouddeploy_v1.inputs.GetDeliveryPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeliveryPipelineResult> getDeliveryPipeline(GetDeliveryPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getDeliveryPipeline", TypeShape.of(GetDeliveryPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> getDeliveryPipelineIamPolicy(io.pulumi.googlenative.clouddeploy_v1.inputs.GetDeliveryPipelineIamPolicyArgs args) {
-        return getDeliveryPipelineIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> getDeliveryPipelineIamPolicy(GetDeliveryPipelineIamPolicyArgs args) {
+        return getDeliveryPipelineIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> getDeliveryPipelineIamPolicy(io.pulumi.googlenative.clouddeploy_v1.inputs.GetDeliveryPipelineIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> getDeliveryPipelineIamPolicy(GetDeliveryPipelineIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getDeliveryPipelineIamPolicy", TypeShape.of(GetDeliveryPipelineIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Release.
      * 
      */
-    public static CompletableFuture<GetReleaseResult> getRelease(io.pulumi.googlenative.clouddeploy_v1.inputs.GetReleaseArgs args) {
-        return getRelease(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReleaseResult> getRelease(GetReleaseArgs args) {
+        return getRelease(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReleaseResult> getRelease(io.pulumi.googlenative.clouddeploy_v1.inputs.GetReleaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReleaseResult> getRelease(GetReleaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getRelease", TypeShape.of(GetReleaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Rollout.
      * 
      */
-    public static CompletableFuture<GetRolloutResult> getRollout(io.pulumi.googlenative.clouddeploy_v1.inputs.GetRolloutArgs args) {
-        return getRollout(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args) {
+        return getRollout(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRolloutResult> getRollout(io.pulumi.googlenative.clouddeploy_v1.inputs.GetRolloutArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRolloutResult> getRollout(GetRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getRollout", TypeShape.of(GetRolloutResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single Target.
      * 
      */
-    public static CompletableFuture<GetTargetResult> getTarget(io.pulumi.googlenative.clouddeploy_v1.inputs.GetTargetArgs args) {
-        return getTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args) {
+        return getTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetResult> getTarget(io.pulumi.googlenative.clouddeploy_v1.inputs.GetTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetResult> getTarget(GetTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getTarget", TypeShape.of(GetTargetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetTargetIamPolicyResult> getTargetIamPolicy(io.pulumi.googlenative.clouddeploy_v1.inputs.GetTargetIamPolicyArgs args) {
-        return getTargetIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTargetIamPolicyResult> getTargetIamPolicy(GetTargetIamPolicyArgs args) {
+        return getTargetIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTargetIamPolicyResult> getTargetIamPolicy(io.pulumi.googlenative.clouddeploy_v1.inputs.GetTargetIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTargetIamPolicyResult> getTargetIamPolicy(GetTargetIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getTargetIamPolicy", TypeShape.of(GetTargetIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -18,20 +18,20 @@ public final class FmsFunctions {
      * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
      * 
      */
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.awsnative.fms.inputs.GetNotificationChannelArgs args) {
-        return getNotificationChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args) {
+        return getNotificationChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(io.pulumi.awsnative.fms.inputs.GetNotificationChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotificationChannelResult> getNotificationChannel(GetNotificationChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates an AWS Firewall Manager policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.awsnative.fms.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.awsnative.fms.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:fms:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

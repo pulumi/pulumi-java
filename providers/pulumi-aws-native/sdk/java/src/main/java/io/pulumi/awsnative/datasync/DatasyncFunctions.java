@@ -32,90 +32,90 @@ public final class DatasyncFunctions {
      * Resource schema for AWS::DataSync::Agent.
      * 
      */
-    public static CompletableFuture<GetAgentResult> getAgent(io.pulumi.awsnative.datasync.inputs.GetAgentArgs args) {
-        return getAgent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args) {
+        return getAgent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAgentResult> getAgent(io.pulumi.awsnative.datasync.inputs.GetAgentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAgentResult> getAgent(GetAgentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getAgent", TypeShape.of(GetAgentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationEFS.
      * 
      */
-    public static CompletableFuture<GetLocationEFSResult> getLocationEFS(io.pulumi.awsnative.datasync.inputs.GetLocationEFSArgs args) {
-        return getLocationEFS(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationEFSResult> getLocationEFS(GetLocationEFSArgs args) {
+        return getLocationEFS(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationEFSResult> getLocationEFS(io.pulumi.awsnative.datasync.inputs.GetLocationEFSArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationEFSResult> getLocationEFS(GetLocationEFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationEFS", TypeShape.of(GetLocationEFSResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationFSxWindows.
      * 
      */
-    public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(io.pulumi.awsnative.datasync.inputs.GetLocationFSxWindowsArgs args) {
-        return getLocationFSxWindows(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(GetLocationFSxWindowsArgs args) {
+        return getLocationFSxWindows(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(io.pulumi.awsnative.datasync.inputs.GetLocationFSxWindowsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationFSxWindowsResult> getLocationFSxWindows(GetLocationFSxWindowsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxWindows", TypeShape.of(GetLocationFSxWindowsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationHDFS.
      * 
      */
-    public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(io.pulumi.awsnative.datasync.inputs.GetLocationHDFSArgs args) {
-        return getLocationHDFS(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(GetLocationHDFSArgs args) {
+        return getLocationHDFS(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(io.pulumi.awsnative.datasync.inputs.GetLocationHDFSArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationHDFSResult> getLocationHDFS(GetLocationHDFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationHDFS", TypeShape.of(GetLocationHDFSResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationNFS
      * 
      */
-    public static CompletableFuture<GetLocationNFSResult> getLocationNFS(io.pulumi.awsnative.datasync.inputs.GetLocationNFSArgs args) {
-        return getLocationNFS(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationNFSResult> getLocationNFS(GetLocationNFSArgs args) {
+        return getLocationNFS(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationNFSResult> getLocationNFS(io.pulumi.awsnative.datasync.inputs.GetLocationNFSArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationNFSResult> getLocationNFS(GetLocationNFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationNFS", TypeShape.of(GetLocationNFSResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationObjectStorage.
      * 
      */
-    public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(io.pulumi.awsnative.datasync.inputs.GetLocationObjectStorageArgs args) {
-        return getLocationObjectStorage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(GetLocationObjectStorageArgs args) {
+        return getLocationObjectStorage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(io.pulumi.awsnative.datasync.inputs.GetLocationObjectStorageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationObjectStorageResult> getLocationObjectStorage(GetLocationObjectStorageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationObjectStorage", TypeShape.of(GetLocationObjectStorageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationS3
      * 
      */
-    public static CompletableFuture<GetLocationS3Result> getLocationS3(io.pulumi.awsnative.datasync.inputs.GetLocationS3Args args) {
-        return getLocationS3(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationS3Result> getLocationS3(GetLocationS3Args args) {
+        return getLocationS3(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationS3Result> getLocationS3(io.pulumi.awsnative.datasync.inputs.GetLocationS3Args args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationS3Result> getLocationS3(GetLocationS3Args args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationS3", TypeShape.of(GetLocationS3Result.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationSMB.
      * 
      */
-    public static CompletableFuture<GetLocationSMBResult> getLocationSMB(io.pulumi.awsnative.datasync.inputs.GetLocationSMBArgs args) {
-        return getLocationSMB(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocationSMBResult> getLocationSMB(GetLocationSMBArgs args) {
+        return getLocationSMB(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocationSMBResult> getLocationSMB(io.pulumi.awsnative.datasync.inputs.GetLocationSMBArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocationSMBResult> getLocationSMB(GetLocationSMBArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationSMB", TypeShape.of(GetLocationSMBResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::Task.
      * 
      */
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.awsnative.datasync.inputs.GetTaskArgs args) {
-        return getTask(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args) {
+        return getTask(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTaskResult> getTask(io.pulumi.awsnative.datasync.inputs.GetTaskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTaskResult> getTask(GetTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getTask", TypeShape.of(GetTaskResult.class), args, Utilities.withVersion(options));
     }
 }

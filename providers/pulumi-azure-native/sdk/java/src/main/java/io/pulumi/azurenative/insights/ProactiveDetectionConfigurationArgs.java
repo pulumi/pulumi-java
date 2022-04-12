@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> configurationId;
 
     public Output<String> getConfigurationId() {
-        return this.configurationId == null ? Output.empty() : this.configurationId;
+        return this.configurationId == null ? Codegen.empty() : this.configurationId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> customEmails;
 
     public Output<List<String>> getCustomEmails() {
-        return this.customEmails == null ? Output.empty() : this.customEmails;
+        return this.customEmails == null ? Codegen.empty() : this.customEmails;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
     public Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> getRuleDefinitions() {
-        return this.ruleDefinitions == null ? Output.empty() : this.ruleDefinitions;
+        return this.ruleDefinitions == null ? Codegen.empty() : this.ruleDefinitions;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
 
     public Output<Boolean> getSendEmailsToSubscriptionOwners() {
-        return this.sendEmailsToSubscriptionOwners == null ? Output.empty() : this.sendEmailsToSubscriptionOwners;
+        return this.sendEmailsToSubscriptionOwners == null ? Codegen.empty() : this.sendEmailsToSubscriptionOwners;
     }
 
     public ProactiveDetectionConfigurationArgs(
@@ -138,15 +139,15 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     }
 
     private ProactiveDetectionConfigurationArgs() {
-        this.configurationId = Output.empty();
-        this.customEmails = Output.empty();
-        this.enabled = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.ruleDefinitions = Output.empty();
-        this.sendEmailsToSubscriptionOwners = Output.empty();
+        this.configurationId = Codegen.empty();
+        this.customEmails = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.ruleDefinitions = Codegen.empty();
+        this.sendEmailsToSubscriptionOwners = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder configurationId(@Nullable String configurationId) {
-            this.configurationId = Output.ofNullable(configurationId);
+            this.configurationId = Codegen.ofNullable(configurationId);
             return this;
         }
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
@@ -198,7 +199,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Output.ofNullable(customEmails);
+            this.customEmails = Codegen.ofNullable(customEmails);
             return this;
         }
         public Builder customEmails(String... customEmails) {
@@ -209,7 +210,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
@@ -217,7 +218,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -225,7 +226,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -249,7 +250,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
-            this.ruleDefinitions = Output.ofNullable(ruleDefinitions);
+            this.ruleDefinitions = Codegen.ofNullable(ruleDefinitions);
             return this;
         }
         public Builder sendEmailsToSubscriptionOwners(@Nullable Output<Boolean> sendEmailsToSubscriptionOwners) {
@@ -257,7 +258,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
-            this.sendEmailsToSubscriptionOwners = Output.ofNullable(sendEmailsToSubscriptionOwners);
+            this.sendEmailsToSubscriptionOwners = Codegen.ofNullable(sendEmailsToSubscriptionOwners);
             return this;
         }        public ProactiveDetectionConfigurationArgs build() {
             return new ProactiveDetectionConfigurationArgs(configurationId, customEmails, enabled, lastUpdatedTime, name, resourceGroupName, resourceName, ruleDefinitions, sendEmailsToSubscriptionOwners);

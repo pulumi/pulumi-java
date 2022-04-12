@@ -6,6 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.RuleSourceSourceDetailArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RuleSourceSourceDetailArgs>> sourceDetails;
 
     public Output<List<RuleSourceSourceDetailArgs>> getSourceDetails() {
-        return this.sourceDetails == null ? Output.empty() : this.sourceDetails;
+        return this.sourceDetails == null ? Codegen.empty() : this.sourceDetails;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleSourceArgs() {
-        this.owner = Output.empty();
-        this.sourceDetails = Output.empty();
-        this.sourceIdentifier = Output.empty();
+        this.owner = Codegen.empty();
+        this.sourceDetails = Codegen.empty();
+        this.sourceIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDetails(@Nullable List<RuleSourceSourceDetailArgs> sourceDetails) {
-            this.sourceDetails = Output.ofNullable(sourceDetails);
+            this.sourceDetails = Codegen.ofNullable(sourceDetails);
             return this;
         }
         public Builder sourceDetails(RuleSourceSourceDetailArgs... sourceDetails) {

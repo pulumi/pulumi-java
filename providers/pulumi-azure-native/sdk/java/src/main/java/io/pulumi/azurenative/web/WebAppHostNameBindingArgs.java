@@ -9,6 +9,7 @@ import io.pulumi.azurenative.web.enums.HostNameType;
 import io.pulumi.azurenative.web.enums.SslState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> azureResourceName;
 
     public Output<String> getAzureResourceName() {
-        return this.azureResourceName == null ? Output.empty() : this.azureResourceName;
+        return this.azureResourceName == null ? Codegen.empty() : this.azureResourceName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<AzureResourceType> azureResourceType;
 
     public Output<AzureResourceType> getAzureResourceType() {
-        return this.azureResourceType == null ? Output.empty() : this.azureResourceType;
+        return this.azureResourceType == null ? Codegen.empty() : this.azureResourceType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
     public Output<CustomHostNameDnsRecordType> getCustomHostNameDnsRecordType() {
-        return this.customHostNameDnsRecordType == null ? Output.empty() : this.customHostNameDnsRecordType;
+        return this.customHostNameDnsRecordType == null ? Codegen.empty() : this.customHostNameDnsRecordType;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> domainId;
 
     public Output<String> getDomainId() {
-        return this.domainId == null ? Output.empty() : this.domainId;
+        return this.domainId == null ? Codegen.empty() : this.domainId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<HostNameType> hostNameType;
 
     public Output<HostNameType> getHostNameType() {
-        return this.hostNameType == null ? Output.empty() : this.hostNameType;
+        return this.hostNameType == null ? Codegen.empty() : this.hostNameType;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> siteName;
 
     public Output<String> getSiteName() {
-        return this.siteName == null ? Output.empty() : this.siteName;
+        return this.siteName == null ? Codegen.empty() : this.siteName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<SslState> sslState;
 
     public Output<SslState> getSslState() {
-        return this.sslState == null ? Output.empty() : this.sslState;
+        return this.sslState == null ? Codegen.empty() : this.sslState;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public WebAppHostNameBindingArgs(
@@ -178,18 +179,18 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
     }
 
     private WebAppHostNameBindingArgs() {
-        this.azureResourceName = Output.empty();
-        this.azureResourceType = Output.empty();
-        this.customHostNameDnsRecordType = Output.empty();
-        this.domainId = Output.empty();
-        this.hostName = Output.empty();
-        this.hostNameType = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteName = Output.empty();
-        this.sslState = Output.empty();
-        this.thumbprint = Output.empty();
+        this.azureResourceName = Codegen.empty();
+        this.azureResourceType = Codegen.empty();
+        this.customHostNameDnsRecordType = Codegen.empty();
+        this.domainId = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.hostNameType = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteName = Codegen.empty();
+        this.sslState = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureResourceName(@Nullable String azureResourceName) {
-            this.azureResourceName = Output.ofNullable(azureResourceName);
+            this.azureResourceName = Codegen.ofNullable(azureResourceName);
             return this;
         }
         public Builder azureResourceType(@Nullable Output<AzureResourceType> azureResourceType) {
@@ -247,7 +248,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureResourceType(@Nullable AzureResourceType azureResourceType) {
-            this.azureResourceType = Output.ofNullable(azureResourceType);
+            this.azureResourceType = Codegen.ofNullable(azureResourceType);
             return this;
         }
         public Builder customHostNameDnsRecordType(@Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
@@ -255,7 +256,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customHostNameDnsRecordType(@Nullable CustomHostNameDnsRecordType customHostNameDnsRecordType) {
-            this.customHostNameDnsRecordType = Output.ofNullable(customHostNameDnsRecordType);
+            this.customHostNameDnsRecordType = Codegen.ofNullable(customHostNameDnsRecordType);
             return this;
         }
         public Builder domainId(@Nullable Output<String> domainId) {
@@ -263,7 +264,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder domainId(@Nullable String domainId) {
-            this.domainId = Output.ofNullable(domainId);
+            this.domainId = Codegen.ofNullable(domainId);
             return this;
         }
         public Builder hostName(@Nullable Output<String> hostName) {
@@ -271,7 +272,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder hostNameType(@Nullable Output<HostNameType> hostNameType) {
@@ -279,7 +280,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder hostNameType(@Nullable HostNameType hostNameType) {
-            this.hostNameType = Output.ofNullable(hostNameType);
+            this.hostNameType = Codegen.ofNullable(hostNameType);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -287,7 +288,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -311,7 +312,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder siteName(@Nullable String siteName) {
-            this.siteName = Output.ofNullable(siteName);
+            this.siteName = Codegen.ofNullable(siteName);
             return this;
         }
         public Builder sslState(@Nullable Output<SslState> sslState) {
@@ -319,7 +320,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sslState(@Nullable SslState sslState) {
-            this.sslState = Output.ofNullable(sslState);
+            this.sslState = Codegen.ofNullable(sslState);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -327,7 +328,7 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public WebAppHostNameBindingArgs build() {
             return new WebAppHostNameBindingArgs(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostName, hostNameType, kind, name, resourceGroupName, siteName, sslState, thumbprint);

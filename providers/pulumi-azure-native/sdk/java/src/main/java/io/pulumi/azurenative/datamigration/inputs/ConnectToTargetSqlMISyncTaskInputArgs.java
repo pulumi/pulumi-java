@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppArgs;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -48,8 +49,8 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
     }
 
     private ConnectToTargetSqlMISyncTaskInputArgs() {
-        this.azureApp = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.azureApp = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

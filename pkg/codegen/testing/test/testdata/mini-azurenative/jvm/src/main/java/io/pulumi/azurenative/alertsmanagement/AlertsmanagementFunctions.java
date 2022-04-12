@@ -17,10 +17,10 @@ public final class AlertsmanagementFunctions {
      * API Version: 2019-05-05-preview.
      * 
      */
-    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(io.pulumi.azurenative.alertsmanagement.inputs.GetActionRuleByNameArgs args) {
-        return getActionRuleByName(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args) {
+        return getActionRuleByName(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(io.pulumi.azurenative.alertsmanagement.inputs.GetActionRuleByNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
     }
 }

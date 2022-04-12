@@ -22,12 +22,12 @@ public final class AutoscalingFunctions {
      * 
      */
     public static CompletableFuture<GetAmiIdsResult> getAmiIds() {
-        return getAmiIds(io.pulumi.aws.autoscaling.inputs.GetAmiIdsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getAmiIds(GetAmiIdsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.autoscaling.inputs.GetAmiIdsArgs args) {
-        return getAmiIds(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args) {
+        return getAmiIds(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAmiIdsResult> getAmiIds(io.pulumi.aws.autoscaling.inputs.GetAmiIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAmiIdsResult> getAmiIds(GetAmiIdsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:autoscaling/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class AutoscalingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.aws.autoscaling.inputs.GetGroupArgs args) {
-        return getGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+        return getGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGroupResult> getGroup(io.pulumi.aws.autoscaling.inputs.GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:autoscaling/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

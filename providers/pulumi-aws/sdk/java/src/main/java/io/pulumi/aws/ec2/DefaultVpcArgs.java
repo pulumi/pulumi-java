@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,14 +28,14 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableClassiclink;
 
     public Output<Boolean> getEnableClassiclink() {
-        return this.enableClassiclink == null ? Output.empty() : this.enableClassiclink;
+        return this.enableClassiclink == null ? Codegen.empty() : this.enableClassiclink;
     }
 
     @Import(name="enableClassiclinkDnsSupport")
       private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
     public Output<Boolean> getEnableClassiclinkDnsSupport() {
-        return this.enableClassiclinkDnsSupport == null ? Output.empty() : this.enableClassiclinkDnsSupport;
+        return this.enableClassiclinkDnsSupport == null ? Codegen.empty() : this.enableClassiclinkDnsSupport;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
     public Output<Boolean> getEnableDnsHostnames() {
-        return this.enableDnsHostnames == null ? Output.empty() : this.enableDnsHostnames;
+        return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
     }
 
     /**
@@ -56,21 +57,21 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDnsSupport;
 
     public Output<Boolean> getEnableDnsSupport() {
-        return this.enableDnsSupport == null ? Output.empty() : this.enableDnsSupport;
+        return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
     }
 
     @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
-        return this.ipv4IpamPoolId == null ? Output.empty() : this.ipv4IpamPoolId;
+        return this.ipv4IpamPoolId == null ? Codegen.empty() : this.ipv4IpamPoolId;
     }
 
     @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
-        return this.ipv4NetmaskLength == null ? Output.empty() : this.ipv4NetmaskLength;
+        return this.ipv4NetmaskLength == null ? Codegen.empty() : this.ipv4NetmaskLength;
     }
 
     /**
@@ -81,28 +82,28 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
+        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     @Import(name="ipv6CidrBlockNetworkBorderGroup")
       private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
     public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
-        return this.ipv6CidrBlockNetworkBorderGroup == null ? Output.empty() : this.ipv6CidrBlockNetworkBorderGroup;
+        return this.ipv6CidrBlockNetworkBorderGroup == null ? Codegen.empty() : this.ipv6CidrBlockNetworkBorderGroup;
     }
 
     @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
     public Output<String> getIpv6IpamPoolId() {
-        return this.ipv6IpamPoolId == null ? Output.empty() : this.ipv6IpamPoolId;
+        return this.ipv6IpamPoolId == null ? Codegen.empty() : this.ipv6IpamPoolId;
     }
 
     @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
     public Output<Integer> getIpv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Output.empty() : this.ipv6NetmaskLength;
+        return this.ipv6NetmaskLength == null ? Codegen.empty() : this.ipv6NetmaskLength;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DefaultVpcArgs(
@@ -142,17 +143,17 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DefaultVpcArgs() {
-        this.enableClassiclink = Output.empty();
-        this.enableClassiclinkDnsSupport = Output.empty();
-        this.enableDnsHostnames = Output.empty();
-        this.enableDnsSupport = Output.empty();
-        this.ipv4IpamPoolId = Output.empty();
-        this.ipv4NetmaskLength = Output.empty();
-        this.ipv6CidrBlock = Output.empty();
-        this.ipv6CidrBlockNetworkBorderGroup = Output.empty();
-        this.ipv6IpamPoolId = Output.empty();
-        this.ipv6NetmaskLength = Output.empty();
-        this.tags = Output.empty();
+        this.enableClassiclink = Codegen.empty();
+        this.enableClassiclinkDnsSupport = Codegen.empty();
+        this.enableDnsHostnames = Codegen.empty();
+        this.enableDnsSupport = Codegen.empty();
+        this.ipv4IpamPoolId = Codegen.empty();
+        this.ipv4NetmaskLength = Codegen.empty();
+        this.ipv6CidrBlock = Codegen.empty();
+        this.ipv6CidrBlockNetworkBorderGroup = Codegen.empty();
+        this.ipv6IpamPoolId = Codegen.empty();
+        this.ipv6NetmaskLength = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableClassiclink(@Nullable Boolean enableClassiclink) {
-            this.enableClassiclink = Output.ofNullable(enableClassiclink);
+            this.enableClassiclink = Codegen.ofNullable(enableClassiclink);
             return this;
         }
         public Builder enableClassiclinkDnsSupport(@Nullable Output<Boolean> enableClassiclinkDnsSupport) {
@@ -208,7 +209,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableClassiclinkDnsSupport(@Nullable Boolean enableClassiclinkDnsSupport) {
-            this.enableClassiclinkDnsSupport = Output.ofNullable(enableClassiclinkDnsSupport);
+            this.enableClassiclinkDnsSupport = Codegen.ofNullable(enableClassiclinkDnsSupport);
             return this;
         }
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
@@ -216,7 +217,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
-            this.enableDnsHostnames = Output.ofNullable(enableDnsHostnames);
+            this.enableDnsHostnames = Codegen.ofNullable(enableDnsHostnames);
             return this;
         }
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
@@ -224,7 +225,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
-            this.enableDnsSupport = Output.ofNullable(enableDnsSupport);
+            this.enableDnsSupport = Codegen.ofNullable(enableDnsSupport);
             return this;
         }
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
@@ -232,7 +233,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
-            this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
+            this.ipv4IpamPoolId = Codegen.ofNullable(ipv4IpamPoolId);
             return this;
         }
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
@@ -240,7 +241,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
-            this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
+            this.ipv4NetmaskLength = Codegen.ofNullable(ipv4NetmaskLength);
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
@@ -248,7 +249,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
             return this;
         }
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable Output<String> ipv6CidrBlockNetworkBorderGroup) {
@@ -256,7 +257,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6CidrBlockNetworkBorderGroup(@Nullable String ipv6CidrBlockNetworkBorderGroup) {
-            this.ipv6CidrBlockNetworkBorderGroup = Output.ofNullable(ipv6CidrBlockNetworkBorderGroup);
+            this.ipv6CidrBlockNetworkBorderGroup = Codegen.ofNullable(ipv6CidrBlockNetworkBorderGroup);
             return this;
         }
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
@@ -264,7 +265,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Output.ofNullable(ipv6IpamPoolId);
+            this.ipv6IpamPoolId = Codegen.ofNullable(ipv6IpamPoolId);
             return this;
         }
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
@@ -272,7 +273,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
+            this.ipv6NetmaskLength = Codegen.ofNullable(ipv6NetmaskLength);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -280,7 +281,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DefaultVpcArgs build() {
             return new DefaultVpcArgs(enableClassiclink, enableClassiclinkDnsSupport, enableDnsHostnames, enableDnsSupport, ipv4IpamPoolId, ipv4NetmaskLength, ipv6CidrBlock, ipv6CidrBlockNetworkBorderGroup, ipv6IpamPoolId, ipv6NetmaskLength, tags);

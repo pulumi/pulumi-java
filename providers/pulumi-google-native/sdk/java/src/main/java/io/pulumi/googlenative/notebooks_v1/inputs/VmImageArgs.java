@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageFamily;
 
     public Output<String> getImageFamily() {
-        return this.imageFamily == null ? Output.empty() : this.imageFamily;
+        return this.imageFamily == null ? Codegen.empty() : this.imageFamily;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VmImageArgs() {
-        this.imageFamily = Output.empty();
-        this.imageName = Output.empty();
-        this.project = Output.empty();
+        this.imageFamily = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageFamily(@Nullable String imageFamily) {
-            this.imageFamily = Output.ofNullable(imageFamily);
+            this.imageFamily = Codegen.ofNullable(imageFamily);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -103,7 +104,7 @@ public final class VmImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder project(Output<String> project) {

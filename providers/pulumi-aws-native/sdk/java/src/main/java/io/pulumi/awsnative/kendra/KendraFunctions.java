@@ -20,30 +20,30 @@ public final class KendraFunctions {
      * Kendra DataSource
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.awsnative.kendra.inputs.GetDataSourceArgs args) {
-        return getDataSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+        return getDataSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.awsnative.kendra.inputs.GetDataSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Kendra FAQ resource
      * 
      */
-    public static CompletableFuture<GetFaqResult> getFaq(io.pulumi.awsnative.kendra.inputs.GetFaqArgs args) {
-        return getFaq(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFaqResult> getFaq(GetFaqArgs args) {
+        return getFaq(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFaqResult> getFaq(io.pulumi.awsnative.kendra.inputs.GetFaqArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFaqResult> getFaq(GetFaqArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getFaq", TypeShape.of(GetFaqResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Kendra index
      * 
      */
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.awsnative.kendra.inputs.GetIndexArgs args) {
-        return getIndex(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
+        return getIndex(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.awsnative.kendra.inputs.GetIndexArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kendra:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
 }

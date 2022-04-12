@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
       private final @Nullable Output<List<String>> organizationalUnits;
 
     public Output<List<String>> getOrganizationalUnits() {
-        return this.organizationalUnits == null ? Output.empty() : this.organizationalUnits;
+        return this.organizationalUnits == null ? Codegen.empty() : this.organizationalUnits;
     }
 
     public ResourceDataSyncAwsOrganizationsSourceArgs(
@@ -37,8 +38,8 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
     }
 
     private ResourceDataSyncAwsOrganizationsSourceArgs() {
-        this.organizationSourceType = Output.empty();
-        this.organizationalUnits = Output.empty();
+        this.organizationSourceType = Codegen.empty();
+        this.organizationalUnits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
             return this;
         }
         public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
-            this.organizationalUnits = Output.ofNullable(organizationalUnits);
+            this.organizationalUnits = Codegen.ofNullable(organizationalUnits);
             return this;
         }
         public Builder organizationalUnits(String... organizationalUnits) {

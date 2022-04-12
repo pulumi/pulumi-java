@@ -6,6 +6,7 @@ package io.pulumi.aws.chime.inputs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
       private final @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
 
     public Output<List<VoiceConnectorOrganizationRouteGetArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
       private final @Nullable Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {
-        return this.voiceConnectorId == null ? Output.empty() : this.voiceConnectorId;
+        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
     }
 
     public VoiceConnectorOrganizationState(
@@ -60,9 +61,9 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
     }
 
     private VoiceConnectorOrganizationState() {
-        this.disabled = Output.empty();
-        this.routes = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.disabled = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder routes(@Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes) {
@@ -102,7 +103,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
             return this;
         }
         public Builder routes(@Nullable List<VoiceConnectorOrganizationRouteGetArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(VoiceConnectorOrganizationRouteGetArgs... routes) {
@@ -113,7 +114,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
             return this;
         }
         public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Output.ofNullable(voiceConnectorId);
+            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
             return this;
         }        public VoiceConnectorOrganizationState build() {
             return new VoiceConnectorOrganizationState(disabled, routes, voiceConnectorId);

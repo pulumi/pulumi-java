@@ -16,10 +16,10 @@ public final class Cloudbuild_v1alpha1Functions {
      * Returns information about a `WorkerPool`.
      * 
      */
-    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.GetWorkerPoolArgs args) {
-        return getWorkerPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args) {
+        return getWorkerPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.GetWorkerPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1alpha1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }
 }

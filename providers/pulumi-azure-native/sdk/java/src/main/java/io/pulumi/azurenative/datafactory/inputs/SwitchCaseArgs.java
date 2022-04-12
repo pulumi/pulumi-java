@@ -43,6 +43,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -66,7 +67,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> activities;
 
     public Output<List<Object>> getActivities() {
-        return this.activities == null ? Output.empty() : this.activities;
+        return this.activities == null ? Codegen.empty() : this.activities;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SwitchCaseArgs(
@@ -88,8 +89,8 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SwitchCaseArgs() {
-        this.activities = Output.empty();
-        this.value = Output.empty();
+        this.activities = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Output.ofNullable(activities);
+            this.activities = Codegen.ofNullable(activities);
             return this;
         }
         public Builder activities(Object... activities) {
@@ -130,7 +131,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SwitchCaseArgs build() {
             return new SwitchCaseArgs(activities, value);

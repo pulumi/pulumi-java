@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> outboundCallerIdName;
 
     public Output<String> getOutboundCallerIdName() {
-        return this.outboundCallerIdName == null ? Output.empty() : this.outboundCallerIdName;
+        return this.outboundCallerIdName == null ? Codegen.empty() : this.outboundCallerIdName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> outboundCallerIdNumberId;
 
     public Output<String> getOutboundCallerIdNumberId() {
-        return this.outboundCallerIdNumberId == null ? Output.empty() : this.outboundCallerIdNumberId;
+        return this.outboundCallerIdNumberId == null ? Codegen.empty() : this.outboundCallerIdNumberId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> outboundFlowId;
 
     public Output<String> getOutboundFlowId() {
-        return this.outboundFlowId == null ? Output.empty() : this.outboundFlowId;
+        return this.outboundFlowId == null ? Codegen.empty() : this.outboundFlowId;
     }
 
     public QueueOutboundCallerConfigArgs(
@@ -57,9 +58,9 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
     }
 
     private QueueOutboundCallerConfigArgs() {
-        this.outboundCallerIdName = Output.empty();
-        this.outboundCallerIdNumberId = Output.empty();
-        this.outboundFlowId = Output.empty();
+        this.outboundCallerIdName = Codegen.empty();
+        this.outboundCallerIdNumberId = Codegen.empty();
+        this.outboundFlowId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder outboundCallerIdName(@Nullable String outboundCallerIdName) {
-            this.outboundCallerIdName = Output.ofNullable(outboundCallerIdName);
+            this.outboundCallerIdName = Codegen.ofNullable(outboundCallerIdName);
             return this;
         }
         public Builder outboundCallerIdNumberId(@Nullable Output<String> outboundCallerIdNumberId) {
@@ -99,7 +100,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
-            this.outboundCallerIdNumberId = Output.ofNullable(outboundCallerIdNumberId);
+            this.outboundCallerIdNumberId = Codegen.ofNullable(outboundCallerIdNumberId);
             return this;
         }
         public Builder outboundFlowId(@Nullable Output<String> outboundFlowId) {
@@ -107,7 +108,7 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder outboundFlowId(@Nullable String outboundFlowId) {
-            this.outboundFlowId = Output.ofNullable(outboundFlowId);
+            this.outboundFlowId = Codegen.ofNullable(outboundFlowId);
             return this;
         }        public QueueOutboundCallerConfigArgs build() {
             return new QueueOutboundCallerConfigArgs(outboundCallerIdName, outboundCallerIdNumberId, outboundFlowId);

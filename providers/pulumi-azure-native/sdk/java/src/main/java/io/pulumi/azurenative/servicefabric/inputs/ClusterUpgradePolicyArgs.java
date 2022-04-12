@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ClusterHealthPolicyArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ClusterUpgradeDeltaHealthPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy;
 
     public Output<ClusterUpgradeDeltaHealthPolicyArgs> getDeltaHealthPolicy() {
-        return this.deltaHealthPolicy == null ? Output.empty() : this.deltaHealthPolicy;
+        return this.deltaHealthPolicy == null ? Codegen.empty() : this.deltaHealthPolicy;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> forceRestart;
 
     public Output<Boolean> getForceRestart() {
-        return this.forceRestart == null ? Output.empty() : this.forceRestart;
+        return this.forceRestart == null ? Codegen.empty() : this.forceRestart;
     }
 
     /**
@@ -142,15 +143,15 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
     }
 
     private ClusterUpgradePolicyArgs() {
-        this.deltaHealthPolicy = Output.empty();
-        this.forceRestart = Output.empty();
-        this.healthCheckRetryTimeout = Output.empty();
-        this.healthCheckStableDuration = Output.empty();
-        this.healthCheckWaitDuration = Output.empty();
-        this.healthPolicy = Output.empty();
-        this.upgradeDomainTimeout = Output.empty();
-        this.upgradeReplicaSetCheckTimeout = Output.empty();
-        this.upgradeTimeout = Output.empty();
+        this.deltaHealthPolicy = Codegen.empty();
+        this.forceRestart = Codegen.empty();
+        this.healthCheckRetryTimeout = Codegen.empty();
+        this.healthCheckStableDuration = Codegen.empty();
+        this.healthCheckWaitDuration = Codegen.empty();
+        this.healthPolicy = Codegen.empty();
+        this.upgradeDomainTimeout = Codegen.empty();
+        this.upgradeReplicaSetCheckTimeout = Codegen.empty();
+        this.upgradeTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder deltaHealthPolicy(@Nullable ClusterUpgradeDeltaHealthPolicyArgs deltaHealthPolicy) {
-            this.deltaHealthPolicy = Output.ofNullable(deltaHealthPolicy);
+            this.deltaHealthPolicy = Codegen.ofNullable(deltaHealthPolicy);
             return this;
         }
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
@@ -202,7 +203,7 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder forceRestart(@Nullable Boolean forceRestart) {
-            this.forceRestart = Output.ofNullable(forceRestart);
+            this.forceRestart = Codegen.ofNullable(forceRestart);
             return this;
         }
         public Builder healthCheckRetryTimeout(Output<String> healthCheckRetryTimeout) {

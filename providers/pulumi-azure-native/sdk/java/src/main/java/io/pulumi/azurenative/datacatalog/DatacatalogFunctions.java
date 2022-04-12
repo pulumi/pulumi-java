@@ -17,10 +17,10 @@ public final class DatacatalogFunctions {
      * API Version: 2016-03-30.
      * 
      */
-    public static CompletableFuture<GetADCCatalogResult> getADCCatalog(io.pulumi.azurenative.datacatalog.inputs.GetADCCatalogArgs args) {
-        return getADCCatalog(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetADCCatalogResult> getADCCatalog(GetADCCatalogArgs args) {
+        return getADCCatalog(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetADCCatalogResult> getADCCatalog(io.pulumi.azurenative.datacatalog.inputs.GetADCCatalogArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetADCCatalogResult> getADCCatalog(GetADCCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datacatalog:getADCCatalog", TypeShape.of(GetADCCatalogResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -20,30 +20,30 @@ public final class Essentialcontacts_v1Functions {
      * Gets a single contact.
      * 
      */
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetContactArgs args) {
-        return getContact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
+        return getContact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetContactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a single contact.
      * 
      */
-    public static CompletableFuture<GetFolderContactResult> getFolderContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetFolderContactArgs args) {
-        return getFolderContact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFolderContactResult> getFolderContact(GetFolderContactArgs args) {
+        return getFolderContact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFolderContactResult> getFolderContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetFolderContactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFolderContactResult> getFolderContact(GetFolderContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getFolderContact", TypeShape.of(GetFolderContactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a single contact.
      * 
      */
-    public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetOrganizationContactArgs args) {
-        return getOrganizationContact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(GetOrganizationContactArgs args) {
+        return getOrganizationContact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(io.pulumi.googlenative.essentialcontacts_v1.inputs.GetOrganizationContactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationContactResult> getOrganizationContact(GetOrganizationContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getOrganizationContact", TypeShape.of(GetOrganizationContactResult.class), args, Utilities.withVersion(options));
     }
 }

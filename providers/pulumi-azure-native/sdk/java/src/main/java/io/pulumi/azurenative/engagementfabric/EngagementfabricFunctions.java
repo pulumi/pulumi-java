@@ -23,10 +23,10 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.engagementfabric.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.engagementfabric.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.azurenative.engagementfabric.inputs.GetChannelArgs args) {
-        return getChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+        return getChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChannelResult> getChannel(io.pulumi.azurenative.engagementfabric.inputs.GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(io.pulumi.azurenative.engagementfabric.inputs.ListAccountChannelTypesArgs args) {
-        return listAccountChannelTypes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args) {
+        return listAccountChannelTypes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(io.pulumi.azurenative.engagementfabric.inputs.ListAccountChannelTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountChannelTypes", TypeShape.of(ListAccountChannelTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.engagementfabric.inputs.ListAccountKeysArgs args) {
-        return listAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
+        return listAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.engagementfabric.inputs.ListAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

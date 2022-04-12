@@ -16,10 +16,10 @@ public final class EmrcontainersFunctions {
      * Resource Schema of AWS::EMRContainers::VirtualCluster Type
      * 
      */
-    public static CompletableFuture<GetVirtualClusterResult> getVirtualCluster(io.pulumi.awsnative.emrcontainers.inputs.GetVirtualClusterArgs args) {
-        return getVirtualCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualClusterResult> getVirtualCluster(GetVirtualClusterArgs args) {
+        return getVirtualCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualClusterResult> getVirtualCluster(io.pulumi.awsnative.emrcontainers.inputs.GetVirtualClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualClusterResult> getVirtualCluster(GetVirtualClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emrcontainers:getVirtualCluster", TypeShape.of(GetVirtualClusterResult.class), args, Utilities.withVersion(options));
     }
 }

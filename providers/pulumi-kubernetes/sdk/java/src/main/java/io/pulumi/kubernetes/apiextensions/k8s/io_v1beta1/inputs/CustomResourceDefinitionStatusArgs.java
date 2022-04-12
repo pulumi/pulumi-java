@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceDefinitionConditionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceDefinitionNamesArgs;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
       private final @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
 
     public Output<List<CustomResourceDefinitionConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     }
 
     private CustomResourceDefinitionStatusArgs() {
-        this.acceptedNames = Output.empty();
-        this.conditions = Output.empty();
-        this.storedVersions = Output.empty();
+        this.acceptedNames = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.storedVersions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
             return this;
         }
         public Builder conditions(@Nullable List<CustomResourceDefinitionConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(CustomResourceDefinitionConditionArgs... conditions) {

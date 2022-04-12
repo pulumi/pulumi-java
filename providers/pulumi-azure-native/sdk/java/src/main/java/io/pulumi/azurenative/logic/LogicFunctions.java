@@ -69,10 +69,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountArgs args) {
-        return getIntegrationAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args) {
+        return getIntegrationAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccount", TypeShape.of(GetIntegrationAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreement(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountAgreementArgs args) {
-        return getIntegrationAccountAgreement(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreement(GetIntegrationAccountAgreementArgs args) {
+        return getIntegrationAccountAgreement(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreement(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountAgreementArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreement(GetIntegrationAccountAgreementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAgreement", TypeShape.of(GetIntegrationAccountAgreementResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -91,10 +91,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssembly(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountAssemblyArgs args) {
-        return getIntegrationAccountAssembly(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssembly(GetIntegrationAccountAssemblyArgs args) {
+        return getIntegrationAccountAssembly(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssembly(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountAssemblyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssembly(GetIntegrationAccountAssemblyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAssembly", TypeShape.of(GetIntegrationAccountAssemblyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -102,10 +102,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfiguration(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountBatchConfigurationArgs args) {
-        return getIntegrationAccountBatchConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfiguration(GetIntegrationAccountBatchConfigurationArgs args) {
+        return getIntegrationAccountBatchConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfiguration(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountBatchConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfiguration(GetIntegrationAccountBatchConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountBatchConfiguration", TypeShape.of(GetIntegrationAccountBatchConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -113,10 +113,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificate(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountCertificateArgs args) {
-        return getIntegrationAccountCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificate(GetIntegrationAccountCertificateArgs args) {
+        return getIntegrationAccountCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificate(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificate(GetIntegrationAccountCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountCertificate", TypeShape.of(GetIntegrationAccountCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -124,10 +124,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMap(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountMapArgs args) {
-        return getIntegrationAccountMap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMap(GetIntegrationAccountMapArgs args) {
+        return getIntegrationAccountMap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMap(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountMapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMap(GetIntegrationAccountMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountMap", TypeShape.of(GetIntegrationAccountMapResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -135,10 +135,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartner(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountPartnerArgs args) {
-        return getIntegrationAccountPartner(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartner(GetIntegrationAccountPartnerArgs args) {
+        return getIntegrationAccountPartner(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartner(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountPartnerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartner(GetIntegrationAccountPartnerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountPartner", TypeShape.of(GetIntegrationAccountPartnerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,10 +146,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchema(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountSchemaArgs args) {
-        return getIntegrationAccountSchema(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchema(GetIntegrationAccountSchemaArgs args) {
+        return getIntegrationAccountSchema(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchema(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountSchemaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchema(GetIntegrationAccountSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSchema", TypeShape.of(GetIntegrationAccountSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,10 +157,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSession(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountSessionArgs args) {
-        return getIntegrationAccountSession(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSession(GetIntegrationAccountSessionArgs args) {
+        return getIntegrationAccountSession(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSession(io.pulumi.azurenative.logic.inputs.GetIntegrationAccountSessionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSession(GetIntegrationAccountSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSession", TypeShape.of(GetIntegrationAccountSessionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -168,10 +168,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironment(io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentArgs args) {
-        return getIntegrationServiceEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironment(GetIntegrationServiceEnvironmentArgs args) {
+        return getIntegrationServiceEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironment(io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironment(GetIntegrationServiceEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironment", TypeShape.of(GetIntegrationServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,10 +179,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApi(io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentManagedApiArgs args) {
-        return getIntegrationServiceEnvironmentManagedApi(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApi(GetIntegrationServiceEnvironmentManagedApiArgs args) {
+        return getIntegrationServiceEnvironmentManagedApi(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApi(io.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentManagedApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApi(GetIntegrationServiceEnvironmentManagedApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironmentManagedApi", TypeShape.of(GetIntegrationServiceEnvironmentManagedApiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -190,10 +190,10 @@ public final class LogicFunctions {
      * API Version: 2016-06-01.
      * 
      */
-    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfiguration(io.pulumi.azurenative.logic.inputs.GetRosettaNetProcessConfigurationArgs args) {
-        return getRosettaNetProcessConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfiguration(GetRosettaNetProcessConfigurationArgs args) {
+        return getRosettaNetProcessConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfiguration(io.pulumi.azurenative.logic.inputs.GetRosettaNetProcessConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfiguration(GetRosettaNetProcessConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getRosettaNetProcessConfiguration", TypeShape.of(GetRosettaNetProcessConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,20 +201,20 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(io.pulumi.azurenative.logic.inputs.GetWorkflowArgs args) {
-        return getWorkflow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args) {
+        return getWorkflow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkflowResult> getWorkflow(io.pulumi.azurenative.logic.inputs.GetWorkflowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2015-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKey(io.pulumi.azurenative.logic.inputs.GetWorkflowAccessKeyArgs args) {
-        return getWorkflowAccessKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKey(GetWorkflowAccessKeyArgs args) {
+        return getWorkflowAccessKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKey(io.pulumi.azurenative.logic.inputs.GetWorkflowAccessKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKey(GetWorkflowAccessKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflowAccessKey", TypeShape.of(GetWorkflowAccessKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -222,10 +222,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountAgreementContentCallbackUrlArgs args) {
-        return listIntegrationAccountAgreementContentCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrl(ListIntegrationAccountAgreementContentCallbackUrlArgs args) {
+        return listIntegrationAccountAgreementContentCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountAgreementContentCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrl(ListIntegrationAccountAgreementContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountAgreementContentCallbackUrl", TypeShape.of(ListIntegrationAccountAgreementContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -233,10 +233,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountAssemblyContentCallbackUrlArgs args) {
-        return listIntegrationAccountAssemblyContentCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrl(ListIntegrationAccountAssemblyContentCallbackUrlArgs args) {
+        return listIntegrationAccountAssemblyContentCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountAssemblyContentCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrl(ListIntegrationAccountAssemblyContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountAssemblyContentCallbackUrl", TypeShape.of(ListIntegrationAccountAssemblyContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -244,10 +244,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountCallbackUrlArgs args) {
-        return listIntegrationAccountCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrl(ListIntegrationAccountCallbackUrlArgs args) {
+        return listIntegrationAccountCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrl(ListIntegrationAccountCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountCallbackUrl", TypeShape.of(ListIntegrationAccountCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -255,10 +255,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs args) {
-        return listIntegrationAccountKeyVaultKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args) {
+        return listIntegrationAccountKeyVaultKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -266,10 +266,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountMapContentCallbackUrlArgs args) {
-        return listIntegrationAccountMapContentCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrl(ListIntegrationAccountMapContentCallbackUrlArgs args) {
+        return listIntegrationAccountMapContentCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountMapContentCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrl(ListIntegrationAccountMapContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountMapContentCallbackUrl", TypeShape.of(ListIntegrationAccountMapContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -277,10 +277,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountPartnerContentCallbackUrlArgs args) {
-        return listIntegrationAccountPartnerContentCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrl(ListIntegrationAccountPartnerContentCallbackUrlArgs args) {
+        return listIntegrationAccountPartnerContentCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountPartnerContentCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrl(ListIntegrationAccountPartnerContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountPartnerContentCallbackUrl", TypeShape.of(ListIntegrationAccountPartnerContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -288,20 +288,20 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountSchemaContentCallbackUrlArgs args) {
-        return listIntegrationAccountSchemaContentCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrl(ListIntegrationAccountSchemaContentCallbackUrlArgs args) {
+        return listIntegrationAccountSchemaContentCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrl(io.pulumi.azurenative.logic.inputs.ListIntegrationAccountSchemaContentCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrl(ListIntegrationAccountSchemaContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountSchemaContentCallbackUrl", TypeShape.of(ListIntegrationAccountSchemaContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2015-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeys(io.pulumi.azurenative.logic.inputs.ListWorkflowAccessKeySecretKeysArgs args) {
-        return listWorkflowAccessKeySecretKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeys(ListWorkflowAccessKeySecretKeysArgs args) {
+        return listWorkflowAccessKeySecretKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeys(io.pulumi.azurenative.logic.inputs.ListWorkflowAccessKeySecretKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeys(ListWorkflowAccessKeySecretKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowAccessKeySecretKeys", TypeShape.of(ListWorkflowAccessKeySecretKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -309,10 +309,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowCallbackUrlArgs args) {
-        return listWorkflowCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrl(ListWorkflowCallbackUrlArgs args) {
+        return listWorkflowCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrl(ListWorkflowCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowCallbackUrl", TypeShape.of(ListWorkflowCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -320,10 +320,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTraces(io.pulumi.azurenative.logic.inputs.ListWorkflowRunActionExpressionTracesArgs args) {
-        return listWorkflowRunActionExpressionTraces(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTraces(ListWorkflowRunActionExpressionTracesArgs args) {
+        return listWorkflowRunActionExpressionTraces(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTraces(io.pulumi.azurenative.logic.inputs.ListWorkflowRunActionExpressionTracesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTraces(ListWorkflowRunActionExpressionTracesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionExpressionTraces", TypeShape.of(ListWorkflowRunActionExpressionTracesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -331,10 +331,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTraces(io.pulumi.azurenative.logic.inputs.ListWorkflowRunActionRepetitionExpressionTracesArgs args) {
-        return listWorkflowRunActionRepetitionExpressionTraces(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTraces(ListWorkflowRunActionRepetitionExpressionTracesArgs args) {
+        return listWorkflowRunActionRepetitionExpressionTraces(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTraces(io.pulumi.azurenative.logic.inputs.ListWorkflowRunActionRepetitionExpressionTracesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTraces(ListWorkflowRunActionRepetitionExpressionTracesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionRepetitionExpressionTraces", TypeShape.of(ListWorkflowRunActionRepetitionExpressionTracesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -342,10 +342,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowTriggerCallbackUrlArgs args) {
-        return listWorkflowTriggerCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrl(ListWorkflowTriggerCallbackUrlArgs args) {
+        return listWorkflowTriggerCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowTriggerCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrl(ListWorkflowTriggerCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowTriggerCallbackUrl", TypeShape.of(ListWorkflowTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -353,10 +353,10 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowVersionTriggerCallbackUrlArgs args) {
-        return listWorkflowVersionTriggerCallbackUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrl(ListWorkflowVersionTriggerCallbackUrlArgs args) {
+        return listWorkflowVersionTriggerCallbackUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrl(io.pulumi.azurenative.logic.inputs.ListWorkflowVersionTriggerCallbackUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrl(ListWorkflowVersionTriggerCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowVersionTriggerCallbackUrl", TypeShape.of(ListWorkflowVersionTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
 }

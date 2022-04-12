@@ -10,6 +10,7 @@ import io.pulumi.azurenative.portal.inputs.TerminalSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -91,11 +92,11 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPropertiesArgs() {
-        this.preferredLocation = Output.empty();
-        this.preferredOsType = Output.empty();
-        this.preferredShellType = Output.empty();
-        this.storageProfile = Output.empty();
-        this.terminalSettings = Output.empty();
+        this.preferredLocation = Codegen.empty();
+        this.preferredOsType = Codegen.empty();
+        this.preferredShellType = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.terminalSettings = Codegen.empty();
     }
 
     public static Builder builder() {

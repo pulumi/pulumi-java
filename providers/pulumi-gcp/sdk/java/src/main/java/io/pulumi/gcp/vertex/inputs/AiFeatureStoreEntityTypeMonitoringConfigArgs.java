@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
 
     public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> getSnapshotAnalysis() {
-        return this.snapshotAnalysis == null ? Output.empty() : this.snapshotAnalysis;
+        return this.snapshotAnalysis == null ? Codegen.empty() : this.snapshotAnalysis;
     }
 
     public AiFeatureStoreEntityTypeMonitoringConfigArgs(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis) {
@@ -31,7 +32,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
     }
 
     private AiFeatureStoreEntityTypeMonitoringConfigArgs() {
-        this.snapshotAnalysis = Output.empty();
+        this.snapshotAnalysis = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
             return this;
         }
         public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs snapshotAnalysis) {
-            this.snapshotAnalysis = Output.ofNullable(snapshotAnalysis);
+            this.snapshotAnalysis = Codegen.ofNullable(snapshotAnalysis);
             return this;
         }        public AiFeatureStoreEntityTypeMonitoringConfigArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigArgs(snapshotAnalysis);

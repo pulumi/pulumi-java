@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useExplicitColumnNames;
 
     public Output<Boolean> getUseExplicitColumnNames() {
-        return this.useExplicitColumnNames == null ? Output.empty() : this.useExplicitColumnNames;
+        return this.useExplicitColumnNames == null ? Codegen.empty() : this.useExplicitColumnNames;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
+        return this.useLegacySql == null ? Codegen.empty() : this.useLegacySql;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Output<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
-        return this.userDefinedFunctionResources == null ? Output.empty() : this.userDefinedFunctionResources;
+        return this.userDefinedFunctionResources == null ? Codegen.empty() : this.userDefinedFunctionResources;
     }
 
     public ViewDefinitionArgs(
@@ -73,10 +74,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ViewDefinitionArgs() {
-        this.query = Output.empty();
-        this.useExplicitColumnNames = Output.empty();
-        this.useLegacySql = Output.empty();
-        this.userDefinedFunctionResources = Output.empty();
+        this.query = Codegen.empty();
+        this.useExplicitColumnNames = Codegen.empty();
+        this.useLegacySql = Codegen.empty();
+        this.userDefinedFunctionResources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder useExplicitColumnNames(@Nullable Output<Boolean> useExplicitColumnNames) {
@@ -118,7 +119,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useExplicitColumnNames(@Nullable Boolean useExplicitColumnNames) {
-            this.useExplicitColumnNames = Output.ofNullable(useExplicitColumnNames);
+            this.useExplicitColumnNames = Codegen.ofNullable(useExplicitColumnNames);
             return this;
         }
         public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
@@ -126,7 +127,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Output.ofNullable(useLegacySql);
+            this.useLegacySql = Codegen.ofNullable(useLegacySql);
             return this;
         }
         public Builder userDefinedFunctionResources(@Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
@@ -134,7 +135,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
+            this.userDefinedFunctionResources = Codegen.ofNullable(userDefinedFunctionResources);
             return this;
         }
         public Builder userDefinedFunctionResources(UserDefinedFunctionResourceArgs... userDefinedFunctionResources) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotSampleValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<BotSampleValueArgs>> synonyms;
 
     public Output<List<BotSampleValueArgs>> getSynonyms() {
-        return this.synonyms == null ? Output.empty() : this.synonyms;
+        return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
     public BotSlotTypeValueArgs(
@@ -41,8 +42,8 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BotSlotTypeValueArgs() {
-        this.sampleValue = Output.empty();
-        this.synonyms = Output.empty();
+        this.sampleValue = Codegen.empty();
+        this.synonyms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder synonyms(@Nullable List<BotSampleValueArgs> synonyms) {
-            this.synonyms = Output.ofNullable(synonyms);
+            this.synonyms = Codegen.ofNullable(synonyms);
             return this;
         }
         public Builder synonyms(BotSampleValueArgs... synonyms) {

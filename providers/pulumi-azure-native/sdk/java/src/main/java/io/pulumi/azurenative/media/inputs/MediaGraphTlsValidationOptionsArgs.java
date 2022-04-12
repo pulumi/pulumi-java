@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
     }
 
     private MediaGraphTlsValidationOptionsArgs() {
-        this.ignoreHostname = Output.empty();
-        this.ignoreSignature = Output.empty();
+        this.ignoreHostname = Codegen.empty();
+        this.ignoreSignature = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanBillingPeriod;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanConsumptionPricingType;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanRevenueShareType;
@@ -31,7 +32,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiproduct;
 
     public Output<String> getApiproduct() {
-        return this.apiproduct == null ? Output.empty() : this.apiproduct;
+        return this.apiproduct == null ? Codegen.empty() : this.apiproduct;
     }
 
     @Import(name="apiproductId", required=true)
@@ -49,7 +50,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RatePlanBillingPeriod> billingPeriod;
 
     public Output<RatePlanBillingPeriod> getBillingPeriod() {
-        return this.billingPeriod == null ? Output.empty() : this.billingPeriod;
+        return this.billingPeriod == null ? Codegen.empty() : this.billingPeriod;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
     public Output<List<GoogleCloudApigeeV1RateRangeArgs>> getConsumptionPricingRates() {
-        return this.consumptionPricingRates == null ? Output.empty() : this.consumptionPricingRates;
+        return this.consumptionPricingRates == null ? Codegen.empty() : this.consumptionPricingRates;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
 
     public Output<RatePlanConsumptionPricingType> getConsumptionPricingType() {
-        return this.consumptionPricingType == null ? Output.empty() : this.consumptionPricingType;
+        return this.consumptionPricingType == null ? Codegen.empty() : this.consumptionPricingType;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
-        return this.currencyCode == null ? Output.empty() : this.currencyCode;
+        return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> fixedFeeFrequency;
 
     public Output<Integer> getFixedFeeFrequency() {
-        return this.fixedFeeFrequency == null ? Output.empty() : this.fixedFeeFrequency;
+        return this.fixedFeeFrequency == null ? Codegen.empty() : this.fixedFeeFrequency;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
 
     public Output<GoogleTypeMoneyArgs> getFixedRecurringFee() {
-        return this.fixedRecurringFee == null ? Output.empty() : this.fixedRecurringFee;
+        return this.fixedRecurringFee == null ? Codegen.empty() : this.fixedRecurringFee;
     }
 
     @Import(name="organizationId", required=true)
@@ -155,7 +156,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
     public Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> getRevenueShareRates() {
-        return this.revenueShareRates == null ? Output.empty() : this.revenueShareRates;
+        return this.revenueShareRates == null ? Codegen.empty() : this.revenueShareRates;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RatePlanRevenueShareType> revenueShareType;
 
     public Output<RatePlanRevenueShareType> getRevenueShareType() {
-        return this.revenueShareType == null ? Output.empty() : this.revenueShareType;
+        return this.revenueShareType == null ? Codegen.empty() : this.revenueShareType;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleTypeMoneyArgs> setupFee;
 
     public Output<GoogleTypeMoneyArgs> getSetupFee() {
-        return this.setupFee == null ? Output.empty() : this.setupFee;
+        return this.setupFee == null ? Codegen.empty() : this.setupFee;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RatePlanState> state;
 
     public Output<RatePlanState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public RatePlanArgs(
@@ -240,23 +241,23 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RatePlanArgs() {
-        this.apiproduct = Output.empty();
-        this.apiproductId = Output.empty();
-        this.billingPeriod = Output.empty();
-        this.consumptionPricingRates = Output.empty();
-        this.consumptionPricingType = Output.empty();
-        this.currencyCode = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.endTime = Output.empty();
-        this.fixedFeeFrequency = Output.empty();
-        this.fixedRecurringFee = Output.empty();
-        this.organizationId = Output.empty();
-        this.revenueShareRates = Output.empty();
-        this.revenueShareType = Output.empty();
-        this.setupFee = Output.empty();
-        this.startTime = Output.empty();
-        this.state = Output.empty();
+        this.apiproduct = Codegen.empty();
+        this.apiproductId = Codegen.empty();
+        this.billingPeriod = Codegen.empty();
+        this.consumptionPricingRates = Codegen.empty();
+        this.consumptionPricingType = Codegen.empty();
+        this.currencyCode = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.fixedFeeFrequency = Codegen.empty();
+        this.fixedRecurringFee = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.revenueShareRates = Codegen.empty();
+        this.revenueShareType = Codegen.empty();
+        this.setupFee = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -316,7 +317,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiproduct(@Nullable String apiproduct) {
-            this.apiproduct = Output.ofNullable(apiproduct);
+            this.apiproduct = Codegen.ofNullable(apiproduct);
             return this;
         }
         public Builder apiproductId(Output<String> apiproductId) {
@@ -332,7 +333,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingPeriod(@Nullable RatePlanBillingPeriod billingPeriod) {
-            this.billingPeriod = Output.ofNullable(billingPeriod);
+            this.billingPeriod = Codegen.ofNullable(billingPeriod);
             return this;
         }
         public Builder consumptionPricingRates(@Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates) {
@@ -340,7 +341,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consumptionPricingRates(@Nullable List<GoogleCloudApigeeV1RateRangeArgs> consumptionPricingRates) {
-            this.consumptionPricingRates = Output.ofNullable(consumptionPricingRates);
+            this.consumptionPricingRates = Codegen.ofNullable(consumptionPricingRates);
             return this;
         }
         public Builder consumptionPricingRates(GoogleCloudApigeeV1RateRangeArgs... consumptionPricingRates) {
@@ -351,7 +352,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consumptionPricingType(@Nullable RatePlanConsumptionPricingType consumptionPricingType) {
-            this.consumptionPricingType = Output.ofNullable(consumptionPricingType);
+            this.consumptionPricingType = Codegen.ofNullable(consumptionPricingType);
             return this;
         }
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
@@ -359,7 +360,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Output.ofNullable(currencyCode);
+            this.currencyCode = Codegen.ofNullable(currencyCode);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -367,7 +368,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -375,7 +376,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -383,7 +384,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder fixedFeeFrequency(@Nullable Output<Integer> fixedFeeFrequency) {
@@ -391,7 +392,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedFeeFrequency(@Nullable Integer fixedFeeFrequency) {
-            this.fixedFeeFrequency = Output.ofNullable(fixedFeeFrequency);
+            this.fixedFeeFrequency = Codegen.ofNullable(fixedFeeFrequency);
             return this;
         }
         public Builder fixedRecurringFee(@Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee) {
@@ -399,7 +400,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedRecurringFee(@Nullable GoogleTypeMoneyArgs fixedRecurringFee) {
-            this.fixedRecurringFee = Output.ofNullable(fixedRecurringFee);
+            this.fixedRecurringFee = Codegen.ofNullable(fixedRecurringFee);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -415,7 +416,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revenueShareRates(@Nullable List<GoogleCloudApigeeV1RevenueShareRangeArgs> revenueShareRates) {
-            this.revenueShareRates = Output.ofNullable(revenueShareRates);
+            this.revenueShareRates = Codegen.ofNullable(revenueShareRates);
             return this;
         }
         public Builder revenueShareRates(GoogleCloudApigeeV1RevenueShareRangeArgs... revenueShareRates) {
@@ -426,7 +427,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revenueShareType(@Nullable RatePlanRevenueShareType revenueShareType) {
-            this.revenueShareType = Output.ofNullable(revenueShareType);
+            this.revenueShareType = Codegen.ofNullable(revenueShareType);
             return this;
         }
         public Builder setupFee(@Nullable Output<GoogleTypeMoneyArgs> setupFee) {
@@ -434,7 +435,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder setupFee(@Nullable GoogleTypeMoneyArgs setupFee) {
-            this.setupFee = Output.ofNullable(setupFee);
+            this.setupFee = Codegen.ofNullable(setupFee);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -442,7 +443,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder state(@Nullable Output<RatePlanState> state) {
@@ -450,7 +451,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable RatePlanState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public RatePlanArgs build() {
             return new RatePlanArgs(apiproduct, apiproductId, billingPeriod, consumptionPricingRates, consumptionPricingType, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, organizationId, revenueShareRates, revenueShareType, setupFee, startTime, state);

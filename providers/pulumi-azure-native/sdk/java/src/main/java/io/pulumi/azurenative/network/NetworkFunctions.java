@@ -267,10 +267,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetActiveSessionsResult> getActiveSessions(io.pulumi.azurenative.network.inputs.GetActiveSessionsArgs args) {
-        return getActiveSessions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActiveSessionsResult> getActiveSessions(GetActiveSessionsArgs args) {
+        return getActiveSessions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActiveSessionsResult> getActiveSessions(io.pulumi.azurenative.network.inputs.GetActiveSessionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActiveSessionsResult> getActiveSessions(GetActiveSessionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getActiveSessions", TypeShape.of(GetActiveSessionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -282,10 +282,10 @@ public final class NetworkFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: AdminRule, DefaultAdminRule. */
-    public static CompletableFuture<GetAdminRuleResult> getAdminRule(io.pulumi.azurenative.network.inputs.GetAdminRuleArgs args) {
-        return getAdminRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAdminRuleResult> getAdminRule(GetAdminRuleArgs args) {
+        return getAdminRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAdminRuleResult> getAdminRule(io.pulumi.azurenative.network.inputs.GetAdminRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAdminRuleResult> getAdminRule(GetAdminRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRule", TypeShape.of(GetAdminRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -293,10 +293,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetAdminRuleCollectionResult> getAdminRuleCollection(io.pulumi.azurenative.network.inputs.GetAdminRuleCollectionArgs args) {
-        return getAdminRuleCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAdminRuleCollectionResult> getAdminRuleCollection(GetAdminRuleCollectionArgs args) {
+        return getAdminRuleCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAdminRuleCollectionResult> getAdminRuleCollection(io.pulumi.azurenative.network.inputs.GetAdminRuleCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAdminRuleCollectionResult> getAdminRuleCollection(GetAdminRuleCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRuleCollection", TypeShape.of(GetAdminRuleCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -304,10 +304,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(io.pulumi.azurenative.network.inputs.GetApplicationGatewayArgs args) {
-        return getApplicationGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args) {
+        return getApplicationGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(io.pulumi.azurenative.network.inputs.GetApplicationGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -315,10 +315,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> getApplicationGatewayBackendHealthOnDemand(io.pulumi.azurenative.network.inputs.GetApplicationGatewayBackendHealthOnDemandArgs args) {
-        return getApplicationGatewayBackendHealthOnDemand(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> getApplicationGatewayBackendHealthOnDemand(GetApplicationGatewayBackendHealthOnDemandArgs args) {
+        return getApplicationGatewayBackendHealthOnDemand(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> getApplicationGatewayBackendHealthOnDemand(io.pulumi.azurenative.network.inputs.GetApplicationGatewayBackendHealthOnDemandArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> getApplicationGatewayBackendHealthOnDemand(GetApplicationGatewayBackendHealthOnDemandArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGatewayBackendHealthOnDemand", TypeShape.of(GetApplicationGatewayBackendHealthOnDemandResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -326,10 +326,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> getApplicationGatewayPrivateEndpointConnection(io.pulumi.azurenative.network.inputs.GetApplicationGatewayPrivateEndpointConnectionArgs args) {
-        return getApplicationGatewayPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> getApplicationGatewayPrivateEndpointConnection(GetApplicationGatewayPrivateEndpointConnectionArgs args) {
+        return getApplicationGatewayPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> getApplicationGatewayPrivateEndpointConnection(io.pulumi.azurenative.network.inputs.GetApplicationGatewayPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationGatewayPrivateEndpointConnectionResult> getApplicationGatewayPrivateEndpointConnection(GetApplicationGatewayPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGatewayPrivateEndpointConnection", TypeShape.of(GetApplicationGatewayPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -337,10 +337,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(io.pulumi.azurenative.network.inputs.GetApplicationSecurityGroupArgs args) {
-        return getApplicationSecurityGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args) {
+        return getApplicationSecurityGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(io.pulumi.azurenative.network.inputs.GetApplicationSecurityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -348,10 +348,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetAzureFirewallResult> getAzureFirewall(io.pulumi.azurenative.network.inputs.GetAzureFirewallArgs args) {
-        return getAzureFirewall(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAzureFirewallResult> getAzureFirewall(GetAzureFirewallArgs args) {
+        return getAzureFirewall(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzureFirewallResult> getAzureFirewall(io.pulumi.azurenative.network.inputs.GetAzureFirewallArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAzureFirewallResult> getAzureFirewall(GetAzureFirewallArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAzureFirewall", TypeShape.of(GetAzureFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -359,10 +359,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetBastionHostResult> getBastionHost(io.pulumi.azurenative.network.inputs.GetBastionHostArgs args) {
-        return getBastionHost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBastionHostResult> getBastionHost(GetBastionHostArgs args) {
+        return getBastionHost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBastionHostResult> getBastionHost(io.pulumi.azurenative.network.inputs.GetBastionHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBastionHostResult> getBastionHost(GetBastionHostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getBastionHost", TypeShape.of(GetBastionHostResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -370,10 +370,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetBastionShareableLinkResult> getBastionShareableLink(io.pulumi.azurenative.network.inputs.GetBastionShareableLinkArgs args) {
-        return getBastionShareableLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBastionShareableLinkResult> getBastionShareableLink(GetBastionShareableLinkArgs args) {
+        return getBastionShareableLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBastionShareableLinkResult> getBastionShareableLink(io.pulumi.azurenative.network.inputs.GetBastionShareableLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBastionShareableLinkResult> getBastionShareableLink(GetBastionShareableLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getBastionShareableLink", TypeShape.of(GetBastionShareableLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -381,10 +381,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetConnectionMonitorResult> getConnectionMonitor(io.pulumi.azurenative.network.inputs.GetConnectionMonitorArgs args) {
-        return getConnectionMonitor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectionMonitorResult> getConnectionMonitor(GetConnectionMonitorArgs args) {
+        return getConnectionMonitor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectionMonitorResult> getConnectionMonitor(io.pulumi.azurenative.network.inputs.GetConnectionMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionMonitorResult> getConnectionMonitor(GetConnectionMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getConnectionMonitor", TypeShape.of(GetConnectionMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -392,10 +392,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetConnectivityConfigurationResult> getConnectivityConfiguration(io.pulumi.azurenative.network.inputs.GetConnectivityConfigurationArgs args) {
-        return getConnectivityConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectivityConfigurationResult> getConnectivityConfiguration(GetConnectivityConfigurationArgs args) {
+        return getConnectivityConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectivityConfigurationResult> getConnectivityConfiguration(io.pulumi.azurenative.network.inputs.GetConnectivityConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectivityConfigurationResult> getConnectivityConfiguration(GetConnectivityConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getConnectivityConfiguration", TypeShape.of(GetConnectivityConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -403,10 +403,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetCustomIPPrefixResult> getCustomIPPrefix(io.pulumi.azurenative.network.inputs.GetCustomIPPrefixArgs args) {
-        return getCustomIPPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomIPPrefixResult> getCustomIPPrefix(GetCustomIPPrefixArgs args) {
+        return getCustomIPPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomIPPrefixResult> getCustomIPPrefix(io.pulumi.azurenative.network.inputs.GetCustomIPPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomIPPrefixResult> getCustomIPPrefix(GetCustomIPPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getCustomIPPrefix", TypeShape.of(GetCustomIPPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -414,10 +414,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetDdosCustomPolicyResult> getDdosCustomPolicy(io.pulumi.azurenative.network.inputs.GetDdosCustomPolicyArgs args) {
-        return getDdosCustomPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDdosCustomPolicyResult> getDdosCustomPolicy(GetDdosCustomPolicyArgs args) {
+        return getDdosCustomPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDdosCustomPolicyResult> getDdosCustomPolicy(io.pulumi.azurenative.network.inputs.GetDdosCustomPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDdosCustomPolicyResult> getDdosCustomPolicy(GetDdosCustomPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDdosCustomPolicy", TypeShape.of(GetDdosCustomPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -425,10 +425,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetDdosProtectionPlanResult> getDdosProtectionPlan(io.pulumi.azurenative.network.inputs.GetDdosProtectionPlanArgs args) {
-        return getDdosProtectionPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDdosProtectionPlanResult> getDdosProtectionPlan(GetDdosProtectionPlanArgs args) {
+        return getDdosProtectionPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDdosProtectionPlanResult> getDdosProtectionPlan(io.pulumi.azurenative.network.inputs.GetDdosProtectionPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDdosProtectionPlanResult> getDdosProtectionPlan(GetDdosProtectionPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDdosProtectionPlan", TypeShape.of(GetDdosProtectionPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -436,10 +436,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetDefaultAdminRuleResult> getDefaultAdminRule(io.pulumi.azurenative.network.inputs.GetDefaultAdminRuleArgs args) {
-        return getDefaultAdminRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultAdminRuleResult> getDefaultAdminRule(GetDefaultAdminRuleArgs args) {
+        return getDefaultAdminRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultAdminRuleResult> getDefaultAdminRule(io.pulumi.azurenative.network.inputs.GetDefaultAdminRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultAdminRuleResult> getDefaultAdminRule(GetDefaultAdminRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultAdminRule", TypeShape.of(GetDefaultAdminRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -447,10 +447,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetDefaultUserRuleResult> getDefaultUserRule(io.pulumi.azurenative.network.inputs.GetDefaultUserRuleArgs args) {
-        return getDefaultUserRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDefaultUserRuleResult> getDefaultUserRule(GetDefaultUserRuleArgs args) {
+        return getDefaultUserRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDefaultUserRuleResult> getDefaultUserRule(io.pulumi.azurenative.network.inputs.GetDefaultUserRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultUserRuleResult> getDefaultUserRule(GetDefaultUserRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultUserRule", TypeShape.of(GetDefaultUserRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -459,12 +459,12 @@ public final class NetworkFunctions {
      * 
      */
     public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> getDnsResourceReferenceByTarResources() {
-        return getDnsResourceReferenceByTarResources(io.pulumi.azurenative.network.inputs.GetDnsResourceReferenceByTarResourcesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getDnsResourceReferenceByTarResources(GetDnsResourceReferenceByTarResourcesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> getDnsResourceReferenceByTarResources(io.pulumi.azurenative.network.inputs.GetDnsResourceReferenceByTarResourcesArgs args) {
-        return getDnsResourceReferenceByTarResources(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> getDnsResourceReferenceByTarResources(GetDnsResourceReferenceByTarResourcesArgs args) {
+        return getDnsResourceReferenceByTarResources(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> getDnsResourceReferenceByTarResources(io.pulumi.azurenative.network.inputs.GetDnsResourceReferenceByTarResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDnsResourceReferenceByTarResourcesResult> getDnsResourceReferenceByTarResources(GetDnsResourceReferenceByTarResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDnsResourceReferenceByTarResources", TypeShape.of(GetDnsResourceReferenceByTarResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -472,10 +472,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetDscpConfigurationResult> getDscpConfiguration(io.pulumi.azurenative.network.inputs.GetDscpConfigurationArgs args) {
-        return getDscpConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDscpConfigurationResult> getDscpConfiguration(GetDscpConfigurationArgs args) {
+        return getDscpConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDscpConfigurationResult> getDscpConfiguration(io.pulumi.azurenative.network.inputs.GetDscpConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDscpConfigurationResult> getDscpConfiguration(GetDscpConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDscpConfiguration", TypeShape.of(GetDscpConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -483,10 +483,10 @@ public final class NetworkFunctions {
      * API Version: 2018-08-01.
      * 
      */
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.network.inputs.GetEndpointArgs args) {
-        return getEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEndpointResult> getEndpoint(io.pulumi.azurenative.network.inputs.GetEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -494,10 +494,10 @@ public final class NetworkFunctions {
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.azurenative.network.inputs.GetExperimentArgs args) {
-        return getExperiment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args) {
+        return getExperiment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExperimentResult> getExperiment(io.pulumi.azurenative.network.inputs.GetExperimentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExperimentResult> getExperiment(GetExperimentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExperiment", TypeShape.of(GetExperimentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -505,10 +505,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitArgs args) {
-        return getExpressRouteCircuit(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args) {
+        return getExpressRouteCircuit(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -516,10 +516,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitAuthorizationResult> getExpressRouteCircuitAuthorization(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitAuthorizationArgs args) {
-        return getExpressRouteCircuitAuthorization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteCircuitAuthorizationResult> getExpressRouteCircuitAuthorization(GetExpressRouteCircuitAuthorizationArgs args) {
+        return getExpressRouteCircuitAuthorization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteCircuitAuthorizationResult> getExpressRouteCircuitAuthorization(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitAuthorizationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCircuitAuthorizationResult> getExpressRouteCircuitAuthorization(GetExpressRouteCircuitAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuitAuthorization", TypeShape.of(GetExpressRouteCircuitAuthorizationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -527,10 +527,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitConnectionResult> getExpressRouteCircuitConnection(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitConnectionArgs args) {
-        return getExpressRouteCircuitConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteCircuitConnectionResult> getExpressRouteCircuitConnection(GetExpressRouteCircuitConnectionArgs args) {
+        return getExpressRouteCircuitConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteCircuitConnectionResult> getExpressRouteCircuitConnection(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCircuitConnectionResult> getExpressRouteCircuitConnection(GetExpressRouteCircuitConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuitConnection", TypeShape.of(GetExpressRouteCircuitConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -538,10 +538,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitPeeringResult> getExpressRouteCircuitPeering(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitPeeringArgs args) {
-        return getExpressRouteCircuitPeering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteCircuitPeeringResult> getExpressRouteCircuitPeering(GetExpressRouteCircuitPeeringArgs args) {
+        return getExpressRouteCircuitPeering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteCircuitPeeringResult> getExpressRouteCircuitPeering(io.pulumi.azurenative.network.inputs.GetExpressRouteCircuitPeeringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCircuitPeeringResult> getExpressRouteCircuitPeering(GetExpressRouteCircuitPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuitPeering", TypeShape.of(GetExpressRouteCircuitPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -549,10 +549,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteConnectionResult> getExpressRouteConnection(io.pulumi.azurenative.network.inputs.GetExpressRouteConnectionArgs args) {
-        return getExpressRouteConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteConnectionResult> getExpressRouteConnection(GetExpressRouteConnectionArgs args) {
+        return getExpressRouteConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteConnectionResult> getExpressRouteConnection(io.pulumi.azurenative.network.inputs.GetExpressRouteConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteConnectionResult> getExpressRouteConnection(GetExpressRouteConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteConnection", TypeShape.of(GetExpressRouteConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -560,10 +560,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> getExpressRouteCrossConnectionPeering(io.pulumi.azurenative.network.inputs.GetExpressRouteCrossConnectionPeeringArgs args) {
-        return getExpressRouteCrossConnectionPeering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> getExpressRouteCrossConnectionPeering(GetExpressRouteCrossConnectionPeeringArgs args) {
+        return getExpressRouteCrossConnectionPeering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> getExpressRouteCrossConnectionPeering(io.pulumi.azurenative.network.inputs.GetExpressRouteCrossConnectionPeeringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCrossConnectionPeeringResult> getExpressRouteCrossConnectionPeering(GetExpressRouteCrossConnectionPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCrossConnectionPeering", TypeShape.of(GetExpressRouteCrossConnectionPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -571,10 +571,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRouteGatewayResult> getExpressRouteGateway(io.pulumi.azurenative.network.inputs.GetExpressRouteGatewayArgs args) {
-        return getExpressRouteGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRouteGatewayResult> getExpressRouteGateway(GetExpressRouteGatewayArgs args) {
+        return getExpressRouteGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRouteGatewayResult> getExpressRouteGateway(io.pulumi.azurenative.network.inputs.GetExpressRouteGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteGatewayResult> getExpressRouteGateway(GetExpressRouteGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteGateway", TypeShape.of(GetExpressRouteGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -582,10 +582,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetExpressRoutePortResult> getExpressRoutePort(io.pulumi.azurenative.network.inputs.GetExpressRoutePortArgs args) {
-        return getExpressRoutePort(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetExpressRoutePortResult> getExpressRoutePort(GetExpressRoutePortArgs args) {
+        return getExpressRoutePort(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetExpressRoutePortResult> getExpressRoutePort(io.pulumi.azurenative.network.inputs.GetExpressRoutePortArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRoutePortResult> getExpressRoutePort(GetExpressRoutePortArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRoutePort", TypeShape.of(GetExpressRoutePortResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -593,10 +593,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.azurenative.network.inputs.GetFirewallPolicyArgs args) {
-        return getFirewallPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+        return getFirewallPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(io.pulumi.azurenative.network.inputs.GetFirewallPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -604,10 +604,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> getFirewallPolicyRuleCollectionGroup(io.pulumi.azurenative.network.inputs.GetFirewallPolicyRuleCollectionGroupArgs args) {
-        return getFirewallPolicyRuleCollectionGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> getFirewallPolicyRuleCollectionGroup(GetFirewallPolicyRuleCollectionGroupArgs args) {
+        return getFirewallPolicyRuleCollectionGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> getFirewallPolicyRuleCollectionGroup(io.pulumi.azurenative.network.inputs.GetFirewallPolicyRuleCollectionGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> getFirewallPolicyRuleCollectionGroup(GetFirewallPolicyRuleCollectionGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicyRuleCollectionGroup", TypeShape.of(GetFirewallPolicyRuleCollectionGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -615,10 +615,10 @@ public final class NetworkFunctions {
      * API Version: 2020-04-01.
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyRuleGroupResult> getFirewallPolicyRuleGroup(io.pulumi.azurenative.network.inputs.GetFirewallPolicyRuleGroupArgs args) {
-        return getFirewallPolicyRuleGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallPolicyRuleGroupResult> getFirewallPolicyRuleGroup(GetFirewallPolicyRuleGroupArgs args) {
+        return getFirewallPolicyRuleGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallPolicyRuleGroupResult> getFirewallPolicyRuleGroup(io.pulumi.azurenative.network.inputs.GetFirewallPolicyRuleGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyRuleGroupResult> getFirewallPolicyRuleGroup(GetFirewallPolicyRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicyRuleGroup", TypeShape.of(GetFirewallPolicyRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -626,10 +626,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetFlowLogResult> getFlowLog(io.pulumi.azurenative.network.inputs.GetFlowLogArgs args) {
-        return getFlowLog(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowLogResult> getFlowLog(GetFlowLogArgs args) {
+        return getFlowLog(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowLogResult> getFlowLog(io.pulumi.azurenative.network.inputs.GetFlowLogArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowLogResult> getFlowLog(GetFlowLogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFlowLog", TypeShape.of(GetFlowLogResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -637,10 +637,10 @@ public final class NetworkFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetFrontDoorResult> getFrontDoor(io.pulumi.azurenative.network.inputs.GetFrontDoorArgs args) {
-        return getFrontDoor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFrontDoorResult> getFrontDoor(GetFrontDoorArgs args) {
+        return getFrontDoor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFrontDoorResult> getFrontDoor(io.pulumi.azurenative.network.inputs.GetFrontDoorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFrontDoorResult> getFrontDoor(GetFrontDoorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFrontDoor", TypeShape.of(GetFrontDoorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -648,10 +648,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetHubRouteTableResult> getHubRouteTable(io.pulumi.azurenative.network.inputs.GetHubRouteTableArgs args) {
-        return getHubRouteTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHubRouteTableResult> getHubRouteTable(GetHubRouteTableArgs args) {
+        return getHubRouteTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHubRouteTableResult> getHubRouteTable(io.pulumi.azurenative.network.inputs.GetHubRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHubRouteTableResult> getHubRouteTable(GetHubRouteTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getHubRouteTable", TypeShape.of(GetHubRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -659,10 +659,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetHubVirtualNetworkConnectionResult> getHubVirtualNetworkConnection(io.pulumi.azurenative.network.inputs.GetHubVirtualNetworkConnectionArgs args) {
-        return getHubVirtualNetworkConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHubVirtualNetworkConnectionResult> getHubVirtualNetworkConnection(GetHubVirtualNetworkConnectionArgs args) {
+        return getHubVirtualNetworkConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHubVirtualNetworkConnectionResult> getHubVirtualNetworkConnection(io.pulumi.azurenative.network.inputs.GetHubVirtualNetworkConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHubVirtualNetworkConnectionResult> getHubVirtualNetworkConnection(GetHubVirtualNetworkConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getHubVirtualNetworkConnection", TypeShape.of(GetHubVirtualNetworkConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -670,10 +670,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetInboundNatRuleResult> getInboundNatRule(io.pulumi.azurenative.network.inputs.GetInboundNatRuleArgs args) {
-        return getInboundNatRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInboundNatRuleResult> getInboundNatRule(GetInboundNatRuleArgs args) {
+        return getInboundNatRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInboundNatRuleResult> getInboundNatRule(io.pulumi.azurenative.network.inputs.GetInboundNatRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInboundNatRuleResult> getInboundNatRule(GetInboundNatRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getInboundNatRule", TypeShape.of(GetInboundNatRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -681,10 +681,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetIpAllocationResult> getIpAllocation(io.pulumi.azurenative.network.inputs.GetIpAllocationArgs args) {
-        return getIpAllocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpAllocationResult> getIpAllocation(GetIpAllocationArgs args) {
+        return getIpAllocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpAllocationResult> getIpAllocation(io.pulumi.azurenative.network.inputs.GetIpAllocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpAllocationResult> getIpAllocation(GetIpAllocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpAllocation", TypeShape.of(GetIpAllocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -692,10 +692,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(io.pulumi.azurenative.network.inputs.GetIpGroupArgs args) {
-        return getIpGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args) {
+        return getIpGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(io.pulumi.azurenative.network.inputs.GetIpGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpGroup", TypeShape.of(GetIpGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -703,10 +703,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.azurenative.network.inputs.GetLoadBalancerArgs args) {
-        return getLoadBalancer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+        return getLoadBalancer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(io.pulumi.azurenative.network.inputs.GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -714,10 +714,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> getLoadBalancerBackendAddressPool(io.pulumi.azurenative.network.inputs.GetLoadBalancerBackendAddressPoolArgs args) {
-        return getLoadBalancerBackendAddressPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> getLoadBalancerBackendAddressPool(GetLoadBalancerBackendAddressPoolArgs args) {
+        return getLoadBalancerBackendAddressPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> getLoadBalancerBackendAddressPool(io.pulumi.azurenative.network.inputs.GetLoadBalancerBackendAddressPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> getLoadBalancerBackendAddressPool(GetLoadBalancerBackendAddressPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancerBackendAddressPool", TypeShape.of(GetLoadBalancerBackendAddressPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -725,10 +725,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(io.pulumi.azurenative.network.inputs.GetLocalNetworkGatewayArgs args) {
-        return getLocalNetworkGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args) {
+        return getLocalNetworkGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(io.pulumi.azurenative.network.inputs.GetLocalNetworkGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLocalNetworkGateway", TypeShape.of(GetLocalNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -736,10 +736,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> getManagementGroupNetworkManagerConnection(io.pulumi.azurenative.network.inputs.GetManagementGroupNetworkManagerConnectionArgs args) {
-        return getManagementGroupNetworkManagerConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> getManagementGroupNetworkManagerConnection(GetManagementGroupNetworkManagerConnectionArgs args) {
+        return getManagementGroupNetworkManagerConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> getManagementGroupNetworkManagerConnection(io.pulumi.azurenative.network.inputs.GetManagementGroupNetworkManagerConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupNetworkManagerConnectionResult> getManagementGroupNetworkManagerConnection(GetManagementGroupNetworkManagerConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getManagementGroupNetworkManagerConnection", TypeShape.of(GetManagementGroupNetworkManagerConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -747,10 +747,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(io.pulumi.azurenative.network.inputs.GetNatGatewayArgs args) {
-        return getNatGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+        return getNatGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(io.pulumi.azurenative.network.inputs.GetNatGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -758,10 +758,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNatRuleResult> getNatRule(io.pulumi.azurenative.network.inputs.GetNatRuleArgs args) {
-        return getNatRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNatRuleResult> getNatRule(GetNatRuleArgs args) {
+        return getNatRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNatRuleResult> getNatRule(io.pulumi.azurenative.network.inputs.GetNatRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNatRuleResult> getNatRule(GetNatRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNatRule", TypeShape.of(GetNatRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -769,10 +769,10 @@ public final class NetworkFunctions {
      * API Version: 2019-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkExperimentProfileResult> getNetworkExperimentProfile(io.pulumi.azurenative.network.inputs.GetNetworkExperimentProfileArgs args) {
-        return getNetworkExperimentProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkExperimentProfileResult> getNetworkExperimentProfile(GetNetworkExperimentProfileArgs args) {
+        return getNetworkExperimentProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkExperimentProfileResult> getNetworkExperimentProfile(io.pulumi.azurenative.network.inputs.GetNetworkExperimentProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkExperimentProfileResult> getNetworkExperimentProfile(GetNetworkExperimentProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkExperimentProfile", TypeShape.of(GetNetworkExperimentProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -780,10 +780,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetNetworkGroupResult> getNetworkGroup(io.pulumi.azurenative.network.inputs.GetNetworkGroupArgs args) {
-        return getNetworkGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkGroupResult> getNetworkGroup(GetNetworkGroupArgs args) {
+        return getNetworkGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkGroupResult> getNetworkGroup(io.pulumi.azurenative.network.inputs.GetNetworkGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkGroupResult> getNetworkGroup(GetNetworkGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkGroup", TypeShape.of(GetNetworkGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -791,10 +791,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(io.pulumi.azurenative.network.inputs.GetNetworkInterfaceArgs args) {
-        return getNetworkInterface(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
+        return getNetworkInterface(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(io.pulumi.azurenative.network.inputs.GetNetworkInterfaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -802,10 +802,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> getNetworkInterfaceTapConfiguration(io.pulumi.azurenative.network.inputs.GetNetworkInterfaceTapConfigurationArgs args) {
-        return getNetworkInterfaceTapConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> getNetworkInterfaceTapConfiguration(GetNetworkInterfaceTapConfigurationArgs args) {
+        return getNetworkInterfaceTapConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> getNetworkInterfaceTapConfiguration(io.pulumi.azurenative.network.inputs.GetNetworkInterfaceTapConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> getNetworkInterfaceTapConfiguration(GetNetworkInterfaceTapConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkInterfaceTapConfiguration", TypeShape.of(GetNetworkInterfaceTapConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -813,10 +813,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetNetworkManagerResult> getNetworkManager(io.pulumi.azurenative.network.inputs.GetNetworkManagerArgs args) {
-        return getNetworkManager(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkManagerResult> getNetworkManager(GetNetworkManagerArgs args) {
+        return getNetworkManager(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkManagerResult> getNetworkManager(io.pulumi.azurenative.network.inputs.GetNetworkManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkManagerResult> getNetworkManager(GetNetworkManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkManager", TypeShape.of(GetNetworkManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -824,10 +824,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(io.pulumi.azurenative.network.inputs.GetNetworkProfileArgs args) {
-        return getNetworkProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(GetNetworkProfileArgs args) {
+        return getNetworkProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(io.pulumi.azurenative.network.inputs.GetNetworkProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkProfileResult> getNetworkProfile(GetNetworkProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkProfile", TypeShape.of(GetNetworkProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -835,10 +835,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(io.pulumi.azurenative.network.inputs.GetNetworkSecurityGroupArgs args) {
-        return getNetworkSecurityGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
+        return getNetworkSecurityGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(io.pulumi.azurenative.network.inputs.GetNetworkSecurityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -846,10 +846,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityPerimeterResult> getNetworkSecurityPerimeter(io.pulumi.azurenative.network.inputs.GetNetworkSecurityPerimeterArgs args) {
-        return getNetworkSecurityPerimeter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkSecurityPerimeterResult> getNetworkSecurityPerimeter(GetNetworkSecurityPerimeterArgs args) {
+        return getNetworkSecurityPerimeter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkSecurityPerimeterResult> getNetworkSecurityPerimeter(io.pulumi.azurenative.network.inputs.GetNetworkSecurityPerimeterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkSecurityPerimeterResult> getNetworkSecurityPerimeter(GetNetworkSecurityPerimeterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkSecurityPerimeter", TypeShape.of(GetNetworkSecurityPerimeterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -857,10 +857,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkVirtualApplianceResult> getNetworkVirtualAppliance(io.pulumi.azurenative.network.inputs.GetNetworkVirtualApplianceArgs args) {
-        return getNetworkVirtualAppliance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkVirtualApplianceResult> getNetworkVirtualAppliance(GetNetworkVirtualApplianceArgs args) {
+        return getNetworkVirtualAppliance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkVirtualApplianceResult> getNetworkVirtualAppliance(io.pulumi.azurenative.network.inputs.GetNetworkVirtualApplianceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkVirtualApplianceResult> getNetworkVirtualAppliance(GetNetworkVirtualApplianceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkVirtualAppliance", TypeShape.of(GetNetworkVirtualApplianceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -868,10 +868,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(io.pulumi.azurenative.network.inputs.GetNetworkWatcherArgs args) {
-        return getNetworkWatcher(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args) {
+        return getNetworkWatcher(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(io.pulumi.azurenative.network.inputs.GetNetworkWatcherArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -879,10 +879,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetP2sVpnGatewayResult> getP2sVpnGateway(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayArgs args) {
-        return getP2sVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetP2sVpnGatewayResult> getP2sVpnGateway(GetP2sVpnGatewayArgs args) {
+        return getP2sVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetP2sVpnGatewayResult> getP2sVpnGateway(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetP2sVpnGatewayResult> getP2sVpnGateway(GetP2sVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGateway", TypeShape.of(GetP2sVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -890,10 +890,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthResult> getP2sVpnGatewayP2sVpnConnectionHealth(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayP2sVpnConnectionHealthArgs args) {
-        return getP2sVpnGatewayP2sVpnConnectionHealth(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthResult> getP2sVpnGatewayP2sVpnConnectionHealth(GetP2sVpnGatewayP2sVpnConnectionHealthArgs args) {
+        return getP2sVpnGatewayP2sVpnConnectionHealth(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthResult> getP2sVpnGatewayP2sVpnConnectionHealth(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayP2sVpnConnectionHealthArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthResult> getP2sVpnGatewayP2sVpnConnectionHealth(GetP2sVpnGatewayP2sVpnConnectionHealthArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGatewayP2sVpnConnectionHealth", TypeShape.of(GetP2sVpnGatewayP2sVpnConnectionHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -901,10 +901,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> getP2sVpnGatewayP2sVpnConnectionHealthDetailed(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs args) {
-        return getP2sVpnGatewayP2sVpnConnectionHealthDetailed(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> getP2sVpnGatewayP2sVpnConnectionHealthDetailed(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs args) {
+        return getP2sVpnGatewayP2sVpnConnectionHealthDetailed(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> getP2sVpnGatewayP2sVpnConnectionHealthDetailed(io.pulumi.azurenative.network.inputs.GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> getP2sVpnGatewayP2sVpnConnectionHealthDetailed(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGatewayP2sVpnConnectionHealthDetailed", TypeShape.of(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -912,10 +912,10 @@ public final class NetworkFunctions {
      * API Version: 2019-07-01.
      * 
      */
-    public static CompletableFuture<GetP2sVpnServerConfigurationResult> getP2sVpnServerConfiguration(io.pulumi.azurenative.network.inputs.GetP2sVpnServerConfigurationArgs args) {
-        return getP2sVpnServerConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetP2sVpnServerConfigurationResult> getP2sVpnServerConfiguration(GetP2sVpnServerConfigurationArgs args) {
+        return getP2sVpnServerConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetP2sVpnServerConfigurationResult> getP2sVpnServerConfiguration(io.pulumi.azurenative.network.inputs.GetP2sVpnServerConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetP2sVpnServerConfigurationResult> getP2sVpnServerConfiguration(GetP2sVpnServerConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnServerConfiguration", TypeShape.of(GetP2sVpnServerConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -923,10 +923,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPacketCaptureResult> getPacketCapture(io.pulumi.azurenative.network.inputs.GetPacketCaptureArgs args) {
-        return getPacketCapture(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPacketCaptureResult> getPacketCapture(GetPacketCaptureArgs args) {
+        return getPacketCapture(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPacketCaptureResult> getPacketCapture(io.pulumi.azurenative.network.inputs.GetPacketCaptureArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPacketCaptureResult> getPacketCapture(GetPacketCaptureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPacketCapture", TypeShape.of(GetPacketCaptureResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -934,10 +934,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.network.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.azurenative.network.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -945,10 +945,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateDnsZoneGroupResult> getPrivateDnsZoneGroup(io.pulumi.azurenative.network.inputs.GetPrivateDnsZoneGroupArgs args) {
-        return getPrivateDnsZoneGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateDnsZoneGroupResult> getPrivateDnsZoneGroup(GetPrivateDnsZoneGroupArgs args) {
+        return getPrivateDnsZoneGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateDnsZoneGroupResult> getPrivateDnsZoneGroup(io.pulumi.azurenative.network.inputs.GetPrivateDnsZoneGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateDnsZoneGroupResult> getPrivateDnsZoneGroup(GetPrivateDnsZoneGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateDnsZoneGroup", TypeShape.of(GetPrivateDnsZoneGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -956,10 +956,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(io.pulumi.azurenative.network.inputs.GetPrivateEndpointArgs args) {
-        return getPrivateEndpoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args) {
+        return getPrivateEndpoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(io.pulumi.azurenative.network.inputs.GetPrivateEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointResult> getPrivateEndpoint(GetPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateEndpoint", TypeShape.of(GetPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -967,10 +967,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkServiceResult> getPrivateLinkService(io.pulumi.azurenative.network.inputs.GetPrivateLinkServiceArgs args) {
-        return getPrivateLinkService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateLinkServiceResult> getPrivateLinkService(GetPrivateLinkServiceArgs args) {
+        return getPrivateLinkService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateLinkServiceResult> getPrivateLinkService(io.pulumi.azurenative.network.inputs.GetPrivateLinkServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateLinkServiceResult> getPrivateLinkService(GetPrivateLinkServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateLinkService", TypeShape.of(GetPrivateLinkServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -978,10 +978,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> getPrivateLinkServicePrivateEndpointConnection(io.pulumi.azurenative.network.inputs.GetPrivateLinkServicePrivateEndpointConnectionArgs args) {
-        return getPrivateLinkServicePrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> getPrivateLinkServicePrivateEndpointConnection(GetPrivateLinkServicePrivateEndpointConnectionArgs args) {
+        return getPrivateLinkServicePrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> getPrivateLinkServicePrivateEndpointConnection(io.pulumi.azurenative.network.inputs.GetPrivateLinkServicePrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> getPrivateLinkServicePrivateEndpointConnection(GetPrivateLinkServicePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateLinkServicePrivateEndpointConnection", TypeShape.of(GetPrivateLinkServicePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -989,10 +989,10 @@ public final class NetworkFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateRecordSetResult> getPrivateRecordSet(io.pulumi.azurenative.network.inputs.GetPrivateRecordSetArgs args) {
-        return getPrivateRecordSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateRecordSetResult> getPrivateRecordSet(GetPrivateRecordSetArgs args) {
+        return getPrivateRecordSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateRecordSetResult> getPrivateRecordSet(io.pulumi.azurenative.network.inputs.GetPrivateRecordSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateRecordSetResult> getPrivateRecordSet(GetPrivateRecordSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateRecordSet", TypeShape.of(GetPrivateRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1000,10 +1000,10 @@ public final class NetworkFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateZoneResult> getPrivateZone(io.pulumi.azurenative.network.inputs.GetPrivateZoneArgs args) {
-        return getPrivateZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateZoneResult> getPrivateZone(GetPrivateZoneArgs args) {
+        return getPrivateZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateZoneResult> getPrivateZone(io.pulumi.azurenative.network.inputs.GetPrivateZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateZoneResult> getPrivateZone(GetPrivateZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateZone", TypeShape.of(GetPrivateZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1011,10 +1011,10 @@ public final class NetworkFunctions {
      * API Version: 2018-08-01.
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.network.inputs.GetProfileArgs args) {
-        return getProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args) {
+        return getProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfileResult> getProfile(io.pulumi.azurenative.network.inputs.GetProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1022,10 +1022,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPublicIPAddressResult> getPublicIPAddress(io.pulumi.azurenative.network.inputs.GetPublicIPAddressArgs args) {
-        return getPublicIPAddress(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicIPAddressResult> getPublicIPAddress(GetPublicIPAddressArgs args) {
+        return getPublicIPAddress(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicIPAddressResult> getPublicIPAddress(io.pulumi.azurenative.network.inputs.GetPublicIPAddressArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicIPAddressResult> getPublicIPAddress(GetPublicIPAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPublicIPAddress", TypeShape.of(GetPublicIPAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1033,10 +1033,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetPublicIPPrefixResult> getPublicIPPrefix(io.pulumi.azurenative.network.inputs.GetPublicIPPrefixArgs args) {
-        return getPublicIPPrefix(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicIPPrefixResult> getPublicIPPrefix(GetPublicIPPrefixArgs args) {
+        return getPublicIPPrefix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicIPPrefixResult> getPublicIPPrefix(io.pulumi.azurenative.network.inputs.GetPublicIPPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicIPPrefixResult> getPublicIPPrefix(GetPublicIPPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPublicIPPrefix", TypeShape.of(GetPublicIPPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1044,10 +1044,10 @@ public final class NetworkFunctions {
      * API Version: 2018-05-01.
      * 
      */
-    public static CompletableFuture<GetRecordSetResult> getRecordSet(io.pulumi.azurenative.network.inputs.GetRecordSetArgs args) {
-        return getRecordSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args) {
+        return getRecordSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRecordSetResult> getRecordSet(io.pulumi.azurenative.network.inputs.GetRecordSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRecordSet", TypeShape.of(GetRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1055,10 +1055,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.azurenative.network.inputs.GetRouteArgs args) {
-        return getRoute(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args) {
+        return getRoute(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteResult> getRoute(io.pulumi.azurenative.network.inputs.GetRouteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1066,10 +1066,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(io.pulumi.azurenative.network.inputs.GetRouteFilterArgs args) {
-        return getRouteFilter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args) {
+        return getRouteFilter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(io.pulumi.azurenative.network.inputs.GetRouteFilterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1077,10 +1077,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetRouteFilterRuleResult> getRouteFilterRule(io.pulumi.azurenative.network.inputs.GetRouteFilterRuleArgs args) {
-        return getRouteFilterRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteFilterRuleResult> getRouteFilterRule(GetRouteFilterRuleArgs args) {
+        return getRouteFilterRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteFilterRuleResult> getRouteFilterRule(io.pulumi.azurenative.network.inputs.GetRouteFilterRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteFilterRuleResult> getRouteFilterRule(GetRouteFilterRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteFilterRule", TypeShape.of(GetRouteFilterRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1088,10 +1088,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.azurenative.network.inputs.GetRouteTableArgs args) {
-        return getRouteTable(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+        return getRouteTable(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(io.pulumi.azurenative.network.inputs.GetRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1099,10 +1099,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01.
      * 
      */
-    public static CompletableFuture<GetRoutingIntentResult> getRoutingIntent(io.pulumi.azurenative.network.inputs.GetRoutingIntentArgs args) {
-        return getRoutingIntent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoutingIntentResult> getRoutingIntent(GetRoutingIntentArgs args) {
+        return getRoutingIntent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoutingIntentResult> getRoutingIntent(io.pulumi.azurenative.network.inputs.GetRoutingIntentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoutingIntentResult> getRoutingIntent(GetRoutingIntentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRoutingIntent", TypeShape.of(GetRoutingIntentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1110,10 +1110,10 @@ public final class NetworkFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetRulesEngineResult> getRulesEngine(io.pulumi.azurenative.network.inputs.GetRulesEngineArgs args) {
-        return getRulesEngine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRulesEngineResult> getRulesEngine(GetRulesEngineArgs args) {
+        return getRulesEngine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRulesEngineResult> getRulesEngine(io.pulumi.azurenative.network.inputs.GetRulesEngineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRulesEngineResult> getRulesEngine(GetRulesEngineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRulesEngine", TypeShape.of(GetRulesEngineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1121,10 +1121,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetScopeConnectionResult> getScopeConnection(io.pulumi.azurenative.network.inputs.GetScopeConnectionArgs args) {
-        return getScopeConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScopeConnectionResult> getScopeConnection(GetScopeConnectionArgs args) {
+        return getScopeConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScopeConnectionResult> getScopeConnection(io.pulumi.azurenative.network.inputs.GetScopeConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScopeConnectionResult> getScopeConnection(GetScopeConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getScopeConnection", TypeShape.of(GetScopeConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1132,10 +1132,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetSecurityAdminConfigurationResult> getSecurityAdminConfiguration(io.pulumi.azurenative.network.inputs.GetSecurityAdminConfigurationArgs args) {
-        return getSecurityAdminConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityAdminConfigurationResult> getSecurityAdminConfiguration(GetSecurityAdminConfigurationArgs args) {
+        return getSecurityAdminConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityAdminConfigurationResult> getSecurityAdminConfiguration(io.pulumi.azurenative.network.inputs.GetSecurityAdminConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityAdminConfigurationResult> getSecurityAdminConfiguration(GetSecurityAdminConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityAdminConfiguration", TypeShape.of(GetSecurityAdminConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1143,10 +1143,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetSecurityPartnerProviderResult> getSecurityPartnerProvider(io.pulumi.azurenative.network.inputs.GetSecurityPartnerProviderArgs args) {
-        return getSecurityPartnerProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityPartnerProviderResult> getSecurityPartnerProvider(GetSecurityPartnerProviderArgs args) {
+        return getSecurityPartnerProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityPartnerProviderResult> getSecurityPartnerProvider(io.pulumi.azurenative.network.inputs.GetSecurityPartnerProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityPartnerProviderResult> getSecurityPartnerProvider(GetSecurityPartnerProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityPartnerProvider", TypeShape.of(GetSecurityPartnerProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1154,10 +1154,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetSecurityRuleResult> getSecurityRule(io.pulumi.azurenative.network.inputs.GetSecurityRuleArgs args) {
-        return getSecurityRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityRuleResult> getSecurityRule(GetSecurityRuleArgs args) {
+        return getSecurityRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityRuleResult> getSecurityRule(io.pulumi.azurenative.network.inputs.GetSecurityRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityRuleResult> getSecurityRule(GetSecurityRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityRule", TypeShape.of(GetSecurityRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1165,10 +1165,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetSecurityUserConfigurationResult> getSecurityUserConfiguration(io.pulumi.azurenative.network.inputs.GetSecurityUserConfigurationArgs args) {
-        return getSecurityUserConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecurityUserConfigurationResult> getSecurityUserConfiguration(GetSecurityUserConfigurationArgs args) {
+        return getSecurityUserConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecurityUserConfigurationResult> getSecurityUserConfiguration(io.pulumi.azurenative.network.inputs.GetSecurityUserConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecurityUserConfigurationResult> getSecurityUserConfiguration(GetSecurityUserConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityUserConfiguration", TypeShape.of(GetSecurityUserConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1176,10 +1176,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetServiceEndpointPolicyResult> getServiceEndpointPolicy(io.pulumi.azurenative.network.inputs.GetServiceEndpointPolicyArgs args) {
-        return getServiceEndpointPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceEndpointPolicyResult> getServiceEndpointPolicy(GetServiceEndpointPolicyArgs args) {
+        return getServiceEndpointPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceEndpointPolicyResult> getServiceEndpointPolicy(io.pulumi.azurenative.network.inputs.GetServiceEndpointPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceEndpointPolicyResult> getServiceEndpointPolicy(GetServiceEndpointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getServiceEndpointPolicy", TypeShape.of(GetServiceEndpointPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1187,10 +1187,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetServiceEndpointPolicyDefinitionResult> getServiceEndpointPolicyDefinition(io.pulumi.azurenative.network.inputs.GetServiceEndpointPolicyDefinitionArgs args) {
-        return getServiceEndpointPolicyDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceEndpointPolicyDefinitionResult> getServiceEndpointPolicyDefinition(GetServiceEndpointPolicyDefinitionArgs args) {
+        return getServiceEndpointPolicyDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceEndpointPolicyDefinitionResult> getServiceEndpointPolicyDefinition(io.pulumi.azurenative.network.inputs.GetServiceEndpointPolicyDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceEndpointPolicyDefinitionResult> getServiceEndpointPolicyDefinition(GetServiceEndpointPolicyDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getServiceEndpointPolicyDefinition", TypeShape.of(GetServiceEndpointPolicyDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1198,10 +1198,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetStaticMemberResult> getStaticMember(io.pulumi.azurenative.network.inputs.GetStaticMemberArgs args) {
-        return getStaticMember(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStaticMemberResult> getStaticMember(GetStaticMemberArgs args) {
+        return getStaticMember(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStaticMemberResult> getStaticMember(io.pulumi.azurenative.network.inputs.GetStaticMemberArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticMemberResult> getStaticMember(GetStaticMemberArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getStaticMember", TypeShape.of(GetStaticMemberResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1209,10 +1209,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(io.pulumi.azurenative.network.inputs.GetSubnetArgs args) {
-        return getSubnet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+        return getSubnet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetResult> getSubnet(io.pulumi.azurenative.network.inputs.GetSubnetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1220,10 +1220,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> getSubscriptionNetworkManagerConnection(io.pulumi.azurenative.network.inputs.GetSubscriptionNetworkManagerConnectionArgs args) {
-        return getSubscriptionNetworkManagerConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> getSubscriptionNetworkManagerConnection(GetSubscriptionNetworkManagerConnectionArgs args) {
+        return getSubscriptionNetworkManagerConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> getSubscriptionNetworkManagerConnection(io.pulumi.azurenative.network.inputs.GetSubscriptionNetworkManagerConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> getSubscriptionNetworkManagerConnection(GetSubscriptionNetworkManagerConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSubscriptionNetworkManagerConnection", TypeShape.of(GetSubscriptionNetworkManagerConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1232,12 +1232,12 @@ public final class NetworkFunctions {
      * 
      */
     public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> getTrafficManagerUserMetricsKey() {
-        return getTrafficManagerUserMetricsKey(io.pulumi.azurenative.network.inputs.GetTrafficManagerUserMetricsKeyArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTrafficManagerUserMetricsKey(GetTrafficManagerUserMetricsKeyArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> getTrafficManagerUserMetricsKey(io.pulumi.azurenative.network.inputs.GetTrafficManagerUserMetricsKeyArgs args) {
-        return getTrafficManagerUserMetricsKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> getTrafficManagerUserMetricsKey(GetTrafficManagerUserMetricsKeyArgs args) {
+        return getTrafficManagerUserMetricsKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> getTrafficManagerUserMetricsKey(io.pulumi.azurenative.network.inputs.GetTrafficManagerUserMetricsKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> getTrafficManagerUserMetricsKey(GetTrafficManagerUserMetricsKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getTrafficManagerUserMetricsKey", TypeShape.of(GetTrafficManagerUserMetricsKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1249,10 +1249,10 @@ public final class NetworkFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: DefaultUserRule, UserRule. */
-    public static CompletableFuture<GetUserRuleResult> getUserRule(io.pulumi.azurenative.network.inputs.GetUserRuleArgs args) {
-        return getUserRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserRuleResult> getUserRule(GetUserRuleArgs args) {
+        return getUserRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserRuleResult> getUserRule(io.pulumi.azurenative.network.inputs.GetUserRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserRuleResult> getUserRule(GetUserRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getUserRule", TypeShape.of(GetUserRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1260,10 +1260,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetUserRuleCollectionResult> getUserRuleCollection(io.pulumi.azurenative.network.inputs.GetUserRuleCollectionArgs args) {
-        return getUserRuleCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserRuleCollectionResult> getUserRuleCollection(GetUserRuleCollectionArgs args) {
+        return getUserRuleCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserRuleCollectionResult> getUserRuleCollection(io.pulumi.azurenative.network.inputs.GetUserRuleCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserRuleCollectionResult> getUserRuleCollection(GetUserRuleCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getUserRuleCollection", TypeShape.of(GetUserRuleCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1271,10 +1271,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualApplianceSiteResult> getVirtualApplianceSite(io.pulumi.azurenative.network.inputs.GetVirtualApplianceSiteArgs args) {
-        return getVirtualApplianceSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualApplianceSiteResult> getVirtualApplianceSite(GetVirtualApplianceSiteArgs args) {
+        return getVirtualApplianceSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualApplianceSiteResult> getVirtualApplianceSite(io.pulumi.azurenative.network.inputs.GetVirtualApplianceSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualApplianceSiteResult> getVirtualApplianceSite(GetVirtualApplianceSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualApplianceSite", TypeShape.of(GetVirtualApplianceSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1282,10 +1282,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(io.pulumi.azurenative.network.inputs.GetVirtualHubArgs args) {
-        return getVirtualHub(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args) {
+        return getVirtualHub(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(io.pulumi.azurenative.network.inputs.GetVirtualHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1293,10 +1293,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualHubBgpConnectionResult> getVirtualHubBgpConnection(io.pulumi.azurenative.network.inputs.GetVirtualHubBgpConnectionArgs args) {
-        return getVirtualHubBgpConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualHubBgpConnectionResult> getVirtualHubBgpConnection(GetVirtualHubBgpConnectionArgs args) {
+        return getVirtualHubBgpConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualHubBgpConnectionResult> getVirtualHubBgpConnection(io.pulumi.azurenative.network.inputs.GetVirtualHubBgpConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualHubBgpConnectionResult> getVirtualHubBgpConnection(GetVirtualHubBgpConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubBgpConnection", TypeShape.of(GetVirtualHubBgpConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1304,10 +1304,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualHubIpConfigurationResult> getVirtualHubIpConfiguration(io.pulumi.azurenative.network.inputs.GetVirtualHubIpConfigurationArgs args) {
-        return getVirtualHubIpConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualHubIpConfigurationResult> getVirtualHubIpConfiguration(GetVirtualHubIpConfigurationArgs args) {
+        return getVirtualHubIpConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualHubIpConfigurationResult> getVirtualHubIpConfiguration(io.pulumi.azurenative.network.inputs.GetVirtualHubIpConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualHubIpConfigurationResult> getVirtualHubIpConfiguration(GetVirtualHubIpConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubIpConfiguration", TypeShape.of(GetVirtualHubIpConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1315,10 +1315,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualHubRouteTableV2Result> getVirtualHubRouteTableV2(io.pulumi.azurenative.network.inputs.GetVirtualHubRouteTableV2Args args) {
-        return getVirtualHubRouteTableV2(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualHubRouteTableV2Result> getVirtualHubRouteTableV2(GetVirtualHubRouteTableV2Args args) {
+        return getVirtualHubRouteTableV2(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualHubRouteTableV2Result> getVirtualHubRouteTableV2(io.pulumi.azurenative.network.inputs.GetVirtualHubRouteTableV2Args args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualHubRouteTableV2Result> getVirtualHubRouteTableV2(GetVirtualHubRouteTableV2Args args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubRouteTableV2", TypeShape.of(GetVirtualHubRouteTableV2Result.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1326,10 +1326,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.network.inputs.GetVirtualNetworkArgs args) {
-        return getVirtualNetwork(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+        return getVirtualNetwork(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(io.pulumi.azurenative.network.inputs.GetVirtualNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1337,10 +1337,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayArgs args) {
-        return getVirtualNetworkGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args) {
+        return getVirtualNetworkGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGateway", TypeShape.of(GetVirtualNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1348,10 +1348,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> getVirtualNetworkGatewayAdvertisedRoutes(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayAdvertisedRoutesArgs args) {
-        return getVirtualNetworkGatewayAdvertisedRoutes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> getVirtualNetworkGatewayAdvertisedRoutes(GetVirtualNetworkGatewayAdvertisedRoutesArgs args) {
+        return getVirtualNetworkGatewayAdvertisedRoutes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> getVirtualNetworkGatewayAdvertisedRoutes(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayAdvertisedRoutesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> getVirtualNetworkGatewayAdvertisedRoutes(GetVirtualNetworkGatewayAdvertisedRoutesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayAdvertisedRoutes", TypeShape.of(GetVirtualNetworkGatewayAdvertisedRoutesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1359,10 +1359,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> getVirtualNetworkGatewayBgpPeerStatus(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayBgpPeerStatusArgs args) {
-        return getVirtualNetworkGatewayBgpPeerStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> getVirtualNetworkGatewayBgpPeerStatus(GetVirtualNetworkGatewayBgpPeerStatusArgs args) {
+        return getVirtualNetworkGatewayBgpPeerStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> getVirtualNetworkGatewayBgpPeerStatus(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayBgpPeerStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayBgpPeerStatusResult> getVirtualNetworkGatewayBgpPeerStatus(GetVirtualNetworkGatewayBgpPeerStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayBgpPeerStatus", TypeShape.of(GetVirtualNetworkGatewayBgpPeerStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1370,10 +1370,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> getVirtualNetworkGatewayConnection(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayConnectionArgs args) {
-        return getVirtualNetworkGatewayConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> getVirtualNetworkGatewayConnection(GetVirtualNetworkGatewayConnectionArgs args) {
+        return getVirtualNetworkGatewayConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> getVirtualNetworkGatewayConnection(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> getVirtualNetworkGatewayConnection(GetVirtualNetworkGatewayConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayConnection", TypeShape.of(GetVirtualNetworkGatewayConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1381,10 +1381,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> getVirtualNetworkGatewayLearnedRoutes(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayLearnedRoutesArgs args) {
-        return getVirtualNetworkGatewayLearnedRoutes(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> getVirtualNetworkGatewayLearnedRoutes(GetVirtualNetworkGatewayLearnedRoutesArgs args) {
+        return getVirtualNetworkGatewayLearnedRoutes(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> getVirtualNetworkGatewayLearnedRoutes(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayLearnedRoutesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> getVirtualNetworkGatewayLearnedRoutes(GetVirtualNetworkGatewayLearnedRoutesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayLearnedRoutes", TypeShape.of(GetVirtualNetworkGatewayLearnedRoutesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1392,10 +1392,10 @@ public final class NetworkFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> getVirtualNetworkGatewayNatRule(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayNatRuleArgs args) {
-        return getVirtualNetworkGatewayNatRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> getVirtualNetworkGatewayNatRule(GetVirtualNetworkGatewayNatRuleArgs args) {
+        return getVirtualNetworkGatewayNatRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> getVirtualNetworkGatewayNatRule(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayNatRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> getVirtualNetworkGatewayNatRule(GetVirtualNetworkGatewayNatRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayNatRule", TypeShape.of(GetVirtualNetworkGatewayNatRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1403,10 +1403,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> getVirtualNetworkGatewayVpnclientConnectionHealth(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayVpnclientConnectionHealthArgs args) {
-        return getVirtualNetworkGatewayVpnclientConnectionHealth(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> getVirtualNetworkGatewayVpnclientConnectionHealth(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs args) {
+        return getVirtualNetworkGatewayVpnclientConnectionHealth(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> getVirtualNetworkGatewayVpnclientConnectionHealth(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayVpnclientConnectionHealthArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> getVirtualNetworkGatewayVpnclientConnectionHealth(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayVpnclientConnectionHealth", TypeShape.of(GetVirtualNetworkGatewayVpnclientConnectionHealthResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1414,10 +1414,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> getVirtualNetworkGatewayVpnclientIpsecParameters(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayVpnclientIpsecParametersArgs args) {
-        return getVirtualNetworkGatewayVpnclientIpsecParameters(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> getVirtualNetworkGatewayVpnclientIpsecParameters(GetVirtualNetworkGatewayVpnclientIpsecParametersArgs args) {
+        return getVirtualNetworkGatewayVpnclientIpsecParameters(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> getVirtualNetworkGatewayVpnclientIpsecParameters(io.pulumi.azurenative.network.inputs.GetVirtualNetworkGatewayVpnclientIpsecParametersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientIpsecParametersResult> getVirtualNetworkGatewayVpnclientIpsecParameters(GetVirtualNetworkGatewayVpnclientIpsecParametersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayVpnclientIpsecParameters", TypeShape.of(GetVirtualNetworkGatewayVpnclientIpsecParametersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1425,10 +1425,10 @@ public final class NetworkFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkLinkResult> getVirtualNetworkLink(io.pulumi.azurenative.network.inputs.GetVirtualNetworkLinkArgs args) {
-        return getVirtualNetworkLink(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkLinkResult> getVirtualNetworkLink(GetVirtualNetworkLinkArgs args) {
+        return getVirtualNetworkLink(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkLinkResult> getVirtualNetworkLink(io.pulumi.azurenative.network.inputs.GetVirtualNetworkLinkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkLinkResult> getVirtualNetworkLink(GetVirtualNetworkLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkLink", TypeShape.of(GetVirtualNetworkLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1436,10 +1436,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkPeeringResult> getVirtualNetworkPeering(io.pulumi.azurenative.network.inputs.GetVirtualNetworkPeeringArgs args) {
-        return getVirtualNetworkPeering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkPeeringResult> getVirtualNetworkPeering(GetVirtualNetworkPeeringArgs args) {
+        return getVirtualNetworkPeering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkPeeringResult> getVirtualNetworkPeering(io.pulumi.azurenative.network.inputs.GetVirtualNetworkPeeringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkPeeringResult> getVirtualNetworkPeering(GetVirtualNetworkPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkPeering", TypeShape.of(GetVirtualNetworkPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1447,10 +1447,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkTapResult> getVirtualNetworkTap(io.pulumi.azurenative.network.inputs.GetVirtualNetworkTapArgs args) {
-        return getVirtualNetworkTap(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkTapResult> getVirtualNetworkTap(GetVirtualNetworkTapArgs args) {
+        return getVirtualNetworkTap(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkTapResult> getVirtualNetworkTap(io.pulumi.azurenative.network.inputs.GetVirtualNetworkTapArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkTapResult> getVirtualNetworkTap(GetVirtualNetworkTapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkTap", TypeShape.of(GetVirtualNetworkTapResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1458,10 +1458,10 @@ public final class NetworkFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetVirtualRouterResult> getVirtualRouter(io.pulumi.azurenative.network.inputs.GetVirtualRouterArgs args) {
-        return getVirtualRouter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualRouterResult> getVirtualRouter(GetVirtualRouterArgs args) {
+        return getVirtualRouter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualRouterResult> getVirtualRouter(io.pulumi.azurenative.network.inputs.GetVirtualRouterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualRouterResult> getVirtualRouter(GetVirtualRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualRouter", TypeShape.of(GetVirtualRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1469,10 +1469,10 @@ public final class NetworkFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetVirtualRouterPeeringResult> getVirtualRouterPeering(io.pulumi.azurenative.network.inputs.GetVirtualRouterPeeringArgs args) {
-        return getVirtualRouterPeering(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualRouterPeeringResult> getVirtualRouterPeering(GetVirtualRouterPeeringArgs args) {
+        return getVirtualRouterPeering(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualRouterPeeringResult> getVirtualRouterPeering(io.pulumi.azurenative.network.inputs.GetVirtualRouterPeeringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualRouterPeeringResult> getVirtualRouterPeering(GetVirtualRouterPeeringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualRouterPeering", TypeShape.of(GetVirtualRouterPeeringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1480,10 +1480,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(io.pulumi.azurenative.network.inputs.GetVirtualWanArgs args) {
-        return getVirtualWan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args) {
+        return getVirtualWan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(io.pulumi.azurenative.network.inputs.GetVirtualWanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1491,10 +1491,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVpnConnectionResult> getVpnConnection(io.pulumi.azurenative.network.inputs.GetVpnConnectionArgs args) {
-        return getVpnConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnConnectionResult> getVpnConnection(GetVpnConnectionArgs args) {
+        return getVpnConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnConnectionResult> getVpnConnection(io.pulumi.azurenative.network.inputs.GetVpnConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnConnectionResult> getVpnConnection(GetVpnConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnConnection", TypeShape.of(GetVpnConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1502,10 +1502,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.azurenative.network.inputs.GetVpnGatewayArgs args) {
-        return getVpnGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+        return getVpnGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(io.pulumi.azurenative.network.inputs.GetVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1513,10 +1513,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVpnServerConfigurationResult> getVpnServerConfiguration(io.pulumi.azurenative.network.inputs.GetVpnServerConfigurationArgs args) {
-        return getVpnServerConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnServerConfigurationResult> getVpnServerConfiguration(GetVpnServerConfigurationArgs args) {
+        return getVpnServerConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnServerConfigurationResult> getVpnServerConfiguration(io.pulumi.azurenative.network.inputs.GetVpnServerConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnServerConfigurationResult> getVpnServerConfiguration(GetVpnServerConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnServerConfiguration", TypeShape.of(GetVpnServerConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1524,10 +1524,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetVpnSiteResult> getVpnSite(io.pulumi.azurenative.network.inputs.GetVpnSiteArgs args) {
-        return getVpnSite(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVpnSiteResult> getVpnSite(GetVpnSiteArgs args) {
+        return getVpnSite(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVpnSiteResult> getVpnSite(io.pulumi.azurenative.network.inputs.GetVpnSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnSiteResult> getVpnSite(GetVpnSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnSite", TypeShape.of(GetVpnSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1535,10 +1535,10 @@ public final class NetworkFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> getWebApplicationFirewallPolicy(io.pulumi.azurenative.network.inputs.GetWebApplicationFirewallPolicyArgs args) {
-        return getWebApplicationFirewallPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> getWebApplicationFirewallPolicy(GetWebApplicationFirewallPolicyArgs args) {
+        return getWebApplicationFirewallPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> getWebApplicationFirewallPolicy(io.pulumi.azurenative.network.inputs.GetWebApplicationFirewallPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebApplicationFirewallPolicyResult> getWebApplicationFirewallPolicy(GetWebApplicationFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getWebApplicationFirewallPolicy", TypeShape.of(GetWebApplicationFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1546,10 +1546,10 @@ public final class NetworkFunctions {
      * API Version: 2018-05-01.
      * 
      */
-    public static CompletableFuture<GetZoneResult> getZone(io.pulumi.azurenative.network.inputs.GetZoneArgs args) {
-        return getZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args) {
+        return getZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetZoneResult> getZone(io.pulumi.azurenative.network.inputs.GetZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1557,10 +1557,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListActiveConnectivityConfigurationResult> listActiveConnectivityConfiguration(io.pulumi.azurenative.network.inputs.ListActiveConnectivityConfigurationArgs args) {
-        return listActiveConnectivityConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListActiveConnectivityConfigurationResult> listActiveConnectivityConfiguration(ListActiveConnectivityConfigurationArgs args) {
+        return listActiveConnectivityConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListActiveConnectivityConfigurationResult> listActiveConnectivityConfiguration(io.pulumi.azurenative.network.inputs.ListActiveConnectivityConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListActiveConnectivityConfigurationResult> listActiveConnectivityConfiguration(ListActiveConnectivityConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveConnectivityConfiguration", TypeShape.of(ListActiveConnectivityConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1568,10 +1568,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListActiveSecurityAdminRuleResult> listActiveSecurityAdminRule(io.pulumi.azurenative.network.inputs.ListActiveSecurityAdminRuleArgs args) {
-        return listActiveSecurityAdminRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListActiveSecurityAdminRuleResult> listActiveSecurityAdminRule(ListActiveSecurityAdminRuleArgs args) {
+        return listActiveSecurityAdminRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListActiveSecurityAdminRuleResult> listActiveSecurityAdminRule(io.pulumi.azurenative.network.inputs.ListActiveSecurityAdminRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListActiveSecurityAdminRuleResult> listActiveSecurityAdminRule(ListActiveSecurityAdminRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveSecurityAdminRule", TypeShape.of(ListActiveSecurityAdminRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1579,10 +1579,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListActiveSecurityUserRuleResult> listActiveSecurityUserRule(io.pulumi.azurenative.network.inputs.ListActiveSecurityUserRuleArgs args) {
-        return listActiveSecurityUserRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListActiveSecurityUserRuleResult> listActiveSecurityUserRule(ListActiveSecurityUserRuleArgs args) {
+        return listActiveSecurityUserRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListActiveSecurityUserRuleResult> listActiveSecurityUserRule(io.pulumi.azurenative.network.inputs.ListActiveSecurityUserRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListActiveSecurityUserRuleResult> listActiveSecurityUserRule(ListActiveSecurityUserRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveSecurityUserRule", TypeShape.of(ListActiveSecurityUserRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1590,10 +1590,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> listEffectiveConnectivityConfiguration(io.pulumi.azurenative.network.inputs.ListEffectiveConnectivityConfigurationArgs args) {
-        return listEffectiveConnectivityConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> listEffectiveConnectivityConfiguration(ListEffectiveConnectivityConfigurationArgs args) {
+        return listEffectiveConnectivityConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> listEffectiveConnectivityConfiguration(io.pulumi.azurenative.network.inputs.ListEffectiveConnectivityConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> listEffectiveConnectivityConfiguration(ListEffectiveConnectivityConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveConnectivityConfiguration", TypeShape.of(ListEffectiveConnectivityConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1601,10 +1601,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> listEffectiveVirtualNetworkByNetworkGroup(io.pulumi.azurenative.network.inputs.ListEffectiveVirtualNetworkByNetworkGroupArgs args) {
-        return listEffectiveVirtualNetworkByNetworkGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> listEffectiveVirtualNetworkByNetworkGroup(ListEffectiveVirtualNetworkByNetworkGroupArgs args) {
+        return listEffectiveVirtualNetworkByNetworkGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> listEffectiveVirtualNetworkByNetworkGroup(io.pulumi.azurenative.network.inputs.ListEffectiveVirtualNetworkByNetworkGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkGroupResult> listEffectiveVirtualNetworkByNetworkGroup(ListEffectiveVirtualNetworkByNetworkGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveVirtualNetworkByNetworkGroup", TypeShape.of(ListEffectiveVirtualNetworkByNetworkGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1612,10 +1612,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkManagerResult> listEffectiveVirtualNetworkByNetworkManager(io.pulumi.azurenative.network.inputs.ListEffectiveVirtualNetworkByNetworkManagerArgs args) {
-        return listEffectiveVirtualNetworkByNetworkManager(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkManagerResult> listEffectiveVirtualNetworkByNetworkManager(ListEffectiveVirtualNetworkByNetworkManagerArgs args) {
+        return listEffectiveVirtualNetworkByNetworkManager(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkManagerResult> listEffectiveVirtualNetworkByNetworkManager(io.pulumi.azurenative.network.inputs.ListEffectiveVirtualNetworkByNetworkManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEffectiveVirtualNetworkByNetworkManagerResult> listEffectiveVirtualNetworkByNetworkManager(ListEffectiveVirtualNetworkByNetworkManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveVirtualNetworkByNetworkManager", TypeShape.of(ListEffectiveVirtualNetworkByNetworkManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1623,10 +1623,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01.
      * 
      */
-    public static CompletableFuture<ListFirewallPolicyIdpsSignatureResult> listFirewallPolicyIdpsSignature(io.pulumi.azurenative.network.inputs.ListFirewallPolicyIdpsSignatureArgs args) {
-        return listFirewallPolicyIdpsSignature(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListFirewallPolicyIdpsSignatureResult> listFirewallPolicyIdpsSignature(ListFirewallPolicyIdpsSignatureArgs args) {
+        return listFirewallPolicyIdpsSignature(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListFirewallPolicyIdpsSignatureResult> listFirewallPolicyIdpsSignature(io.pulumi.azurenative.network.inputs.ListFirewallPolicyIdpsSignatureArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListFirewallPolicyIdpsSignatureResult> listFirewallPolicyIdpsSignature(ListFirewallPolicyIdpsSignatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listFirewallPolicyIdpsSignature", TypeShape.of(ListFirewallPolicyIdpsSignatureResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1634,10 +1634,10 @@ public final class NetworkFunctions {
      * API Version: 2021-05-01.
      * 
      */
-    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> listFirewallPolicyIdpsSignaturesFilterValue(io.pulumi.azurenative.network.inputs.ListFirewallPolicyIdpsSignaturesFilterValueArgs args) {
-        return listFirewallPolicyIdpsSignaturesFilterValue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> listFirewallPolicyIdpsSignaturesFilterValue(ListFirewallPolicyIdpsSignaturesFilterValueArgs args) {
+        return listFirewallPolicyIdpsSignaturesFilterValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> listFirewallPolicyIdpsSignaturesFilterValue(io.pulumi.azurenative.network.inputs.ListFirewallPolicyIdpsSignaturesFilterValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListFirewallPolicyIdpsSignaturesFilterValueResult> listFirewallPolicyIdpsSignaturesFilterValue(ListFirewallPolicyIdpsSignaturesFilterValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listFirewallPolicyIdpsSignaturesFilterValue", TypeShape.of(ListFirewallPolicyIdpsSignaturesFilterValueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1645,10 +1645,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> listNetworkManagerDeploymentStatus(io.pulumi.azurenative.network.inputs.ListNetworkManagerDeploymentStatusArgs args) {
-        return listNetworkManagerDeploymentStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> listNetworkManagerDeploymentStatus(ListNetworkManagerDeploymentStatusArgs args) {
+        return listNetworkManagerDeploymentStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> listNetworkManagerDeploymentStatus(io.pulumi.azurenative.network.inputs.ListNetworkManagerDeploymentStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> listNetworkManagerDeploymentStatus(ListNetworkManagerDeploymentStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listNetworkManagerDeploymentStatus", TypeShape.of(ListNetworkManagerDeploymentStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1656,10 +1656,10 @@ public final class NetworkFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<ListNetworkManagerEffectiveSecurityAdminRuleResult> listNetworkManagerEffectiveSecurityAdminRule(io.pulumi.azurenative.network.inputs.ListNetworkManagerEffectiveSecurityAdminRuleArgs args) {
-        return listNetworkManagerEffectiveSecurityAdminRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNetworkManagerEffectiveSecurityAdminRuleResult> listNetworkManagerEffectiveSecurityAdminRule(ListNetworkManagerEffectiveSecurityAdminRuleArgs args) {
+        return listNetworkManagerEffectiveSecurityAdminRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNetworkManagerEffectiveSecurityAdminRuleResult> listNetworkManagerEffectiveSecurityAdminRule(io.pulumi.azurenative.network.inputs.ListNetworkManagerEffectiveSecurityAdminRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNetworkManagerEffectiveSecurityAdminRuleResult> listNetworkManagerEffectiveSecurityAdminRule(ListNetworkManagerEffectiveSecurityAdminRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listNetworkManagerEffectiveSecurityAdminRule", TypeShape.of(ListNetworkManagerEffectiveSecurityAdminRuleResult.class), args, Utilities.withVersion(options));
     }
 }

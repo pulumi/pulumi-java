@@ -24,50 +24,50 @@ public final class MemorydbFunctions {
      * Resource Type definition for AWS::MemoryDB::ACL
      * 
      */
-    public static CompletableFuture<GetACLResult> getACL(io.pulumi.awsnative.memorydb.inputs.GetACLArgs args) {
-        return getACL(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetACLResult> getACL(GetACLArgs args) {
+        return getACL(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetACLResult> getACL(io.pulumi.awsnative.memorydb.inputs.GetACLArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetACLResult> getACL(GetACLArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getACL", TypeShape.of(GetACLResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::Cluster resource creates an Amazon MemoryDB Cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.memorydb.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.memorydb.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
      * 
      */
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(io.pulumi.awsnative.memorydb.inputs.GetParameterGroupArgs args) {
-        return getParameterGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
+        return getParameterGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(io.pulumi.awsnative.memorydb.inputs.GetParameterGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(io.pulumi.awsnative.memorydb.inputs.GetSubnetGroupArgs args) {
-        return getSubnetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
+        return getSubnetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(io.pulumi.awsnative.memorydb.inputs.GetSubnetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::MemoryDB::User
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.memorydb.inputs.GetUserArgs args) {
-        return getUser(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+        return getUser(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserResult> getUser(io.pulumi.awsnative.memorydb.inputs.GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

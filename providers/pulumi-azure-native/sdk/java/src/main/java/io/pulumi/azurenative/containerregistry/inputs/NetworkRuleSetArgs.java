@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
     public Output<List<IPRuleArgs>> getIpRules() {
-        return this.ipRules == null ? Output.empty() : this.ipRules;
+        return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
+        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 
     public NetworkRuleSetArgs(
@@ -66,9 +67,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleSetArgs() {
-        this.defaultAction = Output.empty();
-        this.ipRules = Output.empty();
-        this.virtualNetworkRules = Output.empty();
+        this.defaultAction = Codegen.empty();
+        this.ipRules = Codegen.empty();
+        this.virtualNetworkRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
-            this.ipRules = Output.ofNullable(ipRules);
+            this.ipRules = Codegen.ofNullable(ipRules);
             return this;
         }
         public Builder ipRules(IPRuleArgs... ipRules) {
@@ -119,7 +120,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
             return this;
         }
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {

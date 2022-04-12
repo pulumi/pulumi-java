@@ -9,6 +9,7 @@ import io.pulumi.aws.servicediscovery.inputs.HttpNamespaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -120,7 +121,7 @@ public class HttpNamespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HttpNamespace(String name, @Nullable HttpNamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicediscovery/httpNamespace:HttpNamespace", name, args == null ? HttpNamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicediscovery/httpNamespace:HttpNamespace", name, args == null ? HttpNamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HttpNamespace(String name, Output<String> id, @Nullable HttpNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

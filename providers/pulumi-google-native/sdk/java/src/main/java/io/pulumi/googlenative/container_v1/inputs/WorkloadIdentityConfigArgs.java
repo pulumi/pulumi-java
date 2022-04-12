@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> workloadPool;
 
     public Output<String> getWorkloadPool() {
-        return this.workloadPool == null ? Output.empty() : this.workloadPool;
+        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 
     public WorkloadIdentityConfigArgs(@Nullable Output<String> workloadPool) {
@@ -34,7 +35,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadIdentityConfigArgs() {
-        this.workloadPool = Output.empty();
+        this.workloadPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Output.ofNullable(workloadPool);
+            this.workloadPool = Codegen.ofNullable(workloadPool);
             return this;
         }        public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(workloadPool);

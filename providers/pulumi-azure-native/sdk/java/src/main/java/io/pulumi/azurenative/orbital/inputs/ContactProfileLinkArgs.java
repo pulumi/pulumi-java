@@ -9,6 +9,7 @@ import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +55,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> eirpdBW;
 
     public Output<Double> getEirpdBW() {
-        return this.eirpdBW == null ? Output.empty() : this.eirpdBW;
+        return this.eirpdBW == null ? Codegen.empty() : this.eirpdBW;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> gainOverTemperature;
 
     public Output<Double> getGainOverTemperature() {
-        return this.gainOverTemperature == null ? Output.empty() : this.gainOverTemperature;
+        return this.gainOverTemperature == null ? Codegen.empty() : this.gainOverTemperature;
     }
 
     /**
@@ -93,11 +94,11 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContactProfileLinkArgs() {
-        this.channels = Output.empty();
-        this.direction = Output.empty();
-        this.eirpdBW = Output.empty();
-        this.gainOverTemperature = Output.empty();
-        this.polarization = Output.empty();
+        this.channels = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.eirpdBW = Codegen.empty();
+        this.gainOverTemperature = Codegen.empty();
+        this.polarization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eirpdBW(@Nullable Double eirpdBW) {
-            this.eirpdBW = Output.ofNullable(eirpdBW);
+            this.eirpdBW = Codegen.ofNullable(eirpdBW);
             return this;
         }
         public Builder gainOverTemperature(@Nullable Output<Double> gainOverTemperature) {
@@ -160,7 +161,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
-            this.gainOverTemperature = Output.ofNullable(gainOverTemperature);
+            this.gainOverTemperature = Codegen.ofNullable(gainOverTemperature);
             return this;
         }
         public Builder polarization(Output<Either<String,Polarization>> polarization) {

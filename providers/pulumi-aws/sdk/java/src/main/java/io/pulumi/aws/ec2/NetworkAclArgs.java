@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.NetworkAclEgressArgs;
 import io.pulumi.aws.ec2.inputs.NetworkAclIngressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkAclEgressArgs>> egress;
 
     public Output<List<NetworkAclEgressArgs>> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkAclIngressArgs>> ingress;
 
     public Output<List<NetworkAclIngressArgs>> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkAclArgs() {
-        this.egress = Output.empty();
-        this.ingress = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.egress = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egress(@Nullable List<NetworkAclEgressArgs> egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }
         public Builder egress(NetworkAclEgressArgs... egress) {
@@ -138,7 +139,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable List<NetworkAclIngressArgs> ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder ingress(NetworkAclIngressArgs... ingress) {
@@ -149,7 +150,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -160,7 +161,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

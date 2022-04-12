@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLAllowActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,14 +24,14 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
     public Output<WebACLAllowActionArgs> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
     public Output<WebACLBlockActionArgs> getBlock() {
-        return this.block == null ? Output.empty() : this.block;
+        return this.block == null ? Codegen.empty() : this.block;
     }
 
     public WebACLDefaultActionArgs(
@@ -41,8 +42,8 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebACLDefaultActionArgs() {
-        this.allow = Output.empty();
-        this.block = Output.empty();
+        this.allow = Codegen.empty();
+        this.block = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allow(@Nullable WebACLAllowActionArgs allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
@@ -80,7 +81,7 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder block(@Nullable WebACLBlockActionArgs block) {
-            this.block = Output.ofNullable(block);
+            this.block = Codegen.ofNullable(block);
             return this;
         }        public WebACLDefaultActionArgs build() {
             return new WebACLDefaultActionArgs(allow, block);

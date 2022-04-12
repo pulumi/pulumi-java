@@ -9,6 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
-        return this.pfx == null ? Output.empty() : this.pfx;
+        return this.pfx == null ? Codegen.empty() : this.pfx;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> resource;
 
     public Output<Object> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> userTenant;
 
     public Output<Object> getUserTenant() {
-        return this.userTenant == null ? Output.empty() : this.userTenant;
+        return this.userTenant == null ? Codegen.empty() : this.userTenant;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public WebActivityAuthenticationArgs(
@@ -118,13 +119,13 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
     }
 
     private WebActivityAuthenticationArgs() {
-        this.credential = Output.empty();
-        this.password = Output.empty();
-        this.pfx = Output.empty();
-        this.resource = Output.empty();
-        this.type = Output.empty();
-        this.userTenant = Output.empty();
-        this.username = Output.empty();
+        this.credential = Codegen.empty();
+        this.password = Codegen.empty();
+        this.pfx = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userTenant = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -172,7 +173,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder pfx(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
@@ -180,7 +181,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
-            this.pfx = Output.ofNullable(pfx);
+            this.pfx = Codegen.ofNullable(pfx);
             return this;
         }
         public Builder resource(@Nullable Output<Object> resource) {
@@ -188,7 +189,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resource(@Nullable Object resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -196,7 +197,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userTenant(@Nullable Output<Object> userTenant) {
@@ -204,7 +205,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userTenant(@Nullable Object userTenant) {
-            this.userTenant = Output.ofNullable(userTenant);
+            this.userTenant = Codegen.ofNullable(userTenant);
             return this;
         }
         public Builder username(@Nullable Output<Object> username) {
@@ -212,7 +213,7 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public WebActivityAuthenticationArgs build() {
             return new WebActivityAuthenticationArgs(credential, password, pfx, resource, type, userTenant, username);

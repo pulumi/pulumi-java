@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class NfsFileShareCacheAttributesArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
     public Output<Integer> getCacheStaleTimeoutInSeconds() {
-        return this.cacheStaleTimeoutInSeconds == null ? Output.empty() : this.cacheStaleTimeoutInSeconds;
+        return this.cacheStaleTimeoutInSeconds == null ? Codegen.empty() : this.cacheStaleTimeoutInSeconds;
     }
 
     public NfsFileShareCacheAttributesArgs(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
@@ -32,7 +33,7 @@ public final class NfsFileShareCacheAttributesArgs extends io.pulumi.resources.R
     }
 
     private NfsFileShareCacheAttributesArgs() {
-        this.cacheStaleTimeoutInSeconds = Output.empty();
+        this.cacheStaleTimeoutInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class NfsFileShareCacheAttributesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = Output.ofNullable(cacheStaleTimeoutInSeconds);
+            this.cacheStaleTimeoutInSeconds = Codegen.ofNullable(cacheStaleTimeoutInSeconds);
             return this;
         }        public NfsFileShareCacheAttributesArgs build() {
             return new NfsFileShareCacheAttributesArgs(cacheStaleTimeoutInSeconds);

@@ -17,10 +17,10 @@ public final class AddonsFunctions {
      * API Version: 2018-03-01.
      * 
      */
-    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(io.pulumi.azurenative.addons.inputs.GetSupportPlanTypeArgs args) {
-        return getSupportPlanType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args) {
+        return getSupportPlanType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(io.pulumi.azurenative.addons.inputs.GetSupportPlanTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:addons:getSupportPlanType", TypeShape.of(GetSupportPlanTypeResult.class), args, Utilities.withVersion(options));
     }
 }

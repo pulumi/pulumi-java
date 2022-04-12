@@ -23,10 +23,10 @@ public final class BatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(io.pulumi.aws.batch.inputs.GetComputeEnvironmentArgs args) {
-        return getComputeEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
+        return getComputeEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(io.pulumi.aws.batch.inputs.GetComputeEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:batch/getComputeEnvironment:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class BatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(io.pulumi.aws.batch.inputs.GetJobQueueArgs args) {
-        return getJobQueue(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
+        return getJobQueue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(io.pulumi.aws.batch.inputs.GetJobQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:batch/getJobQueue:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class BatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(io.pulumi.aws.batch.inputs.GetSchedulingPolicyArgs args) {
-        return getSchedulingPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
+        return getSchedulingPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(io.pulumi.aws.batch.inputs.GetSchedulingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:batch/getSchedulingPolicy:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

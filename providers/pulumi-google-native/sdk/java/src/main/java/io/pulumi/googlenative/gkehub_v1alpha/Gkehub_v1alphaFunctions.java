@@ -24,50 +24,50 @@ public final class Gkehub_v1alphaFunctions {
      * Gets details of a single Feature.
      * 
      */
-    public static CompletableFuture<GetFeatureResult> getFeature(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureArgs args) {
-        return getFeature(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args) {
+        return getFeature(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeatureResult> getFeature(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureIamPolicyArgs args) {
-        return getFeatureIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args) {
+        return getFeatureIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the details of a fleet.
      * 
      */
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFleetArgs args) {
-        return getFleet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args) {
+        return getFleet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetFleetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the details of a Membership.
      * 
      */
-    public static CompletableFuture<GetMembershipResult> getMembership(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipArgs args) {
-        return getMembership(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args) {
+        return getMembership(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMembershipResult> getMembership(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipIamPolicyArgs args) {
-        return getMembershipIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args) {
+        return getMembershipIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(io.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -20,10 +20,10 @@ public final class SignerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSigningJobResult> getSigningJob(io.pulumi.aws.signer.inputs.GetSigningJobArgs args) {
-        return getSigningJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSigningJobResult> getSigningJob(GetSigningJobArgs args) {
+        return getSigningJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSigningJobResult> getSigningJob(io.pulumi.aws.signer.inputs.GetSigningJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSigningJobResult> getSigningJob(GetSigningJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:signer/getSigningJob:getSigningJob", TypeShape.of(GetSigningJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class SignerFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(io.pulumi.aws.signer.inputs.GetSigningProfileArgs args) {
-        return getSigningProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args) {
+        return getSigningProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(io.pulumi.aws.signer.inputs.GetSigningProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSigningProfileResult> getSigningProfile(GetSigningProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:signer/getSigningProfile:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args, Utilities.withVersion(options));
     }
 }

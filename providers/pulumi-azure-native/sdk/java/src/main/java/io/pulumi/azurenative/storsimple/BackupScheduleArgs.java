@@ -9,6 +9,7 @@ import io.pulumi.azurenative.storsimple.enums.ScheduleStatus;
 import io.pulumi.azurenative.storsimple.inputs.ScheduleRecurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupScheduleName;
 
     public Output<String> getBackupScheduleName() {
-        return this.backupScheduleName == null ? Output.empty() : this.backupScheduleName;
+        return this.backupScheduleName == null ? Codegen.empty() : this.backupScheduleName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -166,17 +167,17 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupScheduleArgs() {
-        this.backupPolicyName = Output.empty();
-        this.backupScheduleName = Output.empty();
-        this.backupType = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionCount = Output.empty();
-        this.scheduleRecurrence = Output.empty();
-        this.scheduleStatus = Output.empty();
-        this.startTime = Output.empty();
+        this.backupPolicyName = Codegen.empty();
+        this.backupScheduleName = Codegen.empty();
+        this.backupType = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionCount = Codegen.empty();
+        this.scheduleRecurrence = Codegen.empty();
+        this.scheduleStatus = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupScheduleName(@Nullable String backupScheduleName) {
-            this.backupScheduleName = Output.ofNullable(backupScheduleName);
+            this.backupScheduleName = Codegen.ofNullable(backupScheduleName);
             return this;
         }
         public Builder backupType(Output<BackupType> backupType) {
@@ -256,7 +257,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {

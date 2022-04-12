@@ -18,20 +18,20 @@ public final class Appengine_v1alphaFunctions {
      * Gets the specified SSL certificate.
      * 
      */
-    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(io.pulumi.googlenative.appengine_v1alpha.inputs.GetAuthorizedCertificateArgs args) {
-        return getAuthorizedCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args) {
+        return getAuthorizedCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(io.pulumi.googlenative.appengine_v1alpha.inputs.GetAuthorizedCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified domain mapping.
      * 
      */
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(io.pulumi.googlenative.appengine_v1alpha.inputs.GetDomainMappingArgs args) {
-        return getDomainMapping(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args) {
+        return getDomainMapping(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(io.pulumi.googlenative.appengine_v1alpha.inputs.GetDomainMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
     }
 }

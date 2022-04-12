@@ -19,10 +19,10 @@ public final class StoragepoolFunctions {
      * API Version: 2020-03-15-preview.
      * 
      */
-    public static CompletableFuture<GetDiskPoolResult> getDiskPool(io.pulumi.azurenative.storagepool.inputs.GetDiskPoolArgs args) {
-        return getDiskPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDiskPoolResult> getDiskPool(GetDiskPoolArgs args) {
+        return getDiskPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDiskPoolResult> getDiskPool(io.pulumi.azurenative.storagepool.inputs.GetDiskPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskPoolResult> getDiskPool(GetDiskPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getDiskPool", TypeShape.of(GetDiskPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class StoragepoolFunctions {
      * API Version: 2020-03-15-preview.
      * 
      */
-    public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(io.pulumi.azurenative.storagepool.inputs.GetIscsiTargetArgs args) {
-        return getIscsiTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(GetIscsiTargetArgs args) {
+        return getIscsiTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(io.pulumi.azurenative.storagepool.inputs.GetIscsiTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIscsiTargetResult> getIscsiTarget(GetIscsiTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getIscsiTarget", TypeShape.of(GetIscsiTargetResult.class), args, Utilities.withVersion(options));
     }
 }

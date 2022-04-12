@@ -35,10 +35,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetHybridConnectionResult> getHybridConnection(io.pulumi.azurenative.relay.inputs.GetHybridConnectionArgs args) {
-        return getHybridConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridConnectionResult> getHybridConnection(GetHybridConnectionArgs args) {
+        return getHybridConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridConnectionResult> getHybridConnection(io.pulumi.azurenative.relay.inputs.GetHybridConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridConnectionResult> getHybridConnection(GetHybridConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getHybridConnection", TypeShape.of(GetHybridConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,10 +46,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> getHybridConnectionAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetHybridConnectionAuthorizationRuleArgs args) {
-        return getHybridConnectionAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> getHybridConnectionAuthorizationRule(GetHybridConnectionAuthorizationRuleArgs args) {
+        return getHybridConnectionAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> getHybridConnectionAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetHybridConnectionAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> getHybridConnectionAuthorizationRule(GetHybridConnectionAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getHybridConnectionAuthorizationRule", TypeShape.of(GetHybridConnectionAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -57,10 +57,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.relay.inputs.GetNamespaceArgs args) {
-        return getNamespace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+        return getNamespace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceResult> getNamespace(io.pulumi.azurenative.relay.inputs.GetNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,10 +68,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetNamespaceAuthorizationRuleArgs args) {
-        return getNamespaceAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+        return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -79,10 +79,10 @@ public final class RelayFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.relay.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.relay.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetWCFRelayResult> getWCFRelay(io.pulumi.azurenative.relay.inputs.GetWCFRelayArgs args) {
-        return getWCFRelay(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWCFRelayResult> getWCFRelay(GetWCFRelayArgs args) {
+        return getWCFRelay(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWCFRelayResult> getWCFRelay(io.pulumi.azurenative.relay.inputs.GetWCFRelayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWCFRelayResult> getWCFRelay(GetWCFRelayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getWCFRelay", TypeShape.of(GetWCFRelayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,10 +101,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> getWCFRelayAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetWCFRelayAuthorizationRuleArgs args) {
-        return getWCFRelayAuthorizationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> getWCFRelayAuthorizationRule(GetWCFRelayAuthorizationRuleArgs args) {
+        return getWCFRelayAuthorizationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> getWCFRelayAuthorizationRule(io.pulumi.azurenative.relay.inputs.GetWCFRelayAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> getWCFRelayAuthorizationRule(GetWCFRelayAuthorizationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getWCFRelayAuthorizationRule", TypeShape.of(GetWCFRelayAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -112,10 +112,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListHybridConnectionKeysResult> listHybridConnectionKeys(io.pulumi.azurenative.relay.inputs.ListHybridConnectionKeysArgs args) {
-        return listHybridConnectionKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListHybridConnectionKeysResult> listHybridConnectionKeys(ListHybridConnectionKeysArgs args) {
+        return listHybridConnectionKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListHybridConnectionKeysResult> listHybridConnectionKeys(io.pulumi.azurenative.relay.inputs.ListHybridConnectionKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListHybridConnectionKeysResult> listHybridConnectionKeys(ListHybridConnectionKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listHybridConnectionKeys", TypeShape.of(ListHybridConnectionKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -123,10 +123,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.relay.inputs.ListNamespaceKeysArgs args) {
-        return listNamespaceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+        return listNamespaceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(io.pulumi.azurenative.relay.inputs.ListNamespaceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -134,10 +134,10 @@ public final class RelayFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListWCFRelayKeysResult> listWCFRelayKeys(io.pulumi.azurenative.relay.inputs.ListWCFRelayKeysArgs args) {
-        return listWCFRelayKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWCFRelayKeysResult> listWCFRelayKeys(ListWCFRelayKeysArgs args) {
+        return listWCFRelayKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWCFRelayKeysResult> listWCFRelayKeys(io.pulumi.azurenative.relay.inputs.ListWCFRelayKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWCFRelayKeysResult> listWCFRelayKeys(ListWCFRelayKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listWCFRelayKeys", TypeShape.of(ListWCFRelayKeysResult.class), args, Utilities.withVersion(options));
     }
 }

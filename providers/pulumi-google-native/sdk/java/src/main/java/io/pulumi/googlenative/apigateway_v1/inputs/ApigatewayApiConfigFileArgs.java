@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigateway_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> contents;
 
     public Output<String> getContents() {
-        return this.contents == null ? Output.empty() : this.contents;
+        return this.contents == null ? Codegen.empty() : this.contents;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public ApigatewayApiConfigFileArgs(
@@ -48,8 +49,8 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
     }
 
     private ApigatewayApiConfigFileArgs() {
-        this.contents = Output.empty();
-        this.path = Output.empty();
+        this.contents = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder contents(@Nullable String contents) {
-            this.contents = Output.ofNullable(contents);
+            this.contents = Codegen.ofNullable(contents);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -87,7 +88,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public ApigatewayApiConfigFileArgs build() {
             return new ApigatewayApiConfigFileArgs(contents, path);

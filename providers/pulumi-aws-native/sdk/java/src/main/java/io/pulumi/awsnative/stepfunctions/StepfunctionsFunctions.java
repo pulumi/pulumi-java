@@ -18,20 +18,20 @@ public final class StepfunctionsFunctions {
      * Resource schema for Activity
      * 
      */
-    public static CompletableFuture<GetActivityResult> getActivity(io.pulumi.awsnative.stepfunctions.inputs.GetActivityArgs args) {
-        return getActivity(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args) {
+        return getActivity(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActivityResult> getActivity(io.pulumi.awsnative.stepfunctions.inputs.GetActivityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActivityResult> getActivity(GetActivityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getActivity", TypeShape.of(GetActivityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for StateMachine
      * 
      */
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(io.pulumi.awsnative.stepfunctions.inputs.GetStateMachineArgs args) {
-        return getStateMachine(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {
+        return getStateMachine(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStateMachineResult> getStateMachine(io.pulumi.awsnative.stepfunctions.inputs.GetStateMachineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:stepfunctions:getStateMachine", TypeShape.of(GetStateMachineResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -19,10 +19,10 @@ public final class NotebooksFunctions {
      * API Version: 2019-10-11-preview.
      * 
      */
-    public static CompletableFuture<GetNotebookProxyResult> getNotebookProxy(io.pulumi.azurenative.notebooks.inputs.GetNotebookProxyArgs args) {
-        return getNotebookProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNotebookProxyResult> getNotebookProxy(GetNotebookProxyArgs args) {
+        return getNotebookProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNotebookProxyResult> getNotebookProxy(io.pulumi.azurenative.notebooks.inputs.GetNotebookProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNotebookProxyResult> getNotebookProxy(GetNotebookProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notebooks:getNotebookProxy", TypeShape.of(GetNotebookProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class NotebooksFunctions {
      * API Version: 2019-10-11-preview.
      * 
      */
-    public static CompletableFuture<ListNotebookProxyCredentialsResult> listNotebookProxyCredentials(io.pulumi.azurenative.notebooks.inputs.ListNotebookProxyCredentialsArgs args) {
-        return listNotebookProxyCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListNotebookProxyCredentialsResult> listNotebookProxyCredentials(ListNotebookProxyCredentialsArgs args) {
+        return listNotebookProxyCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListNotebookProxyCredentialsResult> listNotebookProxyCredentials(io.pulumi.azurenative.notebooks.inputs.ListNotebookProxyCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNotebookProxyCredentialsResult> listNotebookProxyCredentials(ListNotebookProxyCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notebooks:listNotebookProxyCredentials", TypeShape.of(ListNotebookProxyCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

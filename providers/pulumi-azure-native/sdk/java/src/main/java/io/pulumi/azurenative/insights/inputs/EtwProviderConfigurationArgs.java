@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.EtwEventConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,8 +38,8 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private EtwProviderConfigurationArgs() {
-        this.events = Output.empty();
-        this.id = Output.empty();
+        this.events = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {

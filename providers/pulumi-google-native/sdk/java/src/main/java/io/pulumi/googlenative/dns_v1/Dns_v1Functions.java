@@ -26,60 +26,60 @@ public final class Dns_v1Functions {
      * Fetches the representation of an existing Change.
      * 
      */
-    public static CompletableFuture<GetChangeResult> getChange(io.pulumi.googlenative.dns_v1.inputs.GetChangeArgs args) {
-        return getChange(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetChangeResult> getChange(GetChangeArgs args) {
+        return getChange(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetChangeResult> getChange(io.pulumi.googlenative.dns_v1.inputs.GetChangeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChangeResult> getChange(GetChangeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getChange", TypeShape.of(GetChangeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing ManagedZone.
      * 
      */
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(io.pulumi.googlenative.dns_v1.inputs.GetManagedZoneArgs args) {
-        return getManagedZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
+        return getManagedZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedZoneResult> getManagedZone(io.pulumi.googlenative.dns_v1.inputs.GetManagedZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Policy.
      * 
      */
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.googlenative.dns_v1.inputs.GetPolicyArgs args) {
-        return getPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args) {
+        return getPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPolicyResult> getPolicy(io.pulumi.googlenative.dns_v1.inputs.GetPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing ResourceRecordSet.
      * 
      */
-    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(io.pulumi.googlenative.dns_v1.inputs.GetResourceRecordSetArgs args) {
-        return getResourceRecordSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args) {
+        return getResourceRecordSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(io.pulumi.googlenative.dns_v1.inputs.GetResourceRecordSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceRecordSetResult> getResourceRecordSet(GetResourceRecordSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getResourceRecordSet", TypeShape.of(GetResourceRecordSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Response Policy.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(io.pulumi.googlenative.dns_v1.inputs.GetResponsePolicyArgs args) {
-        return getResponsePolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args) {
+        return getResponsePolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(io.pulumi.googlenative.dns_v1.inputs.GetResponsePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResponsePolicyResult> getResponsePolicy(GetResponsePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getResponsePolicy", TypeShape.of(GetResponsePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Fetches the representation of an existing Response Policy Rule.
      * 
      */
-    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(io.pulumi.googlenative.dns_v1.inputs.GetResponsePolicyRuleArgs args) {
-        return getResponsePolicyRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args) {
+        return getResponsePolicyRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(io.pulumi.googlenative.dns_v1.inputs.GetResponsePolicyRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResponsePolicyRuleResult> getResponsePolicyRule(GetResponsePolicyRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getResponsePolicyRule", TypeShape.of(GetResponsePolicyRuleResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -37,10 +37,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.azurenative.videoanalyzer.inputs.GetAccessPolicyArgs args) {
-        return getAccessPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+        return getAccessPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.azurenative.videoanalyzer.inputs.GetAccessPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(io.pulumi.azurenative.videoanalyzer.inputs.GetEdgeModuleArgs args) {
-        return getEdgeModule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args) {
+        return getEdgeModule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(io.pulumi.azurenative.videoanalyzer.inputs.GetEdgeModuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEdgeModuleResult> getEdgeModule(GetEdgeModuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getEdgeModule", TypeShape.of(GetEdgeModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,10 +59,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(io.pulumi.azurenative.videoanalyzer.inputs.GetLivePipelineArgs args) {
-        return getLivePipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args) {
+        return getLivePipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(io.pulumi.azurenative.videoanalyzer.inputs.GetLivePipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLivePipelineResult> getLivePipeline(GetLivePipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getLivePipeline", TypeShape.of(GetLivePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -70,10 +70,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(io.pulumi.azurenative.videoanalyzer.inputs.GetPipelineJobArgs args) {
-        return getPipelineJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args) {
+        return getPipelineJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(io.pulumi.azurenative.videoanalyzer.inputs.GetPipelineJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineJobResult> getPipelineJob(GetPipelineJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineJob", TypeShape.of(GetPipelineJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,10 +86,10 @@ public final class VideoanalyzerFunctions {
      *     API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(io.pulumi.azurenative.videoanalyzer.inputs.GetPipelineTopologyArgs args) {
-        return getPipelineTopology(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args) {
+        return getPipelineTopology(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(io.pulumi.azurenative.videoanalyzer.inputs.GetPipelineTopologyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineTopologyResult> getPipelineTopology(GetPipelineTopologyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineTopology", TypeShape.of(GetPipelineTopologyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -97,10 +97,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.videoanalyzer.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.videoanalyzer.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,10 +108,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoResult> getVideo(io.pulumi.azurenative.videoanalyzer.inputs.GetVideoArgs args) {
-        return getVideo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVideoResult> getVideo(GetVideoArgs args) {
+        return getVideo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVideoResult> getVideo(io.pulumi.azurenative.videoanalyzer.inputs.GetVideoArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVideoResult> getVideo(GetVideoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideo", TypeShape.of(GetVideoResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -119,10 +119,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(io.pulumi.azurenative.videoanalyzer.inputs.GetVideoAnalyzerArgs args) {
-        return getVideoAnalyzer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args) {
+        return getVideoAnalyzer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(io.pulumi.azurenative.videoanalyzer.inputs.GetVideoAnalyzerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVideoAnalyzerResult> getVideoAnalyzer(GetVideoAnalyzerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideoAnalyzer", TypeShape.of(GetVideoAnalyzerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -130,10 +130,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(io.pulumi.azurenative.videoanalyzer.inputs.ListEdgeModuleProvisioningTokenArgs args) {
-        return listEdgeModuleProvisioningToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args) {
+        return listEdgeModuleProvisioningToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(io.pulumi.azurenative.videoanalyzer.inputs.ListEdgeModuleProvisioningTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEdgeModuleProvisioningTokenResult> listEdgeModuleProvisioningToken(ListEdgeModuleProvisioningTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listEdgeModuleProvisioningToken", TypeShape.of(ListEdgeModuleProvisioningTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,10 +141,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-11-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(io.pulumi.azurenative.videoanalyzer.inputs.ListVideoContentTokenArgs args) {
-        return listVideoContentToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args) {
+        return listVideoContentToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(io.pulumi.azurenative.videoanalyzer.inputs.ListVideoContentTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListVideoContentTokenResult> listVideoContentToken(ListVideoContentTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoContentToken", TypeShape.of(ListVideoContentTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -152,10 +152,10 @@ public final class VideoanalyzerFunctions {
      * API Version: 2021-05-01-preview.
      * 
      */
-    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(io.pulumi.azurenative.videoanalyzer.inputs.ListVideoStreamingTokenArgs args) {
-        return listVideoStreamingToken(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args) {
+        return listVideoStreamingToken(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(io.pulumi.azurenative.videoanalyzer.inputs.ListVideoStreamingTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListVideoStreamingTokenResult> listVideoStreamingToken(ListVideoStreamingTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoStreamingToken", TypeShape.of(ListVideoStreamingTokenResult.class), args, Utilities.withVersion(options));
     }
 }

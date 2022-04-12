@@ -6,6 +6,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="inline")
       private final @Nullable Output<Boolean> inline;
 
     public Output<Boolean> getInline() {
-        return this.inline == null ? Output.empty() : this.inline;
+        return this.inline == null ? Codegen.empty() : this.inline;
     }
 
     /**
@@ -61,14 +62,14 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
     public Output<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorEntityTypeArgs(
@@ -100,13 +101,13 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DetectorEntityTypeArgs() {
-        this.arn = Output.empty();
-        this.createdTime = Output.empty();
-        this.description = Output.empty();
-        this.inline = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.arn = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.inline = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -154,7 +155,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -162,7 +163,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder inline(@Nullable Output<Boolean> inline) {
@@ -170,7 +171,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = Output.ofNullable(inline);
+            this.inline = Codegen.ofNullable(inline);
             return this;
         }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
@@ -178,7 +179,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -186,7 +187,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
@@ -194,7 +195,7 @@ public final class DetectorEntityTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DetectorTagArgs... tags) {

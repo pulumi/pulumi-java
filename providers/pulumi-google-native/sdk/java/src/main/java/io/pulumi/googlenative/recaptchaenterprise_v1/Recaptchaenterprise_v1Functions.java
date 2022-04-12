@@ -16,10 +16,10 @@ public final class Recaptchaenterprise_v1Functions {
      * Returns the specified key.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:recaptchaenterprise/v1:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
 }

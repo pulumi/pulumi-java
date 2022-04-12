@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<String> componentArn;
 
     public Output<String> getComponentArn() {
-        return this.componentArn == null ? Output.empty() : this.componentArn;
+        return this.componentArn == null ? Codegen.empty() : this.componentArn;
     }
 
     public ContainerRecipeComponentConfigurationArgs(@Nullable Output<String> componentArn) {
@@ -34,7 +35,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
     }
 
     private ContainerRecipeComponentConfigurationArgs() {
-        this.componentArn = Output.empty();
+        this.componentArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Output.ofNullable(componentArn);
+            this.componentArn = Codegen.ofNullable(componentArn);
             return this;
         }        public ContainerRecipeComponentConfigurationArgs build() {
             return new ContainerRecipeComponentConfigurationArgs(componentArn);

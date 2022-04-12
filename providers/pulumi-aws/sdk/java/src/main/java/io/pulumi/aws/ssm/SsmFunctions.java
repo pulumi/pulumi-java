@@ -24,10 +24,10 @@ public final class SsmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDocumentResult> getDocument(io.pulumi.aws.ssm.inputs.GetDocumentArgs args) {
-        return getDocument(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args) {
+        return getDocument(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDocumentResult> getDocument(io.pulumi.aws.ssm.inputs.GetDocumentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDocumentResult> getDocument(GetDocumentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getDocument:getDocument", TypeShape.of(GetDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,16 +36,16 @@ public final class SsmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetParameterResult> getParameter(io.pulumi.aws.ssm.inputs.GetParameterArgs args) {
-        return getParameter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetParameterResult> getParameter(GetParameterArgs args) {
+        return getParameter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetParameterResult> getParameter(io.pulumi.aws.ssm.inputs.GetParameterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetParameterResult> getParameter(GetParameterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getParameter:getParameter", TypeShape.of(GetParameterResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(io.pulumi.aws.ssm.inputs.GetParametersByPathArgs args) {
-        return getParametersByPath(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args) {
+        return getParametersByPath(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(io.pulumi.aws.ssm.inputs.GetParametersByPathArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetParametersByPathResult> getParametersByPath(GetParametersByPathArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getParametersByPath:getParametersByPath", TypeShape.of(GetParametersByPathResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -54,10 +54,10 @@ public final class SsmFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(io.pulumi.aws.ssm.inputs.GetPatchBaselineArgs args) {
-        return getPatchBaseline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args) {
+        return getPatchBaseline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(io.pulumi.aws.ssm.inputs.GetPatchBaselineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPatchBaselineResult> getPatchBaseline(GetPatchBaselineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getPatchBaseline:getPatchBaseline", TypeShape.of(GetPatchBaselineResult.class), args, Utilities.withVersion(options));
     }
 }

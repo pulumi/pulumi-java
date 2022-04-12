@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> offset;
 
     public Output<Integer> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
     }
 
     private UsagePlanQuotaSettingsGetArgs() {
-        this.limit = Output.empty();
-        this.offset = Output.empty();
-        this.period = Output.empty();
+        this.limit = Codegen.empty();
+        this.offset = Codegen.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder offset(@Nullable Integer offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }
         public Builder period(Output<String> period) {

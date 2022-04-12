@@ -19,10 +19,10 @@ public final class AnalysisservicesFunctions {
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<GetServerDetailsResult> getServerDetails(io.pulumi.azurenative.analysisservices.inputs.GetServerDetailsArgs args) {
-        return getServerDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args) {
+        return getServerDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServerDetailsResult> getServerDetails(io.pulumi.azurenative.analysisservices.inputs.GetServerDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerDetailsResult> getServerDetails(GetServerDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:getServerDetails", TypeShape.of(GetServerDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AnalysisservicesFunctions {
      * API Version: 2017-08-01.
      * 
      */
-    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(io.pulumi.azurenative.analysisservices.inputs.ListServerGatewayStatusArgs args) {
-        return listServerGatewayStatus(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args) {
+        return listServerGatewayStatus(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(io.pulumi.azurenative.analysisservices.inputs.ListServerGatewayStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListServerGatewayStatusResult> listServerGatewayStatus(ListServerGatewayStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:analysisservices:listServerGatewayStatus", TypeShape.of(ListServerGatewayStatusResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> dnsSearchDomain;
 
     public Output<String> getDnsSearchDomain() {
-        return this.dnsSearchDomain == null ? Output.empty() : this.dnsSearchDomain;
+        return this.dnsSearchDomain == null ? Codegen.empty() : this.dnsSearchDomain;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> mtu;
 
     public Output<Integer> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> ntpServer;
 
     public Output<String> getNtpServer() {
-        return this.ntpServer == null ? Output.empty() : this.ntpServer;
+        return this.ntpServer == null ? Codegen.empty() : this.ntpServer;
     }
 
     public CacheNetworkSettingsArgs(
@@ -71,15 +72,15 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
         @Nullable Output<String> ntpServer) {
         this.dnsSearchDomain = dnsSearchDomain;
         this.dnsServers = dnsServers;
-        this.mtu = mtu == null ? Output.ofNullable(1500) : mtu;
-        this.ntpServer = ntpServer == null ? Output.ofNullable("time.windows.com") : ntpServer;
+        this.mtu = mtu == null ? Codegen.ofNullable(1500) : mtu;
+        this.ntpServer = ntpServer == null ? Codegen.ofNullable("time.windows.com") : ntpServer;
     }
 
     private CacheNetworkSettingsArgs() {
-        this.dnsSearchDomain = Output.empty();
-        this.dnsServers = Output.empty();
-        this.mtu = Output.empty();
-        this.ntpServer = Output.empty();
+        this.dnsSearchDomain = Codegen.empty();
+        this.dnsServers = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.ntpServer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
-            this.dnsSearchDomain = Output.ofNullable(dnsSearchDomain);
+            this.dnsSearchDomain = Codegen.ofNullable(dnsSearchDomain);
             return this;
         }
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
@@ -121,7 +122,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -132,7 +133,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder ntpServer(@Nullable Output<String> ntpServer) {
@@ -140,7 +141,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ntpServer(@Nullable String ntpServer) {
-            this.ntpServer = Output.ofNullable(ntpServer);
+            this.ntpServer = Codegen.ofNullable(ntpServer);
             return this;
         }        public CacheNetworkSettingsArgs build() {
             return new CacheNetworkSettingsArgs(dnsSearchDomain, dnsServers, mtu, ntpServer);

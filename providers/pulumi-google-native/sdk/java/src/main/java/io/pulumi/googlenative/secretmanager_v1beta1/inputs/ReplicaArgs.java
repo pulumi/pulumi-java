@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     public ReplicaArgs(@Nullable Output<String> location) {
@@ -34,7 +35,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaArgs() {
-        this.location = Output.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }        public ReplicaArgs build() {
             return new ReplicaArgs(location);

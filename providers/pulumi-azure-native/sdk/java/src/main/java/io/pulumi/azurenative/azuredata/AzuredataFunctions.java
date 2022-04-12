@@ -19,10 +19,10 @@ public final class AzuredataFunctions {
      * API Version: 2019-07-24-preview.
      * 
      */
-    public static CompletableFuture<GetSqlServerResult> getSqlServer(io.pulumi.azurenative.azuredata.inputs.GetSqlServerArgs args) {
-        return getSqlServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlServerResult> getSqlServer(GetSqlServerArgs args) {
+        return getSqlServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlServerResult> getSqlServer(io.pulumi.azurenative.azuredata.inputs.GetSqlServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlServerResult> getSqlServer(GetSqlServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServer", TypeShape.of(GetSqlServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AzuredataFunctions {
      * API Version: 2019-07-24-preview.
      * 
      */
-    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(io.pulumi.azurenative.azuredata.inputs.GetSqlServerRegistrationArgs args) {
-        return getSqlServerRegistration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(GetSqlServerRegistrationArgs args) {
+        return getSqlServerRegistration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(io.pulumi.azurenative.azuredata.inputs.GetSqlServerRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistration(GetSqlServerRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServerRegistration", TypeShape.of(GetSqlServerRegistrationResult.class), args, Utilities.withVersion(options));
     }
 }

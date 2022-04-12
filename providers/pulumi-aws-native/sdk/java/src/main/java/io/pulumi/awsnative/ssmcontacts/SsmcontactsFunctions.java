@@ -18,20 +18,20 @@ public final class SsmcontactsFunctions {
      * Resource Type definition for AWS::SSMContacts::Contact
      * 
      */
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.awsnative.ssmcontacts.inputs.GetContactArgs args) {
-        return getContact(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
+        return getContact(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactResult> getContact(io.pulumi.awsnative.ssmcontacts.inputs.GetContactArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SSMContacts::ContactChannel
      * 
      */
-    public static CompletableFuture<GetContactChannelResult> getContactChannel(io.pulumi.awsnative.ssmcontacts.inputs.GetContactChannelArgs args) {
-        return getContactChannel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args) {
+        return getContactChannel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContactChannelResult> getContactChannel(io.pulumi.awsnative.ssmcontacts.inputs.GetContactChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContactChannel", TypeShape.of(GetContactChannelResult.class), args, Utilities.withVersion(options));
     }
 }

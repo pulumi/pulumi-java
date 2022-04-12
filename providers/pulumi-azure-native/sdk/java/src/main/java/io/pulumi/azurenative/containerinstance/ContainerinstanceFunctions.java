@@ -17,10 +17,10 @@ public final class ContainerinstanceFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetContainerGroupResult> getContainerGroup(io.pulumi.azurenative.containerinstance.inputs.GetContainerGroupArgs args) {
-        return getContainerGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetContainerGroupResult> getContainerGroup(GetContainerGroupArgs args) {
+        return getContainerGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetContainerGroupResult> getContainerGroup(io.pulumi.azurenative.containerinstance.inputs.GetContainerGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerGroupResult> getContainerGroup(GetContainerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerinstance:getContainerGroup", TypeShape.of(GetContainerGroupResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class ScheduledActionPauseClusterMessageArgs extends io.pulumi.reso
     }
 
     private ScheduledActionPauseClusterMessageArgs() {
-        this.clusterIdentifier = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {

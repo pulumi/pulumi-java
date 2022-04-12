@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> responseModels;
 
     public Output<Object> getResponseModels() {
-        return this.responseModels == null ? Output.empty() : this.responseModels;
+        return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> responseParameters;
 
     public Output<Object> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodResponseArgs() {
-        this.responseModels = Output.empty();
-        this.responseParameters = Output.empty();
-        this.statusCode = Output.empty();
+        this.responseModels = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseModels(@Nullable Object responseModels) {
-            this.responseModels = Output.ofNullable(responseModels);
+            this.responseModels = Codegen.ofNullable(responseModels);
             return this;
         }
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
@@ -100,7 +101,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder statusCode(Output<String> statusCode) {

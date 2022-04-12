@@ -17,10 +17,10 @@ public final class Dynamics365fraudprotectionFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(io.pulumi.azurenative.dynamics365fraudprotection.inputs.GetInstanceDetailsArgs args) {
-        return getInstanceDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(GetInstanceDetailsArgs args) {
+        return getInstanceDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(io.pulumi.azurenative.dynamics365fraudprotection.inputs.GetInstanceDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceDetailsResult> getInstanceDetails(GetInstanceDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dynamics365fraudprotection:getInstanceDetails", TypeShape.of(GetInstanceDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

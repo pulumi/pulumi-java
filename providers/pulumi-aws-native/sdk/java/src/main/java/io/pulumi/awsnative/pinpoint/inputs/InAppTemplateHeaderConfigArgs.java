@@ -6,6 +6,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +20,21 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<InAppTemplateAlignment> alignment;
 
     public Output<InAppTemplateAlignment> getAlignment() {
-        return this.alignment == null ? Output.empty() : this.alignment;
+        return this.alignment == null ? Codegen.empty() : this.alignment;
     }
 
     @Import(name="header")
       private final @Nullable Output<String> header;
 
     public Output<String> getHeader() {
-        return this.header == null ? Output.empty() : this.header;
+        return this.header == null ? Codegen.empty() : this.header;
     }
 
     @Import(name="textColor")
       private final @Nullable Output<String> textColor;
 
     public Output<String> getTextColor() {
-        return this.textColor == null ? Output.empty() : this.textColor;
+        return this.textColor == null ? Codegen.empty() : this.textColor;
     }
 
     public InAppTemplateHeaderConfigArgs(
@@ -46,9 +47,9 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
     }
 
     private InAppTemplateHeaderConfigArgs() {
-        this.alignment = Output.empty();
-        this.header = Output.empty();
-        this.textColor = Output.empty();
+        this.alignment = Codegen.empty();
+        this.header = Codegen.empty();
+        this.textColor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = Output.ofNullable(alignment);
+            this.alignment = Codegen.ofNullable(alignment);
             return this;
         }
         public Builder header(@Nullable Output<String> header) {
@@ -88,7 +89,7 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder header(@Nullable String header) {
-            this.header = Output.ofNullable(header);
+            this.header = Codegen.ofNullable(header);
             return this;
         }
         public Builder textColor(@Nullable Output<String> textColor) {
@@ -96,7 +97,7 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder textColor(@Nullable String textColor) {
-            this.textColor = Output.ofNullable(textColor);
+            this.textColor = Codegen.ofNullable(textColor);
             return this;
         }        public InAppTemplateHeaderConfigArgs build() {
             return new InAppTemplateHeaderConfigArgs(alignment, header, textColor);

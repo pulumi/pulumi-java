@@ -20,10 +20,10 @@ public final class DatapipelineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.aws.datapipeline.inputs.GetPipelineArgs args) {
-        return getPipeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
+        return getPipeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineResult> getPipeline(io.pulumi.aws.datapipeline.inputs.GetPipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:datapipeline/getPipeline:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class DatapipelineFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(io.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionArgs args) {
-        return getPipelineDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args) {
+        return getPipelineDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(io.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:datapipeline/getPipelineDefinition:getPipelineDefinition", TypeShape.of(GetPipelineDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

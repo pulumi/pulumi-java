@@ -24,50 +24,50 @@ public final class Privateca_v1beta1Functions {
      * Returns a Certificate.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a CertificateAuthority.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityArgs args) {
-        return getCertificateAuthority(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
+        return getCertificateAuthority(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityCertificateRevocationListIamPolicyResult> getCertificateAuthorityCertificateRevocationListIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityCertificateRevocationListIamPolicyArgs args) {
-        return getCertificateAuthorityCertificateRevocationListIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateAuthorityCertificateRevocationListIamPolicyResult> getCertificateAuthorityCertificateRevocationListIamPolicy(GetCertificateAuthorityCertificateRevocationListIamPolicyArgs args) {
+        return getCertificateAuthorityCertificateRevocationListIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateAuthorityCertificateRevocationListIamPolicyResult> getCertificateAuthorityCertificateRevocationListIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityCertificateRevocationListIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateAuthorityCertificateRevocationListIamPolicyResult> getCertificateAuthorityCertificateRevocationListIamPolicy(GetCertificateAuthorityCertificateRevocationListIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthorityCertificateRevocationListIamPolicy", TypeShape.of(GetCertificateAuthorityCertificateRevocationListIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> getCertificateAuthorityIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityIamPolicyArgs args) {
-        return getCertificateAuthorityIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> getCertificateAuthorityIamPolicy(GetCertificateAuthorityIamPolicyArgs args) {
+        return getCertificateAuthorityIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> getCertificateAuthorityIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetCertificateAuthorityIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> getCertificateAuthorityIamPolicy(GetCertificateAuthorityIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthorityIamPolicy", TypeShape.of(GetCertificateAuthorityIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetReusableConfigIamPolicyResult> getReusableConfigIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetReusableConfigIamPolicyArgs args) {
-        return getReusableConfigIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReusableConfigIamPolicyResult> getReusableConfigIamPolicy(GetReusableConfigIamPolicyArgs args) {
+        return getReusableConfigIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReusableConfigIamPolicyResult> getReusableConfigIamPolicy(io.pulumi.googlenative.privateca_v1beta1.inputs.GetReusableConfigIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReusableConfigIamPolicyResult> getReusableConfigIamPolicy(GetReusableConfigIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getReusableConfigIamPolicy", TypeShape.of(GetReusableConfigIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

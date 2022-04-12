@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     }
 
     private DistributionOriginGroupFailoverCriteriaArgs() {
-        this.statusCodes = Output.empty();
+        this.statusCodes = Codegen.empty();
     }
 
     public static Builder builder() {

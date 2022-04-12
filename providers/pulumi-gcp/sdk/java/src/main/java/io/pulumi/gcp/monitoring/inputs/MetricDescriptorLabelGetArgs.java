@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> valueType;
 
     public Output<String> getValueType() {
-        return this.valueType == null ? Output.empty() : this.valueType;
+        return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 
     public MetricDescriptorLabelGetArgs(
@@ -59,9 +60,9 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     }
 
     private MetricDescriptorLabelGetArgs() {
-        this.description = Output.empty();
-        this.key = Output.empty();
-        this.valueType = Output.empty();
+        this.description = Codegen.empty();
+        this.key = Codegen.empty();
+        this.valueType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder key(Output<String> key) {
@@ -109,7 +110,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = Output.ofNullable(valueType);
+            this.valueType = Codegen.ofNullable(valueType);
             return this;
         }        public MetricDescriptorLabelGetArgs build() {
             return new MetricDescriptorLabelGetArgs(description, key, valueType);

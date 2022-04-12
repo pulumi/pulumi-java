@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
     }
 
     private TagOptionResourceAssociationArgs() {
-        this.resourceId = Output.empty();
-        this.tagOptionId = Output.empty();
+        this.resourceId = Codegen.empty();
+        this.tagOptionId = Codegen.empty();
     }
 
     public static Builder builder() {

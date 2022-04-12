@@ -6,6 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,28 +27,28 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
 
     public Output<GeofenceCollectionPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
     public Output<String> getPricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Output.empty() : this.pricingPlanDataSource;
+        return this.pricingPlanDataSource == null ? Codegen.empty() : this.pricingPlanDataSource;
     }
 
     public GeofenceCollectionArgs(
@@ -64,11 +65,11 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GeofenceCollectionArgs() {
-        this.collectionName = Output.empty();
-        this.description = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.pricingPlan = Output.empty();
-        this.pricingPlanDataSource = Output.empty();
+        this.collectionName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
+        this.pricingPlanDataSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -120,7 +121,7 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder pricingPlan(@Nullable Output<GeofenceCollectionPricingPlan> pricingPlan) {
@@ -128,7 +129,7 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }
         public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
@@ -136,7 +137,7 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
+            this.pricingPlanDataSource = Codegen.ofNullable(pricingPlanDataSource);
             return this;
         }        public GeofenceCollectionArgs build() {
             return new GeofenceCollectionArgs(collectionName, description, kmsKeyId, pricingPlan, pricingPlanDataSource);

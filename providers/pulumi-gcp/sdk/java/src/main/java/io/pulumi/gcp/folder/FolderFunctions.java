@@ -20,10 +20,10 @@ public final class FolderFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.gcp.folder.inputs.GetOrganizationPolicyArgs args) {
-        return getOrganizationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
+        return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.gcp.folder.inputs.GetOrganizationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:folder/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

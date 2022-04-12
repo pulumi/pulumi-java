@@ -8,6 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardExportToCSVOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSheetControlsOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,21 +25,21 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
 
     public Output<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
-        return this.adHocFilteringOption == null ? Output.empty() : this.adHocFilteringOption;
+        return this.adHocFilteringOption == null ? Codegen.empty() : this.adHocFilteringOption;
     }
 
     @Import(name="exportToCSVOption")
       private final @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption;
 
     public Output<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
-        return this.exportToCSVOption == null ? Output.empty() : this.exportToCSVOption;
+        return this.exportToCSVOption == null ? Codegen.empty() : this.exportToCSVOption;
     }
 
     @Import(name="sheetControlsOption")
       private final @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
     public Output<DashboardSheetControlsOptionArgs> getSheetControlsOption() {
-        return this.sheetControlsOption == null ? Output.empty() : this.sheetControlsOption;
+        return this.sheetControlsOption == null ? Codegen.empty() : this.sheetControlsOption;
     }
 
     public DashboardPublishOptionsArgs(
@@ -51,9 +52,9 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private DashboardPublishOptionsArgs() {
-        this.adHocFilteringOption = Output.empty();
-        this.exportToCSVOption = Output.empty();
-        this.sheetControlsOption = Output.empty();
+        this.adHocFilteringOption = Codegen.empty();
+        this.exportToCSVOption = Codegen.empty();
+        this.sheetControlsOption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder adHocFilteringOption(@Nullable DashboardAdHocFilteringOptionArgs adHocFilteringOption) {
-            this.adHocFilteringOption = Output.ofNullable(adHocFilteringOption);
+            this.adHocFilteringOption = Codegen.ofNullable(adHocFilteringOption);
             return this;
         }
         public Builder exportToCSVOption(@Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption) {
@@ -93,7 +94,7 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder exportToCSVOption(@Nullable DashboardExportToCSVOptionArgs exportToCSVOption) {
-            this.exportToCSVOption = Output.ofNullable(exportToCSVOption);
+            this.exportToCSVOption = Codegen.ofNullable(exportToCSVOption);
             return this;
         }
         public Builder sheetControlsOption(@Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption) {
@@ -101,7 +102,7 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sheetControlsOption(@Nullable DashboardSheetControlsOptionArgs sheetControlsOption) {
-            this.sheetControlsOption = Output.ofNullable(sheetControlsOption);
+            this.sheetControlsOption = Codegen.ofNullable(sheetControlsOption);
             return this;
         }        public DashboardPublishOptionsArgs build() {
             return new DashboardPublishOptionsArgs(adHocFilteringOption, exportToCSVOption, sheetControlsOption);

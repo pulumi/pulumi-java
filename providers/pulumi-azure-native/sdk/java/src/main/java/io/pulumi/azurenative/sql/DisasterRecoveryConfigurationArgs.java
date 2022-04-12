@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> disasterRecoveryConfigurationName;
 
     public Output<String> getDisasterRecoveryConfigurationName() {
-        return this.disasterRecoveryConfigurationName == null ? Output.empty() : this.disasterRecoveryConfigurationName;
+        return this.disasterRecoveryConfigurationName == null ? Codegen.empty() : this.disasterRecoveryConfigurationName;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
     }
 
     private DisasterRecoveryConfigurationArgs() {
-        this.disasterRecoveryConfigurationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.disasterRecoveryConfigurationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder disasterRecoveryConfigurationName(@Nullable String disasterRecoveryConfigurationName) {
-            this.disasterRecoveryConfigurationName = Output.ofNullable(disasterRecoveryConfigurationName);
+            this.disasterRecoveryConfigurationName = Codegen.ofNullable(disasterRecoveryConfigurationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

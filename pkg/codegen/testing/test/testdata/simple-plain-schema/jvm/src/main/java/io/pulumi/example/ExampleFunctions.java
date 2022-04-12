@@ -12,10 +12,10 @@ import java.lang.Void;
 import java.util.concurrent.CompletableFuture;
 
 public final class ExampleFunctions {
-    public static CompletableFuture<Void> doFoo(io.pulumi.example.inputs.DoFooArgs args) {
-        return doFoo(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<Void> doFoo(DoFooArgs args) {
+        return doFoo(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<Void> doFoo(io.pulumi.example.inputs.DoFooArgs args, InvokeOptions options) {
+    public static CompletableFuture<Void> doFoo(DoFooArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
 }

@@ -24,50 +24,50 @@ public final class Accesscontextmanager_v1Functions {
      * Gets an access level based on the resource name.
      * 
      */
-    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessLevelArgs args) {
-        return getAccessLevel(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args) {
+        return getAccessLevel(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessLevelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessLevelResult> getAccessLevel(GetAccessLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessLevel", TypeShape.of(GetAccessLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns an access policy based on the name.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessPolicyArgs args) {
-        return getAccessPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args) {
+        return getAccessPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPolicyResult> getAccessPolicy(GetAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM policy for the specified Access Context Manager access policy.
      * 
      */
-    public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessPolicyIamPolicyArgs args) {
-        return getAccessPolicyIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(GetAccessPolicyIamPolicyArgs args) {
+        return getAccessPolicyIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetAccessPolicyIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPolicyIamPolicyResult> getAccessPolicyIamPolicy(GetAccessPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicyIamPolicy", TypeShape.of(GetAccessPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the GcpUserAccessBinding with the given name.
      * 
      */
-    public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetGcpUserAccessBindingArgs args) {
-        return getGcpUserAccessBinding(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(GetGcpUserAccessBindingArgs args) {
+        return getGcpUserAccessBinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetGcpUserAccessBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGcpUserAccessBindingResult> getGcpUserAccessBinding(GetGcpUserAccessBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getGcpUserAccessBinding", TypeShape.of(GetGcpUserAccessBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a service perimeter based on the resource name.
      * 
      */
-    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetServicePerimeterArgs args) {
-        return getServicePerimeter(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args) {
+        return getServicePerimeter(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(io.pulumi.googlenative.accesscontextmanager_v1.inputs.GetServicePerimeterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServicePerimeterResult> getServicePerimeter(GetServicePerimeterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getServicePerimeter", TypeShape.of(GetServicePerimeterResult.class), args, Utilities.withVersion(options));
     }
 }

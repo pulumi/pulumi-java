@@ -5,6 +5,7 @@ package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesNfsExportOptionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,7 +50,7 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<InstanceFileSharesNfsExportOptionArgs>> nfsExportOptions;
 
     public Output<List<InstanceFileSharesNfsExportOptionArgs>> getNfsExportOptions() {
-        return this.nfsExportOptions == null ? Output.empty() : this.nfsExportOptions;
+        return this.nfsExportOptions == null ? Codegen.empty() : this.nfsExportOptions;
     }
 
     public InstanceFileSharesArgs(
@@ -62,9 +63,9 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceFileSharesArgs() {
-        this.capacityGb = Output.empty();
-        this.name = Output.empty();
-        this.nfsExportOptions = Output.empty();
+        this.capacityGb = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nfsExportOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class InstanceFileSharesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder nfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOptionArgs> nfsExportOptions) {
-            this.nfsExportOptions = Output.ofNullable(nfsExportOptions);
+            this.nfsExportOptions = Codegen.ofNullable(nfsExportOptions);
             return this;
         }
         public Builder nfsExportOptions(InstanceFileSharesNfsExportOptionArgs... nfsExportOptions) {

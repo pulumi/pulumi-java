@@ -7,6 +7,7 @@ import io.pulumi.azurenative.importexport.enums.DriveState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bitLockerKey;
 
     public Output<String> getBitLockerKey() {
-        return this.bitLockerKey == null ? Output.empty() : this.bitLockerKey;
+        return this.bitLockerKey == null ? Codegen.empty() : this.bitLockerKey;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> bytesSucceeded;
 
     public Output<Double> getBytesSucceeded() {
-        return this.bytesSucceeded == null ? Output.empty() : this.bytesSucceeded;
+        return this.bytesSucceeded == null ? Codegen.empty() : this.bytesSucceeded;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> copyStatus;
 
     public Output<String> getCopyStatus() {
-        return this.copyStatus == null ? Output.empty() : this.copyStatus;
+        return this.copyStatus == null ? Codegen.empty() : this.copyStatus;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> driveHeaderHash;
 
     public Output<String> getDriveHeaderHash() {
-        return this.driveHeaderHash == null ? Output.empty() : this.driveHeaderHash;
+        return this.driveHeaderHash == null ? Codegen.empty() : this.driveHeaderHash;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> driveId;
 
     public Output<String> getDriveId() {
-        return this.driveId == null ? Output.empty() : this.driveId;
+        return this.driveId == null ? Codegen.empty() : this.driveId;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> errorLogUri;
 
     public Output<String> getErrorLogUri() {
-        return this.errorLogUri == null ? Output.empty() : this.errorLogUri;
+        return this.errorLogUri == null ? Codegen.empty() : this.errorLogUri;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> manifestFile;
 
     public Output<String> getManifestFile() {
-        return this.manifestFile == null ? Output.empty() : this.manifestFile;
+        return this.manifestFile == null ? Codegen.empty() : this.manifestFile;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> manifestHash;
 
     public Output<String> getManifestHash() {
-        return this.manifestHash == null ? Output.empty() : this.manifestHash;
+        return this.manifestHash == null ? Codegen.empty() : this.manifestHash;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> manifestUri;
 
     public Output<String> getManifestUri() {
-        return this.manifestUri == null ? Output.empty() : this.manifestUri;
+        return this.manifestUri == null ? Codegen.empty() : this.manifestUri;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> percentComplete;
 
     public Output<Integer> getPercentComplete() {
-        return this.percentComplete == null ? Output.empty() : this.percentComplete;
+        return this.percentComplete == null ? Codegen.empty() : this.percentComplete;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DriveState>> state;
 
     public Output<Either<String,DriveState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> verboseLogUri;
 
     public Output<String> getVerboseLogUri() {
-        return this.verboseLogUri == null ? Output.empty() : this.verboseLogUri;
+        return this.verboseLogUri == null ? Codegen.empty() : this.verboseLogUri;
     }
 
     public DriveStatusArgs(
@@ -182,18 +183,18 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DriveStatusArgs() {
-        this.bitLockerKey = Output.empty();
-        this.bytesSucceeded = Output.empty();
-        this.copyStatus = Output.empty();
-        this.driveHeaderHash = Output.empty();
-        this.driveId = Output.empty();
-        this.errorLogUri = Output.empty();
-        this.manifestFile = Output.empty();
-        this.manifestHash = Output.empty();
-        this.manifestUri = Output.empty();
-        this.percentComplete = Output.empty();
-        this.state = Output.empty();
-        this.verboseLogUri = Output.empty();
+        this.bitLockerKey = Codegen.empty();
+        this.bytesSucceeded = Codegen.empty();
+        this.copyStatus = Codegen.empty();
+        this.driveHeaderHash = Codegen.empty();
+        this.driveId = Codegen.empty();
+        this.errorLogUri = Codegen.empty();
+        this.manifestFile = Codegen.empty();
+        this.manifestHash = Codegen.empty();
+        this.manifestUri = Codegen.empty();
+        this.percentComplete = Codegen.empty();
+        this.state = Codegen.empty();
+        this.verboseLogUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bitLockerKey(@Nullable String bitLockerKey) {
-            this.bitLockerKey = Output.ofNullable(bitLockerKey);
+            this.bitLockerKey = Codegen.ofNullable(bitLockerKey);
             return this;
         }
         public Builder bytesSucceeded(@Nullable Output<Double> bytesSucceeded) {
@@ -251,7 +252,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bytesSucceeded(@Nullable Double bytesSucceeded) {
-            this.bytesSucceeded = Output.ofNullable(bytesSucceeded);
+            this.bytesSucceeded = Codegen.ofNullable(bytesSucceeded);
             return this;
         }
         public Builder copyStatus(@Nullable Output<String> copyStatus) {
@@ -259,7 +260,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyStatus(@Nullable String copyStatus) {
-            this.copyStatus = Output.ofNullable(copyStatus);
+            this.copyStatus = Codegen.ofNullable(copyStatus);
             return this;
         }
         public Builder driveHeaderHash(@Nullable Output<String> driveHeaderHash) {
@@ -267,7 +268,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driveHeaderHash(@Nullable String driveHeaderHash) {
-            this.driveHeaderHash = Output.ofNullable(driveHeaderHash);
+            this.driveHeaderHash = Codegen.ofNullable(driveHeaderHash);
             return this;
         }
         public Builder driveId(@Nullable Output<String> driveId) {
@@ -275,7 +276,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driveId(@Nullable String driveId) {
-            this.driveId = Output.ofNullable(driveId);
+            this.driveId = Codegen.ofNullable(driveId);
             return this;
         }
         public Builder errorLogUri(@Nullable Output<String> errorLogUri) {
@@ -283,7 +284,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorLogUri(@Nullable String errorLogUri) {
-            this.errorLogUri = Output.ofNullable(errorLogUri);
+            this.errorLogUri = Codegen.ofNullable(errorLogUri);
             return this;
         }
         public Builder manifestFile(@Nullable Output<String> manifestFile) {
@@ -291,7 +292,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestFile(@Nullable String manifestFile) {
-            this.manifestFile = Output.ofNullable(manifestFile);
+            this.manifestFile = Codegen.ofNullable(manifestFile);
             return this;
         }
         public Builder manifestHash(@Nullable Output<String> manifestHash) {
@@ -299,7 +300,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestHash(@Nullable String manifestHash) {
-            this.manifestHash = Output.ofNullable(manifestHash);
+            this.manifestHash = Codegen.ofNullable(manifestHash);
             return this;
         }
         public Builder manifestUri(@Nullable Output<String> manifestUri) {
@@ -307,7 +308,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestUri(@Nullable String manifestUri) {
-            this.manifestUri = Output.ofNullable(manifestUri);
+            this.manifestUri = Codegen.ofNullable(manifestUri);
             return this;
         }
         public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
@@ -315,7 +316,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder percentComplete(@Nullable Integer percentComplete) {
-            this.percentComplete = Output.ofNullable(percentComplete);
+            this.percentComplete = Codegen.ofNullable(percentComplete);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,DriveState>> state) {
@@ -323,7 +324,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable Either<String,DriveState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder verboseLogUri(@Nullable Output<String> verboseLogUri) {
@@ -331,7 +332,7 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder verboseLogUri(@Nullable String verboseLogUri) {
-            this.verboseLogUri = Output.ofNullable(verboseLogUri);
+            this.verboseLogUri = Codegen.ofNullable(verboseLogUri);
             return this;
         }        public DriveStatusArgs build() {
             return new DriveStatusArgs(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);

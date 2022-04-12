@@ -26,60 +26,60 @@ public final class QuicksightFunctions {
      * Definition of the AWS::QuickSight::Analysis Resource Type.
      * 
      */
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(io.pulumi.awsnative.quicksight.inputs.GetAnalysisArgs args) {
-        return getAnalysis(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args) {
+        return getAnalysis(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAnalysisResult> getAnalysis(io.pulumi.awsnative.quicksight.inputs.GetAnalysisArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnalysisResult> getAnalysis(GetAnalysisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getAnalysis", TypeShape.of(GetAnalysisResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Dashboard Resource Type.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.awsnative.quicksight.inputs.GetDashboardArgs args) {
-        return getDashboard(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+        return getDashboard(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.awsnative.quicksight.inputs.GetDashboardArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::DataSet Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSetResult> getDataSet(io.pulumi.awsnative.quicksight.inputs.GetDataSetArgs args) {
-        return getDataSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args) {
+        return getDataSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataSetResult> getDataSet(io.pulumi.awsnative.quicksight.inputs.GetDataSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataSetResult> getDataSet(GetDataSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::DataSource Resource Type.
      * 
      */
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.awsnative.quicksight.inputs.GetDataSourceArgs args) {
-        return getDataSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args) {
+        return getDataSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataSourceResult> getDataSource(io.pulumi.awsnative.quicksight.inputs.GetDataSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataSourceResult> getDataSource(GetDataSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSource", TypeShape.of(GetDataSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Template Resource Type.
      * 
      */
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.awsnative.quicksight.inputs.GetTemplateArgs args) {
-        return getTemplate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args) {
+        return getTemplate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTemplateResult> getTemplate(io.pulumi.awsnative.quicksight.inputs.GetTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of the AWS::QuickSight::Theme Resource Type.
      * 
      */
-    public static CompletableFuture<GetThemeResult> getTheme(io.pulumi.awsnative.quicksight.inputs.GetThemeArgs args) {
-        return getTheme(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args) {
+        return getTheme(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetThemeResult> getTheme(io.pulumi.awsnative.quicksight.inputs.GetThemeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }
 }

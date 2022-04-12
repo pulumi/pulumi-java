@@ -6,6 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,14 +29,14 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
     public Output<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Output.empty() : this.runtimeEnvironmentVariables;
+        return this.runtimeEnvironmentVariables == null ? Codegen.empty() : this.runtimeEnvironmentVariables;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> startCommand;
 
     public Output<String> getStartCommand() {
-        return this.startCommand == null ? Output.empty() : this.startCommand;
+        return this.startCommand == null ? Codegen.empty() : this.startCommand;
     }
 
     public ServiceImageConfigurationArgs(
@@ -59,9 +60,9 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private ServiceImageConfigurationArgs() {
-        this.port = Output.empty();
-        this.runtimeEnvironmentVariables = Output.empty();
-        this.startCommand = Output.empty();
+        this.port = Codegen.empty();
+        this.runtimeEnvironmentVariables = Codegen.empty();
+        this.startCommand = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder runtimeEnvironmentVariables(@Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
@@ -101,7 +102,7 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
+            this.runtimeEnvironmentVariables = Codegen.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
         public Builder runtimeEnvironmentVariables(ServiceKeyValuePairArgs... runtimeEnvironmentVariables) {
@@ -112,7 +113,7 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Output.ofNullable(startCommand);
+            this.startCommand = Codegen.ofNullable(startCommand);
             return this;
         }        public ServiceImageConfigurationArgs build() {
             return new ServiceImageConfigurationArgs(port, runtimeEnvironmentVariables, startCommand);

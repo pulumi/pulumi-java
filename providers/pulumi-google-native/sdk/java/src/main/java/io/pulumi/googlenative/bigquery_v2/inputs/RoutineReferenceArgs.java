@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> routineId;
 
     public Output<String> getRoutineId() {
-        return this.routineId == null ? Output.empty() : this.routineId;
+        return this.routineId == null ? Codegen.empty() : this.routineId;
     }
 
     public RoutineReferenceArgs(
@@ -57,9 +58,9 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RoutineReferenceArgs() {
-        this.datasetId = Output.empty();
-        this.project = Output.empty();
-        this.routineId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.routineId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -99,7 +100,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder routineId(@Nullable Output<String> routineId) {
@@ -107,7 +108,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder routineId(@Nullable String routineId) {
-            this.routineId = Output.ofNullable(routineId);
+            this.routineId = Codegen.ofNullable(routineId);
             return this;
         }        public RoutineReferenceArgs build() {
             return new RoutineReferenceArgs(datasetId, project, routineId);

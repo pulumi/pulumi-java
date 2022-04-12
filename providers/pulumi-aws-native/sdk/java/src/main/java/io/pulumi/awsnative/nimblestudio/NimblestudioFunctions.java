@@ -22,40 +22,40 @@ public final class NimblestudioFunctions {
      * Represents a launch profile which delegates access to a collection of studio components to studio users
      * 
      */
-    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfile(io.pulumi.awsnative.nimblestudio.inputs.GetLaunchProfileArgs args) {
-        return getLaunchProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfile(GetLaunchProfileArgs args) {
+        return getLaunchProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfile(io.pulumi.awsnative.nimblestudio.inputs.GetLaunchProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfile(GetLaunchProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getLaunchProfile", TypeShape.of(GetLaunchProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a streaming session machine image that can be used to launch a streaming session
      * 
      */
-    public static CompletableFuture<GetStreamingImageResult> getStreamingImage(io.pulumi.awsnative.nimblestudio.inputs.GetStreamingImageArgs args) {
-        return getStreamingImage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStreamingImageResult> getStreamingImage(GetStreamingImageArgs args) {
+        return getStreamingImage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStreamingImageResult> getStreamingImage(io.pulumi.awsnative.nimblestudio.inputs.GetStreamingImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamingImageResult> getStreamingImage(GetStreamingImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStreamingImage", TypeShape.of(GetStreamingImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a studio that contains other Nimble Studio resources
      * 
      */
-    public static CompletableFuture<GetStudioResult> getStudio(io.pulumi.awsnative.nimblestudio.inputs.GetStudioArgs args) {
-        return getStudio(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args) {
+        return getStudio(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStudioResult> getStudio(io.pulumi.awsnative.nimblestudio.inputs.GetStudioArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
      * 
      */
-    public static CompletableFuture<GetStudioComponentResult> getStudioComponent(io.pulumi.awsnative.nimblestudio.inputs.GetStudioComponentArgs args) {
-        return getStudioComponent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStudioComponentResult> getStudioComponent(GetStudioComponentArgs args) {
+        return getStudioComponent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStudioComponentResult> getStudioComponent(io.pulumi.awsnative.nimblestudio.inputs.GetStudioComponentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStudioComponentResult> getStudioComponent(GetStudioComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudioComponent", TypeShape.of(GetStudioComponentResult.class), args, Utilities.withVersion(options));
     }
 }

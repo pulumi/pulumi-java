@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     }
 
     private EndpointRangeDescriptionArgs() {
-        this.endPort = Output.empty();
-        this.startPort = Output.empty();
+        this.endPort = Codegen.empty();
+        this.startPort = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.ScheduleRunType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<DayOfWeek>> scheduleRunDays;
 
     public Output<List<DayOfWeek>> getScheduleRunDays() {
-        return this.scheduleRunDays == null ? Output.empty() : this.scheduleRunDays;
+        return this.scheduleRunDays == null ? Codegen.empty() : this.scheduleRunDays;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
     public Output<Either<String,ScheduleRunType>> getScheduleRunFrequency() {
-        return this.scheduleRunFrequency == null ? Output.empty() : this.scheduleRunFrequency;
+        return this.scheduleRunFrequency == null ? Codegen.empty() : this.scheduleRunFrequency;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> scheduleRunTimes;
 
     public Output<List<String>> getScheduleRunTimes() {
-        return this.scheduleRunTimes == null ? Output.empty() : this.scheduleRunTimes;
+        return this.scheduleRunTimes == null ? Codegen.empty() : this.scheduleRunTimes;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> scheduleWeeklyFrequency;
 
     public Output<Integer> getScheduleWeeklyFrequency() {
-        return this.scheduleWeeklyFrequency == null ? Output.empty() : this.scheduleWeeklyFrequency;
+        return this.scheduleWeeklyFrequency == null ? Codegen.empty() : this.scheduleWeeklyFrequency;
     }
 
     public SimpleSchedulePolicyArgs(
@@ -93,11 +94,11 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
     }
 
     private SimpleSchedulePolicyArgs() {
-        this.schedulePolicyType = Output.empty();
-        this.scheduleRunDays = Output.empty();
-        this.scheduleRunFrequency = Output.empty();
-        this.scheduleRunTimes = Output.empty();
-        this.scheduleWeeklyFrequency = Output.empty();
+        this.schedulePolicyType = Codegen.empty();
+        this.scheduleRunDays = Codegen.empty();
+        this.scheduleRunFrequency = Codegen.empty();
+        this.scheduleRunTimes = Codegen.empty();
+        this.scheduleWeeklyFrequency = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scheduleRunDays(@Nullable List<DayOfWeek> scheduleRunDays) {
-            this.scheduleRunDays = Output.ofNullable(scheduleRunDays);
+            this.scheduleRunDays = Codegen.ofNullable(scheduleRunDays);
             return this;
         }
         public Builder scheduleRunDays(DayOfWeek... scheduleRunDays) {
@@ -152,7 +153,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scheduleRunFrequency(@Nullable Either<String,ScheduleRunType> scheduleRunFrequency) {
-            this.scheduleRunFrequency = Output.ofNullable(scheduleRunFrequency);
+            this.scheduleRunFrequency = Codegen.ofNullable(scheduleRunFrequency);
             return this;
         }
         public Builder scheduleRunTimes(@Nullable Output<List<String>> scheduleRunTimes) {
@@ -160,7 +161,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
-            this.scheduleRunTimes = Output.ofNullable(scheduleRunTimes);
+            this.scheduleRunTimes = Codegen.ofNullable(scheduleRunTimes);
             return this;
         }
         public Builder scheduleRunTimes(String... scheduleRunTimes) {
@@ -171,7 +172,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
-            this.scheduleWeeklyFrequency = Output.ofNullable(scheduleWeeklyFrequency);
+            this.scheduleWeeklyFrequency = Codegen.ofNullable(scheduleWeeklyFrequency);
             return this;
         }        public SimpleSchedulePolicyArgs build() {
             return new SimpleSchedulePolicyArgs(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);

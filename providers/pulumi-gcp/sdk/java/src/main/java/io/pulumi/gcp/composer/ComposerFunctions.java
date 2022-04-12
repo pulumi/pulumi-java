@@ -18,10 +18,10 @@ public final class ComposerFunctions {
      * Provides access to Cloud Composer environment configuration in a region for a given project.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.gcp.composer.inputs.GetEnvironmentArgs args) {
-        return getEnvironment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+        return getEnvironment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(io.pulumi.gcp.composer.inputs.GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:composer/getEnvironment:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -31,12 +31,12 @@ public final class ComposerFunctions {
      * 
      */
     public static CompletableFuture<GetImageVersionsResult> getImageVersions() {
-        return getImageVersions(io.pulumi.gcp.composer.inputs.GetImageVersionsArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getImageVersions(GetImageVersionsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageVersionsResult> getImageVersions(io.pulumi.gcp.composer.inputs.GetImageVersionsArgs args) {
-        return getImageVersions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetImageVersionsResult> getImageVersions(GetImageVersionsArgs args) {
+        return getImageVersions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetImageVersionsResult> getImageVersions(io.pulumi.gcp.composer.inputs.GetImageVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageVersionsResult> getImageVersions(GetImageVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:composer/getImageVersions:getImageVersions", TypeShape.of(GetImageVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

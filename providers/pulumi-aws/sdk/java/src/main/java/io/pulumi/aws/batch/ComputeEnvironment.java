@@ -10,6 +10,7 @@ import io.pulumi.aws.batch.outputs.ComputeEnvironmentComputeResources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -229,7 +230,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ComputeEnvironment(String name, ComputeEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:batch/computeEnvironment:ComputeEnvironment", name, args == null ? ComputeEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:batch/computeEnvironment:ComputeEnvironment", name, args == null ? ComputeEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ComputeEnvironment(String name, Output<String> id, @Nullable ComputeEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

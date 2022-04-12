@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ClusterNotificationConfigPubsubGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public ClusterNotificationConfigPubsubGetArgs(
@@ -46,8 +47,8 @@ public final class ClusterNotificationConfigPubsubGetArgs extends io.pulumi.reso
     }
 
     private ClusterNotificationConfigPubsubGetArgs() {
-        this.enabled = Output.empty();
-        this.topic = Output.empty();
+        this.enabled = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ClusterNotificationConfigPubsubGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public ClusterNotificationConfigPubsubGetArgs build() {
             return new ClusterNotificationConfigPubsubGetArgs(enabled, topic);

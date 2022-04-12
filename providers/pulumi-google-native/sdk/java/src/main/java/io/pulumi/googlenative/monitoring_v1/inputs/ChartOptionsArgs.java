@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.ChartOptionsMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ChartOptionsMode> mode;
 
     public Output<ChartOptionsMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public ChartOptionsArgs(@Nullable Output<ChartOptionsMode> mode) {
@@ -34,7 +35,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChartOptionsArgs() {
-        this.mode = Output.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable ChartOptionsMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public ChartOptionsArgs build() {
             return new ChartOptionsArgs(mode);

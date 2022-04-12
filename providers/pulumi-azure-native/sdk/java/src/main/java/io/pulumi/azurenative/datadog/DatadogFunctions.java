@@ -26,20 +26,20 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(io.pulumi.azurenative.datadog.inputs.GetMonitorArgs args) {
-        return getMonitor(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+        return getMonitor(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMonitorResult> getMonitor(io.pulumi.azurenative.datadog.inputs.GetMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(io.pulumi.azurenative.datadog.inputs.GetMonitorDefaultKeyArgs args) {
-        return getMonitorDefaultKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args) {
+        return getMonitorDefaultKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(io.pulumi.azurenative.datadog.inputs.GetMonitorDefaultKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitorDefaultKeyResult> getMonitorDefaultKey(GetMonitorDefaultKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:getMonitorDefaultKey", TypeShape.of(GetMonitorDefaultKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(io.pulumi.azurenative.datadog.inputs.ListMonitorApiKeysArgs args) {
-        return listMonitorApiKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args) {
+        return listMonitorApiKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(io.pulumi.azurenative.datadog.inputs.ListMonitorApiKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorApiKeysResult> listMonitorApiKeys(ListMonitorApiKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorApiKeys", TypeShape.of(ListMonitorApiKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(io.pulumi.azurenative.datadog.inputs.ListMonitorHostsArgs args) {
-        return listMonitorHosts(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args) {
+        return listMonitorHosts(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(io.pulumi.azurenative.datadog.inputs.ListMonitorHostsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorHostsResult> listMonitorHosts(ListMonitorHostsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorHosts", TypeShape.of(ListMonitorHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(io.pulumi.azurenative.datadog.inputs.ListMonitorLinkedResourcesArgs args) {
-        return listMonitorLinkedResources(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args) {
+        return listMonitorLinkedResources(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(io.pulumi.azurenative.datadog.inputs.ListMonitorLinkedResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorLinkedResourcesResult> listMonitorLinkedResources(ListMonitorLinkedResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorLinkedResources", TypeShape.of(ListMonitorLinkedResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -80,10 +80,10 @@ public final class DatadogFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(io.pulumi.azurenative.datadog.inputs.ListMonitorMonitoredResourcesArgs args) {
-        return listMonitorMonitoredResources(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args) {
+        return listMonitorMonitoredResources(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(io.pulumi.azurenative.datadog.inputs.ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitorMonitoredResourcesResult> listMonitorMonitoredResources(ListMonitorMonitoredResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args, Utilities.withVersion(options));
     }
 }

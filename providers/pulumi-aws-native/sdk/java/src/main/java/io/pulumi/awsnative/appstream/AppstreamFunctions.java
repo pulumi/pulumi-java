@@ -24,50 +24,50 @@ public final class AppstreamFunctions {
      * Resource Type definition for AWS::AppStream::AppBlock
      * 
      */
-    public static CompletableFuture<GetAppBlockResult> getAppBlock(io.pulumi.awsnative.appstream.inputs.GetAppBlockArgs args) {
-        return getAppBlock(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppBlockResult> getAppBlock(GetAppBlockArgs args) {
+        return getAppBlock(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppBlockResult> getAppBlock(io.pulumi.awsnative.appstream.inputs.GetAppBlockArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppBlockResult> getAppBlock(GetAppBlockArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getAppBlock", TypeShape.of(GetAppBlockResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppStream::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.appstream.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.appstream.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppStream::ApplicationEntitlementAssociation
      * 
      */
-    public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(io.pulumi.awsnative.appstream.inputs.GetApplicationEntitlementAssociationArgs args) {
-        return getApplicationEntitlementAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(GetApplicationEntitlementAssociationArgs args) {
+        return getApplicationEntitlementAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(io.pulumi.awsnative.appstream.inputs.GetApplicationEntitlementAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(GetApplicationEntitlementAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationEntitlementAssociation", TypeShape.of(GetApplicationEntitlementAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
      * 
      */
-    public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(io.pulumi.awsnative.appstream.inputs.GetApplicationFleetAssociationArgs args) {
-        return getApplicationFleetAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(GetApplicationFleetAssociationArgs args) {
+        return getApplicationFleetAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(io.pulumi.awsnative.appstream.inputs.GetApplicationFleetAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(GetApplicationFleetAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationFleetAssociation", TypeShape.of(GetApplicationFleetAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppStream::Entitlement
      * 
      */
-    public static CompletableFuture<GetEntitlementResult> getEntitlement(io.pulumi.awsnative.appstream.inputs.GetEntitlementArgs args) {
-        return getEntitlement(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args) {
+        return getEntitlement(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntitlementResult> getEntitlement(io.pulumi.awsnative.appstream.inputs.GetEntitlementArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getEntitlement", TypeShape.of(GetEntitlementResult.class), args, Utilities.withVersion(options));
     }
 }

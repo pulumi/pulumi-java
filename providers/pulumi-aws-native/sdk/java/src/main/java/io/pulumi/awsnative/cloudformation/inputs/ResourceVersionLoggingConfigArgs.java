@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<String> logRoleArn;
 
     public Output<String> getLogRoleArn() {
-        return this.logRoleArn == null ? Output.empty() : this.logRoleArn;
+        return this.logRoleArn == null ? Codegen.empty() : this.logRoleArn;
     }
 
     public ResourceVersionLoggingConfigArgs(
@@ -44,8 +45,8 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
     }
 
     private ResourceVersionLoggingConfigArgs() {
-        this.logGroupName = Output.empty();
-        this.logRoleArn = Output.empty();
+        this.logGroupName = Codegen.empty();
+        this.logRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
@@ -83,7 +84,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder logRoleArn(@Nullable String logRoleArn) {
-            this.logRoleArn = Output.ofNullable(logRoleArn);
+            this.logRoleArn = Codegen.ofNullable(logRoleArn);
             return this;
         }        public ResourceVersionLoggingConfigArgs build() {
             return new ResourceVersionLoggingConfigArgs(logGroupName, logRoleArn);

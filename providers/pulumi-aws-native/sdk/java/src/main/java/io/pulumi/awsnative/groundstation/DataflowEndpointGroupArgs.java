@@ -7,6 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDet
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
     public Output<List<DataflowEndpointGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DataflowEndpointGroupArgs(
@@ -38,8 +39,8 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private DataflowEndpointGroupArgs() {
-        this.endpointDetails = Output.empty();
-        this.tags = Output.empty();
+        this.endpointDetails = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable List<DataflowEndpointGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DataflowEndpointGroupTagArgs... tags) {

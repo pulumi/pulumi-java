@@ -5,6 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> expires;
 
     public Output<Double> getExpires() {
-        return this.expires == null ? Output.empty() : this.expires;
+        return this.expires == null ? Codegen.empty() : this.expires;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> notBefore;
 
     public Output<Double> getNotBefore() {
-        return this.notBefore == null ? Output.empty() : this.notBefore;
+        return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 
     public KeyAttributesArgs(
@@ -62,9 +63,9 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyAttributesArgs() {
-        this.enabled = Output.empty();
-        this.expires = Output.empty();
-        this.notBefore = Output.empty();
+        this.enabled = Codegen.empty();
+        this.expires = Codegen.empty();
+        this.notBefore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder expires(@Nullable Output<Double> expires) {
@@ -104,7 +105,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expires(@Nullable Double expires) {
-            this.expires = Output.ofNullable(expires);
+            this.expires = Codegen.ofNullable(expires);
             return this;
         }
         public Builder notBefore(@Nullable Output<Double> notBefore) {
@@ -112,7 +113,7 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notBefore(@Nullable Double notBefore) {
-            this.notBefore = Output.ofNullable(notBefore);
+            this.notBefore = Codegen.ofNullable(notBefore);
             return this;
         }        public KeyAttributesArgs build() {
             return new KeyAttributesArgs(enabled, expires, notBefore);

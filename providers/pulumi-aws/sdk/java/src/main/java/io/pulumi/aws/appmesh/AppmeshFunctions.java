@@ -20,10 +20,10 @@ public final class AppmeshFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetMeshResult> getMesh(io.pulumi.aws.appmesh.inputs.GetMeshArgs args) {
-        return getMesh(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args) {
+        return getMesh(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMeshResult> getMesh(io.pulumi.aws.appmesh.inputs.GetMeshArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:appmesh/getMesh:getMesh", TypeShape.of(GetMeshResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class AppmeshFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(io.pulumi.aws.appmesh.inputs.GetVirtualServiceArgs args) {
-        return getVirtualService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args) {
+        return getVirtualService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(io.pulumi.aws.appmesh.inputs.GetVirtualServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:appmesh/getVirtualService:getVirtualService", TypeShape.of(GetVirtualServiceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -26,60 +26,60 @@ public final class RobomakerFunctions {
      * AWS::RoboMaker::Fleet resource creates an AWS RoboMaker fleet. Fleets contain robots and can receive deployments.
      * 
      */
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.awsnative.robomaker.inputs.GetFleetArgs args) {
-        return getFleet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args) {
+        return getFleet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFleetResult> getFleet(io.pulumi.awsnative.robomaker.inputs.GetFleetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
      * 
      */
-    public static CompletableFuture<GetRobotResult> getRobot(io.pulumi.awsnative.robomaker.inputs.GetRobotArgs args) {
-        return getRobot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRobotResult> getRobot(GetRobotArgs args) {
+        return getRobot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRobotResult> getRobot(io.pulumi.awsnative.robomaker.inputs.GetRobotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRobotResult> getRobot(GetRobotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobot", TypeShape.of(GetRobotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetRobotApplicationResult> getRobotApplication(io.pulumi.awsnative.robomaker.inputs.GetRobotApplicationArgs args) {
-        return getRobotApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRobotApplicationResult> getRobotApplication(GetRobotApplicationArgs args) {
+        return getRobotApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRobotApplicationResult> getRobotApplication(io.pulumi.awsnative.robomaker.inputs.GetRobotApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRobotApplicationResult> getRobotApplication(GetRobotApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobotApplication", TypeShape.of(GetRobotApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetRobotApplicationVersionResult> getRobotApplicationVersion(io.pulumi.awsnative.robomaker.inputs.GetRobotApplicationVersionArgs args) {
-        return getRobotApplicationVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRobotApplicationVersionResult> getRobotApplicationVersion(GetRobotApplicationVersionArgs args) {
+        return getRobotApplicationVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRobotApplicationVersionResult> getRobotApplicationVersion(io.pulumi.awsnative.robomaker.inputs.GetRobotApplicationVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRobotApplicationVersionResult> getRobotApplicationVersion(GetRobotApplicationVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobotApplicationVersion", TypeShape.of(GetRobotApplicationVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetSimulationApplicationResult> getSimulationApplication(io.pulumi.awsnative.robomaker.inputs.GetSimulationApplicationArgs args) {
-        return getSimulationApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSimulationApplicationResult> getSimulationApplication(GetSimulationApplicationArgs args) {
+        return getSimulationApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSimulationApplicationResult> getSimulationApplication(io.pulumi.awsnative.robomaker.inputs.GetSimulationApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSimulationApplicationResult> getSimulationApplication(GetSimulationApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getSimulationApplication", TypeShape.of(GetSimulationApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetSimulationApplicationVersionResult> getSimulationApplicationVersion(io.pulumi.awsnative.robomaker.inputs.GetSimulationApplicationVersionArgs args) {
-        return getSimulationApplicationVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSimulationApplicationVersionResult> getSimulationApplicationVersion(GetSimulationApplicationVersionArgs args) {
+        return getSimulationApplicationVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSimulationApplicationVersionResult> getSimulationApplicationVersion(io.pulumi.awsnative.robomaker.inputs.GetSimulationApplicationVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSimulationApplicationVersionResult> getSimulationApplicationVersion(GetSimulationApplicationVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getSimulationApplicationVersion", TypeShape.of(GetSimulationApplicationVersionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.JwtAuthenticationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accessPolicyName;
 
     public Output<String> getAccessPolicyName() {
-        return this.accessPolicyName == null ? Output.empty() : this.accessPolicyName;
+        return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JwtAuthenticationArgs> authentication;
 
     public Output<JwtAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AccessPolicyRole>> role;
 
     public Output<Either<String,AccessPolicyRole>> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public AccessPolicyArgs(
@@ -86,11 +87,11 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyName = Output.empty();
-        this.accountName = Output.empty();
-        this.authentication = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.role = Output.empty();
+        this.accessPolicyName = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessPolicyName(@Nullable String accessPolicyName) {
-            this.accessPolicyName = Output.ofNullable(accessPolicyName);
+            this.accessPolicyName = Codegen.ofNullable(accessPolicyName);
             return this;
         }
         public Builder accountName(Output<String> accountName) {
@@ -142,7 +143,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable JwtAuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -158,7 +159,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable Either<String,AccessPolicyRole> role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyName, accountName, authentication, resourceGroupName, role);

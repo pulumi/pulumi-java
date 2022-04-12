@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
       private final @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
 
     public Output<ManagementEventAggregationConditionArgs> getAggregation() {
-        return this.aggregation == null ? Output.empty() : this.aggregation;
+        return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
-        return this.dataSource == null ? Output.empty() : this.dataSource;
+        return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
     /**
@@ -66,9 +67,9 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     }
 
     private ManagementEventRuleConditionArgs() {
-        this.aggregation = Output.empty();
-        this.dataSource = Output.empty();
-        this.odataType = Output.empty();
+        this.aggregation = Codegen.empty();
+        this.dataSource = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder aggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
-            this.aggregation = Output.ofNullable(aggregation);
+            this.aggregation = Codegen.ofNullable(aggregation);
             return this;
         }
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
@@ -108,7 +109,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Output.ofNullable(dataSource);
+            this.dataSource = Codegen.ofNullable(dataSource);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

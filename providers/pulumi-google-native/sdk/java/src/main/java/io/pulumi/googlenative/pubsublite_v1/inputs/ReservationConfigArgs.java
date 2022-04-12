@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> throughputReservation;
 
     public Output<String> getThroughputReservation() {
-        return this.throughputReservation == null ? Output.empty() : this.throughputReservation;
+        return this.throughputReservation == null ? Codegen.empty() : this.throughputReservation;
     }
 
     public ReservationConfigArgs(@Nullable Output<String> throughputReservation) {
@@ -34,7 +35,7 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReservationConfigArgs() {
-        this.throughputReservation = Output.empty();
+        this.throughputReservation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder throughputReservation(@Nullable String throughputReservation) {
-            this.throughputReservation = Output.ofNullable(throughputReservation);
+            this.throughputReservation = Codegen.ofNullable(throughputReservation);
             return this;
         }        public ReservationConfigArgs build() {
             return new ReservationConfigArgs(throughputReservation);

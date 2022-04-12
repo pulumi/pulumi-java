@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class CustomAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomAccountArgs() {
-        this.loginUrl = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.loginUrl = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

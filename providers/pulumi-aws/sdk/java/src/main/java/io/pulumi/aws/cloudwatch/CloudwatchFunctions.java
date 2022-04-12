@@ -26,10 +26,10 @@ public final class CloudwatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEventConnectionResult> getEventConnection(io.pulumi.aws.cloudwatch.inputs.GetEventConnectionArgs args) {
-        return getEventConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args) {
+        return getEventConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventConnectionResult> getEventConnection(io.pulumi.aws.cloudwatch.inputs.GetEventConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -41,12 +41,12 @@ public final class CloudwatchFunctions {
      * 
      */
     public static CompletableFuture<GetEventSourceResult> getEventSource() {
-        return getEventSource(io.pulumi.aws.cloudwatch.inputs.GetEventSourceArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEventSource(GetEventSourceArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSourceResult> getEventSource(io.pulumi.aws.cloudwatch.inputs.GetEventSourceArgs args) {
-        return getEventSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
+        return getEventSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventSourceResult> getEventSource(io.pulumi.aws.cloudwatch.inputs.GetEventSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,10 +55,10 @@ public final class CloudwatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(io.pulumi.aws.cloudwatch.inputs.GetLogGroupArgs args) {
-        return getLogGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
+        return getLogGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogGroupResult> getLogGroup(io.pulumi.aws.cloudwatch.inputs.GetLogGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -67,10 +67,10 @@ public final class CloudwatchFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(io.pulumi.aws.cloudwatch.inputs.GetLogGroupsArgs args) {
-        return getLogGroups(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {
+        return getLogGroups(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLogGroupsResult> getLogGroups(io.pulumi.aws.cloudwatch.inputs.GetLogGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

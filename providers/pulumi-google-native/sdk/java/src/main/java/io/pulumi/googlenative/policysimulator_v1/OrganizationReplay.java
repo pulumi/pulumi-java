@@ -6,6 +6,7 @@ package io.pulumi.googlenative.policysimulator_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1.OrganizationReplayArgs;
 import io.pulumi.googlenative.policysimulator_v1.outputs.GoogleCloudPolicysimulatorV1ReplayConfigResponse;
@@ -101,7 +102,7 @@ public class OrganizationReplay extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationReplay(String name, OrganizationReplayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:policysimulator/v1:OrganizationReplay", name, args == null ? OrganizationReplayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:policysimulator/v1:OrganizationReplay", name, args == null ? OrganizationReplayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationReplay(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

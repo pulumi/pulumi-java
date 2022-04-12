@@ -19,10 +19,10 @@ public final class DataboxFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.databox.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.azurenative.databox.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databox:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class DataboxFunctions {
      * API Version: 2020-11-01.
      * 
      */
-    public static CompletableFuture<ListJobCredentialsResult> listJobCredentials(io.pulumi.azurenative.databox.inputs.ListJobCredentialsArgs args) {
-        return listJobCredentials(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListJobCredentialsResult> listJobCredentials(ListJobCredentialsArgs args) {
+        return listJobCredentials(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListJobCredentialsResult> listJobCredentials(io.pulumi.azurenative.databox.inputs.ListJobCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListJobCredentialsResult> listJobCredentials(ListJobCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databox:listJobCredentials", TypeShape.of(ListJobCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

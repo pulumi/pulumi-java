@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class FirewallPolicyStatelessRuleGroupReferenceArgs extends io.pulu
     }
 
     private FirewallPolicyStatelessRuleGroupReferenceArgs() {
-        this.priority = Output.empty();
-        this.resourceArn = Output.empty();
+        this.priority = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {

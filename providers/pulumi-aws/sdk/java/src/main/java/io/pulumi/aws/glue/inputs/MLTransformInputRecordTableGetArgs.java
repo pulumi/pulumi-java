@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
     }
 
     private MLTransformInputRecordTableGetArgs() {
-        this.catalogId = Output.empty();
-        this.connectionName = Output.empty();
-        this.databaseName = Output.empty();
-        this.tableName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.connectionName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder connectionName(@Nullable Output<String> connectionName) {
@@ -115,7 +116,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {

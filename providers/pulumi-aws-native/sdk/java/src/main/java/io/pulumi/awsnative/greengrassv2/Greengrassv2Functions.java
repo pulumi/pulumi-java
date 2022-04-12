@@ -16,10 +16,10 @@ public final class Greengrassv2Functions {
      * Resource for Greengrass component version.
      * 
      */
-    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(io.pulumi.awsnative.greengrassv2.inputs.GetComponentVersionArgs args) {
-        return getComponentVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args) {
+        return getComponentVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(io.pulumi.awsnative.greengrassv2.inputs.GetComponentVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:greengrassv2:getComponentVersion", TypeShape.of(GetComponentVersionResult.class), args, Utilities.withVersion(options));
     }
 }

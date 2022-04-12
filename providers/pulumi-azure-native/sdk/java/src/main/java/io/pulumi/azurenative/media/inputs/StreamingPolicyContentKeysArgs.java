@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.inputs.DefaultKeyArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DefaultKeyArgs> defaultKey;
 
     public Output<DefaultKeyArgs> getDefaultKey() {
-        return this.defaultKey == null ? Output.empty() : this.defaultKey;
+        return this.defaultKey == null ? Codegen.empty() : this.defaultKey;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
     public Output<List<StreamingPolicyContentKeyArgs>> getKeyToTrackMappings() {
-        return this.keyToTrackMappings == null ? Output.empty() : this.keyToTrackMappings;
+        return this.keyToTrackMappings == null ? Codegen.empty() : this.keyToTrackMappings;
     }
 
     public StreamingPolicyContentKeysArgs(
@@ -50,8 +51,8 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
     }
 
     private StreamingPolicyContentKeysArgs() {
-        this.defaultKey = Output.empty();
-        this.keyToTrackMappings = Output.empty();
+        this.defaultKey = Codegen.empty();
+        this.keyToTrackMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder defaultKey(@Nullable DefaultKeyArgs defaultKey) {
-            this.defaultKey = Output.ofNullable(defaultKey);
+            this.defaultKey = Codegen.ofNullable(defaultKey);
             return this;
         }
         public Builder keyToTrackMappings(@Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
@@ -89,7 +90,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
-            this.keyToTrackMappings = Output.ofNullable(keyToTrackMappings);
+            this.keyToTrackMappings = Codegen.ofNullable(keyToTrackMappings);
             return this;
         }
         public Builder keyToTrackMappings(StreamingPolicyContentKeyArgs... keyToTrackMappings) {

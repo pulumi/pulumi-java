@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -183,7 +184,7 @@ public class ExpressRouteGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRouteGateway(String name, ExpressRouteGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRouteGateway", name, args == null ? ExpressRouteGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRouteGateway", name, args == null ? ExpressRouteGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRouteGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

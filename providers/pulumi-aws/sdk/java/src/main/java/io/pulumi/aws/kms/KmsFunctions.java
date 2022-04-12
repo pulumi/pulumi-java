@@ -30,10 +30,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.aws.kms.inputs.GetAliasArgs args) {
-        return getAlias(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
+        return getAlias(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAliasResult> getAlias(io.pulumi.aws.kms.inputs.GetAliasArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getAlias:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCipherTextResult> getCipherText(io.pulumi.aws.kms.inputs.GetCipherTextArgs args) {
-        return getCipherText(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCipherTextResult> getCipherText(GetCipherTextArgs args) {
+        return getCipherText(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCipherTextResult> getCipherText(io.pulumi.aws.kms.inputs.GetCipherTextArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCipherTextResult> getCipherText(GetCipherTextArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getCipherText:getCipherText", TypeShape.of(GetCipherTextResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.aws.kms.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.aws.kms.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getKey:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -72,26 +72,26 @@ public final class KmsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(io.pulumi.aws.kms.inputs.GetPublicKeyArgs args) {
-        return getPublicKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args) {
+        return getPublicKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPublicKeyResult> getPublicKey(io.pulumi.aws.kms.inputs.GetPublicKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getPublicKey:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.aws.kms.inputs.GetSecretArgs args) {
-        return getSecret(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
+        return getSecret(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretResult> getSecret(io.pulumi.aws.kms.inputs.GetSecretArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Decrypt multiple secrets from data encrypted with the AWS KMS service.
      * 
      */
-    public static CompletableFuture<GetSecretsResult> getSecrets(io.pulumi.aws.kms.inputs.GetSecretsArgs args) {
-        return getSecrets(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args) {
+        return getSecrets(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSecretsResult> getSecrets(io.pulumi.aws.kms.inputs.GetSecretsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

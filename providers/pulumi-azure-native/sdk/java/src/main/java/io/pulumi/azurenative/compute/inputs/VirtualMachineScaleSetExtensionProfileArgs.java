@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
       private final @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
     public Output<List<VirtualMachineScaleSetExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
       private final @Nullable Output<String> extensionsTimeBudget;
 
     public Output<String> getExtensionsTimeBudget() {
-        return this.extensionsTimeBudget == null ? Output.empty() : this.extensionsTimeBudget;
+        return this.extensionsTimeBudget == null ? Codegen.empty() : this.extensionsTimeBudget;
     }
 
     public VirtualMachineScaleSetExtensionProfileArgs(
@@ -50,8 +51,8 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
     }
 
     private VirtualMachineScaleSetExtensionProfileArgs() {
-        this.extensions = Output.empty();
-        this.extensionsTimeBudget = Output.empty();
+        this.extensions = Codegen.empty();
+        this.extensionsTimeBudget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
             return this;
         }
         public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionArgs> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder extensions(VirtualMachineScaleSetExtensionArgs... extensions) {
@@ -92,7 +93,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
             return this;
         }
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
-            this.extensionsTimeBudget = Output.ofNullable(extensionsTimeBudget);
+            this.extensionsTimeBudget = Codegen.ofNullable(extensionsTimeBudget);
             return this;
         }        public VirtualMachineScaleSetExtensionProfileArgs build() {
             return new VirtualMachineScaleSetExtensionProfileArgs(extensions, extensionsTimeBudget);

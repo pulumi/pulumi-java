@@ -19,10 +19,10 @@ public final class PowerbidedicatedFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(io.pulumi.azurenative.powerbidedicated.inputs.GetAutoScaleVCoreArgs args) {
-        return getAutoScaleVCore(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args) {
+        return getAutoScaleVCore(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(io.pulumi.azurenative.powerbidedicated.inputs.GetAutoScaleVCoreArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoScaleVCoreResult> getAutoScaleVCore(GetAutoScaleVCoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class PowerbidedicatedFunctions {
      * API Version: 2021-01-01.
      * 
      */
-    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(io.pulumi.azurenative.powerbidedicated.inputs.GetCapacityDetailsArgs args) {
-        return getCapacityDetails(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args) {
+        return getCapacityDetails(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(io.pulumi.azurenative.powerbidedicated.inputs.GetCapacityDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCapacityDetailsResult> getCapacityDetails(GetCapacityDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

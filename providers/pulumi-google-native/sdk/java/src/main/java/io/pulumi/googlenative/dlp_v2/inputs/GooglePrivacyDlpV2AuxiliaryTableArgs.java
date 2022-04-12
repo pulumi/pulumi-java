@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdFieldArgs;
@@ -63,9 +64,9 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends io.pulumi.resour
     }
 
     private GooglePrivacyDlpV2AuxiliaryTableArgs() {
-        this.quasiIds = Output.empty();
-        this.relativeFrequency = Output.empty();
-        this.table = Output.empty();
+        this.quasiIds = Codegen.empty();
+        this.relativeFrequency = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {

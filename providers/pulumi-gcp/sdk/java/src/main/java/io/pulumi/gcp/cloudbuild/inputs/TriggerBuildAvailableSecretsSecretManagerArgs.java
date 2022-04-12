@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,8 +47,8 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
     }
 
     private TriggerBuildAvailableSecretsSecretManagerArgs() {
-        this.env = Output.empty();
-        this.versionName = Output.empty();
+        this.env = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {

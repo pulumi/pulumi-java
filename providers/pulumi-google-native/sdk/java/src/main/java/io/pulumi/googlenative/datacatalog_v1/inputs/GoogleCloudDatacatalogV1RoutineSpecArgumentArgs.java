@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecArgumentMode;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
 
     public Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
     }
 
     private GoogleCloudDatacatalogV1RoutineSpecArgumentArgs() {
-        this.mode = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.mode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
             return this;
         }
         public Builder mode(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgumentMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -112,7 +113,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudDatacatalogV1RoutineSpecArgumentArgs build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentArgs(mode, name, type);

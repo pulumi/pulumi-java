@@ -18,10 +18,10 @@ public final class CloudcontrolFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.cloudcontrol.inputs.GetResourceArgs args) {
-        return getResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
+        return getResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceResult> getResource(io.pulumi.aws.cloudcontrol.inputs.GetResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudcontrol/getResource:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
 }

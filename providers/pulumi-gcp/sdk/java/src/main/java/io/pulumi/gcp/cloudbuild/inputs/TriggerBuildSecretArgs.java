@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> secretEnv;
 
     public Output<Map<String,String>> getSecretEnv() {
-        return this.secretEnv == null ? Output.empty() : this.secretEnv;
+        return this.secretEnv == null ? Codegen.empty() : this.secretEnv;
     }
 
     public TriggerBuildSecretArgs(
@@ -47,8 +48,8 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TriggerBuildSecretArgs() {
-        this.kmsKeyName = Output.empty();
-        this.secretEnv = Output.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.secretEnv = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
-            this.secretEnv = Output.ofNullable(secretEnv);
+            this.secretEnv = Codegen.ofNullable(secretEnv);
             return this;
         }        public TriggerBuildSecretArgs build() {
             return new TriggerBuildSecretArgs(kmsKeyName, secretEnv);

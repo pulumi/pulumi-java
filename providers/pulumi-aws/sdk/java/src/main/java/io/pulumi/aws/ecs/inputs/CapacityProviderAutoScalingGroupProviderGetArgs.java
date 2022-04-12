@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs> managedScaling;
 
     public Output<CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs> getManagedScaling() {
-        return this.managedScaling == null ? Output.empty() : this.managedScaling;
+        return this.managedScaling == null ? Codegen.empty() : this.managedScaling;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
       private final @Nullable Output<String> managedTerminationProtection;
 
     public Output<String> getManagedTerminationProtection() {
-        return this.managedTerminationProtection == null ? Output.empty() : this.managedTerminationProtection;
+        return this.managedTerminationProtection == null ? Codegen.empty() : this.managedTerminationProtection;
     }
 
     public CapacityProviderAutoScalingGroupProviderGetArgs(
@@ -58,9 +59,9 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
     }
 
     private CapacityProviderAutoScalingGroupProviderGetArgs() {
-        this.autoScalingGroupArn = Output.empty();
-        this.managedScaling = Output.empty();
-        this.managedTerminationProtection = Output.empty();
+        this.autoScalingGroupArn = Codegen.empty();
+        this.managedScaling = Codegen.empty();
+        this.managedTerminationProtection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
             return this;
         }
         public Builder managedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs managedScaling) {
-            this.managedScaling = Output.ofNullable(managedScaling);
+            this.managedScaling = Codegen.ofNullable(managedScaling);
             return this;
         }
         public Builder managedTerminationProtection(@Nullable Output<String> managedTerminationProtection) {
@@ -108,7 +109,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
             return this;
         }
         public Builder managedTerminationProtection(@Nullable String managedTerminationProtection) {
-            this.managedTerminationProtection = Output.ofNullable(managedTerminationProtection);
+            this.managedTerminationProtection = Codegen.ofNullable(managedTerminationProtection);
             return this;
         }        public CapacityProviderAutoScalingGroupProviderGetArgs build() {
             return new CapacityProviderAutoScalingGroupProviderGetArgs(autoScalingGroupArn, managedScaling, managedTerminationProtection);

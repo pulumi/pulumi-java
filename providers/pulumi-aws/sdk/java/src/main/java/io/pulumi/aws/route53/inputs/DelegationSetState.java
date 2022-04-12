@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> nameServers;
 
     public Output<List<String>> getNameServers() {
-        return this.nameServers == null ? Output.empty() : this.nameServers;
+        return this.nameServers == null ? Codegen.empty() : this.nameServers;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> referenceName;
 
     public Output<String> getReferenceName() {
-        return this.referenceName == null ? Output.empty() : this.referenceName;
+        return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 
     public DelegationSetState(
@@ -60,9 +61,9 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DelegationSetState() {
-        this.arn = Output.empty();
-        this.nameServers = Output.empty();
-        this.referenceName = Output.empty();
+        this.arn = Codegen.empty();
+        this.nameServers = Codegen.empty();
+        this.referenceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
@@ -102,7 +103,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Output.ofNullable(nameServers);
+            this.nameServers = Codegen.ofNullable(nameServers);
             return this;
         }
         public Builder nameServers(String... nameServers) {
@@ -113,7 +114,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Output.ofNullable(referenceName);
+            this.referenceName = Codegen.ofNullable(referenceName);
             return this;
         }        public DelegationSetState build() {
             return new DelegationSetState(arn, nameServers, referenceName);

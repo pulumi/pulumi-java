@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1alpha.enums.MaintenanceWindowDayOfWeek;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
     public Output<MaintenanceWindowDayOfWeek> getDayOfWeek() {
-        return this.dayOfWeek == null ? Output.empty() : this.dayOfWeek;
+        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> hourOfDay;
 
     public Output<Integer> getHourOfDay() {
-        return this.hourOfDay == null ? Output.empty() : this.hourOfDay;
+        return this.hourOfDay == null ? Codegen.empty() : this.hourOfDay;
     }
 
     public MaintenanceWindowArgs(
@@ -49,8 +50,8 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.dayOfWeek = Output.empty();
-        this.hourOfDay = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.hourOfDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dayOfWeek(@Nullable MaintenanceWindowDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Output.ofNullable(dayOfWeek);
+            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
             return this;
         }
         public Builder hourOfDay(@Nullable Output<Integer> hourOfDay) {
@@ -88,7 +89,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hourOfDay(@Nullable Integer hourOfDay) {
-            this.hourOfDay = Output.ofNullable(hourOfDay);
+            this.hourOfDay = Codegen.ofNullable(hourOfDay);
             return this;
         }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(dayOfWeek, hourOfDay);

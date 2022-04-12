@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EnabledProtocolsArgs() {
-        this.dash = Output.empty();
-        this.download = Output.empty();
-        this.hls = Output.empty();
-        this.smoothStreaming = Output.empty();
+        this.dash = Codegen.empty();
+        this.download = Codegen.empty();
+        this.hls = Codegen.empty();
+        this.smoothStreaming = Codegen.empty();
     }
 
     public static Builder builder() {

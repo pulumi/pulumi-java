@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="notificationDestination")
       private final @Nullable Output<String> notificationDestination;
 
     public Output<String> getNotificationDestination() {
-        return this.notificationDestination == null ? Output.empty() : this.notificationDestination;
+        return this.notificationDestination == null ? Codegen.empty() : this.notificationDestination;
     }
 
     public NotificationEndpointArgs(
@@ -37,8 +38,8 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private NotificationEndpointArgs() {
-        this.locations = Output.empty();
-        this.notificationDestination = Output.empty();
+        this.locations = Codegen.empty();
+        this.notificationDestination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -79,7 +80,7 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder notificationDestination(@Nullable String notificationDestination) {
-            this.notificationDestination = Output.ofNullable(notificationDestination);
+            this.notificationDestination = Codegen.ofNullable(notificationDestination);
             return this;
         }        public NotificationEndpointArgs build() {
             return new NotificationEndpointArgs(locations, notificationDestination);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -87,11 +88,11 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2EnvelopeSettingsArgs() {
-        this.autogenerateFileName = Output.empty();
-        this.fileNameTemplate = Output.empty();
-        this.messageContentType = Output.empty();
-        this.suspendMessageOnFileNameGenerationError = Output.empty();
-        this.transmitFileNameInMimeHeader = Output.empty();
+        this.autogenerateFileName = Codegen.empty();
+        this.fileNameTemplate = Codegen.empty();
+        this.messageContentType = Codegen.empty();
+        this.suspendMessageOnFileNameGenerationError = Codegen.empty();
+        this.transmitFileNameInMimeHeader = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -17,10 +17,10 @@ public final class ResourcegraphFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(io.pulumi.azurenative.resourcegraph.inputs.GetGraphQueryArgs args) {
-        return getGraphQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args) {
+        return getGraphQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(io.pulumi.azurenative.resourcegraph.inputs.GetGraphQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGraphQueryResult> getGraphQuery(GetGraphQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourcegraph:getGraphQuery", TypeShape.of(GetGraphQueryResult.class), args, Utilities.withVersion(options));
     }
 }

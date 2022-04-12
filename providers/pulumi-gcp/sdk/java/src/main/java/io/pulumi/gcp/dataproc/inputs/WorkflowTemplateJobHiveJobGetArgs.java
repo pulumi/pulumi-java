@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHiveJobQueryListGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<Boolean> continueOnFailure;
 
     public Output<Boolean> getContinueOnFailure() {
-        return this.continueOnFailure == null ? Output.empty() : this.continueOnFailure;
+        return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
+        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<WorkflowTemplateJobHiveJobQueryListGetArgs> queryList;
 
     public Output<WorkflowTemplateJobHiveJobQueryListGetArgs> getQueryList() {
-        return this.queryList == null ? Output.empty() : this.queryList;
+        return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {
-        return this.scriptVariables == null ? Output.empty() : this.scriptVariables;
+        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
     }
 
     public WorkflowTemplateJobHiveJobGetArgs(
@@ -100,12 +101,12 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
     }
 
     private WorkflowTemplateJobHiveJobGetArgs() {
-        this.continueOnFailure = Output.empty();
-        this.jarFileUris = Output.empty();
-        this.properties = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryList = Output.empty();
-        this.scriptVariables = Output.empty();
+        this.continueOnFailure = Codegen.empty();
+        this.jarFileUris = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryList = Codegen.empty();
+        this.scriptVariables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
-            this.continueOnFailure = Output.ofNullable(continueOnFailure);
+            this.continueOnFailure = Codegen.ofNullable(continueOnFailure);
             return this;
         }
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
@@ -151,7 +152,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -162,7 +163,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
@@ -170,7 +171,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Output.ofNullable(queryFileUri);
+            this.queryFileUri = Codegen.ofNullable(queryFileUri);
             return this;
         }
         public Builder queryList(@Nullable Output<WorkflowTemplateJobHiveJobQueryListGetArgs> queryList) {
@@ -178,7 +179,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder queryList(@Nullable WorkflowTemplateJobHiveJobQueryListGetArgs queryList) {
-            this.queryList = Output.ofNullable(queryList);
+            this.queryList = Codegen.ofNullable(queryList);
             return this;
         }
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
@@ -186,7 +187,7 @@ public final class WorkflowTemplateJobHiveJobGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Output.ofNullable(scriptVariables);
+            this.scriptVariables = Codegen.ofNullable(scriptVariables);
             return this;
         }        public WorkflowTemplateJobHiveJobGetArgs build() {
             return new WorkflowTemplateJobHiveJobGetArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);

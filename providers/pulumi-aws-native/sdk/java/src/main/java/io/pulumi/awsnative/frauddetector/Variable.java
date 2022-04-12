@@ -12,6 +12,7 @@ import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -185,7 +186,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:frauddetector:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:frauddetector:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Variable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

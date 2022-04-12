@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourceRepositoryResourceAptRepositoryArchiveType;
 import java.lang.String;
 import java.util.List;
@@ -61,7 +62,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
       private final @Nullable Output<String> gpgKey;
 
     public Output<String> getGpgKey() {
-        return this.gpgKey == null ? Output.empty() : this.gpgKey;
+        return this.gpgKey == null ? Codegen.empty() : this.gpgKey;
     }
 
     /**
@@ -89,11 +90,11 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     }
 
     private OSPolicyResourceRepositoryResourceAptRepositoryArgs() {
-        this.archiveType = Output.empty();
-        this.components = Output.empty();
-        this.distribution = Output.empty();
-        this.gpgKey = Output.empty();
-        this.uri = Output.empty();
+        this.archiveType = Codegen.empty();
+        this.components = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.gpgKey = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
             return this;
         }
         public Builder gpgKey(@Nullable String gpgKey) {
-            this.gpgKey = Output.ofNullable(gpgKey);
+            this.gpgKey = Codegen.ofNullable(gpgKey);
             return this;
         }
         public Builder uri(Output<String> uri) {

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,21 +21,21 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="retries")
       private final @Nullable Output<Integer> retries;
 
     public Output<Integer> getRetries() {
-        return this.retries == null ? Output.empty() : this.retries;
+        return this.retries == null ? Codegen.empty() : this.retries;
     }
 
     @Import(name="startPeriod")
       private final @Nullable Output<String> startPeriod;
 
     public Output<String> getStartPeriod() {
-        return this.startPeriod == null ? Output.empty() : this.startPeriod;
+        return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
     }
 
     @Import(name="tests", required=true)
@@ -48,7 +49,7 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ContainerHealthcheckGetArgs(
@@ -65,11 +66,11 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
     }
 
     private ContainerHealthcheckGetArgs() {
-        this.interval = Output.empty();
-        this.retries = Output.empty();
-        this.startPeriod = Output.empty();
-        this.tests = Output.empty();
-        this.timeout = Output.empty();
+        this.interval = Codegen.empty();
+        this.retries = Codegen.empty();
+        this.startPeriod = Codegen.empty();
+        this.tests = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interval(@Nullable String interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder retries(@Nullable Output<Integer> retries) {
@@ -113,7 +114,7 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retries(@Nullable Integer retries) {
-            this.retries = Output.ofNullable(retries);
+            this.retries = Codegen.ofNullable(retries);
             return this;
         }
         public Builder startPeriod(@Nullable Output<String> startPeriod) {
@@ -121,7 +122,7 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder startPeriod(@Nullable String startPeriod) {
-            this.startPeriod = Output.ofNullable(startPeriod);
+            this.startPeriod = Codegen.ofNullable(startPeriod);
             return this;
         }
         public Builder tests(Output<List<String>> tests) {
@@ -140,7 +141,7 @@ public final class ContainerHealthcheckGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ContainerHealthcheckGetArgs build() {
             return new ContainerHealthcheckGetArgs(interval, retries, startPeriod, tests, timeout);

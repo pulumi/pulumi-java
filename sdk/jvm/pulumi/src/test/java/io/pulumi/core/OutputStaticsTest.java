@@ -24,8 +24,9 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testListConcatEmpty() {
-        var result = Output.concatList(Output.empty(), Output.empty());
+    void testListConcatCoercesNullToEmpty() {
+        var nullList = Output.ofNullable((List<Object>)null);
+        var result = Output.concatList(nullList, nullList);
         var data = OutputTests.waitFor(result);
 
         assertThat(data.isSecret()).isFalse();
@@ -50,7 +51,6 @@ public class OutputStaticsTest {
         var result = Output.concatList(list1, list2);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).hasSize(4);
@@ -63,13 +63,16 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(list1, outV2).applyVoid(t -> {
+                Output.tuple(list1, outV2)
+                        .applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains("V1", t.t2);
+                    return (Void) null;
                 }),
-                Output.tuple(list2, outV3).applyVoid(t -> {
+                Output.tuple(list2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).containsOnly(t.t2, "V4");
+                    return (Void) null;
                 })
         );
     }
@@ -85,11 +88,11 @@ public class OutputStaticsTest {
     }
 
     @Test
-    void testMapConcatEmpty() {
-        var result = Output.concatMap(Output.empty(), Output.empty());
+    void testMapConcatNullAsEmpty() {
+        var result = Output.concatMap(
+                Output.ofNullable((Map<String,Object>)null),
+                Output.ofNullable((Map<String,Object>)null));
         var data = OutputTests.waitFor(result);
-
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEmpty();
@@ -114,7 +117,6 @@ public class OutputStaticsTest {
         var result = Output.concatMap(map1, map2);
         var data = OutputTests.waitFor(result);
 
-        assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).hasSize(4);
@@ -124,13 +126,15 @@ public class OutputStaticsTest {
 
         // Check that the input maps haven't changed
         OutputTests.waitFor(
-                Output.tuple(map1, outV3wrong).applyVoid(t -> {
+                Output.tuple(map1, outV3wrong).applyValue(t -> {
                     assertThat(t.t1).hasSize(3);
                     assertThat(t.t1).contains(entry("K3", t.t2));
+                    return (Void) null;
                 }),
-                Output.tuple(map2, outV3).applyVoid(t -> {
+                Output.tuple(map2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains(entry("K3", t.t2));
+                    return (Void) null;
                 })
         );
     }
@@ -207,26 +211,17 @@ public class OutputStaticsTest {
         var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
         assertThat(data0.isSecret()).isTrue();
-        assertThat(data0.isPresent()).isFalse();
         assertThat(data0.isKnown()).isTrue();
 
         // stringify should not modify the original Output
         var data0_ = OutputTests.waitFor(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
-        Output<String> res1 = Output.ofNullable("test1").asSecret();
+        Output<String> res1 = Output.of("test1").asSecret();
         var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
-        assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
-
-        Output<String> res2 = Output.ofNullable(Output.of("test2")).asSecret();
-        var data2 = OutputTests.waitFor(res2);
-        assertThat(data2.getValueNullable()).isEqualTo("test2");
-        assertThat(data2.isSecret()).isTrue();
-        assertThat(data2.isPresent()).isTrue();
-        assertThat(data2.isKnown()).isTrue();
     }
 
     /**
@@ -234,11 +229,6 @@ public class OutputStaticsTest {
      */
     @Test
     void testExpectedNPEs() {
-        assertThatThrownBy(() ->
-                OutputTests.waitFor(
-                        Output.<Integer>empty().applyValue(x -> x + 1)
-                )
-        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
@@ -257,14 +247,6 @@ public class OutputStaticsTest {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
                         Output.of(1)
-                                .applyOptional(__ -> Optional.<Integer>ofNullable(null))
-                                .applyValue(x -> x + 1)
-                )
-        ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
-
-        assertThatThrownBy(() ->
-                OutputTests.waitFor(
-                        Output.of(1)
                                 .apply(__ -> Output.<Integer>ofNullable(null))
                                 .applyValue(x -> x + 1)
                 )
@@ -273,7 +255,7 @@ public class OutputStaticsTest {
         assertThatThrownBy(() ->
                 OutputTests.waitFor(
                         Output.of(1)
-                                .applyFuture(__ -> CompletableFuture.<Integer>supplyAsync(() -> null))
+                                .apply(__ -> Output.of(CompletableFuture.<Integer>supplyAsync(() -> null)))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);

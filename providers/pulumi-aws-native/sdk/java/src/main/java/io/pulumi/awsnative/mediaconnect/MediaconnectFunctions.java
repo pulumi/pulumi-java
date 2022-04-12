@@ -22,40 +22,40 @@ public final class MediaconnectFunctions {
      * Resource schema for AWS::MediaConnect::Flow
      * 
      */
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.awsnative.mediaconnect.inputs.GetFlowArgs args) {
-        return getFlow(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args) {
+        return getFlow(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowResult> getFlow(io.pulumi.awsnative.mediaconnect.inputs.GetFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaConnect::FlowEntitlement
      * 
      */
-    public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(io.pulumi.awsnative.mediaconnect.inputs.GetFlowEntitlementArgs args) {
-        return getFlowEntitlement(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(GetFlowEntitlementArgs args) {
+        return getFlowEntitlement(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(io.pulumi.awsnative.mediaconnect.inputs.GetFlowEntitlementArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowEntitlementResult> getFlowEntitlement(GetFlowEntitlementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowEntitlement", TypeShape.of(GetFlowEntitlementResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaConnect::FlowSource
      * 
      */
-    public static CompletableFuture<GetFlowSourceResult> getFlowSource(io.pulumi.awsnative.mediaconnect.inputs.GetFlowSourceArgs args) {
-        return getFlowSource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowSourceResult> getFlowSource(GetFlowSourceArgs args) {
+        return getFlowSource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowSourceResult> getFlowSource(io.pulumi.awsnative.mediaconnect.inputs.GetFlowSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowSourceResult> getFlowSource(GetFlowSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowSource", TypeShape.of(GetFlowSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::MediaConnect::FlowVpcInterface
      * 
      */
-    public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(io.pulumi.awsnative.mediaconnect.inputs.GetFlowVpcInterfaceArgs args) {
-        return getFlowVpcInterface(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(GetFlowVpcInterfaceArgs args) {
+        return getFlowVpcInterface(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(io.pulumi.awsnative.mediaconnect.inputs.GetFlowVpcInterfaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFlowVpcInterfaceResult> getFlowVpcInterface(GetFlowVpcInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediaconnect:getFlowVpcInterface", TypeShape.of(GetFlowVpcInterfaceResult.class), args, Utilities.withVersion(options));
     }
 }

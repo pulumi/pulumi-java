@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcIpamPoolState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -292,7 +293,7 @@ public class VpcIpamPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamPool(String name, VpcIpamPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamPool:VpcIpamPool", name, args == null ? VpcIpamPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamPool:VpcIpamPool", name, args == null ? VpcIpamPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamPool(String name, Output<String> id, @Nullable VpcIpamPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

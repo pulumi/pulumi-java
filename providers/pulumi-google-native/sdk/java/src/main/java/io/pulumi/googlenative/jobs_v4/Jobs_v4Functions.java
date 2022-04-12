@@ -20,30 +20,30 @@ public final class Jobs_v4Functions {
      * Retrieves specified company.
      * 
      */
-    public static CompletableFuture<GetCompanyResult> getCompany(io.pulumi.googlenative.jobs_v4.inputs.GetCompanyArgs args) {
-        return getCompany(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args) {
+        return getCompany(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCompanyResult> getCompany(io.pulumi.googlenative.jobs_v4.inputs.GetCompanyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompanyResult> getCompany(GetCompanyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getCompany", TypeShape.of(GetCompanyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.jobs_v4.inputs.GetJobArgs args) {
-        return getJob(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+        return getJob(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetJobResult> getJob(io.pulumi.googlenative.jobs_v4.inputs.GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves specified tenant.
      * 
      */
-    public static CompletableFuture<GetTenantResult> getTenant(io.pulumi.googlenative.jobs_v4.inputs.GetTenantArgs args) {
-        return getTenant(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTenantResult> getTenant(GetTenantArgs args) {
+        return getTenant(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTenantResult> getTenant(io.pulumi.googlenative.jobs_v4.inputs.GetTenantArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTenantResult> getTenant(GetTenantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getTenant", TypeShape.of(GetTenantResult.class), args, Utilities.withVersion(options));
     }
 }

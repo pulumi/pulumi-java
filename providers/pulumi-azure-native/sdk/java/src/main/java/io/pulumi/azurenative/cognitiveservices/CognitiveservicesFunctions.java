@@ -25,10 +25,10 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.cognitiveservices.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.cognitiveservices.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(io.pulumi.azurenative.cognitiveservices.inputs.GetCommitmentPlanArgs args) {
-        return getCommitmentPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args) {
+        return getCommitmentPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(io.pulumi.azurenative.cognitiveservices.inputs.GetCommitmentPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,10 +47,10 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.cognitiveservices.inputs.GetDeploymentArgs args) {
-        return getDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+        return getDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.cognitiveservices.inputs.GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.cognitiveservices.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.cognitiveservices.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,10 +69,10 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.cognitiveservices.inputs.ListAccountKeysArgs args) {
-        return listAccountKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
+        return listAccountKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(io.pulumi.azurenative.cognitiveservices.inputs.ListAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

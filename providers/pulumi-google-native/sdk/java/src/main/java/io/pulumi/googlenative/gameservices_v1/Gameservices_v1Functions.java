@@ -24,50 +24,50 @@ public final class Gameservices_v1Functions {
      * Gets details of a single game server config.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.googlenative.gameservices_v1.inputs.GetConfigArgs args) {
-        return getConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+        return getConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigResult> getConfig(io.pulumi.googlenative.gameservices_v1.inputs.GetConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single game server cluster.
      * 
      */
-    public static CompletableFuture<GetGameServerClusterResult> getGameServerCluster(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerClusterArgs args) {
-        return getGameServerCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGameServerClusterResult> getGameServerCluster(GetGameServerClusterArgs args) {
+        return getGameServerCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGameServerClusterResult> getGameServerCluster(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGameServerClusterResult> getGameServerCluster(GetGameServerClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getGameServerCluster", TypeShape.of(GetGameServerClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single game server deployment.
      * 
      */
-    public static CompletableFuture<GetGameServerDeploymentResult> getGameServerDeployment(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerDeploymentArgs args) {
-        return getGameServerDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGameServerDeploymentResult> getGameServerDeployment(GetGameServerDeploymentArgs args) {
+        return getGameServerDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGameServerDeploymentResult> getGameServerDeployment(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGameServerDeploymentResult> getGameServerDeployment(GetGameServerDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getGameServerDeployment", TypeShape.of(GetGameServerDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetGameServerDeploymentIamPolicyResult> getGameServerDeploymentIamPolicy(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerDeploymentIamPolicyArgs args) {
-        return getGameServerDeploymentIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGameServerDeploymentIamPolicyResult> getGameServerDeploymentIamPolicy(GetGameServerDeploymentIamPolicyArgs args) {
+        return getGameServerDeploymentIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGameServerDeploymentIamPolicyResult> getGameServerDeploymentIamPolicy(io.pulumi.googlenative.gameservices_v1.inputs.GetGameServerDeploymentIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGameServerDeploymentIamPolicyResult> getGameServerDeploymentIamPolicy(GetGameServerDeploymentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getGameServerDeploymentIamPolicy", TypeShape.of(GetGameServerDeploymentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single realm.
      * 
      */
-    public static CompletableFuture<GetRealmResult> getRealm(io.pulumi.googlenative.gameservices_v1.inputs.GetRealmArgs args) {
-        return getRealm(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRealmResult> getRealm(GetRealmArgs args) {
+        return getRealm(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRealmResult> getRealm(io.pulumi.googlenative.gameservices_v1.inputs.GetRealmArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRealmResult> getRealm(GetRealmArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getRealm", TypeShape.of(GetRealmResult.class), args, Utilities.withVersion(options));
     }
 }

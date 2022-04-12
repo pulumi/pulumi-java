@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iap_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.iap_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<BindingArgs>> bindings;
 
     public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="v1beta1Id", required=true)
@@ -54,7 +55,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public V1beta1IamPolicyArgs(
@@ -69,10 +70,10 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private V1beta1IamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.v1beta1Id = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.v1beta1Id = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -117,7 +118,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder v1beta1Id(Output<String> v1beta1Id) {
@@ -133,7 +134,7 @@ public final class V1beta1IamPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public V1beta1IamPolicyArgs build() {
             return new V1beta1IamPolicyArgs(bindings, etag, v1beta1Id, version);

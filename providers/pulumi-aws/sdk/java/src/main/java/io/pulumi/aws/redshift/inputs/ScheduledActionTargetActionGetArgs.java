@@ -8,6 +8,7 @@ import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResizeClusterGet
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResumeClusterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
       private final @Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
 
     public Output<ScheduledActionTargetActionPauseClusterGetArgs> getPauseCluster() {
-        return this.pauseCluster == null ? Output.empty() : this.pauseCluster;
+        return this.pauseCluster == null ? Codegen.empty() : this.pauseCluster;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
       private final @Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
 
     public Output<ScheduledActionTargetActionResizeClusterGetArgs> getResizeCluster() {
-        return this.resizeCluster == null ? Output.empty() : this.resizeCluster;
+        return this.resizeCluster == null ? Codegen.empty() : this.resizeCluster;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
       private final @Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
 
     public Output<ScheduledActionTargetActionResumeClusterGetArgs> getResumeCluster() {
-        return this.resumeCluster == null ? Output.empty() : this.resumeCluster;
+        return this.resumeCluster == null ? Codegen.empty() : this.resumeCluster;
     }
 
     public ScheduledActionTargetActionGetArgs(
@@ -59,9 +60,9 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
     }
 
     private ScheduledActionTargetActionGetArgs() {
-        this.pauseCluster = Output.empty();
-        this.resizeCluster = Output.empty();
-        this.resumeCluster = Output.empty();
+        this.pauseCluster = Codegen.empty();
+        this.resizeCluster = Codegen.empty();
+        this.resumeCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseClusterGetArgs pauseCluster) {
-            this.pauseCluster = Output.ofNullable(pauseCluster);
+            this.pauseCluster = Codegen.ofNullable(pauseCluster);
             return this;
         }
         public Builder resizeCluster(@Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster) {
@@ -101,7 +102,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeClusterGetArgs resizeCluster) {
-            this.resizeCluster = Output.ofNullable(resizeCluster);
+            this.resizeCluster = Codegen.ofNullable(resizeCluster);
             return this;
         }
         public Builder resumeCluster(@Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
@@ -109,7 +110,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeClusterGetArgs resumeCluster) {
-            this.resumeCluster = Output.ofNullable(resumeCluster);
+            this.resumeCluster = Codegen.ofNullable(resumeCluster);
             return this;
         }        public ScheduledActionTargetActionGetArgs build() {
             return new ScheduledActionTargetActionGetArgs(pauseCluster, resizeCluster, resumeCluster);

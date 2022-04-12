@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datacatalog_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1.EntryArgs;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse;
@@ -362,7 +363,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Entry(String name, EntryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datacatalog/v1:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datacatalog/v1:Entry", name, args == null ? EntryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Entry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

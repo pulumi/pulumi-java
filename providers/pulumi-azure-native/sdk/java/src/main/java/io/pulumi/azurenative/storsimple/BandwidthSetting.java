@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +126,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BandwidthSetting(String name, BandwidthSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storsimple:BandwidthSetting", name, args == null ? BandwidthSettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storsimple:BandwidthSetting", name, args == null ? BandwidthSettingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BandwidthSetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

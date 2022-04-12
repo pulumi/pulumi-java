@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
 
     public Output<DicomStoreIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -68,10 +69,10 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     }
 
     private DicomStoreIamMemberArgs() {
-        this.condition = Output.empty();
-        this.dicomStoreId = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.dicomStoreId = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable DicomStoreIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder dicomStoreId(Output<String> dicomStoreId) {

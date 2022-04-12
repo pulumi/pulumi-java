@@ -5,6 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class MHSMVirtualNetworkRuleArgs extends io.pulumi.resources.Resour
     }
 
     private MHSMVirtualNetworkRuleArgs() {
-        this.id = Output.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {

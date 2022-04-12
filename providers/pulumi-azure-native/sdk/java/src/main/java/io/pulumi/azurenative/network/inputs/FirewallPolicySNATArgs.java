@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> privateRanges;
 
     public Output<List<String>> getPrivateRanges() {
-        return this.privateRanges == null ? Output.empty() : this.privateRanges;
+        return this.privateRanges == null ? Codegen.empty() : this.privateRanges;
     }
 
     public FirewallPolicySNATArgs(@Nullable Output<List<String>> privateRanges) {
@@ -35,7 +36,7 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FirewallPolicySNATArgs() {
-        this.privateRanges = Output.empty();
+        this.privateRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder privateRanges(@Nullable List<String> privateRanges) {
-            this.privateRanges = Output.ofNullable(privateRanges);
+            this.privateRanges = Codegen.ofNullable(privateRanges);
             return this;
         }
         public Builder privateRanges(String... privateRanges) {

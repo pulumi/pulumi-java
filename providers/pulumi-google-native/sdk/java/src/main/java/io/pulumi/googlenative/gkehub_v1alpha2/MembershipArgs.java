@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gkehub_v1alpha2.enums.MembershipInfrastructureType;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.AuthorityArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.MembershipEndpointArgs;
@@ -26,7 +27,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AuthorityArgs> authority;
 
     public Output<AuthorityArgs> getAuthority() {
-        return this.authority == null ? Output.empty() : this.authority;
+        return this.authority == null ? Codegen.empty() : this.authority;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MembershipEndpointArgs> endpoint;
 
     public Output<MembershipEndpointArgs> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MembershipInfrastructureType> infrastructureType;
 
     public Output<MembershipInfrastructureType> getInfrastructureType() {
-        return this.infrastructureType == null ? Output.empty() : this.infrastructureType;
+        return this.infrastructureType == null ? Codegen.empty() : this.infrastructureType;
     }
 
     /**
@@ -70,14 +71,14 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="membershipId", required=true)
@@ -91,7 +92,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public MembershipArgs(
@@ -114,14 +115,14 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MembershipArgs() {
-        this.authority = Output.empty();
-        this.endpoint = Output.empty();
-        this.externalId = Output.empty();
-        this.infrastructureType = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.membershipId = Output.empty();
-        this.project = Output.empty();
+        this.authority = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.infrastructureType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.membershipId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authority(@Nullable AuthorityArgs authority) {
-            this.authority = Output.ofNullable(authority);
+            this.authority = Codegen.ofNullable(authority);
             return this;
         }
         public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
@@ -171,7 +172,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoint(@Nullable MembershipEndpointArgs endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder externalId(@Nullable Output<String> externalId) {
@@ -179,7 +180,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder infrastructureType(@Nullable Output<MembershipInfrastructureType> infrastructureType) {
@@ -187,7 +188,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder infrastructureType(@Nullable MembershipInfrastructureType infrastructureType) {
-            this.infrastructureType = Output.ofNullable(infrastructureType);
+            this.infrastructureType = Codegen.ofNullable(infrastructureType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -195,7 +196,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -203,7 +204,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder membershipId(Output<String> membershipId) {
@@ -219,7 +220,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public MembershipArgs build() {
             return new MembershipArgs(authority, endpoint, externalId, infrastructureType, labels, location, membershipId, project);

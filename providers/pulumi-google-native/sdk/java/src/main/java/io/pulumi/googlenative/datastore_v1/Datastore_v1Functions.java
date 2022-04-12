@@ -16,10 +16,10 @@ public final class Datastore_v1Functions {
      * Gets an index.
      * 
      */
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.googlenative.datastore_v1.inputs.GetIndexArgs args) {
-        return getIndex(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args) {
+        return getIndex(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIndexResult> getIndex(io.pulumi.googlenative.datastore_v1.inputs.GetIndexArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastore/v1:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -18,20 +18,20 @@ public final class Networkmanagement_v1Functions {
      * Gets the details of a specific Connectivity Test.
      * 
      */
-    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTest(io.pulumi.googlenative.networkmanagement_v1.inputs.GetConnectivityTestArgs args) {
-        return getConnectivityTest(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTest(GetConnectivityTestArgs args) {
+        return getConnectivityTest(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTest(io.pulumi.googlenative.networkmanagement_v1.inputs.GetConnectivityTestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTest(GetConnectivityTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkmanagement/v1:getConnectivityTest", TypeShape.of(GetConnectivityTestResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicy(io.pulumi.googlenative.networkmanagement_v1.inputs.GetConnectivityTestIamPolicyArgs args) {
-        return getConnectivityTestIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicy(GetConnectivityTestIamPolicyArgs args) {
+        return getConnectivityTestIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicy(io.pulumi.googlenative.networkmanagement_v1.inputs.GetConnectivityTestIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicy(GetConnectivityTestIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkmanagement/v1:getConnectivityTestIamPolicy", TypeShape.of(GetConnectivityTestIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

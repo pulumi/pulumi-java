@@ -5,6 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> imagePaths;
 
     public Output<List<String>> getImagePaths() {
-        return this.imagePaths == null ? Output.empty() : this.imagePaths;
+        return this.imagePaths == null ? Codegen.empty() : this.imagePaths;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> supportedResourceTypes;
 
     public Output<List<String>> getSupportedResourceTypes() {
-        return this.supportedResourceTypes == null ? Output.empty() : this.supportedResourceTypes;
+        return this.supportedResourceTypes == null ? Codegen.empty() : this.supportedResourceTypes;
     }
 
     public DetectorArgs(
@@ -103,12 +104,12 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.imagePaths = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.supportedResourceTypes = Output.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.imagePaths = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.supportedResourceTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -162,7 +163,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imagePaths(@Nullable List<String> imagePaths) {
-            this.imagePaths = Output.ofNullable(imagePaths);
+            this.imagePaths = Codegen.ofNullable(imagePaths);
             return this;
         }
         public Builder imagePaths(String... imagePaths) {
@@ -173,7 +174,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
@@ -181,7 +182,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder supportedResourceTypes(@Nullable Output<List<String>> supportedResourceTypes) {
@@ -189,7 +190,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
-            this.supportedResourceTypes = Output.ofNullable(supportedResourceTypes);
+            this.supportedResourceTypes = Codegen.ofNullable(supportedResourceTypes);
             return this;
         }
         public Builder supportedResourceTypes(String... supportedResourceTypes) {

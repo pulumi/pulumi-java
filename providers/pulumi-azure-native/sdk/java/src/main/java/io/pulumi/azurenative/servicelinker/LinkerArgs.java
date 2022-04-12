@@ -12,6 +12,7 @@ import io.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> authInfo;
 
     public Output<Object> getAuthInfo() {
-        return this.authInfo == null ? Output.empty() : this.authInfo;
+        return this.authInfo == null ? Codegen.empty() : this.authInfo;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ClientType>> clientType;
 
     public Output<Either<String,ClientType>> getClientType() {
-        return this.clientType == null ? Output.empty() : this.clientType;
+        return this.clientType == null ? Codegen.empty() : this.clientType;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkerName;
 
     public Output<String> getLinkerName() {
-        return this.linkerName == null ? Output.empty() : this.linkerName;
+        return this.linkerName == null ? Codegen.empty() : this.linkerName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public LinkerArgs(
@@ -91,11 +92,11 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkerArgs() {
-        this.authInfo = Output.empty();
-        this.clientType = Output.empty();
-        this.linkerName = Output.empty();
-        this.resourceUri = Output.empty();
-        this.targetId = Output.empty();
+        this.authInfo = Codegen.empty();
+        this.clientType = Codegen.empty();
+        this.linkerName = Codegen.empty();
+        this.resourceUri = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authInfo(@Nullable Object authInfo) {
-            this.authInfo = Output.ofNullable(authInfo);
+            this.authInfo = Codegen.ofNullable(authInfo);
             return this;
         }
         public Builder clientType(@Nullable Output<Either<String,ClientType>> clientType) {
@@ -139,7 +140,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientType(@Nullable Either<String,ClientType> clientType) {
-            this.clientType = Output.ofNullable(clientType);
+            this.clientType = Codegen.ofNullable(clientType);
             return this;
         }
         public Builder linkerName(@Nullable Output<String> linkerName) {
@@ -147,7 +148,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkerName(@Nullable String linkerName) {
-            this.linkerName = Output.ofNullable(linkerName);
+            this.linkerName = Codegen.ofNullable(linkerName);
             return this;
         }
         public Builder resourceUri(Output<String> resourceUri) {
@@ -163,7 +164,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public LinkerArgs build() {
             return new LinkerArgs(authInfo, clientType, linkerName, resourceUri, targetId);

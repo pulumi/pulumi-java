@@ -20,30 +20,30 @@ public final class EfsFunctions {
      * Resource Type definition for AWS::EFS::AccessPoint
      * 
      */
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.awsnative.efs.inputs.GetAccessPointArgs args) {
-        return getAccessPoint(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
+        return getAccessPoint(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccessPointResult> getAccessPoint(io.pulumi.awsnative.efs.inputs.GetAccessPointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:efs:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::EFS::FileSystem
      * 
      */
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(io.pulumi.awsnative.efs.inputs.GetFileSystemArgs args) {
-        return getFileSystem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args) {
+        return getFileSystem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFileSystemResult> getFileSystem(io.pulumi.awsnative.efs.inputs.GetFileSystemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFileSystemResult> getFileSystem(GetFileSystemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:efs:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::EFS::MountTarget
      * 
      */
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(io.pulumi.awsnative.efs.inputs.GetMountTargetArgs args) {
-        return getMountTarget(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args) {
+        return getMountTarget(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMountTargetResult> getMountTarget(io.pulumi.awsnative.efs.inputs.GetMountTargetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMountTargetResult> getMountTarget(GetMountTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:efs:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
     }
 }

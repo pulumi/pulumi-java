@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterClientAuthenticationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     }
 
     private ConnectorKafkaClusterClientAuthenticationArgs() {
-        this.authenticationType = Output.empty();
+        this.authenticationType = Codegen.empty();
     }
 
     public static Builder builder() {

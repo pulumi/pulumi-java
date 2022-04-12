@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
     public Output<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
-        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Output.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
+        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Codegen.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
     public Output<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
-        return this.destinationNetworkInterfaceIPConfiguration == null ? Output.empty() : this.destinationNetworkInterfaceIPConfiguration;
+        return this.destinationNetworkInterfaceIPConfiguration == null ? Codegen.empty() : this.destinationNetworkInterfaceIPConfiguration;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Output.empty() : this.destinationPort;
+        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VirtualNetworkTapArgs(
@@ -104,12 +105,12 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VirtualNetworkTapArgs() {
-        this.destinationLoadBalancerFrontEndIPConfiguration = Output.empty();
-        this.destinationNetworkInterfaceIPConfiguration = Output.empty();
-        this.destinationPort = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.tags = Output.empty();
+        this.destinationLoadBalancerFrontEndIPConfiguration = Codegen.empty();
+        this.destinationNetworkInterfaceIPConfiguration = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
-            this.destinationLoadBalancerFrontEndIPConfiguration = Output.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
+            this.destinationLoadBalancerFrontEndIPConfiguration = Codegen.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
             return this;
         }
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
@@ -155,7 +156,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
-            this.destinationNetworkInterfaceIPConfiguration = Output.ofNullable(destinationNetworkInterfaceIPConfiguration);
+            this.destinationNetworkInterfaceIPConfiguration = Codegen.ofNullable(destinationNetworkInterfaceIPConfiguration);
             return this;
         }
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
@@ -163,7 +164,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Output.ofNullable(destinationPort);
+            this.destinationPort = Codegen.ofNullable(destinationPort);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -171,7 +172,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -179,7 +180,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -187,7 +188,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VirtualNetworkTapArgs build() {
             return new VirtualNetworkTapArgs(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, id, location, tags);

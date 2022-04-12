@@ -28,70 +28,70 @@ public final class Iam_v1Functions {
      * Gets a ServiceAccountKey.
      * 
      */
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.iam_v1.inputs.GetKeyArgs args) {
-        return getKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
+        return getKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeyResult> getKey(io.pulumi.googlenative.iam_v1.inputs.GetKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the definition of a Role.
      * 
      */
-    public static CompletableFuture<GetOrganizationRoleResult> getOrganizationRole(io.pulumi.googlenative.iam_v1.inputs.GetOrganizationRoleArgs args) {
-        return getOrganizationRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationRoleResult> getOrganizationRole(GetOrganizationRoleArgs args) {
+        return getOrganizationRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationRoleResult> getOrganizationRole(io.pulumi.googlenative.iam_v1.inputs.GetOrganizationRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationRoleResult> getOrganizationRole(GetOrganizationRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getOrganizationRole", TypeShape.of(GetOrganizationRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an individual WorkloadIdentityPoolProvider.
      * 
      */
-    public static CompletableFuture<GetProviderResult> getProvider(io.pulumi.googlenative.iam_v1.inputs.GetProviderArgs args) {
-        return getProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProviderResult> getProvider(GetProviderArgs args) {
+        return getProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProviderResult> getProvider(io.pulumi.googlenative.iam_v1.inputs.GetProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProviderResult> getProvider(GetProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getProvider", TypeShape.of(GetProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the definition of a Role.
      * 
      */
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.googlenative.iam_v1.inputs.GetRoleArgs args) {
-        return getRole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
+        return getRole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRoleResult> getRole(io.pulumi.googlenative.iam_v1.inputs.GetRoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a ServiceAccount.
      * 
      */
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.googlenative.iam_v1.inputs.GetServiceAccountArgs args) {
-        return getServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args) {
+        return getServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(io.pulumi.googlenative.iam_v1.inputs.GetServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountResult> getServiceAccount(GetServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM policy that is attached to a ServiceAccount. This IAM policy specifies which principals have access to the service account. This method does not tell you whether the service account has been granted any roles on other resources. To check whether a service account has role grants on a resource, use the `getIamPolicy` method for that resource. For example, to view the role grants for a project, call the Resource Manager API's [`projects.getIamPolicy`](https://cloud.google.com/resource-manager/reference/rest/v1/projects/getIamPolicy) method.
      * 
      */
-    public static CompletableFuture<GetServiceAccountIamPolicyResult> getServiceAccountIamPolicy(io.pulumi.googlenative.iam_v1.inputs.GetServiceAccountIamPolicyArgs args) {
-        return getServiceAccountIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceAccountIamPolicyResult> getServiceAccountIamPolicy(GetServiceAccountIamPolicyArgs args) {
+        return getServiceAccountIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceAccountIamPolicyResult> getServiceAccountIamPolicy(io.pulumi.googlenative.iam_v1.inputs.GetServiceAccountIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceAccountIamPolicyResult> getServiceAccountIamPolicy(GetServiceAccountIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getServiceAccountIamPolicy", TypeShape.of(GetServiceAccountIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an individual WorkloadIdentityPool.
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(io.pulumi.googlenative.iam_v1.inputs.GetWorkloadIdentityPoolArgs args) {
-        return getWorkloadIdentityPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args) {
+        return getWorkloadIdentityPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(io.pulumi.googlenative.iam_v1.inputs.GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args, Utilities.withVersion(options));
     }
 }

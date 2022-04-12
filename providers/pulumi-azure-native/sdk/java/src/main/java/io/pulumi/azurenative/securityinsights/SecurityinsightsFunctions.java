@@ -87,10 +87,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAADDataConnectorArgs args) {
-        return getAADDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args) {
+        return getAADDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAADDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAADDataConnectorResult> getAADDataConnector(GetAADDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAADDataConnector", TypeShape.of(GetAADDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -98,10 +98,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAATPDataConnectorArgs args) {
-        return getAATPDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args) {
+        return getAATPDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAATPDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAATPDataConnectorResult> getAATPDataConnector(GetAATPDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAATPDataConnector", TypeShape.of(GetAATPDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -109,10 +109,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetASCDataConnectorArgs args) {
-        return getASCDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args) {
+        return getASCDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetASCDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetASCDataConnectorResult> getASCDataConnector(GetASCDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getASCDataConnector", TypeShape.of(GetASCDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -120,10 +120,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetActionResult> getAction(io.pulumi.azurenative.securityinsights.inputs.GetActionArgs args) {
-        return getAction(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args) {
+        return getAction(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActionResult> getAction(io.pulumi.azurenative.securityinsights.inputs.GetActionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActionResult> getAction(GetActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAction", TypeShape.of(GetActionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -131,10 +131,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(io.pulumi.azurenative.securityinsights.inputs.GetActivityCustomEntityQueryArgs args) {
-        return getActivityCustomEntityQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args) {
+        return getActivityCustomEntityQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(io.pulumi.azurenative.securityinsights.inputs.GetActivityCustomEntityQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActivityCustomEntityQueryResult> getActivityCustomEntityQuery(GetActivityCustomEntityQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getActivityCustomEntityQuery", TypeShape.of(GetActivityCustomEntityQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,10 +146,10 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetAlertRuleArgs args) {
-        return getAlertRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
+        return getAlertRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetAlertRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,10 +157,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetAnomaliesResult> getAnomalies(io.pulumi.azurenative.securityinsights.inputs.GetAnomaliesArgs args) {
-        return getAnomalies(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args) {
+        return getAnomalies(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAnomaliesResult> getAnomalies(io.pulumi.azurenative.securityinsights.inputs.GetAnomaliesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnomaliesResult> getAnomalies(GetAnomaliesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAnomalies", TypeShape.of(GetAnomaliesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -168,10 +168,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(io.pulumi.azurenative.securityinsights.inputs.GetAutomationRuleArgs args) {
-        return getAutomationRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args) {
+        return getAutomationRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(io.pulumi.azurenative.securityinsights.inputs.GetAutomationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutomationRuleResult> getAutomationRule(GetAutomationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAutomationRule", TypeShape.of(GetAutomationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,10 +179,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAwsCloudTrailDataConnectorArgs args) {
-        return getAwsCloudTrailDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args) {
+        return getAwsCloudTrailDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetAwsCloudTrailDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> getAwsCloudTrailDataConnector(GetAwsCloudTrailDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAwsCloudTrailDataConnector", TypeShape.of(GetAwsCloudTrailDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -190,10 +190,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetBookmarkResult> getBookmark(io.pulumi.azurenative.securityinsights.inputs.GetBookmarkArgs args) {
-        return getBookmark(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBookmarkResult> getBookmark(GetBookmarkArgs args) {
+        return getBookmark(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBookmarkResult> getBookmark(io.pulumi.azurenative.securityinsights.inputs.GetBookmarkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBookmarkResult> getBookmark(GetBookmarkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmark", TypeShape.of(GetBookmarkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,10 +201,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(io.pulumi.azurenative.securityinsights.inputs.GetBookmarkRelationArgs args) {
-        return getBookmarkRelation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args) {
+        return getBookmarkRelation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(io.pulumi.azurenative.securityinsights.inputs.GetBookmarkRelationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBookmarkRelationResult> getBookmarkRelation(GetBookmarkRelationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmarkRelation", TypeShape.of(GetBookmarkRelationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -216,10 +216,10 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
-    public static CompletableFuture<GetDataConnectorResult> getDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetDataConnectorArgs args) {
-        return getDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args) {
+        return getDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDataConnectorResult> getDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataConnectorResult> getDataConnector(GetDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getDataConnector", TypeShape.of(GetDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -227,10 +227,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(io.pulumi.azurenative.securityinsights.inputs.GetEntitiesGetTimelineArgs args) {
-        return getEntitiesGetTimeline(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args) {
+        return getEntitiesGetTimeline(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(io.pulumi.azurenative.securityinsights.inputs.GetEntitiesGetTimelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntitiesGetTimelineResult> getEntitiesGetTimeline(GetEntitiesGetTimelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntitiesGetTimeline", TypeShape.of(GetEntitiesGetTimelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -238,10 +238,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(io.pulumi.azurenative.securityinsights.inputs.GetEntityAnalyticsArgs args) {
-        return getEntityAnalytics(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args) {
+        return getEntityAnalytics(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(io.pulumi.azurenative.securityinsights.inputs.GetEntityAnalyticsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityAnalyticsResult> getEntityAnalytics(GetEntityAnalyticsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityAnalytics", TypeShape.of(GetEntityAnalyticsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -249,10 +249,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(io.pulumi.azurenative.securityinsights.inputs.GetEntityInsightsArgs args) {
-        return getEntityInsights(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args) {
+        return getEntityInsights(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(io.pulumi.azurenative.securityinsights.inputs.GetEntityInsightsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityInsightsResult> getEntityInsights(GetEntityInsightsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityInsights", TypeShape.of(GetEntityInsightsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -264,10 +264,10 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
-    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(io.pulumi.azurenative.securityinsights.inputs.GetEntityQueryArgs args) {
-        return getEntityQuery(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args) {
+        return getEntityQuery(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(io.pulumi.azurenative.securityinsights.inputs.GetEntityQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityQueryResult> getEntityQuery(GetEntityQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityQuery", TypeShape.of(GetEntityQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -275,10 +275,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetEyesOnResult> getEyesOn(io.pulumi.azurenative.securityinsights.inputs.GetEyesOnArgs args) {
-        return getEyesOn(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEyesOnResult> getEyesOn(GetEyesOnArgs args) {
+        return getEyesOn(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEyesOnResult> getEyesOn(io.pulumi.azurenative.securityinsights.inputs.GetEyesOnArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEyesOnResult> getEyesOn(GetEyesOnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEyesOn", TypeShape.of(GetEyesOnResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -286,10 +286,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetFusionAlertRuleArgs args) {
-        return getFusionAlertRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args) {
+        return getFusionAlertRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetFusionAlertRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFusionAlertRuleResult> getFusionAlertRule(GetFusionAlertRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getFusionAlertRule", TypeShape.of(GetFusionAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -297,10 +297,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetIncidentResult> getIncident(io.pulumi.azurenative.securityinsights.inputs.GetIncidentArgs args) {
-        return getIncident(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIncidentResult> getIncident(GetIncidentArgs args) {
+        return getIncident(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIncidentResult> getIncident(io.pulumi.azurenative.securityinsights.inputs.GetIncidentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIncidentResult> getIncident(GetIncidentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncident", TypeShape.of(GetIncidentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -308,10 +308,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(io.pulumi.azurenative.securityinsights.inputs.GetIncidentCommentArgs args) {
-        return getIncidentComment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args) {
+        return getIncidentComment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(io.pulumi.azurenative.securityinsights.inputs.GetIncidentCommentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIncidentCommentResult> getIncidentComment(GetIncidentCommentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentComment", TypeShape.of(GetIncidentCommentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -319,10 +319,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(io.pulumi.azurenative.securityinsights.inputs.GetIncidentRelationArgs args) {
-        return getIncidentRelation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args) {
+        return getIncidentRelation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(io.pulumi.azurenative.securityinsights.inputs.GetIncidentRelationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIncidentRelationResult> getIncidentRelation(GetIncidentRelationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentRelation", TypeShape.of(GetIncidentRelationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -330,10 +330,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetMCASDataConnectorArgs args) {
-        return getMCASDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args) {
+        return getMCASDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetMCASDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMCASDataConnectorResult> getMCASDataConnector(GetMCASDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMCASDataConnector", TypeShape.of(GetMCASDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -341,10 +341,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetMDATPDataConnectorArgs args) {
-        return getMDATPDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args) {
+        return getMDATPDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetMDATPDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMDATPDataConnectorResult> getMDATPDataConnector(GetMDATPDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMDATPDataConnector", TypeShape.of(GetMDATPDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -352,10 +352,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetMetadataResult> getMetadata(io.pulumi.azurenative.securityinsights.inputs.GetMetadataArgs args) {
-        return getMetadata(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMetadataResult> getMetadata(GetMetadataArgs args) {
+        return getMetadata(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMetadataResult> getMetadata(io.pulumi.azurenative.securityinsights.inputs.GetMetadataArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetadataResult> getMetadata(GetMetadataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMetadata", TypeShape.of(GetMetadataResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -363,10 +363,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetMicrosoftSecurityIncidentCreationAlertRuleArgs args) {
-        return getMicrosoftSecurityIncidentCreationAlertRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args) {
+        return getMicrosoftSecurityIncidentCreationAlertRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetMicrosoftSecurityIncidentCreationAlertRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> getMicrosoftSecurityIncidentCreationAlertRule(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMicrosoftSecurityIncidentCreationAlertRule", TypeShape.of(GetMicrosoftSecurityIncidentCreationAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -374,10 +374,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetOfficeDataConnectorArgs args) {
-        return getOfficeDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args) {
+        return getOfficeDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetOfficeDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOfficeDataConnectorResult> getOfficeDataConnector(GetOfficeDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getOfficeDataConnector", TypeShape.of(GetOfficeDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -389,10 +389,10 @@ public final class SecurityinsightsFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: Anomalies, EntityAnalytics, EyesOn, Ueba. */
-    public static CompletableFuture<GetProductSettingResult> getProductSetting(io.pulumi.azurenative.securityinsights.inputs.GetProductSettingArgs args) {
-        return getProductSetting(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProductSettingResult> getProductSetting(GetProductSettingArgs args) {
+        return getProductSetting(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProductSettingResult> getProductSetting(io.pulumi.azurenative.securityinsights.inputs.GetProductSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProductSettingResult> getProductSetting(GetProductSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getProductSetting", TypeShape.of(GetProductSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -400,10 +400,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetScheduledAlertRuleArgs args) {
-        return getScheduledAlertRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args) {
+        return getScheduledAlertRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(io.pulumi.azurenative.securityinsights.inputs.GetScheduledAlertRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduledAlertRuleResult> getScheduledAlertRule(GetScheduledAlertRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getScheduledAlertRule", TypeShape.of(GetScheduledAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -411,10 +411,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(io.pulumi.azurenative.securityinsights.inputs.GetSentinelOnboardingStateArgs args) {
-        return getSentinelOnboardingState(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args) {
+        return getSentinelOnboardingState(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(io.pulumi.azurenative.securityinsights.inputs.GetSentinelOnboardingStateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSentinelOnboardingStateResult> getSentinelOnboardingState(GetSentinelOnboardingStateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSentinelOnboardingState", TypeShape.of(GetSentinelOnboardingStateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -422,10 +422,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(io.pulumi.azurenative.securityinsights.inputs.GetSourceControlArgs args) {
-        return getSourceControl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args) {
+        return getSourceControl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSourceControlResult> getSourceControl(io.pulumi.azurenative.securityinsights.inputs.GetSourceControlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSourceControlResult> getSourceControl(GetSourceControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSourceControl", TypeShape.of(GetSourceControlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -433,10 +433,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2020-01-01.
      * 
      */
-    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetTIDataConnectorArgs args) {
-        return getTIDataConnector(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args) {
+        return getTIDataConnector(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(io.pulumi.azurenative.securityinsights.inputs.GetTIDataConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTIDataConnectorResult> getTIDataConnector(GetTIDataConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getTIDataConnector", TypeShape.of(GetTIDataConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -444,10 +444,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(io.pulumi.azurenative.securityinsights.inputs.GetThreatIntelligenceIndicatorArgs args) {
-        return getThreatIntelligenceIndicator(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args) {
+        return getThreatIntelligenceIndicator(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(io.pulumi.azurenative.securityinsights.inputs.GetThreatIntelligenceIndicatorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> getThreatIntelligenceIndicator(GetThreatIntelligenceIndicatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getThreatIntelligenceIndicator", TypeShape.of(GetThreatIntelligenceIndicatorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -455,10 +455,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetUebaResult> getUeba(io.pulumi.azurenative.securityinsights.inputs.GetUebaArgs args) {
-        return getUeba(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUebaResult> getUeba(GetUebaArgs args) {
+        return getUeba(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUebaResult> getUeba(io.pulumi.azurenative.securityinsights.inputs.GetUebaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUebaResult> getUeba(GetUebaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getUeba", TypeShape.of(GetUebaResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -466,10 +466,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistResult> getWatchlist(io.pulumi.azurenative.securityinsights.inputs.GetWatchlistArgs args) {
-        return getWatchlist(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWatchlistResult> getWatchlist(GetWatchlistArgs args) {
+        return getWatchlist(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWatchlistResult> getWatchlist(io.pulumi.azurenative.securityinsights.inputs.GetWatchlistArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWatchlistResult> getWatchlist(GetWatchlistArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlist", TypeShape.of(GetWatchlistResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -477,10 +477,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(io.pulumi.azurenative.securityinsights.inputs.GetWatchlistItemArgs args) {
-        return getWatchlistItem(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args) {
+        return getWatchlistItem(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(io.pulumi.azurenative.securityinsights.inputs.GetWatchlistItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWatchlistItemResult> getWatchlistItem(GetWatchlistItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlistItem", TypeShape.of(GetWatchlistItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -488,10 +488,10 @@ public final class SecurityinsightsFunctions {
      * API Version: 2021-03-01-preview.
      * 
      */
-    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(io.pulumi.azurenative.securityinsights.inputs.ListSourceControlRepositoriesArgs args) {
-        return listSourceControlRepositories(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args) {
+        return listSourceControlRepositories(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(io.pulumi.azurenative.securityinsights.inputs.ListSourceControlRepositoriesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSourceControlRepositoriesResult> listSourceControlRepositories(ListSourceControlRepositoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:listSourceControlRepositories", TypeShape.of(ListSourceControlRepositoriesResult.class), args, Utilities.withVersion(options));
     }
 }

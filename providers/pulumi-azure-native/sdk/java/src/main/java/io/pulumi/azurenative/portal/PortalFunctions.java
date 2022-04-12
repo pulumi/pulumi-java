@@ -29,10 +29,10 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleResult> getConsole(io.pulumi.azurenative.portal.inputs.GetConsoleArgs args) {
-        return getConsole(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConsoleResult> getConsole(GetConsoleArgs args) {
+        return getConsole(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConsoleResult> getConsole(io.pulumi.azurenative.portal.inputs.GetConsoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConsoleResult> getConsole(GetConsoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsole", TypeShape.of(GetConsoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -40,10 +40,10 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(io.pulumi.azurenative.portal.inputs.GetConsoleWithLocationArgs args) {
-        return getConsoleWithLocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args) {
+        return getConsoleWithLocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(io.pulumi.azurenative.portal.inputs.GetConsoleWithLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsoleWithLocation", TypeShape.of(GetConsoleWithLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.azurenative.portal.inputs.GetDashboardArgs args) {
-        return getDashboard(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+        return getDashboard(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDashboardResult> getDashboard(io.pulumi.azurenative.portal.inputs.GetDashboardArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,10 +62,10 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(io.pulumi.azurenative.portal.inputs.GetTenantConfigurationArgs args) {
-        return getTenantConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args) {
+        return getTenantConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(io.pulumi.azurenative.portal.inputs.GetTenantConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getTenantConfiguration", TypeShape.of(GetTenantConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,10 +73,10 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsResult> getUserSettings(io.pulumi.azurenative.portal.inputs.GetUserSettingsArgs args) {
-        return getUserSettings(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args) {
+        return getUserSettings(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserSettingsResult> getUserSettings(io.pulumi.azurenative.portal.inputs.GetUserSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettings", TypeShape.of(GetUserSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,10 +84,10 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(io.pulumi.azurenative.portal.inputs.GetUserSettingsWithLocationArgs args) {
-        return getUserSettingsWithLocation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args) {
+        return getUserSettingsWithLocation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(io.pulumi.azurenative.portal.inputs.GetUserSettingsWithLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,12 +96,12 @@ public final class PortalFunctions {
      * 
      */
     public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation() {
-        return listListTenantConfigurationViolation(io.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(io.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationArgs args) {
-        return listListTenantConfigurationViolation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args) {
+        return listListTenantConfigurationViolation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(io.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:listListTenantConfigurationViolation", TypeShape.of(ListListTenantConfigurationViolationResult.class), args, Utilities.withVersion(options));
     }
 }

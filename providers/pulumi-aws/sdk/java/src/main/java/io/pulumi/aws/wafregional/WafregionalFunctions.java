@@ -24,10 +24,10 @@ public final class WafregionalFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(io.pulumi.aws.wafregional.inputs.GetIpsetArgs args) {
-        return getIpset(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
+        return getIpset(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetIpsetResult> getIpset(io.pulumi.aws.wafregional.inputs.GetIpsetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class WafregionalFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(io.pulumi.aws.wafregional.inputs.GetRateBasedModArgs args) {
-        return getRateBasedMod(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
+        return getRateBasedMod(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(io.pulumi.aws.wafregional.inputs.GetRateBasedModArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -48,10 +48,10 @@ public final class WafregionalFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.aws.wafregional.inputs.GetRuleArgs args) {
-        return getRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+        return getRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.aws.wafregional.inputs.GetRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -60,10 +60,10 @@ public final class WafregionalFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(io.pulumi.aws.wafregional.inputs.GetWebAclArgs args) {
-        return getWebAcl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+        return getWebAcl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWebAclResult> getWebAcl(io.pulumi.aws.wafregional.inputs.GetWebAclArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

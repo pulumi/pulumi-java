@@ -33,10 +33,10 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.cache.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.azurenative.cache.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -44,10 +44,10 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.cache.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.cache.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,10 +55,10 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetLinkedServerResult> getLinkedServer(io.pulumi.azurenative.cache.inputs.GetLinkedServerArgs args) {
-        return getLinkedServer(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLinkedServerResult> getLinkedServer(GetLinkedServerArgs args) {
+        return getLinkedServer(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLinkedServerResult> getLinkedServer(io.pulumi.azurenative.cache.inputs.GetLinkedServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLinkedServerResult> getLinkedServer(GetLinkedServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getLinkedServer", TypeShape.of(GetLinkedServerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedule(io.pulumi.azurenative.cache.inputs.GetPatchScheduleArgs args) {
-        return getPatchSchedule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedule(GetPatchScheduleArgs args) {
+        return getPatchSchedule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedule(io.pulumi.azurenative.cache.inputs.GetPatchScheduleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedule(GetPatchScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getPatchSchedule", TypeShape.of(GetPatchScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,10 +77,10 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.cache.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.cache.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetRedisResult> getRedis(io.pulumi.azurenative.cache.inputs.GetRedisArgs args) {
-        return getRedis(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRedisResult> getRedis(GetRedisArgs args) {
+        return getRedis(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRedisResult> getRedis(io.pulumi.azurenative.cache.inputs.GetRedisArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRedisResult> getRedis(GetRedisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getRedis", TypeShape.of(GetRedisResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprise(io.pulumi.azurenative.cache.inputs.GetRedisEnterpriseArgs args) {
-        return getRedisEnterprise(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprise(GetRedisEnterpriseArgs args) {
+        return getRedisEnterprise(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprise(io.pulumi.azurenative.cache.inputs.GetRedisEnterpriseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprise(GetRedisEnterpriseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getRedisEnterprise", TypeShape.of(GetRedisEnterpriseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
-    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeys(io.pulumi.azurenative.cache.inputs.ListDatabaseKeysArgs args) {
-        return listDatabaseKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeys(ListDatabaseKeysArgs args) {
+        return listDatabaseKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeys(io.pulumi.azurenative.cache.inputs.ListDatabaseKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeys(ListDatabaseKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:listDatabaseKeys", TypeShape.of(ListDatabaseKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,10 +121,10 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListRedisKeysResult> listRedisKeys(io.pulumi.azurenative.cache.inputs.ListRedisKeysArgs args) {
-        return listRedisKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListRedisKeysResult> listRedisKeys(ListRedisKeysArgs args) {
+        return listRedisKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListRedisKeysResult> listRedisKeys(io.pulumi.azurenative.cache.inputs.ListRedisKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListRedisKeysResult> listRedisKeys(ListRedisKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:listRedisKeys", TypeShape.of(ListRedisKeysResult.class), args, Utilities.withVersion(options));
     }
 }

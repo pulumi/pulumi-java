@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
     public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
-        return this.exclude == null ? Output.empty() : this.exclude;
+        return this.exclude == null ? Codegen.empty() : this.exclude;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
       private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
     public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {
-        return this.include == null ? Output.empty() : this.include;
+        return this.include == null ? Codegen.empty() : this.include;
     }
 
     public ConnectionMonitorEndpointScopeArgs(
@@ -49,8 +50,8 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
     }
 
     private ConnectionMonitorEndpointScopeArgs() {
-        this.exclude = Output.empty();
-        this.include = Output.empty();
+        this.exclude = Codegen.empty();
+        this.include = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
             return this;
         }
         public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
-            this.exclude = Output.ofNullable(exclude);
+            this.exclude = Codegen.ofNullable(exclude);
             return this;
         }
         public Builder exclude(ConnectionMonitorEndpointScopeItemArgs... exclude) {
@@ -91,7 +92,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
             return this;
         }
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> include) {
-            this.include = Output.ofNullable(include);
+            this.include = Codegen.ofNullable(include);
             return this;
         }
         public Builder include(ConnectionMonitorEndpointScopeItemArgs... include) {

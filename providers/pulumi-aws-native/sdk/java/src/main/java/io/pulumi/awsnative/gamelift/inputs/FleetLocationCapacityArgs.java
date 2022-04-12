@@ -5,6 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     }
 
     private FleetLocationCapacityArgs() {
-        this.desiredEC2Instances = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
+        this.desiredEC2Instances = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
     }
 
     public static Builder builder() {

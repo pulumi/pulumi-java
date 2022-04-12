@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.IntegrationServiceEnvironmentSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
     public Output<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public IntegrationServiceEnvironmentSkuArgs(
@@ -51,8 +52,8 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
     }
 
     private IntegrationServiceEnvironmentSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
@@ -90,7 +91,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable Either<String,IntegrationServiceEnvironmentSkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public IntegrationServiceEnvironmentSkuArgs build() {
             return new IntegrationServiceEnvironmentSkuArgs(capacity, name);

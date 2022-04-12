@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customDomainName;
 
     public Output<String> getCustomDomainName() {
-        return this.customDomainName == null ? Output.empty() : this.customDomainName;
+        return this.customDomainName == null ? Codegen.empty() : this.customDomainName;
     }
 
     /**
@@ -83,11 +84,11 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomDomainArgs() {
-        this.customDomainName = Output.empty();
-        this.endpointName = Output.empty();
-        this.hostName = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.customDomainName = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDomainName(@Nullable String customDomainName) {
-            this.customDomainName = Output.ofNullable(customDomainName);
+            this.customDomainName = Codegen.ofNullable(customDomainName);
             return this;
         }
         public Builder endpointName(Output<String> endpointName) {

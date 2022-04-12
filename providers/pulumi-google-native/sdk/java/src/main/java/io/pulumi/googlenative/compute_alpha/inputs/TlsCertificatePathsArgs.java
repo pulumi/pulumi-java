@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> certificatePath;
 
     public Output<String> getCertificatePath() {
-        return this.certificatePath == null ? Output.empty() : this.certificatePath;
+        return this.certificatePath == null ? Codegen.empty() : this.certificatePath;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> privateKeyPath;
 
     public Output<String> getPrivateKeyPath() {
-        return this.privateKeyPath == null ? Output.empty() : this.privateKeyPath;
+        return this.privateKeyPath == null ? Codegen.empty() : this.privateKeyPath;
     }
 
     public TlsCertificatePathsArgs(
@@ -48,8 +49,8 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TlsCertificatePathsArgs() {
-        this.certificatePath = Output.empty();
-        this.privateKeyPath = Output.empty();
+        this.certificatePath = Codegen.empty();
+        this.privateKeyPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder certificatePath(@Nullable String certificatePath) {
-            this.certificatePath = Output.ofNullable(certificatePath);
+            this.certificatePath = Codegen.ofNullable(certificatePath);
             return this;
         }
         public Builder privateKeyPath(@Nullable Output<String> privateKeyPath) {
@@ -87,7 +88,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateKeyPath(@Nullable String privateKeyPath) {
-            this.privateKeyPath = Output.ofNullable(privateKeyPath);
+            this.privateKeyPath = Codegen.ofNullable(privateKeyPath);
             return this;
         }        public TlsCertificatePathsArgs build() {
             return new TlsCertificatePathsArgs(certificatePath, privateKeyPath);

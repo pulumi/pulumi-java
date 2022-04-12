@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> defaultMode;
 
     public Output<Integer> getDefaultMode() {
-        return this.defaultMode == null ? Output.empty() : this.defaultMode;
+        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<KeyToPathArgs>> items;
 
     public Output<List<KeyToPathArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> optional;
 
     public Output<Boolean> getOptional() {
-        return this.optional == null ? Output.empty() : this.optional;
+        return this.optional == null ? Codegen.empty() : this.optional;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {
-        return this.secretName == null ? Output.empty() : this.secretName;
+        return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
     public SecretVolumeSourceArgs(
@@ -78,10 +79,10 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecretVolumeSourceArgs() {
-        this.defaultMode = Output.empty();
-        this.items = Output.empty();
-        this.optional = Output.empty();
-        this.secretName = Output.empty();
+        this.defaultMode = Codegen.empty();
+        this.items = Codegen.empty();
+        this.optional = Codegen.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Output.ofNullable(defaultMode);
+            this.defaultMode = Codegen.ofNullable(defaultMode);
             return this;
         }
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
@@ -123,7 +124,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder items(@Nullable List<KeyToPathArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(KeyToPathArgs... items) {
@@ -134,7 +135,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Output.ofNullable(optional);
+            this.optional = Codegen.ofNullable(optional);
             return this;
         }
         public Builder secretName(@Nullable Output<String> secretName) {
@@ -142,7 +143,7 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Output.ofNullable(secretName);
+            this.secretName = Codegen.ofNullable(secretName);
             return this;
         }        public SecretVolumeSourceArgs build() {
             return new SecretVolumeSourceArgs(defaultMode, items, optional, secretName);

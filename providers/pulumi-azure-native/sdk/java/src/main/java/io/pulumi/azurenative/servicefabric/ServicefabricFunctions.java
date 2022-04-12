@@ -31,10 +31,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.servicefabric.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.servicefabric.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,10 +42,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(io.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeArgs args) {
-        return getApplicationType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args) {
+        return getApplicationType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(io.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplicationType", TypeShape.of(GetApplicationTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(io.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeVersionArgs args) {
-        return getApplicationTypeVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args) {
+        return getApplicationTypeVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(io.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplicationTypeVersion", TypeShape.of(GetApplicationTypeVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -65,10 +65,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.servicefabric.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.azurenative.servicefabric.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,10 +77,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(io.pulumi.azurenative.servicefabric.inputs.GetManagedClusterArgs args) {
-        return getManagedCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args) {
+        return getManagedCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(io.pulumi.azurenative.servicefabric.inputs.GetManagedClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -88,10 +88,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNodeTypeResult> getNodeType(io.pulumi.azurenative.servicefabric.inputs.GetNodeTypeArgs args) {
-        return getNodeType(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args) {
+        return getNodeType(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeTypeResult> getNodeType(io.pulumi.azurenative.servicefabric.inputs.GetNodeTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getNodeType", TypeShape.of(GetNodeTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,10 +99,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.servicefabric.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.servicefabric.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -110,10 +110,10 @@ public final class ServicefabricFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(io.pulumi.azurenative.servicefabric.inputs.ListListUpgradableVersionPostArgs args) {
-        return listListUpgradableVersionPost(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args) {
+        return listListUpgradableVersionPost(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(io.pulumi.azurenative.servicefabric.inputs.ListListUpgradableVersionPostArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:listListUpgradableVersionPost", TypeShape.of(ListListUpgradableVersionPostResult.class), args, Utilities.withVersion(options));
     }
 }

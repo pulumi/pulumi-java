@@ -5,6 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
       private final @Nullable Output<Object> attributes;
 
     public Output<Object> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ComponentVersionComponentPlatformArgs(
@@ -37,8 +38,8 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     }
 
     private ComponentVersionComponentPlatformArgs() {
-        this.attributes = Output.empty();
-        this.name = Output.empty();
+        this.attributes = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
             return this;
         }
         public Builder attributes(@Nullable Object attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -76,7 +77,7 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ComponentVersionComponentPlatformArgs build() {
             return new ComponentVersionComponentPlatformArgs(attributes, name);

@@ -23,10 +23,10 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRResult> getSignalR(io.pulumi.azurenative.signalrservice.inputs.GetSignalRArgs args) {
-        return getSignalR(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSignalRResult> getSignalR(GetSignalRArgs args) {
+        return getSignalR(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSignalRResult> getSignalR(io.pulumi.azurenative.signalrservice.inputs.GetSignalRArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSignalRResult> getSignalR(GetSignalRArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalR", TypeShape.of(GetSignalRResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(io.pulumi.azurenative.signalrservice.inputs.GetSignalRPrivateEndpointConnectionArgs args) {
-        return getSignalRPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args) {
+        return getSignalRPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(io.pulumi.azurenative.signalrservice.inputs.GetSignalRPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> getSignalRPrivateEndpointConnection(GetSignalRPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRPrivateEndpointConnection", TypeShape.of(GetSignalRPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class SignalrserviceFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(io.pulumi.azurenative.signalrservice.inputs.GetSignalRSharedPrivateLinkResourceArgs args) {
-        return getSignalRSharedPrivateLinkResource(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args) {
+        return getSignalRSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(io.pulumi.azurenative.signalrservice.inputs.GetSignalRSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> getSignalRSharedPrivateLinkResource(GetSignalRSharedPrivateLinkResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRSharedPrivateLinkResource", TypeShape.of(GetSignalRSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class SignalrserviceFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(io.pulumi.azurenative.signalrservice.inputs.ListSignalRKeysArgs args) {
-        return listSignalRKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args) {
+        return listSignalRKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(io.pulumi.azurenative.signalrservice.inputs.ListSignalRKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListSignalRKeysResult> listSignalRKeys(ListSignalRKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:listSignalRKeys", TypeShape.of(ListSignalRKeysResult.class), args, Utilities.withVersion(options));
     }
 }

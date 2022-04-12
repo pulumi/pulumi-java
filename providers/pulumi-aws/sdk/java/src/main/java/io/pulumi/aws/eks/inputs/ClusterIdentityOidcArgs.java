@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     public ClusterIdentityOidcArgs(@Nullable Output<String> issuer) {
@@ -30,7 +31,7 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
     }
 
     private ClusterIdentityOidcArgs() {
-        this.issuer = Output.empty();
+        this.issuer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }        public ClusterIdentityOidcArgs build() {
             return new ClusterIdentityOidcArgs(issuer);

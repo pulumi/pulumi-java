@@ -23,10 +23,10 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.datalakestore.inputs.GetAccountArgs args) {
-        return getAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+        return getAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountResult> getAccount(io.pulumi.azurenative.datalakestore.inputs.GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.datalakestore.inputs.GetFirewallRuleArgs args) {
-        return getFirewallRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+        return getFirewallRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(io.pulumi.azurenative.datalakestore.inputs.GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,10 +45,10 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProvider(io.pulumi.azurenative.datalakestore.inputs.GetTrustedIdProviderArgs args) {
-        return getTrustedIdProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProvider(GetTrustedIdProviderArgs args) {
+        return getTrustedIdProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProvider(io.pulumi.azurenative.datalakestore.inputs.GetTrustedIdProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProvider(GetTrustedIdProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getTrustedIdProvider", TypeShape.of(GetTrustedIdProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -56,10 +56,10 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.datalakestore.inputs.GetVirtualNetworkRuleArgs args) {
-        return getVirtualNetworkRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args) {
+        return getVirtualNetworkRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(io.pulumi.azurenative.datalakestore.inputs.GetVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
 }

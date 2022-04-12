@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluencePageToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
 
     public Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> getPageFieldMappings() {
-        return this.pageFieldMappings == null ? Output.empty() : this.pageFieldMappings;
+        return this.pageFieldMappings == null ? Codegen.empty() : this.pageFieldMappings;
     }
 
     public DataSourceConfluencePageConfigurationArgs(@Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings) {
@@ -27,7 +28,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
     }
 
     private DataSourceConfluencePageConfigurationArgs() {
-        this.pageFieldMappings = Output.empty();
+        this.pageFieldMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMappingArgs> pageFieldMappings) {
-            this.pageFieldMappings = Output.ofNullable(pageFieldMappings);
+            this.pageFieldMappings = Codegen.ofNullable(pageFieldMappings);
             return this;
         }
         public Builder pageFieldMappings(DataSourceConfluencePageToIndexFieldMappingArgs... pageFieldMappings) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.MethodState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -215,7 +216,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Method(String name, MethodArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/method:Method", name, args == null ? MethodArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/method:Method", name, args == null ? MethodArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Method(String name, Output<String> id, @Nullable MethodState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

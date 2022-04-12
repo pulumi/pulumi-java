@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
-        return this.emailAddress == null ? Output.empty() : this.emailAddress;
+        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     public RuleManagementEventClaimsDataSourceArgs(@Nullable Output<String> emailAddress) {
@@ -34,7 +35,7 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
     }
 
     private RuleManagementEventClaimsDataSourceArgs() {
-        this.emailAddress = Output.empty();
+        this.emailAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
             return this;
         }
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Output.ofNullable(emailAddress);
+            this.emailAddress = Codegen.ofNullable(emailAddress);
             return this;
         }        public RuleManagementEventClaimsDataSourceArgs build() {
             return new RuleManagementEventClaimsDataSourceArgs(emailAddress);

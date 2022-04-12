@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatab
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -62,9 +63,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     }
 
     private ValidateSyncMigrationInputSqlServerTaskInputArgs() {
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

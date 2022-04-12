@@ -57,10 +57,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalResult> getApiPortal(io.pulumi.azurenative.appplatform.inputs.GetApiPortalArgs args) {
-        return getApiPortal(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiPortalResult> getApiPortal(GetApiPortalArgs args) {
+        return getApiPortal(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiPortalResult> getApiPortal(io.pulumi.azurenative.appplatform.inputs.GetApiPortalArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiPortalResult> getApiPortal(GetApiPortalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortal", TypeShape.of(GetApiPortalResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,10 +68,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetApiPortalCustomDomainArgs args) {
-        return getApiPortalCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args) {
+        return getApiPortalCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetApiPortalCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortalCustomDomain", TypeShape.of(GetApiPortalCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -79,10 +79,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.azurenative.appplatform.inputs.GetAppArgs args) {
-        return getApp(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+        return getApp(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResult> getApp(io.pulumi.azurenative.appplatform.inputs.GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,10 +90,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(io.pulumi.azurenative.appplatform.inputs.GetAppResourceUploadUrlArgs args) {
-        return getAppResourceUploadUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args) {
+        return getAppResourceUploadUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(io.pulumi.azurenative.appplatform.inputs.GetAppResourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getAppResourceUploadUrl", TypeShape.of(GetAppResourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,10 +101,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetBindingResult> getBinding(io.pulumi.azurenative.appplatform.inputs.GetBindingArgs args) {
-        return getBinding(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBindingResult> getBinding(GetBindingArgs args) {
+        return getBinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBindingResult> getBinding(io.pulumi.azurenative.appplatform.inputs.GetBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBindingResult> getBinding(GetBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBinding", TypeShape.of(GetBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -112,10 +112,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuildResultLogArgs args) {
-        return getBuildServiceBuildResultLog(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args) {
+        return getBuildServiceBuildResultLog(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuildResultLogArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuildResultLog", TypeShape.of(GetBuildServiceBuildResultLogResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -123,10 +123,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuilderArgs args) {
-        return getBuildServiceBuilder(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args) {
+        return getBuildServiceBuilder(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuilderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuilder", TypeShape.of(GetBuildServiceBuilderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -134,10 +134,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceResourceUploadUrlArgs args) {
-        return getBuildServiceResourceUploadUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args) {
+        return getBuildServiceResourceUploadUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(io.pulumi.azurenative.appplatform.inputs.GetBuildServiceResourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceResourceUploadUrl", TypeShape.of(GetBuildServiceResourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -145,10 +145,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(io.pulumi.azurenative.appplatform.inputs.GetBuildpackBindingArgs args) {
-        return getBuildpackBinding(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args) {
+        return getBuildpackBinding(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(io.pulumi.azurenative.appplatform.inputs.GetBuildpackBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildpackBinding", TypeShape.of(GetBuildpackBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -156,10 +156,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.appplatform.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.azurenative.appplatform.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -167,10 +167,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(io.pulumi.azurenative.appplatform.inputs.GetConfigurationServiceArgs args) {
-        return getConfigurationService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args) {
+        return getConfigurationService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(io.pulumi.azurenative.appplatform.inputs.GetConfigurationServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getConfigurationService", TypeShape.of(GetConfigurationServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -178,10 +178,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetCustomDomainArgs args) {
-        return getCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args) {
+        return getCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,10 +189,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.appplatform.inputs.GetDeploymentArgs args) {
-        return getDeployment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+        return getDeployment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentResult> getDeployment(io.pulumi.azurenative.appplatform.inputs.GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -200,10 +200,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(io.pulumi.azurenative.appplatform.inputs.GetDeploymentLogFileUrlArgs args) {
-        return getDeploymentLogFileUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args) {
+        return getDeploymentLogFileUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(io.pulumi.azurenative.appplatform.inputs.GetDeploymentLogFileUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeploymentLogFileUrl", TypeShape.of(GetDeploymentLogFileUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -211,10 +211,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.appplatform.inputs.GetGatewayArgs args) {
-        return getGateway(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+        return getGateway(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayResult> getGateway(io.pulumi.azurenative.appplatform.inputs.GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -222,10 +222,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetGatewayCustomDomainArgs args) {
-        return getGatewayCustomDomain(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args) {
+        return getGatewayCustomDomain(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(io.pulumi.azurenative.appplatform.inputs.GetGatewayCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGatewayCustomDomain", TypeShape.of(GetGatewayCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -233,10 +233,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(io.pulumi.azurenative.appplatform.inputs.GetGatewayRouteConfigArgs args) {
-        return getGatewayRouteConfig(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args) {
+        return getGatewayRouteConfig(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(io.pulumi.azurenative.appplatform.inputs.GetGatewayRouteConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGatewayRouteConfig", TypeShape.of(GetGatewayRouteConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -244,10 +244,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.appplatform.inputs.GetServiceArgs args) {
-        return getService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceResult> getService(io.pulumi.azurenative.appplatform.inputs.GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -255,10 +255,10 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(io.pulumi.azurenative.appplatform.inputs.GetServiceRegistryArgs args) {
-        return getServiceRegistry(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args) {
+        return getServiceRegistry(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(io.pulumi.azurenative.appplatform.inputs.GetServiceRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getServiceRegistry", TypeShape.of(GetServiceRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -266,10 +266,10 @@ public final class AppplatformFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetStorageResult> getStorage(io.pulumi.azurenative.appplatform.inputs.GetStorageArgs args) {
-        return getStorage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetStorageResult> getStorage(GetStorageArgs args) {
+        return getStorage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetStorageResult> getStorage(io.pulumi.azurenative.appplatform.inputs.GetStorageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageResult> getStorage(GetStorageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getStorage", TypeShape.of(GetStorageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -277,10 +277,10 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(io.pulumi.azurenative.appplatform.inputs.ListServiceTestKeysArgs args) {
-        return listServiceTestKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args) {
+        return listServiceTestKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(io.pulumi.azurenative.appplatform.inputs.ListServiceTestKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:listServiceTestKeys", TypeShape.of(ListServiceTestKeysResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> digest;
 
     public Output<Map<String,String>> getDigest() {
-        return this.digest == null ? Output.empty() : this.digest;
+        return this.digest == null ? Codegen.empty() : this.digest;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public MaterialArgs(
@@ -49,8 +50,8 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MaterialArgs() {
-        this.digest = Output.empty();
-        this.uri = Output.empty();
+        this.digest = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Output.ofNullable(digest);
+            this.digest = Codegen.ofNullable(digest);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -88,7 +89,7 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public MaterialArgs build() {
             return new MaterialArgs(digest, uri);

@@ -28,70 +28,70 @@ public final class Spanner_v1Functions {
      * Gets metadata on a pending or completed Backup.
      * 
      */
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.spanner_v1.inputs.GetBackupArgs args) {
-        return getBackup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args) {
+        return getBackup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBackupResult> getBackup(io.pulumi.googlenative.spanner_v1.inputs.GetBackupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupResult> getBackup(GetBackupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getBackup", TypeShape.of(GetBackupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the state of a Cloud Spanner database.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.googlenative.spanner_v1.inputs.GetDatabaseArgs args) {
-        return getDatabase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+        return getDatabase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDatabaseResult> getDatabase(io.pulumi.googlenative.spanner_v1.inputs.GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a particular instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
      * 
      */
-    public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceBackupIamPolicyArgs args) {
-        return getInstanceBackupIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(GetInstanceBackupIamPolicyArgs args) {
+        return getInstanceBackupIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceBackupIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceBackupIamPolicyResult> getInstanceBackupIamPolicy(GetInstanceBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceBackupIamPolicy", TypeShape.of(GetInstanceBackupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
      * 
      */
-    public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceDatabaseIamPolicyArgs args) {
-        return getInstanceDatabaseIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(GetInstanceDatabaseIamPolicyArgs args) {
+        return getInstanceDatabaseIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceDatabaseIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> getInstanceDatabaseIamPolicy(GetInstanceDatabaseIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceDatabaseIamPolicy", TypeShape.of(GetInstanceDatabaseIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set. Authorization requires `spanner.instances.getIamPolicy` on resource.
      * 
      */
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceIamPolicyArgs args) {
-        return getInstanceIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args) {
+        return getInstanceIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(io.pulumi.googlenative.spanner_v1.inputs.GetInstanceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
      * 
      */
-    public static CompletableFuture<GetSessionResult> getSession(io.pulumi.googlenative.spanner_v1.inputs.GetSessionArgs args) {
-        return getSession(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args) {
+        return getSession(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSessionResult> getSession(io.pulumi.googlenative.spanner_v1.inputs.GetSessionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -7,6 +7,7 @@ import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesGetArgs;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorIpSetGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AcceleratorAttributesGetArgs> attributes;
 
     public Output<AcceleratorAttributesGetArgs> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -52,14 +53,14 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddressType;
 
     public Output<String> getIpAddressType() {
-        return this.ipAddressType == null ? Output.empty() : this.ipAddressType;
+        return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets;
 
     public Output<List<AcceleratorIpSetGetArgs>> getIpSets() {
-        return this.ipSets == null ? Output.empty() : this.ipSets;
+        return this.ipSets == null ? Codegen.empty() : this.ipSets;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public AcceleratorState(
@@ -139,15 +140,15 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AcceleratorState() {
-        this.attributes = Output.empty();
-        this.dnsName = Output.empty();
-        this.enabled = Output.empty();
-        this.hostedZoneId = Output.empty();
-        this.ipAddressType = Output.empty();
-        this.ipSets = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.attributes = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.ipAddressType = Codegen.empty();
+        this.ipSets = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable AcceleratorAttributesGetArgs attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -199,7 +200,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -207,7 +208,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
@@ -215,7 +216,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
@@ -223,7 +224,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = Output.ofNullable(ipAddressType);
+            this.ipAddressType = Codegen.ofNullable(ipAddressType);
             return this;
         }
         public Builder ipSets(@Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets) {
@@ -231,7 +232,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipSets(@Nullable List<AcceleratorIpSetGetArgs> ipSets) {
-            this.ipSets = Output.ofNullable(ipSets);
+            this.ipSets = Codegen.ofNullable(ipSets);
             return this;
         }
         public Builder ipSets(AcceleratorIpSetGetArgs... ipSets) {
@@ -242,7 +243,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -250,7 +251,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -258,7 +259,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public AcceleratorState build() {
             return new AcceleratorState(attributes, dnsName, enabled, hostedZoneId, ipAddressType, ipSets, name, tags, tagsAll);

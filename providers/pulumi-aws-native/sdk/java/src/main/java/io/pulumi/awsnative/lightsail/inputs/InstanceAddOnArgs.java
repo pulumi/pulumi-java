@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.enums.InstanceAddOnStatus;
 import io.pulumi.awsnative.lightsail.inputs.InstanceAutoSnapshotAddOnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
     public Output<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
-        return this.autoSnapshotAddOnRequest == null ? Output.empty() : this.autoSnapshotAddOnRequest;
+        return this.autoSnapshotAddOnRequest == null ? Codegen.empty() : this.autoSnapshotAddOnRequest;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceAddOnStatus> status;
 
     public Output<InstanceAddOnStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public InstanceAddOnArgs(
@@ -59,9 +60,9 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceAddOnArgs() {
-        this.addOnType = Output.empty();
-        this.autoSnapshotAddOnRequest = Output.empty();
-        this.status = Output.empty();
+        this.addOnType = Codegen.empty();
+        this.autoSnapshotAddOnRequest = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
-            this.autoSnapshotAddOnRequest = Output.ofNullable(autoSnapshotAddOnRequest);
+            this.autoSnapshotAddOnRequest = Codegen.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
         public Builder status(@Nullable Output<InstanceAddOnStatus> status) {
@@ -109,7 +110,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable InstanceAddOnStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public InstanceAddOnArgs build() {
             return new InstanceAddOnArgs(addOnType, autoSnapshotAddOnRequest, status);

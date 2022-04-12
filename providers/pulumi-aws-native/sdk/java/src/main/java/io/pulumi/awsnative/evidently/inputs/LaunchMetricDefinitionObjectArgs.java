@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
       private final @Nullable Output<String> unitLabel;
 
     public Output<String> getUnitLabel() {
-        return this.unitLabel == null ? Output.empty() : this.unitLabel;
+        return this.unitLabel == null ? Codegen.empty() : this.unitLabel;
     }
 
     /**
@@ -75,11 +76,11 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
     }
 
     private LaunchMetricDefinitionObjectArgs() {
-        this.entityIdKey = Output.empty();
-        this.eventPattern = Output.empty();
-        this.metricName = Output.empty();
-        this.unitLabel = Output.empty();
-        this.valueKey = Output.empty();
+        this.entityIdKey = Codegen.empty();
+        this.eventPattern = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.unitLabel = Codegen.empty();
+        this.valueKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
             return this;
         }
         public Builder unitLabel(@Nullable String unitLabel) {
-            this.unitLabel = Output.ofNullable(unitLabel);
+            this.unitLabel = Codegen.ofNullable(unitLabel);
             return this;
         }
         public Builder valueKey(Output<String> valueKey) {

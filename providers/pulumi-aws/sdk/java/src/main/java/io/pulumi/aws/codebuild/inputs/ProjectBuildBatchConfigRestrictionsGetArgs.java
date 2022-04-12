@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
       private final @Nullable Output<List<String>> computeTypesAlloweds;
 
     public Output<List<String>> getComputeTypesAlloweds() {
-        return this.computeTypesAlloweds == null ? Output.empty() : this.computeTypesAlloweds;
+        return this.computeTypesAlloweds == null ? Codegen.empty() : this.computeTypesAlloweds;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
       private final @Nullable Output<Integer> maximumBuildsAllowed;
 
     public Output<Integer> getMaximumBuildsAllowed() {
-        return this.maximumBuildsAllowed == null ? Output.empty() : this.maximumBuildsAllowed;
+        return this.maximumBuildsAllowed == null ? Codegen.empty() : this.maximumBuildsAllowed;
     }
 
     public ProjectBuildBatchConfigRestrictionsGetArgs(
@@ -46,8 +47,8 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
     }
 
     private ProjectBuildBatchConfigRestrictionsGetArgs() {
-        this.computeTypesAlloweds = Output.empty();
-        this.maximumBuildsAllowed = Output.empty();
+        this.computeTypesAlloweds = Codegen.empty();
+        this.maximumBuildsAllowed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
             return this;
         }
         public Builder computeTypesAlloweds(@Nullable List<String> computeTypesAlloweds) {
-            this.computeTypesAlloweds = Output.ofNullable(computeTypesAlloweds);
+            this.computeTypesAlloweds = Codegen.ofNullable(computeTypesAlloweds);
             return this;
         }
         public Builder computeTypesAlloweds(String... computeTypesAlloweds) {
@@ -88,7 +89,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
             return this;
         }
         public Builder maximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
-            this.maximumBuildsAllowed = Output.ofNullable(maximumBuildsAllowed);
+            this.maximumBuildsAllowed = Codegen.ofNullable(maximumBuildsAllowed);
             return this;
         }        public ProjectBuildBatchConfigRestrictionsGetArgs build() {
             return new ProjectBuildBatchConfigRestrictionsGetArgs(computeTypesAlloweds, maximumBuildsAllowed);

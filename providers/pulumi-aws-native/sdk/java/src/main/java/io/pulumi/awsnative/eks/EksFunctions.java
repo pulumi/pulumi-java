@@ -20,30 +20,30 @@ public final class EksFunctions {
      * Resource Schema for AWS::EKS::Addon
      * 
      */
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.awsnative.eks.inputs.GetAddonArgs args) {
-        return getAddon(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
+        return getAddon(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAddonResult> getAddon(io.pulumi.awsnative.eks.inputs.GetAddonArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eks:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An object representing an Amazon EKS cluster.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.eks.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.awsnative.eks.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eks:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::EKS::FargateProfile
      * 
      */
-    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(io.pulumi.awsnative.eks.inputs.GetFargateProfileArgs args) {
-        return getFargateProfile(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args) {
+        return getFargateProfile(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(io.pulumi.awsnative.eks.inputs.GetFargateProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFargateProfileResult> getFargateProfile(GetFargateProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eks:getFargateProfile", TypeShape.of(GetFargateProfileResult.class), args, Utilities.withVersion(options));
     }
 }

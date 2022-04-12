@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
     public Output<BotGrammarSlotTypeSettingArgs> getGrammarSlotTypeSetting() {
-        return this.grammarSlotTypeSetting == null ? Output.empty() : this.grammarSlotTypeSetting;
+        return this.grammarSlotTypeSetting == null ? Codegen.empty() : this.grammarSlotTypeSetting;
     }
 
     public BotExternalSourceSettingArgs(@Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
@@ -30,7 +31,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     }
 
     private BotExternalSourceSettingArgs() {
-        this.grammarSlotTypeSetting = Output.empty();
+        this.grammarSlotTypeSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
-            this.grammarSlotTypeSetting = Output.ofNullable(grammarSlotTypeSetting);
+            this.grammarSlotTypeSetting = Codegen.ofNullable(grammarSlotTypeSetting);
             return this;
         }        public BotExternalSourceSettingArgs build() {
             return new BotExternalSourceSettingArgs(grammarSlotTypeSetting);

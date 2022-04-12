@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.CommandArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SourceArgs;
@@ -31,7 +32,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> buildOptions;
 
     public Output<Map<String,String>> getBuildOptions() {
-        return this.buildOptions == null ? Output.empty() : this.buildOptions;
+        return this.buildOptions == null ? Codegen.empty() : this.buildOptions;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> builderVersion;
 
     public Output<String> getBuilderVersion() {
-        return this.builderVersion == null ? Output.empty() : this.builderVersion;
+        return this.builderVersion == null ? Codegen.empty() : this.builderVersion;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ArtifactArgs>> builtArtifacts;
 
     public Output<List<ArtifactArgs>> getBuiltArtifacts() {
-        return this.builtArtifacts == null ? Output.empty() : this.builtArtifacts;
+        return this.builtArtifacts == null ? Codegen.empty() : this.builtArtifacts;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<CommandArgs>> commands;
 
     public Output<List<CommandArgs>> getCommands() {
-        return this.commands == null ? Output.empty() : this.commands;
+        return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> creator;
 
     public Output<String> getCreator() {
-        return this.creator == null ? Output.empty() : this.creator;
+        return this.creator == null ? Codegen.empty() : this.creator;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> logsUri;
 
     public Output<String> getLogsUri() {
-        return this.logsUri == null ? Output.empty() : this.logsUri;
+        return this.logsUri == null ? Codegen.empty() : this.logsUri;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SourceArgs> sourceProvenance;
 
     public Output<SourceArgs> getSourceProvenance() {
-        return this.sourceProvenance == null ? Output.empty() : this.sourceProvenance;
+        return this.sourceProvenance == null ? Codegen.empty() : this.sourceProvenance;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> triggerId;
 
     public Output<String> getTriggerId() {
-        return this.triggerId == null ? Output.empty() : this.triggerId;
+        return this.triggerId == null ? Codegen.empty() : this.triggerId;
     }
 
     public BuildProvenanceArgs(
@@ -196,19 +197,19 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BuildProvenanceArgs() {
-        this.buildOptions = Output.empty();
-        this.builderVersion = Output.empty();
-        this.builtArtifacts = Output.empty();
-        this.commands = Output.empty();
-        this.createTime = Output.empty();
-        this.creator = Output.empty();
-        this.endTime = Output.empty();
-        this.id = Output.empty();
-        this.logsUri = Output.empty();
-        this.project = Output.empty();
-        this.sourceProvenance = Output.empty();
-        this.startTime = Output.empty();
-        this.triggerId = Output.empty();
+        this.buildOptions = Codegen.empty();
+        this.builderVersion = Codegen.empty();
+        this.builtArtifacts = Codegen.empty();
+        this.commands = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.creator = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.id = Codegen.empty();
+        this.logsUri = Codegen.empty();
+        this.project = Codegen.empty();
+        this.sourceProvenance = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.triggerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -260,7 +261,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder buildOptions(@Nullable Map<String,String> buildOptions) {
-            this.buildOptions = Output.ofNullable(buildOptions);
+            this.buildOptions = Codegen.ofNullable(buildOptions);
             return this;
         }
         public Builder builderVersion(@Nullable Output<String> builderVersion) {
@@ -268,7 +269,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder builderVersion(@Nullable String builderVersion) {
-            this.builderVersion = Output.ofNullable(builderVersion);
+            this.builderVersion = Codegen.ofNullable(builderVersion);
             return this;
         }
         public Builder builtArtifacts(@Nullable Output<List<ArtifactArgs>> builtArtifacts) {
@@ -276,7 +277,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder builtArtifacts(@Nullable List<ArtifactArgs> builtArtifacts) {
-            this.builtArtifacts = Output.ofNullable(builtArtifacts);
+            this.builtArtifacts = Codegen.ofNullable(builtArtifacts);
             return this;
         }
         public Builder builtArtifacts(ArtifactArgs... builtArtifacts) {
@@ -287,7 +288,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder commands(@Nullable List<CommandArgs> commands) {
-            this.commands = Output.ofNullable(commands);
+            this.commands = Codegen.ofNullable(commands);
             return this;
         }
         public Builder commands(CommandArgs... commands) {
@@ -298,7 +299,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder creator(@Nullable Output<String> creator) {
@@ -306,7 +307,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder creator(@Nullable String creator) {
-            this.creator = Output.ofNullable(creator);
+            this.creator = Codegen.ofNullable(creator);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -314,7 +315,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -330,7 +331,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logsUri(@Nullable String logsUri) {
-            this.logsUri = Output.ofNullable(logsUri);
+            this.logsUri = Codegen.ofNullable(logsUri);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -338,7 +339,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder sourceProvenance(@Nullable Output<SourceArgs> sourceProvenance) {
@@ -346,7 +347,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceProvenance(@Nullable SourceArgs sourceProvenance) {
-            this.sourceProvenance = Output.ofNullable(sourceProvenance);
+            this.sourceProvenance = Codegen.ofNullable(sourceProvenance);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -354,7 +355,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder triggerId(@Nullable Output<String> triggerId) {
@@ -362,7 +363,7 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder triggerId(@Nullable String triggerId) {
-            this.triggerId = Output.ofNullable(triggerId);
+            this.triggerId = Codegen.ofNullable(triggerId);
             return this;
         }        public BuildProvenanceArgs build() {
             return new BuildProvenanceArgs(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, endTime, id, logsUri, project, sourceProvenance, startTime, triggerId);

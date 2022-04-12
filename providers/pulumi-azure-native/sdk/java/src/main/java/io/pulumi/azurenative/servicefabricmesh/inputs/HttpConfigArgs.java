@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,9 +64,9 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpConfigArgs() {
-        this.hosts = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.hosts = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

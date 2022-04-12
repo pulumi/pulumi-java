@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.NotificationEndpointGrpcSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
       private final @Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings;
 
     public Output<NotificationEndpointGrpcSettingsArgs> getGrpcSettings() {
-        return this.grpcSettings == null ? Output.empty() : this.grpcSettings;
+        return this.grpcSettings == null ? Codegen.empty() : this.grpcSettings;
     }
 
     /**
@@ -45,14 +46,14 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
@@ -66,7 +67,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public RegionNotificationEndpointArgs(
@@ -85,12 +86,12 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
     }
 
     private RegionNotificationEndpointArgs() {
-        this.description = Output.empty();
-        this.grpcSettings = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
+        this.description = Codegen.empty();
+        this.grpcSettings = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder grpcSettings(@Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings) {
@@ -136,7 +137,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder grpcSettings(@Nullable NotificationEndpointGrpcSettingsArgs grpcSettings) {
-            this.grpcSettings = Output.ofNullable(grpcSettings);
+            this.grpcSettings = Codegen.ofNullable(grpcSettings);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -144,7 +145,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -152,7 +153,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -168,7 +169,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public RegionNotificationEndpointArgs build() {
             return new RegionNotificationEndpointArgs(description, grpcSettings, name, project, region, requestId);

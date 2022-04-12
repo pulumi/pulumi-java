@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.NetworkAclEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.NetworkAclIngressGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkAclEgressGetArgs>> egress;
 
     public Output<List<NetworkAclEgressGetArgs>> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkAclIngressGetArgs>> ingress;
 
     public Output<List<NetworkAclIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public NetworkAclState(
@@ -126,14 +127,14 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkAclState() {
-        this.arn = Output.empty();
-        this.egress = Output.empty();
-        this.ingress = Output.empty();
-        this.ownerId = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.arn = Codegen.empty();
+        this.egress = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder egress(@Nullable Output<List<NetworkAclEgressGetArgs>> egress) {
@@ -183,7 +184,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egress(@Nullable List<NetworkAclEgressGetArgs> egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }
         public Builder egress(NetworkAclEgressGetArgs... egress) {
@@ -194,7 +195,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable List<NetworkAclIngressGetArgs> ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder ingress(NetworkAclIngressGetArgs... ingress) {
@@ -205,7 +206,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -213,7 +214,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -224,7 +225,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -232,7 +233,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -240,7 +241,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public NetworkAclState build() {
             return new NetworkAclState(arn, egress, ingress, ownerId, subnetIds, tags, tagsAll, vpcId);

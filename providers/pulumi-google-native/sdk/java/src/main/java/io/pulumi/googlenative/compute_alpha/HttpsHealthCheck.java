@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.HttpsHealthCheckArgs;
 import java.lang.Integer;
@@ -223,7 +224,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HttpsHealthCheck(String name, @Nullable HttpsHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:HttpsHealthCheck", name, args == null ? HttpsHealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:HttpsHealthCheck", name, args == null ? HttpsHealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HttpsHealthCheck(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

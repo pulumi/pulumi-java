@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.inputs.EventArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> emailRecipient;
 
     public Output<String> getEmailRecipient() {
-        return this.emailRecipient == null ? Output.empty() : this.emailRecipient;
+        return this.emailRecipient == null ? Codegen.empty() : this.emailRecipient;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<EventArgs>> events;
 
     public Output<List<EventArgs>> getEvents() {
-        return this.events == null ? Output.empty() : this.events;
+        return this.events == null ? Codegen.empty() : this.events;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> notificationLocale;
 
     public Output<String> getNotificationLocale() {
-        return this.notificationLocale == null ? Output.empty() : this.notificationLocale;
+        return this.notificationLocale == null ? Codegen.empty() : this.notificationLocale;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> webHookUrl;
 
     public Output<String> getWebHookUrl() {
-        return this.webHookUrl == null ? Output.empty() : this.webHookUrl;
+        return this.webHookUrl == null ? Codegen.empty() : this.webHookUrl;
     }
 
     public NotificationChannelArgs(
@@ -151,16 +152,16 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     private NotificationChannelArgs() {
-        this.description = Output.empty();
-        this.emailRecipient = Output.empty();
-        this.events = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notificationLocale = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.webHookUrl = Output.empty();
+        this.description = Codegen.empty();
+        this.emailRecipient = Codegen.empty();
+        this.events = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationLocale = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.webHookUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
@@ -214,7 +215,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = Output.ofNullable(emailRecipient);
+            this.emailRecipient = Codegen.ofNullable(emailRecipient);
             return this;
         }
         public Builder events(@Nullable Output<List<EventArgs>> events) {
@@ -222,7 +223,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder events(@Nullable List<EventArgs> events) {
-            this.events = Output.ofNullable(events);
+            this.events = Codegen.ofNullable(events);
             return this;
         }
         public Builder events(EventArgs... events) {
@@ -241,7 +242,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -249,7 +250,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
@@ -257,7 +258,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = Output.ofNullable(notificationLocale);
+            this.notificationLocale = Codegen.ofNullable(notificationLocale);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -273,7 +274,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder webHookUrl(@Nullable Output<String> webHookUrl) {
@@ -281,7 +282,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder webHookUrl(@Nullable String webHookUrl) {
-            this.webHookUrl = Output.ofNullable(webHookUrl);
+            this.webHookUrl = Codegen.ofNullable(webHookUrl);
             return this;
         }        public NotificationChannelArgs build() {
             return new NotificationChannelArgs(description, emailRecipient, events, labName, location, name, notificationLocale, resourceGroupName, tags, webHookUrl);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> protectionLevel;
 
     public Output<String> getProtectionLevel() {
-        return this.protectionLevel == null ? Output.empty() : this.protectionLevel;
+        return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
     }
 
     public CryptoKeyVersionTemplateGetArgs(
@@ -45,8 +46,8 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
     }
 
     private CryptoKeyVersionTemplateGetArgs() {
-        this.algorithm = Output.empty();
-        this.protectionLevel = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.protectionLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder protectionLevel(@Nullable String protectionLevel) {
-            this.protectionLevel = Output.ofNullable(protectionLevel);
+            this.protectionLevel = Codegen.ofNullable(protectionLevel);
             return this;
         }        public CryptoKeyVersionTemplateGetArgs build() {
             return new CryptoKeyVersionTemplateGetArgs(algorithm, protectionLevel);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
     }
 
     private SSISExecutionParameterArgs() {
-        this.value = Output.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

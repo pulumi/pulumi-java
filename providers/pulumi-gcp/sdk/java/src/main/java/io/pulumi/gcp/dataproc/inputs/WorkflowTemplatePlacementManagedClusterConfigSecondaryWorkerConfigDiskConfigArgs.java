@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
     public Output<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
+        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<String> bootDiskType;
 
     public Output<String> getBootDiskType() {
-        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
+        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<Integer> numLocalSsds;
 
     public Output<Integer> getNumLocalSsds() {
-        return this.numLocalSsds == null ? Output.empty() : this.numLocalSsds;
+        return this.numLocalSsds == null ? Codegen.empty() : this.numLocalSsds;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs(
@@ -58,9 +59,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs() {
-        this.bootDiskSizeGb = Output.empty();
-        this.bootDiskType = Output.empty();
-        this.numLocalSsds = Output.empty();
+        this.bootDiskSizeGb = Codegen.empty();
+        this.bootDiskType = Codegen.empty();
+        this.numLocalSsds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
             return this;
         }
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
@@ -100,7 +101,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Output.ofNullable(bootDiskType);
+            this.bootDiskType = Codegen.ofNullable(bootDiskType);
             return this;
         }
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
@@ -108,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
-            this.numLocalSsds = Output.ofNullable(numLocalSsds);
+            this.numLocalSsds = Codegen.ofNullable(numLocalSsds);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs(bootDiskSizeGb, bootDiskType, numLocalSsds);

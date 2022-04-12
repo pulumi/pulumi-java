@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.IpFilterActionType;
 import io.pulumi.azurenative.devices.enums.IpFilterTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +62,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<IpFilterTargetType> target;
 
     public Output<IpFilterTargetType> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public TargetIpFilterRuleArgs(
@@ -76,10 +77,10 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TargetIpFilterRuleArgs() {
-        this.action = Output.empty();
-        this.filterName = Output.empty();
-        this.ipMask = Output.empty();
-        this.target = Output.empty();
+        this.action = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.ipMask = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder target(@Nullable IpFilterTargetType target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public TargetIpFilterRuleArgs build() {
             return new TargetIpFilterRuleArgs(action, filterName, ipMask, target);

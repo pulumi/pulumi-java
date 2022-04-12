@@ -7,6 +7,7 @@ import io.pulumi.azurenative.edgeorder.enums.TransportShipmentTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +36,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
     }
 
     private TransportPreferencesArgs() {
-        this.preferredShipmentType = Output.empty();
+        this.preferredShipmentType = Codegen.empty();
     }
 
     public static Builder builder() {

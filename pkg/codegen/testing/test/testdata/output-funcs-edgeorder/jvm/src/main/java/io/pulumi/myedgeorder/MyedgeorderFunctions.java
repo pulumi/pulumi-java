@@ -19,10 +19,10 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(io.pulumi.myedgeorder.inputs.ListConfigurationsArgs args) {
-        return listConfigurations(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
+        return listConfigurations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(io.pulumi.myedgeorder.inputs.ListConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(io.pulumi.myedgeorder.inputs.ListProductFamiliesArgs args) {
-        return listProductFamilies(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
+        return listProductFamilies(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(io.pulumi.myedgeorder.inputs.ListProductFamiliesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }
 }

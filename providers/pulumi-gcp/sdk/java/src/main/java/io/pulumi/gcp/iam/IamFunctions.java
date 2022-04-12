@@ -22,10 +22,10 @@ public final class IamFunctions {
      * Use this data source to get information about a Google IAM Role.
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.gcp.iam.inputs.GetRuleArgs args) {
-        return getRule(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+        return getRule(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRuleResult> getRule(io.pulumi.gcp.iam.inputs.GetRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -34,10 +34,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(io.pulumi.gcp.iam.inputs.GetTestablePermissionsArgs args) {
-        return getTestablePermissions(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args) {
+        return getTestablePermissions(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(io.pulumi.gcp.iam.inputs.GetTestablePermissionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestablePermissionsResult> getTestablePermissions(GetTestablePermissionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getTestablePermissions:getTestablePermissions", TypeShape.of(GetTestablePermissionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,10 +46,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(io.pulumi.gcp.iam.inputs.GetWorkloadIdentityPoolArgs args) {
-        return getWorkloadIdentityPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args) {
+        return getWorkloadIdentityPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(io.pulumi.gcp.iam.inputs.GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadIdentityPoolResult> getWorkloadIdentityPool(GetWorkloadIdentityPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPool:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -58,10 +58,10 @@ public final class IamFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(io.pulumi.gcp.iam.inputs.GetWorkloadIdentityPoolProviderArgs args) {
-        return getWorkloadIdentityPoolProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args) {
+        return getWorkloadIdentityPoolProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(io.pulumi.gcp.iam.inputs.GetWorkloadIdentityPoolProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkloadIdentityPoolProviderResult> getWorkloadIdentityPoolProvider(GetWorkloadIdentityPoolProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:iam/getWorkloadIdentityPoolProvider:getWorkloadIdentityPoolProvider", TypeShape.of(GetWorkloadIdentityPoolProviderResult.class), args, Utilities.withVersion(options));
     }
 }

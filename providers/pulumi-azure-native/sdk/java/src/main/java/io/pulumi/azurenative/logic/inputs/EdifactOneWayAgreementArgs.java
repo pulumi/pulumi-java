@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactProtocolSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -61,9 +62,9 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
     }
 
     private EdifactOneWayAgreementArgs() {
-        this.protocolSettings = Output.empty();
-        this.receiverBusinessIdentity = Output.empty();
-        this.senderBusinessIdentity = Output.empty();
+        this.protocolSettings = Codegen.empty();
+        this.receiverBusinessIdentity = Codegen.empty();
+        this.senderBusinessIdentity = Codegen.empty();
     }
 
     public static Builder builder() {

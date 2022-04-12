@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkPolicyProvider;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkPolicyProvider> provider;
 
     public Output<NetworkPolicyProvider> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public NetworkPolicyArgs(
@@ -49,8 +50,8 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkPolicyArgs() {
-        this.enabled = Output.empty();
-        this.provider = Output.empty();
+        this.enabled = Codegen.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder provider(@Nullable Output<NetworkPolicyProvider> provider) {
@@ -88,7 +89,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provider(@Nullable NetworkPolicyProvider provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public NetworkPolicyArgs build() {
             return new NetworkPolicyArgs(enabled, provider);

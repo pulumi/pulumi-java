@@ -19,10 +19,10 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(io.pulumi.azurenative.attestation.inputs.GetAttestationProviderArgs args) {
-        return getAttestationProvider(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args) {
+        return getAttestationProvider(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(io.pulumi.azurenative.attestation.inputs.GetAttestationProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getAttestationProvider", TypeShape.of(GetAttestationProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.attestation.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.attestation.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -16,10 +16,10 @@ public final class Tpu_v1Functions {
      * Gets the details of a node.
      * 
      */
-    public static CompletableFuture<GetNodeResult> getNode(io.pulumi.googlenative.tpu_v1.inputs.GetNodeArgs args) {
-        return getNode(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetNodeResult> getNode(GetNodeArgs args) {
+        return getNode(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetNodeResult> getNode(io.pulumi.googlenative.tpu_v1.inputs.GetNodeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeResult> getNode(GetNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:tpu/v1:getNode", TypeShape.of(GetNodeResult.class), args, Utilities.withVersion(options));
     }
 }

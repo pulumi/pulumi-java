@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -86,11 +87,11 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ItsmReceiverArgs() {
-        this.connectionId = Output.empty();
-        this.name = Output.empty();
-        this.region = Output.empty();
-        this.ticketConfiguration = Output.empty();
-        this.workspaceId = Output.empty();
+        this.connectionId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.region = Codegen.empty();
+        this.ticketConfiguration = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

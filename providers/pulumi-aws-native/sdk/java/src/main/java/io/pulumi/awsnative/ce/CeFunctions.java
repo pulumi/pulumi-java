@@ -16,10 +16,10 @@ public final class CeFunctions {
      * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
      * 
      */
-    public static CompletableFuture<GetCostCategoryResult> getCostCategory(io.pulumi.awsnative.ce.inputs.GetCostCategoryArgs args) {
-        return getCostCategory(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCostCategoryResult> getCostCategory(GetCostCategoryArgs args) {
+        return getCostCategory(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCostCategoryResult> getCostCategory(io.pulumi.awsnative.ce.inputs.GetCostCategoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCostCategoryResult> getCostCategory(GetCostCategoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ce:getCostCategory", TypeShape.of(GetCostCategoryResult.class), args, Utilities.withVersion(options));
     }
 }

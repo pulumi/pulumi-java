@@ -31,10 +31,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.desktopvirtualization.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.azurenative.desktopvirtualization.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -42,10 +42,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(io.pulumi.azurenative.desktopvirtualization.inputs.GetApplicationGroupArgs args) {
-        return getApplicationGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(GetApplicationGroupArgs args) {
+        return getApplicationGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(io.pulumi.azurenative.desktopvirtualization.inputs.GetApplicationGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationGroupResult> getApplicationGroup(GetApplicationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getApplicationGroup", TypeShape.of(GetApplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,10 +53,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetHostPoolResult> getHostPool(io.pulumi.azurenative.desktopvirtualization.inputs.GetHostPoolArgs args) {
-        return getHostPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostPoolResult> getHostPool(GetHostPoolArgs args) {
+        return getHostPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostPoolResult> getHostPool(io.pulumi.azurenative.desktopvirtualization.inputs.GetHostPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostPoolResult> getHostPool(GetHostPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getHostPool", TypeShape.of(GetHostPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,10 +64,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(io.pulumi.azurenative.desktopvirtualization.inputs.GetMSIXPackageArgs args) {
-        return getMSIXPackage(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(GetMSIXPackageArgs args) {
+        return getMSIXPackage(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(io.pulumi.azurenative.desktopvirtualization.inputs.GetMSIXPackageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMSIXPackageResult> getMSIXPackage(GetMSIXPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getMSIXPackage", TypeShape.of(GetMSIXPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,10 +75,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(io.pulumi.azurenative.desktopvirtualization.inputs.GetPrivateEndpointConnectionByHostPoolArgs args) {
-        return getPrivateEndpointConnectionByHostPool(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(GetPrivateEndpointConnectionByHostPoolArgs args) {
+        return getPrivateEndpointConnectionByHostPool(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(io.pulumi.azurenative.desktopvirtualization.inputs.GetPrivateEndpointConnectionByHostPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionByHostPoolResult> getPrivateEndpointConnectionByHostPool(GetPrivateEndpointConnectionByHostPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getPrivateEndpointConnectionByHostPool", TypeShape.of(GetPrivateEndpointConnectionByHostPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -86,10 +86,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(io.pulumi.azurenative.desktopvirtualization.inputs.GetPrivateEndpointConnectionByWorkspaceArgs args) {
-        return getPrivateEndpointConnectionByWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(GetPrivateEndpointConnectionByWorkspaceArgs args) {
+        return getPrivateEndpointConnectionByWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(io.pulumi.azurenative.desktopvirtualization.inputs.GetPrivateEndpointConnectionByWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionByWorkspaceResult> getPrivateEndpointConnectionByWorkspace(GetPrivateEndpointConnectionByWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getPrivateEndpointConnectionByWorkspace", TypeShape.of(GetPrivateEndpointConnectionByWorkspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -97,10 +97,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetScalingPlanResult> getScalingPlan(io.pulumi.azurenative.desktopvirtualization.inputs.GetScalingPlanArgs args) {
-        return getScalingPlan(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetScalingPlanResult> getScalingPlan(GetScalingPlanArgs args) {
+        return getScalingPlan(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetScalingPlanResult> getScalingPlan(io.pulumi.azurenative.desktopvirtualization.inputs.GetScalingPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScalingPlanResult> getScalingPlan(GetScalingPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getScalingPlan", TypeShape.of(GetScalingPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -108,10 +108,10 @@ public final class DesktopvirtualizationFunctions {
      * API Version: 2021-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.desktopvirtualization.inputs.GetWorkspaceArgs args) {
-        return getWorkspace(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+        return getWorkspace(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(io.pulumi.azurenative.desktopvirtualization.inputs.GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

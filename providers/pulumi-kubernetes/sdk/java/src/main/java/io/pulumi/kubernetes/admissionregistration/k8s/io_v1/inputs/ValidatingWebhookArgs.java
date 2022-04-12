@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.RuleWithOperationsArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -53,7 +54,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> failurePolicy;
 
     public Output<String> getFailurePolicy() {
-        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
+        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> matchPolicy;
 
     public Output<String> getMatchPolicy() {
-        return this.matchPolicy == null ? Output.empty() : this.matchPolicy;
+        return this.matchPolicy == null ? Codegen.empty() : this.matchPolicy;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
     public Output<LabelSelectorArgs> getNamespaceSelector() {
-        return this.namespaceSelector == null ? Output.empty() : this.namespaceSelector;
+        return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LabelSelectorArgs> objectSelector;
 
     public Output<LabelSelectorArgs> getObjectSelector() {
-        return this.objectSelector == null ? Output.empty() : this.objectSelector;
+        return this.objectSelector == null ? Codegen.empty() : this.objectSelector;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<RuleWithOperationsArgs>> rules;
 
     public Output<List<RuleWithOperationsArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     public ValidatingWebhookArgs(
@@ -193,16 +194,16 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ValidatingWebhookArgs() {
-        this.admissionReviewVersions = Output.empty();
-        this.clientConfig = Output.empty();
-        this.failurePolicy = Output.empty();
-        this.matchPolicy = Output.empty();
-        this.name = Output.empty();
-        this.namespaceSelector = Output.empty();
-        this.objectSelector = Output.empty();
-        this.rules = Output.empty();
-        this.sideEffects = Output.empty();
-        this.timeoutSeconds = Output.empty();
+        this.admissionReviewVersions = Codegen.empty();
+        this.clientConfig = Codegen.empty();
+        this.failurePolicy = Codegen.empty();
+        this.matchPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceSelector = Codegen.empty();
+        this.objectSelector = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.sideEffects = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -267,7 +268,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder failurePolicy(@Nullable String failurePolicy) {
-            this.failurePolicy = Output.ofNullable(failurePolicy);
+            this.failurePolicy = Codegen.ofNullable(failurePolicy);
             return this;
         }
         public Builder matchPolicy(@Nullable Output<String> matchPolicy) {
@@ -275,7 +276,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder matchPolicy(@Nullable String matchPolicy) {
-            this.matchPolicy = Output.ofNullable(matchPolicy);
+            this.matchPolicy = Codegen.ofNullable(matchPolicy);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -291,7 +292,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Output.ofNullable(namespaceSelector);
+            this.namespaceSelector = Codegen.ofNullable(namespaceSelector);
             return this;
         }
         public Builder objectSelector(@Nullable Output<LabelSelectorArgs> objectSelector) {
@@ -299,7 +300,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder objectSelector(@Nullable LabelSelectorArgs objectSelector) {
-            this.objectSelector = Output.ofNullable(objectSelector);
+            this.objectSelector = Codegen.ofNullable(objectSelector);
             return this;
         }
         public Builder rules(@Nullable Output<List<RuleWithOperationsArgs>> rules) {
@@ -307,7 +308,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rules(@Nullable List<RuleWithOperationsArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RuleWithOperationsArgs... rules) {
@@ -326,7 +327,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }        public ValidatingWebhookArgs build() {
             return new ValidatingWebhookArgs(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, rules, sideEffects, timeoutSeconds);

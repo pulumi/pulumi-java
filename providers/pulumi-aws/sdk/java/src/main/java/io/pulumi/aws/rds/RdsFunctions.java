@@ -37,12 +37,12 @@ public final class RdsFunctions {
      * 
      */
     public static CompletableFuture<GetCertificateResult> getCertificate() {
-        return getCertificate(io.pulumi.aws.rds.inputs.GetCertificateArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getCertificate(GetCertificateArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.aws.rds.inputs.GetCertificateArgs args) {
-        return getCertificate(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+        return getCertificate(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCertificateResult> getCertificate(io.pulumi.aws.rds.inputs.GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -51,10 +51,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.rds.inputs.GetClusterArgs args) {
-        return getCluster(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+        return getCluster(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterResult> getCluster(io.pulumi.aws.rds.inputs.GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -67,12 +67,12 @@ public final class RdsFunctions {
      * 
      */
     public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot() {
-        return getClusterSnapshot(io.pulumi.aws.rds.inputs.GetClusterSnapshotArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getClusterSnapshot(GetClusterSnapshotArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(io.pulumi.aws.rds.inputs.GetClusterSnapshotArgs args) {
-        return getClusterSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args) {
+        return getClusterSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(io.pulumi.aws.rds.inputs.GetClusterSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot(GetClusterSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getClusterSnapshot:getClusterSnapshot", TypeShape.of(GetClusterSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,10 +81,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(io.pulumi.aws.rds.inputs.GetEngineVersionArgs args) {
-        return getEngineVersion(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
+        return getEngineVersion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(io.pulumi.aws.rds.inputs.GetEngineVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -92,12 +92,12 @@ public final class RdsFunctions {
      * 
      */
     public static CompletableFuture<GetEventCategoriesResult> getEventCategories() {
-        return getEventCategories(io.pulumi.aws.rds.inputs.GetEventCategoriesArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getEventCategories(GetEventCategoriesArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(io.pulumi.aws.rds.inputs.GetEventCategoriesArgs args) {
-        return getEventCategories(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args) {
+        return getEventCategories(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(io.pulumi.aws.rds.inputs.GetEventCategoriesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventCategoriesResult> getEventCategories(GetEventCategoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getEventCategories:getEventCategories", TypeShape.of(GetEventCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,10 +106,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.rds.inputs.GetInstanceArgs args) {
-        return getInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+        return getInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceResult> getInstance(io.pulumi.aws.rds.inputs.GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,10 +118,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(io.pulumi.aws.rds.inputs.GetOrderableDbInstanceArgs args) {
-        return getOrderableDbInstance(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
+        return getOrderableDbInstance(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(io.pulumi.aws.rds.inputs.GetOrderableDbInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getOrderableDbInstance:getOrderableDbInstance", TypeShape.of(GetOrderableDbInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -130,10 +130,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProxyResult> getProxy(io.pulumi.aws.rds.inputs.GetProxyArgs args) {
-        return getProxy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProxyResult> getProxy(GetProxyArgs args) {
+        return getProxy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProxyResult> getProxy(io.pulumi.aws.rds.inputs.GetProxyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProxyResult> getProxy(GetProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getProxy:getProxy", TypeShape.of(GetProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -146,12 +146,12 @@ public final class RdsFunctions {
      * 
      */
     public static CompletableFuture<GetSnapshotResult> getSnapshot() {
-        return getSnapshot(io.pulumi.aws.rds.inputs.GetSnapshotArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getSnapshot(GetSnapshotArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.aws.rds.inputs.GetSnapshotArgs args) {
-        return getSnapshot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+        return getSnapshot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(io.pulumi.aws.rds.inputs.GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -160,10 +160,10 @@ public final class RdsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(io.pulumi.aws.rds.inputs.GetSubnetGroupArgs args) {
-        return getSubnetGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
+        return getSubnetGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(io.pulumi.aws.rds.inputs.GetSubnetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
 }

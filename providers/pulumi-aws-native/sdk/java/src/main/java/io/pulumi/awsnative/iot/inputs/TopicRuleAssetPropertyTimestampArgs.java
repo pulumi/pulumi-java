@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TopicRuleAssetPropertyTimestampArgs extends io.pulumi.resourc
       private final @Nullable Output<String> offsetInNanos;
 
     public Output<String> getOffsetInNanos() {
-        return this.offsetInNanos == null ? Output.empty() : this.offsetInNanos;
+        return this.offsetInNanos == null ? Codegen.empty() : this.offsetInNanos;
     }
 
     @Import(name="timeInSeconds", required=true)
@@ -36,8 +37,8 @@ public final class TopicRuleAssetPropertyTimestampArgs extends io.pulumi.resourc
     }
 
     private TopicRuleAssetPropertyTimestampArgs() {
-        this.offsetInNanos = Output.empty();
-        this.timeInSeconds = Output.empty();
+        this.offsetInNanos = Codegen.empty();
+        this.timeInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TopicRuleAssetPropertyTimestampArgs extends io.pulumi.resourc
             return this;
         }
         public Builder offsetInNanos(@Nullable String offsetInNanos) {
-            this.offsetInNanos = Output.ofNullable(offsetInNanos);
+            this.offsetInNanos = Codegen.ofNullable(offsetInNanos);
             return this;
         }
         public Builder timeInSeconds(Output<String> timeInSeconds) {

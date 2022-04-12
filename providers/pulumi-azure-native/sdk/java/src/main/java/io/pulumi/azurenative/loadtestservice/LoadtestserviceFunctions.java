@@ -17,10 +17,10 @@ public final class LoadtestserviceFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetLoadTestResult> getLoadTest(io.pulumi.azurenative.loadtestservice.inputs.GetLoadTestArgs args) {
-        return getLoadTest(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetLoadTestResult> getLoadTest(GetLoadTestArgs args) {
+        return getLoadTest(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetLoadTestResult> getLoadTest(io.pulumi.azurenative.loadtestservice.inputs.GetLoadTestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadTestResult> getLoadTest(GetLoadTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args, Utilities.withVersion(options));
     }
 }

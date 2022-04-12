@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> roleAssignmentId;
 
     public Output<String> getRoleAssignmentId() {
-        return this.roleAssignmentId == null ? Output.empty() : this.roleAssignmentId;
+        return this.roleAssignmentId == null ? Codegen.empty() : this.roleAssignmentId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
+        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public SqlResourceSqlRoleAssignmentArgs(
@@ -96,12 +97,12 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     }
 
     private SqlResourceSqlRoleAssignmentArgs() {
-        this.accountName = Output.empty();
-        this.principalId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleAssignmentId = Output.empty();
-        this.roleDefinitionId = Output.empty();
-        this.scope = Output.empty();
+        this.accountName = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleAssignmentId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -163,7 +164,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder roleAssignmentId(@Nullable String roleAssignmentId) {
-            this.roleAssignmentId = Output.ofNullable(roleAssignmentId);
+            this.roleAssignmentId = Codegen.ofNullable(roleAssignmentId);
             return this;
         }
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
@@ -171,7 +172,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -179,7 +180,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public SqlResourceSqlRoleAssignmentArgs build() {
             return new SqlResourceSqlRoleAssignmentArgs(accountName, principalId, resourceGroupName, roleAssignmentId, roleDefinitionId, scope);

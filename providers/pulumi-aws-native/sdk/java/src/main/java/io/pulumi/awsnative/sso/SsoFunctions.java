@@ -20,30 +20,30 @@ public final class SsoFunctions {
      * Resource Type definition for SSO assignmet
      * 
      */
-    public static CompletableFuture<GetAssignmentResult> getAssignment(io.pulumi.awsnative.sso.inputs.GetAssignmentArgs args) {
-        return getAssignment(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
+        return getAssignment(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssignmentResult> getAssignment(io.pulumi.awsnative.sso.inputs.GetAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
      * 
      */
-    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(io.pulumi.awsnative.sso.inputs.GetInstanceAccessControlAttributeConfigurationArgs args) {
-        return getInstanceAccessControlAttributeConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args) {
+        return getInstanceAccessControlAttributeConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(io.pulumi.awsnative.sso.inputs.GetInstanceAccessControlAttributeConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getInstanceAccessControlAttributeConfiguration", TypeShape.of(GetInstanceAccessControlAttributeConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for SSO PermissionSet
      * 
      */
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(io.pulumi.awsnative.sso.inputs.GetPermissionSetArgs args) {
-        return getPermissionSet(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args) {
+        return getPermissionSet(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(io.pulumi.awsnative.sso.inputs.GetPermissionSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args, Utilities.withVersion(options));
     }
 }

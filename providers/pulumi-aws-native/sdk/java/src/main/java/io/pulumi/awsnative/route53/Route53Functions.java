@@ -22,40 +22,40 @@ public final class Route53Functions {
      * Resource used to control (enable/disable) DNSSEC in a specific hosted zone.
      * 
      */
-    public static CompletableFuture<GetDNSSECResult> getDNSSEC(io.pulumi.awsnative.route53.inputs.GetDNSSECArgs args) {
-        return getDNSSEC(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetDNSSECResult> getDNSSEC(GetDNSSECArgs args) {
+        return getDNSSEC(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetDNSSECResult> getDNSSEC(io.pulumi.awsnative.route53.inputs.GetDNSSECArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDNSSECResult> getDNSSEC(GetDNSSECArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getDNSSEC", TypeShape.of(GetDNSSECResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53::HealthCheck.
      * 
      */
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.awsnative.route53.inputs.GetHealthCheckArgs args) {
-        return getHealthCheck(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args) {
+        return getHealthCheck(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(io.pulumi.awsnative.route53.inputs.GetHealthCheckArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53::HostedZone.
      * 
      */
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(io.pulumi.awsnative.route53.inputs.GetHostedZoneArgs args) {
-        return getHostedZone(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args) {
+        return getHostedZone(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetHostedZoneResult> getHostedZone(io.pulumi.awsnative.route53.inputs.GetHostedZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHostedZoneResult> getHostedZone(GetHostedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
      * 
      */
-    public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(io.pulumi.awsnative.route53.inputs.GetKeySigningKeyArgs args) {
-        return getKeySigningKey(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(GetKeySigningKeyArgs args) {
+        return getKeySigningKey(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(io.pulumi.awsnative.route53.inputs.GetKeySigningKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeySigningKeyResult> getKeySigningKey(GetKeySigningKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getKeySigningKey", TypeShape.of(GetKeySigningKeyResult.class), args, Utilities.withVersion(options));
     }
 }

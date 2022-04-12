@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
     public Output<GoogleMonitoringV3RangeArgs> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeSeries;
 
     public Output<String> getTimeSeries() {
-        return this.timeSeries == null ? Output.empty() : this.timeSeries;
+        return this.timeSeries == null ? Codegen.empty() : this.timeSeries;
     }
 
     public MetricRangeArgs(
@@ -49,8 +50,8 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricRangeArgs() {
-        this.range = Output.empty();
-        this.timeSeries = Output.empty();
+        this.range = Codegen.empty();
+        this.timeSeries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder timeSeries(@Nullable Output<String> timeSeries) {
@@ -88,7 +89,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeSeries(@Nullable String timeSeries) {
-            this.timeSeries = Output.ofNullable(timeSeries);
+            this.timeSeries = Codegen.ofNullable(timeSeries);
             return this;
         }        public MetricRangeArgs build() {
             return new MetricRangeArgs(range, timeSeries);

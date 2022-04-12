@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.SnapshotCreateVolumePermissionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -71,7 +72,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotCreateVolumePermission(String name, SnapshotCreateVolumePermissionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission", name, args == null ? SnapshotCreateVolumePermissionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission", name, args == null ? SnapshotCreateVolumePermissionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SnapshotCreateVolumePermission(String name, Output<String> id, @Nullable SnapshotCreateVolumePermissionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

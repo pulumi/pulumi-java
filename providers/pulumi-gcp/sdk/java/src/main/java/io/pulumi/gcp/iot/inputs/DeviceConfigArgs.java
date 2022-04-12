@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +19,28 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> binaryData;
 
     public Output<String> getBinaryData() {
-        return this.binaryData == null ? Output.empty() : this.binaryData;
+        return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
     @Import(name="cloudUpdateTime")
       private final @Nullable Output<String> cloudUpdateTime;
 
     public Output<String> getCloudUpdateTime() {
-        return this.cloudUpdateTime == null ? Output.empty() : this.cloudUpdateTime;
+        return this.cloudUpdateTime == null ? Codegen.empty() : this.cloudUpdateTime;
     }
 
     @Import(name="deviceAckTime")
       private final @Nullable Output<String> deviceAckTime;
 
     public Output<String> getDeviceAckTime() {
-        return this.deviceAckTime == null ? Output.empty() : this.deviceAckTime;
+        return this.deviceAckTime == null ? Codegen.empty() : this.deviceAckTime;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DeviceConfigArgs(
@@ -54,10 +55,10 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceConfigArgs() {
-        this.binaryData = Output.empty();
-        this.cloudUpdateTime = Output.empty();
-        this.deviceAckTime = Output.empty();
-        this.version = Output.empty();
+        this.binaryData = Codegen.empty();
+        this.cloudUpdateTime = Codegen.empty();
+        this.deviceAckTime = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Output.ofNullable(binaryData);
+            this.binaryData = Codegen.ofNullable(binaryData);
             return this;
         }
         public Builder cloudUpdateTime(@Nullable Output<String> cloudUpdateTime) {
@@ -99,7 +100,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudUpdateTime(@Nullable String cloudUpdateTime) {
-            this.cloudUpdateTime = Output.ofNullable(cloudUpdateTime);
+            this.cloudUpdateTime = Codegen.ofNullable(cloudUpdateTime);
             return this;
         }
         public Builder deviceAckTime(@Nullable Output<String> deviceAckTime) {
@@ -107,7 +108,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceAckTime(@Nullable String deviceAckTime) {
-            this.deviceAckTime = Output.ofNullable(deviceAckTime);
+            this.deviceAckTime = Codegen.ofNullable(deviceAckTime);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -115,7 +116,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DeviceConfigArgs build() {
             return new DeviceConfigArgs(binaryData, cloudUpdateTime, deviceAckTime, version);

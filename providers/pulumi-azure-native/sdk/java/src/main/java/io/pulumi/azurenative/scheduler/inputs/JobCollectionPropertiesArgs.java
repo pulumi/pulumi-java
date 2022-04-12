@@ -8,6 +8,7 @@ import io.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import io.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<JobCollectionQuotaArgs> quota;
 
     public Output<JobCollectionQuotaArgs> getQuota() {
-        return this.quota == null ? Output.empty() : this.quota;
+        return this.quota == null ? Codegen.empty() : this.quota;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<JobCollectionState> state;
 
     public Output<JobCollectionState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public JobCollectionPropertiesArgs(
@@ -59,9 +60,9 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private JobCollectionPropertiesArgs() {
-        this.quota = Output.empty();
-        this.sku = Output.empty();
-        this.state = Output.empty();
+        this.quota = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder quota(@Nullable JobCollectionQuotaArgs quota) {
-            this.quota = Output.ofNullable(quota);
+            this.quota = Codegen.ofNullable(quota);
             return this;
         }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
@@ -101,7 +102,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder state(@Nullable Output<JobCollectionState> state) {
@@ -109,7 +110,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder state(@Nullable JobCollectionState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public JobCollectionPropertiesArgs build() {
             return new JobCollectionPropertiesArgs(quota, sku, state);

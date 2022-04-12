@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigTargetNetworkArgs;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     }
 
     private ManagedZonePeeringConfigArgs() {
-        this.targetNetwork = Output.empty();
+        this.targetNetwork = Codegen.empty();
     }
 
     public static Builder builder() {

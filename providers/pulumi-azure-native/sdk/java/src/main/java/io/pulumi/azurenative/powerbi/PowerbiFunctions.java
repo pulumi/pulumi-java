@@ -20,30 +20,30 @@ public final class PowerbiFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.powerbi.inputs.GetPrivateEndpointConnectionArgs args) {
-        return getPrivateEndpointConnection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+        return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(io.pulumi.azurenative.powerbi.inputs.GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(io.pulumi.azurenative.powerbi.inputs.GetWorkspaceCollectionArgs args) {
-        return getWorkspaceCollection(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args) {
+        return getWorkspaceCollection(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(io.pulumi.azurenative.powerbi.inputs.GetWorkspaceCollectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceCollectionResult> getWorkspaceCollection(GetWorkspaceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:getWorkspaceCollection", TypeShape.of(GetWorkspaceCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2016-01-29.
      * 
      */
-    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(io.pulumi.azurenative.powerbi.inputs.ListWorkspaceCollectionAccessKeysArgs args) {
-        return listWorkspaceCollectionAccessKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args) {
+        return listWorkspaceCollectionAccessKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(io.pulumi.azurenative.powerbi.inputs.ListWorkspaceCollectionAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWorkspaceCollectionAccessKeysResult> listWorkspaceCollectionAccessKeys(ListWorkspaceCollectionAccessKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbi:listWorkspaceCollectionAccessKeys", TypeShape.of(ListWorkspaceCollectionAccessKeysResult.class), args, Utilities.withVersion(options));
     }
 }

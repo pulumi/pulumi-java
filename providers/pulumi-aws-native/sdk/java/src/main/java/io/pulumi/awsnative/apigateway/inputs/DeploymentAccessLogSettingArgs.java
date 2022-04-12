@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
-        return this.destinationArn == null ? Output.empty() : this.destinationArn;
+        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     public DeploymentAccessLogSettingArgs(
@@ -44,8 +45,8 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
     }
 
     private DeploymentAccessLogSettingArgs() {
-        this.destinationArn = Output.empty();
-        this.format = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.format = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Output.ofNullable(destinationArn);
+            this.destinationArn = Codegen.ofNullable(destinationArn);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -83,7 +84,7 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }        public DeploymentAccessLogSettingArgs build() {
             return new DeploymentAccessLogSettingArgs(destinationArn, format);

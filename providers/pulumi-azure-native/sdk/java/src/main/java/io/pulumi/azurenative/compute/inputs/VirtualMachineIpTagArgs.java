@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> ipTagType;
 
     public Output<String> getIpTagType() {
-        return this.ipTagType == null ? Output.empty() : this.ipTagType;
+        return this.ipTagType == null ? Codegen.empty() : this.ipTagType;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public VirtualMachineIpTagArgs(
@@ -48,8 +49,8 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
     }
 
     private VirtualMachineIpTagArgs() {
-        this.ipTagType = Output.empty();
-        this.tag = Output.empty();
+        this.ipTagType = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipTagType(@Nullable String ipTagType) {
-            this.ipTagType = Output.ofNullable(ipTagType);
+            this.ipTagType = Codegen.ofNullable(ipTagType);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -87,7 +88,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public VirtualMachineIpTagArgs build() {
             return new VirtualMachineIpTagArgs(ipTagType, tag);

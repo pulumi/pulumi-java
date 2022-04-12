@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigArgs;
@@ -30,7 +31,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
     public Output<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
-        return this.inspectConfig == null ? Output.empty() : this.inspectConfig;
+        return this.inspectConfig == null ? Codegen.empty() : this.inspectConfig;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> inspectTemplateName;
 
     public Output<String> getInspectTemplateName() {
-        return this.inspectTemplateName == null ? Output.empty() : this.inspectTemplateName;
+        return this.inspectTemplateName == null ? Codegen.empty() : this.inspectTemplateName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
       private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
     public Output<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {
-        return this.storageConfig == null ? Output.empty() : this.storageConfig;
+        return this.storageConfig == null ? Codegen.empty() : this.storageConfig;
     }
 
     public GooglePrivacyDlpV2InspectJobConfigArgs(
@@ -78,10 +79,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     }
 
     private GooglePrivacyDlpV2InspectJobConfigArgs() {
-        this.actions = Output.empty();
-        this.inspectConfig = Output.empty();
-        this.inspectTemplateName = Output.empty();
-        this.storageConfig = Output.empty();
+        this.actions = Codegen.empty();
+        this.inspectConfig = Codegen.empty();
+        this.inspectTemplateName = Codegen.empty();
+        this.storageConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
@@ -126,7 +127,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
-            this.inspectConfig = Output.ofNullable(inspectConfig);
+            this.inspectConfig = Codegen.ofNullable(inspectConfig);
             return this;
         }
         public Builder inspectTemplateName(@Nullable Output<String> inspectTemplateName) {
@@ -134,7 +135,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder inspectTemplateName(@Nullable String inspectTemplateName) {
-            this.inspectTemplateName = Output.ofNullable(inspectTemplateName);
+            this.inspectTemplateName = Codegen.ofNullable(inspectTemplateName);
             return this;
         }
         public Builder storageConfig(@Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
@@ -142,7 +143,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder storageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
-            this.storageConfig = Output.ofNullable(storageConfig);
+            this.storageConfig = Codegen.ofNullable(storageConfig);
             return this;
         }        public GooglePrivacyDlpV2InspectJobConfigArgs build() {
             return new GooglePrivacyDlpV2InspectJobConfigArgs(actions, inspectConfig, inspectTemplateName, storageConfig);

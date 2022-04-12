@@ -19,10 +19,10 @@ public final class CommunicationFunctions {
      * API Version: 2020-08-20.
      * 
      */
-    public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(io.pulumi.azurenative.communication.inputs.GetCommunicationServiceArgs args) {
-        return getCommunicationService(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(GetCommunicationServiceArgs args) {
+        return getCommunicationService(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(io.pulumi.azurenative.communication.inputs.GetCommunicationServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCommunicationServiceResult> getCommunicationService(GetCommunicationServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:getCommunicationService", TypeShape.of(GetCommunicationServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -30,10 +30,10 @@ public final class CommunicationFunctions {
      * API Version: 2020-08-20.
      * 
      */
-    public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(io.pulumi.azurenative.communication.inputs.ListCommunicationServiceKeysArgs args) {
-        return listCommunicationServiceKeys(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(ListCommunicationServiceKeysArgs args) {
+        return listCommunicationServiceKeys(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(io.pulumi.azurenative.communication.inputs.ListCommunicationServiceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListCommunicationServiceKeysResult> listCommunicationServiceKeys(ListCommunicationServiceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:listCommunicationServiceKeys", TypeShape.of(ListCommunicationServiceKeysResult.class), args, Utilities.withVersion(options));
     }
 }

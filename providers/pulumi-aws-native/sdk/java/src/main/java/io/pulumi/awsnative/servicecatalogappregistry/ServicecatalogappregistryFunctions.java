@@ -22,40 +22,40 @@ public final class ServicecatalogappregistryFunctions {
      * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetApplicationArgs args) {
-        return getApplication(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+        return getApplication(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetApplicationResult> getApplication(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroup.
      * 
      */
-    public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupArgs args) {
-        return getAttributeGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(GetAttributeGroupArgs args) {
+        return getAttributeGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttributeGroupResult> getAttributeGroup(GetAttributeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroup", TypeShape.of(GetAttributeGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
      * 
      */
-    public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupAssociationArgs args) {
-        return getAttributeGroupAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(GetAttributeGroupAssociationArgs args) {
+        return getAttributeGroupAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetAttributeGroupAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttributeGroupAssociationResult> getAttributeGroupAssociation(GetAttributeGroupAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getAttributeGroupAssociation", TypeShape.of(GetAttributeGroupAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
      * 
      */
-    public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetResourceAssociationArgs args) {
-        return getResourceAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(GetResourceAssociationArgs args) {
+        return getResourceAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(io.pulumi.awsnative.servicecatalogappregistry.inputs.GetResourceAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourceAssociationResult> getResourceAssociation(GetResourceAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getResourceAssociation", TypeShape.of(GetResourceAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

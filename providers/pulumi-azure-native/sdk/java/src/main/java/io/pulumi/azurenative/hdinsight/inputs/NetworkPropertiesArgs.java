@@ -8,6 +8,7 @@ import io.pulumi.azurenative.hdinsight.enums.ResourceProviderConnection;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,PrivateLink>> privateLink;
 
     public Output<Either<String,PrivateLink>> getPrivateLink() {
-        return this.privateLink == null ? Output.empty() : this.privateLink;
+        return this.privateLink == null ? Codegen.empty() : this.privateLink;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
     public Output<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
-        return this.resourceProviderConnection == null ? Output.empty() : this.resourceProviderConnection;
+        return this.resourceProviderConnection == null ? Codegen.empty() : this.resourceProviderConnection;
     }
 
     public NetworkPropertiesArgs(
@@ -51,8 +52,8 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NetworkPropertiesArgs() {
-        this.privateLink = Output.empty();
-        this.resourceProviderConnection = Output.empty();
+        this.privateLink = Codegen.empty();
+        this.resourceProviderConnection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateLink(@Nullable Either<String,PrivateLink> privateLink) {
-            this.privateLink = Output.ofNullable(privateLink);
+            this.privateLink = Codegen.ofNullable(privateLink);
             return this;
         }
         public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
@@ -90,7 +91,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder resourceProviderConnection(@Nullable Either<String,ResourceProviderConnection> resourceProviderConnection) {
-            this.resourceProviderConnection = Output.ofNullable(resourceProviderConnection);
+            this.resourceProviderConnection = Codegen.ofNullable(resourceProviderConnection);
             return this;
         }        public NetworkPropertiesArgs build() {
             return new NetworkPropertiesArgs(privateLink, resourceProviderConnection);

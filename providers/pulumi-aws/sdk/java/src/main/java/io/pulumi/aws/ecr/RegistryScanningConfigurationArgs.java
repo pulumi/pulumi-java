@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
     public Output<List<RegistryScanningConfigurationRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
     }
 
     private RegistryScanningConfigurationArgs() {
-        this.rules = Output.empty();
-        this.scanType = Output.empty();
+        this.rules = Codegen.empty();
+        this.scanType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder rules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RegistryScanningConfigurationRuleArgs... rules) {

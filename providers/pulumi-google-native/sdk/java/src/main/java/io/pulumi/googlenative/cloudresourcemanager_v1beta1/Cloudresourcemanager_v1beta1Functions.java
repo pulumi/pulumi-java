@@ -20,10 +20,10 @@ public final class Cloudresourcemanager_v1beta1Functions {
      * Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
      * 
      */
-    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetOrganizationIamPolicyArgs args) {
-        return getOrganizationIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args) {
+        return getOrganizationIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetOrganizationIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationIamPolicyResult> getOrganizationIamPolicy(GetOrganizationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1beta1:getOrganizationIamPolicy", TypeShape.of(GetOrganizationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -31,22 +31,22 @@ public final class Cloudresourcemanager_v1beta1Functions {
      * 
      */
     public static CompletableFuture<GetProjectResult> getProject() {
-        return getProject(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetProjectArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getProject(GetProjectArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1beta1:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the IAM access control policy for the specified Project. Permission is denied if the policy or the resource does not exist. For additional information about resource structure and identification, see [Resource Names](/apis/design/resource_names).
      * 
      */
-    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetProjectIamPolicyArgs args) {
-        return getProjectIamPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(GetProjectIamPolicyArgs args) {
+        return getProjectIamPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs.GetProjectIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectIamPolicyResult> getProjectIamPolicy(GetProjectIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1beta1:getProjectIamPolicy", TypeShape.of(GetProjectIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

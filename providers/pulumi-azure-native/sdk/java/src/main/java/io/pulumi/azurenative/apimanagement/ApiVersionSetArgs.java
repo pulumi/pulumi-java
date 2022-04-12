@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.VersioningScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionHeaderName;
 
     public Output<String> getVersionHeaderName() {
-        return this.versionHeaderName == null ? Output.empty() : this.versionHeaderName;
+        return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionQueryName;
 
     public Output<String> getVersionQueryName() {
-        return this.versionQueryName == null ? Output.empty() : this.versionQueryName;
+        return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionSetId;
 
     public Output<String> getVersionSetId() {
-        return this.versionSetId == null ? Output.empty() : this.versionSetId;
+        return this.versionSetId == null ? Codegen.empty() : this.versionSetId;
     }
 
     /**
@@ -124,14 +125,14 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiVersionSetArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.versionHeaderName = Output.empty();
-        this.versionQueryName = Output.empty();
-        this.versionSetId = Output.empty();
-        this.versioningScheme = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.versionHeaderName = Codegen.empty();
+        this.versionQueryName = Codegen.empty();
+        this.versionSetId = Codegen.empty();
+        this.versioningScheme = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -205,7 +206,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = Output.ofNullable(versionHeaderName);
+            this.versionHeaderName = Codegen.ofNullable(versionHeaderName);
             return this;
         }
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
@@ -213,7 +214,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = Output.ofNullable(versionQueryName);
+            this.versionQueryName = Codegen.ofNullable(versionQueryName);
             return this;
         }
         public Builder versionSetId(@Nullable Output<String> versionSetId) {
@@ -221,7 +222,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionSetId(@Nullable String versionSetId) {
-            this.versionSetId = Output.ofNullable(versionSetId);
+            this.versionSetId = Codegen.ofNullable(versionSetId);
             return this;
         }
         public Builder versioningScheme(Output<Either<String,VersioningScheme>> versioningScheme) {

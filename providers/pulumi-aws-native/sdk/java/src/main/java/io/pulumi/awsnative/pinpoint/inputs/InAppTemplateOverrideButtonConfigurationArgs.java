@@ -6,6 +6,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
       private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
     public Output<InAppTemplateButtonAction> getButtonAction() {
-        return this.buttonAction == null ? Output.empty() : this.buttonAction;
+        return this.buttonAction == null ? Codegen.empty() : this.buttonAction;
     }
 
     @Import(name="link")
       private final @Nullable Output<String> link;
 
     public Output<String> getLink() {
-        return this.link == null ? Output.empty() : this.link;
+        return this.link == null ? Codegen.empty() : this.link;
     }
 
     public InAppTemplateOverrideButtonConfigurationArgs(
@@ -37,8 +38,8 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     }
 
     private InAppTemplateOverrideButtonConfigurationArgs() {
-        this.buttonAction = Output.empty();
-        this.link = Output.empty();
+        this.buttonAction = Codegen.empty();
+        this.link = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
             return this;
         }
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = Output.ofNullable(buttonAction);
+            this.buttonAction = Codegen.ofNullable(buttonAction);
             return this;
         }
         public Builder link(@Nullable Output<String> link) {
@@ -76,7 +77,7 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
             return this;
         }
         public Builder link(@Nullable String link) {
-            this.link = Output.ofNullable(link);
+            this.link = Codegen.ofNullable(link);
             return this;
         }        public InAppTemplateOverrideButtonConfigurationArgs build() {
             return new InAppTemplateOverrideButtonConfigurationArgs(buttonAction, link);

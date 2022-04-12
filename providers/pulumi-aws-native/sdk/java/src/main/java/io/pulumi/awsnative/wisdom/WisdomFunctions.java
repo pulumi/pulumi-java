@@ -20,30 +20,30 @@ public final class WisdomFunctions {
      * Definition of AWS::Wisdom::Assistant Resource Type
      * 
      */
-    public static CompletableFuture<GetAssistantResult> getAssistant(io.pulumi.awsnative.wisdom.inputs.GetAssistantArgs args) {
-        return getAssistant(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssistantResult> getAssistant(GetAssistantArgs args) {
+        return getAssistant(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssistantResult> getAssistant(io.pulumi.awsnative.wisdom.inputs.GetAssistantArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssistantResult> getAssistant(GetAssistantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistant", TypeShape.of(GetAssistantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Wisdom::AssistantAssociation Resource Type
      * 
      */
-    public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(io.pulumi.awsnative.wisdom.inputs.GetAssistantAssociationArgs args) {
-        return getAssistantAssociation(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(GetAssistantAssociationArgs args) {
+        return getAssistantAssociation(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(io.pulumi.awsnative.wisdom.inputs.GetAssistantAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssistantAssociationResult> getAssistantAssociation(GetAssistantAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistantAssociation", TypeShape.of(GetAssistantAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Wisdom::KnowledgeBase Resource Type
      * 
      */
-    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(io.pulumi.awsnative.wisdom.inputs.GetKnowledgeBaseArgs args) {
-        return getKnowledgeBase(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args) {
+        return getKnowledgeBase(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(io.pulumi.awsnative.wisdom.inputs.GetKnowledgeBaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKnowledgeBaseResult> getKnowledgeBase(GetKnowledgeBaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getKnowledgeBase", TypeShape.of(GetKnowledgeBaseResult.class), args, Utilities.withVersion(options));
     }
 }

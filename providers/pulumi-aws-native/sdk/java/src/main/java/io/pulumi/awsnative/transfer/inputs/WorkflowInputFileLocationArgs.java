@@ -6,6 +6,7 @@ package io.pulumi.awsnative.transfer.inputs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3InputFileLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
     public Output<WorkflowS3InputFileLocationArgs> getS3FileLocation() {
-        return this.s3FileLocation == null ? Output.empty() : this.s3FileLocation;
+        return this.s3FileLocation == null ? Codegen.empty() : this.s3FileLocation;
     }
 
     public WorkflowInputFileLocationArgs(@Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation) {
@@ -30,7 +31,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     }
 
     private WorkflowInputFileLocationArgs() {
-        this.s3FileLocation = Output.empty();
+        this.s3FileLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder s3FileLocation(@Nullable WorkflowS3InputFileLocationArgs s3FileLocation) {
-            this.s3FileLocation = Output.ofNullable(s3FileLocation);
+            this.s3FileLocation = Codegen.ofNullable(s3FileLocation);
             return this;
         }        public WorkflowInputFileLocationArgs build() {
             return new WorkflowInputFileLocationArgs(s3FileLocation);

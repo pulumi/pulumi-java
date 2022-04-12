@@ -22,10 +22,10 @@ public final class ProjectsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.gcp.projects.inputs.GetOrganizationPolicyArgs args) {
-        return getOrganizationPolicy(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
+        return getOrganizationPolicy(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(io.pulumi.gcp.projects.inputs.GetOrganizationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:projects/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -36,10 +36,10 @@ public final class ProjectsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.gcp.projects.inputs.GetProjectArgs args) {
-        return getProject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {
+        return getProject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectResult> getProject(io.pulumi.gcp.projects.inputs.GetProjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:projects/getProject:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
 }

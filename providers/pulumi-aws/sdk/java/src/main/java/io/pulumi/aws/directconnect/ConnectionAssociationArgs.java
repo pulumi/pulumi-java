@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionAssociationArgs() {
-        this.connectionId = Output.empty();
-        this.lagId = Output.empty();
+        this.connectionId = Codegen.empty();
+        this.lagId = Codegen.empty();
     }
 
     public static Builder builder() {

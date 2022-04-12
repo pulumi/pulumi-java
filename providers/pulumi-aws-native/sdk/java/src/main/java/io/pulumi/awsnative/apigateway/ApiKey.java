@@ -10,6 +10,7 @@ import io.pulumi.awsnative.apigateway.outputs.ApiKeyTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -172,7 +173,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiKey(String name, @Nullable ApiKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -22,10 +22,10 @@ public final class CurFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(io.pulumi.aws.cur.inputs.GetReportDefinitionArgs args) {
-        return getReportDefinition(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args) {
+        return getReportDefinition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(io.pulumi.aws.cur.inputs.GetReportDefinitionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReportDefinitionResult> getReportDefinition(GetReportDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cur/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

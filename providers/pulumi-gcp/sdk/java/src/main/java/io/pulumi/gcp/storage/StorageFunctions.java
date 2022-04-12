@@ -31,10 +31,10 @@ public final class StorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(io.pulumi.gcp.storage.inputs.GetBucketArgs args) {
-        return getBucket(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+        return getBucket(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketResult> getBucket(io.pulumi.gcp.storage.inputs.GetBucketArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,12 +47,12 @@ public final class StorageFunctions {
      * 
      */
     public static CompletableFuture<GetBucketObjectResult> getBucketObject() {
-        return getBucketObject(io.pulumi.gcp.storage.inputs.GetBucketObjectArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getBucketObject(GetBucketObjectArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(io.pulumi.gcp.storage.inputs.GetBucketObjectArgs args) {
-        return getBucketObject(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
+        return getBucketObject(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketObjectResult> getBucketObject(io.pulumi.gcp.storage.inputs.GetBucketObjectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -66,10 +66,10 @@ public final class StorageFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(io.pulumi.gcp.storage.inputs.GetBucketObjectContentArgs args) {
-        return getBucketObjectContent(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args) {
+        return getBucketObjectContent(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(io.pulumi.gcp.storage.inputs.GetBucketObjectContentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getBucketObjectContent:getBucketObjectContent", TypeShape.of(GetBucketObjectContentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -81,10 +81,10 @@ public final class StorageFunctions {
      * ## Full Example
      * 
      */
-    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(io.pulumi.gcp.storage.inputs.GetObjectSignedUrlArgs args) {
-        return getObjectSignedUrl(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args) {
+        return getObjectSignedUrl(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(io.pulumi.gcp.storage.inputs.GetObjectSignedUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getObjectSignedUrl:getObjectSignedUrl", TypeShape.of(GetObjectSignedUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -125,12 +125,12 @@ public final class StorageFunctions {
      * 
      */
     public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount() {
-        return getProjectServiceAccount(io.pulumi.gcp.storage.inputs.GetProjectServiceAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getProjectServiceAccount(GetProjectServiceAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(io.pulumi.gcp.storage.inputs.GetProjectServiceAccountArgs args) {
-        return getProjectServiceAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args) {
+        return getProjectServiceAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(io.pulumi.gcp.storage.inputs.GetProjectServiceAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount(GetProjectServiceAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,12 +140,12 @@ public final class StorageFunctions {
      * 
      */
     public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount() {
-        return getTransferProjectServieAccount(io.pulumi.gcp.storage.inputs.GetTransferProjectServieAccountArgs.Empty, io.pulumi.deployment.InvokeOptions.Empty);
+        return getTransferProjectServieAccount(GetTransferProjectServieAccountArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(io.pulumi.gcp.storage.inputs.GetTransferProjectServieAccountArgs args) {
-        return getTransferProjectServieAccount(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args) {
+        return getTransferProjectServieAccount(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(io.pulumi.gcp.storage.inputs.GetTransferProjectServieAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount(GetTransferProjectServieAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getTransferProjectServieAccount:getTransferProjectServieAccount", TypeShape.of(GetTransferProjectServieAccountResult.class), args, Utilities.withVersion(options));
     }
 }

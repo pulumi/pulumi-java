@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.MetadataItemArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> blobWriterAddHeader;
 
     public Output<Object> getBlobWriterAddHeader() {
-        return this.blobWriterAddHeader == null ? Output.empty() : this.blobWriterAddHeader;
+        return this.blobWriterAddHeader == null ? Codegen.empty() : this.blobWriterAddHeader;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> blobWriterDateTimeFormat;
 
     public Output<Object> getBlobWriterDateTimeFormat() {
-        return this.blobWriterDateTimeFormat == null ? Output.empty() : this.blobWriterDateTimeFormat;
+        return this.blobWriterDateTimeFormat == null ? Codegen.empty() : this.blobWriterDateTimeFormat;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> blobWriterOverwriteFiles;
 
     public Output<Object> getBlobWriterOverwriteFiles() {
-        return this.blobWriterOverwriteFiles == null ? Output.empty() : this.blobWriterOverwriteFiles;
+        return this.blobWriterOverwriteFiles == null ? Codegen.empty() : this.blobWriterOverwriteFiles;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> copyBehavior;
 
     public Output<Object> getCopyBehavior() {
-        return this.copyBehavior == null ? Output.empty() : this.copyBehavior;
+        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetadataItemArgs>> metadata;
 
     public Output<List<MetadataItemArgs>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryCount;
 
     public Output<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
+        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sinkRetryWait;
 
     public Output<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
+        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchSize;
 
     public Output<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
+        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> writeBatchTimeout;
 
     public Output<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
+        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
     public BlobSinkArgs(
@@ -182,18 +183,18 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobSinkArgs() {
-        this.blobWriterAddHeader = Output.empty();
-        this.blobWriterDateTimeFormat = Output.empty();
-        this.blobWriterOverwriteFiles = Output.empty();
-        this.copyBehavior = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.metadata = Output.empty();
-        this.sinkRetryCount = Output.empty();
-        this.sinkRetryWait = Output.empty();
-        this.type = Output.empty();
-        this.writeBatchSize = Output.empty();
-        this.writeBatchTimeout = Output.empty();
+        this.blobWriterAddHeader = Codegen.empty();
+        this.blobWriterDateTimeFormat = Codegen.empty();
+        this.blobWriterOverwriteFiles = Codegen.empty();
+        this.copyBehavior = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.sinkRetryCount = Codegen.empty();
+        this.sinkRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
+        this.writeBatchSize = Codegen.empty();
+        this.writeBatchTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
-            this.blobWriterAddHeader = Output.ofNullable(blobWriterAddHeader);
+            this.blobWriterAddHeader = Codegen.ofNullable(blobWriterAddHeader);
             return this;
         }
         public Builder blobWriterDateTimeFormat(@Nullable Output<Object> blobWriterDateTimeFormat) {
@@ -251,7 +252,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
-            this.blobWriterDateTimeFormat = Output.ofNullable(blobWriterDateTimeFormat);
+            this.blobWriterDateTimeFormat = Codegen.ofNullable(blobWriterDateTimeFormat);
             return this;
         }
         public Builder blobWriterOverwriteFiles(@Nullable Output<Object> blobWriterOverwriteFiles) {
@@ -259,7 +260,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
-            this.blobWriterOverwriteFiles = Output.ofNullable(blobWriterOverwriteFiles);
+            this.blobWriterOverwriteFiles = Codegen.ofNullable(blobWriterOverwriteFiles);
             return this;
         }
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
@@ -267,7 +268,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Output.ofNullable(copyBehavior);
+            this.copyBehavior = Codegen.ofNullable(copyBehavior);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -275,7 +276,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -283,7 +284,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
@@ -291,7 +292,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder metadata(MetadataItemArgs... metadata) {
@@ -302,7 +303,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
             return this;
         }
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
@@ -310,7 +311,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -326,7 +327,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Output.ofNullable(writeBatchSize);
+            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
@@ -334,7 +335,7 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
             return this;
         }        public BlobSinkArgs build() {
             return new BlobSinkArgs(blobWriterAddHeader, blobWriterDateTimeFormat, blobWriterOverwriteFiles, copyBehavior, disableMetricsCollection, maxConcurrentConnections, metadata, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch;
 import io.pulumi.azurenative.batch.enums.CertificateFormat;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CertificateFormat> format;
 
     public Output<CertificateFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thumbprintAlgorithm;
 
     public Output<String> getThumbprintAlgorithm() {
-        return this.thumbprintAlgorithm == null ? Output.empty() : this.thumbprintAlgorithm;
+        return this.thumbprintAlgorithm == null ? Codegen.empty() : this.thumbprintAlgorithm;
     }
 
     public CertificateArgs(
@@ -123,14 +124,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.accountName = Output.empty();
-        this.certificateName = Output.empty();
-        this.data = Output.empty();
-        this.format = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.thumbprint = Output.empty();
-        this.thumbprintAlgorithm = Output.empty();
+        this.accountName = Codegen.empty();
+        this.certificateName = Codegen.empty();
+        this.data = Codegen.empty();
+        this.format = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.thumbprint = Codegen.empty();
+        this.thumbprintAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder data(Output<String> data) {
@@ -196,7 +197,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable CertificateFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -204,7 +205,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -220,7 +221,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }
         public Builder thumbprintAlgorithm(@Nullable Output<String> thumbprintAlgorithm) {
@@ -228,7 +229,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
-            this.thumbprintAlgorithm = Output.ofNullable(thumbprintAlgorithm);
+            this.thumbprintAlgorithm = Codegen.ofNullable(thumbprintAlgorithm);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(accountName, certificateName, data, format, password, resourceGroupName, thumbprint, thumbprintAlgorithm);

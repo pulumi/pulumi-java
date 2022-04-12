@@ -10,6 +10,7 @@ import io.pulumi.azurenative.databox.inputs.FilterFileDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<AzureFileFilterDetailsArgs> azureFileFilterDetails;
 
     public Output<AzureFileFilterDetailsArgs> getAzureFileFilterDetails() {
-        return this.azureFileFilterDetails == null ? Output.empty() : this.azureFileFilterDetails;
+        return this.azureFileFilterDetails == null ? Codegen.empty() : this.azureFileFilterDetails;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<BlobFilterDetailsArgs> blobFilterDetails;
 
     public Output<BlobFilterDetailsArgs> getBlobFilterDetails() {
-        return this.blobFilterDetails == null ? Output.empty() : this.blobFilterDetails;
+        return this.blobFilterDetails == null ? Codegen.empty() : this.blobFilterDetails;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails;
 
     public Output<List<FilterFileDetailsArgs>> getFilterFileDetails() {
-        return this.filterFileDetails == null ? Output.empty() : this.filterFileDetails;
+        return this.filterFileDetails == null ? Codegen.empty() : this.filterFileDetails;
     }
 
     public TransferFilterDetailsArgs(
@@ -80,10 +81,10 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     private TransferFilterDetailsArgs() {
-        this.azureFileFilterDetails = Output.empty();
-        this.blobFilterDetails = Output.empty();
-        this.dataAccountType = Output.empty();
-        this.filterFileDetails = Output.empty();
+        this.azureFileFilterDetails = Codegen.empty();
+        this.blobFilterDetails = Codegen.empty();
+        this.dataAccountType = Codegen.empty();
+        this.filterFileDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsArgs azureFileFilterDetails) {
-            this.azureFileFilterDetails = Output.ofNullable(azureFileFilterDetails);
+            this.azureFileFilterDetails = Codegen.ofNullable(azureFileFilterDetails);
             return this;
         }
         public Builder blobFilterDetails(@Nullable Output<BlobFilterDetailsArgs> blobFilterDetails) {
@@ -125,7 +126,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder blobFilterDetails(@Nullable BlobFilterDetailsArgs blobFilterDetails) {
-            this.blobFilterDetails = Output.ofNullable(blobFilterDetails);
+            this.blobFilterDetails = Codegen.ofNullable(blobFilterDetails);
             return this;
         }
         public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
@@ -141,7 +142,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filterFileDetails(@Nullable List<FilterFileDetailsArgs> filterFileDetails) {
-            this.filterFileDetails = Output.ofNullable(filterFileDetails);
+            this.filterFileDetails = Codegen.ofNullable(filterFileDetails);
             return this;
         }
         public Builder filterFileDetails(FilterFileDetailsArgs... filterFileDetails) {

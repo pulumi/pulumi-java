@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public ImageOutputResourceAmiArgs(
@@ -83,11 +84,11 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     }
 
     private ImageOutputResourceAmiArgs() {
-        this.accountId = Output.empty();
-        this.description = Output.empty();
-        this.image = Output.empty();
-        this.name = Output.empty();
-        this.region = Output.empty();
+        this.accountId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.image = Codegen.empty();
+        this.name = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -131,7 +132,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder image(@Nullable Output<String> image) {
@@ -139,7 +140,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -155,7 +156,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public ImageOutputResourceAmiArgs build() {
             return new ImageOutputResourceAmiArgs(accountId, description, image, name, region);

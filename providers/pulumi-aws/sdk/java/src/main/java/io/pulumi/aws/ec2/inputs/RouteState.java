@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> carrierGatewayId;
 
     public Output<String> getCarrierGatewayId() {
-        return this.carrierGatewayId == null ? Output.empty() : this.carrierGatewayId;
+        return this.carrierGatewayId == null ? Codegen.empty() : this.carrierGatewayId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destinationIpv6CidrBlock;
 
     public Output<String> getDestinationIpv6CidrBlock() {
-        return this.destinationIpv6CidrBlock == null ? Output.empty() : this.destinationIpv6CidrBlock;
+        return this.destinationIpv6CidrBlock == null ? Codegen.empty() : this.destinationIpv6CidrBlock;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destinationPrefixListId;
 
     public Output<String> getDestinationPrefixListId() {
-        return this.destinationPrefixListId == null ? Output.empty() : this.destinationPrefixListId;
+        return this.destinationPrefixListId == null ? Codegen.empty() : this.destinationPrefixListId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> egressOnlyGatewayId;
 
     public Output<String> getEgressOnlyGatewayId() {
-        return this.egressOnlyGatewayId == null ? Output.empty() : this.egressOnlyGatewayId;
+        return this.egressOnlyGatewayId == null ? Codegen.empty() : this.egressOnlyGatewayId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
-        return this.gatewayId == null ? Output.empty() : this.gatewayId;
+        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceOwnerId;
 
     public Output<String> getInstanceOwnerId() {
-        return this.instanceOwnerId == null ? Output.empty() : this.instanceOwnerId;
+        return this.instanceOwnerId == null ? Codegen.empty() : this.instanceOwnerId;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> localGatewayId;
 
     public Output<String> getLocalGatewayId() {
-        return this.localGatewayId == null ? Output.empty() : this.localGatewayId;
+        return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> natGatewayId;
 
     public Output<String> getNatGatewayId() {
-        return this.natGatewayId == null ? Output.empty() : this.natGatewayId;
+        return this.natGatewayId == null ? Codegen.empty() : this.natGatewayId;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> routeTableId;
 
     public Output<String> getRouteTableId() {
-        return this.routeTableId == null ? Output.empty() : this.routeTableId;
+        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
+        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     /**
@@ -187,7 +188,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -198,7 +199,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
     public Output<String> getVpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Output.empty() : this.vpcPeeringConnectionId;
+        return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
     }
 
     public RouteState(
@@ -239,23 +240,23 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.carrierGatewayId = Output.empty();
-        this.destinationCidrBlock = Output.empty();
-        this.destinationIpv6CidrBlock = Output.empty();
-        this.destinationPrefixListId = Output.empty();
-        this.egressOnlyGatewayId = Output.empty();
-        this.gatewayId = Output.empty();
-        this.instanceId = Output.empty();
-        this.instanceOwnerId = Output.empty();
-        this.localGatewayId = Output.empty();
-        this.natGatewayId = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.origin = Output.empty();
-        this.routeTableId = Output.empty();
-        this.state = Output.empty();
-        this.transitGatewayId = Output.empty();
-        this.vpcEndpointId = Output.empty();
-        this.vpcPeeringConnectionId = Output.empty();
+        this.carrierGatewayId = Codegen.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.destinationIpv6CidrBlock = Codegen.empty();
+        this.destinationPrefixListId = Codegen.empty();
+        this.egressOnlyGatewayId = Codegen.empty();
+        this.gatewayId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.instanceOwnerId = Codegen.empty();
+        this.localGatewayId = Codegen.empty();
+        this.natGatewayId = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.routeTableId = Codegen.empty();
+        this.state = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
+        this.vpcPeeringConnectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -315,7 +316,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
-            this.carrierGatewayId = Output.ofNullable(carrierGatewayId);
+            this.carrierGatewayId = Codegen.ofNullable(carrierGatewayId);
             return this;
         }
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
@@ -323,7 +324,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder destinationIpv6CidrBlock(@Nullable Output<String> destinationIpv6CidrBlock) {
@@ -331,7 +332,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
-            this.destinationIpv6CidrBlock = Output.ofNullable(destinationIpv6CidrBlock);
+            this.destinationIpv6CidrBlock = Codegen.ofNullable(destinationIpv6CidrBlock);
             return this;
         }
         public Builder destinationPrefixListId(@Nullable Output<String> destinationPrefixListId) {
@@ -339,7 +340,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
-            this.destinationPrefixListId = Output.ofNullable(destinationPrefixListId);
+            this.destinationPrefixListId = Codegen.ofNullable(destinationPrefixListId);
             return this;
         }
         public Builder egressOnlyGatewayId(@Nullable Output<String> egressOnlyGatewayId) {
@@ -347,7 +348,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
-            this.egressOnlyGatewayId = Output.ofNullable(egressOnlyGatewayId);
+            this.egressOnlyGatewayId = Codegen.ofNullable(egressOnlyGatewayId);
             return this;
         }
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
@@ -355,7 +356,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Output.ofNullable(gatewayId);
+            this.gatewayId = Codegen.ofNullable(gatewayId);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -363,7 +364,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder instanceOwnerId(@Nullable Output<String> instanceOwnerId) {
@@ -371,7 +372,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceOwnerId(@Nullable String instanceOwnerId) {
-            this.instanceOwnerId = Output.ofNullable(instanceOwnerId);
+            this.instanceOwnerId = Codegen.ofNullable(instanceOwnerId);
             return this;
         }
         public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
@@ -379,7 +380,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = Output.ofNullable(localGatewayId);
+            this.localGatewayId = Codegen.ofNullable(localGatewayId);
             return this;
         }
         public Builder natGatewayId(@Nullable Output<String> natGatewayId) {
@@ -387,7 +388,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder natGatewayId(@Nullable String natGatewayId) {
-            this.natGatewayId = Output.ofNullable(natGatewayId);
+            this.natGatewayId = Codegen.ofNullable(natGatewayId);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -395,7 +396,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder origin(@Nullable Output<String> origin) {
@@ -403,7 +404,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder origin(@Nullable String origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
@@ -411,7 +412,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Output.ofNullable(routeTableId);
+            this.routeTableId = Codegen.ofNullable(routeTableId);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -419,7 +420,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
@@ -427,7 +428,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Output.ofNullable(transitGatewayId);
+            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
             return this;
         }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
@@ -435,7 +436,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
@@ -443,7 +444,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Output.ofNullable(vpcPeeringConnectionId);
+            this.vpcPeeringConnectionId = Codegen.ofNullable(vpcPeeringConnectionId);
             return this;
         }        public RouteState build() {
             return new RouteState(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, instanceOwnerId, localGatewayId, natGatewayId, networkInterfaceId, origin, routeTableId, state, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);

@@ -17,10 +17,10 @@ public final class HealthbotFunctions {
      * API Version: 2020-12-08.
      * 
      */
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.azurenative.healthbot.inputs.GetBotArgs args) {
-        return getBot(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args) {
+        return getBot(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetBotResult> getBot(io.pulumi.azurenative.healthbot.inputs.GetBotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotResult> getBot(GetBotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthbot:getBot", TypeShape.of(GetBotResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -20,10 +20,10 @@ public final class MskconnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(io.pulumi.aws.mskconnect.inputs.GetCustomPluginArgs args) {
-        return getCustomPlugin(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(GetCustomPluginArgs args) {
+        return getCustomPlugin(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(io.pulumi.aws.mskconnect.inputs.GetCustomPluginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(GetCustomPluginArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getCustomPlugin:getCustomPlugin", TypeShape.of(GetCustomPluginResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -32,10 +32,10 @@ public final class MskconnectFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(io.pulumi.aws.mskconnect.inputs.GetWorkerConfigurationArgs args) {
-        return getWorkerConfiguration(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(GetWorkerConfigurationArgs args) {
+        return getWorkerConfiguration(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(io.pulumi.aws.mskconnect.inputs.GetWorkerConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(GetWorkerConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getWorkerConfiguration:getWorkerConfiguration", TypeShape.of(GetWorkerConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

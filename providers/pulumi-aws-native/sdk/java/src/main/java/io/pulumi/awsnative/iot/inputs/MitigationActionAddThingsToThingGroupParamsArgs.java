@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
       private final @Nullable Output<Boolean> overrideDynamicGroups;
 
     public Output<Boolean> getOverrideDynamicGroups() {
-        return this.overrideDynamicGroups == null ? Output.empty() : this.overrideDynamicGroups;
+        return this.overrideDynamicGroups == null ? Codegen.empty() : this.overrideDynamicGroups;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
     }
 
     private MitigationActionAddThingsToThingGroupParamsArgs() {
-        this.overrideDynamicGroups = Output.empty();
-        this.thingGroupNames = Output.empty();
+        this.overrideDynamicGroups = Codegen.empty();
+        this.thingGroupNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
             return this;
         }
         public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
-            this.overrideDynamicGroups = Output.ofNullable(overrideDynamicGroups);
+            this.overrideDynamicGroups = Codegen.ofNullable(overrideDynamicGroups);
             return this;
         }
         public Builder thingGroupNames(Output<List<String>> thingGroupNames) {

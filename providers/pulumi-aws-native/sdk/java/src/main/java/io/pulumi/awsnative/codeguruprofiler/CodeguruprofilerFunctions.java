@@ -16,10 +16,10 @@ public final class CodeguruprofilerFunctions {
      * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
      * 
      */
-    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(io.pulumi.awsnative.codeguruprofiler.inputs.GetProfilingGroupArgs args) {
-        return getProfilingGroup(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args) {
+        return getProfilingGroup(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(io.pulumi.awsnative.codeguruprofiler.inputs.GetProfilingGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeguruprofiler:getProfilingGroup", TypeShape.of(GetProfilingGroupResult.class), args, Utilities.withVersion(options));
     }
 }

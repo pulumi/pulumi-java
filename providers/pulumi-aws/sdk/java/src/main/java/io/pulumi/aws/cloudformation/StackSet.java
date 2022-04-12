@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudformation.outputs.StackSetAutoDeployment;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -254,7 +255,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StackSet(String name, @Nullable StackSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StackSet(String name, Output<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

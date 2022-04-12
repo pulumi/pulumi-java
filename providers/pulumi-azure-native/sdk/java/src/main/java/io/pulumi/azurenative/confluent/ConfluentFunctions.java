@@ -17,10 +17,10 @@ public final class ConfluentFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.azurenative.confluent.inputs.GetOrganizationArgs args) {
-        return getOrganization(args, io.pulumi.deployment.InvokeOptions.Empty);
+    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args) {
+        return getOrganization(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetOrganizationResult> getOrganization(io.pulumi.azurenative.confluent.inputs.GetOrganizationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOrganizationResult> getOrganization(GetOrganizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args, Utilities.withVersion(options));
     }
 }
