@@ -351,9 +351,9 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.17.x
-      - run: install_sdk
-      - run: provider.aws.install
-      - run: provider.azure-native.install
-      - run: provider.gcp.install
-      - run: provider.kubernetes.install
+      - run: make install_sdk
+      - run: make provider.aws.install
+      - run: make provider.azure-native.install
+      - run: make provider.gcp.install
+      - run: make provider.kubernetes.install
       - run: make test_templates
