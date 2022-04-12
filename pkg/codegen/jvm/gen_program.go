@@ -5,6 +5,7 @@ package jvm
 import (
 	"bytes"
 	"fmt"
+	"github.com/zclconf/go-cty/cty"
 	"io"
 	"strings"
 
@@ -409,6 +410,21 @@ func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *sch
 	return false, nil
 }
 
+func getTraversalKey(traversal hcl.Traversal) string {
+	for _, part := range traversal {
+		switch part := part.(type) {
+		case hcl.TraverseAttr:
+			return cty.StringVal(part.Name).AsString()
+		case hcl.TraverseIndex:
+			return part.Key.AsString()
+		default:
+			contract.Failf("unexpected traversal part of type %T (%v)", part, part.SourceRange())
+		}
+	}
+
+	return ""
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
@@ -467,12 +483,53 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 				funcCall := rangeExpr.(*model.FunctionCallExpression)
 				switch funcCall.Name {
 				case pcl.IntrinsicConvert:
+					firstArg := funcCall.Args[0]
+					switch firstArg.(type) {
+					case *model.ScopeTraversalExpression:
+						traversalExpr := firstArg.(*model.ScopeTraversalExpression)
+						if len(traversalExpr.Parts) == 2 {
+							// Meaning here we have {root}.{part} expression which the most common
+							// check whether {root} is actually a variable name that holds the result
+							// of a function invoke
+							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
+								resultTypeName := toLowerCase(typeName(functionSchema.Outputs))
+								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
+								g.makeIndent(w)
+								g.Fgenf(w, "final var %s = ", resource.Name())
+								g.Fgenf(w, "Output.of(%s.thenApply(%s -> {\n", traversalExpr.RootName, resultTypeName)
+								g.Indented(func() {
+									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
+									g.Fgenf(w, "%sfor (var range : Range.of(%s.get%s())\n", g.Indent, resultTypeName, toUpperCase(part))
+									g.Fgenf(w, "%s{\n", g.Indent)
+									g.Indented(func() {
+										suffix := "range.getKey()"
+										g.Fgenf(w, "%svar resource = ", g.Indent)
+										instantiate(makeResourceName(resource.Name(), suffix))
+										g.Fgenf(w, ";\n\n")
+										g.Fgenf(w, "%sresources.add(resource);\n", g.Indent)
+									})
+									g.Fgenf(w, "%s}\n\n", g.Indent)
+									g.Fgenf(w, "%sreturn resources;\n", g.Indent)
+								})
+								g.Fgenf(w, "%s}))\n\n", g.Indent)
+								return
+							} else {
+								// not an async function invoke
+								// wrap into range collection
+								g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+							}
+						} else {
+							// wrap into range collection
+							g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+						}
+					}
 					// wrap into range collection
 					g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
 				default:
 					// assume function call returns a Range<T>
 					g.Fgenf(w, "%sfor (var range : %.12o)\n", g.Indent, rangeExpr)
 				}
+
 			default:
 				// wrap into range collection
 				g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
