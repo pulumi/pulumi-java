@@ -68,6 +68,14 @@ integration_tests::	bin/pulumi-language-jvm
 test_example.%:	bin/pulumi-language-jvm
 	cd tests/examples && PATH="${PATH}:${PWD}/bin" go test -run "TestExamples/^$*" -test.v
 
+# Test a single template, e.g.:
+#     make test_template.java-gradle
+test_template.%: bin/pulumi-language-jvm
+	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -run "TestTemplates/^$*$$" -test.v
+
+test_templates: bin/pulumi-language-jvm
+	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -test.v
+
 test_example.random: install_sdk provider.random.install
 test_example.minimal: install_sdk
 
