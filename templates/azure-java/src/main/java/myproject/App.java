@@ -13,11 +13,9 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.InvokeOptions;
 
-import java.util.Map;
-
 public class App {
     public static void main(String[] args) {
-        int exitCode = Pulumi.run(() -> {
+        int exitCode = Pulumi.run(ctx -> {
             var resourceGroup = new ResourceGroup("resourceGroup");
             var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
                     .resourceGroupName(resourceGroup.getName())
@@ -31,7 +29,8 @@ public class App {
                     resourceGroup.getName(),
                     storageAccount.getName());
 
-            return Map.of("primaryStorageKey", primaryStorageKey);
+            ctx.export("primaryStorageKey", primaryStorageKey);
+            return ctx.exports();
         });
         System.exit(exitCode);
     }
