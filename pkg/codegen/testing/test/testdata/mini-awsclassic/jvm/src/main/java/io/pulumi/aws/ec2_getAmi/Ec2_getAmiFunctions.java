@@ -10,11 +10,12 @@ import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
-import javax.annotation.Nullable;
 
-public class GetAmi {
-    private GetAmi() {}
-    public static CompletableFuture<GetAmiResult> invokeAsync(GetAmiArgs args, @Nullable InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args == null ? GetAmiArgs.Empty : args, Utilities.withVersion(options));
+public final class Ec2_getAmiFunctions {
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args) {
+        return getAmi(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetAmiResult> getAmi(GetAmiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2/getAmi:getAmi", TypeShape.of(GetAmiResult.class), args, Utilities.withVersion(options));
     }
 }

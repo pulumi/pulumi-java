@@ -10,11 +10,12 @@ import io.pulumi.example.Utilities;
 import io.pulumi.example.inputs.DoFooArgs;
 import java.lang.Void;
 import java.util.concurrent.CompletableFuture;
-import javax.annotation.Nullable;
 
-public class DoFoo {
-    private DoFoo() {}
-    public static CompletableFuture<Void> invokeAsync(DoFooArgs args, @Nullable InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args == null ? DoFooArgs.Empty : args, Utilities.withVersion(options));
+public final class ExampleFunctions {
+    public static CompletableFuture<Void> doFoo(DoFooArgs args) {
+        return doFoo(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<Void> doFoo(DoFooArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("example::doFoo", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
 }
