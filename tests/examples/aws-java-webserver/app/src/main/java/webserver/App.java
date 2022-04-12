@@ -1,7 +1,7 @@
 package webserver;
 
 import io.pulumi.Pulumi;
-import io.pulumi.aws.ec2.GetAmi;
+import io.pulumi.aws.ec2.Ec2Functions;
 import io.pulumi.aws.ec2.Instance;
 import io.pulumi.aws.ec2.InstanceArgs;
 import io.pulumi.aws.ec2.SecurityGroup;
@@ -23,11 +23,11 @@ public class App {
     }
 
     public static io.pulumi.context.ExportContext stack(StackContext ctx) {
-        final var ami = GetAmi.invokeAsync(GetAmiArgs.builder()
-                        .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
-                        .owners("137112412989")
-                        .mostRecent(true).build(),
-                null
+        final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
+                .owners("137112412989")
+                .mostRecent(true)
+                .build()
         ).thenApply(GetAmiResult::getId);
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()

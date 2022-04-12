@@ -156,3 +156,13 @@ func Title(s string) string {
 	runes := []rune(s)
 	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
 }
+
+// LowerCamelCase sets the first character to lowercase
+// LowerCamelCase("LowerCamelCase") -> "lowerCamelCase"
+func LowerCamelCase(s string) string {
+	if s == "" {
+		return ""
+	}
+	runes := []rune(s)
+	return string(append([]rune{unicode.ToLower(runes[0])}, runes[1:]...))
+}
