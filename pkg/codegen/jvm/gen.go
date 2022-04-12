@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"path"
 	"reflect"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -1794,6 +1795,22 @@ func hasAllOptionalInputs(fun *schema.Function) bool {
 	return true
 }
 
+func sortedFunctions(m []*schema.Function) []*schema.Function {
+	idxMap := make(map[string]int, len(m))
+	keyList := make([]string, len(m))
+	for i, fun := range m {
+		idxMap[fun.Token] = i
+		keyList[i] = fun.Token
+	}
+	sort.Strings(keyList)
+
+	sortedList := make([]*schema.Function, len(m))
+	for k := range keyList {
+		sortedList[k] = m[idxMap[keyList[k]]]
+	}
+	return sortedList
+}
+
 func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMethod) error {
 	javaPkg, err := parsePackageName(mod.packageName)
 	if err != nil {
@@ -1807,7 +1824,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		return err
 	}
 	fprintf(w, "public final class %s {\n", className)
-	for _, fun := range mod.functions {
+	for _, fun := range sortedFunctions(mod.functions) {
 
 		const indent = "    "
 
@@ -1826,13 +1843,13 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
-
 		argsFQN := inputsPkg.Dot(argsClass)
+
+		var argsType string
 		if fun.Inputs == nil {
-			ctx.imports.Ref(names.InvokeArgs)
-			argsFQN = names.InvokeArgs
+			argsType = ctx.ref(names.InvokeArgs)
 		} else {
-			ctx.imports.Ref(argsFQN)
+			argsType = ctx.ref(argsFQN)
 		}
 
 		var returnType string
@@ -1845,31 +1862,30 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		methodName := names.LowerCamelCase(tokenToFunctionName(fun.Token))
 
 		// Emit datasource inputs method
-		ctx.imports.Ref(names.InvokeOptions)
-		invokeOptions := names.InvokeOptions
+		invokeOptions := ctx.ref(names.InvokeOptions)
 
 		printCommentFunction(ctx, fun, indent)
 		if hasAllOptionalInputs(fun) {
-			// Add no args constructor
+			// Add no args invoke
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.CompletableFuture), returnType, methodName)
 			fprintf(w,
-				"        return %s(%s, %s);\n",
-				methodName, argsFQN.Dot("Empty"), invokeOptions.Dot("Empty"))
+				"        return %s(%s.Empty, %s.Empty);\n",
+				methodName, argsType, invokeOptions)
 			fprintf(w, "    }\n")
 
 		}
-		// Add args constructor
+		// Add args only invoke
 		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsFQN)
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsType)
 		fprintf(w,
-			"        return %s(args, %s);\n",
-			methodName, invokeOptions.Dot("Empty"))
+			"        return %s(args, %s.Empty);\n",
+			methodName, invokeOptions)
 		fprintf(w, "    }\n")
 
-		// Add full constructor
+		// Add full invoke
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsFQN, ctx.ref(names.InvokeOptions))
+			ctx.ref(names.CompletableFuture), returnType, methodName, argsType, invokeOptions)
 		fprintf(w,
 			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
