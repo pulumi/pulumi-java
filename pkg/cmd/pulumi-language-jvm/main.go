@@ -14,7 +14,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-	"syscall"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
@@ -255,29 +254,12 @@ func (host *jvmLanguageHost) RunJvmCommand(
 		return "", err
 	}
 
-	if err := cmd.Run(); err != nil {
+	if err := runCommand(cmd); err != nil {
 		// The command failed. Dump any data we collected to the actual stdout/stderr streams,
 		// so they get displayed to the user.
 		os.Stdout.Write(infoBuffer.Bytes())
 		os.Stderr.Write(errorBuffer.Bytes())
-
-		if exiterr, ok := err.(*exec.ExitError); ok {
-			// If the program ran, but exited with a non-zero error code.
-			// This will happen often, since user errors will trigger this.
-			// So, the error message should look as nice as possible.
-			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
-				return "", errors.Errorf(
-					"'%v %v' exited with non-zero exit code: %d", name, commandStr, status.ExitStatus())
-			}
-
-			return "", errors.Wrapf(exiterr, "'%v %v' exited unexpectedly", name, commandStr)
-		}
-
-		// Otherwise, we didn't even get to run the program.
-		// This ought to never happen unless there's a bug
-		// or system condition that prevented us from running the language exec.
-		// Issue a scarier error.
-		return "", errors.Wrapf(err, "Problem executing '%v %v'", name, commandStr)
+		return "", err
 	}
 
 	_, err = infoWriter.LogToUser(fmt.Sprintf("'%v %v' completed successfully", name, commandStr))
@@ -350,21 +332,7 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Env = host.constructEnv(req, config, configSecretKeys)
-	if err := cmd.Run(); err != nil {
-		if exiterr, ok := err.(*exec.ExitError); ok {
-			// If the program ran, but exited with a non-zero error code.  This will happen often, since user
-			// errors will trigger this.  So, the error message should look as nice as possible.
-			if status, stok := exiterr.Sys().(syscall.WaitStatus); stok {
-				err = errors.Errorf("Program exited with non-zero exit code: %d", status.ExitStatus())
-			} else {
-				err = errors.Wrapf(exiterr, "Program exited unexpectedly")
-			}
-		} else {
-			// Otherwise, we didn't even get to run the program.  This ought to never happen unless there's
-			// a bug or system condition that prevented us from running the language exec.  Issue a scarier error.
-			err = errors.Wrapf(err, "Problem executing program (could not run language executor)")
-		}
-
+	if err := runCommand(cmd); err != nil {
 		errResult = err.Error()
 	}
 
@@ -433,6 +401,11 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 	return &pulumirpc.PluginInfo{
 		Version: version.Version,
 	}, nil
+}
+
+func (host *jvmLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
+	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
+	return nil
 }
 
 func probeExecutor() (string, error) {
