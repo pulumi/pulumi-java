@@ -7,7 +7,7 @@ import io.pulumi.core.Output;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.container.Cluster;
 import io.pulumi.gcp.container.ClusterArgs;
-import io.pulumi.gcp.container.GetEngineVersions;
+import io.pulumi.gcp.container.ContainerFunctions;
 import io.pulumi.gcp.container.NodePool;
 import io.pulumi.gcp.container.NodePoolArgs;
 import io.pulumi.gcp.container.inputs.GetEngineVersionsArgs;
@@ -48,10 +48,8 @@ public class App {
 
         final var config = io.pulumi.Config.of();
         final var masterVersion = config.get("masterVersion").orElse(
-                GetEngineVersions.invokeAsync(
-                        GetEngineVersionsArgs.Empty,
-                        InvokeOptions.Empty
-                ).thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
+                ContainerFunctions.getEngineVersions()
+                .thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
         );
 
         ctx.export("masterVersion", Output.of(masterVersion));

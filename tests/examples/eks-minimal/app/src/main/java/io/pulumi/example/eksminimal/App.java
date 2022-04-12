@@ -1,15 +1,13 @@
 package io.pulumi.example.eksminimal;
 
 import io.pulumi.Pulumi;
-import io.pulumi.aws.ec2.GetSubnetIds;
-import io.pulumi.aws.ec2.GetVpc;
+import io.pulumi.aws.ec2.Ec2Functions;
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
 import io.pulumi.aws.ec2.inputs.GetVpcArgs;
 import io.pulumi.aws.ec2.outputs.GetVpcResult;
 import io.pulumi.context.ExportContext;
 import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.eks.Cluster;
 import io.pulumi.eks.ClusterArgs;
 
@@ -23,18 +21,16 @@ public class App {
 
     private static ExportContext stack(StackContext ctx) {
         var vpcIdOutput = Output.of(
-                GetVpc.invokeAsync(
-                        GetVpcArgs.builder().default_(true).build(),
-                        InvokeOptions.Empty
+                Ec2Functions.getVpc(
+                        GetVpcArgs.builder().default_(true).build()
                 ).thenApply(GetVpcResult::getId)
         );
         ctx.export("vpcIdOutput", vpcIdOutput);
 
         var subnetIdsOutput = vpcIdOutput
-                .apply(vpcId -> Output.of(GetSubnetIds.invokeAsync(GetSubnetIdsArgs.builder()
+                .apply(vpcId -> Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
                                 .vpcId(vpcId)
-                                .build(),
-                        InvokeOptions.Empty)))
+                                .build())))
                 .applyValue(getSubnetIdsResult ->
                         getSubnetIdsResult.getIds()
                                 .stream()

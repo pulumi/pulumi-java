@@ -15,7 +15,7 @@ import io.pulumi.azurenative.storage.Blob;
 import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.BlobContainer;
 import io.pulumi.azurenative.storage.BlobContainerArgs;
-import io.pulumi.azurenative.storage.ListStorageAccountServiceSAS;
+import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.StorageAccount;
 import io.pulumi.azurenative.storage.StorageAccountArgs;
 import io.pulumi.azurenative.storage.enums.HttpProtocol;
@@ -143,7 +143,7 @@ public class App {
     private static Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
                                               Output<String> blobName, Output<String> resourceGroupName) {
         var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).apply(t -> Output.of(
-                ListStorageAccountServiceSAS.invokeAsync(
+                StorageFunctions.listStorageAccountServiceSAS(
                         ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
                                 .accountName(t.t2)
                                 .protocols(HttpProtocol.Https)
@@ -156,8 +156,7 @@ public class App {
                                 .cacheControl("max-age=5")
                                 .contentDisposition("inline")
                                 .contentEncoding("deflate")
-                                .build(),
-                        InvokeOptions.Empty)));
+                                .build())));
         var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
         return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
     }
