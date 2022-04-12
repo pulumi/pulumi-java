@@ -7,15 +7,17 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
-import io.pulumi.core.internal.*;
+import io.pulumi.core.internal.CompletableFutures;
+import io.pulumi.core.internal.Copyable;
+import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputData;
+import io.pulumi.core.internal.OutputInternal;
 
 import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -241,8 +243,8 @@ public interface Output<T> extends Copyable<Output<T>> {
     // Convenience methods for JSON
 
     /**
-     * @see #ofJson(JsonElement)
      * @return a {@link JsonNull#INSTANCE}
+     * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> ofJson() {
         return ofJson(JsonNull.INSTANCE);
@@ -250,6 +252,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Represents an {@link Output} value that wraps a {@link JsonElement}
+     *
      * @param json the {@link JsonElement} to wrap
      * @return given {@link JsonElement} wrapped in an {@link Output}
      */
@@ -258,10 +261,10 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see #ofJson(JsonElement)
      * @param json the json value to wrap
      * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
      * @throws com.google.gson.JsonSyntaxException – if json is not valid
+     * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> parseJson(String json) {
         var gson = new Gson();
@@ -269,10 +272,10 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see #ofJson(JsonElement)
      * @param json the json value wrapped in an {@link Output<String>}
      * @return given json value as a {@link JsonElement} wrapped in an {@link Output}
      * @throws com.google.gson.JsonSyntaxException – if json is not valid
+     * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> parseJson(Output<String> json) {
         var gson = new Gson();
@@ -303,126 +306,126 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
+     * @return an {@link Output} with an empty {@link List}
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} with an empty {@link List}
      */
     static <E> Output<List<E>> ofList() {
         return Output.of(ImmutableList.of());
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with one element.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with one element.
      */
     static <E> Output<List<E>> ofList(E e1) {
         return Output.of(ImmutableList.of(e1));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with two elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with two elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2) {
         return Output.of(ImmutableList.of(e1, e2));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with three elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with three elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3) {
         return Output.of(ImmutableList.of(e1, e2, e3));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with four elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with four elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with five elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with five elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with six elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with six elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with seven elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with seven elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with eight elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with eight elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with nine elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with nine elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with ten elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with ten elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with eleven elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with eleven elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with twelve elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with twelve elements.
      */
     static <E> Output<List<E>> ofList(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12) {
         return Output.of(ImmutableList.of(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12));
     }
 
     /**
+     * @return an {@link Output} value that wraps a {@link List} with more than twelve elements.
      * @see #ofList(Object)
      * @see #listBuilder()
-     * @return an {@link Output} value that wraps a {@link List} with more than twelve elements.
      */
     @SafeVarargs
     static <E> Output<List<E>> ofList(
@@ -432,8 +435,9 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Helps to build an {@link Output} that wraps a {@link List}.
-     * @see #ofList(Object)
+     *
      * @return an {@link Output.ListBuilder<E>} instance
+     * @see #ofList(Object)
      */
     static <E> Output.ListBuilder<E> listBuilder() {
         return new Output.ListBuilder<>();
@@ -536,26 +540,26 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
+     * @return an {@link Output} with an empty {@link Map}
      * @see #ofMap(String, Object)
      * @see #mapBuilder()
-     * @return an {@link Output} with an empty {@link Map}
      */
     static <V> Output<Map<String, V>> ofMap() {
         return Output.of(ImmutableMap.of());
     }
 
     /**
-     * @see #mapBuilder()
      * @return an {@link Output} that wraps a {@link Map} with one pair.
+     * @see #mapBuilder()
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1) {
         return Output.of(ImmutableMap.of(key1, value1));
     }
 
     /**
+     * @return an {@link Output} that wraps a {@link Map} with two pairs.
      * @see #ofMap(String, Object)
      * @see #mapBuilder()
-     * @return an {@link Output} that wraps a {@link Map} with two pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2) {
@@ -563,9 +567,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
+     * @return an {@link Output} that wraps a {@link Map} with three pairs.
      * @see #ofMap(String, Object)
      * @see #mapBuilder()
-     * @return an {@link Output} that wraps a {@link Map} with three pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -574,9 +578,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
+     * @return an {@link Output} that wraps a {@link Map} with four pairs.
      * @see #ofMap(String, Object)
      * @see #mapBuilder()
-     * @return an {@link Output} that wraps a {@link Map} with four pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -588,9 +592,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
+     * @return an {@link Output} that wraps a {@link Map} with five pairs.
      * @see #ofMap(String, Object)
      * @see #mapBuilder()
-     * @return an {@link Output} that wraps a {@link Map} with five pairs.
      */
     static <V> Output<Map<String, V>> ofMap(String key1, V value1,
                                             String key2, V value2,
@@ -604,6 +608,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Helps to build a {@link Map} wrapped in an {@link Output}.
+     *
      * @see #ofMap(String, Object)
      */
     static <E> Output.MapBuilder<E> mapBuilder() {
