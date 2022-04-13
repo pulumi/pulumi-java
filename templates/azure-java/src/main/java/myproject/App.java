@@ -2,9 +2,9 @@ package myproject;
 
 import io.pulumi.Pulumi;
 import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.storage.ListStorageAccountKeys;
 import io.pulumi.azurenative.storage.StorageAccount;
 import io.pulumi.azurenative.storage.StorageAccountArgs;
+import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.enums.Kind;
 import io.pulumi.azurenative.storage.enums.SkuName;
 import io.pulumi.azurenative.storage.inputs.ListStorageAccountKeysArgs;
@@ -40,7 +40,7 @@ public class App {
         return Output.tuple(resourceGroupName, accountName).apply(tuple -> {
             var actualResourceGroupName = tuple.t1;
             var actualAccountName = tuple.t2;
-            var invokeResult = ListStorageAccountKeys.invokeAsync(ListStorageAccountKeysArgs.builder()
+            var invokeResult = StorageFunctions.listStorageAccountKeys(ListStorageAccountKeysArgs.builder()
                     .resourceGroupName(actualResourceGroupName)
                     .accountName(actualAccountName)
                     .build(), InvokeOptions.Empty);
