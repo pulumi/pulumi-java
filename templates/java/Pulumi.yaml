@@ -1,0 +1,6 @@
+name: ${PROJECT}
+description: ${DESCRIPTION}
+runtime:
+  name: jvm
+template:
+  description: "A minimal Java Pulumi program with Maven builds"

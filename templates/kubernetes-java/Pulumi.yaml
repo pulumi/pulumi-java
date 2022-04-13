@@ -1,0 +1,6 @@
+name: ${PROJECT}
+description: ${DESCRIPTION}
+runtime:
+  name: jvm
+template:
+  description: A minimal Kubernetes Java Pulumi program
