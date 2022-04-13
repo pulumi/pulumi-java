@@ -76,9 +76,6 @@ test_template.%: bin/pulumi-language-jvm
 test_templates: bin/pulumi-language-jvm
 	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -test.v
 
-test_example.random: install_sdk provider.random.install
-test_example.minimal: install_sdk
-
 codegen_tests::
 	cd ./pkg/codegen/jvm && go test ./...
 
@@ -101,8 +98,12 @@ tidy::
 # build them into the local Maven repo.
 test_example.aws-java-webserver: provider.aws.generate
 test_example.azure-java-static-website: provider.azure-native.generate
-test_example.random: provider.random.generate
 test_example.azure-java-appservice-sql: provider.azure-native.generate
 test_example.eks-minimal: provider.eks.generate provider.aws.generate provider.kubernetes.generate
 test_example.gcp-java-gke-hello-world: provider.gcp.generate provider.kubernetes.generate
 test_example.aws-native-java-s3-folder: provider.aws.generate provider.aws-native.generate
+
+# Maven-based examples need `install` as they reference deps from the
+# local Maven repo.
+test_example.random: install_sdk provider.random.install
+test_example.minimal: install_sdk
