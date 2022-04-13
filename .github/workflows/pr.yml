@@ -181,9 +181,6 @@ jobs:
         continue-on-error: true
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
-      - name: Publish previous Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
       # build old
       - uses: actions/checkout@v2
         with:
