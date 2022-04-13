@@ -93,3 +93,16 @@ borrow_schemas:: submodule_update
 # Runs `go mod tidy` on every Go project.
 tidy::
 	./scripts/tidy.sh
+
+# Rules to re-generate providers before testing each example. This
+# makes sure CI exmaple tests take into account latest codegen
+# changes. The Gradle-based providers link against in-repo Java code,
+# so we only need `generate`, not `install` target, we do not need to
+# build them into the local Maven repo.
+test_example.aws-java-webserver: provider.aws.generate
+test_example.azure-java-static-website: provider.azure-native.generate
+test_example.random: provider.random.generate
+test_example.azure-java-appservice-sql: provider.azure-native.generate
+test_example.eks-minimal: provider.eks.generate provider.aws.generate provider.kubernetes.generate
+test_example.gcp-java-gke-hello-world: provider.gcp.generate provider.kubernetes.generate
+test_example.aws-native-java-s3-folder: provider.aws.generate provider.aws-native.generate

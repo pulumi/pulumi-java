@@ -15,37 +15,9 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
 
-func MakeProvider(providers []string) error {
-	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
-	if err != nil {
-		return err
-	}
-	cmd := exec.Command("make", "install_sdk")
-	cmd.Dir = repoRoot
-	err = cmd.Run()
-	if err != nil {
-		return err
-	}
-	for _, provider := range providers {
-		cmd := exec.Command("make", fmt.Sprintf("provider.%s.install", provider))
-		cmd.Dir = repoRoot
-		err := cmd.Run()
-		if err != nil {
-			return err
-		}
-	}
-	return nil
-}
-
 func TestExamples(t *testing.T) {
 	t.Run("random", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"random",
-		})
-		if err != nil {
-			t.FailNow()
-		}
-		test := getJvmBase(t, "random").
+		test := previewOnlyJvmBase(t, "random").
 			With(integration.ProgramTestOptions{
 				Quick: true,
 				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
@@ -71,17 +43,10 @@ func TestExamples(t *testing.T) {
 			})
 
 		integration.ProgramTest(t, &test)
-
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"azure-native",
-		})
-		if err != nil {
-			t.FailNow()
-		}
-		test := getJvmBase(t, "azure-java-static-website").
+		test := previewOnlyJvmBase(t, "azure-java-static-website").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
 					"azure-native:location": "westus",
@@ -99,13 +64,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"aws",
-		})
-		if err != nil {
-			t.FailNow()
-		}
-		test := getJvmBase(t, "aws-java-webserver").
+		test := previewOnlyJvmBase(t, "aws-java-webserver").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
 					"aws:region": "us-east-1",
@@ -123,12 +82,6 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"azure-native",
-		})
-		if err != nil {
-			t.FailNow()
-		}
 		test := previewOnlyJvmBase(t, "azure-java-appservice-sql").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -140,13 +93,6 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("eks-minimal", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"eks",
-			"aws",
-		})
-		if err != nil {
-			t.FailNow()
-		}
 		test := previewOnlyJvmBase(t, "eks-minimal").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -157,13 +103,6 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"gcp",
-			"kubernetes",
-		})
-		if err != nil {
-			t.FailNow()
-		}
 		test := previewOnlyJvmBase(t, "gcp-java-gke-hello-world").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
@@ -177,7 +116,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("minimal", func(t *testing.T) {
-		test := getJvmBase(t, "minimal").
+		test := previewOnlyJvmBase(t, "minimal").
 			With(integration.ProgramTestOptions{
 				PrepareProject: func(info *engine.Projinfo) error {
 					cmd := exec.Command(filepath.Join(info.Root, "mvnw"),
@@ -200,14 +139,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
-		err := MakeProvider([]string{
-			"aws",
-			"aws-native",
-		})
-		if err != nil {
-			t.FailNow()
-		}
-		test := getJvmBase(t, "aws-native-java-s3-folder").
+		test := previewOnlyJvmBase(t, "aws-native-java-s3-folder").
 			With(integration.ProgramTestOptions{
 				Config: map[string]string{
 					"aws:region":        "us-west-2",
