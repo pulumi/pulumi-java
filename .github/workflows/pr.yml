@@ -22,7 +22,7 @@ env:
 
 jobs:
 
-  prerequisites:
+  java-sdk:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -33,46 +33,80 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+          # TODO: does cache here is redundant with gradle-build-action cache?
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.3.1
         with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
+          repo: pulumi/pulumictl
+      - name: Compute version
         run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Ensure dependencies
-        run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
+          V="$(pulumictl get version)"
+          echo "PULUMI_JAVA_SDK_VERSION=$V"
+          echo "PULUMI_JAVA_SDK_VERSION=$V" >> $GITHUB_ENV
+      - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
-      - name: Test Pulumi JVM Language Provider and Codegen
-        run: make test_go
-      - name: Integration tests
-        run: make integration_tests
-    strategy:
-      fail-fast: true
+      - name: Publish
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: publish
+          build-root-directory: sdk/jvm
+
+  # prerequisites:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: make submodule_update
+  #     - name: Set up JDK 11
+  #       uses: actions/setup-java@v2
+  #       with:
+  #         java-version: '11'
+  #         distribution: 'adopt'
+  #         cache: 'gradle'
+  #     - name: Set up Go 1.17.x
+  #       uses: actions/setup-go@v2
+  #       with:
+  #         go-version: 1.17.x
+  #     - name: Configure Go cache
+  #       id: go-cache-paths
+  #       run: |
+  #         echo "::set-output name=go-build::$(go env GOCACHE)"
+  #         echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+  #     - name: Set up Go cache
+  #       uses: actions/cache@v2
+  #       id: go-cache
+  #       with:
+  #         path: |
+  #             ${{ steps.go-cache-paths.outputs.go-build }}
+  #             ${{ steps.go-cache-paths.outputs.go-mod }}
+  #         key: go-cache-${{ hashFiles('**/go.sum') }}
+  #     - name: Ensure dependencies
+  #       run: make ensure
+  #     - name: Build and unit-test Pulumi Java SDK
+  #       uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+  #       with:
+  #         arguments: build
+  #         build-root-directory: sdk/jvm
+  #     - name: Publish Pulumi Java SDK to a local Maven repo
+  #       timeout-minutes: 2
+  #       run: make install_sdk
+  #     - name: Build Pulumi JVM Language Provider and Codegen
+  #       run: make build_go
+  #     - name: Test Pulumi JVM Language Provider and Codegen
+  #       run: make test_go
+  #     - name: Integration tests
+  #       run: make integration_tests
+  #   strategy:
+  #     fail-fast: true
 
   providers:
+    needs: java-sdk
     runs-on: ubuntu-latest
     timeout-minutes: 12
     strategy:
@@ -97,8 +131,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
         uses: actions/setup-go@v2
         with:
@@ -116,16 +148,17 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        with:
+          repo: pulumi/pulumictl
+      - name: Compute Java SDK version
+        run: |
+          V="$(pulumictl get version)"
+          echo "PULUMI_JAVA_SDK_VERSION=$V"
+          echo "PULUMI_JAVA_SDK_VERSION=$V" >> $GITHUB_ENV
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
-      - name: Publish new Pulumi Java SDK to a local Maven repo
-        timeout-minutes: 2
-        run: make install_sdk
       # build new
       - name: Build JVM SDK provider
         run: make provider.${PROVIDER}.install
