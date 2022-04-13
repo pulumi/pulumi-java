@@ -11,12 +11,6 @@ pluginManagement {
 
 var root = '../../../..'
 
-includeBuild(root + '/sdk/jvm') {
-  dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
-  }
-}
-
 includeBuild(root + '/providers/pulumi-aws/sdk/java') {
   name = ':aws'
   dependencySubstitution {
