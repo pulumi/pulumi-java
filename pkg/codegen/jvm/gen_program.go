@@ -496,7 +496,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
 								g.makeIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())
-								g.Fgenf(w, "Output.of(%s.thenApply(%s -> {\n", traversalExpr.RootName, resultTypeName)
+								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
 									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
 									g.Fgenf(w, "%sfor (var range : Range.of(%s.get%s())\n", g.Indent, resultTypeName, toUpperCase(part))
@@ -511,7 +511,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 									g.Fgenf(w, "%s}\n\n", g.Indent)
 									g.Fgenf(w, "%sreturn resources;\n", g.Indent)
 								})
-								g.Fgenf(w, "%s}))\n\n", g.Indent)
+								g.Fgenf(w, "%s});\n\n", g.Indent)
 								return
 							} else {
 								// not an async function invoke
@@ -591,11 +591,15 @@ func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariab
 func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariable) {
 	variableName := localVariable.Name()
 	isInvokeCall, functionSchema := g.isFunctionInvoke(w, localVariable)
+	g.makeIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
+		// convert CompletableFuture<T> to Output<T> using Output.of
+		// TODO: call the Output<T>-version of invokes when the SDK allows it.
+		g.Fgenf(w, "final var %s = Output.of(%v);", variableName, localVariable.Definition.Value)
+	} else {
+		g.Fgenf(w, "final var %s = %v;", variableName, localVariable.Definition.Value)
 	}
-	g.makeIndent(w)
-	g.Fgenf(w, "final var %s = %v;", variableName, localVariable.Definition.Value)
 	g.newline(w)
 }
 

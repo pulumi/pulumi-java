@@ -780,7 +780,8 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 
 	if isFunctionInvoke {
 		lambdaArg := toLowerCase(typeName(invokedFunctionSchema.Outputs))
-		g.Fgenf(w, ".thenApply(%s -> %s", lambdaArg, lambdaArg)
+		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
+		g.Fgenf(w, ".apply(%s -> %s", lambdaArg, lambdaArg)
 	}
 
 	var objType *schema.ObjectType
