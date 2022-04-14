@@ -1,0 +1,8 @@
+// NOTE: includeBuild directives here help Gradle link against in-tree
+// projects regardless of version specifications in `build.gradle`.
+// When the example code moves to a separate repository these can be
+// removed.
+
+
+rootProject.name = 'aws-groovy-bucket'
+include('app')
