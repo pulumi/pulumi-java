@@ -32,7 +32,7 @@ dependencies {
     implementation "io.pulumi:pulumi:$pulumiJavaSdkVersion"
     implementation "io.pulumi:azure-native:$pulumiAzureNativeSdkVersion"
 }
-o
+
 application {
     mainClass = project.hasProperty("mainClass")
             ? project.getProperty("mainClass")
