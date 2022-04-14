@@ -46,8 +46,6 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
-      - name: Fetch Tags
-        run: git fetch --quiet --prune --unshallow --tags
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -64,9 +62,7 @@ jobs:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
-        run: |
-          find artifacts
-          cat artifacts/versions.txt | tee $GITHUB_ENV
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
@@ -145,8 +141,6 @@ jobs:
         - eks
     steps:
       - uses: actions/checkout@v2
-      - name: Fetch Tags
-        run: git fetch --quiet --prune --unshallow --tags
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -171,15 +165,13 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Install pulumictl
-        uses: jaxxstorm/action-install-gh-release@v1.3.1
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
         with:
-          repo: pulumi/pulumictl
-      - name: Compute Java SDK version
-        run: |
-          V="$(pulumictl get version)"
-          echo "PULUMI_JAVA_SDK_VERSION=$V"
-          echo "PULUMI_JAVA_SDK_VERSION=$V" >> $GITHUB_ENV
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Ensure dependencies
         run: make ensure
       # build new
