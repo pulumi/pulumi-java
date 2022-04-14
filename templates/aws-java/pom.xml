@@ -21,12 +21,12 @@
         <dependency>
             <groupId>io.pulumi</groupId>
             <artifactId>pulumi</artifactId>
-            <version>1.0.0</version>
+            <version>(,1.0]</version>
         </dependency>
         <dependency>
             <groupId>io.pulumi</groupId>
             <artifactId>aws</artifactId>
-            <version>4.37.3</version>
+            <version>(,5.0.0]</version>
         </dependency>
     </dependencies>
 
