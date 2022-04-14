@@ -182,13 +182,13 @@ jobs:
         with:
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
-          gradleVersion: 7.4.1
+          gradle-version: 7.4.1
       - name: Publish
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: publish
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
-          gradleVersion: 7.4.1
+          gradle-version: 7.4.1
 
       # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
@@ -292,13 +292,13 @@ jobs:
       - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
-          gradleVersion: 7.4.1
+          gradle-version: 7.4.1
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
       - name: Publish
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
-          gradleVersion: 7.4.1
+          gradle-version: 7.4.1
           arguments: publish
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
 
