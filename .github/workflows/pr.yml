@@ -412,6 +412,13 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
+      - name: Download versions.txt
+        uses: actions/download-artifact@v2
+        with:
+          name: versions.txt
+          path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
