@@ -36,7 +36,7 @@ public abstract class DeploymentInstanceHolder {
      * @throws IllegalStateException if called more than once (the instance already set)
      */
     @InternalUse
-    static void setInstance(@Nullable DeploymentInstance newInstance) {
+    public static void setInstance(@Nullable DeploymentInstance newInstance) {
         if (!instance.compareAndSet(null, newInstance)) {
             throw new IllegalStateException("Deployment#instance should only be set once at the beginning of a 'run' call.");
         }
@@ -44,7 +44,7 @@ public abstract class DeploymentInstanceHolder {
 
     @InternalUse
     @VisibleForTesting
-    static void internalUnsafeDestroyInstance() {
+    public static void internalUnsafeDestroyInstance() {
         instance.set(null);
     }
 

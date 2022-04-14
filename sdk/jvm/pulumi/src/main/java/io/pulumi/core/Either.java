@@ -188,6 +188,10 @@ public abstract class Either<L, R> implements Serializable {
      */
     public abstract <R1> Either<L, R1> flatMap(Function<? super R, ? extends Either<? extends L, ? extends R1>> mapper);
 
+    public <R1> Either<L, R1> map(Function<? super R, ? extends R1> mapper) {
+        return flatMap(r -> Either.ofRight(mapper.apply(r)));
+    }
+
     /**
      * If this is a Left, then return the left value in Right or vice versa.
      *

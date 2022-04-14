@@ -7,8 +7,9 @@ import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.exceptions.RunException;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import io.pulumi.resources.Resource;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -17,8 +18,7 @@ import org.mockito.ArgumentCaptor;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -90,10 +90,10 @@ class StackTest {
     }
 
     private <T extends Stack> Tuple2<T, Map<String, Output<?>>> run(Supplier<T> factory) {
-        var mock = DeploymentMockBuilder.builder()
+        var mock = PulumiMock.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setOptions(new TestOptions("TestProject", "TestStack"))
-                .setSpyGlobalInstance();
+                .setRuntimeContext(TestRuntimeContext.builder().setProjectName("TestProject").setStackName("TestStack").build())
+                .buildSpyGlobalInstance();
 
         var stack = factory.get();
         Internal.from(stack).registerPropertyOutputs();

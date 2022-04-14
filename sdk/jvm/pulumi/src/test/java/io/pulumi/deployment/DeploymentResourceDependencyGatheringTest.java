@@ -5,8 +5,8 @@ import io.pulumi.Stack;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
@@ -20,18 +20,18 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentResourceDependencyGatheringTest {
-    private static DeploymentTests.DeploymentMock mock;
+    private static PulumiMock mock;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+        mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(true).build())
                 .setMocks(new MyMocks(true))
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
     }
 
     @AfterAll
@@ -41,14 +41,14 @@ public class DeploymentResourceDependencyGatheringTest {
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.tryTestAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
+        var result = mock.testAsync(DeploysResourcesWithUnknownDependsOnStack::new).join();
         assertThat(result.exceptions).isNotNull();
         assertThat(result.exceptions).isEmpty();
     }
 
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
         public DeploysResourcesWithUnknownDependsOnStack() {
-            var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
+            new MyCustomResource("r1", null, CustomResourceOptions.builder()
                     .dependsOn(OutputTests.unknown())
                     .build()
             );

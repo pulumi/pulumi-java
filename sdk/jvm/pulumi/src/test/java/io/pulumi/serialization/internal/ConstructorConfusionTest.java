@@ -9,8 +9,8 @@ import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
@@ -22,23 +22,25 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ConstructorConfusionTest {
+
     @Test
-    void TryConstuctNotConfusedByTwoN3Constructors() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+    void TryConstructNotConfusedByTwoN3Constructors() {
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(true).build())
                 .setMocks(new ConfusionMocks())
-                .setSpyGlobalInstance();
-        var resources = mock.testAsync(ConfusionStack::new).join();
+                .buildSpyGlobalInstance();
+        var resources = mock.testAsyncOrThrow(ConfusionStack::new).join();
         assertThat(resources).isNotEmpty();
     }
 
     @AfterEach
     public void cleanupMocks() {
-        DeploymentTests.cleanupDeploymentMocks();
+        cleanupDeploymentMocks();
     }
 
     public static class ConfusionMocks implements Mocks {

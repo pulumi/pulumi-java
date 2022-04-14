@@ -6,8 +6,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
@@ -18,9 +16,7 @@ import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.Environment;
 import io.pulumi.core.internal.Exceptions;
-import io.pulumi.core.internal.GlobalLogging;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.OutputCompletionSource;
@@ -46,7 +42,6 @@ import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
-import io.pulumi.resources.StackOptions;
 import io.pulumi.serialization.internal.Converter;
 import io.pulumi.serialization.internal.Deserializer;
 import io.pulumi.serialization.internal.JsonFormatter;
@@ -93,9 +88,6 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
-import static io.pulumi.core.internal.Environment.getIntegerEnvironmentVariable;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -104,95 +96,70 @@ import static java.util.stream.Collectors.toSet;
 @InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
-    private final DeploymentState state;
+    private final String projectName;
+    private final String stackName;
     private final Log log;
-    private final FeatureSupport featureSupport;
-    private final PropertiesSerializer serialization;
-    private final Deserializer deserializer;
-    private final Converter converter;
+    private final Runner runner;
     private final Invoke invoke;
     private final Call call;
-    private final Prepare prepare;
     private final ReadOrRegisterResource readOrRegisterResource;
-    private final ReadResource readResource;
-    private final RegisterResource registerResource;
     private final RegisterResourceOutputs registerResourceOutputs;
-    private final RootResource rootResource;
-
-    @InternalUse
-    DeploymentImpl() {
-        this(DeploymentState.fromEnvironment());
-    }
-
-    // TODO private Deployment(InlineDeploymentSettings settings)
+    private final boolean isDryRun;
 
     @InternalUse
     @VisibleForTesting
     public DeploymentImpl(
-            DeploymentState state
+            String projectName, String stackName, boolean isDryRun,
+            boolean disableResourceReferences,
+            Log log, Engine engine, Monitor monitor, Runner runner
     ) {
-        this.state = Objects.requireNonNull(state);
-        this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
-        this.featureSupport = new FeatureSupport(state.monitor);
-        this.serialization = new PropertiesSerializer(this.log);
-        this.deserializer = new Deserializer();
-        this.converter = new Converter(this.log, this.deserializer);
-        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
-        this.rootResource = new RootResource(state.engine);
-        this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
-        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
-        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
+        this.projectName = Objects.requireNonNull(projectName);
+        this.stackName = Objects.requireNonNull(stackName);
+        this.runner = Objects.requireNonNull(runner);
+        this.log = Objects.requireNonNull(log);
+        this.isDryRun = isDryRun;
+
+        Objects.requireNonNull(monitor);
+        Objects.requireNonNull(engine);
+        var featureSupport = new FeatureSupport(monitor);
+        var serialization = new PropertiesSerializer(this.log);
+        var deserializer = new Deserializer();
+        var converter = new Converter(this.log, deserializer);
+        this.invoke = new Invoke(this.log, monitor, featureSupport, serialization, converter, disableResourceReferences);
+        var rootResource = new RootResource(engine);
+        var prepare = new Prepare(this.log, featureSupport, rootResource, serialization);
+        this.call = new Call(this.log, monitor, prepare, serialization, converter);
+        var readResource = new ReadResource(this.log, prepare, monitor, disableResourceReferences);
+        var registerResource = new RegisterResource(this.log, prepare, monitor, disableResourceReferences);
         this.readOrRegisterResource = new ReadOrRegisterResource(
-                this.log, state.runner, this.invoke, this.readResource,
-                this.registerResource, this.converter, state.isDryRun
+                this.log, runner, this.invoke, readResource,
+                registerResource, converter, isDryRun
         );
         this.registerResourceOutputs = new RegisterResourceOutputs(
-                this.log, state.runner, state.monitor, this.featureSupport, this.serialization
+                this.log, runner, monitor, featureSupport, serialization
         );
-    }
-
-    @InternalUse
-    @VisibleForTesting
-    public static DeploymentImpl fromEnvironment() {
-        var state = DeploymentState.fromEnvironment();
-        var impl = new DeploymentImpl(state);
-        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
-        return impl;
     }
 
     @Override
     @Nonnull
     public String getStackName() {
-        return this.state.stackName;
+        return this.stackName;
     }
 
     @Override
     @Nonnull
     public String getProjectName() {
-        return this.state.projectName;
+        return this.projectName;
     }
 
     @Override
     public boolean isDryRun() {
-        return this.state.isDryRun;
+        return this.isDryRun;
     }
 
     @InternalUse
     public Runner getRunner() {
-        return this.state.runner;
-    }
-
-    public Log getLog() {
-        return this.log;
-    }
-
-    public Optional<String> getConfig(String fullKey) {
-        return this.state.config.getConfig(fullKey);
-    }
-
-    public boolean isConfigSecret(String fullKey) {
-        return this.state.config.isConfigSecret(fullKey);
+        return this.runner;
     }
 
     @Nullable
@@ -242,152 +209,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
     }
 
-    @ParametersAreNonnullByDefault
-    @InternalUse
-    @VisibleForTesting
-    static class Config {
-
-        /**
-         * The environment variable key that the language plugin uses to set configuration values.
-         */
-        private static final String ConfigEnvKey = "PULUMI_CONFIG";
-
-        /**
-         * The environment variable key that the language plugin uses to set the list of secret configuration keys.
-         */
-        private static final String ConfigSecretKeysEnvKey = "PULUMI_CONFIG_SECRET_KEYS";
-
-        private ImmutableMap<String, String> allConfig;
-
-        private ImmutableSet<String> configSecretKeys;
-
-        @VisibleForTesting
-        Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-            this.allConfig = Objects.requireNonNull(allConfig);
-            this.configSecretKeys = Objects.requireNonNull(configSecretKeys);
-        }
-
-        private static Config parse() {
-            return new Config(parseConfig(), parseConfigSecretKeys());
-        }
-
-        /**
-         * Returns a copy of the full config map.
-         */
-        @InternalUse
-        private ImmutableMap<String, String> getAllConfig() {
-            return allConfig;
-        }
-
-        /**
-         * Returns a copy of the config secret keys.
-         */
-        @InternalUse
-        private ImmutableSet<String> configSecretKeys() {
-            return configSecretKeys;
-        }
-
-        /**
-         * Sets a configuration variable.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setConfig(String key, String value) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .put(key, value)
-                    .build();
-        }
-
-        /**
-         * Appends all provided configuration.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setAllConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .putAll(config)
-                    .build();
-            if (secretKeys != null) {
-                this.configSecretKeys = new ImmutableSet.Builder<String>()
-                        .addAll(this.configSecretKeys)
-                        .addAll(secretKeys)
-                        .build();
-            }
-        }
-
-        public Optional<String> getConfig(String fullKey) {
-            return Optional.ofNullable(this.allConfig.getOrDefault(fullKey, null));
-        }
-
-        public boolean isConfigSecret(String fullKey) {
-            return this.configSecretKeys.contains(fullKey);
-        }
-
-        private static ImmutableMap<String, String> parseConfig() {
-            var envConfig = Environment.getEnvironmentVariable(ConfigEnvKey);
-            if (envConfig.isValue()) {
-                return parseConfig(envConfig.value());
-            }
-            return ImmutableMap.of();
-        }
-
-        @InternalUse
-        @VisibleForTesting
-        static ImmutableMap<String, String> parseConfig(String envConfigJson) {
-            var parsedConfig = ImmutableMap.<String, String>builder();
-
-            var gson = new Gson();
-            var envObject = gson.fromJson(envConfigJson, JsonElement.class);
-            for (var prop : envObject.getAsJsonObject().entrySet()) {
-                parsedConfig.put(cleanKey(prop.getKey()), prop.getValue().getAsString());
-            }
-
-            return parsedConfig.build();
-        }
-
-        private static ImmutableSet<String> parseConfigSecretKeys() {
-            var envConfigSecretKeys = Environment.getEnvironmentVariable(ConfigSecretKeysEnvKey);
-            if (envConfigSecretKeys.isValue()) {
-                return parseConfigSecretKeys(envConfigSecretKeys.value());
-            }
-
-            return ImmutableSet.of();
-        }
-
-        @InternalUse
-        @VisibleForTesting
-        static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
-            var parsedConfigSecretKeys = ImmutableSet.<String>builder();
-
-            var gson = new Gson();
-            var envObject = gson.fromJson(envConfigSecretKeysJson, JsonElement.class);
-            for (var element : envObject.getAsJsonArray()) {
-                parsedConfigSecretKeys.add(element.getAsString());
-            }
-
-            return parsedConfigSecretKeys.build();
-        }
-
-        /**
-         * CleanKey takes a configuration key, and if it is of the form "(string):config:(string)"
-         * removes the ":config:" portion. Previously, our keys always had the string ":config:" in
-         * them, and we'd like to remove it. However, the language host needs to continue to set it
-         * so we can be compatible with older versions of our packages. Once we stop supporting
-         * older packages, we can change the language host to not add this :config: thing and
-         * remove this function.
-         */
-        private static String cleanKey(String key) {
-            final var prefix = "config:";
-            var idx = key.indexOf(":");
-            if (idx > 0 && key.substring(idx + 1).startsWith(prefix)) {
-                return key.substring(0, idx) + ":" + key.substring(idx + 1 + prefix.length());
-            }
-            return key;
-        }
-    }
-
     @Override
     public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
         return this.invoke.invoke(token, targetType, args, InvokeOptions.Empty);
@@ -426,19 +247,22 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final FeatureSupport featureSupport;
         private final PropertiesSerializer serialization;
         private final Converter converter;
+        private final boolean disableResourceReferences;
 
         private Invoke(
                 Log log,
                 Monitor monitor,
                 FeatureSupport featureSupport,
                 PropertiesSerializer serialization,
-                Converter converter
+                Converter converter,
+                boolean disableResourceReferences
         ) {
             this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
             this.serialization = Objects.requireNonNull(serialization);
             this.converter = Objects.requireNonNull(converter);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
@@ -564,7 +388,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setProvider(provider.orElse(""))
                                 .setVersion(version.orElse(""))
                                 .setArgs(serialized.serialized)
-                                .setAcceptResources(!DeploymentState.DisableResourceReferences)
+                                .setAcceptResources(disableResourceReferences)
                                 .build()
                         ).thenApply(response -> {
                             // Handle failures.
@@ -1262,11 +1086,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
+        private final boolean disableResourceReferences;
 
-        private ReadResource(Log log, Prepare prepare, Monitor monitor) {
+        private ReadResource(Log log, Prepare prepare, Monitor monitor, boolean disableResourceReferences) {
             this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         private CompletableFuture<RawResourceResult> readResourceAsync(
@@ -1279,10 +1105,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             return this.prepare.prepareResourceAsync(label, resource, /* custom */ true, /* remote */ false, args, options)
                     .thenCompose(prepareResult -> {
-                        log.debug(String.format(
-                                "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name) +
-                                (DeploymentState.ExcessiveDebugOutput ? String.format(", obj=%s", prepareResult.serializedProps) : "")
-                        );
+                        var msg = String.format("ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name);
+                        log.debugOrExcessive(msg, msg + String.format(", obj=%s", prepareResult.serializedProps));
 
                         // Create a resource request and do the RPC.
                         var request = ReadResourceRequest.newBuilder()
@@ -1293,7 +1117,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setProvider(prepareResult.providerRef)
                                 .setVersion(options.getVersion().orElse(""))
                                 .setAcceptSecrets(true)
-                                .setAcceptResources(!DeploymentState.DisableResourceReferences);
+                                .setAcceptResources(disableResourceReferences);
 
                         for (int i = 0; i < prepareResult.allDirectDependencyUrns.size(); i++) {
                             request.setDependencies(i, prepareResult.allDirectDependencyUrns.asList().get(i));
@@ -1314,11 +1138,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
+        private final boolean disableResourceReferences;
 
-        private RegisterResource(Log log, Prepare prepare, Monitor monitor) {
+        private RegisterResource(Log log, Prepare prepare, Monitor monitor, boolean disableResourceReferences) {
             this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
+            this.disableResourceReferences = disableResourceReferences;
         }
 
         private CompletableFuture<RawResourceResult> registerResourceAsync(
@@ -1388,7 +1214,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .setVersion(options.getVersion().orElse(""))
                     .setImportId(customOpts ? ((CustomResourceOptions) options).getImportId().orElse("") : "")
                     .setAcceptSecrets(true)
-                    .setAcceptResources(!DeploymentState.DisableResourceReferences)
+                    .setAcceptResources(disableResourceReferences)
                     .setDeleteBeforeReplace(customOpts && ((CustomResourceOptions) options).getDeleteBeforeReplace())
                     .setDeleteBeforeReplaceDefined(true) // FIXME: WTF is an undefined boolean?!
                     .setCustomTimeouts(
@@ -1478,13 +1304,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (Strings.isEmptyOrNull(urn)) {
                     throw new IllegalStateException(String.format("Expected a urn at this point, got: '%s'", urn));
                 }
-                log.debug(String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn) +
-                        (DeploymentState.ExcessiveDebugOutput ?
-                                String.format(", outputs=%s", JsonFormatter
-                                        .format(serialized)
-                                        .orThrow(Function.identity()))
-                                : ""
-                        ));
+                var msg = String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn);
+                log.debugOrExcessive(msg, msg + String.format(", outputs=%s",
+                        JsonFormatter.format(serialized).orThrow(Function.identity())
+                ));
 
                 return this.monitor.registerResourceOutputsAsync(
                         RegisterResourceOutputsRequest.newBuilder()
@@ -1563,89 +1386,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    public static class DeploymentState {
-        public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
-        public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
-        public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS").or(-1);
-
-        public final DeploymentImpl.Config config;
-        public final String projectName;
-        public final String stackName;
-        public final boolean isDryRun;
-        public final Engine engine;
-        public final Monitor monitor;
-        public Runner runner; // late init
-        public EngineLogger logger; // late init
-
-        private final Logger standardLogger;
-
-        @InternalUse
-        @VisibleForTesting
-        DeploymentState(
-                DeploymentImpl.Config config,
-                Logger standardLogger,
-                String projectName,
-                String stackName,
-                boolean isDryRun,
-                Engine engine,
-                Monitor monitor) {
-            this.config = Objects.requireNonNull(config);
-            this.standardLogger = Objects.requireNonNull(standardLogger);
-            this.projectName = Objects.requireNonNull(projectName);
-            this.stackName = Objects.requireNonNull(stackName);
-            this.isDryRun = isDryRun;
-            this.engine = Objects.requireNonNull(engine);
-            this.monitor = Objects.requireNonNull(monitor);
-            // Use Suppliers to avoid problems with cyclic dependencies
-            this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
-            this.runner = new DefaultRunner(standardLogger, this.logger);
-        }
-
-        /**
-         * @throws IllegalArgumentException if an environment variable is not found
-         */
-        public static DeploymentState fromEnvironment() {
-            var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
-            standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
-
-            Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
-                    new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
-
-            try {
-                var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
-                var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
-                var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
-                var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
-//            var pwd = getEnvironmentVariable("PULUMI_PWD");
-                var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
-//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
-//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
-//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
-                // TODO what to do with all the unused envvars?
-
-                var config = Config.parse();
-                standardLogger.setLevel(GlobalLogging.GlobalLevel);
-
-                standardLogger.log(Level.FINEST, "Creating deployment engine");
-                var engine = new GrpcEngine(engineTarget);
-                standardLogger.log(Level.FINEST, "Created deployment engine");
-
-                standardLogger.log(Level.FINEST, "Creating deployment monitor");
-                var monitor = new GrpcMonitor(monitorTarget);
-                standardLogger.log(Level.FINEST, "Created deployment monitor");
-
-                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
-            } catch (NullPointerException ex) {
-                throw new IllegalStateException(
-                        "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);
-            }
-        }
-    }
-
-    @ParametersAreNonnullByDefault
-    @InternalUse
     @VisibleForTesting
-    static class DefaultRunner implements Runner {
+    public static class DefaultRunner implements Runner {
+
         private static final int ProcessExitedSuccessfully = 0;
         private static final int ProcessExitedBeforeLoggingUserActionableMessage = 1;
         // Keep track if we already logged the information about an unhandled error to the user.
@@ -1657,6 +1400,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private final Logger standardLogger;
         private final EngineLogger engineLogger;
+        private final int taskTimeoutInMillis;
 
         /**
          * The set of tasks (futures) that we have fired off. We issue futures in a Fire-and-Forget manner
@@ -1673,9 +1417,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
         private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
-        public DefaultRunner(Logger standardLogger, EngineLogger engineLogger) {
+        public DefaultRunner(Logger standardLogger, EngineLogger engineLogger, int taskTimeoutInMillis) {
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.engineLogger = Objects.requireNonNull(engineLogger);
+            this.taskTimeoutInMillis = taskTimeoutInMillis;
         }
 
         public List<Exception> getSwallowedExceptions() {
@@ -1683,32 +1428,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
+        public CompletableFuture<Integer> runAsync(Supplier<Stack> stackSupplier) {
             try {
-                var stack = stackFactory.get();
+                var stack = stackSupplier.get();
                 var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            return runAsyncFuture(callback, StackOptions.Empty);
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            try {
-                var stack = StackInternal.of(callback, options);
-                // no outputs to register here
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
+                // Stack doesn't register its outputs, so we register them on its behalf.
+                stackInternal.registerPropertyOutputs(); // TODO: refactor the registration and remove this call
+                registerTask(String.format("DefaultRunner.runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
                         Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
             } catch (Exception ex) {
                 return handleExceptionAsync(ex);
@@ -1725,8 +1451,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             // we don't need the result here, just the future itself
             CompletableFuture<Void> key = task.thenApply(__ -> null);
-            if (DeploymentState.TaskTimeoutInMillis > 0) {
-                key = key.orTimeout(DeploymentState.TaskTimeoutInMillis, TimeUnit.MILLISECONDS).handle(
+            if (taskTimeoutInMillis > 0) {
+                key = key.orTimeout(taskTimeoutInMillis, TimeUnit.MILLISECONDS).handle(
                         (value, throwable) -> {
                             if (throwable != null) {
                                 throw new TaskFailure(String.format(
@@ -1858,7 +1584,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // problem to the error stream.
             //
             // Note: if these logging calls fail, they will just
-            // end up bubbling up an exception that will be caught
+            // end up bubbling an exception that will be caught
             // by nothing. This will tear down the actual process
             // with a non-zero error which our host will handle
             // properly.
@@ -1896,7 +1622,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     @InternalUse
     @VisibleForTesting
-    static class DefaultEngineLogger implements EngineLogger {
+    public static class DefaultEngineLogger implements EngineLogger {
         private final Supplier<Runner> runner;
         private final Supplier<Engine> engine;
         private final Logger standardLogger;
@@ -2055,7 +1781,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     return Internal.of(resource.getUrn()).getValueOrDefault("");
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
-                    // fail to send an logging message. we'll just send the logging message unassociated
+                    // fail to send a logging message. we'll just send the logging message unassociated
                     // with any resource.
                 }
             }

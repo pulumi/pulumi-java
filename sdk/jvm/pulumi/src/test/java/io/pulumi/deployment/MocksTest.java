@@ -13,9 +13,9 @@ import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
-import io.pulumi.deployment.internal.TestOptions;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.InvokeArgs;
@@ -28,11 +28,12 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import static io.pulumi.core.TypeShape.of;
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -46,12 +47,12 @@ public class MocksTest {
 
     @Test
     void testCustomMocks() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(true).build())
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsyncOrThrow(MyStack::new).join();
 
         var instance = resources.stream()
                 .filter(r -> r instanceof Instance)
@@ -65,12 +66,12 @@ public class MocksTest {
 
     @Test
     void testCustomWithResourceReference() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(false).build())
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsyncOrThrow(MyStack::new).join();
 
         var myCustom = resources.stream()
                 .filter(r -> r instanceof MyCustom)
@@ -88,12 +89,12 @@ public class MocksTest {
 
     @Test
     void testStack() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(true).build())
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsyncOrThrow(MyStack::new).join();
 
         var stack = resources.stream()
                 .filter(r -> r instanceof MyStack)
@@ -108,25 +109,28 @@ public class MocksTest {
     // Test inspired by https://github.com/pulumi/pulumi/issues/8163
     @Test
     void testInvokeThrowing() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(false).build())
                 .setMocks(new ThrowingMocks())
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
 
-        var result = mock.runAsync(
-                () -> mock.deployment.invokeAsync(
-                        "aws:iam/getRole:getRole",
-                        of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
-                ).thenApply(__ -> {
-                    var myInstance = new Instance("instance", new InstanceArgs(), null);
-
-                    return ImmutableMap.<String, Output<?>>builder()
-                            .put("result", Output.of("x"))
-                            .put("instance", Output.of(myInstance.publicIp))
-                            .build();
-                })).join();
+        var result = mock.testAsyncOutputs(
+                () -> {
+                    var r = mock.deployment.invokeAsync(
+                            "aws:iam/getRole:getRole",
+                            of(GetRoleResult.class), new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
+                    ).thenApply(__ -> {
+                        var myInstance = new Instance("instance", new InstanceArgs(), null);
+                        return ImmutableMap.<String, Output<?>>builder()
+                                .put("result", Output.of("x"))
+                                .put("instance", Output.of(myInstance.publicIp))
+                                .build();
+                    });
+                    return Output.of(r.thenApply(Function.identity()));
+                }
+        ).join();
 
         var resources = result.resources;
         var exceptions = result.exceptions;
@@ -157,13 +161,13 @@ public class MocksTest {
     @Test
     void testStackWithInvalidSchema() {
         var log = InMemoryLogger.getLogger("MocksTest#testStackWithInvalidSchema");
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+        var mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(false).build())
                 .setMocks(new MyInvalidMocks())
                 .setStandardLogger(log)
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
 
-        var result = mock.tryTestAsync(MyStack::new).join();
+        var result = mock.testAsync(MyStack::new).join();
         var resources = result.resources;
         assertThat(resources).isNotEmpty();
 

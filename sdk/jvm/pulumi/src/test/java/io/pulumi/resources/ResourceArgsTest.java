@@ -4,7 +4,7 @@ import io.pulumi.Log;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.internal.PulumiMock;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {
 
-    private final static Log log = DeploymentTests.mockLog();
+    private final static Log log = PulumiMock.mockLog();
 
     public static class ComplexResourceArgs1 extends ResourceArgs {
         @Import

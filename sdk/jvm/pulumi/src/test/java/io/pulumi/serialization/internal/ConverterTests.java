@@ -20,8 +20,8 @@ import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.deployment.MocksTest;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
@@ -39,14 +39,14 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ConverterTests {
 
-    private final static Log log = DeploymentTests.mockLog();
+    private final static Log log = PulumiMock.mockLog();
 
     private static Value createSecretValue(Value value) {
         return Value.newBuilder().setStructValue(
@@ -223,10 +223,10 @@ class ConverterTests {
 
         @Test
         void testNullInPreviewProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
+            PulumiMock.builder()
                     .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(true))
-                    .setMockGlobalInstance();
+                    .setRuntimeContext(TestRuntimeContext.builder().setPreview(true).build())
+                    .buildMockGlobalInstance();
 
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);
@@ -240,10 +240,10 @@ class ConverterTests {
 
         @Test
         void testNullInNormalProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
+            PulumiMock.builder()
                     .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(false))
-                    .setMockGlobalInstance();
+                    .setRuntimeContext(TestRuntimeContext.builder().setPreview(false).build())
+                    .buildMockGlobalInstance();
 
             var deserializer = new Deserializer();
             var converter = new Converter(log, deserializer);

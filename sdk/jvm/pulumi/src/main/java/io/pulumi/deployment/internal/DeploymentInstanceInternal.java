@@ -24,7 +24,7 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     private final DeploymentInternal deployment;
 
     @InternalUse
-    DeploymentInstanceInternal(DeploymentInternal deployment) {
+    public DeploymentInstanceInternal(DeploymentInternal deployment) {
         this.deployment = deployment;
     }
 

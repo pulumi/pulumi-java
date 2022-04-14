@@ -11,7 +11,6 @@ import io.pulumi.resources.StackOptions;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -52,23 +51,16 @@ public class Stack extends ComponentResource {
 
     /**
      * Create a Stack with stack resources created by the <code>init</code> callback.
-     * An instance of this will be automatically created when
-     * any @see {@link Deployment#runAsync(Supplier)} overload is called.
+     * An instance of this will be automatically created when {@link Pulumi#run(Function)} is called.
      */
     @InternalUse
-    private Stack(Supplier<CompletableFuture<Map<String, Output<?>>>> init, @Nullable StackOptions options) {
+    private Stack(Supplier<Output<Map<String, Output<?>>>> init, @Nullable StackOptions options) {
         this(options);
         try {
-            this.outputs = Output.of(runInitAsync(init));
+            this.outputs = init.get();
         } finally {
             this.registerOutputs(this.outputs);
         }
-    }
-
-    private static CompletableFuture<Map<String, Output<?>>> runInitAsync(
-            Supplier<CompletableFuture<Map<String, Output<?>>>> init
-    ) {
-        return CompletableFuture.supplyAsync(init).thenCompose(Function.identity());
     }
 
     @Nullable
@@ -131,7 +123,7 @@ public class Stack extends ComponentResource {
         public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
         @InternalUse
-        public static Stack of(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
+        public static Stack of(Supplier<Output<Map<String, Output<?>>>> callback, StackOptions options) {
             return new Stack(callback, options);
         }
     }

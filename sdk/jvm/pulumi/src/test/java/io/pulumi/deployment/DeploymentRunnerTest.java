@@ -4,9 +4,9 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
+import io.pulumi.internal.PulumiMock;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,12 +29,12 @@ public class DeploymentRunnerTest {
 
     @Test
     void testTerminatesEarlyOnException() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = PulumiMock.builder()
             .setMocks(new MocksTest.MyMocks())
-            .setSpyGlobalInstance();
+            .buildSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
-        var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack::new).join();
+        var result = mock.testAsync(TerminatesEarlyOnExceptionStack::new).join();
 
         assertThat(mock.runner.getSwallowedExceptions()).hasSize(2);
 
@@ -67,10 +67,10 @@ public class DeploymentRunnerTest {
         // The test requires Level.FINEST
         var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var mock = PulumiMock.builder()
             .setMocks(new MocksTest.MyMocks())
             .setStandardLogger(logger)
-            .setSpyGlobalInstance();
+            .buildSpyGlobalInstance();
 
         for (var i = 0; i < 2; i++) {
             final var delay = 100L + i;
@@ -78,7 +78,7 @@ public class DeploymentRunnerTest {
         }
         Supplier<CompletableFuture<Map<String, Output<?>>>> supplier =
                 () -> CompletableFuture.completedFuture(Map.of());
-        var code = mock.runner.runAsyncFuture(supplier, null).join();
+        var code = mock.runAsync(ctx -> ctx.exports()).join();
         assertThat(code).isEqualTo(0);
 
         var messages = logger.getMessages();

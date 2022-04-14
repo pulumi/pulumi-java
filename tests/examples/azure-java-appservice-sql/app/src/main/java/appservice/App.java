@@ -15,9 +15,9 @@ import io.pulumi.azurenative.storage.Blob;
 import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.BlobContainer;
 import io.pulumi.azurenative.storage.BlobContainerArgs;
-import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.StorageAccount;
 import io.pulumi.azurenative.storage.StorageAccountArgs;
+import io.pulumi.azurenative.storage.StorageFunctions;
 import io.pulumi.azurenative.storage.enums.HttpProtocol;
 import io.pulumi.azurenative.storage.enums.Kind;
 import io.pulumi.azurenative.storage.enums.Permissions;
@@ -40,7 +40,6 @@ import io.pulumi.context.ExportContext;
 import io.pulumi.context.StackContext;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
 
 public class App {
     public static void main(String[] args) {

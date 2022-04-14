@@ -8,6 +8,11 @@ import io.pulumi.core.Output;
 public interface StackContext extends OutputContext, ConfigContext {
 
     /**
+     * @return the name of the current project
+     */
+    String projectName();
+
+    /**
      * @return the name of the current stack
      */
     String stackName();

@@ -8,8 +8,8 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.internal.DeploymentTests;
-import io.pulumi.deployment.internal.TestOptions;
+import io.pulumi.internal.PulumiMock;
+import io.pulumi.internal.TestRuntimeContext;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,19 +19,19 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.internal.PulumiMock.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {
 
-    private static DeploymentTests.DeploymentMock mock;
+    private static PulumiMock mock;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+        mock = PulumiMock.builder()
+                .setRuntimeContext(TestRuntimeContext.builder().setPreview(false).build())
                 .setMocks(new MyMocks())
-                .setSpyGlobalInstance();
+                .buildSpyGlobalInstance();
     }
 
     @AfterAll
@@ -41,7 +41,7 @@ public class ResourceTest {
 
     @Test
     void testProviderPropagation() {
-        var resources = mock.testAsync(MyStack::new).join();
+        var resources = mock.testAsyncOrThrow(MyStack::new).join();
 
         var resource = resources.stream()
                 .filter(r -> r.getResourceName().equals("testResource"))
