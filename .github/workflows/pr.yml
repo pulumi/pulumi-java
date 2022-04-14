@@ -208,11 +208,18 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Build JVM SDK provider
+      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        run: make provider.${PROVIDER}.generate
         continue-on-error: true
-        run: make provider.${PROVIDER}.build
         env:
           PROVIDER: ${{ matrix.provider }}
+      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        continue-on-error: true
+        with:
+          gradle-version: 7.4.1
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
       - name: Get old JAR size
         id: oldJar
         continue-on-error: true
@@ -320,11 +327,18 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Build JVM SDK provider
+      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        run: make provider.${PROVIDER}.generate
         continue-on-error: true
-        run: make provider.${PROVIDER}.build
         env:
           PROVIDER: ${{ matrix.provider }}
+      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        continue-on-error: true
+        with:
+          gradle-version: 7.4.1
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
       - name: Get old JAR size
         id: oldJar
         continue-on-error: true
