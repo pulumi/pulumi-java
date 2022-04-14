@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
 }
 
-version = project.findProperty("version") == "unspecified" ? "{{ .DefaultVersion }}" : project.findProperty("version");
+version = System.getenv("{{ .VersionEnvVar }}") ?: "{{ .DefaultVersion }}";
 
 java {
     toolchain {
@@ -91,7 +91,7 @@ publishing {
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "{{ .ArtifactID }}"
-            version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
+            version = version
             from components.java
         }
     }

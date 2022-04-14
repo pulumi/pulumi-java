@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
 }
 
-version = project.findProperty("version") == "unspecified" ? "4.37.3" : project.findProperty("version");
+version = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
 
 java {
     toolchain {
@@ -90,7 +90,7 @@ publishing {
         gpr(MavenPublication) {
             groupId = "io.pulumi"
             artifactId = "aws"
-            version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
+            version = version
             from components.java
         }
     }
