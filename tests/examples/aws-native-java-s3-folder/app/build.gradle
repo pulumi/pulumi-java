@@ -3,6 +3,7 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
     }
@@ -15,10 +16,14 @@ java {
     }
 }
 
+var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1-SNAPSHOT"
+var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
+var pulumiAwsNativeSdkVersion = System.getenv("PULUMI_AWS_NATIVE_PROVIDER_SDK_VERSION") ?: "0.12.0";
+
 dependencies {
-    implementation 'io.pulumi:pulumi:1.0.0'
-    implementation 'io.pulumi:aws-native:0.12.0'
-    implementation 'io.pulumi:aws:4.37.3'
+    implementation "io.pulumi:pulumi:$pulumiJavaSdkVersion"
+    implementation "io.pulumi:aws-native:$pulumiAwsNativeSdkVersion"
+    implementation "io.pulumi:aws:$pulumiAwsSdkVersion"
 }
 
 application {
