@@ -26,8 +26,6 @@ public class CustomResource extends Resource {
     @Export(name = Constants.IdPropertyName, type = String.class)
     private Output<String> id; // effectively final, lazy init
 
-    private final CustomResourceInternal internal = new CustomResourceInternal(this);
-
     /**
      * Creates and registers a new managed resource. @see {@link CustomResource#CustomResource(String, String, ResourceArgs, CustomResourceOptions, boolean)}
      *
@@ -109,7 +107,7 @@ public class CustomResource extends Resource {
         }
 
         public static CustomResourceInternal from(CustomResource r) {
-            return r.internal;
+            return new CustomResourceInternal(r);
         }
 
         /**
