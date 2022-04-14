@@ -776,7 +776,8 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	// with this constructor may not be valid if there are 'required' fields.
 	if len(props) > 0 {
 		// Generate an appropriately-attributed constructor that will set this types' fields.
-		fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))		fprintf(w, "\n")
+		fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
+		fprintf(w, "\n")
 		fprintf(w, "    private %s() {\n", pt.name)
 		for _, prop := range props {
 			fieldName := names.Ident(pt.mod.propertyName(prop))
