@@ -118,36 +118,24 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Download versions.txt
         uses: actions/download-artifact@v2
         with:
           name: versions.txt
           path: artifacts
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: go-binaries
+          path: bin
+      - name: Check go-binaries
+        run: find bin
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Ensure dependencies
         run: make ensure
       - name: Codegen the provider code
-        run: make provider.${PROVIDER}.generate
-        env:
-          PROVIDER: ${{ matrix.provider }}
+        run: ./bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
