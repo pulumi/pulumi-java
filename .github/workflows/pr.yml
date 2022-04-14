@@ -553,7 +553,7 @@ jobs:
       - name: Configure maven
         run: cp maven/settings.xml ~/.m2/settings.xml
       - name: Prefetch provider builds
-        run: cd maven/dummy && mvn compile
+        run: cd maven/dummy && mvn -q compile
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
