@@ -2,21 +2,18 @@
 
 build::	ensure build_go build_sdk
 
-ensure::	ensure_go ensure_sdk
+ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 
 # Go project rooted at `pkg/` implements Pulumi JVM language plugin
 # and Java go as a Go library.
 
-build_go::	ensure_go
+build_go::
 	cd pkg && go build -v all
 
 test_go:: build_go submodule_update
 	cd pkg && go test ./...
-
-ensure_go::
-	cd pkg && go mod tidy
 
 bin/pulumi-language-jvm: ${PKG_FILES}
 	mkdir -p bin
@@ -58,10 +55,6 @@ lint_pkg:
 # Example: make provider.random.install
 provider.%.install:	provider.%.build
 	cd providers/pulumi-$*/sdk/java && gradle --console=plain publishToMavenLocal
-
-# Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
-# stacks in Pulumi service.
-integration_tests::	bin/pulumi-language-jvm
 
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
