@@ -123,17 +123,17 @@ jobs:
         with:
           name: versions.txt
           path: artifacts
+      - name: Setup versioning env vars
+        run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download go-binaries
         uses: actions/download-artifact@v2
         with:
           name: go-binaries
           path: bin
-      - name: Check go-binaries
-        run: find bin
-      - name: Setup versioning env vars
-        run: cat artifacts/versions.txt | tee $GITHUB_ENV
-      - name: Ensure dependencies
-        run: make ensure
+      - name: Activate go-binaries
+        run: |
+          chmod a+x bin/pulumi-language-jvm
+          chmod a+x bin/pulumi-java-gen
       - name: Codegen the provider code
         run: ./bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
