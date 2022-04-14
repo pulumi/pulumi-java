@@ -174,11 +174,22 @@ jobs:
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Ensure dependencies
         run: make ensure
-      # build new
-      - name: Build JVM SDK provider
-        run: make provider.${PROVIDER}.install
+      - name: Codegen the provider code
+        run: make provider.${PROVIDER}.generate
         env:
           PROVIDER: ${{ matrix.provider }}
+      - name: Build and unit-test
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: build
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+      - name: Publish
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: publish
+          build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+
+      # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
         id: newJar
         run: |
@@ -198,7 +209,7 @@ jobs:
       - run: make submodule_update
       - name: Build JVM SDK provider
         continue-on-error: true
-        run: make provider.${PROVIDER}.install
+        run: make provider.${PROVIDER}.build
         env:
           PROVIDER: ${{ matrix.provider }}
       - name: Get old JAR size
