@@ -2,12 +2,27 @@ plugins {
     id 'application'
 }
 
+var gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+var gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+
 repositories {
     mavenLocal()
     maven { // The google mirror is less flaky than mavenCentral()
         url("https://maven-central.storage-download.googleapis.com/maven2/")
     }
     mavenCentral()
+
+    if (gprUser) {
+        repositories {
+            maven {
+                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
+                credentials {
+                    username = gprUser
+                    password = gprToken
+                }
+            }
+        }
+    }
 }
 
 java {
