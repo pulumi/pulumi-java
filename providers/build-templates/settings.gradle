@@ -11,9 +11,9 @@ pluginManagement {
 
 includeBuild('../../../../sdk/jvm') {
   dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
+    substitute module('com.pulumi:pulumi') using project(':pulumi')
   }
 }
 
-rootProject.name = "io.pulumi.{{ .ArtifactID }}"
+rootProject.name = "com.pulumi.{{ .ArtifactID }}"
 include("lib")
