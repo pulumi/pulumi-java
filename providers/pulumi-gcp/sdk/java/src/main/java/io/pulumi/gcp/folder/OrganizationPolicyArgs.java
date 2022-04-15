@@ -26,7 +26,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="booleanPolicy")
       private final @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
 
-    public Output<OrganizationPolicyBooleanPolicyArgs> getBooleanPolicy() {
+    public Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy() {
         return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="constraint", required=true)
       private final Output<String> constraint;
 
-    public Output<String> getConstraint() {
+    public Output<String> constraint() {
         return this.constraint;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -60,7 +60,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="listPolicy")
       private final @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
 
-    public Output<OrganizationPolicyListPolicyArgs> getListPolicy() {
+    public Output<OrganizationPolicyListPolicyArgs> listPolicy() {
         return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
     }
 
@@ -71,7 +71,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="restorePolicy")
       private final @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
 
-    public Output<OrganizationPolicyRestorePolicyArgs> getRestorePolicy() {
+    public Output<OrganizationPolicyRestorePolicyArgs> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
@@ -82,7 +82,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

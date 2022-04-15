@@ -23,7 +23,7 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

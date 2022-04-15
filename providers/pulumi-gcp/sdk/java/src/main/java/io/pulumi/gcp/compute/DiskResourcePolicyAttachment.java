@@ -55,7 +55,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * @return The name of the disk in which the resource policies are attached to.
      * 
      */
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
     /**
@@ -71,7 +71,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * creation. Do not specify the self link.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -101,7 +101,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * @return A reference to the zone where the disk resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

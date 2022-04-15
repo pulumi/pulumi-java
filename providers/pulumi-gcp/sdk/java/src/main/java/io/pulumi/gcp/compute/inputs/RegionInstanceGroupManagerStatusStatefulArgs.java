@@ -24,7 +24,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
     @Import(name="hasStatefulConfig")
       private final @Nullable Output<Boolean> hasStatefulConfig;
 
-    public Output<Boolean> getHasStatefulConfig() {
+    public Output<Boolean> hasStatefulConfig() {
         return this.hasStatefulConfig == null ? Codegen.empty() : this.hasStatefulConfig;
     }
 
@@ -35,7 +35,7 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends io.pulum
     @Import(name="perInstanceConfigs")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
+    public Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs() {
         return this.perInstanceConfigs == null ? Codegen.empty() : this.perInstanceConfigs;
     }
 

@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
      * The health check resource that signals autohealing.
      * 
     */
-    public String getHealthCheck() {
+    public String healthCheck() {
         return this.healthCheck;
     }
     /**
@@ -42,7 +42,7 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
      * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
      * 
     */
-    public Integer getInitialDelaySec() {
+    public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 

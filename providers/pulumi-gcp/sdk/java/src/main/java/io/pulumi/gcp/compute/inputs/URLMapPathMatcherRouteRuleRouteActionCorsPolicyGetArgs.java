@@ -26,7 +26,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
-    public Output<Boolean> getAllowCredentials() {
+    public Output<Boolean> allowCredentials() {
         return this.allowCredentials == null ? Codegen.empty() : this.allowCredentials;
     }
 
@@ -37,7 +37,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="allowHeaders")
       private final @Nullable Output<List<String>> allowHeaders;
 
-    public Output<List<String>> getAllowHeaders() {
+    public Output<List<String>> allowHeaders() {
         return this.allowHeaders == null ? Codegen.empty() : this.allowHeaders;
     }
 
@@ -48,7 +48,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="allowMethods")
       private final @Nullable Output<List<String>> allowMethods;
 
-    public Output<List<String>> getAllowMethods() {
+    public Output<List<String>> allowMethods() {
         return this.allowMethods == null ? Codegen.empty() : this.allowMethods;
     }
 
@@ -61,7 +61,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="allowOriginRegexes")
       private final @Nullable Output<List<String>> allowOriginRegexes;
 
-    public Output<List<String>> getAllowOriginRegexes() {
+    public Output<List<String>> allowOriginRegexes() {
         return this.allowOriginRegexes == null ? Codegen.empty() : this.allowOriginRegexes;
     }
 
@@ -73,7 +73,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="allowOrigins")
       private final @Nullable Output<List<String>> allowOrigins;
 
-    public Output<List<String>> getAllowOrigins() {
+    public Output<List<String>> allowOrigins() {
         return this.allowOrigins == null ? Codegen.empty() : this.allowOrigins;
     }
 
@@ -84,7 +84,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -95,7 +95,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
-    public Output<List<String>> getExposeHeaders() {
+    public Output<List<String>> exposeHeaders() {
         return this.exposeHeaders == null ? Codegen.empty() : this.exposeHeaders;
     }
 
@@ -107,7 +107,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs extend
     @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
-    public Output<Integer> getMaxAge() {
+    public Output<Integer> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 

@@ -52,21 +52,21 @@ public final class FlexibleAppVersionResources {
      * Number of CPU cores needed.
      * 
     */
-    public Optional<Integer> getCpu() {
+    public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Disk size (GB) needed.
      * 
     */
-    public Optional<Integer> getDiskGb() {
+    public Optional<Integer> diskGb() {
         return Optional.ofNullable(this.diskGb);
     }
     /**
      * Memory (GB) needed.
      * 
     */
-    public Optional<Double> getMemoryGb() {
+    public Optional<Double> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
     /**
@@ -74,7 +74,7 @@ public final class FlexibleAppVersionResources {
      * Structure is documented below.
      * 
     */
-    public List<FlexibleAppVersionResourcesVolume> getVolumes() {
+    public List<FlexibleAppVersionResourcesVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

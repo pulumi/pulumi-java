@@ -58,7 +58,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
     /**
@@ -86,7 +86,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -102,7 +102,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the Hl7v2 store (removing all data) **
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ Hl7StoreNotificationConfig> getNotificationConfig() {
+    public Output</* @Nullable */ Hl7StoreNotificationConfig> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -146,7 +146,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<Hl7StoreNotificationConfigs>> getNotificationConfigs() {
+    public Output</* @Nullable */ List<Hl7StoreNotificationConfigs>> notificationConfigs() {
         return this.notificationConfigs;
     }
     /**
@@ -162,7 +162,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<Hl7StoreParserConfig> getParserConfig() {
+    public Output<Hl7StoreParserConfig> parserConfig() {
         return this.parserConfig;
     }
     /**
@@ -176,7 +176,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this dataset
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

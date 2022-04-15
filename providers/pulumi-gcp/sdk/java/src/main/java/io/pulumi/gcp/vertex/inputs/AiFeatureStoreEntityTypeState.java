@@ -25,7 +25,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -47,7 +47,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="featurestore")
       private final @Nullable Output<String> featurestore;
 
-    public Output<String> getFeaturestore() {
+    public Output<String> featurestore() {
         return this.featurestore == null ? Codegen.empty() : this.featurestore;
     }
 
@@ -58,7 +58,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -71,7 +71,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="monitoringConfig")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig() {
         return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
     }
 
@@ -82,7 +82,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

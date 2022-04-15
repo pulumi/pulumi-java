@@ -23,7 +23,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
     @Import(name="bucketId", required=true)
       private final Output<String> bucketId;
 
-    public Output<String> getBucketId() {
+    public Output<String> bucketId() {
         return this.bucketId;
     }
 
@@ -34,7 +34,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -56,7 +56,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
     @Import(name="organization", required=true)
       private final Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 
@@ -67,7 +67,7 @@ public final class OrganizationBucketConfigArgs extends io.pulumi.resources.Reso
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 

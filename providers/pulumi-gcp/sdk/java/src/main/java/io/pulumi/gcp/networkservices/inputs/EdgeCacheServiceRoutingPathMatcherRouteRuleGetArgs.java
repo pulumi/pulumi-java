@@ -27,7 +27,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="headerAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> getHeaderAction() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -52,7 +52,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="matchRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
 
-    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> getMatchRules() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleGetArgs>> matchRules() {
         return this.matchRules;
     }
 
@@ -64,7 +64,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="origin")
       private final @Nullable Output<String> origin;
 
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin == null ? Codegen.empty() : this.origin;
     }
 
@@ -78,7 +78,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="priority", required=true)
       private final Output<String> priority;
 
-    public Output<String> getPriority() {
+    public Output<String> priority() {
         return this.priority;
     }
 
@@ -90,7 +90,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="routeAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> routeAction;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> getRouteAction() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs> routeAction() {
         return this.routeAction == null ? Codegen.empty() : this.routeAction;
     }
 
@@ -102,7 +102,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleGetArgs extends io
     @Import(name="urlRedirect")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> getUrlRedirect() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect() {
         return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
     }
 

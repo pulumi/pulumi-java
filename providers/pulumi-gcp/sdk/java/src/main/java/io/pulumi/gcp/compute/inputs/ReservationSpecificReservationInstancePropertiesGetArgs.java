@@ -26,7 +26,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
 
-    public Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> getGuestAccelerators() {
+    public Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators() {
         return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
@@ -39,7 +39,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="localSsds")
       private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
 
-    public Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> getLocalSsds() {
+    public Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds() {
         return this.localSsds == null ? Codegen.empty() : this.localSsds;
     }
 
@@ -50,7 +50,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -64,7 +64,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 

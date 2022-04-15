@@ -25,7 +25,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="seconds", required=true)
       private final Output<String> seconds;
 
-    public Output<String> getSeconds() {
+    public Output<String> seconds() {
         return this.seconds;
     }
 

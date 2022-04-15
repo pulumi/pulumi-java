@@ -41,14 +41,14 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAdd {
      * The name of the header to add.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
     */
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
     /**
@@ -56,7 +56,7 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAdd {
      * If true, headerValue is set for the header, discarding any values that were set for that header.
      * 
     */
-    public Boolean getReplace() {
+    public Boolean replace() {
         return this.replace;
     }
 

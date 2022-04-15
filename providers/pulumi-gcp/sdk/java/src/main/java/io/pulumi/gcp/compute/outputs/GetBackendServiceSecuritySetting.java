@@ -21,10 +21,10 @@ public final class GetBackendServiceSecuritySetting {
         this.subjectAltNames = subjectAltNames;
     }
 
-    public String getClientTlsPolicy() {
+    public String clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
-    public List<String> getSubjectAltNames() {
+    public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 

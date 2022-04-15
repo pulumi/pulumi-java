@@ -38,7 +38,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas> getMaxScaledInReplicas() {
+    public Optional<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas> maxScaledInReplicas() {
         return Optional.ofNullable(this.maxScaledInReplicas);
     }
     /**
@@ -46,7 +46,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
      * to include directives regarding slower scale down, as described above.
      * 
     */
-    public Optional<Integer> getTimeWindowSec() {
+    public Optional<Integer> timeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }
 

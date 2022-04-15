@@ -24,7 +24,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
     @Import(name="localObjectReference")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference;
 
-    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> getLocalObjectReference() {
+    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs> localObjectReference() {
         return this.localObjectReference == null ? Codegen.empty() : this.localObjectReference;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefArgs extends i
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
+    public Output<Boolean> optional() {
         return this.optional == null ? Codegen.empty() : this.optional;
     }
 

@@ -44,21 +44,21 @@ public final class PreventionInspectTemplateInspectConfigLimits {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> getMaxFindingsPerInfoTypes() {
+    public List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> maxFindingsPerInfoTypes() {
         return this.maxFindingsPerInfoTypes == null ? List.of() : this.maxFindingsPerInfoTypes;
     }
     /**
      * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
      * 
     */
-    public Integer getMaxFindingsPerItem() {
+    public Integer maxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
     /**
      * Max number of findings that will be returned per request/job. The maximum returned is 2000.
      * 
     */
-    public Integer getMaxFindingsPerRequest() {
+    public Integer maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 

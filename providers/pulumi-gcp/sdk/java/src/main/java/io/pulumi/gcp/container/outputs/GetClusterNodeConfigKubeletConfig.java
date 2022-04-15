@@ -24,13 +24,13 @@ public final class GetClusterNodeConfigKubeletConfig {
         this.cpuManagerPolicy = cpuManagerPolicy;
     }
 
-    public Boolean getCpuCfsQuota() {
+    public Boolean cpuCfsQuota() {
         return this.cpuCfsQuota;
     }
-    public String getCpuCfsQuotaPeriod() {
+    public String cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod;
     }
-    public String getCpuManagerPolicy() {
+    public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 

@@ -18,7 +18,7 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
     @Import(name="groupedEntry")
       private final @Nullable Output<String> groupedEntry;
 
-    public Output<String> getGroupedEntry() {
+    public Output<String> groupedEntry() {
         return this.groupedEntry == null ? Codegen.empty() : this.groupedEntry;
     }
 

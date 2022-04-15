@@ -50,7 +50,7 @@ public final class SloRequestBasedSli {
      * Structure is documented below.
      * 
     */
-    public Optional<SloRequestBasedSliDistributionCut> getDistributionCut() {
+    public Optional<SloRequestBasedSliDistributionCut> distributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
     /**
@@ -62,7 +62,7 @@ public final class SloRequestBasedSli {
      * Structure is documented below.
      * 
     */
-    public Optional<SloRequestBasedSliGoodTotalRatio> getGoodTotalRatio() {
+    public Optional<SloRequestBasedSliGoodTotalRatio> goodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
 

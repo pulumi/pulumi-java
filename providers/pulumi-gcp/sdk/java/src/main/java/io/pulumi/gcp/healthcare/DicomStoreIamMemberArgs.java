@@ -19,7 +19,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<DicomStoreIamMemberConditionArgs> condition;
 
-    public Output<DicomStoreIamMemberConditionArgs> getCondition() {
+    public Output<DicomStoreIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -33,14 +33,14 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="dicomStoreId", required=true)
       private final Output<String> dicomStoreId;
 
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -53,7 +53,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

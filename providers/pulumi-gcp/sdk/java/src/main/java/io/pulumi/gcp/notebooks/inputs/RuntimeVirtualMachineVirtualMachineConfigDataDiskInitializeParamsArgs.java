@@ -24,7 +24,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
-    public Output<String> getDiskName() {
+    public Output<String> diskName() {
         return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
@@ -52,7 +52,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -66,7 +66,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -79,7 +79,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

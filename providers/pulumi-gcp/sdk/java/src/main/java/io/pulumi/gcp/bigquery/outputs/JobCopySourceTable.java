@@ -42,14 +42,14 @@ public final class JobCopySourceTable {
      * The ID of the dataset containing this model.
      * 
     */
-    public Optional<String> getDatasetId() {
+    public Optional<String> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
     /**
      * The ID of the project containing this model.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
@@ -57,7 +57,7 @@ public final class JobCopySourceTable {
      * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
      * 
     */
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

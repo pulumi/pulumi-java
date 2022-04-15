@@ -83,7 +83,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepArchiveExtraction> getArchiveExtraction() {
+    public Optional<GuestPoliciesRecipeInstallStepArchiveExtraction> archiveExtraction() {
         return Optional.ofNullable(this.archiveExtraction);
     }
     /**
@@ -91,7 +91,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepDpkgInstallation> getDpkgInstallation() {
+    public Optional<GuestPoliciesRecipeInstallStepDpkgInstallation> dpkgInstallation() {
         return Optional.ofNullable(this.dpkgInstallation);
     }
     /**
@@ -99,7 +99,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepFileCopy> getFileCopy() {
+    public Optional<GuestPoliciesRecipeInstallStepFileCopy> fileCopy() {
         return Optional.ofNullable(this.fileCopy);
     }
     /**
@@ -107,7 +107,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepFileExec> getFileExec() {
+    public Optional<GuestPoliciesRecipeInstallStepFileExec> fileExec() {
         return Optional.ofNullable(this.fileExec);
     }
     /**
@@ -115,7 +115,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepMsiInstallation> getMsiInstallation() {
+    public Optional<GuestPoliciesRecipeInstallStepMsiInstallation> msiInstallation() {
         return Optional.ofNullable(this.msiInstallation);
     }
     /**
@@ -123,7 +123,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepRpmInstallation> getRpmInstallation() {
+    public Optional<GuestPoliciesRecipeInstallStepRpmInstallation> rpmInstallation() {
         return Optional.ofNullable(this.rpmInstallation);
     }
     /**
@@ -131,7 +131,7 @@ public final class GuestPoliciesRecipeInstallStep {
      * Structure is documented below.
      * 
     */
-    public Optional<GuestPoliciesRecipeInstallStepScriptRun> getScriptRun() {
+    public Optional<GuestPoliciesRecipeInstallStepScriptRun> scriptRun() {
         return Optional.ofNullable(this.scriptRun);
     }
 

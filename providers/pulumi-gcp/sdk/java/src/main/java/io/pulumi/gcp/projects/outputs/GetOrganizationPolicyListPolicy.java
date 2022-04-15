@@ -30,16 +30,16 @@ public final class GetOrganizationPolicyListPolicy {
         this.suggestedValue = suggestedValue;
     }
 
-    public List<GetOrganizationPolicyListPolicyAllow> getAllows() {
+    public List<GetOrganizationPolicyListPolicyAllow> allows() {
         return this.allows;
     }
-    public List<GetOrganizationPolicyListPolicyDeny> getDenies() {
+    public List<GetOrganizationPolicyListPolicyDeny> denies() {
         return this.denies;
     }
-    public Boolean getInheritFromParent() {
+    public Boolean inheritFromParent() {
         return this.inheritFromParent;
     }
-    public String getSuggestedValue() {
+    public String suggestedValue() {
         return this.suggestedValue;
     }
 

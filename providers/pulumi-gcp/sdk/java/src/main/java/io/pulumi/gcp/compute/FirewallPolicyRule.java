@@ -50,7 +50,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -64,7 +64,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return An optional description for this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -78,7 +78,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return The direction in which this rule applies. Possible values: INGRESS, EGRESS
      * 
      */
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
     /**
@@ -92,7 +92,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -106,7 +106,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogging() {
+    public Output</* @Nullable */ Boolean> enableLogging() {
         return this.enableLogging;
     }
     /**
@@ -120,7 +120,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return The firewall policy of the resource.
      * 
      */
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
@@ -134,7 +134,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -148,7 +148,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
      * 
      */
-    public Output<FirewallPolicyRuleMatch> getMatch() {
+    public Output<FirewallPolicyRuleMatch> match() {
         return this.match;
     }
     /**
@@ -162,7 +162,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -176,7 +176,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return Calculation of the complexity of a single firewall policy rule.
      * 
      */
-    public Output<Integer> getRuleTupleCount() {
+    public Output<Integer> ruleTupleCount() {
         return this.ruleTupleCount;
     }
     /**
@@ -190,7 +190,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetResources() {
+    public Output</* @Nullable */ List<String>> targetResources() {
         return this.targetResources;
     }
     /**
@@ -204,7 +204,7 @@ public class FirewallPolicyRule extends io.pulumi.resources.CustomResource {
      * @return A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetServiceAccounts() {
+    public Output</* @Nullable */ List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
 

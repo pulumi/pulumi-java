@@ -28,7 +28,7 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends io.pulumi.reso
     @Import(name="range", required=true)
       private final Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range;
 
-    public Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> getRange() {
+    public Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range() {
         return this.range;
     }
 
@@ -45,7 +45,7 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends io.pulumi.reso
     @Import(name="timeSeries", required=true)
       private final Output<String> timeSeries;
 
-    public Output<String> getTimeSeries() {
+    public Output<String> timeSeries() {
         return this.timeSeries;
     }
 

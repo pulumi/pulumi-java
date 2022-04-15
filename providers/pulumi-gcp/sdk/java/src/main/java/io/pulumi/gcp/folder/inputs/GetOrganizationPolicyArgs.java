@@ -19,7 +19,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="constraint", required=true)
       private final String constraint;
 
-    public String getConstraint() {
+    public String constraint() {
         return this.constraint;
     }
 
@@ -30,7 +30,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
     @Import(name="folder", required=true)
       private final String folder;
 
-    public String getFolder() {
+    public String folder() {
         return this.folder;
     }
 

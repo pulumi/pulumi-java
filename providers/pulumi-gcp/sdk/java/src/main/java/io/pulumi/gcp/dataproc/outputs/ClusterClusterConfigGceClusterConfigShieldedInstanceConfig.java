@@ -41,21 +41,21 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
      * Defines whether instances have integrity monitoring enabled.
      * 
     */
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
      * Defines whether instances have Secure Boot enabled.
      * 
     */
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
     /**
      * Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
      * 
     */
-    public Optional<Boolean> getEnableVtpm() {
+    public Optional<Boolean> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
 

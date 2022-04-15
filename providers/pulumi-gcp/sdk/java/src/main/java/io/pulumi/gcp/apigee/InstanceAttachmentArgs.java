@@ -21,7 +21,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment", required=true)
       private final Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 

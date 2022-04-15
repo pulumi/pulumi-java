@@ -51,38 +51,38 @@ public final class GetCertificateResult {
         this.selfLink = selfLink;
     }
 
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
-    public Integer getCertificateId() {
+    public Integer certificateId() {
         return this.certificateId;
     }
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNamePrefix() {
+    public String namePrefix() {
         return this.namePrefix;
     }
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

@@ -46,7 +46,7 @@ public final class RegionUrlMapHostRule {
      * Description of this test case.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -56,7 +56,7 @@ public final class RegionUrlMapHostRule {
      * the pattern by either - or ..
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
     /**
@@ -64,7 +64,7 @@ public final class RegionUrlMapHostRule {
      * the URL if the hostRule matches the URL's host portion.
      * 
     */
-    public String getPathMatcher() {
+    public String pathMatcher() {
         return this.pathMatcher;
     }
 

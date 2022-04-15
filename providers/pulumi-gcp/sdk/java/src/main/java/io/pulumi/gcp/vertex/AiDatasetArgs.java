@@ -24,7 +24,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSpec")
       private final @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
-    public Output<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
+    public Output<AiDatasetEncryptionSpecArgs> encryptionSpec() {
         return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
@@ -47,7 +47,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -58,7 +58,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadataSchemaUri", required=true)
       private final Output<String> metadataSchemaUri;
 
-    public Output<String> getMetadataSchemaUri() {
+    public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri;
     }
 
@@ -70,7 +70,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -81,7 +81,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

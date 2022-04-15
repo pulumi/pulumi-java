@@ -26,7 +26,7 @@ public final class GroupMembershipRole {
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

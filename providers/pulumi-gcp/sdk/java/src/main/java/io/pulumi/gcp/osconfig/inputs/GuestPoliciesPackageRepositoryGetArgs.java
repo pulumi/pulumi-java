@@ -26,7 +26,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     @Import(name="apt")
       private final @Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt;
 
-    public Output<GuestPoliciesPackageRepositoryAptGetArgs> getApt() {
+    public Output<GuestPoliciesPackageRepositoryAptGetArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -38,7 +38,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     @Import(name="goo")
       private final @Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo;
 
-    public Output<GuestPoliciesPackageRepositoryGooGetArgs> getGoo() {
+    public Output<GuestPoliciesPackageRepositoryGooGetArgs> goo() {
         return this.goo == null ? Codegen.empty() : this.goo;
     }
 
@@ -50,7 +50,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     @Import(name="yum")
       private final @Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum;
 
-    public Output<GuestPoliciesPackageRepositoryYumGetArgs> getYum() {
+    public Output<GuestPoliciesPackageRepositoryYumGetArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -62,7 +62,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     @Import(name="zypper")
       private final @Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
 
-    public Output<GuestPoliciesPackageRepositoryZypperGetArgs> getZypper() {
+    public Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

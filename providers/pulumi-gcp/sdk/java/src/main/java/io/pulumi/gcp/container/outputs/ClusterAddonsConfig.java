@@ -118,7 +118,7 @@ public final class ClusterAddonsConfig {
      * . Structure is documented below.
      * 
     */
-    public Optional<ClusterAddonsConfigCloudrunConfig> getCloudrunConfig() {
+    public Optional<ClusterAddonsConfigCloudrunConfig> cloudrunConfig() {
         return Optional.ofNullable(this.cloudrunConfig);
     }
     /**
@@ -126,7 +126,7 @@ public final class ClusterAddonsConfig {
      * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigConfigConnectorConfig> getConfigConnectorConfig() {
+    public Optional<ClusterAddonsConfigConfigConnectorConfig> configConnectorConfig() {
         return Optional.ofNullable(this.configConnectorConfig);
     }
     /**
@@ -135,7 +135,7 @@ public final class ClusterAddonsConfig {
      * Set `enabled = true` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigDnsCacheConfig> getDnsCacheConfig() {
+    public Optional<ClusterAddonsConfigDnsCacheConfig> dnsCacheConfig() {
         return Optional.ofNullable(this.dnsCacheConfig);
     }
     /**
@@ -143,7 +143,7 @@ public final class ClusterAddonsConfig {
      * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigGcePersistentDiskCsiDriverConfig> getGcePersistentDiskCsiDriverConfig() {
+    public Optional<ClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfig() {
         return Optional.ofNullable(this.gcePersistentDiskCsiDriverConfig);
     }
     /**
@@ -152,7 +152,7 @@ public final class ClusterAddonsConfig {
      * It is disbaled by default; set `enabled = true` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigGcpFilestoreCsiDriverConfig> getGcpFilestoreCsiDriverConfig() {
+    public Optional<ClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
     }
     /**
@@ -163,7 +163,7 @@ public final class ClusterAddonsConfig {
      * set `disabled = true` to disable.
      * 
     */
-    public Optional<ClusterAddonsConfigHorizontalPodAutoscaling> getHorizontalPodAutoscaling() {
+    public Optional<ClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscaling() {
         return Optional.ofNullable(this.horizontalPodAutoscaling);
     }
     /**
@@ -172,7 +172,7 @@ public final class ClusterAddonsConfig {
      * cluster. It is enabled by default; set `disabled = true` to disable.
      * 
     */
-    public Optional<ClusterAddonsConfigHttpLoadBalancing> getHttpLoadBalancing() {
+    public Optional<ClusterAddonsConfigHttpLoadBalancing> httpLoadBalancing() {
         return Optional.ofNullable(this.httpLoadBalancing);
     }
     /**
@@ -180,7 +180,7 @@ public final class ClusterAddonsConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterAddonsConfigIstioConfig> getIstioConfig() {
+    public Optional<ClusterAddonsConfigIstioConfig> istioConfig() {
         return Optional.ofNullable(this.istioConfig);
     }
     /**
@@ -188,7 +188,7 @@ public final class ClusterAddonsConfig {
      * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigKalmConfig> getKalmConfig() {
+    public Optional<ClusterAddonsConfigKalmConfig> kalmConfig() {
         return Optional.ofNullable(this.kalmConfig);
     }
     /**
@@ -200,7 +200,7 @@ public final class ClusterAddonsConfig {
      * Defaults to disabled; set `disabled = false` to enable.
      * 
     */
-    public Optional<ClusterAddonsConfigNetworkPolicyConfig> getNetworkPolicyConfig() {
+    public Optional<ClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfig() {
         return Optional.ofNullable(this.networkPolicyConfig);
     }
 

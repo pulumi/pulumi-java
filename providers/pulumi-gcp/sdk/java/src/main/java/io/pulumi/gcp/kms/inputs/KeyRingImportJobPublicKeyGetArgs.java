@@ -18,7 +18,7 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     @Import(name="pem")
       private final @Nullable Output<String> pem;
 
-    public Output<String> getPem() {
+    public Output<String> pem() {
         return this.pem == null ? Codegen.empty() : this.pem;
     }
 

@@ -21,7 +21,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends io.
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 

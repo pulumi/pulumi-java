@@ -29,16 +29,16 @@ public final class GetRouterBgp {
         this.asn = asn;
     }
 
-    public String getAdvertiseMode() {
+    public String advertiseMode() {
         return this.advertiseMode;
     }
-    public List<String> getAdvertisedGroups() {
+    public List<String> advertisedGroups() {
         return this.advertisedGroups;
     }
-    public List<GetRouterBgpAdvertisedIpRange> getAdvertisedIpRanges() {
+    public List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges() {
         return this.advertisedIpRanges;
     }
-    public Integer getAsn() {
+    public Integer asn() {
         return this.asn;
     }
 

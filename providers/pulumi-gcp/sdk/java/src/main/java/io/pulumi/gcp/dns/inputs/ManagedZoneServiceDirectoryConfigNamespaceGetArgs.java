@@ -25,7 +25,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
     @Import(name="namespaceUrl", required=true)
       private final Output<String> namespaceUrl;
 
-    public Output<String> getNamespaceUrl() {
+    public Output<String> namespaceUrl() {
         return this.namespaceUrl;
     }
 

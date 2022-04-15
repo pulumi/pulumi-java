@@ -25,7 +25,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="accessLevel")
       private final @Nullable Output<String> accessLevel;
 
-    public Output<String> getAccessLevel() {
+    public Output<String> accessLevel() {
         return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
     }
 
@@ -39,7 +39,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="devicePolicy")
       private final @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy;
 
-    public Output<AccessLevelConditionDevicePolicyGetArgs> getDevicePolicy() {
+    public Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy() {
         return this.devicePolicy == null ? Codegen.empty() : this.devicePolicy;
     }
 
@@ -59,7 +59,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="ipSubnetworks")
       private final @Nullable Output<List<String>> ipSubnetworks;
 
-    public Output<List<String>> getIpSubnetworks() {
+    public Output<List<String>> ipSubnetworks() {
         return this.ipSubnetworks == null ? Codegen.empty() : this.ipSubnetworks;
     }
 
@@ -76,7 +76,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -89,7 +89,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> getNegate() {
+    public Output<Boolean> negate() {
         return this.negate == null ? Codegen.empty() : this.negate;
     }
 
@@ -102,7 +102,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
@@ -117,7 +117,7 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     @Import(name="requiredAccessLevels")
       private final @Nullable Output<List<String>> requiredAccessLevels;
 
-    public Output<List<String>> getRequiredAccessLevels() {
+    public Output<List<String>> requiredAccessLevels() {
         return this.requiredAccessLevels == null ? Codegen.empty() : this.requiredAccessLevels;
     }
 

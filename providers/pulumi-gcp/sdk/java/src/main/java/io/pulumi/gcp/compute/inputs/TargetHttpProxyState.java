@@ -24,7 +24,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -35,7 +35,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,7 +64,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -76,7 +76,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> getProxyBind() {
+    public Output<Boolean> proxyBind() {
         return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
     }
 
@@ -87,7 +87,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="proxyId")
       private final @Nullable Output<Integer> proxyId;
 
-    public Output<Integer> getProxyId() {
+    public Output<Integer> proxyId() {
         return this.proxyId == null ? Codegen.empty() : this.proxyId;
     }
 
@@ -98,7 +98,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -110,7 +110,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap == null ? Codegen.empty() : this.urlMap;
     }
 

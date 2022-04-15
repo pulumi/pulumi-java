@@ -46,7 +46,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The target that the firewall policy is attached to.
      * 
      */
-    public Output<String> getAttachmentTarget() {
+    public Output<String> attachmentTarget() {
         return this.attachmentTarget;
     }
     /**
@@ -60,7 +60,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The firewall policy ID of the association.
      * 
      */
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
     /**
@@ -74,7 +74,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The name for an association.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * @return The short name of the firewall policy of the association.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
 

@@ -32,14 +32,14 @@ public final class GetKMSCryptoKeyVersionPublicKey {
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
      * 
     */
-    public String getPem() {
+    public String pem() {
         return this.pem;
     }
 

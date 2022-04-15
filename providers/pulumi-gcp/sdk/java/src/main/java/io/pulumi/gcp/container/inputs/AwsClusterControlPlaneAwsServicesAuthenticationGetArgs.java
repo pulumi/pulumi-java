@@ -22,7 +22,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -33,7 +33,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
     @Import(name="roleSessionName")
       private final @Nullable Output<String> roleSessionName;
 
-    public Output<String> getRoleSessionName() {
+    public Output<String> roleSessionName() {
         return this.roleSessionName == null ? Codegen.empty() : this.roleSessionName;
     }
 

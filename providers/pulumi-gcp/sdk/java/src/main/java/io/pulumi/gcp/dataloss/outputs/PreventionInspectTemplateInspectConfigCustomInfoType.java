@@ -78,7 +78,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary> getDictionary() {
+    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
     /**
@@ -86,7 +86,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
      * 
     */
-    public Optional<String> getExclusionType() {
+    public Optional<String> exclusionType() {
         return Optional.ofNullable(this.exclusionType);
     }
     /**
@@ -97,7 +97,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Structure is documented below.
      * 
     */
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType getInfoType() {
+    public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType() {
         return this.infoType;
     }
     /**
@@ -107,7 +107,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
     */
-    public Optional<String> getLikelihood() {
+    public Optional<String> likelihood() {
         return Optional.ofNullable(this.likelihood);
     }
     /**
@@ -115,7 +115,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeRegex> getRegex() {
+    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeRegex> regex() {
         return Optional.ofNullable(this.regex);
     }
     /**
@@ -123,7 +123,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType> getStoredType() {
+    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType> storedType() {
         return Optional.ofNullable(this.storedType);
     }
 

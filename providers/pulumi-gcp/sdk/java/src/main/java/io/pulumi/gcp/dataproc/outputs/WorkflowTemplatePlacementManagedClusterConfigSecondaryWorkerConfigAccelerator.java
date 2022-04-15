@@ -35,14 +35,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * The number of the accelerator cards of this type exposed to this instance.
      * 
     */
-    public Optional<Integer> getAcceleratorCount() {
+    public Optional<Integer> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
     /**
      * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
      * 
     */
-    public Optional<String> getAcceleratorType() {
+    public Optional<String> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
 

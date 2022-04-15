@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -45,7 +45,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -60,7 +60,7 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -57,7 +57,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=InstanceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ InstanceIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ InstanceIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -71,7 +71,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the instances's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -85,13 +85,13 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * @return The name or relative resource id of the instance to manage IAM policies for.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -107,7 +107,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * is not provided, a default will be supplied.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -125,7 +125,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

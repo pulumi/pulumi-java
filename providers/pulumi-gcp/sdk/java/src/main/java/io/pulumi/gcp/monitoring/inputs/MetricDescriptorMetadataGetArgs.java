@@ -22,7 +22,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
     @Import(name="ingestDelay")
       private final @Nullable Output<String> ingestDelay;
 
-    public Output<String> getIngestDelay() {
+    public Output<String> ingestDelay() {
         return this.ingestDelay == null ? Codegen.empty() : this.ingestDelay;
     }
 
@@ -33,7 +33,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
     @Import(name="samplePeriod")
       private final @Nullable Output<String> samplePeriod;
 
-    public Output<String> getSamplePeriod() {
+    public Output<String> samplePeriod() {
         return this.samplePeriod == null ? Codegen.empty() : this.samplePeriod;
     }
 

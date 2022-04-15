@@ -26,7 +26,7 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     @Import(name="ancestor")
       private final @Nullable Output<String> ancestor;
 
-    public Output<String> getAncestor() {
+    public Output<String> ancestor() {
         return this.ancestor == null ? Codegen.empty() : this.ancestor;
     }
 
@@ -37,7 +37,7 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     @Import(name="indexId")
       private final @Nullable Output<String> indexId;
 
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId == null ? Codegen.empty() : this.indexId;
     }
 
@@ -48,7 +48,7 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -60,7 +60,7 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,7 +72,7 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<List<DataStoreIndexPropertyGetArgs>> properties;
 
-    public Output<List<DataStoreIndexPropertyGetArgs>> getProperties() {
+    public Output<List<DataStoreIndexPropertyGetArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

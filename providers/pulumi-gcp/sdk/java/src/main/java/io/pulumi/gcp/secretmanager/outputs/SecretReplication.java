@@ -36,7 +36,7 @@ public final class SecretReplication {
      * The Secret will automatically be replicated without any restrictions.
      * 
     */
-    public Optional<Boolean> getAutomatic() {
+    public Optional<Boolean> automatic() {
         return Optional.ofNullable(this.automatic);
     }
     /**
@@ -44,7 +44,7 @@ public final class SecretReplication {
      * Structure is documented below.
      * 
     */
-    public Optional<SecretReplicationUserManaged> getUserManaged() {
+    public Optional<SecretReplicationUserManaged> userManaged() {
         return Optional.ofNullable(this.userManaged);
     }
 

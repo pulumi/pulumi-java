@@ -26,7 +26,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="adminEnabled")
       private final @Nullable Output<Boolean> adminEnabled;
 
-    public Output<Boolean> getAdminEnabled() {
+    public Output<Boolean> adminEnabled() {
         return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
     }
 
@@ -42,7 +42,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
+    public Output<String> bandwidth() {
         return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
@@ -59,7 +59,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="candidateSubnets")
       private final @Nullable Output<List<String>> candidateSubnets;
 
-    public Output<List<String>> getCandidateSubnets() {
+    public Output<List<String>> candidateSubnets() {
         return this.candidateSubnets == null ? Codegen.empty() : this.candidateSubnets;
     }
 
@@ -70,7 +70,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -86,7 +86,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="edgeAvailabilityDomain")
       private final @Nullable Output<String> edgeAvailabilityDomain;
 
-    public Output<String> getEdgeAvailabilityDomain() {
+    public Output<String> edgeAvailabilityDomain() {
         return this.edgeAvailabilityDomain == null ? Codegen.empty() : this.edgeAvailabilityDomain;
     }
 
@@ -109,7 +109,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="encryption")
       private final @Nullable Output<String> encryption;
 
-    public Output<String> getEncryption() {
+    public Output<String> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -122,7 +122,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="interconnect")
       private final @Nullable Output<String> interconnect;
 
-    public Output<String> getInterconnect() {
+    public Output<String> interconnect() {
         return this.interconnect == null ? Codegen.empty() : this.interconnect;
     }
 
@@ -148,7 +148,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="ipsecInternalAddresses")
       private final @Nullable Output<List<String>> ipsecInternalAddresses;
 
-    public Output<List<String>> getIpsecInternalAddresses() {
+    public Output<List<String>> ipsecInternalAddresses() {
         return this.ipsecInternalAddresses == null ? Codegen.empty() : this.ipsecInternalAddresses;
     }
 
@@ -160,7 +160,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="mtu")
       private final @Nullable Output<String> mtu;
 
-    public Output<String> getMtu() {
+    public Output<String> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -176,7 +176,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -188,7 +188,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -199,7 +199,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -213,7 +213,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="router", required=true)
       private final Output<String> router;
 
-    public Output<String> getRouter() {
+    public Output<String> router() {
         return this.router;
     }
 
@@ -226,7 +226,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -238,7 +238,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     @Import(name="vlanTag8021q")
       private final @Nullable Output<Integer> vlanTag8021q;
 
-    public Output<Integer> getVlanTag8021q() {
+    public Output<Integer> vlanTag8021q() {
         return this.vlanTag8021q == null ? Codegen.empty() : this.vlanTag8021q;
     }
 

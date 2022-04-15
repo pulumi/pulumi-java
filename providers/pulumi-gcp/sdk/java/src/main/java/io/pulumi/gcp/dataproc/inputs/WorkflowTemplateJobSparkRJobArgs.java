@@ -25,7 +25,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
+    public Output<List<String>> archiveUris() {
         return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
@@ -36,7 +36,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -47,7 +47,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
+    public Output<List<String>> fileUris() {
         return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
@@ -58,7 +58,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs> getLoggingConfig() {
+    public Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -69,7 +69,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
-    public Output<String> getMainRFileUri() {
+    public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
 
@@ -80,7 +80,7 @@ public final class WorkflowTemplateJobSparkRJobArgs extends io.pulumi.resources.
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

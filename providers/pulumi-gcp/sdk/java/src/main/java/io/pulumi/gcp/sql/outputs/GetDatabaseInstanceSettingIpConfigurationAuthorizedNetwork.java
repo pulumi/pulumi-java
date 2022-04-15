@@ -27,17 +27,17 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
         this.value = value;
     }
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
     /**
      * The name of the instance.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

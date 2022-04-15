@@ -23,7 +23,7 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -35,7 +35,7 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -49,7 +49,7 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -60,7 +60,7 @@ public final class SubnetworkIAMPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="subnetwork", required=true)
       private final Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
 

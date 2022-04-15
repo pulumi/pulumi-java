@@ -75,7 +75,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<AutoscalerAutoscalingPolicy> getAutoscalingPolicy() {
+    public Output<AutoscalerAutoscalingPolicy> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
     /**
@@ -89,7 +89,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -103,7 +103,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -117,7 +117,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @return The identifier for this object. Format specified above.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -147,7 +147,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -165,7 +165,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
     /**
@@ -179,7 +179,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @return URL of the zone where the instance group resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

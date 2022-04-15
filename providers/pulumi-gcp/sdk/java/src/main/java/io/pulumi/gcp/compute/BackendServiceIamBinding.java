@@ -20,37 +20,37 @@ public class BackendServiceIamBinding extends io.pulumi.resources.CustomResource
     @Export(name="condition", type=BackendServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ BackendServiceIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ BackendServiceIamBindingCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

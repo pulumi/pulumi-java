@@ -47,7 +47,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage getBaseKeyUsage() {
+    public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
@@ -55,7 +55,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
+    public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
@@ -63,7 +63,7 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
+    public List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
 

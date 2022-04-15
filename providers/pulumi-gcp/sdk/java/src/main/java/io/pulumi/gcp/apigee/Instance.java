@@ -50,7 +50,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -66,7 +66,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
      * 
      */
-    public Output</* @Nullable */ String> getDiskEncryptionKeyName() {
+    public Output</* @Nullable */ String> diskEncryptionKeyName() {
         return this.diskEncryptionKeyName;
     }
     /**
@@ -80,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Display name of the instance.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -94,7 +94,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Output only. Hostname or IP address of the exposed Apigee endpoint used by clients to connect to the service.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -120,7 +120,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input format: "a.b.c.d/22"
      * 
      */
-    public Output</* @Nullable */ String> getIpRange() {
+    public Output</* @Nullable */ String> ipRange() {
         return this.ipRange;
     }
     /**
@@ -138,7 +138,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * subscriptions, it should correspond to a Compute Engine region.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -152,7 +152,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -168,7 +168,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -184,7 +184,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
      * 
      */
-    public Output<String> getPeeringCidrRange() {
+    public Output<String> peeringCidrRange() {
         return this.peeringCidrRange;
     }
     /**
@@ -198,7 +198,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Output only. Port number of the exposed Apigee endpoint.
      * 
      */
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port;
     }
 

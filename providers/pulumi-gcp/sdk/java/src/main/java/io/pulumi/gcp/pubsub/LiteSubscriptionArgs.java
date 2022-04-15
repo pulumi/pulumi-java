@@ -24,7 +24,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deliveryConfig")
       private final @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
-    public Output<LiteSubscriptionDeliveryConfigArgs> getDeliveryConfig() {
+    public Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig() {
         return this.deliveryConfig == null ? Codegen.empty() : this.deliveryConfig;
     }
 
@@ -35,7 +35,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -69,7 +69,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -80,7 +80,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

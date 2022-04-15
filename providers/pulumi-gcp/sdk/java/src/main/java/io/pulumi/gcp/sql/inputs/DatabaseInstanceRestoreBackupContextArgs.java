@@ -23,7 +23,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="backupRunId", required=true)
       private final Output<Integer> backupRunId;
 
-    public Output<Integer> getBackupRunId() {
+    public Output<Integer> backupRunId() {
         return this.backupRunId;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

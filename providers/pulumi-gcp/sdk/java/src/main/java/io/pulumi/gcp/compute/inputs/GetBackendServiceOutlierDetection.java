@@ -18,77 +18,77 @@ public final class GetBackendServiceOutlierDetection extends io.pulumi.resources
     @Import(name="baseEjectionTimes", required=true)
       private final List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
 
-    public List<GetBackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTimes() {
+    public List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes() {
         return this.baseEjectionTimes;
     }
 
     @Import(name="consecutiveErrors", required=true)
       private final Integer consecutiveErrors;
 
-    public Integer getConsecutiveErrors() {
+    public Integer consecutiveErrors() {
         return this.consecutiveErrors;
     }
 
     @Import(name="consecutiveGatewayFailure", required=true)
       private final Integer consecutiveGatewayFailure;
 
-    public Integer getConsecutiveGatewayFailure() {
+    public Integer consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
     }
 
     @Import(name="enforcingConsecutiveErrors", required=true)
       private final Integer enforcingConsecutiveErrors;
 
-    public Integer getEnforcingConsecutiveErrors() {
+    public Integer enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
     }
 
     @Import(name="enforcingConsecutiveGatewayFailure", required=true)
       private final Integer enforcingConsecutiveGatewayFailure;
 
-    public Integer getEnforcingConsecutiveGatewayFailure() {
+    public Integer enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
     }
 
     @Import(name="enforcingSuccessRate", required=true)
       private final Integer enforcingSuccessRate;
 
-    public Integer getEnforcingSuccessRate() {
+    public Integer enforcingSuccessRate() {
         return this.enforcingSuccessRate;
     }
 
     @Import(name="intervals", required=true)
       private final List<GetBackendServiceOutlierDetectionInterval> intervals;
 
-    public List<GetBackendServiceOutlierDetectionInterval> getIntervals() {
+    public List<GetBackendServiceOutlierDetectionInterval> intervals() {
         return this.intervals;
     }
 
     @Import(name="maxEjectionPercent", required=true)
       private final Integer maxEjectionPercent;
 
-    public Integer getMaxEjectionPercent() {
+    public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
     @Import(name="successRateMinimumHosts", required=true)
       private final Integer successRateMinimumHosts;
 
-    public Integer getSuccessRateMinimumHosts() {
+    public Integer successRateMinimumHosts() {
         return this.successRateMinimumHosts;
     }
 
     @Import(name="successRateRequestVolume", required=true)
       private final Integer successRateRequestVolume;
 
-    public Integer getSuccessRateRequestVolume() {
+    public Integer successRateRequestVolume() {
         return this.successRateRequestVolume;
     }
 
     @Import(name="successRateStdevFactor", required=true)
       private final Integer successRateStdevFactor;
 
-    public Integer getSuccessRateStdevFactor() {
+    public Integer successRateStdevFactor() {
         return this.successRateStdevFactor;
     }
 

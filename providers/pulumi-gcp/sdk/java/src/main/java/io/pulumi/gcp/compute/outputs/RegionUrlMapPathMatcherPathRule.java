@@ -66,7 +66,7 @@ public final class RegionUrlMapPathMatcherPathRule {
      * allowed here.
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
     /**
@@ -79,14 +79,14 @@ public final class RegionUrlMapPathMatcherPathRule {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherPathRuleRouteAction> getRouteAction() {
+    public Optional<RegionUrlMapPathMatcherPathRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -96,7 +96,7 @@ public final class RegionUrlMapPathMatcherPathRule {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherPathRuleUrlRedirect> getUrlRedirect() {
+    public Optional<RegionUrlMapPathMatcherPathRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
 

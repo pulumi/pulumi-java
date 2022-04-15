@@ -26,7 +26,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
     @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
-    public Output<String> getClusterIpv4CidrBlock() {
+    public Output<String> clusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
     }
 
@@ -39,7 +39,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
     @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
-    public Output<String> getClusterSecondaryRangeName() {
+    public Output<String> clusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
     }
 
@@ -54,7 +54,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
     @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
-    public Output<String> getServicesIpv4CidrBlock() {
+    public Output<String> servicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterIpAllocationPolicyGetArgs extends io.pulumi.resources.
     @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
-    public Output<String> getServicesSecondaryRangeName() {
+    public Output<String> servicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
     }
 

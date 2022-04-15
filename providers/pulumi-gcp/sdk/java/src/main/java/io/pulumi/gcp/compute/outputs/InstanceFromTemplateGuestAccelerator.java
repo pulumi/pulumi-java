@@ -21,10 +21,10 @@ public final class InstanceFromTemplateGuestAccelerator {
         this.type = type;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -17,14 +17,14 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride extend
     @Import(name="configVersion", required=true)
       private final String configVersion;
 
-    public String getConfigVersion() {
+    public String configVersion() {
         return this.configVersion;
     }
 
     @Import(name="realmsSelectors", required=true)
       private final List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
 
-    public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> getRealmsSelectors() {
+    public List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors() {
         return this.realmsSelectors;
     }
 

@@ -23,7 +23,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
     @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
-    public Output<String> getCurrencyCode() {
+    public Output<String> currencyCode() {
         return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
@@ -40,7 +40,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
@@ -52,7 +52,7 @@ public final class BudgetAmountSpecifiedAmountArgs extends io.pulumi.resources.R
     @Import(name="units")
       private final @Nullable Output<String> units;
 
-    public Output<String> getUnits() {
+    public Output<String> units() {
         return this.units == null ? Codegen.empty() : this.units;
     }
 

@@ -27,7 +27,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<EngineModelDefaultVersionArgs> defaultVersion;
 
-    public Output<EngineModelDefaultVersionArgs> getDefaultVersion() {
+    public Output<EngineModelDefaultVersionArgs> defaultVersion() {
         return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
@@ -38,7 +38,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -60,7 +60,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlinePredictionConsoleLogging")
       private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
-    public Output<Boolean> getOnlinePredictionConsoleLogging() {
+    public Output<Boolean> onlinePredictionConsoleLogging() {
         return this.onlinePredictionConsoleLogging == null ? Codegen.empty() : this.onlinePredictionConsoleLogging;
     }
 
@@ -82,7 +82,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlinePredictionLogging")
       private final @Nullable Output<Boolean> onlinePredictionLogging;
 
-    public Output<Boolean> getOnlinePredictionLogging() {
+    public Output<Boolean> onlinePredictionLogging() {
         return this.onlinePredictionLogging == null ? Codegen.empty() : this.onlinePredictionLogging;
     }
 
@@ -94,7 +94,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -106,7 +106,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<String> regions;
 
-    public Output<String> getRegions() {
+    public Output<String> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 

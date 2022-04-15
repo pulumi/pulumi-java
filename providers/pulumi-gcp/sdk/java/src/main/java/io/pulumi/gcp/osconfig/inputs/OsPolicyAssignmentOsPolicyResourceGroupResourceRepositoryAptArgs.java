@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
     @Import(name="archiveType", required=true)
       private final Output<String> archiveType;
 
-    public Output<String> getArchiveType() {
+    public Output<String> archiveType() {
         return this.archiveType;
     }
 
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
     @Import(name="components", required=true)
       private final Output<List<String>> components;
 
-    public Output<List<String>> getComponents() {
+    public Output<List<String>> components() {
         return this.components;
     }
 
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
     @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution;
     }
 
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
     @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
-    public Output<String> getGpgKey() {
+    public Output<String> gpgKey() {
         return this.gpgKey == null ? Codegen.empty() : this.gpgKey;
     }
 
@@ -67,7 +67,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

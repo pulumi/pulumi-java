@@ -22,7 +22,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
     @Import(name="signatureAlgorithm", required=true)
       private final Output<String> signatureAlgorithm;
 
-    public Output<String> getSignatureAlgorithm() {
+    public Output<String> signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 

@@ -33,14 +33,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
      * The number of hours between snapshots.
      * 
     */
-    public Integer getHoursInCycle() {
+    public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

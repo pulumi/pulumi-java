@@ -25,7 +25,7 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="projectMaps")
       private final @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
-    public Output<List<ReservationShareSettingsProjectMapArgs>> getProjectMaps() {
+    public Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps() {
         return this.projectMaps == null ? Codegen.empty() : this.projectMaps;
     }
 
@@ -37,7 +37,7 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="shareType")
       private final @Nullable Output<String> shareType;
 
-    public Output<String> getShareType() {
+    public Output<String> shareType() {
         return this.shareType == null ? Codegen.empty() : this.shareType;
     }
 

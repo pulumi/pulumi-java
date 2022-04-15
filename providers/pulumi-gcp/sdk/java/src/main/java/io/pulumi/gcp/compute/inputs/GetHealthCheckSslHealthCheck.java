@@ -16,42 +16,42 @@ public final class GetHealthCheckSslHealthCheck extends io.pulumi.resources.Invo
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
     @Import(name="portName", required=true)
       private final String portName;
 
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
 
     @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 
     @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
 
     @Import(name="request", required=true)
       private final String request;
 
-    public String getRequest() {
+    public String request() {
         return this.request;
     }
 
     @Import(name="response", required=true)
       private final String response;
 
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 

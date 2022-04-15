@@ -27,7 +27,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> getInternalIpOnly() {
+    public Output<Boolean> internalIpOnly() {
         return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
@@ -38,7 +38,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -49,7 +49,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -60,7 +60,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="nodeGroupAffinity")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs> nodeGroupAffinity;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs> getNodeGroupAffinity() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs> nodeGroupAffinity() {
         return this.nodeGroupAffinity == null ? Codegen.empty() : this.nodeGroupAffinity;
     }
 
@@ -71,7 +71,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<String> privateIpv6GoogleAccess;
 
-    public Output<String> getPrivateIpv6GoogleAccess() {
+    public Output<String> privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
@@ -82,7 +82,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="reservationAffinity")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs> reservationAffinity;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs> getReservationAffinity() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs> reservationAffinity() {
         return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
@@ -93,7 +93,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -104,7 +104,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="serviceAccountScopes")
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Output<List<String>> getServiceAccountScopes() {
+    public Output<List<String>> serviceAccountScopes() {
         return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
@@ -115,7 +115,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -126,7 +126,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

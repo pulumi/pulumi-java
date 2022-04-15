@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> getAllowInsecure() {
+    public Output<Boolean> allowInsecure() {
         return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="gcs")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsGetArgs> gcs;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsGetArgs> getGcs() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcsGetArgs> gcs() {
         return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     @Import(name="remote")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteGetArgs> remote;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteGetArgs> getRemote() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteGetArgs> remote() {
         return this.remote == null ? Codegen.empty() : this.remote;
     }
 

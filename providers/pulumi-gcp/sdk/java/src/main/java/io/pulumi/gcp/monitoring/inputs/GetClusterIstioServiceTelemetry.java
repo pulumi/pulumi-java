@@ -15,7 +15,7 @@ public final class GetClusterIstioServiceTelemetry extends io.pulumi.resources.I
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

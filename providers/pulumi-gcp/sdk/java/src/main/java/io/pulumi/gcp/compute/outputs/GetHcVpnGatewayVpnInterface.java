@@ -24,13 +24,13 @@ public final class GetHcVpnGatewayVpnInterface {
         this.ipAddress = ipAddress;
     }
 
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
-    public String getInterconnectAttachment() {
+    public String interconnectAttachment() {
         return this.interconnectAttachment;
     }
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 

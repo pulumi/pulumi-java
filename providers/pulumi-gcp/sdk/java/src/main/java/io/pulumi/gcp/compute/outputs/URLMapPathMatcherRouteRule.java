@@ -98,7 +98,7 @@ public final class URLMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherRouteRuleHeaderAction> getHeaderAction() {
+    public Optional<URLMapPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -106,7 +106,7 @@ public final class URLMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherRouteRuleMatchRule> getMatchRules() {
+    public List<URLMapPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
     /**
@@ -125,7 +125,7 @@ public final class URLMapPathMatcherRouteRule {
      * future without any impact on existing rules.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
@@ -138,14 +138,14 @@ public final class URLMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherRouteRuleRouteAction> getRouteAction() {
+    public Optional<URLMapPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * The backend service or backend bucket link that should be matched by this test.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -155,7 +155,7 @@ public final class URLMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
+    public Optional<URLMapPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
 

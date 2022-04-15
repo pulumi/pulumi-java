@@ -17,42 +17,42 @@ public final class GetEnvironmentConfigSoftwareConfig extends io.pulumi.resource
     @Import(name="airflowConfigOverrides", required=true)
       private final Map<String,String> airflowConfigOverrides;
 
-    public Map<String,String> getAirflowConfigOverrides() {
+    public Map<String,String> airflowConfigOverrides() {
         return this.airflowConfigOverrides;
     }
 
     @Import(name="envVariables", required=true)
       private final Map<String,String> envVariables;
 
-    public Map<String,String> getEnvVariables() {
+    public Map<String,String> envVariables() {
         return this.envVariables;
     }
 
     @Import(name="imageVersion", required=true)
       private final String imageVersion;
 
-    public String getImageVersion() {
+    public String imageVersion() {
         return this.imageVersion;
     }
 
     @Import(name="pypiPackages", required=true)
       private final Map<String,String> pypiPackages;
 
-    public Map<String,String> getPypiPackages() {
+    public Map<String,String> pypiPackages() {
         return this.pypiPackages;
     }
 
     @Import(name="pythonVersion", required=true)
       private final String pythonVersion;
 
-    public String getPythonVersion() {
+    public String pythonVersion() {
         return this.pythonVersion;
     }
 
     @Import(name="schedulerCount", required=true)
       private final Integer schedulerCount;
 
-    public Integer getSchedulerCount() {
+    public Integer schedulerCount() {
         return this.schedulerCount;
     }
 

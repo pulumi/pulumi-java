@@ -47,7 +47,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigX509ConfigKeyUsageBaseKeyUsage getBaseKeyUsage() {
+    public CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
@@ -55,7 +55,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
+    public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
@@ -63,7 +63,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
+    public List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
 

@@ -26,13 +26,13 @@ public final class GetServiceTemplateSpecVolumeSecret {
         this.secretName = secretName;
     }
 
-    public Integer getDefaultMode() {
+    public Integer defaultMode() {
         return this.defaultMode;
     }
-    public List<GetServiceTemplateSpecVolumeSecretItem> getItems() {
+    public List<GetServiceTemplateSpecVolumeSecretItem> items() {
         return this.items;
     }
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

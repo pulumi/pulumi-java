@@ -23,7 +23,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowPasswordSignup")
       private final @Nullable Output<Boolean> allowPasswordSignup;
 
-    public Output<Boolean> getAllowPasswordSignup() {
+    public Output<Boolean> allowPasswordSignup() {
         return this.allowPasswordSignup == null ? Codegen.empty() : this.allowPasswordSignup;
     }
 
@@ -36,7 +36,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableAuth")
       private final @Nullable Output<Boolean> disableAuth;
 
-    public Output<Boolean> getDisableAuth() {
+    public Output<Boolean> disableAuth() {
         return this.disableAuth == null ? Codegen.empty() : this.disableAuth;
     }
 
@@ -47,7 +47,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableEmailLinkSignin")
       private final @Nullable Output<Boolean> enableEmailLinkSignin;
 
-    public Output<Boolean> getEnableEmailLinkSignin() {
+    public Output<Boolean> enableEmailLinkSignin() {
         return this.enableEmailLinkSignin == null ? Codegen.empty() : this.enableEmailLinkSignin;
     }
 
@@ -69,7 +69,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

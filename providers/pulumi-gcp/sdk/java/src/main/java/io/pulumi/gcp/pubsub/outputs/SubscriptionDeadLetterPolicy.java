@@ -58,7 +58,7 @@ public final class SubscriptionDeadLetterPolicy {
      * since messages published to a topic with no subscriptions are lost.
      * 
     */
-    public Optional<String> getDeadLetterTopic() {
+    public Optional<String> deadLetterTopic() {
         return Optional.ofNullable(this.deadLetterTopic);
     }
     /**
@@ -72,7 +72,7 @@ public final class SubscriptionDeadLetterPolicy {
      * If this parameter is 0, a default value of 5 is used.
      * 
     */
-    public Optional<Integer> getMaxDeliveryAttempts() {
+    public Optional<Integer> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }
 

@@ -25,7 +25,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="excludeHost")
       private final @Nullable Output<Boolean> excludeHost;
 
-    public Output<Boolean> getExcludeHost() {
+    public Output<Boolean> excludeHost() {
         return this.excludeHost == null ? Codegen.empty() : this.excludeHost;
     }
 
@@ -41,7 +41,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="excludeQueryString")
       private final @Nullable Output<Boolean> excludeQueryString;
 
-    public Output<Boolean> getExcludeQueryString() {
+    public Output<Boolean> excludeQueryString() {
         return this.excludeQueryString == null ? Codegen.empty() : this.excludeQueryString;
     }
 
@@ -53,7 +53,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="excludedQueryParameters")
       private final @Nullable Output<List<String>> excludedQueryParameters;
 
-    public Output<List<String>> getExcludedQueryParameters() {
+    public Output<List<String>> excludedQueryParameters() {
         return this.excludedQueryParameters == null ? Codegen.empty() : this.excludedQueryParameters;
     }
 
@@ -64,7 +64,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="includeProtocol")
       private final @Nullable Output<Boolean> includeProtocol;
 
-    public Output<Boolean> getIncludeProtocol() {
+    public Output<Boolean> includeProtocol() {
         return this.includeProtocol == null ? Codegen.empty() : this.includeProtocol;
     }
 
@@ -79,7 +79,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="includedHeaderNames")
       private final @Nullable Output<List<String>> includedHeaderNames;
 
-    public Output<List<String>> getIncludedHeaderNames() {
+    public Output<List<String>> includedHeaderNames() {
         return this.includedHeaderNames == null ? Codegen.empty() : this.includedHeaderNames;
     }
 
@@ -91,7 +91,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="includedQueryParameters")
       private final @Nullable Output<List<String>> includedQueryParameters;
 
-    public Output<List<String>> getIncludedQueryParameters() {
+    public Output<List<String>> includedQueryParameters() {
         return this.includedQueryParameters == null ? Codegen.empty() : this.includedQueryParameters;
     }
 

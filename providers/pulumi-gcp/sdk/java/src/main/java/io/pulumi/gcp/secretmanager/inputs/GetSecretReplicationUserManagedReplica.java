@@ -17,14 +17,14 @@ public final class GetSecretReplicationUserManagedReplica extends io.pulumi.reso
     @Import(name="customerManagedEncryptions", required=true)
       private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
 
-    public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryptions() {
+    public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions() {
         return this.customerManagedEncryptions;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

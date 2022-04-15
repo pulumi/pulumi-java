@@ -79,7 +79,7 @@ public final class JobCopy {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
     */
-    public Optional<String> getCreateDisposition() {
+    public Optional<String> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
     /**
@@ -87,7 +87,7 @@ public final class JobCopy {
      * Structure is documented below.
      * 
     */
-    public Optional<JobCopyDestinationEncryptionConfiguration> getDestinationEncryptionConfiguration() {
+    public Optional<JobCopyDestinationEncryptionConfiguration> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
     /**
@@ -95,7 +95,7 @@ public final class JobCopy {
      * Structure is documented below.
      * 
     */
-    public Optional<JobCopyDestinationTable> getDestinationTable() {
+    public Optional<JobCopyDestinationTable> destinationTable() {
         return Optional.ofNullable(this.destinationTable);
     }
     /**
@@ -103,7 +103,7 @@ public final class JobCopy {
      * Structure is documented below.
      * 
     */
-    public List<JobCopySourceTable> getSourceTables() {
+    public List<JobCopySourceTable> sourceTables() {
         return this.sourceTables;
     }
     /**
@@ -117,7 +117,7 @@ public final class JobCopy {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
     */
-    public Optional<String> getWriteDisposition() {
+    public Optional<String> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
 

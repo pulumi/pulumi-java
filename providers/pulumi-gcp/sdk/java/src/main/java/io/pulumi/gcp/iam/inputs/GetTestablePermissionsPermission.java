@@ -20,7 +20,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
     @Import(name="apiDisabled", required=true)
       private final Boolean apiDisabled;
 
-    public Boolean getApiDisabled() {
+    public Boolean apiDisabled() {
         return this.apiDisabled;
     }
 
@@ -31,7 +31,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
     @Import(name="customSupportLevel", required=true)
       private final String customSupportLevel;
 
-    public String getCustomSupportLevel() {
+    public String customSupportLevel() {
         return this.customSupportLevel;
     }
 
@@ -42,7 +42,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -53,7 +53,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
     @Import(name="stage", required=true)
       private final String stage;
 
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
 
@@ -64,7 +64,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

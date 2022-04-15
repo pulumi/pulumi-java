@@ -48,35 +48,35 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
         this.uris = uris;
     }
 
-    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> getCustomSans() {
+    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans() {
         return this.customSans == null ? List.of() : this.customSans;
     }
     /**
      * Contains only valid, fully-qualified host names.
      * 
     */
-    public List<String> getDnsNames() {
+    public List<String> dnsNames() {
         return this.dnsNames == null ? List.of() : this.dnsNames;
     }
     /**
      * Contains only valid RFC 2822 E-mail addresses.
      * 
     */
-    public List<String> getEmailAddresses() {
+    public List<String> emailAddresses() {
         return this.emailAddresses == null ? List.of() : this.emailAddresses;
     }
     /**
      * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Contains only valid RFC 3986 URIs.
      * 
     */
-    public List<String> getUris() {
+    public List<String> uris() {
         return this.uris == null ? List.of() : this.uris;
     }
 

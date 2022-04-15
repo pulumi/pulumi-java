@@ -23,7 +23,7 @@ public final class PatchDeploymentPatchConfigAptArgs extends io.pulumi.resources
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
+    public Output<List<String>> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -36,7 +36,7 @@ public final class PatchDeploymentPatchConfigAptArgs extends io.pulumi.resources
     @Import(name="exclusivePackages")
       private final @Nullable Output<List<String>> exclusivePackages;
 
-    public Output<List<String>> getExclusivePackages() {
+    public Output<List<String>> exclusivePackages() {
         return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
     }
 
@@ -48,7 +48,7 @@ public final class PatchDeploymentPatchConfigAptArgs extends io.pulumi.resources
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

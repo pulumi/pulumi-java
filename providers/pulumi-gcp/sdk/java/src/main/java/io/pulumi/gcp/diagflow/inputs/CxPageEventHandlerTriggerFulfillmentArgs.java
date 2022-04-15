@@ -26,7 +26,7 @@ public final class CxPageEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     @Import(name="messages")
       private final @Nullable Output<List<CxPageEventHandlerTriggerFulfillmentMessageArgs>> messages;
 
-    public Output<List<CxPageEventHandlerTriggerFulfillmentMessageArgs>> getMessages() {
+    public Output<List<CxPageEventHandlerTriggerFulfillmentMessageArgs>> messages() {
         return this.messages == null ? Codegen.empty() : this.messages;
     }
 
@@ -37,7 +37,7 @@ public final class CxPageEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
+    public Output<Boolean> returnPartialResponses() {
         return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
@@ -48,7 +48,7 @@ public final class CxPageEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -59,7 +59,7 @@ public final class CxPageEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
+    public Output<String> webhook() {
         return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 

@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * The name of a Cloud Storage bucket.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
@@ -53,7 +53,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * least one of these regular expressions will be excluded from the scan.
      * 
     */
-    public List<String> getExcludeRegexes() {
+    public List<String> excludeRegexes() {
         return this.excludeRegexes == null ? List.of() : this.excludeRegexes;
     }
     /**
@@ -63,7 +63,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * match all files by default (this is equivalent to including .* in the list)
      * 
     */
-    public List<String> getIncludeRegexes() {
+    public List<String> includeRegexes() {
         return this.includeRegexes == null ? List.of() : this.includeRegexes;
     }
 

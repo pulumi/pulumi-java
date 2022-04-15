@@ -36,7 +36,7 @@ public final class DeviceCredential {
      * The time at which this credential becomes invalid.
      * 
     */
-    public Optional<String> getExpirationTime() {
+    public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
     /**
@@ -44,7 +44,7 @@ public final class DeviceCredential {
      * Structure is documented below.
      * 
     */
-    public DeviceCredentialPublicKey getPublicKey() {
+    public DeviceCredentialPublicKey publicKey() {
         return this.publicKey;
     }
 

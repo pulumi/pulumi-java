@@ -25,7 +25,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     @Import(name="appEngineRouting")
       private final @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
 
-    public Output<JobAppEngineHttpTargetAppEngineRoutingArgs> getAppEngineRouting() {
+    public Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting() {
         return this.appEngineRouting == null ? Codegen.empty() : this.appEngineRouting;
     }
 
@@ -39,7 +39,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -51,7 +51,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -62,7 +62,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -77,7 +77,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     @Import(name="relativeUri", required=true)
       private final Output<String> relativeUri;
 
-    public Output<String> getRelativeUri() {
+    public Output<String> relativeUri() {
         return this.relativeUri;
     }
 

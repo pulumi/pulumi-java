@@ -38,7 +38,7 @@ public final class CertificateConfigSubjectConfig {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigSubjectConfigSubject getSubject() {
+    public CertificateConfigSubjectConfigSubject subject() {
         return this.subject;
     }
     /**
@@ -46,7 +46,7 @@ public final class CertificateConfigSubjectConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<CertificateConfigSubjectConfigSubjectAltName> getSubjectAltName() {
+    public Optional<CertificateConfigSubjectConfigSubjectAltName> subjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }
 

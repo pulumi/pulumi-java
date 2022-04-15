@@ -24,7 +24,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="auditIntervalSeconds")
       private final @Nullable Output<String> auditIntervalSeconds;
 
-    public Output<String> getAuditIntervalSeconds() {
+    public Output<String> auditIntervalSeconds() {
         return this.auditIntervalSeconds == null ? Codegen.empty() : this.auditIntervalSeconds;
     }
 
@@ -35,7 +35,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="exemptableNamespaces")
       private final @Nullable Output<List<String>> exemptableNamespaces;
 
-    public Output<List<String>> getExemptableNamespaces() {
+    public Output<List<String>> exemptableNamespaces() {
         return this.exemptableNamespaces == null ? Codegen.empty() : this.exemptableNamespaces;
     }
 
@@ -57,7 +57,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="logDeniesEnabled")
       private final @Nullable Output<Boolean> logDeniesEnabled;
 
-    public Output<Boolean> getLogDeniesEnabled() {
+    public Output<Boolean> logDeniesEnabled() {
         return this.logDeniesEnabled == null ? Codegen.empty() : this.logDeniesEnabled;
     }
 
@@ -68,7 +68,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="referentialRulesEnabled")
       private final @Nullable Output<Boolean> referentialRulesEnabled;
 
-    public Output<Boolean> getReferentialRulesEnabled() {
+    public Output<Boolean> referentialRulesEnabled() {
         return this.referentialRulesEnabled == null ? Codegen.empty() : this.referentialRulesEnabled;
     }
 
@@ -79,7 +79,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
     @Import(name="templateLibraryInstalled")
       private final @Nullable Output<Boolean> templateLibraryInstalled;
 
-    public Output<Boolean> getTemplateLibraryInstalled() {
+    public Output<Boolean> templateLibraryInstalled() {
         return this.templateLibraryInstalled == null ? Codegen.empty() : this.templateLibraryInstalled;
     }
 

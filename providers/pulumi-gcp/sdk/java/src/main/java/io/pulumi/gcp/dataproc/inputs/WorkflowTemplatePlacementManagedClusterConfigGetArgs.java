@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="autoscalingConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> getAutoscalingConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> autoscalingConfig() {
         return this.autoscalingConfig == null ? Codegen.empty() : this.autoscalingConfig;
     }
 
@@ -47,7 +47,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="encryptionConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> getEncryptionConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -58,7 +58,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="endpointConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> endpointConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> getEndpointConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> endpointConfig() {
         return this.endpointConfig == null ? Codegen.empty() : this.endpointConfig;
     }
 
@@ -69,7 +69,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="gceClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> getGceClusterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> gceClusterConfig() {
         return this.gceClusterConfig == null ? Codegen.empty() : this.gceClusterConfig;
     }
 
@@ -80,7 +80,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="gkeClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> gkeClusterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> getGkeClusterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> gkeClusterConfig() {
         return this.gkeClusterConfig == null ? Codegen.empty() : this.gkeClusterConfig;
     }
 
@@ -91,7 +91,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="initializationActions")
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> initializationActions;
 
-    public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> getInitializationActions() {
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> initializationActions() {
         return this.initializationActions == null ? Codegen.empty() : this.initializationActions;
     }
 
@@ -102,7 +102,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="lifecycleConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> getLifecycleConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> lifecycleConfig() {
         return this.lifecycleConfig == null ? Codegen.empty() : this.lifecycleConfig;
     }
 
@@ -113,7 +113,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="masterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> masterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> getMasterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> masterConfig() {
         return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
     }
 
@@ -124,7 +124,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="metastoreConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> getMetastoreConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> metastoreConfig() {
         return this.metastoreConfig == null ? Codegen.empty() : this.metastoreConfig;
     }
 
@@ -135,7 +135,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> secondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Codegen.empty() : this.secondaryWorkerConfig;
     }
 
@@ -146,7 +146,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="securityConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> securityConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> getSecurityConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> securityConfig() {
         return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 
@@ -157,7 +157,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="softwareConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> getSoftwareConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -168,7 +168,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="stagingBucket")
       private final @Nullable Output<String> stagingBucket;
 
-    public Output<String> getStagingBucket() {
+    public Output<String> stagingBucket() {
         return this.stagingBucket == null ? Codegen.empty() : this.stagingBucket;
     }
 
@@ -179,7 +179,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="tempBucket")
       private final @Nullable Output<String> tempBucket;
 
-    public Output<String> getTempBucket() {
+    public Output<String> tempBucket() {
         return this.tempBucket == null ? Codegen.empty() : this.tempBucket;
     }
 
@@ -190,7 +190,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
     @Import(name="workerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> workerConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> getWorkerConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 

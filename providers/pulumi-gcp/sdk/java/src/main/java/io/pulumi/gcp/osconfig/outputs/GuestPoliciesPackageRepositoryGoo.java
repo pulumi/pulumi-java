@@ -38,14 +38,14 @@ public final class GuestPoliciesPackageRepositoryGoo {
      * could potentially have conflicting assignments.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The url of the repository.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -25,7 +25,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
     @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> getDestIpRanges() {
+    public Output<List<String>> destIpRanges() {
         return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
     @Import(name="layer4Configs", required=true)
       private final Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
 
-    public Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> getLayer4Configs() {
+    public Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs() {
         return this.layer4Configs;
     }
 
@@ -49,7 +49,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
+    public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 

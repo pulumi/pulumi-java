@@ -64,7 +64,7 @@ public final class BudgetAllUpdatesRule {
      * Account Users IAM roles for the target account.
      * 
     */
-    public Optional<Boolean> getDisableDefaultIamRecipients() {
+    public Optional<Boolean> disableDefaultIamRecipients() {
         return Optional.ofNullable(this.disableDefaultIamRecipients);
     }
     /**
@@ -74,7 +74,7 @@ public final class BudgetAllUpdatesRule {
      * A maximum of 5 channels are allowed.
      * 
     */
-    public List<String> getMonitoringNotificationChannels() {
+    public List<String> monitoringNotificationChannels() {
         return this.monitoringNotificationChannels == null ? List.of() : this.monitoringNotificationChannels;
     }
     /**
@@ -84,7 +84,7 @@ public final class BudgetAllUpdatesRule {
      * at regular intervals to the topic.
      * 
     */
-    public Optional<String> getPubsubTopic() {
+    public Optional<String> pubsubTopic() {
         return Optional.ofNullable(this.pubsubTopic);
     }
     /**
@@ -93,7 +93,7 @@ public final class BudgetAllUpdatesRule {
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 
     */
-    public Optional<String> getSchemaVersion() {
+    public Optional<String> schemaVersion() {
         return Optional.ofNullable(this.schemaVersion);
     }
 

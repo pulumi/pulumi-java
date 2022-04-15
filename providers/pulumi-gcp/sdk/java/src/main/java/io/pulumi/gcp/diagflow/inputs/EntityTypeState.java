@@ -25,7 +25,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
@@ -48,7 +48,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="entities")
       private final @Nullable Output<List<EntityTypeEntityGetArgs>> entities;
 
-    public Output<List<EntityTypeEntityGetArgs>> getEntities() {
+    public Output<List<EntityTypeEntityGetArgs>> entities() {
         return this.entities == null ? Codegen.empty() : this.entities;
     }
 
@@ -64,7 +64,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -75,7 +75,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -87,7 +87,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

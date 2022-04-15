@@ -18,7 +18,7 @@ public final class FeatureState {
         this.states = states;
     }
 
-    public List<FeatureStateState> getStates() {
+    public List<FeatureStateState> states() {
         return this.states == null ? List.of() : this.states;
     }
 

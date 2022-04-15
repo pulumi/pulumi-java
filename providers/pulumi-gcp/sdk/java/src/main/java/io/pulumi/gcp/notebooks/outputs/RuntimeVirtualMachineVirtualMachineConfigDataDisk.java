@@ -153,7 +153,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * detached from the instance).
      * 
     */
-    public Optional<Boolean> getAutoDelete() {
+    public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
@@ -163,7 +163,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * root filesystem.
      * 
     */
-    public Optional<Boolean> getBoot() {
+    public Optional<Boolean> boot() {
         return Optional.ofNullable(this.boot);
     }
     /**
@@ -179,7 +179,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * is only applicable for persistent disks.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
@@ -191,7 +191,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * options. ``
      * 
     */
-    public List<String> getGuestOsFeatures() {
+    public List<String> guestOsFeatures() {
         return this.guestOsFeatures == null ? List.of() : this.guestOsFeatures;
     }
     /**
@@ -201,7 +201,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * to an instance, each disk would have a unique index number.
      * 
     */
-    public Optional<Integer> getIndex() {
+    public Optional<Integer> index() {
         return Optional.ofNullable(this.index);
     }
     /**
@@ -214,7 +214,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * Structure is documented below.
      * 
     */
-    public Optional<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams> getInitializeParams() {
+    public Optional<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams> initializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
     /**
@@ -226,7 +226,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
      * 
     */
-    public Optional<String> getInterface_() {
+    public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
@@ -235,7 +235,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * disks.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
@@ -243,7 +243,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * Output only. Any valid publicly visible licenses.
      * 
     */
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses == null ? List.of() : this.licenses;
     }
     /**
@@ -252,7 +252,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * the disk in READ_WRITE mode.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
@@ -260,7 +260,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * Persistent Disk resource.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
@@ -269,7 +269,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

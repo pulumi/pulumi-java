@@ -24,7 +24,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxBackoffDuration")
       private final @Nullable Output<String> maxBackoffDuration;
 
-    public Output<String> getMaxBackoffDuration() {
+    public Output<String> maxBackoffDuration() {
         return this.maxBackoffDuration == null ? Codegen.empty() : this.maxBackoffDuration;
     }
 
@@ -38,7 +38,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxDoublings")
       private final @Nullable Output<Integer> maxDoublings;
 
-    public Output<Integer> getMaxDoublings() {
+    public Output<Integer> maxDoublings() {
         return this.maxDoublings == null ? Codegen.empty() : this.maxDoublings;
     }
 
@@ -51,7 +51,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxRetryDuration")
       private final @Nullable Output<String> maxRetryDuration;
 
-    public Output<String> getMaxRetryDuration() {
+    public Output<String> maxRetryDuration() {
         return this.maxRetryDuration == null ? Codegen.empty() : this.maxRetryDuration;
     }
 
@@ -63,7 +63,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minBackoffDuration")
       private final @Nullable Output<String> minBackoffDuration;
 
-    public Output<String> getMinBackoffDuration() {
+    public Output<String> minBackoffDuration() {
         return this.minBackoffDuration == null ? Codegen.empty() : this.minBackoffDuration;
     }
 
@@ -76,7 +76,7 @@ public final class JobRetryConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="retryCount")
       private final @Nullable Output<Integer> retryCount;
 
-    public Output<Integer> getRetryCount() {
+    public Output<Integer> retryCount() {
         return this.retryCount == null ? Codegen.empty() : this.retryCount;
     }
 

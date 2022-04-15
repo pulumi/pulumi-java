@@ -21,7 +21,7 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class GetGroupMembershipsMembershipMemberKey extends io.pulumi.reso
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

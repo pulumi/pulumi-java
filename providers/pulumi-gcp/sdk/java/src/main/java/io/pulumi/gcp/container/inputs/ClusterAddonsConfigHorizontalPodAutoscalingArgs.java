@@ -22,7 +22,7 @@ public final class ClusterAddonsConfigHorizontalPodAutoscalingArgs extends io.pu
     @Import(name="disabled", required=true)
       private final Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
 

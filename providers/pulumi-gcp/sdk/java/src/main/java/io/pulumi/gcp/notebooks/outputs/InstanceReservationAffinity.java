@@ -44,21 +44,21 @@ public final class InstanceReservationAffinity {
      * Possible values are `NO_RESERVATION`, `ANY_RESERVATION`, and `SPECIFIC_RESERVATION`.
      * 
     */
-    public String getConsumeReservationType() {
+    public String consumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Corresponds to the label key of reservation resource.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Corresponds to the label values of reservation resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

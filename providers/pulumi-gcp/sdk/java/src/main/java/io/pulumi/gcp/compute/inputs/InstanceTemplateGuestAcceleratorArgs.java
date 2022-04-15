@@ -22,7 +22,7 @@ public final class InstanceTemplateGuestAcceleratorArgs extends io.pulumi.resour
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceTemplateGuestAcceleratorArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -56,38 +56,38 @@ public final class GetDefaultServiceAccountResult {
      * The display name for the service account.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Email address of the default service account used by VMs running in this project
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The fully-qualified name of the service account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The unique id of the service account.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
 

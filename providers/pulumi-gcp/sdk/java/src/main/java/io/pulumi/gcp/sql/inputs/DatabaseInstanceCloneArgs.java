@@ -22,7 +22,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     @Import(name="pointInTime")
       private final @Nullable Output<String> pointInTime;
 
-    public Output<String> getPointInTime() {
+    public Output<String> pointInTime() {
         return this.pointInTime == null ? Codegen.empty() : this.pointInTime;
     }
 
@@ -33,7 +33,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceInstanceName", required=true)
       private final Output<String> sourceInstanceName;
 
-    public Output<String> getSourceInstanceName() {
+    public Output<String> sourceInstanceName() {
         return this.sourceInstanceName;
     }
 

@@ -22,35 +22,35 @@ public final class InstanceFromTemplateSchedulingArgs extends io.pulumi.resource
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> getAutomaticRestart() {
+    public Output<Boolean> automaticRestart() {
         return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> getMinNodeCpus() {
+    public Output<Integer> minNodeCpus() {
         return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> getNodeAffinities() {
+    public Output<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> nodeAffinities() {
         return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
     @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> getOnHostMaintenance() {
+    public Output<String> onHostMaintenance() {
         return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 

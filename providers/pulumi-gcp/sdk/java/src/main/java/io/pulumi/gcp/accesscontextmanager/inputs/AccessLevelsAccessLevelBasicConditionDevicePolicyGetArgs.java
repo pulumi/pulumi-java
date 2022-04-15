@@ -27,7 +27,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="allowedDeviceManagementLevels")
       private final @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
-    public Output<List<String>> getAllowedDeviceManagementLevels() {
+    public Output<List<String>> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? Codegen.empty() : this.allowedDeviceManagementLevels;
     }
 
@@ -40,7 +40,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="allowedEncryptionStatuses")
       private final @Nullable Output<List<String>> allowedEncryptionStatuses;
 
-    public Output<List<String>> getAllowedEncryptionStatuses() {
+    public Output<List<String>> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? Codegen.empty() : this.allowedEncryptionStatuses;
     }
 
@@ -53,7 +53,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="osConstraints")
       private final @Nullable Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
 
-    public Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs>> getOsConstraints() {
+    public Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintGetArgs>> osConstraints() {
         return this.osConstraints == null ? Codegen.empty() : this.osConstraints;
     }
 
@@ -64,7 +64,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="requireAdminApproval")
       private final @Nullable Output<Boolean> requireAdminApproval;
 
-    public Output<Boolean> getRequireAdminApproval() {
+    public Output<Boolean> requireAdminApproval() {
         return this.requireAdminApproval == null ? Codegen.empty() : this.requireAdminApproval;
     }
 
@@ -75,7 +75,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="requireCorpOwned")
       private final @Nullable Output<Boolean> requireCorpOwned;
 
-    public Output<Boolean> getRequireCorpOwned() {
+    public Output<Boolean> requireCorpOwned() {
         return this.requireCorpOwned == null ? Codegen.empty() : this.requireCorpOwned;
     }
 
@@ -87,7 +87,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyGetArgs exte
     @Import(name="requireScreenLock")
       private final @Nullable Output<Boolean> requireScreenLock;
 
-    public Output<Boolean> getRequireScreenLock() {
+    public Output<Boolean> requireScreenLock() {
         return this.requireScreenLock == null ? Codegen.empty() : this.requireScreenLock;
     }
 

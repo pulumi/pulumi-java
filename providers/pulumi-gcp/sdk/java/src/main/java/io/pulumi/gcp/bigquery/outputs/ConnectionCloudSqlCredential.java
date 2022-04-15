@@ -34,14 +34,14 @@ public final class ConnectionCloudSqlCredential {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Username for database.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

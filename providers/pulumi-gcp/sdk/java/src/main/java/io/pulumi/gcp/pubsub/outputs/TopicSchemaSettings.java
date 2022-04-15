@@ -41,7 +41,7 @@ public final class TopicSchemaSettings {
      * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
      * 
     */
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
@@ -51,7 +51,7 @@ public final class TopicSchemaSettings {
      * if the schema has been deleted.
      * 
     */
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 

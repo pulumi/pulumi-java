@@ -46,7 +46,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      * IPv4 or IPv6 format.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -54,14 +54,14 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      * (and its containing state/province or country) within the broader umbrella region category.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * A broad region category in which the IP address is located.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

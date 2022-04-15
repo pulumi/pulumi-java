@@ -24,7 +24,7 @@ public final class ClusterNotificationConfigPubsubGetArgs extends io.pulumi.reso
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterNotificationConfigPubsubGetArgs extends io.pulumi.reso
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

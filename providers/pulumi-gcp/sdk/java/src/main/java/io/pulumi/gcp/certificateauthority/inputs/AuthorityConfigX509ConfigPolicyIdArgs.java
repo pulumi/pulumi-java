@@ -22,7 +22,7 @@ public final class AuthorityConfigX509ConfigPolicyIdArgs extends io.pulumi.resou
     @Import(name="objectIdPaths", required=true)
       private final Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> getObjectIdPaths() {
+    public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 

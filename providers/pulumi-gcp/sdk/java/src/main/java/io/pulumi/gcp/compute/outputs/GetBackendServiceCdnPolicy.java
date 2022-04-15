@@ -46,31 +46,31 @@ public final class GetBackendServiceCdnPolicy {
         this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
     }
 
-    public List<GetBackendServiceCdnPolicyCacheKeyPolicy> getCacheKeyPolicies() {
+    public List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies() {
         return this.cacheKeyPolicies;
     }
-    public String getCacheMode() {
+    public String cacheMode() {
         return this.cacheMode;
     }
-    public Integer getClientTtl() {
+    public Integer clientTtl() {
         return this.clientTtl;
     }
-    public Integer getDefaultTtl() {
+    public Integer defaultTtl() {
         return this.defaultTtl;
     }
-    public Integer getMaxTtl() {
+    public Integer maxTtl() {
         return this.maxTtl;
     }
-    public Boolean getNegativeCaching() {
+    public Boolean negativeCaching() {
         return this.negativeCaching;
     }
-    public List<GetBackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
+    public List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies() {
         return this.negativeCachingPolicies;
     }
-    public Integer getServeWhileStale() {
+    public Integer serveWhileStale() {
         return this.serveWhileStale;
     }
-    public Integer getSignedUrlCacheMaxAgeSec() {
+    public Integer signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
     }
 

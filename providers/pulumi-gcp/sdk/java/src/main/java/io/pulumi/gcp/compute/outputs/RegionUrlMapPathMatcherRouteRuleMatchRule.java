@@ -103,7 +103,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * be specified.
      * 
     */
-    public Optional<String> getFullPathMatch() {
+    public Optional<String> fullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
     /**
@@ -112,7 +112,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch> getHeaderMatches() {
+    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
     /**
@@ -120,7 +120,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * Defaults to false.
      * 
     */
-    public Optional<Boolean> getIgnoreCase() {
+    public Optional<Boolean> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
     /**
@@ -138,7 +138,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter> getMetadataFilters() {
+    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters() {
         return this.metadataFilters == null ? List.of() : this.metadataFilters;
     }
     /**
@@ -147,7 +147,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * must be set.
      * 
     */
-    public Optional<String> getPrefixMatch() {
+    public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
@@ -156,7 +156,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> getQueryParameterMatches() {
+    public List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }
     /**
@@ -166,7 +166,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
      * exactMatch and regexMatch must be set.
      * 
     */
-    public Optional<String> getRegexMatch() {
+    public Optional<String> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
 

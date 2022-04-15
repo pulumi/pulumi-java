@@ -51,37 +51,37 @@ public final class GetEnvironmentConfigNodeConfig {
         this.zone = zone;
     }
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
-    public Boolean getEnableIpMasqAgent() {
+    public Boolean enableIpMasqAgent() {
         return this.enableIpMasqAgent;
     }
-    public List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> getIpAllocationPolicies() {
+    public List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies() {
         return this.ipAllocationPolicies;
     }
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
-    public Integer getMaxPodsPerNode() {
+    public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

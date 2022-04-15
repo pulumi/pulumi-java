@@ -25,7 +25,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
     @Import(name="scheduleDeadlineTime")
       private final @Nullable Output<String> scheduleDeadlineTime;
 
-    public Output<String> getScheduleDeadlineTime() {
+    public Output<String> scheduleDeadlineTime() {
         return this.scheduleDeadlineTime == null ? Codegen.empty() : this.scheduleDeadlineTime;
     }
 
@@ -54,7 +54,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

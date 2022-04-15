@@ -65,7 +65,7 @@ public final class SloRequestBasedSliGoodTotalRatio {
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public Optional<String> getBadServiceFilter() {
+    public Optional<String> badServiceFilter() {
         return Optional.ofNullable(this.badServiceFilter);
     }
     /**
@@ -77,7 +77,7 @@ public final class SloRequestBasedSliGoodTotalRatio {
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public Optional<String> getGoodServiceFilter() {
+    public Optional<String> goodServiceFilter() {
         return Optional.ofNullable(this.goodServiceFilter);
     }
     /**
@@ -89,7 +89,7 @@ public final class SloRequestBasedSliGoodTotalRatio {
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public Optional<String> getTotalServiceFilter() {
+    public Optional<String> totalServiceFilter() {
         return Optional.ofNullable(this.totalServiceFilter);
     }
 

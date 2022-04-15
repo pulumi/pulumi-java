@@ -25,7 +25,7 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
     @Import(name="configMapRef")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef;
 
-    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> getConfigMapRef() {
+    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef() {
         return this.configMapRef == null ? Codegen.empty() : this.configMapRef;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
     @Import(name="secretRef")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef;
 
-    public Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> getSecretRef() {
+    public Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 

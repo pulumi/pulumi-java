@@ -22,7 +22,7 @@ public final class PatchDeploymentOneTimeScheduleArgs extends io.pulumi.resource
     @Import(name="executeTime", required=true)
       private final Output<String> executeTime;
 
-    public Output<String> getExecuteTime() {
+    public Output<String> executeTime() {
         return this.executeTime;
     }
 

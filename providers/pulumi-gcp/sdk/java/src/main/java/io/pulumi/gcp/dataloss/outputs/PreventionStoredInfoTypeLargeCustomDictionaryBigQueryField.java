@@ -36,7 +36,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Structure is documented below.
      * 
     */
-    public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField getField() {
+    public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field() {
         return this.field;
     }
     /**
@@ -44,7 +44,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Structure is documented below.
      * 
     */
-    public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable getTable() {
+    public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table() {
         return this.table;
     }
 

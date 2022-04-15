@@ -22,7 +22,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
-    public Output<String> getAnalyticsRegion() {
+    public Output<String> analyticsRegion() {
         return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
@@ -47,7 +47,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
@@ -58,7 +58,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -80,7 +80,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -105,7 +105,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
@@ -118,7 +118,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
-    public Output<String> getRuntimeType() {
+    public Output<String> runtimeType() {
         return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
     }
 
@@ -130,7 +130,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionType")
       private final @Nullable Output<String> subscriptionType;
 
-    public Output<String> getSubscriptionType() {
+    public Output<String> subscriptionType() {
         return this.subscriptionType == null ? Codegen.empty() : this.subscriptionType;
     }
 

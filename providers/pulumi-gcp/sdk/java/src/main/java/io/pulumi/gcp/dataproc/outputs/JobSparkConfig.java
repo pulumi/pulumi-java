@@ -75,52 +75,52 @@ public final class JobSparkConfig {
      * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
     */
-    public List<String> getArchiveUris() {
+    public List<String> archiveUris() {
         return this.archiveUris == null ? List.of() : this.archiveUris;
     }
     /**
      * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
     */
-    public List<String> getFileUris() {
+    public List<String> fileUris() {
         return this.fileUris == null ? List.of() : this.fileUris;
     }
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
-    public Optional<JobSparkConfigLoggingConfig> getLoggingConfig() {
+    public Optional<JobSparkConfigLoggingConfig> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
      * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
      * 
     */
-    public Optional<String> getMainClass() {
+    public Optional<String> mainClass() {
         return Optional.ofNullable(this.mainClass);
     }
     /**
      * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
      * 
     */
-    public Optional<String> getMainJarFileUri() {
+    public Optional<String> mainJarFileUri() {
         return Optional.ofNullable(this.mainJarFileUri);
     }
     /**
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 

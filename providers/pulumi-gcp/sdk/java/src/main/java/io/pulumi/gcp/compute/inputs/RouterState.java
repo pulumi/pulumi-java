@@ -25,7 +25,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgp")
       private final @Nullable Output<RouterBgpGetArgs> bgp;
 
-    public Output<RouterBgpGetArgs> getBgp() {
+    public Output<RouterBgpGetArgs> bgp() {
         return this.bgp == null ? Codegen.empty() : this.bgp;
     }
 
@@ -36,7 +36,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -47,7 +47,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedInterconnectRouter")
       private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Output<Boolean> getEncryptedInterconnectRouter() {
+    public Output<Boolean> encryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter == null ? Codegen.empty() : this.encryptedInterconnectRouter;
     }
 
@@ -76,7 +76,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -87,7 +87,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -99,7 +99,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -110,7 +110,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -121,7 +121,7 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 

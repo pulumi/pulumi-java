@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerNamedPort {
      * - Version name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -42,7 +42,7 @@ public final class RegionInstanceGroupManagerNamedPort {
      * ***
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

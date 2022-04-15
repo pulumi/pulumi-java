@@ -16,7 +16,7 @@ public final class InstanceFromMachineImageScratchDisk {
         this.interface_ = interface_;
     }
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 

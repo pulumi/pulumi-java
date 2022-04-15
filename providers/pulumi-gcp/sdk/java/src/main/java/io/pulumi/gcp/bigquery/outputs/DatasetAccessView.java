@@ -41,14 +41,14 @@ public final class DatasetAccessView {
      * The ID of the dataset containing this table.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * The ID of the project containing this table.
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
     /**
@@ -57,7 +57,7 @@ public final class DatasetAccessView {
      * is 1,024 characters.
      * 
     */
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

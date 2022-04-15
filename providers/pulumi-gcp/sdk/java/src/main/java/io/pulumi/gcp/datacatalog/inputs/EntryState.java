@@ -27,7 +27,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryDateShardedSpecs")
       private final @Nullable Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
 
-    public Output<List<EntryBigqueryDateShardedSpecGetArgs>> getBigqueryDateShardedSpecs() {
+    public Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs() {
         return this.bigqueryDateShardedSpecs == null ? Codegen.empty() : this.bigqueryDateShardedSpecs;
     }
 
@@ -38,7 +38,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryTableSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
 
-    public Output<List<EntryBigqueryTableSpecGetArgs>> getBigqueryTableSpecs() {
+    public Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs() {
         return this.bigqueryTableSpecs == null ? Codegen.empty() : this.bigqueryTableSpecs;
     }
 
@@ -49,7 +49,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -72,7 +72,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryGroup")
       private final @Nullable Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup == null ? Codegen.empty() : this.entryGroup;
     }
 
@@ -83,7 +83,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryId")
       private final @Nullable Output<String> entryId;
 
-    public Output<String> getEntryId() {
+    public Output<String> entryId() {
         return this.entryId == null ? Codegen.empty() : this.entryId;
     }
 
@@ -95,7 +95,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsFilesetSpec")
       private final @Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
 
-    public Output<EntryGcsFilesetSpecGetArgs> getGcsFilesetSpec() {
+    public Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec() {
         return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
     }
 
@@ -106,7 +106,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="integratedSystem")
       private final @Nullable Output<String> integratedSystem;
 
-    public Output<String> getIntegratedSystem() {
+    public Output<String> integratedSystem() {
         return this.integratedSystem == null ? Codegen.empty() : this.integratedSystem;
     }
 
@@ -122,7 +122,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
-    public Output<String> getLinkedResource() {
+    public Output<String> linkedResource() {
         return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
     }
 
@@ -135,7 +135,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -149,7 +149,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -162,7 +162,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -175,7 +175,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
-    public Output<String> getUserSpecifiedSystem() {
+    public Output<String> userSpecifiedSystem() {
         return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
     }
 
@@ -190,7 +190,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
-    public Output<String> getUserSpecifiedType() {
+    public Output<String> userSpecifiedType() {
         return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
     }
 

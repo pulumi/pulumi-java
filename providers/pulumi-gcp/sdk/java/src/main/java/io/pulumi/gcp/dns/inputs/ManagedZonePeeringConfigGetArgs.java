@@ -22,7 +22,7 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
     @Import(name="targetNetwork", required=true)
       private final Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 
-    public Output<ManagedZonePeeringConfigTargetNetworkGetArgs> getTargetNetwork() {
+    public Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork() {
         return this.targetNetwork;
     }
 

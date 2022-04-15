@@ -59,35 +59,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
      * Exec resource
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExec> getExec() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExec> exec() {
         return Optional.ofNullable(this.exec);
     }
     /**
      * A remote or local source.
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFile> getFile() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Package resource
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkg> getPkg() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkg> pkg() {
         return Optional.ofNullable(this.pkg);
     }
     /**
      * Package repository resource
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepository> getRepository() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepository> repository() {
         return Optional.ofNullable(this.repository);
     }
 

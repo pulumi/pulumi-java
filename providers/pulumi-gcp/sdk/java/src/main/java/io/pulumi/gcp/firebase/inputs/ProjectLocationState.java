@@ -23,7 +23,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
     @Import(name="locationId")
       private final @Nullable Output<String> locationId;
 
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId == null ? Codegen.empty() : this.locationId;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

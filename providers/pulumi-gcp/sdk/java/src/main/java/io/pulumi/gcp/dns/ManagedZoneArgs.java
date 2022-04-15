@@ -29,7 +29,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsName", required=true)
       private final Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnssecConfig")
       private final @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig;
 
-    public Output<ManagedZoneDnssecConfigArgs> getDnssecConfig() {
+    public Output<ManagedZoneDnssecConfigArgs> dnssecConfig() {
         return this.dnssecConfig == null ? Codegen.empty() : this.dnssecConfig;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -77,7 +77,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forwardingConfig")
       private final @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
-    public Output<ManagedZoneForwardingConfigArgs> getForwardingConfig() {
+    public Output<ManagedZoneForwardingConfigArgs> forwardingConfig() {
         return this.forwardingConfig == null ? Codegen.empty() : this.forwardingConfig;
     }
 
@@ -88,7 +88,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -100,7 +100,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -113,7 +113,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringConfig")
       private final @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
 
-    public Output<ManagedZonePeeringConfigArgs> getPeeringConfig() {
+    public Output<ManagedZonePeeringConfigArgs> peeringConfig() {
         return this.peeringConfig == null ? Codegen.empty() : this.peeringConfig;
     }
 
@@ -126,7 +126,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateVisibilityConfig")
       private final @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
-    public Output<ManagedZonePrivateVisibilityConfigArgs> getPrivateVisibilityConfig() {
+    public Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig() {
         return this.privateVisibilityConfig == null ? Codegen.empty() : this.privateVisibilityConfig;
     }
 
@@ -138,7 +138,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -151,7 +151,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reverseLookup")
       private final @Nullable Output<Boolean> reverseLookup;
 
-    public Output<Boolean> getReverseLookup() {
+    public Output<Boolean> reverseLookup() {
         return this.reverseLookup == null ? Codegen.empty() : this.reverseLookup;
     }
 
@@ -163,7 +163,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceDirectoryConfig")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
-    public Output<ManagedZoneServiceDirectoryConfigArgs> getServiceDirectoryConfig() {
+    public Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig() {
         return this.serviceDirectoryConfig == null ? Codegen.empty() : this.serviceDirectoryConfig;
     }
 
@@ -177,7 +177,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

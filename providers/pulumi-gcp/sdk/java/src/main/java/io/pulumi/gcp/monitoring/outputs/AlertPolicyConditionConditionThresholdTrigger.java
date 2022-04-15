@@ -41,7 +41,7 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
      * condition to be triggered.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
@@ -50,7 +50,7 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
      * condition to be triggered.
      * 
     */
-    public Optional<Double> getPercent() {
+    public Optional<Double> percent() {
         return Optional.ofNullable(this.percent);
     }
 

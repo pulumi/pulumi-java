@@ -29,7 +29,7 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="aggregationInterval")
       private final @Nullable Output<String> aggregationInterval;
 
-    public Output<String> getAggregationInterval() {
+    public Output<String> aggregationInterval() {
         return this.aggregationInterval == null ? Codegen.empty() : this.aggregationInterval;
     }
 
@@ -42,7 +42,7 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="filterExpr")
       private final @Nullable Output<String> filterExpr;
 
-    public Output<String> getFilterExpr() {
+    public Output<String> filterExpr() {
         return this.filterExpr == null ? Codegen.empty() : this.filterExpr;
     }
 
@@ -57,7 +57,7 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="flowSampling")
       private final @Nullable Output<Double> flowSampling;
 
-    public Output<Double> getFlowSampling() {
+    public Output<Double> flowSampling() {
         return this.flowSampling == null ? Codegen.empty() : this.flowSampling;
     }
 
@@ -72,7 +72,7 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -84,7 +84,7 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="metadataFields")
       private final @Nullable Output<List<String>> metadataFields;
 
-    public Output<List<String>> getMetadataFields() {
+    public Output<List<String>> metadataFields() {
         return this.metadataFields == null ? Codegen.empty() : this.metadataFields;
     }
 

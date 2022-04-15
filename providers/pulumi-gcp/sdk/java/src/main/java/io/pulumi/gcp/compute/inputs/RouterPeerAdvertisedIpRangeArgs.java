@@ -22,7 +22,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
     @Import(name="range", required=true)
       private final Output<String> range;
 
-    public Output<String> getRange() {
+    public Output<String> range() {
         return this.range;
     }
 

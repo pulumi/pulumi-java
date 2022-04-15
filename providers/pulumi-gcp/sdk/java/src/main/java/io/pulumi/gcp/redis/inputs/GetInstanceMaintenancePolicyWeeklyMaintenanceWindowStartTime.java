@@ -15,28 +15,28 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
     @Import(name="hours", required=true)
       private final Integer hours;
 
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
 
     @Import(name="minutes", required=true)
       private final Integer minutes;
 
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 
     @Import(name="nanos", required=true)
       private final Integer nanos;
 
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
       private final Integer seconds;
 
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

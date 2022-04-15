@@ -61,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * services depend on this service when destroying it.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableDependentServices() {
+    public Output</* @Nullable */ Boolean> disableDependentServices() {
         return this.disableDependentServices;
     }
     /**
@@ -75,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableOnDestroy() {
+    public Output</* @Nullable */ Boolean> disableOnDestroy() {
         return this.disableOnDestroy;
     }
     /**
@@ -91,7 +91,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -105,7 +105,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The service to enable.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

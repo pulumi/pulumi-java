@@ -20,63 +20,63 @@ public final class GetBackendServiceCdnPolicy extends io.pulumi.resources.Invoke
     @Import(name="cacheKeyPolicies", required=true)
       private final List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies;
 
-    public List<GetBackendServiceCdnPolicyCacheKeyPolicy> getCacheKeyPolicies() {
+    public List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies() {
         return this.cacheKeyPolicies;
     }
 
     @Import(name="cacheMode", required=true)
       private final String cacheMode;
 
-    public String getCacheMode() {
+    public String cacheMode() {
         return this.cacheMode;
     }
 
     @Import(name="clientTtl", required=true)
       private final Integer clientTtl;
 
-    public Integer getClientTtl() {
+    public Integer clientTtl() {
         return this.clientTtl;
     }
 
     @Import(name="defaultTtl", required=true)
       private final Integer defaultTtl;
 
-    public Integer getDefaultTtl() {
+    public Integer defaultTtl() {
         return this.defaultTtl;
     }
 
     @Import(name="maxTtl", required=true)
       private final Integer maxTtl;
 
-    public Integer getMaxTtl() {
+    public Integer maxTtl() {
         return this.maxTtl;
     }
 
     @Import(name="negativeCaching", required=true)
       private final Boolean negativeCaching;
 
-    public Boolean getNegativeCaching() {
+    public Boolean negativeCaching() {
         return this.negativeCaching;
     }
 
     @Import(name="negativeCachingPolicies", required=true)
       private final List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
 
-    public List<GetBackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
+    public List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies() {
         return this.negativeCachingPolicies;
     }
 
     @Import(name="serveWhileStale", required=true)
       private final Integer serveWhileStale;
 
-    public Integer getServeWhileStale() {
+    public Integer serveWhileStale() {
         return this.serveWhileStale;
     }
 
     @Import(name="signedUrlCacheMaxAgeSec", required=true)
       private final Integer signedUrlCacheMaxAgeSec;
 
-    public Integer getSignedUrlCacheMaxAgeSec() {
+    public Integer signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
     }
 

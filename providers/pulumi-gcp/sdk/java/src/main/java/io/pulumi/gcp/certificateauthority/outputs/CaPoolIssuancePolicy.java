@@ -71,7 +71,7 @@ public final class CaPoolIssuancePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyAllowedIssuanceModes> getAllowedIssuanceModes() {
+    public Optional<CaPoolIssuancePolicyAllowedIssuanceModes> allowedIssuanceModes() {
         return Optional.ofNullable(this.allowedIssuanceModes);
     }
     /**
@@ -80,7 +80,7 @@ public final class CaPoolIssuancePolicy {
      * Structure is documented below.
      * 
     */
-    public List<CaPoolIssuancePolicyAllowedKeyType> getAllowedKeyTypes() {
+    public List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes() {
         return this.allowedKeyTypes == null ? List.of() : this.allowedKeyTypes;
     }
     /**
@@ -91,7 +91,7 @@ public final class CaPoolIssuancePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyBaselineValues> getBaselineValues() {
+    public Optional<CaPoolIssuancePolicyBaselineValues> baselineValues() {
         return Optional.ofNullable(this.baselineValues);
     }
     /**
@@ -100,7 +100,7 @@ public final class CaPoolIssuancePolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyIdentityConstraints> getIdentityConstraints() {
+    public Optional<CaPoolIssuancePolicyIdentityConstraints> identityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
     /**
@@ -108,7 +108,7 @@ public final class CaPoolIssuancePolicy {
      * expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
      * 
     */
-    public Optional<String> getMaximumLifetime() {
+    public Optional<String> maximumLifetime() {
         return Optional.ofNullable(this.maximumLifetime);
     }
 

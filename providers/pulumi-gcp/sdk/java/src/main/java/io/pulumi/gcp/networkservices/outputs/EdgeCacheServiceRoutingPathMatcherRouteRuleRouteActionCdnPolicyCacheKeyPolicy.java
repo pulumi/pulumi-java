@@ -77,7 +77,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
     */
-    public Optional<Boolean> getExcludeHost() {
+    public Optional<Boolean> excludeHost() {
         return Optional.ofNullable(this.excludeHost);
     }
     /**
@@ -89,7 +89,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * included.
      * 
     */
-    public Optional<Boolean> getExcludeQueryString() {
+    public Optional<Boolean> excludeQueryString() {
         return Optional.ofNullable(this.excludeQueryString);
     }
     /**
@@ -97,14 +97,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
     */
-    public List<String> getExcludedQueryParameters() {
+    public List<String> excludedQueryParameters() {
         return this.excludedQueryParameters == null ? List.of() : this.excludedQueryParameters;
     }
     /**
      * If true, http and https requests will be cached separately.
      * 
     */
-    public Optional<Boolean> getIncludeProtocol() {
+    public Optional<Boolean> includeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
     /**
@@ -115,7 +115,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
     */
-    public List<String> getIncludedHeaderNames() {
+    public List<String> includedHeaderNames() {
         return this.includedHeaderNames == null ? List.of() : this.includedHeaderNames;
     }
     /**
@@ -123,7 +123,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
     */
-    public List<String> getIncludedQueryParameters() {
+    public List<String> includedQueryParameters() {
         return this.includedQueryParameters == null ? List.of() : this.includedQueryParameters;
     }
 

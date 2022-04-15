@@ -19,43 +19,43 @@ public class TagTemplateIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagTemplateIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TagTemplateIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ TagTemplateIamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     @Export(name="tagTemplate", type=String.class, parameters={})
     private Output<String> tagTemplate;
 
-    public Output<String> getTagTemplate() {
+    public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 

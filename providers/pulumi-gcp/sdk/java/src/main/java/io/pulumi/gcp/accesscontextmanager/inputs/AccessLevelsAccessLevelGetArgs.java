@@ -25,7 +25,7 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
     @Import(name="basic")
       private final @Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic;
 
-    public Output<AccessLevelsAccessLevelBasicGetArgs> getBasic() {
+    public Output<AccessLevelsAccessLevelBasicGetArgs> basic() {
         return this.basic == null ? Codegen.empty() : this.basic;
     }
 
@@ -38,7 +38,7 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
     @Import(name="custom")
       private final @Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom;
 
-    public Output<AccessLevelsAccessLevelCustomGetArgs> getCustom() {
+    public Output<AccessLevelsAccessLevelCustomGetArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -49,7 +49,7 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,7 +73,7 @@ public final class AccessLevelsAccessLevelGetArgs extends io.pulumi.resources.Re
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

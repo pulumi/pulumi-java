@@ -47,7 +47,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      * or the IP protocol number.
      * 
     */
-    public String getIpProtocol() {
+    public String ipProtocol() {
         return this.ipProtocol;
     }
     /**
@@ -59,7 +59,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      * ["12345-12349"].
      * 
     */
-    public List<String> getPorts() {
+    public List<String> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

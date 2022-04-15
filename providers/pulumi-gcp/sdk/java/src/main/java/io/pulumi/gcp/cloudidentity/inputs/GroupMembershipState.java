@@ -26,7 +26,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -49,7 +49,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="memberKey")
       private final @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
 
-    public Output<GroupMembershipMemberKeyGetArgs> getMemberKey() {
+    public Output<GroupMembershipMemberKeyGetArgs> memberKey() {
         return this.memberKey == null ? Codegen.empty() : this.memberKey;
     }
 
@@ -61,7 +61,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="preferredMemberKey")
       private final @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
-    public Output<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
+    public Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey() {
         return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
     }
 
@@ -86,7 +86,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="roles")
       private final @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
 
-    public Output<List<GroupMembershipRoleGetArgs>> getRoles() {
+    public Output<List<GroupMembershipRoleGetArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
@@ -97,7 +97,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -108,7 +108,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

@@ -22,7 +22,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
-    public Output<String> getAnalyticsRegion() {
+    public Output<String> analyticsRegion() {
         return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
@@ -46,7 +46,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -68,7 +68,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -82,7 +82,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
@@ -95,7 +95,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
-    public Output<String> getRuntimeType() {
+    public Output<String> runtimeType() {
         return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
     }
 

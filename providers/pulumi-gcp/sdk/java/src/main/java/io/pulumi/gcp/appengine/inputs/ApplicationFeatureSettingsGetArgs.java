@@ -22,7 +22,7 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
     @Import(name="splitHealthChecks", required=true)
       private final Output<Boolean> splitHealthChecks;
 
-    public Output<Boolean> getSplitHealthChecks() {
+    public Output<Boolean> splitHealthChecks() {
         return this.splitHealthChecks;
     }
 

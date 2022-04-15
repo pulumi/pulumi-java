@@ -49,28 +49,28 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
      * Required. The location of the repository directory.
      * 
     */
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * URIs of GPG keys.
      * 
     */
-    public List<String> getGpgKeys() {
+    public List<String> gpgKeys() {
         return this.gpgKeys == null ? List.of() : this.gpgKeys;
     }
     /**
      * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

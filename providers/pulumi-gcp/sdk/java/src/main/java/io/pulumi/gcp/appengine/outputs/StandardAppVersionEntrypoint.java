@@ -24,7 +24,7 @@ public final class StandardAppVersionEntrypoint {
      * The format should be a shell command that can be fed to bash -c.
      * 
     */
-    public String getShell() {
+    public String shell() {
         return this.shell;
     }
 

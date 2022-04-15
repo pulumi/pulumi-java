@@ -24,7 +24,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     @Import(name="algorithm")
       private final @Nullable Output<String> algorithm;
 
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     @Import(name="keyLength")
       private final @Nullable Output<Integer> keyLength;
 
-    public Output<Integer> getKeyLength() {
+    public Output<Integer> keyLength() {
         return this.keyLength == null ? Codegen.empty() : this.keyLength;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

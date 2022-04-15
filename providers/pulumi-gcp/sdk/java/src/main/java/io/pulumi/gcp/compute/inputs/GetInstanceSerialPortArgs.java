@@ -22,7 +22,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
     @Import(name="instance", required=true)
       private final String instance;
 
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 
@@ -33,7 +33,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -45,7 +45,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -57,7 +57,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
     @Import(name="zone")
       private final @Nullable String zone;
 
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
     }
 

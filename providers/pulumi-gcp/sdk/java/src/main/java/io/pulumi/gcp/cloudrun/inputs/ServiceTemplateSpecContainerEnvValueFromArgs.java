@@ -22,7 +22,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends io.pulum
     @Import(name="secretKeyRef", required=true)
       private final Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
 
-    public Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> getSecretKeyRef() {
+    public Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef() {
         return this.secretKeyRef;
     }
 

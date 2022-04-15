@@ -16,7 +16,7 @@ public final class MembershipAuthority {
         this.issuer = issuer;
     }
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 

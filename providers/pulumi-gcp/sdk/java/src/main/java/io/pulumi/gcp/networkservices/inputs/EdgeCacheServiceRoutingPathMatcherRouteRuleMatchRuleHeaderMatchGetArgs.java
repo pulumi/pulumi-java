@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
+    public Output<String> exactMatch() {
         return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -47,7 +47,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="invertMatch")
       private final @Nullable Output<Boolean> invertMatch;
 
-    public Output<Boolean> getInvertMatch() {
+    public Output<Boolean> invertMatch() {
         return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
@@ -58,7 +58,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
+    public Output<String> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
@@ -69,7 +69,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
+    public Output<Boolean> presentMatch() {
         return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
@@ -80,7 +80,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="suffixMatch")
       private final @Nullable Output<String> suffixMatch;
 
-    public Output<String> getSuffixMatch() {
+    public Output<String> suffixMatch() {
         return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 

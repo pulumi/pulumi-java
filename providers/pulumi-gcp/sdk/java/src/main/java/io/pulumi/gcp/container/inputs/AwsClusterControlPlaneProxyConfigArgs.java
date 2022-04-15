@@ -21,7 +21,7 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends io.pulumi.resou
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
@@ -32,7 +32,7 @@ public final class AwsClusterControlPlaneProxyConfigArgs extends io.pulumi.resou
     @Import(name="secretVersion", required=true)
       private final Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion;
     }
 

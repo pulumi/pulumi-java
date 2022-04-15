@@ -68,7 +68,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyName() {
+    public Output</* @Nullable */ String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -82,7 +82,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Topic.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -108,7 +108,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Cannot be more than 7 days or less than 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> getMessageRetentionDuration() {
+    public Output</* @Nullable */ String> messageRetentionDuration() {
         return this.messageRetentionDuration;
     }
     /**
@@ -128,7 +128,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<TopicMessageStoragePolicy> getMessageStoragePolicy() {
+    public Output<TopicMessageStoragePolicy> messageStoragePolicy() {
         return this.messageStoragePolicy;
     }
     /**
@@ -142,7 +142,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Name of the topic.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +158,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -174,7 +174,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<TopicSchemaSettings> getSchemaSettings() {
+    public Output<TopicSchemaSettings> schemaSettings() {
         return this.schemaSettings;
     }
 

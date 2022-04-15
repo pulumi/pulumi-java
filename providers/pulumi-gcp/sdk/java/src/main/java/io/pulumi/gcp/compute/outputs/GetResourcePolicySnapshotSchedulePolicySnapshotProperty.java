@@ -26,13 +26,13 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty {
         this.storageLocations = storageLocations;
     }
 
-    public Boolean getGuestFlush() {
+    public Boolean guestFlush() {
         return this.guestFlush;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public List<String> getStorageLocations() {
+    public List<String> storageLocations() {
         return this.storageLocations;
     }
 

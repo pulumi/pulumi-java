@@ -39,7 +39,7 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
      * Must be empty unless `enableRestriction` is True.
      * 
     */
-    public List<String> getAllowedServices() {
+    public List<String> allowedServices() {
         return this.allowedServices == null ? List.of() : this.allowedServices;
     }
     /**
@@ -47,7 +47,7 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
      * list of APIs specified in 'allowedServices'.
      * 
     */
-    public Optional<Boolean> getEnableRestriction() {
+    public Optional<Boolean> enableRestriction() {
         return Optional.ofNullable(this.enableRestriction);
     }
 

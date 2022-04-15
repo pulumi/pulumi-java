@@ -23,7 +23,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -34,7 +34,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -65,7 +65,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -88,7 +88,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -99,7 +99,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="selfLinkWithId")
       private final @Nullable Output<String> selfLinkWithId;
 
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId == null ? Codegen.empty() : this.selfLinkWithId;
     }
 
@@ -112,7 +112,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap == null ? Codegen.empty() : this.urlMap;
     }
 
@@ -132,7 +132,7 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     @Import(name="validateForProxyless")
       private final @Nullable Output<Boolean> validateForProxyless;
 
-    public Output<Boolean> getValidateForProxyless() {
+    public Output<Boolean> validateForProxyless() {
         return this.validateForProxyless == null ? Codegen.empty() : this.validateForProxyless;
     }
 

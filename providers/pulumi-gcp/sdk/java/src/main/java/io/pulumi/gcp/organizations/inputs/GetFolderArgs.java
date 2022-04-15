@@ -22,7 +22,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="folder", required=true)
       private final String folder;
 
-    public String getFolder() {
+    public String folder() {
         return this.folder;
     }
 
@@ -33,7 +33,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="lookupOrganization")
       private final @Nullable Boolean lookupOrganization;
 
-    public Optional<Boolean> getLookupOrganization() {
+    public Optional<Boolean> lookupOrganization() {
         return this.lookupOrganization == null ? Optional.empty() : Optional.ofNullable(this.lookupOrganization);
     }
 

@@ -58,7 +58,7 @@ public final class FlexibleAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionDeploymentCloudBuildOptions> getCloudBuildOptions() {
+    public Optional<FlexibleAppVersionDeploymentCloudBuildOptions> cloudBuildOptions() {
         return Optional.ofNullable(this.cloudBuildOptions);
     }
     /**
@@ -66,7 +66,7 @@ public final class FlexibleAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionDeploymentContainer> getContainer() {
+    public Optional<FlexibleAppVersionDeploymentContainer> container() {
         return Optional.ofNullable(this.container);
     }
     /**
@@ -75,7 +75,7 @@ public final class FlexibleAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public List<FlexibleAppVersionDeploymentFile> getFiles() {
+    public List<FlexibleAppVersionDeploymentFile> files() {
         return this.files == null ? List.of() : this.files;
     }
     /**
@@ -83,7 +83,7 @@ public final class FlexibleAppVersionDeployment {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionDeploymentZip> getZip() {
+    public Optional<FlexibleAppVersionDeploymentZip> zip() {
         return Optional.ofNullable(this.zip);
     }
 

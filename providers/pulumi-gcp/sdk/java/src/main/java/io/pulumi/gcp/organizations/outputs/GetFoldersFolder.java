@@ -74,56 +74,56 @@ public final class GetFoldersFolder {
      * The timestamp of when the folder was created
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The timestamp of when the folder was requested to be deleted (if applicable)
      * 
     */
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
     /**
      * The display name of the folder
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Entity tag identifier of the folder
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The id of the folder
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The parent id of the folder
      * 
     */
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
     /**
      * The lifecycle state of the folder
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The timestamp of when the folder was last modified
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

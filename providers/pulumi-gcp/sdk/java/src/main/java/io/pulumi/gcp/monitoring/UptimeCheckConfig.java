@@ -57,7 +57,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<UptimeCheckConfigContentMatcher>> getContentMatchers() {
+    public Output</* @Nullable */ List<UptimeCheckConfigContentMatcher>> contentMatchers() {
         return this.contentMatchers;
     }
     /**
@@ -71,7 +71,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * @return A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +87,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ UptimeCheckConfigHttpCheck> getHttpCheck() {
+    public Output</* @Nullable */ UptimeCheckConfigHttpCheck> httpCheck() {
         return this.httpCheck;
     }
     /**
@@ -103,7 +103,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ UptimeCheckConfigMonitoredResource> getMonitoredResource() {
+    public Output</* @Nullable */ UptimeCheckConfigMonitoredResource> monitoredResource() {
         return this.monitoredResource;
     }
     /**
@@ -119,7 +119,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * @return How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
      * 
      */
-    public Output</* @Nullable */ String> getPeriod() {
+    public Output</* @Nullable */ String> period() {
         return this.period;
     }
     /**
@@ -149,7 +149,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -165,7 +165,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ UptimeCheckConfigResourceGroup> getResourceGroup() {
+    public Output</* @Nullable */ UptimeCheckConfigResourceGroup> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -179,7 +179,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * @return The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSelectedRegions() {
+    public Output</* @Nullable */ List<String>> selectedRegions() {
         return this.selectedRegions;
     }
     /**
@@ -195,7 +195,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ UptimeCheckConfigTcpCheck> getTcpCheck() {
+    public Output</* @Nullable */ UptimeCheckConfigTcpCheck> tcpCheck() {
         return this.tcpCheck;
     }
     /**
@@ -209,7 +209,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * @return The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
      * 
      */
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
     /**
@@ -223,7 +223,7 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
      * @return The id of the uptime check
      * 
      */
-    public Output<String> getUptimeCheckId() {
+    public Output<String> uptimeCheckId() {
         return this.uptimeCheckId;
     }
 

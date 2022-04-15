@@ -18,14 +18,14 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
     @Import(name="clusterUuid")
       private final @Nullable Output<String> clusterUuid;
 
-    public Output<String> getClusterUuid() {
+    public Output<String> clusterUuid() {
         return this.clusterUuid == null ? Codegen.empty() : this.clusterUuid;
     }
 

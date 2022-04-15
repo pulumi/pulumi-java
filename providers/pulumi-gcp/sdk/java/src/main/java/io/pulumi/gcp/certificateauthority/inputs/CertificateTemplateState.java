@@ -26,7 +26,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="identityConstraints")
       private final @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
 
-    public Output<CertificateTemplateIdentityConstraintsGetArgs> getIdentityConstraints() {
+    public Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints() {
         return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
     }
 
@@ -59,7 +59,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
 
-    public Output<CertificateTemplatePassthroughExtensionsGetArgs> getPassthroughExtensions() {
+    public Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions() {
         return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
     }
 
@@ -103,7 +103,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="predefinedValues")
       private final @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
 
-    public Output<CertificateTemplatePredefinedValuesGetArgs> getPredefinedValues() {
+    public Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues() {
         return this.predefinedValues == null ? Codegen.empty() : this.predefinedValues;
     }
 
@@ -114,7 +114,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -125,7 +125,7 @@ public final class CertificateTemplateState extends io.pulumi.resources.Resource
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

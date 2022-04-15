@@ -26,7 +26,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionPreference", required=true)
       private final Output<String> connectionPreference;
 
-    public Output<String> getConnectionPreference() {
+    public Output<String> connectionPreference() {
         return this.connectionPreference;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
-    public Output<List<ServiceAttachmentConsumerAcceptListArgs>> getConsumerAcceptLists() {
+    public Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists() {
         return this.consumerAcceptLists == null ? Codegen.empty() : this.consumerAcceptLists;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
-    public Output<List<String>> getConsumerRejectLists() {
+    public Output<List<String>> consumerRejectLists() {
         return this.consumerRejectLists == null ? Codegen.empty() : this.consumerRejectLists;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enableProxyProtocol", required=true)
       private final Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> getEnableProxyProtocol() {
+    public Output<Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
 
@@ -91,7 +91,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -102,7 +102,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="natSubnets", required=true)
       private final Output<List<String>> natSubnets;
 
-    public Output<List<String>> getNatSubnets() {
+    public Output<List<String>> natSubnets() {
         return this.natSubnets;
     }
 
@@ -114,7 +114,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -125,7 +125,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -137,7 +137,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetService", required=true)
       private final Output<String> targetService;
 
-    public Output<String> getTargetService() {
+    public Output<String> targetService() {
         return this.targetService;
     }
 

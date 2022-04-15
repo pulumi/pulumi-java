@@ -16,7 +16,7 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     @Import(name="dayOfWeeks", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

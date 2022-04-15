@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autogenerateRevisionName")
       private final @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Output<Boolean> getAutogenerateRevisionName() {
+    public Output<Boolean> autogenerateRevisionName() {
         return this.autogenerateRevisionName == null ? Codegen.empty() : this.autogenerateRevisionName;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -55,7 +55,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ServiceMetadataArgs> metadata;
 
-    public Output<ServiceMetadataArgs> getMetadata() {
+    public Output<ServiceMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -66,7 +66,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<ServiceTemplateArgs> template;
 
-    public Output<ServiceTemplateArgs> getTemplate() {
+    public Output<ServiceTemplateArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 
@@ -111,7 +111,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffics")
       private final @Nullable Output<List<ServiceTrafficArgs>> traffics;
 
-    public Output<List<ServiceTrafficArgs>> getTraffics() {
+    public Output<List<ServiceTrafficArgs>> traffics() {
         return this.traffics == null ? Codegen.empty() : this.traffics;
     }
 

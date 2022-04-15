@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="crossRealmTrustAdminServer")
       private final @Nullable Output<String> crossRealmTrustAdminServer;
 
-    public Output<String> getCrossRealmTrustAdminServer() {
+    public Output<String> crossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer == null ? Codegen.empty() : this.crossRealmTrustAdminServer;
     }
 
@@ -35,7 +35,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="crossRealmTrustKdc")
       private final @Nullable Output<String> crossRealmTrustKdc;
 
-    public Output<String> getCrossRealmTrustKdc() {
+    public Output<String> crossRealmTrustKdc() {
         return this.crossRealmTrustKdc == null ? Codegen.empty() : this.crossRealmTrustKdc;
     }
 
@@ -46,7 +46,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="crossRealmTrustRealm")
       private final @Nullable Output<String> crossRealmTrustRealm;
 
-    public Output<String> getCrossRealmTrustRealm() {
+    public Output<String> crossRealmTrustRealm() {
         return this.crossRealmTrustRealm == null ? Codegen.empty() : this.crossRealmTrustRealm;
     }
 
@@ -57,7 +57,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="crossRealmTrustSharedPassword")
       private final @Nullable Output<String> crossRealmTrustSharedPassword;
 
-    public Output<String> getCrossRealmTrustSharedPassword() {
+    public Output<String> crossRealmTrustSharedPassword() {
         return this.crossRealmTrustSharedPassword == null ? Codegen.empty() : this.crossRealmTrustSharedPassword;
     }
 
@@ -68,7 +68,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="enableKerberos")
       private final @Nullable Output<Boolean> enableKerberos;
 
-    public Output<Boolean> getEnableKerberos() {
+    public Output<Boolean> enableKerberos() {
         return this.enableKerberos == null ? Codegen.empty() : this.enableKerberos;
     }
 
@@ -79,7 +79,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="kdcDbKey")
       private final @Nullable Output<String> kdcDbKey;
 
-    public Output<String> getKdcDbKey() {
+    public Output<String> kdcDbKey() {
         return this.kdcDbKey == null ? Codegen.empty() : this.kdcDbKey;
     }
 
@@ -90,7 +90,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="keyPassword")
       private final @Nullable Output<String> keyPassword;
 
-    public Output<String> getKeyPassword() {
+    public Output<String> keyPassword() {
         return this.keyPassword == null ? Codegen.empty() : this.keyPassword;
     }
 
@@ -101,7 +101,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="keystore")
       private final @Nullable Output<String> keystore;
 
-    public Output<String> getKeystore() {
+    public Output<String> keystore() {
         return this.keystore == null ? Codegen.empty() : this.keystore;
     }
 
@@ -112,7 +112,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="keystorePassword")
       private final @Nullable Output<String> keystorePassword;
 
-    public Output<String> getKeystorePassword() {
+    public Output<String> keystorePassword() {
         return this.keystorePassword == null ? Codegen.empty() : this.keystorePassword;
     }
 
@@ -123,7 +123,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
@@ -134,7 +134,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="realm")
       private final @Nullable Output<String> realm;
 
-    public Output<String> getRealm() {
+    public Output<String> realm() {
         return this.realm == null ? Codegen.empty() : this.realm;
     }
 
@@ -145,7 +145,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="rootPrincipalPassword")
       private final @Nullable Output<String> rootPrincipalPassword;
 
-    public Output<String> getRootPrincipalPassword() {
+    public Output<String> rootPrincipalPassword() {
         return this.rootPrincipalPassword == null ? Codegen.empty() : this.rootPrincipalPassword;
     }
 
@@ -156,7 +156,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="tgtLifetimeHours")
       private final @Nullable Output<Integer> tgtLifetimeHours;
 
-    public Output<Integer> getTgtLifetimeHours() {
+    public Output<Integer> tgtLifetimeHours() {
         return this.tgtLifetimeHours == null ? Codegen.empty() : this.tgtLifetimeHours;
     }
 
@@ -167,7 +167,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="truststore")
       private final @Nullable Output<String> truststore;
 
-    public Output<String> getTruststore() {
+    public Output<String> truststore() {
         return this.truststore == null ? Codegen.empty() : this.truststore;
     }
 
@@ -178,7 +178,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     @Import(name="truststorePassword")
       private final @Nullable Output<String> truststorePassword;
 
-    public Output<String> getTruststorePassword() {
+    public Output<String> truststorePassword() {
         return this.truststorePassword == null ? Codegen.empty() : this.truststorePassword;
     }
 

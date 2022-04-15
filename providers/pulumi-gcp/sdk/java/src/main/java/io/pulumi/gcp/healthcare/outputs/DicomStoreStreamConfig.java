@@ -26,7 +26,7 @@ public final class DicomStoreStreamConfig {
      * Structure is documented below.
      * 
     */
-    public DicomStoreStreamConfigBigqueryDestination getBigqueryDestination() {
+    public DicomStoreStreamConfigBigqueryDestination bigqueryDestination() {
         return this.bigqueryDestination;
     }
 

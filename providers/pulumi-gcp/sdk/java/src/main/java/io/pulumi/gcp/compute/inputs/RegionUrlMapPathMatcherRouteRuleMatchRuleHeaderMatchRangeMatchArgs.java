@@ -21,7 +21,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     @Import(name="rangeEnd", required=true)
       private final Output<Integer> rangeEnd;
 
-    public Output<Integer> getRangeEnd() {
+    public Output<Integer> rangeEnd() {
         return this.rangeEnd;
     }
 
@@ -32,7 +32,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     @Import(name="rangeStart", required=true)
       private final Output<Integer> rangeStart;
 
-    public Output<Integer> getRangeStart() {
+    public Output<Integer> rangeStart() {
         return this.rangeStart;
     }
 

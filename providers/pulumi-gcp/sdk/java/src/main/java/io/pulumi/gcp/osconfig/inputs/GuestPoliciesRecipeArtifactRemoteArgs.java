@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
     @Import(name="checkSum")
       private final @Nullable Output<String> checkSum;
 
-    public Output<String> getCheckSum() {
+    public Output<String> checkSum() {
         return this.checkSum == null ? Codegen.empty() : this.checkSum;
     }
 
@@ -35,7 +35,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

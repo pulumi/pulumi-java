@@ -22,7 +22,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -33,7 +33,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag", required=true)
       private final Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag;
     }
 
@@ -44,7 +44,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions", required=true)
       private final Output<List<String>> notificationCategorySubscriptions;
 
-    public Output<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
 
@@ -55,7 +55,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

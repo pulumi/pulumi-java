@@ -15,7 +15,7 @@ public final class GetInstanceTemplateConfidentialInstanceConfig extends io.pulu
     @Import(name="enableConfidentialCompute", required=true)
       private final Boolean enableConfidentialCompute;
 
-    public Boolean getEnableConfidentialCompute() {
+    public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 

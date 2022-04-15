@@ -82,7 +82,7 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
     */
-    public Optional<Integer> getBanDurationSec() {
+    public Optional<Integer> banDurationSec() {
         return Optional.ofNullable(this.banDurationSec);
     }
     /**
@@ -91,14 +91,14 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * exceed this 'ban_threshold'. Structure is documented below.
      * 
     */
-    public Optional<SecurityPolicyRuleRateLimitOptionsBanThreshold> getBanThreshold() {
+    public Optional<SecurityPolicyRuleRateLimitOptionsBanThreshold> banThreshold() {
         return Optional.ofNullable(this.banThreshold);
     }
     /**
      * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
      * 
     */
-    public String getConformAction() {
+    public String conformAction() {
         return this.conformAction;
     }
     /**
@@ -106,14 +106,14 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * Possible values incude "ALL", "ALL_IPS", "HTTP_HEADER", "IP", "XFF_IP". If not specified, defaults to "ALL".
      * 
     */
-    public Optional<String> getEnforceOnKey() {
+    public Optional<String> enforceOnKey() {
         return Optional.ofNullable(this.enforceOnKey);
     }
     /**
      * Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
      * 
     */
-    public Optional<String> getEnforceOnKeyName() {
+    public Optional<String> enforceOnKeyName() {
         return Optional.ofNullable(this.enforceOnKeyName);
     }
     /**
@@ -121,17 +121,17 @@ public final class SecurityPolicyRuleRateLimitOptions {
      * Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.
      * 
     */
-    public String getExceedAction() {
+    public String exceedAction() {
         return this.exceedAction;
     }
-    public Optional<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions> getExceedRedirectOptions() {
+    public Optional<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions> exceedRedirectOptions() {
         return Optional.ofNullable(this.exceedRedirectOptions);
     }
     /**
      * Threshold at which to begin ratelimiting. Structure is documented below.
      * 
     */
-    public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold getRateLimitThreshold() {
+    public SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 

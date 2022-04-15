@@ -33,23 +33,23 @@ public final class GetWebAppResult {
         this.project = project;
     }
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

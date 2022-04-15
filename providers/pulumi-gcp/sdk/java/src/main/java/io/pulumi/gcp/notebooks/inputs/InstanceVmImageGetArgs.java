@@ -22,7 +22,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="imageFamily")
       private final @Nullable Output<String> imageFamily;
 
-    public Output<String> getImageFamily() {
+    public Output<String> imageFamily() {
         return this.imageFamily == null ? Codegen.empty() : this.imageFamily;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

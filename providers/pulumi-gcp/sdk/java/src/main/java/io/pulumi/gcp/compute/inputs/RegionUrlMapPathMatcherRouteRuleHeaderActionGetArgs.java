@@ -27,7 +27,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs extends i
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 
@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs extends i
     @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
-    public Output<List<String>> getRequestHeadersToRemoves() {
+    public Output<List<String>> requestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Codegen.empty() : this.requestHeadersToRemoves;
     }
 
@@ -51,7 +51,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs extends i
     @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Codegen.empty() : this.responseHeadersToAdds;
     }
 
@@ -63,7 +63,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs extends i
     @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
-    public Output<List<String>> getResponseHeadersToRemoves() {
+    public Output<List<String>> responseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Codegen.empty() : this.responseHeadersToRemoves;
     }
 

@@ -26,7 +26,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bigqueryOptions")
       private final @Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Output<BillingAccountSinkBigqueryOptionsArgs> getBigqueryOptions() {
+    public Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions() {
         return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
@@ -37,7 +37,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
 
@@ -48,7 +48,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -62,7 +62,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -73,7 +73,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -84,7 +84,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="exclusions")
       private final @Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions;
 
-    public Output<List<BillingAccountSinkExclusionArgs>> getExclusions() {
+    public Output<List<BillingAccountSinkExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -96,7 +96,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -107,7 +107,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

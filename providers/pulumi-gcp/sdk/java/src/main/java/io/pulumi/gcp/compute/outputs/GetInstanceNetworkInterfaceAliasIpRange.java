@@ -34,7 +34,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
      * The IP CIDR range represented by this alias IP range.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -43,7 +43,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
      * range.
      * 
     */
-    public String getSubnetworkRangeName() {
+    public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
 

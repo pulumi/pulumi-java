@@ -52,7 +52,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return (Optional) The current deleted state of the role.
      * 
      */
-    public Output<Boolean> getDeleted() {
+    public Output<Boolean> deleted() {
         return this.deleted;
     }
     /**
@@ -66,7 +66,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return A human-readable description for the role.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -80,7 +80,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -94,7 +94,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -108,7 +108,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
      * 
      */
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
     /**
@@ -122,7 +122,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return The role id to use for this role.
      * 
      */
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
     /**
@@ -140,7 +140,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
      * 
      */
-    public Output</* @Nullable */ String> getStage() {
+    public Output</* @Nullable */ String> stage() {
         return this.stage;
     }
     /**
@@ -154,7 +154,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @return A human-readable title for the role.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig 
      * Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
      * 
     */
-    public String getDataprocMetastoreService() {
+    public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 

@@ -17,7 +17,7 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
         this.dayOfWeeks = dayOfWeeks;
     }
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

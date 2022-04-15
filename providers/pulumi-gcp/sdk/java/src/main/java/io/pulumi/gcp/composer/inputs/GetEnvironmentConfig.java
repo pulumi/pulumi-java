@@ -27,105 +27,105 @@ public final class GetEnvironmentConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="airflowUri", required=true)
       private final String airflowUri;
 
-    public String getAirflowUri() {
+    public String airflowUri() {
         return this.airflowUri;
     }
 
     @Import(name="dagGcsPrefix", required=true)
       private final String dagGcsPrefix;
 
-    public String getDagGcsPrefix() {
+    public String dagGcsPrefix() {
         return this.dagGcsPrefix;
     }
 
     @Import(name="databaseConfigs", required=true)
       private final List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
 
-    public List<GetEnvironmentConfigDatabaseConfig> getDatabaseConfigs() {
+    public List<GetEnvironmentConfigDatabaseConfig> databaseConfigs() {
         return this.databaseConfigs;
     }
 
     @Import(name="encryptionConfigs", required=true)
       private final List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
 
-    public List<GetEnvironmentConfigEncryptionConfig> getEncryptionConfigs() {
+    public List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs() {
         return this.encryptionConfigs;
     }
 
     @Import(name="environmentSize", required=true)
       private final String environmentSize;
 
-    public String getEnvironmentSize() {
+    public String environmentSize() {
         return this.environmentSize;
     }
 
     @Import(name="gkeCluster", required=true)
       private final String gkeCluster;
 
-    public String getGkeCluster() {
+    public String gkeCluster() {
         return this.gkeCluster;
     }
 
     @Import(name="maintenanceWindows", required=true)
       private final List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
 
-    public List<GetEnvironmentConfigMaintenanceWindow> getMaintenanceWindows() {
+    public List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
 
     @Import(name="masterAuthorizedNetworksConfigs", required=true)
       private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
 
-    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfigs() {
+    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
 
     @Import(name="nodeConfigs", required=true)
       private final List<GetEnvironmentConfigNodeConfig> nodeConfigs;
 
-    public List<GetEnvironmentConfigNodeConfig> getNodeConfigs() {
+    public List<GetEnvironmentConfigNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
 
     @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
-    public Integer getNodeCount() {
+    public Integer nodeCount() {
         return this.nodeCount;
     }
 
     @Import(name="privateEnvironmentConfigs", required=true)
       private final List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
 
-    public List<GetEnvironmentConfigPrivateEnvironmentConfig> getPrivateEnvironmentConfigs() {
+    public List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs() {
         return this.privateEnvironmentConfigs;
     }
 
     @Import(name="softwareConfigs", required=true)
       private final List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
 
-    public List<GetEnvironmentConfigSoftwareConfig> getSoftwareConfigs() {
+    public List<GetEnvironmentConfigSoftwareConfig> softwareConfigs() {
         return this.softwareConfigs;
     }
 
     @Import(name="webServerConfigs", required=true)
       private final List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
 
-    public List<GetEnvironmentConfigWebServerConfig> getWebServerConfigs() {
+    public List<GetEnvironmentConfigWebServerConfig> webServerConfigs() {
         return this.webServerConfigs;
     }
 
     @Import(name="webServerNetworkAccessControls", required=true)
       private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
 
-    public List<GetEnvironmentConfigWebServerNetworkAccessControl> getWebServerNetworkAccessControls() {
+    public List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls() {
         return this.webServerNetworkAccessControls;
     }
 
     @Import(name="workloadsConfigs", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
-    public List<GetEnvironmentConfigWorkloadsConfig> getWorkloadsConfigs() {
+    public List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs() {
         return this.workloadsConfigs;
     }
 

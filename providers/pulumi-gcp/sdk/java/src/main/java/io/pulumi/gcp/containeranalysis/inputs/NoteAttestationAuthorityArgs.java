@@ -29,7 +29,7 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
     @Import(name="hint", required=true)
       private final Output<NoteAttestationAuthorityHintArgs> hint;
 
-    public Output<NoteAttestationAuthorityHintArgs> getHint() {
+    public Output<NoteAttestationAuthorityHintArgs> hint() {
         return this.hint;
     }
 

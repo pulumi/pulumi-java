@@ -27,7 +27,7 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
     @Import(name="accessMode")
       private final @Nullable Output<String> accessMode;
 
-    public Output<String> getAccessMode() {
+    public Output<String> accessMode() {
         return this.accessMode == null ? Codegen.empty() : this.accessMode;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
     @Import(name="anonGid")
       private final @Nullable Output<Integer> anonGid;
 
-    public Output<Integer> getAnonGid() {
+    public Output<Integer> anonGid() {
         return this.anonGid == null ? Codegen.empty() : this.anonGid;
     }
 
@@ -53,7 +53,7 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
     @Import(name="anonUid")
       private final @Nullable Output<Integer> anonUid;
 
-    public Output<Integer> getAnonUid() {
+    public Output<Integer> anonUid() {
         return this.anonUid == null ? Codegen.empty() : this.anonUid;
     }
 
@@ -66,7 +66,7 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
     @Import(name="ipRanges")
       private final @Nullable Output<List<String>> ipRanges;
 
-    public Output<List<String>> getIpRanges() {
+    public Output<List<String>> ipRanges() {
         return this.ipRanges == null ? Codegen.empty() : this.ipRanges;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceFileSharesNfsExportOptionArgs extends io.pulumi.resou
     @Import(name="squashMode")
       private final @Nullable Output<String> squashMode;
 
-    public Output<String> getSquashMode() {
+    public Output<String> squashMode() {
         return this.squashMode == null ? Codegen.empty() : this.squashMode;
     }
 

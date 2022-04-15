@@ -42,14 +42,14 @@ public final class EnvironmentVmImage {
      * Use this VM image family to find the image; the newest image in this family will be used.
      * 
     */
-    public Optional<String> getImageFamily() {
+    public Optional<String> imageFamily() {
         return Optional.ofNullable(this.imageFamily);
     }
     /**
      * Use VM image name to find the image.
      * 
     */
-    public Optional<String> getImageName() {
+    public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
@@ -57,7 +57,7 @@ public final class EnvironmentVmImage {
      * Format: projects/{project_id}
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

@@ -79,7 +79,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -95,7 +95,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    public Output<String> getDestRange() {
+    public Output<String> destRange() {
         return this.destRange;
     }
     /**
@@ -121,7 +121,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -135,7 +135,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The network that this route applies to.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -161,7 +161,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * * The string `default-internet-gateway`.
      * 
      */
-    public Output</* @Nullable */ String> getNextHopGateway() {
+    public Output</* @Nullable */ String> nextHopGateway() {
         return this.nextHopGateway;
     }
     /**
@@ -199,7 +199,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      *   a public (non-RFC 1918) IP CIDR range.
      * 
      */
-    public Output</* @Nullable */ String> getNextHopIlb() {
+    public Output</* @Nullable */ String> nextHopIlb() {
         return this.nextHopIlb;
     }
     /**
@@ -223,7 +223,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * * Just the instance name, with the zone in `next_hop_instance_zone`.
      * 
      */
-    public Output</* @Nullable */ String> getNextHopInstance() {
+    public Output</* @Nullable */ String> nextHopInstance() {
         return this.nextHopInstance;
     }
     /**
@@ -243,7 +243,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * a URL.
      * 
      */
-    public Output<String> getNextHopInstanceZone() {
+    public Output<String> nextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
     /**
@@ -257,7 +257,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return Network IP address of an instance that should handle matching packets.
      * 
      */
-    public Output<String> getNextHopIp() {
+    public Output<String> nextHopIp() {
         return this.nextHopIp;
     }
     /**
@@ -271,7 +271,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return URL to a Network that should handle matching packets.
      * 
      */
-    public Output<String> getNextHopNetwork() {
+    public Output<String> nextHopNetwork() {
         return this.nextHopNetwork;
     }
     /**
@@ -285,7 +285,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    public Output</* @Nullable */ String> getNextHopVpnTunnel() {
+    public Output</* @Nullable */ String> nextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
     /**
@@ -307,7 +307,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -323,7 +323,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -337,7 +337,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -351,7 +351,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * @return A list of instance tags to which this route applies.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
 

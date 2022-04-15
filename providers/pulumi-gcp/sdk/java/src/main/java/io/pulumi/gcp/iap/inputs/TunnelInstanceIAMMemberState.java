@@ -24,7 +24,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMMemberConditionGetArgs> condition;
 
-    public Output<TunnelInstanceIAMMemberConditionGetArgs> getCondition() {
+    public Output<TunnelInstanceIAMMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,7 +35,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -46,14 +46,14 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -65,7 +65,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -78,14 +78,14 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

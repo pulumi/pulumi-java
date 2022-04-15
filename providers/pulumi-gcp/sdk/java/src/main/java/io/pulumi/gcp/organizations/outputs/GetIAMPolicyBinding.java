@@ -52,7 +52,7 @@ public final class GetIAMPolicyBinding {
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
      * 
     */
-    public Optional<GetIAMPolicyBindingCondition> getCondition() {
+    public Optional<GetIAMPolicyBindingCondition> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
@@ -66,7 +66,7 @@ public final class GetIAMPolicyBinding {
      * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
      * 
     */
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members;
     }
     /**
@@ -75,7 +75,7 @@ public final class GetIAMPolicyBinding {
      * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 

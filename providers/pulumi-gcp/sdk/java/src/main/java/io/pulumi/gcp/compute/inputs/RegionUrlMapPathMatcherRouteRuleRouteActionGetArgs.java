@@ -31,7 +31,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="corsPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> getCorsPolicy() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy() {
         return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
     }
 
@@ -49,7 +49,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="faultInjectionPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyGetArgs> getFaultInjectionPolicy() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Codegen.empty() : this.faultInjectionPolicy;
     }
 
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="requestMirrorPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs> getRequestMirrorPolicy() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Codegen.empty() : this.requestMirrorPolicy;
     }
 
@@ -76,7 +76,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="retryPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs> retryPolicy;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs> getRetryPolicy() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -91,7 +91,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="timeout")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutGetArgs> timeout;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutGetArgs> getTimeout() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutGetArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -104,7 +104,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="urlRewrite")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> getUrlRewrite() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite() {
         return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
     }
 
@@ -123,7 +123,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs extends io
     @Import(name="weightedBackendServices")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceGetArgs>> getWeightedBackendServices() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices() {
         return this.weightedBackendServices == null ? Codegen.empty() : this.weightedBackendServices;
     }
 

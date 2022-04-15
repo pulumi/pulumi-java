@@ -24,7 +24,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutAr
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutAr
     @Import(name="seconds")
       private final @Nullable Output<String> seconds;
 
-    public Output<String> getSeconds() {
+    public Output<String> seconds() {
         return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 

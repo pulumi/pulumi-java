@@ -24,7 +24,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="managed")
       private final @Nullable Output<ManagedSslCertificateManagedArgs> managed;
 
-    public Output<ManagedSslCertificateManagedArgs> getManaged() {
+    public Output<ManagedSslCertificateManagedArgs> managed() {
         return this.managed == null ? Codegen.empty() : this.managed;
     }
 
@@ -65,7 +65,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -91,7 +91,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -22,7 +22,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="attachmentTarget")
       private final @Nullable Output<String> attachmentTarget;
 
-    public Output<String> getAttachmentTarget() {
+    public Output<String> attachmentTarget() {
         return this.attachmentTarget == null ? Codegen.empty() : this.attachmentTarget;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="firewallPolicy")
       private final @Nullable Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 

@@ -16,28 +16,28 @@ public final class GetHealthCheckGrpcHealthCheck extends io.pulumi.resources.Inv
     @Import(name="grpcServiceName", required=true)
       private final String grpcServiceName;
 
-    public String getGrpcServiceName() {
+    public String grpcServiceName() {
         return this.grpcServiceName;
     }
 
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
     @Import(name="portName", required=true)
       private final String portName;
 
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
 
     @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 

@@ -23,14 +23,14 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="api")
       private final @Nullable Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api == null ? Codegen.empty() : this.api;
     }
 
     @Import(name="apiConfig")
       private final @Nullable Output<String> apiConfig;
 
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig == null ? Codegen.empty() : this.apiConfig;
     }
 
@@ -41,7 +41,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -53,7 +53,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -65,7 +65,7 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

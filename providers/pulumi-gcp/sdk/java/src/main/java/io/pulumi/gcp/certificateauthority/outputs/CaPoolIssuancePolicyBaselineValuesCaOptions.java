@@ -53,7 +53,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * When true, the "CA" in Basic Constraints extension will be set to true.
      * 
     */
-    public Optional<Boolean> getIsCa() {
+    public Optional<Boolean> isCa() {
         return Optional.ofNullable(this.isCa);
     }
     /**
@@ -61,7 +61,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
      * 
     */
-    public Optional<Integer> getMaxIssuerPathLength() {
+    public Optional<Integer> maxIssuerPathLength() {
         return Optional.ofNullable(this.maxIssuerPathLength);
     }
     /**
@@ -69,7 +69,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
      * 
     */
-    public Optional<Boolean> getNonCa() {
+    public Optional<Boolean> nonCa() {
         return Optional.ofNullable(this.nonCa);
     }
     /**
@@ -78,7 +78,7 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
      * the max path length will be omitted from the CA certificate.
      * 
     */
-    public Optional<Boolean> getZeroMaxIssuerPathLength() {
+    public Optional<Boolean> zeroMaxIssuerPathLength() {
         return Optional.ofNullable(this.zeroMaxIssuerPathLength);
     }
 

@@ -50,7 +50,7 @@ public final class DomainMappingSpec {
      * Possible values are `NONE` and `AUTOMATIC`.
      * 
     */
-    public Optional<String> getCertificateMode() {
+    public Optional<String> certificateMode() {
         return Optional.ofNullable(this.certificateMode);
     }
     /**
@@ -60,7 +60,7 @@ public final class DomainMappingSpec {
      * has given such a warning.
      * 
     */
-    public Optional<Boolean> getForceOverride() {
+    public Optional<Boolean> forceOverride() {
         return Optional.ofNullable(this.forceOverride);
     }
     /**
@@ -68,7 +68,7 @@ public final class DomainMappingSpec {
      * The route must exist.
      * 
     */
-    public String getRouteName() {
+    public String routeName() {
         return this.routeName;
     }
 

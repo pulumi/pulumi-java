@@ -37,25 +37,25 @@ public final class GetServiceMetadata {
         this.uid = uid;
     }
 
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
-    public Integer getGeneration() {
+    public Integer generation() {
         return this.generation;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
-    public String getResourceVersion() {
+    public String resourceVersion() {
         return this.resourceVersion;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

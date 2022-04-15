@@ -25,7 +25,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudSql")
       private final @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
 
-    public Output<ConnectionCloudSqlGetArgs> getCloudSql() {
+    public Output<ConnectionCloudSqlGetArgs> cloudSql() {
         return this.cloudSql == null ? Codegen.empty() : this.cloudSql;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hasCredential")
       private final @Nullable Output<Boolean> hasCredential;
 
-    public Output<Boolean> getHasCredential() {
+    public Output<Boolean> hasCredential() {
         return this.hasCredential == null ? Codegen.empty() : this.hasCredential;
     }
 
@@ -83,7 +83,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -95,7 +95,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

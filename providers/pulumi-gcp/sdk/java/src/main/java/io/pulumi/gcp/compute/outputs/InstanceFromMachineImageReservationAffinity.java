@@ -23,10 +23,10 @@ public final class InstanceFromMachineImageReservationAffinity {
         this.type = type;
     }
 
-    public Optional<InstanceFromMachineImageReservationAffinitySpecificReservation> getSpecificReservation() {
+    public Optional<InstanceFromMachineImageReservationAffinitySpecificReservation> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

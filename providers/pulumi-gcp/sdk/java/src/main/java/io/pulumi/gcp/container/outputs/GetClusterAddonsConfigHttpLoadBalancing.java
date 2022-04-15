@@ -16,7 +16,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing {
         this.disabled = disabled;
     }
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

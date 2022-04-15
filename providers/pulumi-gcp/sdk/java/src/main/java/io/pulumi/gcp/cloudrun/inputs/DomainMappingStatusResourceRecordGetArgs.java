@@ -22,21 +22,21 @@ public final class DomainMappingStatusResourceRecordGetArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
-    public Output<String> getRrdata() {
+    public Output<String> rrdata() {
         return this.rrdata == null ? Codegen.empty() : this.rrdata;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

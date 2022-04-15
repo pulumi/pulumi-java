@@ -19,7 +19,7 @@ public final class GetInstanceNetworkPerformanceConfig extends io.pulumi.resourc
     @Import(name="totalEgressBandwidthTier", required=true)
       private final String totalEgressBandwidthTier;
 
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

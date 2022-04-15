@@ -34,14 +34,14 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
      * The IP address on the VM to use for peering.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The URI of the virtual machine resource
      * 
     */
-    public Optional<String> getVirtualMachine() {
+    public Optional<String> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
 

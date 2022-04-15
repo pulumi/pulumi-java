@@ -24,7 +24,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
     @Import(name="callbackUri", required=true)
       private final Output<String> callbackUri;
 
-    public Output<String> getCallbackUri() {
+    public Output<String> callbackUri() {
         return this.callbackUri;
     }
 
@@ -37,7 +37,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
     @Import(name="spCertificates")
       private final @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
-    public Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> getSpCertificates() {
+    public Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates() {
         return this.spCertificates == null ? Codegen.empty() : this.spCertificates;
     }
 
@@ -48,7 +48,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
     @Import(name="spEntityId", required=true)
       private final Output<String> spEntityId;
 
-    public Output<String> getSpEntityId() {
+    public Output<String> spEntityId() {
         return this.spEntityId;
     }
 

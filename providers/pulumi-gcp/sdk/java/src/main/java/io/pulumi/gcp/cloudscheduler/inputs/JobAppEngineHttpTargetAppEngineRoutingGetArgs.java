@@ -23,7 +23,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -35,7 +35,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -47,7 +47,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

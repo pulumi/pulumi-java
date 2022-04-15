@@ -38,14 +38,14 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="autoscalingConfig")
       private final @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
-    public Output<ClusterClusterConfigAutoscalingConfigGetArgs> getAutoscalingConfig() {
+    public Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig() {
         return this.autoscalingConfig == null ? Codegen.empty() : this.autoscalingConfig;
     }
 
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<ClusterClusterConfigEncryptionConfigGetArgs> getEncryptionConfig() {
+    public Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="endpointConfig")
       private final @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig;
 
-    public Output<ClusterClusterConfigEndpointConfigGetArgs> getEndpointConfig() {
+    public Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig() {
         return this.endpointConfig == null ? Codegen.empty() : this.endpointConfig;
     }
 
@@ -81,7 +81,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="gceClusterConfig")
       private final @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
-    public Output<ClusterClusterConfigGceClusterConfigGetArgs> getGceClusterConfig() {
+    public Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig() {
         return this.gceClusterConfig == null ? Codegen.empty() : this.gceClusterConfig;
     }
 
@@ -93,7 +93,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="initializationActions")
       private final @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions;
 
-    public Output<List<ClusterClusterConfigInitializationActionGetArgs>> getInitializationActions() {
+    public Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions() {
         return this.initializationActions == null ? Codegen.empty() : this.initializationActions;
     }
 
@@ -105,7 +105,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="lifecycleConfig")
       private final @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
-    public Output<ClusterClusterConfigLifecycleConfigGetArgs> getLifecycleConfig() {
+    public Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig() {
         return this.lifecycleConfig == null ? Codegen.empty() : this.lifecycleConfig;
     }
 
@@ -117,7 +117,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="masterConfig")
       private final @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig;
 
-    public Output<ClusterClusterConfigMasterConfigGetArgs> getMasterConfig() {
+    public Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig() {
         return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
     }
 
@@ -130,7 +130,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="metastoreConfig")
       private final @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
-    public Output<ClusterClusterConfigMetastoreConfigGetArgs> getMetastoreConfig() {
+    public Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig() {
         return this.metastoreConfig == null ? Codegen.empty() : this.metastoreConfig;
     }
 
@@ -145,7 +145,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="preemptibleWorkerConfig")
       private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig;
 
-    public Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> getPreemptibleWorkerConfig() {
+    public Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig() {
         return this.preemptibleWorkerConfig == null ? Codegen.empty() : this.preemptibleWorkerConfig;
     }
 
@@ -156,7 +156,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityConfig")
       private final @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig;
 
-    public Output<ClusterClusterConfigSecurityConfigGetArgs> getSecurityConfig() {
+    public Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig() {
         return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 
@@ -168,7 +168,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="softwareConfig")
       private final @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<ClusterClusterConfigSoftwareConfigGetArgs> getSoftwareConfig() {
+    public Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -185,7 +185,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="stagingBucket")
       private final @Nullable Output<String> stagingBucket;
 
-    public Output<String> getStagingBucket() {
+    public Output<String> stagingBucket() {
         return this.stagingBucket == null ? Codegen.empty() : this.stagingBucket;
     }
 
@@ -198,7 +198,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="tempBucket")
       private final @Nullable Output<String> tempBucket;
 
-    public Output<String> getTempBucket() {
+    public Output<String> tempBucket() {
         return this.tempBucket == null ? Codegen.empty() : this.tempBucket;
     }
 
@@ -210,7 +210,7 @@ public final class ClusterClusterConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="workerConfig")
       private final @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig;
 
-    public Output<ClusterClusterConfigWorkerConfigGetArgs> getWorkerConfig() {
+    public Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 

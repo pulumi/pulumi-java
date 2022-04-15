@@ -69,7 +69,7 @@ public final class InstanceNetwork {
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
     */
-    public Optional<String> getConnectMode() {
+    public Optional<String> connectMode() {
         return Optional.ofNullable(this.connectMode);
     }
     /**
@@ -77,7 +77,7 @@ public final class InstanceNetwork {
      * A list of IPv4 or IPv6 addresses.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
@@ -86,7 +86,7 @@ public final class InstanceNetwork {
      * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
      * 
     */
-    public List<String> getModes() {
+    public List<String> modes() {
         return this.modes;
     }
     /**
@@ -94,7 +94,7 @@ public final class InstanceNetwork {
      * instance is connected.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
@@ -102,7 +102,7 @@ public final class InstanceNetwork {
      * addresses reserved for this instance.
      * 
     */
-    public Optional<String> getReservedIpRange() {
+    public Optional<String> reservedIpRange() {
         return Optional.ofNullable(this.reservedIpRange);
     }
 

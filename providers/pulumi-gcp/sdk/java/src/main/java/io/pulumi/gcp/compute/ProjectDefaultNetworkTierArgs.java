@@ -23,7 +23,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

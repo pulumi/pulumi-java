@@ -24,7 +24,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
     @Import(name="cloudStoragePath")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
-    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
+    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath() {
         return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
     @Import(name="wordList")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
 
-    public Output<PreventionStoredInfoTypeDictionaryWordListArgs> getWordList() {
+    public Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList() {
         return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 

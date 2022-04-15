@@ -25,14 +25,14 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
     @Import(name="condition")
       private final @Nullable Output<WebBackendServiceIamBindingConditionArgs> condition;
 
-    public Output<WebBackendServiceIamBindingConditionArgs> getCondition() {
+    public Output<WebBackendServiceIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -44,7 +44,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -68,7 +68,7 @@ public final class WebBackendServiceIamBindingArgs extends io.pulumi.resources.R
     @Import(name="webBackendService", required=true)
       private final Output<String> webBackendService;
 
-    public Output<String> getWebBackendService() {
+    public Output<String> webBackendService() {
         return this.webBackendService;
     }
 

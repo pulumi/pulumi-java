@@ -29,7 +29,7 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
+    public Output<String> imageVersion() {
         return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
@@ -52,7 +52,7 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     @Import(name="optionalComponents")
       private final @Nullable Output<List<String>> optionalComponents;
 
-    public Output<List<String>> getOptionalComponents() {
+    public Output<List<String>> optionalComponents() {
         return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
     }
 
@@ -66,14 +66,14 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     @Import(name="overrideProperties")
       private final @Nullable Output<Map<String,String>> overrideProperties;
 
-    public Output<Map<String,String>> getOverrideProperties() {
+    public Output<Map<String,String>> overrideProperties() {
         return this.overrideProperties == null ? Codegen.empty() : this.overrideProperties;
     }
 
     @Import(name="properties")
       private final @Nullable Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> getProperties() {
+    public Output<Map<String,Object>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

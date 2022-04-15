@@ -26,7 +26,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="config")
       private final @Nullable Output<SecurityPolicyRuleMatchConfigGetArgs> config;
 
-    public Output<SecurityPolicyRuleMatchConfigGetArgs> getConfig() {
+    public Output<SecurityPolicyRuleMatchConfigGetArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -39,7 +39,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="expr")
       private final @Nullable Output<SecurityPolicyRuleMatchExprGetArgs> expr;
 
-    public Output<SecurityPolicyRuleMatchExprGetArgs> getExpr() {
+    public Output<SecurityPolicyRuleMatchExprGetArgs> expr() {
         return this.expr == null ? Codegen.empty() : this.expr;
     }
 
@@ -52,7 +52,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
     @Import(name="versionedExpr")
       private final @Nullable Output<String> versionedExpr;
 
-    public Output<String> getVersionedExpr() {
+    public Output<String> versionedExpr() {
         return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
     }
 

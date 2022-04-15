@@ -73,7 +73,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<PacketMirroringCollectorIlb> getCollectorIlb() {
+    public Output<PacketMirroringCollectorIlb> collectorIlb() {
         return this.collectorIlb;
     }
     /**
@@ -87,7 +87,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PacketMirroringFilter> getFilter() {
+    public Output</* @Nullable */ PacketMirroringFilter> filter() {
         return this.filter;
     }
     /**
@@ -119,7 +119,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<PacketMirroringMirroredResources> getMirroredResources() {
+    public Output<PacketMirroringMirroredResources> mirroredResources() {
         return this.mirroredResources;
     }
     /**
@@ -133,7 +133,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * @return The name of the packet mirroring rule
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -153,7 +153,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<PacketMirroringNetwork> getNetwork() {
+    public Output<PacketMirroringNetwork> network() {
         return this.network;
     }
     /**
@@ -171,7 +171,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * the same instances.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -187,7 +187,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -203,7 +203,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

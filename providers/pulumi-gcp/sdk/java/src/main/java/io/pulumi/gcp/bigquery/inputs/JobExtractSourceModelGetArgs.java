@@ -21,7 +21,7 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -32,7 +32,7 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
     @Import(name="modelId", required=true)
       private final Output<String> modelId;
 
-    public Output<String> getModelId() {
+    public Output<String> modelId() {
         return this.modelId;
     }
 
@@ -43,7 +43,7 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 

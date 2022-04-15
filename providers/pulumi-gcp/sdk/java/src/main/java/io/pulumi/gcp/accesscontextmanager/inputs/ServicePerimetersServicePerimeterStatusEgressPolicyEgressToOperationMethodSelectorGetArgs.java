@@ -24,7 +24,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -36,7 +36,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
     @Import(name="permission")
       private final @Nullable Output<String> permission;
 
-    public Output<String> getPermission() {
+    public Output<String> permission() {
         return this.permission == null ? Codegen.empty() : this.permission;
     }
 

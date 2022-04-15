@@ -74,7 +74,7 @@ public final class AttestorAttestationAuthorityNote {
      * different naming pattern.
      * 
     */
-    public Optional<String> getDelegationServiceAccountEmail() {
+    public Optional<String> delegationServiceAccountEmail() {
         return Optional.ofNullable(this.delegationServiceAccountEmail);
     }
     /**
@@ -87,7 +87,7 @@ public final class AttestorAttestationAuthorityNote {
      * and that links to this Note.
      * 
     */
-    public String getNoteReference() {
+    public String noteReference() {
         return this.noteReference;
     }
     /**
@@ -101,7 +101,7 @@ public final class AttestorAttestationAuthorityNote {
      * Structure is documented below.
      * 
     */
-    public List<AttestorAttestationAuthorityNotePublicKey> getPublicKeys() {
+    public List<AttestorAttestationAuthorityNotePublicKey> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }
 

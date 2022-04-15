@@ -162,10 +162,10 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigAutoscalingConfig> getAutoscalingConfig() {
+    public Optional<ClusterClusterConfigAutoscalingConfig> autoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
@@ -173,7 +173,7 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigEncryptionConfig> getEncryptionConfig() {
+    public Optional<ClusterClusterConfigEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
     /**
@@ -181,7 +181,7 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigEndpointConfig> getEndpointConfig() {
+    public Optional<ClusterClusterConfigEndpointConfig> endpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
     /**
@@ -189,7 +189,7 @@ public final class ClusterClusterConfig {
      * instances, applicable to all instances in the cluster. Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigGceClusterConfig> getGceClusterConfig() {
+    public Optional<ClusterClusterConfigGceClusterConfig> gceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
     /**
@@ -197,7 +197,7 @@ public final class ClusterClusterConfig {
      * You can specify multiple versions of these. Structure defined below.
      * 
     */
-    public List<ClusterClusterConfigInitializationAction> getInitializationActions() {
+    public List<ClusterClusterConfigInitializationAction> initializationActions() {
         return this.initializationActions == null ? List.of() : this.initializationActions;
     }
     /**
@@ -205,7 +205,7 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigLifecycleConfig> getLifecycleConfig() {
+    public Optional<ClusterClusterConfigLifecycleConfig> lifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
     /**
@@ -213,7 +213,7 @@ public final class ClusterClusterConfig {
      * in a cluster. Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigMasterConfig> getMasterConfig() {
+    public Optional<ClusterClusterConfigMasterConfig> masterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
     /**
@@ -222,7 +222,7 @@ public final class ClusterClusterConfig {
      * ***
      * 
     */
-    public Optional<ClusterClusterConfigMetastoreConfig> getMetastoreConfig() {
+    public Optional<ClusterClusterConfigMetastoreConfig> metastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
     /**
@@ -233,14 +233,14 @@ public final class ClusterClusterConfig {
      *   such for legacy/compatibility reasons.
      * 
     */
-    public Optional<ClusterClusterConfigPreemptibleWorkerConfig> getPreemptibleWorkerConfig() {
+    public Optional<ClusterClusterConfigPreemptibleWorkerConfig> preemptibleWorkerConfig() {
         return Optional.ofNullable(this.preemptibleWorkerConfig);
     }
     /**
      * Security related configuration. Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigSecurityConfig> getSecurityConfig() {
+    public Optional<ClusterClusterConfigSecurityConfig> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
     /**
@@ -248,7 +248,7 @@ public final class ClusterClusterConfig {
      * Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigSoftwareConfig> getSoftwareConfig() {
+    public Optional<ClusterClusterConfigSoftwareConfig> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
     /**
@@ -261,7 +261,7 @@ public final class ClusterClusterConfig {
      * option.
      * 
     */
-    public Optional<String> getStagingBucket() {
+    public Optional<String> stagingBucket() {
         return Optional.ofNullable(this.stagingBucket);
     }
     /**
@@ -270,7 +270,7 @@ public final class ClusterClusterConfig {
      * Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
      * 
     */
-    public Optional<String> getTempBucket() {
+    public Optional<String> tempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
     /**
@@ -278,7 +278,7 @@ public final class ClusterClusterConfig {
      * in a cluster. Structure defined below.
      * 
     */
-    public Optional<ClusterClusterConfigWorkerConfig> getWorkerConfig() {
+    public Optional<ClusterClusterConfigWorkerConfig> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
 

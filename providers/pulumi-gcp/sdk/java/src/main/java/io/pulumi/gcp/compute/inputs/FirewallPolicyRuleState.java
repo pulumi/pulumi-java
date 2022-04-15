@@ -26,7 +26,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -37,7 +37,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -59,7 +59,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -70,7 +70,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -81,7 +81,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="firewallPolicy")
       private final @Nullable Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -92,7 +92,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -103,7 +103,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="match")
       private final @Nullable Output<FirewallPolicyRuleMatchGetArgs> match;
 
-    public Output<FirewallPolicyRuleMatchGetArgs> getMatch() {
+    public Output<FirewallPolicyRuleMatchGetArgs> match() {
         return this.match == null ? Codegen.empty() : this.match;
     }
 
@@ -114,7 +114,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -125,7 +125,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="ruleTupleCount")
       private final @Nullable Output<Integer> ruleTupleCount;
 
-    public Output<Integer> getRuleTupleCount() {
+    public Output<Integer> ruleTupleCount() {
         return this.ruleTupleCount == null ? Codegen.empty() : this.ruleTupleCount;
     }
 
@@ -136,7 +136,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> getTargetResources() {
+    public Output<List<String>> targetResources() {
         return this.targetResources == null ? Codegen.empty() : this.targetResources;
     }
 
@@ -147,7 +147,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> getTargetServiceAccounts() {
+    public Output<List<String>> targetServiceAccounts() {
         return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
     }
 

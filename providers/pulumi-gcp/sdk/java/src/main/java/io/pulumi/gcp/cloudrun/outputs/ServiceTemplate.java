@@ -40,7 +40,7 @@ public final class ServiceTemplate {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateMetadata> getMetadata() {
+    public Optional<ServiceTemplateMetadata> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
@@ -48,7 +48,7 @@ public final class ServiceTemplate {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpec> getSpec() {
+    public Optional<ServiceTemplateSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
 

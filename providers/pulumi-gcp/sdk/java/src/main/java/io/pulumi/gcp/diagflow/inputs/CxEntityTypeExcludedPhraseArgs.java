@@ -22,7 +22,7 @@ public final class CxEntityTypeExcludedPhraseArgs extends io.pulumi.resources.Re
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

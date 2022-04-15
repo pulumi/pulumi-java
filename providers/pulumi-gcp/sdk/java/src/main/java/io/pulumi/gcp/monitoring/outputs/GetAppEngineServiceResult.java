@@ -43,29 +43,29 @@ public final class GetAppEngineServiceResult {
         this.telemetries = telemetries;
     }
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getModuleId() {
+    public String moduleId() {
         return this.moduleId;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
-    public List<GetAppEngineServiceTelemetry> getTelemetries() {
+    public List<GetAppEngineServiceTelemetry> telemetries() {
         return this.telemetries;
     }
 

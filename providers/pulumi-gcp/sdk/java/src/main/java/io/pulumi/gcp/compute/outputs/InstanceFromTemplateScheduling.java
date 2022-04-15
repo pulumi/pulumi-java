@@ -35,19 +35,19 @@ public final class InstanceFromTemplateScheduling {
         this.preemptible = preemptible;
     }
 
-    public Optional<Boolean> getAutomaticRestart() {
+    public Optional<Boolean> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
-    public Optional<Integer> getMinNodeCpus() {
+    public Optional<Integer> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
-    public List<InstanceFromTemplateSchedulingNodeAffinity> getNodeAffinities() {
+    public List<InstanceFromTemplateSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
-    public Optional<String> getOnHostMaintenance() {
+    public Optional<String> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
-    public Optional<Boolean> getPreemptible() {
+    public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
 

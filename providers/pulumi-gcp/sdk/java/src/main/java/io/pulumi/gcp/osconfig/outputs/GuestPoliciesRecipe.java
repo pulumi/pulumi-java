@@ -81,7 +81,7 @@ public final class GuestPoliciesRecipe {
      * Structure is documented below.
      * 
     */
-    public List<GuestPoliciesRecipeArtifact> getArtifacts() {
+    public List<GuestPoliciesRecipeArtifact> artifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
     /**
@@ -94,7 +94,7 @@ public final class GuestPoliciesRecipe {
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
     */
-    public Optional<String> getDesiredState() {
+    public Optional<String> desiredState() {
         return Optional.ofNullable(this.desiredState);
     }
     /**
@@ -103,7 +103,7 @@ public final class GuestPoliciesRecipe {
      * Structure is documented below.
      * 
     */
-    public List<GuestPoliciesRecipeInstallStep> getInstallSteps() {
+    public List<GuestPoliciesRecipeInstallStep> installSteps() {
         return this.installSteps == null ? List.of() : this.installSteps;
     }
     /**
@@ -113,7 +113,7 @@ public final class GuestPoliciesRecipe {
      * could potentially have conflicting assignments.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -122,14 +122,14 @@ public final class GuestPoliciesRecipe {
      * Structure is documented below.
      * 
     */
-    public List<GuestPoliciesRecipeUpdateStep> getUpdateSteps() {
+    public List<GuestPoliciesRecipeUpdateStep> updateSteps() {
         return this.updateSteps == null ? List.of() : this.updateSteps;
     }
     /**
      * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

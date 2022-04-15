@@ -36,14 +36,14 @@ public final class EnterpriseKeyAndroidSettings {
      * If set to true, it means allowed_package_names will not be enforced.
      * 
     */
-    public Optional<Boolean> getAllowAllPackageNames() {
+    public Optional<Boolean> allowAllPackageNames() {
         return Optional.ofNullable(this.allowAllPackageNames);
     }
     /**
      * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
      * 
     */
-    public List<String> getAllowedPackageNames() {
+    public List<String> allowedPackageNames() {
         return this.allowedPackageNames == null ? List.of() : this.allowedPackageNames;
     }
 

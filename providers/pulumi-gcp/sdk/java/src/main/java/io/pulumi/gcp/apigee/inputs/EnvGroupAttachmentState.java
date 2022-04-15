@@ -23,7 +23,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="envgroupId")
       private final @Nullable Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId == null ? Codegen.empty() : this.envgroupId;
     }
 
@@ -34,7 +34,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -45,7 +45,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

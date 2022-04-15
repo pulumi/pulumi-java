@@ -24,7 +24,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -38,7 +38,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyAlgorithm")
       private final @Nullable Output<String> keyAlgorithm;
 
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm == null ? Codegen.empty() : this.keyAlgorithm;
     }
 
@@ -49,7 +49,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -72,7 +72,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKeyType")
       private final @Nullable Output<String> privateKeyType;
 
-    public Output<String> getPrivateKeyType() {
+    public Output<String> privateKeyType() {
         return this.privateKeyType == null ? Codegen.empty() : this.privateKeyType;
     }
 
@@ -83,7 +83,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -94,7 +94,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyData")
       private final @Nullable Output<String> publicKeyData;
 
-    public Output<String> getPublicKeyData() {
+    public Output<String> publicKeyData() {
         return this.publicKeyData == null ? Codegen.empty() : this.publicKeyData;
     }
 
@@ -105,7 +105,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyType")
       private final @Nullable Output<String> publicKeyType;
 
-    public Output<String> getPublicKeyType() {
+    public Output<String> publicKeyType() {
         return this.publicKeyType == null ? Codegen.empty() : this.publicKeyType;
     }
 
@@ -118,7 +118,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId")
       private final @Nullable Output<String> serviceAccountId;
 
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId == null ? Codegen.empty() : this.serviceAccountId;
     }
 
@@ -129,7 +129,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="validAfter")
       private final @Nullable Output<String> validAfter;
 
-    public Output<String> getValidAfter() {
+    public Output<String> validAfter() {
         return this.validAfter == null ? Codegen.empty() : this.validAfter;
     }
 
@@ -141,7 +141,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="validBefore")
       private final @Nullable Output<String> validBefore;
 
-    public Output<String> getValidBefore() {
+    public Output<String> validBefore() {
         return this.validBefore == null ? Codegen.empty() : this.validBefore;
     }
 

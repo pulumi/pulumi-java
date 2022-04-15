@@ -16,7 +16,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfig {
         this.localSsdCount = localSsdCount;
     }
 
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
 

@@ -49,28 +49,28 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
     */
-    public Optional<Integer> getMaxInstances() {
+    public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
      * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
      * 
     */
-    public Optional<Integer> getMinInstances() {
+    public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
      * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
     */
-    public Optional<Double> getTargetCpuUtilization() {
+    public Optional<Double> targetCpuUtilization() {
         return Optional.ofNullable(this.targetCpuUtilization);
     }
     /**
      * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
     */
-    public Optional<Double> getTargetThroughputUtilization() {
+    public Optional<Double> targetThroughputUtilization() {
         return Optional.ofNullable(this.targetThroughputUtilization);
     }
 

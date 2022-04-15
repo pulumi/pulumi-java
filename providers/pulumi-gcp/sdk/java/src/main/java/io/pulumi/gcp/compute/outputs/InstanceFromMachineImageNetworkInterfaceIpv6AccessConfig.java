@@ -28,16 +28,16 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
-    public Optional<String> getExternalIpv6() {
+    public Optional<String> externalIpv6() {
         return Optional.ofNullable(this.externalIpv6);
     }
-    public Optional<String> getExternalIpv6PrefixLength() {
+    public Optional<String> externalIpv6PrefixLength() {
         return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
-    public Optional<String> getPublicPtrDomainName() {
+    public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
 

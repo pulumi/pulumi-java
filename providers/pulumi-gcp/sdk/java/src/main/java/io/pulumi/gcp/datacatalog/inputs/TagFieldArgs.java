@@ -25,7 +25,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
+    public Output<Boolean> boolValue() {
         return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
@@ -37,7 +37,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
+    public Output<Double> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
@@ -60,7 +60,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enumValue")
       private final @Nullable Output<String> enumValue;
 
-    public Output<String> getEnumValue() {
+    public Output<String> enumValue() {
         return this.enumValue == null ? Codegen.empty() : this.enumValue;
     }
 
@@ -71,7 +71,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldName", required=true)
       private final Output<String> fieldName;
 
-    public Output<String> getFieldName() {
+    public Output<String> fieldName() {
         return this.fieldName;
     }
 
@@ -85,7 +85,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -96,7 +96,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
@@ -107,7 +107,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
+    public Output<String> timestampValue() {
         return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 

@@ -21,10 +21,10 @@ public final class GetInstanceTemplateAdvancedMachineFeature {
         this.threadsPerCore = threadsPerCore;
     }
 
-    public Boolean getEnableNestedVirtualization() {
+    public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
-    public Integer getThreadsPerCore() {
+    public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
 

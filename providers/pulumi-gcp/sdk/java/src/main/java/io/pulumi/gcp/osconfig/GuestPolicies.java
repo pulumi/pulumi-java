@@ -75,7 +75,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<GuestPoliciesAssignment> getAssignment() {
+    public Output<GuestPoliciesAssignment> assignment() {
         return this.assignment;
     }
     /**
@@ -91,7 +91,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -105,7 +105,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * @return Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -119,7 +119,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * @return The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -143,7 +143,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * * Must be unique within the project.
      * 
      */
-    public Output<String> getGuestPolicyId() {
+    public Output<String> guestPolicyId() {
         return this.guestPolicyId;
     }
     /**
@@ -163,7 +163,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * could potentially have conflicting assignments.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -183,7 +183,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesPackageRepository>> getPackageRepositories() {
+    public Output</* @Nullable */ List<GuestPoliciesPackageRepository>> packageRepositories() {
         return this.packageRepositories;
     }
     /**
@@ -199,7 +199,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesPackage>> getPackages() {
+    public Output</* @Nullable */ List<GuestPoliciesPackage>> packages() {
         return this.packages;
     }
     /**
@@ -215,7 +215,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -231,7 +231,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesRecipe>> getRecipes() {
+    public Output</* @Nullable */ List<GuestPoliciesRecipe>> recipes() {
         return this.recipes;
     }
     /**
@@ -247,7 +247,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -24,7 +24,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -35,7 +35,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -46,7 +46,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

@@ -28,7 +28,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> getAdditionalExtensions() {
+    public Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -40,7 +40,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
+    public Output<List<String>> aiaOcspServers() {
         return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
@@ -52,7 +52,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     @Import(name="caOptions", required=true)
       private final Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions;
 
-    public Output<AuthorityConfigX509ConfigCaOptionsGetArgs> getCaOptions() {
+    public Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions() {
         return this.caOptions;
     }
 
@@ -64,7 +64,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     @Import(name="keyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage;
 
-    public Output<AuthorityConfigX509ConfigKeyUsageGetArgs> getKeyUsage() {
+    public Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage() {
         return this.keyUsage;
     }
 
@@ -76,7 +76,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     @Import(name="policyIds")
       private final @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds;
 
-    public Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> getPolicyIds() {
+    public Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds() {
         return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 

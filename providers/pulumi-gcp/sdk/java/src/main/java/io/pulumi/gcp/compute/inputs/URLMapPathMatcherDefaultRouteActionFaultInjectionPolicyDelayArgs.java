@@ -24,7 +24,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayA
     @Import(name="fixedDelay")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
-    public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
+    public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay() {
         return this.fixedDelay == null ? Codegen.empty() : this.fixedDelay;
     }
 
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayA
     @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 

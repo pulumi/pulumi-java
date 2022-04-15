@@ -27,7 +27,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpuOvercommitType")
       private final @Nullable Output<String> cpuOvercommitType;
 
-    public Output<String> getCpuOvercommitType() {
+    public Output<String> cpuOvercommitType() {
         return this.cpuOvercommitType == null ? Codegen.empty() : this.cpuOvercommitType;
     }
 
@@ -38,7 +38,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -49,7 +49,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinityLabels")
       private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
-    public Output<Map<String,String>> getNodeAffinityLabels() {
+    public Output<Map<String,String>> nodeAffinityLabels() {
         return this.nodeAffinityLabels == null ? Codegen.empty() : this.nodeAffinityLabels;
     }
 
@@ -84,7 +84,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
@@ -99,7 +99,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypeFlexibility")
       private final @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
-    public Output<NodeTemplateNodeTypeFlexibilityGetArgs> getNodeTypeFlexibility() {
+    public Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility() {
         return this.nodeTypeFlexibility == null ? Codegen.empty() : this.nodeTypeFlexibility;
     }
 
@@ -111,7 +111,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -123,7 +123,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -134,7 +134,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -147,7 +147,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverBinding")
       private final @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
 
-    public Output<NodeTemplateServerBindingGetArgs> getServerBinding() {
+    public Output<NodeTemplateServerBindingGetArgs> serverBinding() {
         return this.serverBinding == null ? Codegen.empty() : this.serverBinding;
     }
 

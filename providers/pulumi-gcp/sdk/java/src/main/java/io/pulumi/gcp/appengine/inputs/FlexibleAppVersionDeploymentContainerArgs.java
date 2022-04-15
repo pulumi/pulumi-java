@@ -22,7 +22,7 @@ public final class FlexibleAppVersionDeploymentContainerArgs extends io.pulumi.r
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 

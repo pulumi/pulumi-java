@@ -24,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -35,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
     @Import(name="file")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs> file;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs> getFile() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -46,7 +46,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
     @Import(name="interpreter", required=true)
       private final Output<String> interpreter;
 
-    public Output<String> getInterpreter() {
+    public Output<String> interpreter() {
         return this.interpreter;
     }
 
@@ -57,7 +57,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
     @Import(name="outputFilePath")
       private final @Nullable Output<String> outputFilePath;
 
-    public Output<String> getOutputFilePath() {
+    public Output<String> outputFilePath() {
         return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
     }
 
@@ -68,7 +68,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArg
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 

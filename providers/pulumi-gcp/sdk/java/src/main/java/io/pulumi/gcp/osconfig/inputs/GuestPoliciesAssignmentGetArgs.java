@@ -27,7 +27,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="groupLabels")
       private final @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
 
-    public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> getGroupLabels() {
+    public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels() {
         return this.groupLabels == null ? Codegen.empty() : this.groupLabels;
     }
 
@@ -41,7 +41,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
-    public Output<List<String>> getInstanceNamePrefixes() {
+    public Output<List<String>> instanceNamePrefixes() {
         return this.instanceNamePrefixes == null ? Codegen.empty() : this.instanceNamePrefixes;
     }
 
@@ -56,7 +56,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -69,7 +69,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="osTypes")
       private final @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
 
-    public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> getOsTypes() {
+    public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes() {
         return this.osTypes == null ? Codegen.empty() : this.osTypes;
     }
 
@@ -81,7 +81,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

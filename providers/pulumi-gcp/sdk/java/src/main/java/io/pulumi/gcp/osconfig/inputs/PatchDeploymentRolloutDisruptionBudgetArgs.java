@@ -22,7 +22,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
     @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
 
-    public Output<Integer> getFixed() {
+    public Output<Integer> fixed() {
         return this.fixed == null ? Codegen.empty() : this.fixed;
     }
 
@@ -33,7 +33,7 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends io.pulumi.
     @Import(name="percentage")
       private final @Nullable Output<Integer> percentage;
 
-    public Output<Integer> getPercentage() {
+    public Output<Integer> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 

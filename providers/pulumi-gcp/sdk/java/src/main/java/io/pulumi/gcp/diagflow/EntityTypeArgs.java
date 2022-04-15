@@ -25,7 +25,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
@@ -48,7 +48,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entities")
       private final @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
-    public Output<List<EntityTypeEntityArgs>> getEntities() {
+    public Output<List<EntityTypeEntityArgs>> entities() {
         return this.entities == null ? Codegen.empty() : this.entities;
     }
 
@@ -64,7 +64,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -76,7 +76,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

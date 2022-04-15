@@ -25,7 +25,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -88,7 +88,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="perimeterType")
       private final @Nullable Output<String> perimeterType;
 
-    public Output<String> getPerimeterType() {
+    public Output<String> perimeterType() {
         return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
     }
 
@@ -103,7 +103,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="spec")
       private final @Nullable Output<ServicePerimeterSpecGetArgs> spec;
 
-    public Output<ServicePerimeterSpecGetArgs> getSpec() {
+    public Output<ServicePerimeterSpecGetArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -117,7 +117,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="status")
       private final @Nullable Output<ServicePerimeterStatusGetArgs> status;
 
-    public Output<ServicePerimeterStatusGetArgs> getStatus() {
+    public Output<ServicePerimeterStatusGetArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -128,7 +128,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -139,7 +139,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -158,7 +158,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
-    public Output<Boolean> getUseExplicitDryRunSpec() {
+    public Output<Boolean> useExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec == null ? Codegen.empty() : this.useExplicitDryRunSpec;
     }
 

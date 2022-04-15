@@ -42,17 +42,17 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * handle this extension, the client should consider this to be an error).
      * 
     */
-    public Optional<Boolean> getCritical() {
+    public Optional<Boolean> critical() {
         return Optional.ofNullable(this.critical);
     }
-    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> getObectIds() {
+    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds() {
         return this.obectIds == null ? List.of() : this.obectIds;
     }
     /**
      * The value of this X.509 extension. A base64-encoded string.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

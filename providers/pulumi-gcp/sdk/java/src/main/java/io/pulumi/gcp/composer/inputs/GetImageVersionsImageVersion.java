@@ -20,7 +20,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
     @Import(name="imageVersionId", required=true)
       private final String imageVersionId;
 
-    public String getImageVersionId() {
+    public String imageVersionId() {
         return this.imageVersionId;
     }
 
@@ -31,7 +31,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
     @Import(name="supportedPythonVersions", required=true)
       private final List<String> supportedPythonVersions;
 
-    public List<String> getSupportedPythonVersions() {
+    public List<String> supportedPythonVersions() {
         return this.supportedPythonVersions;
     }
 

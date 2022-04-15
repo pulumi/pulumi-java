@@ -39,7 +39,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A list of API objects.
      * 
      */
-    public Output<List<ServiceApi>> getApis() {
+    public Output<List<ServiceApi>> apis() {
         return this.apis;
     }
     /**
@@ -55,7 +55,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * to compute engine instances as a tag.
      * 
      */
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
     /**
@@ -69,7 +69,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The address at which the service can be found - usually the same as the service name.
      * 
      */
-    public Output<String> getDnsAddress() {
+    public Output<String> dnsAddress() {
         return this.dnsAddress;
     }
     /**
@@ -83,7 +83,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A list of Endpoint objects.
      * 
      */
-    public Output<List<ServiceEndpoint>> getEndpoints() {
+    public Output<List<ServiceEndpoint>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -99,7 +99,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * protoc_output_base64. open_api config must not be provided.
      * 
      */
-    public Output</* @Nullable */ String> getGrpcConfig() {
+    public Output</* @Nullable */ String> grpcConfig() {
         return this.grpcConfig;
     }
     /**
@@ -115,7 +115,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * protoc_output_base64 must be specified.
      * 
      */
-    public Output</* @Nullable */ String> getOpenapiConfig() {
+    public Output</* @Nullable */ String> openapiConfig() {
         return this.openapiConfig;
     }
     /**
@@ -129,7 +129,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The project ID that the service belongs to. If not provided, provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -145,7 +145,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * base64-encoded.
      * 
      */
-    public Output</* @Nullable */ String> getProtocOutputBase64() {
+    public Output</* @Nullable */ String> protocOutputBase64() {
         return this.protocOutputBase64;
     }
     /**
@@ -159,7 +159,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

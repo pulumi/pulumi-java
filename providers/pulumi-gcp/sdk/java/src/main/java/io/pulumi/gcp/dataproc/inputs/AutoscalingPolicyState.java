@@ -26,7 +26,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="basicAlgorithm")
       private final @Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
 
-    public Output<AutoscalingPolicyBasicAlgorithmGetArgs> getBasicAlgorithm() {
+    public Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm() {
         return this.basicAlgorithm == null ? Codegen.empty() : this.basicAlgorithm;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -74,7 +74,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
-    public Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
+    public Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Codegen.empty() : this.secondaryWorkerConfig;
     }
 
@@ -98,7 +98,7 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     @Import(name="workerConfig")
       private final @Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
 
-    public Output<AutoscalingPolicyWorkerConfigGetArgs> getWorkerConfig() {
+    public Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 

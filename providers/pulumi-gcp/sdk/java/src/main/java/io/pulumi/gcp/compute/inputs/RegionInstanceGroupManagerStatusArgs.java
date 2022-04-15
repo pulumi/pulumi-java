@@ -25,7 +25,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
     @Import(name="isStable")
       private final @Nullable Output<Boolean> isStable;
 
-    public Output<Boolean> getIsStable() {
+    public Output<Boolean> isStable() {
         return this.isStable == null ? Codegen.empty() : this.isStable;
     }
 
@@ -36,7 +36,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
     @Import(name="statefuls")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
+    public Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls() {
         return this.statefuls == null ? Codegen.empty() : this.statefuls;
     }
 
@@ -47,7 +47,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
     @Import(name="versionTargets")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
-    public Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
+    public Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets() {
         return this.versionTargets == null ? Codegen.empty() : this.versionTargets;
     }
 

@@ -25,119 +25,119 @@ public final class GetDatabaseInstanceSetting extends io.pulumi.resources.Invoke
     @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
 
-    public String getActivationPolicy() {
+    public String activationPolicy() {
         return this.activationPolicy;
     }
 
     @Import(name="availabilityType", required=true)
       private final String availabilityType;
 
-    public String getAvailabilityType() {
+    public String availabilityType() {
         return this.availabilityType;
     }
 
     @Import(name="backupConfigurations", required=true)
       private final List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations;
 
-    public List<GetDatabaseInstanceSettingBackupConfiguration> getBackupConfigurations() {
+    public List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations() {
         return this.backupConfigurations;
     }
 
     @Import(name="collation", required=true)
       private final String collation;
 
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
 
     @Import(name="databaseFlags", required=true)
       private final List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags;
 
-    public List<GetDatabaseInstanceSettingDatabaseFlag> getDatabaseFlags() {
+    public List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags() {
         return this.databaseFlags;
     }
 
     @Import(name="diskAutoresize", required=true)
       private final Boolean diskAutoresize;
 
-    public Boolean getDiskAutoresize() {
+    public Boolean diskAutoresize() {
         return this.diskAutoresize;
     }
 
     @Import(name="diskAutoresizeLimit", required=true)
       private final Integer diskAutoresizeLimit;
 
-    public Integer getDiskAutoresizeLimit() {
+    public Integer diskAutoresizeLimit() {
         return this.diskAutoresizeLimit;
     }
 
     @Import(name="diskSize", required=true)
       private final Integer diskSize;
 
-    public Integer getDiskSize() {
+    public Integer diskSize() {
         return this.diskSize;
     }
 
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
     @Import(name="insightsConfigs", required=true)
       private final List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs;
 
-    public List<GetDatabaseInstanceSettingInsightsConfig> getInsightsConfigs() {
+    public List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs() {
         return this.insightsConfigs;
     }
 
     @Import(name="ipConfigurations", required=true)
       private final List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations;
 
-    public List<GetDatabaseInstanceSettingIpConfiguration> getIpConfigurations() {
+    public List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations() {
         return this.ipConfigurations;
     }
 
     @Import(name="locationPreferences", required=true)
       private final List<GetDatabaseInstanceSettingLocationPreference> locationPreferences;
 
-    public List<GetDatabaseInstanceSettingLocationPreference> getLocationPreferences() {
+    public List<GetDatabaseInstanceSettingLocationPreference> locationPreferences() {
         return this.locationPreferences;
     }
 
     @Import(name="maintenanceWindows", required=true)
       private final List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows;
 
-    public List<GetDatabaseInstanceSettingMaintenanceWindow> getMaintenanceWindows() {
+    public List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
 
     @Import(name="pricingPlan", required=true)
       private final String pricingPlan;
 
-    public String getPricingPlan() {
+    public String pricingPlan() {
         return this.pricingPlan;
     }
 
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 
     @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
 
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels;
     }
 
     @Import(name="version", required=true)
       private final Integer version;
 
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

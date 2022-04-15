@@ -49,7 +49,7 @@ public final class MetricBucketOptions {
      * Structure is documented below.
      * 
     */
-    public Optional<MetricBucketOptionsExplicitBuckets> getExplicitBuckets() {
+    public Optional<MetricBucketOptionsExplicitBuckets> explicitBuckets() {
         return Optional.ofNullable(this.explicitBuckets);
     }
     /**
@@ -58,7 +58,7 @@ public final class MetricBucketOptions {
      * Structure is documented below.
      * 
     */
-    public Optional<MetricBucketOptionsExponentialBuckets> getExponentialBuckets() {
+    public Optional<MetricBucketOptionsExponentialBuckets> exponentialBuckets() {
         return Optional.ofNullable(this.exponentialBuckets);
     }
     /**
@@ -67,7 +67,7 @@ public final class MetricBucketOptions {
      * Structure is documented below.
      * 
     */
-    public Optional<MetricBucketOptionsLinearBuckets> getLinearBuckets() {
+    public Optional<MetricBucketOptionsLinearBuckets> linearBuckets() {
         return Optional.ofNullable(this.linearBuckets);
     }
 

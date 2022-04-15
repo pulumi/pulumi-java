@@ -41,29 +41,29 @@ public final class GetRegistryImageResult {
         this.tag = tag;
     }
 
-    public Optional<String> getDigest() {
+    public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getImageUrl() {
+    public String imageUrl() {
         return this.imageUrl;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
 

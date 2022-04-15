@@ -16,7 +16,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStopSchedule {
         this.schedule = schedule;
     }
 
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 

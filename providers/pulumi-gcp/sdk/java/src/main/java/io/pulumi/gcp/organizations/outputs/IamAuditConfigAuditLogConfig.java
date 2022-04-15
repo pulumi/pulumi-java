@@ -44,14 +44,14 @@ public final class IamAuditConfigAuditLogConfig {
      * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
      * 
     */
-    public List<String> getExemptedMembers() {
+    public List<String> exemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
     }
     /**
      * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
      * 
     */
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

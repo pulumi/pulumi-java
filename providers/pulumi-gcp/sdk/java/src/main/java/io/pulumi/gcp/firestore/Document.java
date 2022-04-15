@@ -53,7 +53,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
      * 
      */
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection;
     }
     /**
@@ -67,7 +67,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -81,7 +81,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    public Output</* @Nullable */ String> getDatabase() {
+    public Output</* @Nullable */ String> database() {
         return this.database;
     }
     /**
@@ -95,7 +95,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The client-assigned document ID to use for this document during creation.
      * 
      */
-    public Output<String> getDocumentId() {
+    public Output<String> documentId() {
         return this.documentId;
     }
     /**
@@ -109,7 +109,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
-    public Output<String> getFields() {
+    public Output<String> fields() {
         return this.fields;
     }
     /**
@@ -125,7 +125,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -139,7 +139,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A relative path to the collection this document exists within
      * 
      */
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
     /**
@@ -155,7 +155,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -169,7 +169,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Last update timestamp in RFC3339 format.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

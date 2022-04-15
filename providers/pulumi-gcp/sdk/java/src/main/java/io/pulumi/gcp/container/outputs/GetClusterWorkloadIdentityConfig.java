@@ -16,7 +16,7 @@ public final class GetClusterWorkloadIdentityConfig {
         this.workloadPool = workloadPool;
     }
 
-    public String getWorkloadPool() {
+    public String workloadPool() {
         return this.workloadPool;
     }
 

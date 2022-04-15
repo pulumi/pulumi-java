@@ -18,7 +18,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     @Import(name="followupIntentName")
       private final @Nullable Output<String> followupIntentName;
 
-    public Output<String> getFollowupIntentName() {
+    public Output<String> followupIntentName() {
         return this.followupIntentName == null ? Codegen.empty() : this.followupIntentName;
     }
 
@@ -30,7 +30,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Output<String> getParentFollowupIntentName() {
+    public Output<String> parentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 

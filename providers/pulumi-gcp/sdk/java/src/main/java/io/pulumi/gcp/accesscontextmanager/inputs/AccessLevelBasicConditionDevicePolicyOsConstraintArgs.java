@@ -25,7 +25,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
     @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
-    public Output<String> getMinimumVersion() {
+    public Output<String> minimumVersion() {
         return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
     }
 
@@ -37,7 +37,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
     @Import(name="osType", required=true)
       private final Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType;
     }
 
@@ -48,7 +48,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintArgs extends
     @Import(name="requireVerifiedChromeOs")
       private final @Nullable Output<Boolean> requireVerifiedChromeOs;
 
-    public Output<Boolean> getRequireVerifiedChromeOs() {
+    public Output<Boolean> requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs == null ? Codegen.empty() : this.requireVerifiedChromeOs;
     }
 

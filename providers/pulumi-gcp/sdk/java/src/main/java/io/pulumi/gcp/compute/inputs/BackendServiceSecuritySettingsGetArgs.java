@@ -24,7 +24,7 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
     @Import(name="clientTlsPolicy", required=true)
       private final Output<String> clientTlsPolicy;
 
-    public Output<String> getClientTlsPolicy() {
+    public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
     @Import(name="subjectAltNames", required=true)
       private final Output<List<String>> subjectAltNames;
 
-    public Output<List<String>> getSubjectAltNames() {
+    public Output<List<String>> subjectAltNames() {
         return this.subjectAltNames;
     }
 

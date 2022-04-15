@@ -68,7 +68,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Output</* @Nullable */ InstanceGroupManagerAutoHealingPolicies> getAutoHealingPolicies() {
+    public Output</* @Nullable */ InstanceGroupManagerAutoHealingPolicies> autoHealingPolicies() {
         return this.autoHealingPolicies;
     }
     /**
@@ -92,7 +92,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * name.
      * 
      */
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName;
     }
     /**
@@ -108,7 +108,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * group manager.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -122,7 +122,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return The fingerprint of the instance group manager.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -136,7 +136,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return The full URL of the instance group created by the manager.
      * 
      */
-    public Output<String> getInstanceGroup() {
+    public Output<String> instanceGroup() {
         return this.instanceGroup;
     }
     /**
@@ -150,7 +150,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return - Version name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -166,13 +166,13 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * for details on configuration.
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupManagerNamedPort>> getNamedPorts() {
+    public Output</* @Nullable */ List<InstanceGroupManagerNamedPort>> namedPorts() {
         return this.namedPorts;
     }
     @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
     /**
@@ -188,7 +188,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -202,7 +202,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return The URL of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -216,7 +216,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupManagerStatefulDisk>> getStatefulDisks() {
+    public Output</* @Nullable */ List<InstanceGroupManagerStatefulDisk>> statefulDisks() {
         return this.statefulDisks;
     }
     /**
@@ -230,7 +230,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return The status of this managed instance group.
      * 
      */
-    public Output<List<InstanceGroupManagerStatus>> getStatuses() {
+    public Output<List<InstanceGroupManagerStatus>> statuses() {
         return this.statuses;
     }
     /**
@@ -248,7 +248,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * not affect existing instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetPools() {
+    public Output</* @Nullable */ List<String>> targetPools() {
         return this.targetPools;
     }
     /**
@@ -262,7 +262,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize;
     }
     /**
@@ -276,7 +276,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * @return The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
      * 
      */
-    public Output<InstanceGroupManagerUpdatePolicy> getUpdatePolicy() {
+    public Output<InstanceGroupManagerUpdatePolicy> updatePolicy() {
         return this.updatePolicy;
     }
     /**
@@ -294,7 +294,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<InstanceGroupManagerVersion>> getVersions() {
+    public Output<List<InstanceGroupManagerVersion>> versions() {
         return this.versions;
     }
     /**
@@ -312,7 +312,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * continue trying until it times out.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForInstances() {
+    public Output</* @Nullable */ Boolean> waitForInstances() {
         return this.waitForInstances;
     }
     /**
@@ -332,7 +332,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    public Output</* @Nullable */ String> getWaitForInstancesStatus() {
+    public Output</* @Nullable */ String> waitForInstancesStatus() {
         return this.waitForInstancesStatus;
     }
     /**
@@ -348,7 +348,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * in.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

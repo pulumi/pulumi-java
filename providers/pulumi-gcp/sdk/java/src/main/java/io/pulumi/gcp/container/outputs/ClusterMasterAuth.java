@@ -33,20 +33,20 @@ public final class ClusterMasterAuth {
         this.clusterCaCertificate = clusterCaCertificate;
     }
 
-    public Optional<String> getClientCertificate() {
+    public Optional<String> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
     /**
      * Whether client certificate authorization is enabled for this cluster.  For example:
      * 
     */
-    public ClusterMasterAuthClientCertificateConfig getClientCertificateConfig() {
+    public ClusterMasterAuthClientCertificateConfig clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
-    public Optional<String> getClientKey() {
+    public Optional<String> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
-    public Optional<String> getClusterCaCertificate() {
+    public Optional<String> clusterCaCertificate() {
         return Optional.ofNullable(this.clusterCaCertificate);
     }
 

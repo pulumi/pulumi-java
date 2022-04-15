@@ -24,7 +24,7 @@ public final class InstanceScratchDisk {
      * The disk interface to use for attaching this disk; either SCSI or NVME.
      * 
     */
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 

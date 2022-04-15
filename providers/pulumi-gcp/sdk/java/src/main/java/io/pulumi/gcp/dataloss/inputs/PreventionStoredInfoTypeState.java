@@ -25,7 +25,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="dictionary")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
 
-    public Output<PreventionStoredInfoTypeDictionaryGetArgs> getDictionary() {
+    public Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="largeCustomDictionary")
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> getLargeCustomDictionary() {
+    public Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary() {
         return this.largeCustomDictionary == null ? Codegen.empty() : this.largeCustomDictionary;
     }
 
@@ -71,7 +71,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -98,7 +98,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     @Import(name="regex")
       private final @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
-    public Output<PreventionStoredInfoTypeRegexGetArgs> getRegex() {
+    public Output<PreventionStoredInfoTypeRegexGetArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

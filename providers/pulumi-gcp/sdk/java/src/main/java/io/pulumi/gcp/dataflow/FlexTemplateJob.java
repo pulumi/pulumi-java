@@ -64,7 +64,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * Template.
      * 
      */
-    public Output<String> getContainerSpecGcsPath() {
+    public Output<String> containerSpecGcsPath() {
         return this.containerSpecGcsPath;
     }
     /**
@@ -78,7 +78,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * @return The unique ID of this job.
      * 
      */
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     /**
@@ -108,7 +108,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * labels will be ignored to prevent diffs on re-apply.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getLabels() {
+    public Output</* @Nullable */ Map<String,Object>> labels() {
         return this.labels;
     }
     /**
@@ -122,7 +122,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * @return A unique name for the resource, required by Dataflow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -138,7 +138,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * deletion during `pulumi destroy`.  See above note.
      * 
      */
-    public Output</* @Nullable */ String> getOnDelete() {
+    public Output</* @Nullable */ String> onDelete() {
         return this.onDelete;
     }
     /**
@@ -156,7 +156,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getParameters() {
+    public Output</* @Nullable */ Map<String,Object>> parameters() {
         return this.parameters;
     }
     /**
@@ -172,7 +172,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -186,7 +186,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * @return The region in which the created job should run.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -200,7 +200,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * @return The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

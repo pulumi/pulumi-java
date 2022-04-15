@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
     }
 
@@ -33,7 +33,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 

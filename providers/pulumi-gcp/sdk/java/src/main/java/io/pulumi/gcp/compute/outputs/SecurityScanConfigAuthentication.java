@@ -38,7 +38,7 @@ public final class SecurityScanConfigAuthentication {
      * Structure is documented below.
      * 
     */
-    public Optional<SecurityScanConfigAuthenticationCustomAccount> getCustomAccount() {
+    public Optional<SecurityScanConfigAuthenticationCustomAccount> customAccount() {
         return Optional.ofNullable(this.customAccount);
     }
     /**
@@ -46,7 +46,7 @@ public final class SecurityScanConfigAuthentication {
      * Structure is documented below.
      * 
     */
-    public Optional<SecurityScanConfigAuthenticationGoogleAccount> getGoogleAccount() {
+    public Optional<SecurityScanConfigAuthenticationGoogleAccount> googleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }
 

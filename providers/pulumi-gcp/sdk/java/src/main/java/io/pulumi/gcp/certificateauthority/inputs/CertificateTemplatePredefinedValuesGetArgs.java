@@ -27,7 +27,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> getAdditionalExtensions() {
+    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
+    public Output<List<String>> aiaOcspServers() {
         return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="caOptions")
       private final @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
 
-    public Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> getCaOptions() {
+    public Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions() {
         return this.caOptions == null ? Codegen.empty() : this.caOptions;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="keyUsage")
       private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> getKeyUsage() {
+    public Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     @Import(name="policyIds")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
 
-    public Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> getPolicyIds() {
+    public Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds() {
         return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 

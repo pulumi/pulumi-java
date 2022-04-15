@@ -26,7 +26,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -52,7 +52,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHandlers")
       private final @Nullable Output<List<CxFlowEventHandlerArgs>> eventHandlers;
 
-    public Output<List<CxFlowEventHandlerArgs>> getEventHandlers() {
+    public Output<List<CxFlowEventHandlerArgs>> eventHandlers() {
         return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
     }
 
@@ -68,7 +68,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -80,7 +80,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nluSettings")
       private final @Nullable Output<CxFlowNluSettingsArgs> nluSettings;
 
-    public Output<CxFlowNluSettingsArgs> getNluSettings() {
+    public Output<CxFlowNluSettingsArgs> nluSettings() {
         return this.nluSettings == null ? Codegen.empty() : this.nluSettings;
     }
 
@@ -92,7 +92,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -106,7 +106,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Output<List<String>> getTransitionRouteGroups() {
+    public Output<List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
     }
 
@@ -119,7 +119,7 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitionRoutes")
       private final @Nullable Output<List<CxFlowTransitionRouteArgs>> transitionRoutes;
 
-    public Output<List<CxFlowTransitionRouteArgs>> getTransitionRoutes() {
+    public Output<List<CxFlowTransitionRouteArgs>> transitionRoutes() {
         return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
     }
 

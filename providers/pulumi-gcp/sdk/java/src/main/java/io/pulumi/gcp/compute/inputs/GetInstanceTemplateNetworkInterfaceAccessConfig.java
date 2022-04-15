@@ -20,7 +20,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
     @Import(name="natIp", required=true)
       private final String natIp;
 
-    public String getNatIp() {
+    public String natIp() {
         return this.natIp;
     }
 
@@ -33,14 +33,14 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
     @Import(name="networkTier", required=true)
       private final String networkTier;
 
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
 
     @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

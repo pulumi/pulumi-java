@@ -38,14 +38,14 @@ public final class RegionPerInstanceConfigPreservedState {
      * Structure is documented below.
      * 
     */
-    public List<RegionPerInstanceConfigPreservedStateDisk> getDisks() {
+    public List<RegionPerInstanceConfigPreservedStateDisk> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Preserved metadata defined for this instance. This is a list of key->value pairs.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 

@@ -47,7 +47,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * This field can take the following values: `PREMIUM` or `STANDARD`.
      * 
      */
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
     /**
@@ -63,7 +63,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

@@ -17,7 +17,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfigGetArgs extends io.pu
     @Import(name="localSsdCount", required=true)
       private final Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount;
     }
 

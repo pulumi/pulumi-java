@@ -24,7 +24,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
      * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -22,7 +22,7 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -35,7 +35,7 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
     @Import(name="matcher")
       private final @Nullable Output<String> matcher;
 
-    public Output<String> getMatcher() {
+    public Output<String> matcher() {
         return this.matcher == null ? Codegen.empty() : this.matcher;
     }
 

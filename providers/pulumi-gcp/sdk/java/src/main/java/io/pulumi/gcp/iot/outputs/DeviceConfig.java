@@ -28,16 +28,16 @@ public final class DeviceConfig {
         this.version = version;
     }
 
-    public Optional<String> getBinaryData() {
+    public Optional<String> binaryData() {
         return Optional.ofNullable(this.binaryData);
     }
-    public Optional<String> getCloudUpdateTime() {
+    public Optional<String> cloudUpdateTime() {
         return Optional.ofNullable(this.cloudUpdateTime);
     }
-    public Optional<String> getDeviceAckTime() {
+    public Optional<String> deviceAckTime() {
         return Optional.ofNullable(this.deviceAckTime);
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

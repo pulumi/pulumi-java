@@ -54,7 +54,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @return If set to true traffic will be migrated to this version.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMigrateTraffic() {
+    public Output</* @Nullable */ Boolean> migrateTraffic() {
         return this.migrateTraffic;
     }
     /**
@@ -70,7 +70,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -84,7 +84,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * @return The name of the service these settings apply to.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -100,7 +100,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<EngineSplitTrafficSplit> getSplit() {
+    public Output<EngineSplitTrafficSplit> split() {
         return this.split;
     }
 

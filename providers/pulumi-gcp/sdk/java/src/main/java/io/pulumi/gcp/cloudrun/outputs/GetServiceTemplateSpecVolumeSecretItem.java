@@ -24,13 +24,13 @@ public final class GetServiceTemplateSpecVolumeSecretItem {
         this.path = path;
     }
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public Integer getMode() {
+    public Integer mode() {
         return this.mode;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

@@ -27,7 +27,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
      * Structure is documented below.
      * 
     */
-    public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
+    public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

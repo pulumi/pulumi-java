@@ -26,7 +26,7 @@ public final class ApiConfigOpenapiDocument {
      * Structure is documented below.
      * 
     */
-    public ApiConfigOpenapiDocumentDocument getDocument() {
+    public ApiConfigOpenapiDocumentDocument document() {
         return this.document;
     }
 

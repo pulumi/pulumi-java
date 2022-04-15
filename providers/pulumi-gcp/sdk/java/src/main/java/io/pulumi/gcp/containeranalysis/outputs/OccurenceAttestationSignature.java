@@ -58,7 +58,7 @@ public final class OccurenceAttestationSignature {
      * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
      * 
     */
-    public String getPublicKeyId() {
+    public String publicKeyId() {
         return this.publicKeyId;
     }
     /**
@@ -71,7 +71,7 @@ public final class OccurenceAttestationSignature {
      * unambiguously computed to derive the payload.
      * 
     */
-    public Optional<String> getSignature() {
+    public Optional<String> signature() {
         return Optional.ofNullable(this.signature);
     }
 

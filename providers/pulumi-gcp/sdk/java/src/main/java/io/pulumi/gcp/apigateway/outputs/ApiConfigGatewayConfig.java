@@ -26,7 +26,7 @@ public final class ApiConfigGatewayConfig {
      * Structure is documented below.
      * 
     */
-    public ApiConfigGatewayConfigBackendConfig getBackendConfig() {
+    public ApiConfigGatewayConfigBackendConfig backendConfig() {
         return this.backendConfig;
     }
 

@@ -27,7 +27,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="artifacts")
       private final @Nullable Output<List<GuestPoliciesRecipeArtifactArgs>> artifacts;
 
-    public Output<List<GuestPoliciesRecipeArtifactArgs>> getArtifacts() {
+    public Output<List<GuestPoliciesRecipeArtifactArgs>> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -44,7 +44,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
@@ -57,7 +57,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="installSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps;
 
-    public Output<List<GuestPoliciesRecipeInstallStepArgs>> getInstallSteps() {
+    public Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps() {
         return this.installSteps == null ? Codegen.empty() : this.installSteps;
     }
 
@@ -71,7 +71,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="updateSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps;
 
-    public Output<List<GuestPoliciesRecipeUpdateStepArgs>> getUpdateSteps() {
+    public Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps() {
         return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
     }
 
@@ -95,7 +95,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

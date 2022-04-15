@@ -122,7 +122,7 @@ public final class ServicePerimetersServicePerimeter {
      * Time the AccessPolicy was created in UTC.
      * 
     */
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
@@ -130,7 +130,7 @@ public final class ServicePerimetersServicePerimeter {
      * behavior.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -139,7 +139,7 @@ public final class ServicePerimetersServicePerimeter {
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -161,7 +161,7 @@ public final class ServicePerimetersServicePerimeter {
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
     */
-    public Optional<String> getPerimeterType() {
+    public Optional<String> perimeterType() {
         return Optional.ofNullable(this.perimeterType);
     }
     /**
@@ -172,7 +172,7 @@ public final class ServicePerimetersServicePerimeter {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterSpec> getSpec() {
+    public Optional<ServicePerimetersServicePerimeterSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
@@ -182,14 +182,14 @@ public final class ServicePerimetersServicePerimeter {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterStatus> getStatus() {
+    public Optional<ServicePerimetersServicePerimeterStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Human readable title. Must be unique within the Policy.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
@@ -197,7 +197,7 @@ public final class ServicePerimetersServicePerimeter {
      * Time the AccessPolicy was updated in UTC.
      * 
     */
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
     /**
@@ -212,7 +212,7 @@ public final class ServicePerimetersServicePerimeter {
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
     */
-    public Optional<Boolean> getUseExplicitDryRunSpec() {
+    public Optional<Boolean> useExplicitDryRunSpec() {
         return Optional.ofNullable(this.useExplicitDryRunSpec);
     }
 

@@ -28,16 +28,16 @@ public final class ServiceApiMethod {
         this.syntax = syntax;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRequestType() {
+    public Optional<String> requestType() {
         return Optional.ofNullable(this.requestType);
     }
-    public Optional<String> getResponseType() {
+    public Optional<String> responseType() {
         return Optional.ofNullable(this.responseType);
     }
-    public Optional<String> getSyntax() {
+    public Optional<String> syntax() {
         return Optional.ofNullable(this.syntax);
     }
 

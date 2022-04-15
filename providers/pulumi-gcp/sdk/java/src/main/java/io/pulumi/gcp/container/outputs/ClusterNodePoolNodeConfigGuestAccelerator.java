@@ -42,21 +42,21 @@ public final class ClusterNodePoolNodeConfigGuestAccelerator {
      * The number of the guest accelerator cards exposed to this instance.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
     */
-    public Optional<String> getGpuPartitionSize() {
+    public Optional<String> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

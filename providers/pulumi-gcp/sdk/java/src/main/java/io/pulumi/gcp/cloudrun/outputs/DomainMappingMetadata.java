@@ -97,7 +97,7 @@ public final class DomainMappingMetadata {
      * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
      * 
     */
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations == null ? Map.of() : this.annotations;
     }
     /**
@@ -105,7 +105,7 @@ public final class DomainMappingMetadata {
      * A sequence number representing a specific generation of the desired state.
      * 
     */
-    public Optional<Integer> getGeneration() {
+    public Optional<Integer> generation() {
         return Optional.ofNullable(this.generation);
     }
     /**
@@ -115,7 +115,7 @@ public final class DomainMappingMetadata {
      * More info: http://kubernetes.io/docs/user-guide/labels
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -123,7 +123,7 @@ public final class DomainMappingMetadata {
      * project ID or project number.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
@@ -137,7 +137,7 @@ public final class DomainMappingMetadata {
      * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
      * 
     */
-    public Optional<String> getResourceVersion() {
+    public Optional<String> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
@@ -145,7 +145,7 @@ public final class DomainMappingMetadata {
      * SelfLink is a URL representing this object.
      * 
     */
-    public Optional<String> getSelfLink() {
+    public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
     /**
@@ -155,7 +155,7 @@ public final class DomainMappingMetadata {
      * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
 

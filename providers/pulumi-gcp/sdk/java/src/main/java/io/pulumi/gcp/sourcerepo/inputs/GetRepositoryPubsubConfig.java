@@ -15,21 +15,21 @@ public final class GetRepositoryPubsubConfig extends io.pulumi.resources.InvokeA
     @Import(name="messageFormat", required=true)
       private final String messageFormat;
 
-    public String getMessageFormat() {
+    public String messageFormat() {
         return this.messageFormat;
     }
 
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

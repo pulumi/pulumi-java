@@ -18,28 +18,28 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
     @Import(name="tagTemplate", required=true)
       private final Output<String> tagTemplate;
 
-    public Output<String> getTagTemplate() {
+    public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 

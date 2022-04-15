@@ -126,7 +126,7 @@ public final class TableExternalDataConfiguration {
      *   and format of the table.
      * 
     */
-    public Boolean getAutodetect() {
+    public Boolean autodetect() {
         return this.autodetect;
     }
     /**
@@ -134,7 +134,7 @@ public final class TableExternalDataConfiguration {
      * Valid values are "NONE" or "GZIP".
      * 
     */
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
@@ -142,7 +142,7 @@ public final class TableExternalDataConfiguration {
      * `source_format` is set to "CSV". Structure is documented below.
      * 
     */
-    public Optional<TableExternalDataConfigurationCsvOptions> getCsvOptions() {
+    public Optional<TableExternalDataConfigurationCsvOptions> csvOptions() {
         return Optional.ofNullable(this.csvOptions);
     }
     /**
@@ -151,7 +151,7 @@ public final class TableExternalDataConfiguration {
      * documented below.
      * 
     */
-    public Optional<TableExternalDataConfigurationGoogleSheetsOptions> getGoogleSheetsOptions() {
+    public Optional<TableExternalDataConfigurationGoogleSheetsOptions> googleSheetsOptions() {
         return Optional.ofNullable(this.googleSheetsOptions);
     }
     /**
@@ -161,7 +161,7 @@ public final class TableExternalDataConfiguration {
      * an invalid specification. Structure is documented below.
      * 
     */
-    public Optional<TableExternalDataConfigurationHivePartitioningOptions> getHivePartitioningOptions() {
+    public Optional<TableExternalDataConfigurationHivePartitioningOptions> hivePartitioningOptions() {
         return Optional.ofNullable(this.hivePartitioningOptions);
     }
     /**
@@ -173,7 +173,7 @@ public final class TableExternalDataConfiguration {
      * The default value is false.
      * 
     */
-    public Optional<Boolean> getIgnoreUnknownValues() {
+    public Optional<Boolean> ignoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
     /**
@@ -181,7 +181,7 @@ public final class TableExternalDataConfiguration {
      * BigQuery can ignore when reading data.
      * 
     */
-    public Optional<Integer> getMaxBadRecords() {
+    public Optional<Integer> maxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
     /**
@@ -198,7 +198,7 @@ public final class TableExternalDataConfiguration {
      * `google_bigquery_table.schema`
      * 
     */
-    public Optional<String> getSchema() {
+    public Optional<String> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
@@ -209,7 +209,7 @@ public final class TableExternalDataConfiguration {
      * "https://www.googleapis.com/auth/drive.readonly".
      * 
     */
-    public String getSourceFormat() {
+    public String sourceFormat() {
         return this.sourceFormat;
     }
     /**
@@ -217,7 +217,7 @@ public final class TableExternalDataConfiguration {
      * your data in Google Cloud.
      * 
     */
-    public List<String> getSourceUris() {
+    public List<String> sourceUris() {
         return this.sourceUris;
     }
 

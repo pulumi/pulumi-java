@@ -24,13 +24,13 @@ public final class GetClusterNodePoolNetworkConfig {
         this.podRange = podRange;
     }
 
-    public Boolean getCreatePodRange() {
+    public Boolean createPodRange() {
         return this.createPodRange;
     }
-    public String getPodIpv4CidrBlock() {
+    public String podIpv4CidrBlock() {
         return this.podIpv4CidrBlock;
     }
-    public String getPodRange() {
+    public String podRange() {
         return this.podRange;
     }
 

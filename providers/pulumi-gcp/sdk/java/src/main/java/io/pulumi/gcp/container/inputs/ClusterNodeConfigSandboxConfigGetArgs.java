@@ -22,7 +22,7 @@ public final class ClusterNodeConfigSandboxConfigGetArgs extends io.pulumi.resou
     @Import(name="sandboxType", required=true)
       private final Output<String> sandboxType;
 
-    public Output<String> getSandboxType() {
+    public Output<String> sandboxType() {
         return this.sandboxType;
     }
 

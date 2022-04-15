@@ -30,7 +30,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertStrategy")
       private final @Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy;
 
-    public Output<AlertPolicyAlertStrategyGetArgs> getAlertStrategy() {
+    public Output<AlertPolicyAlertStrategyGetArgs> alertStrategy() {
         return this.alertStrategy == null ? Codegen.empty() : this.alertStrategy;
     }
 
@@ -43,7 +43,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="combiner")
       private final @Nullable Output<String> combiner;
 
-    public Output<String> getCombiner() {
+    public Output<String> combiner() {
         return this.combiner == null ? Codegen.empty() : this.combiner;
     }
 
@@ -58,7 +58,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<AlertPolicyConditionGetArgs>> conditions;
 
-    public Output<List<AlertPolicyConditionGetArgs>> getConditions() {
+    public Output<List<AlertPolicyConditionGetArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -70,7 +70,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationRecords")
       private final @Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords;
 
-    public Output<List<AlertPolicyCreationRecordGetArgs>> getCreationRecords() {
+    public Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords() {
         return this.creationRecords == null ? Codegen.empty() : this.creationRecords;
     }
 
@@ -85,7 +85,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -101,7 +101,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentation")
       private final @Nullable Output<AlertPolicyDocumentationGetArgs> documentation;
 
-    public Output<AlertPolicyDocumentationGetArgs> getDocumentation() {
+    public Output<AlertPolicyDocumentationGetArgs> documentation() {
         return this.documentation == null ? Codegen.empty() : this.documentation;
     }
 
@@ -112,7 +112,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -129,7 +129,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -146,7 +146,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationChannels")
       private final @Nullable Output<List<String>> notificationChannels;
 
-    public Output<List<String>> getNotificationChannels() {
+    public Output<List<String>> notificationChannels() {
         return this.notificationChannels == null ? Codegen.empty() : this.notificationChannels;
     }
 
@@ -158,7 +158,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -173,7 +173,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 

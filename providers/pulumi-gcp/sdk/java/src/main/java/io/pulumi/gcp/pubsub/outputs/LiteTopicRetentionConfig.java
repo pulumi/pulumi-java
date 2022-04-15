@@ -41,7 +41,7 @@ public final class LiteTopicRetentionConfig {
      * dropped to make room for newer ones, regardless of the value of period.
      * 
     */
-    public String getPerPartitionBytes() {
+    public String perPartitionBytes() {
         return this.perPartitionBytes;
     }
     /**
@@ -51,7 +51,7 @@ public final class LiteTopicRetentionConfig {
      * Example: "3.5s".
      * 
     */
-    public Optional<String> getPeriod() {
+    public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }
 

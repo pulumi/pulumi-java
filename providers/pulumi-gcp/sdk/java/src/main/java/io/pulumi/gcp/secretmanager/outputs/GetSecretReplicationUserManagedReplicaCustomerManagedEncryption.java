@@ -16,7 +16,7 @@ public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncrypti
         this.kmsKeyName = kmsKeyName;
     }
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

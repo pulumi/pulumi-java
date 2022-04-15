@@ -21,7 +21,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
-    public Output<Integer> getHours() {
+    public Output<Integer> hours() {
         return this.hours;
     }
 
@@ -32,7 +32,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes;
     }
 
@@ -43,7 +43,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
     @Import(name="nanos", required=true)
       private final Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos;
     }
 
@@ -54,7 +54,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
     @Import(name="seconds", required=true)
       private final Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
+    public Output<Integer> seconds() {
         return this.seconds;
     }
 

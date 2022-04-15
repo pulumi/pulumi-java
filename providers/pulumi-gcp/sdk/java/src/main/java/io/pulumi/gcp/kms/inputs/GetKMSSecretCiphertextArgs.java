@@ -21,7 +21,7 @@ public final class GetKMSSecretCiphertextArgs extends io.pulumi.resources.Invoke
     @Import(name="cryptoKey", required=true)
       private final String cryptoKey;
 
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -32,7 +32,7 @@ public final class GetKMSSecretCiphertextArgs extends io.pulumi.resources.Invoke
     @Import(name="plaintext", required=true)
       private final String plaintext;
 
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

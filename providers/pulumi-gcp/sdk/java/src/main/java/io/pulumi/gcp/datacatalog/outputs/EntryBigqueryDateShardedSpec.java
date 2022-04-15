@@ -26,13 +26,13 @@ public final class EntryBigqueryDateShardedSpec {
         this.tablePrefix = tablePrefix;
     }
 
-    public Optional<String> getDataset() {
+    public Optional<String> dataset() {
         return Optional.ofNullable(this.dataset);
     }
-    public Optional<Integer> getShardCount() {
+    public Optional<Integer> shardCount() {
         return Optional.ofNullable(this.shardCount);
     }
-    public Optional<String> getTablePrefix() {
+    public Optional<String> tablePrefix() {
         return Optional.ofNullable(this.tablePrefix);
     }
 

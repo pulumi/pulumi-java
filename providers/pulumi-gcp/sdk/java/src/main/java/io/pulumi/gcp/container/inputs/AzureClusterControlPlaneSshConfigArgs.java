@@ -21,7 +21,7 @@ public final class AzureClusterControlPlaneSshConfigArgs extends io.pulumi.resou
     @Import(name="authorizedKey", required=true)
       private final Output<String> authorizedKey;
 
-    public Output<String> getAuthorizedKey() {
+    public Output<String> authorizedKey() {
         return this.authorizedKey;
     }
 

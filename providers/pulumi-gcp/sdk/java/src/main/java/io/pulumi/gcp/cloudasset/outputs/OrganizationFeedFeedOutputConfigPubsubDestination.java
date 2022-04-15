@@ -24,7 +24,7 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestination {
      * Destination on Cloud Pubsub topic.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

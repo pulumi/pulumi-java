@@ -58,7 +58,7 @@ public final class DomainMappingSslSettings {
      * Example: 12345.
      * 
     */
-    public Optional<String> getCertificateId() {
+    public Optional<String> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
     /**
@@ -70,7 +70,7 @@ public final class DomainMappingSslSettings {
      * `certificateId` field with an update request.
      * 
     */
-    public Optional<String> getPendingManagedCertificateId() {
+    public Optional<String> pendingManagedCertificateId() {
         return Optional.ofNullable(this.pendingManagedCertificateId);
     }
     /**
@@ -79,7 +79,7 @@ public final class DomainMappingSslSettings {
      * Possible values are `AUTOMATIC` and `MANUAL`.
      * 
     */
-    public String getSslManagementType() {
+    public String sslManagementType() {
         return this.sslManagementType;
     }
 

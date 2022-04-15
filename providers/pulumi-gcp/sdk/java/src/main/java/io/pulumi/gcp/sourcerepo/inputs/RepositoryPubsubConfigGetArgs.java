@@ -25,7 +25,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="messageFormat", required=true)
       private final Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat;
     }
 
@@ -39,7 +39,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -50,7 +50,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
