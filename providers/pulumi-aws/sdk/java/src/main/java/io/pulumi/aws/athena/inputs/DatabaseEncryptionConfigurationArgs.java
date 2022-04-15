@@ -22,7 +22,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     @Import(name="encryptionOption", required=true)
       private final Output<String> encryptionOption;
 
-    public Output<String> getEncryptionOption() {
+    public Output<String> encryptionOption() {
         return this.encryptionOption;
     }
 
@@ -33,7 +33,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 

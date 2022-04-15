@@ -22,7 +22,7 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups;
     }
 
@@ -33,7 +33,7 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

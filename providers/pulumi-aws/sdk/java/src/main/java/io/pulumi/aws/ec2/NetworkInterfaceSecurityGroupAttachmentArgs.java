@@ -21,7 +21,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -32,7 +32,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
     @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 

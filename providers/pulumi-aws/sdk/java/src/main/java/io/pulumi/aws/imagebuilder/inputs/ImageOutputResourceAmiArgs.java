@@ -22,7 +22,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -55,7 +55,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class ImageOutputResourceAmiArgs extends io.pulumi.resources.Resour
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

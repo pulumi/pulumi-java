@@ -24,7 +24,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -46,7 +46,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="domainNameServers")
       private final @Nullable Output<List<String>> domainNameServers;
 
-    public Output<List<String>> getDomainNameServers() {
+    public Output<List<String>> domainNameServers() {
         return this.domainNameServers == null ? Codegen.empty() : this.domainNameServers;
     }
 
@@ -57,7 +57,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
-    public Output<List<String>> getNetbiosNameServers() {
+    public Output<List<String>> netbiosNameServers() {
         return this.netbiosNameServers == null ? Codegen.empty() : this.netbiosNameServers;
     }
 
@@ -68,7 +68,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
-    public Output<String> getNetbiosNodeType() {
+    public Output<String> netbiosNodeType() {
         return this.netbiosNodeType == null ? Codegen.empty() : this.netbiosNodeType;
     }
 
@@ -79,7 +79,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="ntpServers")
       private final @Nullable Output<List<String>> ntpServers;
 
-    public Output<List<String>> getNtpServers() {
+    public Output<List<String>> ntpServers() {
         return this.ntpServers == null ? Codegen.empty() : this.ntpServers;
     }
 
@@ -90,7 +90,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -101,7 +101,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

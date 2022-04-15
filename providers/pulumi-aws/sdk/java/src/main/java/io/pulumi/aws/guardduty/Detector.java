@@ -45,7 +45,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the GuardDuty detector
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -59,7 +59,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the GuardDuty detector
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -73,7 +73,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return Describes which data sources will be enabled for the detector. See Data Sources below for more details.
      * 
      */
-    public Output<DetectorDatasources> getDatasources() {
+    public Output<DetectorDatasources> datasources() {
         return this.datasources;
     }
     /**
@@ -87,7 +87,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnable() {
+    public Output</* @Nullable */ Boolean> enable() {
         return this.enable;
     }
     /**
@@ -101,7 +101,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
      * 
      */
-    public Output<String> getFindingPublishingFrequency() {
+    public Output<String> findingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
     /**
@@ -115,7 +115,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -54,34 +54,34 @@ public final class GetRegexPatternSetResult {
      * The Amazon Resource Name (ARN) of the entity.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The description of the set that helps with identification.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
      * 
     */
-    public List<GetRegexPatternSetRegularExpression> getRegularExpressions() {
+    public List<GetRegexPatternSetRegularExpression> regularExpressions() {
         return this.regularExpressions;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

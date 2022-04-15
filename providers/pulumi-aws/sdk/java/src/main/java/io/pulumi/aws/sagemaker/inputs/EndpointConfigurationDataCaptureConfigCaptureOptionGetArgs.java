@@ -21,7 +21,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     @Import(name="captureMode", required=true)
       private final Output<String> captureMode;
 
-    public Output<String> getCaptureMode() {
+    public Output<String> captureMode() {
         return this.captureMode;
     }
 

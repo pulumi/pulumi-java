@@ -25,7 +25,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="automationParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> getAutomationParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters() {
         return this.automationParameters == null ? Codegen.empty() : this.automationParameters;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="lambdaParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> getLambdaParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters() {
         return this.lambdaParameters == null ? Codegen.empty() : this.lambdaParameters;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="runCommandParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> getRunCommandParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters() {
         return this.runCommandParameters == null ? Codegen.empty() : this.runCommandParameters;
     }
 
@@ -58,7 +58,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     @Import(name="stepFunctionsParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> getStepFunctionsParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters() {
         return this.stepFunctionsParameters == null ? Codegen.empty() : this.stepFunctionsParameters;
     }
 

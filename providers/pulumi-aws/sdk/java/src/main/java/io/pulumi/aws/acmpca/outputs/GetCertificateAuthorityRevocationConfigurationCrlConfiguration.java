@@ -31,19 +31,19 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
         this.s3ObjectAcl = s3ObjectAcl;
     }
 
-    public String getCustomCname() {
+    public String customCname() {
         return this.customCname;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public Integer getExpirationInDays() {
+    public Integer expirationInDays() {
         return this.expirationInDays;
     }
-    public String getS3BucketName() {
+    public String s3BucketName() {
         return this.s3BucketName;
     }
-    public String getS3ObjectAcl() {
+    public String s3ObjectAcl() {
         return this.s3ObjectAcl;
     }
 

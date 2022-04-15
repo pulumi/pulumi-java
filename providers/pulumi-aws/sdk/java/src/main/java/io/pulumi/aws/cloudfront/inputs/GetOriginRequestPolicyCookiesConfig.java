@@ -17,14 +17,14 @@ public final class GetOriginRequestPolicyCookiesConfig extends io.pulumi.resourc
     @Import(name="cookieBehavior", required=true)
       private final String cookieBehavior;
 
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies", required=true)
       private final List<GetOriginRequestPolicyCookiesConfigCookie> cookies;
 
-    public List<GetOriginRequestPolicyCookiesConfigCookie> getCookies() {
+    public List<GetOriginRequestPolicyCookiesConfigCookie> cookies() {
         return this.cookies;
     }
 

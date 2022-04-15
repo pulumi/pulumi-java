@@ -27,7 +27,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adjustmentType")
       private final @Nullable Output<String> adjustmentType;
 
-    public Output<String> getAdjustmentType() {
+    public Output<String> adjustmentType() {
         return this.adjustmentType == null ? Codegen.empty() : this.adjustmentType;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName", required=true)
       private final Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cooldown")
       private final @Nullable Output<Integer> cooldown;
 
-    public Output<Integer> getCooldown() {
+    public Output<Integer> cooldown() {
         return this.cooldown == null ? Codegen.empty() : this.cooldown;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Integer> estimatedInstanceWarmup;
 
-    public Output<Integer> getEstimatedInstanceWarmup() {
+    public Output<Integer> estimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Codegen.empty() : this.estimatedInstanceWarmup;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricAggregationType")
       private final @Nullable Output<String> metricAggregationType;
 
-    public Output<String> getMetricAggregationType() {
+    public Output<String> metricAggregationType() {
         return this.metricAggregationType == null ? Codegen.empty() : this.metricAggregationType;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAdjustmentMagnitude")
       private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
-    public Output<Integer> getMinAdjustmentMagnitude() {
+    public Output<Integer> minAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude == null ? Codegen.empty() : this.minAdjustmentMagnitude;
     }
 
@@ -93,7 +93,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyType")
       private final @Nullable Output<String> policyType;
 
-    public Output<String> getPolicyType() {
+    public Output<String> policyType() {
         return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
@@ -115,7 +115,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predictiveScalingConfiguration")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration;
 
-    public Output<PolicyPredictiveScalingConfigurationArgs> getPredictiveScalingConfiguration() {
+    public Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration() {
         return this.predictiveScalingConfiguration == null ? Codegen.empty() : this.predictiveScalingConfiguration;
     }
 
@@ -128,7 +128,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingAdjustment")
       private final @Nullable Output<Integer> scalingAdjustment;
 
-    public Output<Integer> getScalingAdjustment() {
+    public Output<Integer> scalingAdjustment() {
         return this.scalingAdjustment == null ? Codegen.empty() : this.scalingAdjustment;
     }
 
@@ -140,7 +140,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepAdjustments")
       private final @Nullable Output<List<PolicyStepAdjustmentArgs>> stepAdjustments;
 
-    public Output<List<PolicyStepAdjustmentArgs>> getStepAdjustments() {
+    public Output<List<PolicyStepAdjustmentArgs>> stepAdjustments() {
         return this.stepAdjustments == null ? Codegen.empty() : this.stepAdjustments;
     }
 
@@ -151,7 +151,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetTrackingConfiguration")
       private final @Nullable Output<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
-    public Output<PolicyTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
+    public Output<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration() {
         return this.targetTrackingConfiguration == null ? Codegen.empty() : this.targetTrackingConfiguration;
     }
 

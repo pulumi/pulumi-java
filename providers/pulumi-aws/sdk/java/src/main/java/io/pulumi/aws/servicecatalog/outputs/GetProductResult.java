@@ -115,101 +115,101 @@ public final class GetProductResult {
         this.type = type;
     }
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * ARN of the product.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Time when the product was created.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Description of the product.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Distributor (i.e., vendor) of the product.
      * 
     */
-    public String getDistributor() {
+    public String distributor() {
         return this.distributor;
     }
     /**
      * Whether the product has a default path.
      * 
     */
-    public Boolean getHasDefaultPath() {
+    public Boolean hasDefaultPath() {
         return this.hasDefaultPath;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the product.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Owner of the product.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * Status of the product.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Support information about the product.
      * 
     */
-    public String getSupportDescription() {
+    public String supportDescription() {
         return this.supportDescription;
     }
     /**
      * Contact email for product support.
      * 
     */
-    public String getSupportEmail() {
+    public String supportEmail() {
         return this.supportEmail;
     }
     /**
      * Contact URL for product support.
      * 
     */
-    public String getSupportUrl() {
+    public String supportUrl() {
         return this.supportUrl;
     }
     /**
      * Tags to apply to the product.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Type of product.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

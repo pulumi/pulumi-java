@@ -42,7 +42,7 @@ public class AvailabilityZoneGroup extends io.pulumi.resources.CustomResource {
      * @return Name of the Availability Zone Group.
      * 
      */
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
     /**
@@ -56,7 +56,7 @@ public class AvailabilityZoneGroup extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
      * 
      */
-    public Output<String> getOptInStatus() {
+    public Output<String> optInStatus() {
         return this.optInStatus;
     }
 

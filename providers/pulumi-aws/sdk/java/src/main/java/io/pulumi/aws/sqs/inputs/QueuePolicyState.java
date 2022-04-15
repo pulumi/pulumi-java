@@ -22,7 +22,7 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -33,7 +33,7 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueUrl")
       private final @Nullable Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl == null ? Codegen.empty() : this.queueUrl;
     }
 

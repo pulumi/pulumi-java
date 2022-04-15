@@ -24,7 +24,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="autoEnable")
       private final @Nullable Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable == null ? Codegen.empty() : this.autoEnable;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="datasources")
       private final @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
 
-    public Output<OrganizationConfigurationDatasourcesGetArgs> getDatasources() {
+    public Output<OrganizationConfigurationDatasourcesGetArgs> datasources() {
         return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
@@ -46,7 +46,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 

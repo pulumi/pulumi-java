@@ -22,7 +22,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -33,7 +33,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -44,7 +44,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

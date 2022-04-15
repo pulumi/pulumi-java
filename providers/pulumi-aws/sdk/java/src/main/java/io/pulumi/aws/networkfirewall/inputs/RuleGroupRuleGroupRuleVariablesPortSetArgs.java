@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends io.pulumi.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends io.pulumi.
     @Import(name="portSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
 
-    public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> getPortSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet() {
         return this.portSet;
     }
 

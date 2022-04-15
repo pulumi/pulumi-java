@@ -19,7 +19,7 @@ public final class GetProductFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
@@ -30,7 +30,7 @@ public final class GetProductFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

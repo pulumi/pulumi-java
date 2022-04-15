@@ -49,37 +49,37 @@ public final class GetListenerDefaultActionAuthenticateOidc {
         this.userInfoEndpoint = userInfoEndpoint;
     }
 
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
-    public String getOnUnauthenticatedRequest() {
+    public String onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
-    public String getSessionCookieName() {
+    public String sessionCookieName() {
         return this.sessionCookieName;
     }
-    public Integer getSessionTimeout() {
+    public Integer sessionTimeout() {
         return this.sessionTimeout;
     }
-    public String getTokenEndpoint() {
+    public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
-    public String getUserInfoEndpoint() {
+    public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

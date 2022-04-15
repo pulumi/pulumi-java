@@ -21,7 +21,7 @@ public final class DataSourceParametersAwsIotAnalyticsArgs extends io.pulumi.res
     @Import(name="dataSetName", required=true)
       private final Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName;
     }
 

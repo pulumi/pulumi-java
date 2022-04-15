@@ -21,7 +21,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn", required=true)
       private final Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -32,7 +32,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 

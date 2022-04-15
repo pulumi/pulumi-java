@@ -41,7 +41,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing encryption configuration. Detailed below.
      * 
      */
-    public Output<SecurityConfigurationEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output<SecurityConfigurationEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -55,7 +55,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * @return Name of the security configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

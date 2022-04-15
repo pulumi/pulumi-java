@@ -23,7 +23,7 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
     @Import(name="applyServerSideEncryptionByDefault", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> applyServerSideEncryptionByDefault;
 
-    public Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> getApplyServerSideEncryptionByDefault() {
+    public Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> applyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
 
@@ -34,7 +34,7 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
+    public Output<Boolean> bucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 

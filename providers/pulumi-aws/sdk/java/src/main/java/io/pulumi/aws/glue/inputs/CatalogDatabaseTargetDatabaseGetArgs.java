@@ -21,7 +21,7 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -32,7 +32,7 @@ public final class CatalogDatabaseTargetDatabaseGetArgs extends io.pulumi.resour
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 

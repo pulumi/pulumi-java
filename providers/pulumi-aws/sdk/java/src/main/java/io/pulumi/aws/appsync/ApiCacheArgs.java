@@ -24,7 +24,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiCachingBehavior", required=true)
       private final Output<String> apiCachingBehavior;
 
-    public Output<String> getApiCachingBehavior() {
+    public Output<String> apiCachingBehavior() {
         return this.apiCachingBehavior;
     }
 
@@ -35,7 +35,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -46,7 +46,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Output<Boolean> getAtRestEncryptionEnabled() {
+    public Output<Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
     }
 
@@ -57,7 +57,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Output<Boolean> getTransitEncryptionEnabled() {
+    public Output<Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
     }
 
@@ -68,7 +68,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl", required=true)
       private final Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl;
     }
 
@@ -79,7 +79,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

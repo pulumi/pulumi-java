@@ -26,7 +26,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="bufferingInterval")
       private final @Nullable Output<Integer> bufferingInterval;
 
-    public Output<Integer> getBufferingInterval() {
+    public Output<Integer> bufferingInterval() {
         return this.bufferingInterval == null ? Codegen.empty() : this.bufferingInterval;
     }
 
@@ -37,7 +37,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="bufferingSize")
       private final @Nullable Output<Integer> bufferingSize;
 
-    public Output<Integer> getBufferingSize() {
+    public Output<Integer> bufferingSize() {
         return this.bufferingSize == null ? Codegen.empty() : this.bufferingSize;
     }
 
@@ -48,7 +48,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -59,7 +59,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="clusterEndpoint")
       private final @Nullable Output<String> clusterEndpoint;
 
-    public Output<String> getClusterEndpoint() {
+    public Output<String> clusterEndpoint() {
         return this.clusterEndpoint == null ? Codegen.empty() : this.clusterEndpoint;
     }
 
@@ -70,7 +70,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="domainArn")
       private final @Nullable Output<String> domainArn;
 
-    public Output<String> getDomainArn() {
+    public Output<String> domainArn() {
         return this.domainArn == null ? Codegen.empty() : this.domainArn;
     }
 
@@ -81,7 +81,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
@@ -92,7 +92,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="indexRotationPeriod")
       private final @Nullable Output<String> indexRotationPeriod;
 
-    public Output<String> getIndexRotationPeriod() {
+    public Output<String> indexRotationPeriod() {
         return this.indexRotationPeriod == null ? Codegen.empty() : this.indexRotationPeriod;
     }
 
@@ -103,7 +103,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
@@ -114,7 +114,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
-    public Output<Integer> getRetryDuration() {
+    public Output<Integer> retryDuration() {
         return this.retryDuration == null ? Codegen.empty() : this.retryDuration;
     }
 
@@ -125,7 +125,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -136,7 +136,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
-    public Output<String> getS3BackupMode() {
+    public Output<String> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
@@ -147,7 +147,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
@@ -158,7 +158,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationArgs extends 
     @Import(name="vpcConfig")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig;
 
-    public Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> getVpcConfig() {
+    public Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

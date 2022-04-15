@@ -16,7 +16,7 @@ public final class DistributionRestrictions {
         this.geoRestriction = geoRestriction;
     }
 
-    public DistributionRestrictionsGeoRestriction getGeoRestriction() {
+    public DistributionRestrictionsGeoRestriction geoRestriction() {
         return this.geoRestriction;
     }
 

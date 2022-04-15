@@ -53,7 +53,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
      * 
      */
-    public Output<String> getAmi() {
+    public Output<String> ami() {
         return this.ami;
     }
     /**
@@ -67,7 +67,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ARN of the instance.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -81,7 +81,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Whether to associate a public IP address with an instance in a VPC.
      * 
      */
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     /**
@@ -95,7 +95,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return AZ to start the instance in.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -109,7 +109,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
-    public Output<InstanceCapacityReservationSpecification> getCapacityReservationSpecification() {
+    public Output<InstanceCapacityReservationSpecification> capacityReservationSpecification() {
         return this.capacityReservationSpecification;
     }
     /**
@@ -123,7 +123,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
      * 
      */
-    public Output<Integer> getCpuCoreCount() {
+    public Output<Integer> cpuCoreCount() {
         return this.cpuCoreCount;
     }
     /**
@@ -137,7 +137,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
      * 
      */
-    public Output<Integer> getCpuThreadsPerCore() {
+    public Output<Integer> cpuThreadsPerCore() {
         return this.cpuThreadsPerCore;
     }
     /**
@@ -151,7 +151,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
      * 
      */
-    public Output</* @Nullable */ InstanceCreditSpecification> getCreditSpecification() {
+    public Output</* @Nullable */ InstanceCreditSpecification> creditSpecification() {
         return this.creditSpecification;
     }
     /**
@@ -165,7 +165,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
      * 
      */
-    public Output<Boolean> getDisableApiTermination() {
+    public Output<Boolean> disableApiTermination() {
         return this.disableApiTermination;
     }
     /**
@@ -179,7 +179,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Output<List<InstanceEbsBlockDevice>> getEbsBlockDevices() {
+    public Output<List<InstanceEbsBlockDevice>> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
@@ -193,7 +193,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
      * 
      */
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -207,7 +207,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    public Output<InstanceEnclaveOptions> getEnclaveOptions() {
+    public Output<InstanceEnclaveOptions> enclaveOptions() {
         return this.enclaveOptions;
     }
     /**
@@ -221,7 +221,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    public Output<List<InstanceEphemeralBlockDevice>> getEphemeralBlockDevices() {
+    public Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
@@ -235,7 +235,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> getGetPasswordData() {
+    public Output</* @Nullable */ Boolean> getPasswordData() {
         return this.getPasswordData;
     }
     /**
@@ -249,7 +249,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will support hibernation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getHibernation() {
+    public Output</* @Nullable */ Boolean> hibernation() {
         return this.hibernation;
     }
     /**
@@ -263,7 +263,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
      * 
      */
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId;
     }
     /**
@@ -277,7 +277,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
      * 
      */
-    public Output</* @Nullable */ String> getIamInstanceProfile() {
+    public Output</* @Nullable */ String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
@@ -291,7 +291,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
      * 
      */
-    public Output<String> getInstanceInitiatedShutdownBehavior() {
+    public Output<String> instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior;
     }
     /**
@@ -305,7 +305,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
      * 
      */
-    public Output<String> getInstanceState() {
+    public Output<String> instanceState() {
         return this.instanceState;
     }
     /**
@@ -319,7 +319,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -333,7 +333,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
      * 
      */
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
     /**
@@ -347,7 +347,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
      * 
      */
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
@@ -361,7 +361,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
      * 
      */
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
     /**
@@ -377,7 +377,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * See Launch Template Specification below for more details.
      * 
      */
-    public Output</* @Nullable */ InstanceLaunchTemplate> getLaunchTemplate() {
+    public Output</* @Nullable */ InstanceLaunchTemplate> launchTemplate() {
         return this.launchTemplate;
     }
     /**
@@ -391,7 +391,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Customize the metadata options of the instance. See Metadata Options below for more details.
      * 
      */
-    public Output<InstanceMetadataOptions> getMetadataOptions() {
+    public Output<InstanceMetadataOptions> metadataOptions() {
         return this.metadataOptions;
     }
     /**
@@ -405,7 +405,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
      * 
      */
-    public Output<Boolean> getMonitoring() {
+    public Output<Boolean> monitoring() {
         return this.monitoring;
     }
     /**
@@ -419,7 +419,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
      * 
      */
-    public Output<List<InstanceNetworkInterface>> getNetworkInterfaces() {
+    public Output<List<InstanceNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -433,7 +433,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Outpost the instance is assigned to.
      * 
      */
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -447,7 +447,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Base-64 encoded encrypted password data for the instance. Useful for getting the administrator password for instances running Microsoft Windows. This attribute is only exported if `get_password_data` is true. Note that this encrypted value will be stored in the state file, as with all exported attributes. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
      */
-    public Output<String> getPasswordData() {
+    public Output<String> passwordData() {
         return this.passwordData;
     }
     /**
@@ -461,7 +461,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Placement Group to start the instance in.
      * 
      */
-    public Output<String> getPlacementGroup() {
+    public Output<String> placementGroup() {
         return this.placementGroup;
     }
     /**
@@ -475,7 +475,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
      * 
      */
-    public Output<Integer> getPlacementPartitionNumber() {
+    public Output<Integer> placementPartitionNumber() {
         return this.placementPartitionNumber;
     }
     /**
@@ -489,7 +489,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ID of the instance's primary network interface.
      * 
      */
-    public Output<String> getPrimaryNetworkInterfaceId() {
+    public Output<String> primaryNetworkInterfaceId() {
         return this.primaryNetworkInterfaceId;
     }
     /**
@@ -503,7 +503,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC.
      * 
      */
-    public Output<String> getPrivateDns() {
+    public Output<String> privateDns() {
         return this.privateDns;
     }
     /**
@@ -517,7 +517,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Private IP address to associate with the instance in a VPC.
      * 
      */
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp;
     }
     /**
@@ -531,7 +531,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The public DNS name assigned to the instance. For EC2-VPC, this is only available if you've enabled DNS hostnames for your VPC.
      * 
      */
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns;
     }
     /**
@@ -545,7 +545,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
     /**
@@ -559,7 +559,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
      * 
      */
-    public Output<InstanceRootBlockDevice> getRootBlockDevice() {
+    public Output<InstanceRootBlockDevice> rootBlockDevice() {
         return this.rootBlockDevice;
     }
     /**
@@ -573,7 +573,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
-    public Output<List<String>> getSecondaryPrivateIps() {
+    public Output<List<String>> secondaryPrivateIps() {
         return this.secondaryPrivateIps;
     }
     /**
@@ -591,7 +591,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A list of security group names to associate with.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -605,7 +605,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSourceDestCheck() {
+    public Output</* @Nullable */ Boolean> sourceDestCheck() {
         return this.sourceDestCheck;
     }
     /**
@@ -619,7 +619,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return VPC Subnet ID to launch in.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -633,7 +633,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -647,7 +647,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -661,7 +661,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
      * 
      */
-    public Output<String> getTenancy() {
+    public Output<String> tenancy() {
         return this.tenancy;
     }
     /**
@@ -675,7 +675,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
      * 
      */
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData;
     }
     /**
@@ -689,7 +689,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
      * 
      */
-    public Output<String> getUserDataBase64() {
+    public Output<String> userDataBase64() {
         return this.userDataBase64;
     }
     /**
@@ -703,7 +703,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign, at instance-creation time, to root and EBS volumes.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getVolumeTags() {
+    public Output</* @Nullable */ Map<String,String>> volumeTags() {
         return this.volumeTags;
     }
     /**
@@ -717,7 +717,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A list of security group IDs to associate with.
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

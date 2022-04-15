@@ -23,7 +23,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileGetArgs> file;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileGetArgs> getFile() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFileGetArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
     @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsGetArgs> sds;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsGetArgs> getSds() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSdsGetArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

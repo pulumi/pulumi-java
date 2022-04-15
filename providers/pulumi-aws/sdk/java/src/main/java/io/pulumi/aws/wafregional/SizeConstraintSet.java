@@ -34,7 +34,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @return The name or description of the Size Constraint Set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -62,7 +62,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @return Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    public Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> getSizeConstraints() {
+    public Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> sizeConstraints() {
         return this.sizeConstraints;
     }
 

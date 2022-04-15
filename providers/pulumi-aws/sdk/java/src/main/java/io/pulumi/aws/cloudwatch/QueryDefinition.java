@@ -41,7 +41,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return Specific log groups to use with the query.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLogGroupNames() {
+    public Output</* @Nullable */ List<String>> logGroupNames() {
         return this.logGroupNames;
     }
     /**
@@ -55,7 +55,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of the query.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The query definition ID.
      * 
      */
-    public Output<String> getQueryDefinitionId() {
+    public Output<String> queryDefinitionId() {
         return this.queryDefinitionId;
     }
     /**
@@ -83,7 +83,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The query to save. You can read more about CloudWatch Logs Query Syntax in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html).
      * 
      */
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 

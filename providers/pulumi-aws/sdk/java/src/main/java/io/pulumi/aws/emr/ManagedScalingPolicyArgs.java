@@ -23,7 +23,7 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="computeLimits", required=true)
       private final Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
-    public Output<List<ManagedScalingPolicyComputeLimitArgs>> getComputeLimits() {
+    public Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits() {
         return this.computeLimits;
     }
 

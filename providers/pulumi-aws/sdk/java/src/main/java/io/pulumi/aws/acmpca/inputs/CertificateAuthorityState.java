@@ -27,7 +27,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="certificateAuthorityConfiguration")
       private final @Nullable Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
 
-    public Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> getCertificateAuthorityConfiguration() {
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration == null ? Codegen.empty() : this.certificateAuthorityConfiguration;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
@@ -71,7 +71,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="certificateSigningRequest")
       private final @Nullable Output<String> certificateSigningRequest;
 
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest == null ? Codegen.empty() : this.certificateSigningRequest;
     }
 
@@ -82,7 +82,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -93,7 +93,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="notAfter")
       private final @Nullable Output<String> notAfter;
 
-    public Output<String> getNotAfter() {
+    public Output<String> notAfter() {
         return this.notAfter == null ? Codegen.empty() : this.notAfter;
     }
 
@@ -104,7 +104,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="notBefore")
       private final @Nullable Output<String> notBefore;
 
-    public Output<String> getNotBefore() {
+    public Output<String> notBefore() {
         return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 
@@ -115,7 +115,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="permanentDeletionTimeInDays")
       private final @Nullable Output<Integer> permanentDeletionTimeInDays;
 
-    public Output<Integer> getPermanentDeletionTimeInDays() {
+    public Output<Integer> permanentDeletionTimeInDays() {
         return this.permanentDeletionTimeInDays == null ? Codegen.empty() : this.permanentDeletionTimeInDays;
     }
 
@@ -126,7 +126,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="revocationConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationGetArgs> getRevocationConfiguration() {
+    public Output<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration() {
         return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
     }
 
@@ -137,7 +137,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="serial")
       private final @Nullable Output<String> serial;
 
-    public Output<String> getSerial() {
+    public Output<String> serial() {
         return this.serial == null ? Codegen.empty() : this.serial;
     }
 
@@ -148,7 +148,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -159,7 +159,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -181,7 +181,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

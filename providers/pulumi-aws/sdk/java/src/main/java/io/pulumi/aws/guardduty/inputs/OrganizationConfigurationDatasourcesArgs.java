@@ -22,7 +22,7 @@ public final class OrganizationConfigurationDatasourcesArgs extends io.pulumi.re
     @Import(name="s3Logs")
       private final @Nullable Output<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs;
 
-    public Output<OrganizationConfigurationDatasourcesS3LogsArgs> getS3Logs() {
+    public Output<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs() {
         return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
     }
 

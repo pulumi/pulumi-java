@@ -22,10 +22,10 @@ public final class StackAccessEndpoint {
         this.vpceId = vpceId;
     }
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
-    public Optional<String> getVpceId() {
+    public Optional<String> vpceId() {
         return Optional.ofNullable(this.vpceId);
     }
 

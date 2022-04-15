@@ -22,7 +22,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="alternateContactType", required=true)
       private final Output<String> alternateContactType;
 
-    public Output<String> getAlternateContactType() {
+    public Output<String> alternateContactType() {
         return this.alternateContactType;
     }
 
@@ -44,7 +44,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -55,7 +55,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -77,7 +77,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

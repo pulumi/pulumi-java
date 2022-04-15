@@ -23,7 +23,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="burstLimit")
       private final @Nullable Output<Integer> burstLimit;
 
-    public Output<Integer> getBurstLimit() {
+    public Output<Integer> burstLimit() {
         return this.burstLimit == null ? Codegen.empty() : this.burstLimit;
     }
 
@@ -34,7 +34,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="rateLimit")
       private final @Nullable Output<Double> rateLimit;
 
-    public Output<Double> getRateLimit() {
+    public Output<Double> rateLimit() {
         return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
     }
 

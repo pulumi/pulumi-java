@@ -27,17 +27,17 @@ public final class GetLambdaFunctionAssociationResult {
         this.instanceId = instanceId;
     }
 
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 

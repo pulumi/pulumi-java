@@ -23,7 +23,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     @Import(name="cookieName")
       private final @Nullable Output<String> cookieName;
 
-    public Output<String> getCookieName() {
+    public Output<String> cookieName() {
         return this.cookieName == null ? Codegen.empty() : this.cookieName;
     }
 
@@ -36,7 +36,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     @Import(name="lbPort")
       private final @Nullable Output<Integer> lbPort;
 
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort == null ? Codegen.empty() : this.lbPort;
     }
 
@@ -48,7 +48,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
@@ -59,7 +59,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

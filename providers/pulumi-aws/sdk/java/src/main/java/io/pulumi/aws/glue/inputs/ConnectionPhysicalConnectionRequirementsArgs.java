@@ -23,7 +23,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
     @Import(name="securityGroupIdLists")
       private final @Nullable Output<List<String>> securityGroupIdLists;
 
-    public Output<List<String>> getSecurityGroupIdLists() {
+    public Output<List<String>> securityGroupIdLists() {
         return this.securityGroupIdLists == null ? Codegen.empty() : this.securityGroupIdLists;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

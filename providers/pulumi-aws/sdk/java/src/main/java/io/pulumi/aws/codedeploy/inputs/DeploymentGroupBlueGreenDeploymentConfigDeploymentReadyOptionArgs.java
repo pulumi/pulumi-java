@@ -25,7 +25,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     @Import(name="actionOnTimeout")
       private final @Nullable Output<String> actionOnTimeout;
 
-    public Output<String> getActionOnTimeout() {
+    public Output<String> actionOnTimeout() {
         return this.actionOnTimeout == null ? Codegen.empty() : this.actionOnTimeout;
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     @Import(name="waitTimeInMinutes")
       private final @Nullable Output<Integer> waitTimeInMinutes;
 
-    public Output<Integer> getWaitTimeInMinutes() {
+    public Output<Integer> waitTimeInMinutes() {
         return this.waitTimeInMinutes == null ? Codegen.empty() : this.waitTimeInMinutes;
     }
 

@@ -38,24 +38,24 @@ public final class GetCoipPoolsResult {
         this.tags = tags;
     }
 
-    public List<GetCoipPoolsFilter> getFilters() {
+    public List<GetCoipPoolsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of COIP Pool Identifiers
      * 
     */
-    public List<String> getPoolIds() {
+    public List<String> poolIds() {
         return this.poolIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

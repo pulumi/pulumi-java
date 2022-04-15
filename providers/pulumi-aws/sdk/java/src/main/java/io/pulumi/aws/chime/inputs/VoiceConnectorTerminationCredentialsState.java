@@ -24,7 +24,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     @Import(name="credentials")
       private final @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
 
-    public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> getCredentials() {
+    public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -35,7 +35,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     @Import(name="voiceConnectorId")
       private final @Nullable Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
     }
 

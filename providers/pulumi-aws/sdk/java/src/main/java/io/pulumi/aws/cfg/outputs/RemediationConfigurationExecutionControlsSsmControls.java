@@ -34,14 +34,14 @@ public final class RemediationConfigurationExecutionControlsSsmControls {
      * Maximum percentage of remediation actions allowed to run in parallel on the non-compliant resources for that specific rule. The default value is 10%.
      * 
     */
-    public Optional<Integer> getConcurrentExecutionRatePercentage() {
+    public Optional<Integer> concurrentExecutionRatePercentage() {
         return Optional.ofNullable(this.concurrentExecutionRatePercentage);
     }
     /**
      * Percentage of errors that are allowed before SSM stops running automations on non-compliant resources for that specific rule. The default is 50%.
      * 
     */
-    public Optional<Integer> getErrorPercentage() {
+    public Optional<Integer> errorPercentage() {
         return Optional.ofNullable(this.errorPercentage);
     }
 

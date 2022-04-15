@@ -19,7 +19,7 @@ public final class GetClusterCertificateAuthority extends io.pulumi.resources.In
     @Import(name="data", required=true)
       private final String data;
 
-    public String getData() {
+    public String data() {
         return this.data;
     }
 

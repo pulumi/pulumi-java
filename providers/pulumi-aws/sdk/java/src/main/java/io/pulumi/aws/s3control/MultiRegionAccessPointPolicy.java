@@ -33,7 +33,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -47,7 +47,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    public Output<MultiRegionAccessPointPolicyDetails> getDetails() {
+    public Output<MultiRegionAccessPointPolicyDetails> details() {
         return this.details;
     }
     /**
@@ -61,7 +61,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The last established policy for the Multi-Region Access Point.
      * 
      */
-    public Output<String> getEstablished() {
+    public Output<String> established() {
         return this.established;
     }
     /**
@@ -75,7 +75,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * @return The proposed policy for the Multi-Region Access Point.
      * 
      */
-    public Output<String> getProposed() {
+    public Output<String> proposed() {
         return this.proposed;
     }
 

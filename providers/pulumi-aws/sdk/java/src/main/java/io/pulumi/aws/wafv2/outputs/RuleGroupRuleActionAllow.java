@@ -26,7 +26,7 @@ public final class RuleGroupRuleActionAllow {
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
     */
-    public Optional<RuleGroupRuleActionAllowCustomRequestHandling> getCustomRequestHandling() {
+    public Optional<RuleGroupRuleActionAllowCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
 

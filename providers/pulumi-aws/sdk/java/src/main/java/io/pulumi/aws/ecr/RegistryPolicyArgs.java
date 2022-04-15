@@ -17,7 +17,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

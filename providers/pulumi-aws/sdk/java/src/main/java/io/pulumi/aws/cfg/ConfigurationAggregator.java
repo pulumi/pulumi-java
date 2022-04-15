@@ -43,7 +43,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The account(s) to aggregate config data from as documented below.
      * 
      */
-    public Output</* @Nullable */ ConfigurationAggregatorAccountAggregationSource> getAccountAggregationSource() {
+    public Output</* @Nullable */ ConfigurationAggregatorAccountAggregationSource> accountAggregationSource() {
         return this.accountAggregationSource;
     }
     /**
@@ -57,7 +57,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The ARN of the aggregator
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The name of the configuration aggregator.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The organization to aggregate config data from as documented below.
      * 
      */
-    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
+    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
         return this.organizationAggregationSource;
     }
     /**
@@ -99,7 +99,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

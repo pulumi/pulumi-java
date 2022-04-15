@@ -22,7 +22,7 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="recrawlBehavior")
       private final @Nullable Output<String> recrawlBehavior;
 
-    public Output<String> getRecrawlBehavior() {
+    public Output<String> recrawlBehavior() {
         return this.recrawlBehavior == null ? Codegen.empty() : this.recrawlBehavior;
     }
 

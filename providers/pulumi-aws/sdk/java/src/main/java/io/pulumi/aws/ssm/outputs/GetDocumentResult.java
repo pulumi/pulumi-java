@@ -57,37 +57,37 @@ public final class GetDocumentResult {
      * The ARN of the document.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The contents of the document.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
-    public Optional<String> getDocumentFormat() {
+    public Optional<String> documentFormat() {
         return Optional.ofNullable(this.documentFormat);
     }
     /**
      * The type of the document.
      * 
     */
-    public String getDocumentType() {
+    public String documentType() {
         return this.documentType;
     }
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

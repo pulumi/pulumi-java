@@ -49,28 +49,28 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtection {
      * A Boolean value that determines whether CloudFront includes the `mode=block` directive in the `X-XSS-Protection` header.
      * 
     */
-    public Optional<Boolean> getModeBlock() {
+    public Optional<Boolean> modeBlock() {
         return Optional.ofNullable(this.modeBlock);
     }
     /**
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
     */
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
     /**
      * A Boolean value that determines the value of the `X-XSS-Protection` HTTP response header. When this setting is `true`, the value of the `X-XSS-Protection` header is `1`. When this setting is `false`, the value of the `X-XSS-Protection` header is `0`.
      * 
     */
-    public Boolean getProtection() {
+    public Boolean protection() {
         return this.protection;
     }
     /**
      * A reporting URI, which CloudFront uses as the value of the report directive in the `X-XSS-Protection` header. You cannot specify a `report_uri` when `mode_block` is `true`.
      * 
     */
-    public Optional<String> getReportUri() {
+    public Optional<String> reportUri() {
         return Optional.ofNullable(this.reportUri);
     }
 

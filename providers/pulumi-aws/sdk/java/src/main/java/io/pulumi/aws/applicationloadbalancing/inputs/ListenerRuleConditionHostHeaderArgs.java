@@ -22,7 +22,7 @@ public final class ListenerRuleConditionHostHeaderArgs extends io.pulumi.resourc
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

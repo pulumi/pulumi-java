@@ -29,17 +29,17 @@ public final class GetBrokerNodesResult {
         this.nodeInfoLists = nodeInfoLists;
     }
 
-    public String getClusterArn() {
+    public String clusterArn() {
         return this.clusterArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetBrokerNodesNodeInfoList> getNodeInfoLists() {
+    public List<GetBrokerNodesNodeInfoList> nodeInfoLists() {
         return this.nodeInfoLists;
     }
 

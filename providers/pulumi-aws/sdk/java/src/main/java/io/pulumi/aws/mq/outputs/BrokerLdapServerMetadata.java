@@ -99,77 +99,77 @@ public final class BrokerLdapServerMetadata {
      * List of a fully qualified domain name of the LDAP server and an optional failover server.
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }
     /**
      * Fully qualified name of the directory to search for a user’s groups.
      * 
     */
-    public Optional<String> getRoleBase() {
+    public Optional<String> roleBase() {
         return Optional.ofNullable(this.roleBase);
     }
     /**
      * Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
      * 
     */
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * Search criteria for groups.
      * 
     */
-    public Optional<String> getRoleSearchMatching() {
+    public Optional<String> roleSearchMatching() {
         return Optional.ofNullable(this.roleSearchMatching);
     }
     /**
      * Whether the directory search scope is the entire sub-tree.
      * 
     */
-    public Optional<Boolean> getRoleSearchSubtree() {
+    public Optional<Boolean> roleSearchSubtree() {
         return Optional.ofNullable(this.roleSearchSubtree);
     }
     /**
      * Service account password.
      * 
     */
-    public Optional<String> getServiceAccountPassword() {
+    public Optional<String> serviceAccountPassword() {
         return Optional.ofNullable(this.serviceAccountPassword);
     }
     /**
      * Service account username.
      * 
     */
-    public Optional<String> getServiceAccountUsername() {
+    public Optional<String> serviceAccountUsername() {
         return Optional.ofNullable(this.serviceAccountUsername);
     }
     /**
      * Fully qualified name of the directory where you want to search for users.
      * 
     */
-    public Optional<String> getUserBase() {
+    public Optional<String> userBase() {
         return Optional.ofNullable(this.userBase);
     }
     /**
      * Specifies the name of the LDAP attribute for the user group membership.
      * 
     */
-    public Optional<String> getUserRoleName() {
+    public Optional<String> userRoleName() {
         return Optional.ofNullable(this.userRoleName);
     }
     /**
      * Search criteria for users.
      * 
     */
-    public Optional<String> getUserSearchMatching() {
+    public Optional<String> userSearchMatching() {
         return Optional.ofNullable(this.userSearchMatching);
     }
     /**
      * Whether the directory search scope is the entire sub-tree.
      * 
     */
-    public Optional<Boolean> getUserSearchSubtree() {
+    public Optional<Boolean> userSearchSubtree() {
         return Optional.ofNullable(this.userSearchSubtree);
     }
 

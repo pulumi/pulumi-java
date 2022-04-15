@@ -24,7 +24,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
       private final List<GetScriptDagNodeArg> args;
 
-    public List<GetScriptDagNodeArg> getArgs() {
+    public List<GetScriptDagNodeArg> args() {
         return this.args;
     }
 
@@ -35,7 +35,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="lineNumber")
       private final @Nullable Integer lineNumber;
 
-    public Optional<Integer> getLineNumber() {
+    public Optional<Integer> lineNumber() {
         return this.lineNumber == null ? Optional.empty() : Optional.ofNullable(this.lineNumber);
     }
 
@@ -57,7 +57,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeType", required=true)
       private final String nodeType;
 
-    public String getNodeType() {
+    public String nodeType() {
         return this.nodeType;
     }
 

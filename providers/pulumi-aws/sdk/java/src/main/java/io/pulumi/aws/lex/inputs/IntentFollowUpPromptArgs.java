@@ -22,7 +22,7 @@ public final class IntentFollowUpPromptArgs extends io.pulumi.resources.Resource
     @Import(name="prompt", required=true)
       private final Output<IntentFollowUpPromptPromptArgs> prompt;
 
-    public Output<IntentFollowUpPromptPromptArgs> getPrompt() {
+    public Output<IntentFollowUpPromptPromptArgs> prompt() {
         return this.prompt;
     }
 
@@ -35,7 +35,7 @@ public final class IntentFollowUpPromptArgs extends io.pulumi.resources.Resource
     @Import(name="rejectionStatement", required=true)
       private final Output<IntentFollowUpPromptRejectionStatementArgs> rejectionStatement;
 
-    public Output<IntentFollowUpPromptRejectionStatementArgs> getRejectionStatement() {
+    public Output<IntentFollowUpPromptRejectionStatementArgs> rejectionStatement() {
         return this.rejectionStatement;
     }
 

@@ -23,7 +23,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="logConfiguration")
       private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
+    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration() {
         return this.logConfiguration == null ? Codegen.empty() : this.logConfiguration;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="logging")
       private final @Nullable Output<String> logging;
 
-    public Output<String> getLogging() {
+    public Output<String> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 

@@ -21,7 +21,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoscalingGroups", required=true)
       private final List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups;
 
-    public List<GetNodeGroupResourceAutoscalingGroup> getAutoscalingGroups() {
+    public List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups() {
         return this.autoscalingGroups;
     }
 
@@ -32,7 +32,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="remoteAccessSecurityGroupId", required=true)
       private final String remoteAccessSecurityGroupId;
 
-    public String getRemoteAccessSecurityGroupId() {
+    public String remoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId;
     }
 

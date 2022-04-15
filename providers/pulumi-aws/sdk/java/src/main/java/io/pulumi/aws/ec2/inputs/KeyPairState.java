@@ -23,7 +23,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -45,7 +45,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -56,7 +56,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyNamePrefix")
       private final @Nullable Output<String> keyNamePrefix;
 
-    public Output<String> getKeyNamePrefix() {
+    public Output<String> keyNamePrefix() {
         return this.keyNamePrefix == null ? Codegen.empty() : this.keyNamePrefix;
     }
 
@@ -67,7 +67,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPairId")
       private final @Nullable Output<String> keyPairId;
 
-    public Output<String> getKeyPairId() {
+    public Output<String> keyPairId() {
         return this.keyPairId == null ? Codegen.empty() : this.keyPairId;
     }
 
@@ -78,7 +78,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -89,7 +89,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -100,7 +100,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

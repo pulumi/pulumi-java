@@ -22,7 +22,7 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
     @Import(name="accessLog")
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
 
-    public Output<VirtualNodeSpecLoggingAccessLogArgs> getAccessLog() {
+    public Output<VirtualNodeSpecLoggingAccessLogArgs> accessLog() {
         return this.accessLog == null ? Codegen.empty() : this.accessLog;
     }
 

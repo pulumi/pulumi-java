@@ -24,7 +24,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="deliveryOptions")
       private final @Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
 
-    public Output<ConfgurationSetDeliveryOptionsGetArgs> getDeliveryOptions() {
+    public Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions() {
         return this.deliveryOptions == null ? Codegen.empty() : this.deliveryOptions;
     }
 
@@ -46,7 +46,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="lastFreshStart")
       private final @Nullable Output<String> lastFreshStart;
 
-    public Output<String> getLastFreshStart() {
+    public Output<String> lastFreshStart() {
         return this.lastFreshStart == null ? Codegen.empty() : this.lastFreshStart;
     }
 
@@ -57,7 +57,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="reputationMetricsEnabled")
       private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Output<Boolean> getReputationMetricsEnabled() {
+    public Output<Boolean> reputationMetricsEnabled() {
         return this.reputationMetricsEnabled == null ? Codegen.empty() : this.reputationMetricsEnabled;
     }
 
@@ -79,7 +79,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="sendingEnabled")
       private final @Nullable Output<Boolean> sendingEnabled;
 
-    public Output<Boolean> getSendingEnabled() {
+    public Output<Boolean> sendingEnabled() {
         return this.sendingEnabled == null ? Codegen.empty() : this.sendingEnabled;
     }
 

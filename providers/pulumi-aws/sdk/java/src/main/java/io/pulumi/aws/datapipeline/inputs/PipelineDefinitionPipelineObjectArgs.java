@@ -24,7 +24,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
     @Import(name="fields")
       private final @Nullable Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
 
-    public Output<List<PipelineDefinitionPipelineObjectFieldArgs>> getFields() {
+    public Output<List<PipelineDefinitionPipelineObjectFieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -35,7 +35,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

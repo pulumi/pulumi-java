@@ -34,21 +34,21 @@ public final class EnvironmentLoggingConfigurationTaskLogs {
         this.logLevel = logLevel;
     }
 
-    public Optional<String> getCloudWatchLogGroupArn() {
+    public Optional<String> cloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
     /**
      * Enabling or disabling the collection of logs
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
      * 
     */
-    public Optional<String> getLogLevel() {
+    public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
 

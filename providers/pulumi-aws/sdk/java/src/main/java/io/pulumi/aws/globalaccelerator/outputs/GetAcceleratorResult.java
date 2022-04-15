@@ -53,38 +53,38 @@ public final class GetAcceleratorResult {
         this.tags = tags;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetAcceleratorAttribute> getAttributes() {
+    public List<GetAcceleratorAttribute> attributes() {
         return this.attributes;
     }
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIpAddressType() {
+    public String ipAddressType() {
         return this.ipAddressType;
     }
-    public List<GetAcceleratorIpSet> getIpSets() {
+    public List<GetAcceleratorIpSet> ipSets() {
         return this.ipSets;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

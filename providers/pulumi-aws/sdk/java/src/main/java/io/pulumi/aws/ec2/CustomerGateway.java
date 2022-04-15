@@ -41,7 +41,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return The ARN of the customer gateway.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
-    public Output<String> getBgpAsn() {
+    public Output<String> bgpAsn() {
         return this.bgpAsn;
     }
     /**
@@ -69,7 +69,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the customer gateway certificate.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateArn() {
+    public Output</* @Nullable */ String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -83,7 +83,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return A name for the customer gateway device.
      * 
      */
-    public Output</* @Nullable */ String> getDeviceName() {
+    public Output</* @Nullable */ String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -97,7 +97,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return The IP address of the gateway's Internet-routable external interface.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -111,7 +111,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the gateway. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -125,7 +125,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -141,7 +141,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * supports at this time is "ipsec.1".
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

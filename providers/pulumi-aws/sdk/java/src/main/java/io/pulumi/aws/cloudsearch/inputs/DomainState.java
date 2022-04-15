@@ -27,7 +27,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentServiceEndpoint")
       private final @Nullable Output<String> documentServiceEndpoint;
 
-    public Output<String> getDocumentServiceEndpoint() {
+    public Output<String> documentServiceEndpoint() {
         return this.documentServiceEndpoint == null ? Codegen.empty() : this.documentServiceEndpoint;
     }
 
@@ -49,7 +49,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId == null ? Codegen.empty() : this.domainId;
     }
 
@@ -60,7 +60,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointOptions")
       private final @Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions;
 
-    public Output<DomainEndpointOptionsGetArgs> getEndpointOptions() {
+    public Output<DomainEndpointOptionsGetArgs> endpointOptions() {
         return this.endpointOptions == null ? Codegen.empty() : this.endpointOptions;
     }
 
@@ -71,7 +71,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexFields")
       private final @Nullable Output<List<DomainIndexFieldGetArgs>> indexFields;
 
-    public Output<List<DomainIndexFieldGetArgs>> getIndexFields() {
+    public Output<List<DomainIndexFieldGetArgs>> indexFields() {
         return this.indexFields == null ? Codegen.empty() : this.indexFields;
     }
 
@@ -82,7 +82,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> getMultiAz() {
+    public Output<Boolean> multiAz() {
         return this.multiAz == null ? Codegen.empty() : this.multiAz;
     }
 
@@ -93,7 +93,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingParameters")
       private final @Nullable Output<DomainScalingParametersGetArgs> scalingParameters;
 
-    public Output<DomainScalingParametersGetArgs> getScalingParameters() {
+    public Output<DomainScalingParametersGetArgs> scalingParameters() {
         return this.scalingParameters == null ? Codegen.empty() : this.scalingParameters;
     }
 
@@ -115,7 +115,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="searchServiceEndpoint")
       private final @Nullable Output<String> searchServiceEndpoint;
 
-    public Output<String> getSearchServiceEndpoint() {
+    public Output<String> searchServiceEndpoint() {
         return this.searchServiceEndpoint == null ? Codegen.empty() : this.searchServiceEndpoint;
     }
 

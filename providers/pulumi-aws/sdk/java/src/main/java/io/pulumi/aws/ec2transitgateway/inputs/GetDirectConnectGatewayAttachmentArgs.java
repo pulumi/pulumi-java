@@ -24,7 +24,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
     @Import(name="dxGatewayId")
       private final @Nullable String dxGatewayId;
 
-    public Optional<String> getDxGatewayId() {
+    public Optional<String> dxGatewayId() {
         return this.dxGatewayId == null ? Optional.empty() : Optional.ofNullable(this.dxGatewayId);
     }
 
@@ -35,7 +35,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
     @Import(name="filters")
       private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
 
-    public List<GetDirectConnectGatewayAttachmentFilter> getFilters() {
+    public List<GetDirectConnectGatewayAttachmentFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -46,7 +46,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
     @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
     }
 

@@ -51,21 +51,21 @@ public final class LaunchTemplateBlockDeviceMapping {
      * The name of the device to mount.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Configure EBS volume properties.
      * 
     */
-    public Optional<LaunchTemplateBlockDeviceMappingEbs> getEbs() {
+    public Optional<LaunchTemplateBlockDeviceMappingEbs> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Suppresses the specified device included in the AMI's block device mapping.
      * 
     */
-    public Optional<String> getNoDevice() {
+    public Optional<String> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
@@ -74,7 +74,7 @@ public final class LaunchTemplateBlockDeviceMapping {
      * (e.g., `"ephemeral0"`).
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

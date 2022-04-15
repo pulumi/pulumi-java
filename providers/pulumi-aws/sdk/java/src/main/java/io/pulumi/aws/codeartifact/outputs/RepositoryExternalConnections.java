@@ -33,13 +33,13 @@ public final class RepositoryExternalConnections {
      * The name of the external connection associated with a repository.
      * 
     */
-    public String getExternalConnectionName() {
+    public String externalConnectionName() {
         return this.externalConnectionName;
     }
-    public Optional<String> getPackageFormat() {
+    public Optional<String> packageFormat() {
         return Optional.ofNullable(this.packageFormat);
     }
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

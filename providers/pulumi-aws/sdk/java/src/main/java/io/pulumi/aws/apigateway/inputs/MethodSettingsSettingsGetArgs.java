@@ -25,7 +25,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Output<Boolean> getCacheDataEncrypted() {
+    public Output<Boolean> cacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Codegen.empty() : this.cacheDataEncrypted;
     }
 
@@ -36,7 +36,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Output<Integer> getCacheTtlInSeconds() {
+    public Output<Integer> cacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Codegen.empty() : this.cacheTtlInSeconds;
     }
 
@@ -47,7 +47,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
-    public Output<Boolean> getCachingEnabled() {
+    public Output<Boolean> cachingEnabled() {
         return this.cachingEnabled == null ? Codegen.empty() : this.cachingEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> getDataTraceEnabled() {
+    public Output<Boolean> dataTraceEnabled() {
         return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
@@ -69,7 +69,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
-    public Output<String> getLoggingLevel() {
+    public Output<String> loggingLevel() {
         return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
@@ -80,7 +80,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
-    public Output<Boolean> getMetricsEnabled() {
+    public Output<Boolean> metricsEnabled() {
         return this.metricsEnabled == null ? Codegen.empty() : this.metricsEnabled;
     }
 
@@ -91,7 +91,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="requireAuthorizationForCacheControl")
       private final @Nullable Output<Boolean> requireAuthorizationForCacheControl;
 
-    public Output<Boolean> getRequireAuthorizationForCacheControl() {
+    public Output<Boolean> requireAuthorizationForCacheControl() {
         return this.requireAuthorizationForCacheControl == null ? Codegen.empty() : this.requireAuthorizationForCacheControl;
     }
 
@@ -102,7 +102,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> getThrottlingBurstLimit() {
+    public Output<Integer> throttlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
@@ -113,7 +113,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> getThrottlingRateLimit() {
+    public Output<Double> throttlingRateLimit() {
         return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 
@@ -124,7 +124,7 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="unauthorizedCacheControlHeaderStrategy")
       private final @Nullable Output<String> unauthorizedCacheControlHeaderStrategy;
 
-    public Output<String> getUnauthorizedCacheControlHeaderStrategy() {
+    public Output<String> unauthorizedCacheControlHeaderStrategy() {
         return this.unauthorizedCacheControlHeaderStrategy == null ? Codegen.empty() : this.unauthorizedCacheControlHeaderStrategy;
     }
 

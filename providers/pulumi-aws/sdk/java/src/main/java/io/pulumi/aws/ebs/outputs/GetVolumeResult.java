@@ -129,104 +129,104 @@ public final class GetVolumeResult {
      * The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The AZ where the EBS volume exists.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Whether the disk is encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
-    public List<GetVolumeFilter> getFilters() {
+    public List<GetVolumeFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The amount of IOPS for the disk.
      * 
     */
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
      * 
     */
-    public Boolean getMultiAttachEnabled() {
+    public Boolean multiAttachEnabled() {
         return this.multiAttachEnabled;
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
     */
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
     /**
      * The size of the drive in GiBs.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * The snapshot_id the EBS volume is based off.
      * 
     */
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
     /**
      * A map of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The throughput that the volume supports, in MiB/s.
      * 
     */
-    public Integer getThroughput() {
+    public Integer throughput() {
         return this.throughput;
     }
     /**
      * The volume ID (e.g., vol-59fcb34e).
      * 
     */
-    public String getVolumeId() {
+    public String volumeId() {
         return this.volumeId;
     }
     /**
      * The type of EBS volume.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

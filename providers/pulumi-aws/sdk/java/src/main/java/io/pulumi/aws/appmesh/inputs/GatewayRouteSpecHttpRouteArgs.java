@@ -22,7 +22,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
     @Import(name="action", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionArgs> action;
 
-    public Output<GatewayRouteSpecHttpRouteActionArgs> getAction() {
+    public Output<GatewayRouteSpecHttpRouteActionArgs> action() {
         return this.action;
     }
 
@@ -33,7 +33,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
     @Import(name="match", required=true)
       private final Output<GatewayRouteSpecHttpRouteMatchArgs> match;
 
-    public Output<GatewayRouteSpecHttpRouteMatchArgs> getMatch() {
+    public Output<GatewayRouteSpecHttpRouteMatchArgs> match() {
         return this.match;
     }
 

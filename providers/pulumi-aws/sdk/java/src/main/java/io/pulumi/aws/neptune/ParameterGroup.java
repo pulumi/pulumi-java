@@ -43,7 +43,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The Neptune parameter group Amazon Resource Name (ARN).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The family of the Neptune parameter group.
      * 
      */
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
     /**
@@ -85,7 +85,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the Neptune parameter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A list of Neptune parameters to apply.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupParameter>> getParameters() {
+    public Output</* @Nullable */ List<ParameterGroupParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -113,7 +113,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +127,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

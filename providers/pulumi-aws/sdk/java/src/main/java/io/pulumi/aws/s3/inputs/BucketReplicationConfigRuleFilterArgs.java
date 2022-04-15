@@ -24,7 +24,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
     @Import(name="and")
       private final @Nullable Output<BucketReplicationConfigRuleFilterAndArgs> and;
 
-    public Output<BucketReplicationConfigRuleFilterAndArgs> getAnd() {
+    public Output<BucketReplicationConfigRuleFilterAndArgs> and() {
         return this.and == null ? Codegen.empty() : this.and;
     }
 
@@ -35,7 +35,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -46,7 +46,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
     @Import(name="tag")
       private final @Nullable Output<BucketReplicationConfigRuleFilterTagArgs> tag;
 
-    public Output<BucketReplicationConfigRuleFilterTagArgs> getTag() {
+    public Output<BucketReplicationConfigRuleFilterTagArgs> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

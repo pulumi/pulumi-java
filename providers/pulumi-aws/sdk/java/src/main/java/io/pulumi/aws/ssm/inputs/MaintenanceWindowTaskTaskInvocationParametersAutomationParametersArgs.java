@@ -24,7 +24,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
+    public Output<String> documentVersion() {
         return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     @Import(name="parameters")
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
-    public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> getParameters() {
+    public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

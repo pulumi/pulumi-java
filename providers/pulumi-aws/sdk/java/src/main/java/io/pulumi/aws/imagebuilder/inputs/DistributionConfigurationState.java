@@ -25,7 +25,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
@@ -47,7 +47,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="dateUpdated")
       private final @Nullable Output<String> dateUpdated;
 
-    public Output<String> getDateUpdated() {
+    public Output<String> dateUpdated() {
         return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
     }
 
@@ -58,7 +58,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="distributions")
       private final @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
-    public Output<List<DistributionConfigurationDistributionGetArgs>> getDistributions() {
+    public Output<List<DistributionConfigurationDistributionGetArgs>> distributions() {
         return this.distributions == null ? Codegen.empty() : this.distributions;
     }
 
@@ -80,7 +80,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -24,7 +24,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="firewallRuleGroupId", required=true)
       private final Output<String> firewallRuleGroupId;
 
-    public Output<String> getFirewallRuleGroupId() {
+    public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId;
     }
 
@@ -35,7 +35,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="mutationProtection")
       private final @Nullable Output<String> mutationProtection;
 
-    public Output<String> getMutationProtection() {
+    public Output<String> mutationProtection() {
         return this.mutationProtection == null ? Codegen.empty() : this.mutationProtection;
     }
 
@@ -46,7 +46,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -68,7 +68,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class ResolverFirewallRuleGroupAssociationArgs extends io.pulumi.re
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

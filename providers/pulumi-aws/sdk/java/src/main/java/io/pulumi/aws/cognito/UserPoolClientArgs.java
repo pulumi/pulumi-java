@@ -27,7 +27,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessTokenValidity")
       private final @Nullable Output<Integer> accessTokenValidity;
 
-    public Output<Integer> getAccessTokenValidity() {
+    public Output<Integer> accessTokenValidity() {
         return this.accessTokenValidity == null ? Codegen.empty() : this.accessTokenValidity;
     }
 
@@ -38,7 +38,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthFlows")
       private final @Nullable Output<List<String>> allowedOauthFlows;
 
-    public Output<List<String>> getAllowedOauthFlows() {
+    public Output<List<String>> allowedOauthFlows() {
         return this.allowedOauthFlows == null ? Codegen.empty() : this.allowedOauthFlows;
     }
 
@@ -49,7 +49,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthFlowsUserPoolClient")
       private final @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
 
-    public Output<Boolean> getAllowedOauthFlowsUserPoolClient() {
+    public Output<Boolean> allowedOauthFlowsUserPoolClient() {
         return this.allowedOauthFlowsUserPoolClient == null ? Codegen.empty() : this.allowedOauthFlowsUserPoolClient;
     }
 
@@ -60,7 +60,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedOauthScopes")
       private final @Nullable Output<List<String>> allowedOauthScopes;
 
-    public Output<List<String>> getAllowedOauthScopes() {
+    public Output<List<String>> allowedOauthScopes() {
         return this.allowedOauthScopes == null ? Codegen.empty() : this.allowedOauthScopes;
     }
 
@@ -71,7 +71,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsConfiguration")
       private final @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
-    public Output<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
+    public Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration() {
         return this.analyticsConfiguration == null ? Codegen.empty() : this.analyticsConfiguration;
     }
 
@@ -82,7 +82,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callbackUrls")
       private final @Nullable Output<List<String>> callbackUrls;
 
-    public Output<List<String>> getCallbackUrls() {
+    public Output<List<String>> callbackUrls() {
         return this.callbackUrls == null ? Codegen.empty() : this.callbackUrls;
     }
 
@@ -93,7 +93,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRedirectUri")
       private final @Nullable Output<String> defaultRedirectUri;
 
-    public Output<String> getDefaultRedirectUri() {
+    public Output<String> defaultRedirectUri() {
         return this.defaultRedirectUri == null ? Codegen.empty() : this.defaultRedirectUri;
     }
 
@@ -104,7 +104,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableTokenRevocation")
       private final @Nullable Output<Boolean> enableTokenRevocation;
 
-    public Output<Boolean> getEnableTokenRevocation() {
+    public Output<Boolean> enableTokenRevocation() {
         return this.enableTokenRevocation == null ? Codegen.empty() : this.enableTokenRevocation;
     }
 
@@ -115,7 +115,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="explicitAuthFlows")
       private final @Nullable Output<List<String>> explicitAuthFlows;
 
-    public Output<List<String>> getExplicitAuthFlows() {
+    public Output<List<String>> explicitAuthFlows() {
         return this.explicitAuthFlows == null ? Codegen.empty() : this.explicitAuthFlows;
     }
 
@@ -126,7 +126,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generateSecret")
       private final @Nullable Output<Boolean> generateSecret;
 
-    public Output<Boolean> getGenerateSecret() {
+    public Output<Boolean> generateSecret() {
         return this.generateSecret == null ? Codegen.empty() : this.generateSecret;
     }
 
@@ -137,7 +137,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idTokenValidity")
       private final @Nullable Output<Integer> idTokenValidity;
 
-    public Output<Integer> getIdTokenValidity() {
+    public Output<Integer> idTokenValidity() {
         return this.idTokenValidity == null ? Codegen.empty() : this.idTokenValidity;
     }
 
@@ -148,7 +148,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logoutUrls")
       private final @Nullable Output<List<String>> logoutUrls;
 
-    public Output<List<String>> getLogoutUrls() {
+    public Output<List<String>> logoutUrls() {
         return this.logoutUrls == null ? Codegen.empty() : this.logoutUrls;
     }
 
@@ -159,7 +159,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -170,7 +170,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preventUserExistenceErrors")
       private final @Nullable Output<String> preventUserExistenceErrors;
 
-    public Output<String> getPreventUserExistenceErrors() {
+    public Output<String> preventUserExistenceErrors() {
         return this.preventUserExistenceErrors == null ? Codegen.empty() : this.preventUserExistenceErrors;
     }
 
@@ -181,7 +181,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readAttributes")
       private final @Nullable Output<List<String>> readAttributes;
 
-    public Output<List<String>> getReadAttributes() {
+    public Output<List<String>> readAttributes() {
         return this.readAttributes == null ? Codegen.empty() : this.readAttributes;
     }
 
@@ -192,7 +192,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshTokenValidity")
       private final @Nullable Output<Integer> refreshTokenValidity;
 
-    public Output<Integer> getRefreshTokenValidity() {
+    public Output<Integer> refreshTokenValidity() {
         return this.refreshTokenValidity == null ? Codegen.empty() : this.refreshTokenValidity;
     }
 
@@ -203,7 +203,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportedIdentityProviders")
       private final @Nullable Output<List<String>> supportedIdentityProviders;
 
-    public Output<List<String>> getSupportedIdentityProviders() {
+    public Output<List<String>> supportedIdentityProviders() {
         return this.supportedIdentityProviders == null ? Codegen.empty() : this.supportedIdentityProviders;
     }
 
@@ -214,7 +214,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenValidityUnits")
       private final @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
-    public Output<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
+    public Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits() {
         return this.tokenValidityUnits == null ? Codegen.empty() : this.tokenValidityUnits;
     }
 
@@ -225,7 +225,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
@@ -236,7 +236,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeAttributes")
       private final @Nullable Output<List<String>> writeAttributes;
 
-    public Output<List<String>> getWriteAttributes() {
+    public Output<List<String>> writeAttributes() {
         return this.writeAttributes == null ? Codegen.empty() : this.writeAttributes;
     }
 

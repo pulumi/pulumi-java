@@ -22,7 +22,7 @@ public final class MLTransformParametersArgs extends io.pulumi.resources.Resourc
     @Import(name="findMatchesParameters", required=true)
       private final Output<MLTransformParametersFindMatchesParametersArgs> findMatchesParameters;
 
-    public Output<MLTransformParametersFindMatchesParametersArgs> getFindMatchesParameters() {
+    public Output<MLTransformParametersFindMatchesParametersArgs> findMatchesParameters() {
         return this.findMatchesParameters;
     }
 
@@ -33,7 +33,7 @@ public final class MLTransformParametersArgs extends io.pulumi.resources.Resourc
     @Import(name="transformType", required=true)
       private final Output<String> transformType;
 
-    public Output<String> getTransformType() {
+    public Output<String> transformType() {
         return this.transformType;
     }
 

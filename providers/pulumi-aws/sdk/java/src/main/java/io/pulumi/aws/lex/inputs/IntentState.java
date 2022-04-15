@@ -31,7 +31,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -43,7 +43,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -58,7 +58,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conclusionStatement")
       private final @Nullable Output<IntentConclusionStatementGetArgs> conclusionStatement;
 
-    public Output<IntentConclusionStatementGetArgs> getConclusionStatement() {
+    public Output<IntentConclusionStatementGetArgs> conclusionStatement() {
         return this.conclusionStatement == null ? Codegen.empty() : this.conclusionStatement;
     }
 
@@ -71,7 +71,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="confirmationPrompt")
       private final @Nullable Output<IntentConfirmationPromptGetArgs> confirmationPrompt;
 
-    public Output<IntentConfirmationPromptGetArgs> getConfirmationPrompt() {
+    public Output<IntentConfirmationPromptGetArgs> confirmationPrompt() {
         return this.confirmationPrompt == null ? Codegen.empty() : this.confirmationPrompt;
     }
 
@@ -83,7 +83,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> getCreateVersion() {
+    public Output<Boolean> createVersion() {
         return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
@@ -94,7 +94,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -105,7 +105,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -117,7 +117,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dialogCodeHook")
       private final @Nullable Output<IntentDialogCodeHookGetArgs> dialogCodeHook;
 
-    public Output<IntentDialogCodeHookGetArgs> getDialogCodeHook() {
+    public Output<IntentDialogCodeHookGetArgs> dialogCodeHook() {
         return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
     }
 
@@ -131,7 +131,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="followUpPrompt")
       private final @Nullable Output<IntentFollowUpPromptGetArgs> followUpPrompt;
 
-    public Output<IntentFollowUpPromptGetArgs> getFollowUpPrompt() {
+    public Output<IntentFollowUpPromptGetArgs> followUpPrompt() {
         return this.followUpPrompt == null ? Codegen.empty() : this.followUpPrompt;
     }
 
@@ -144,7 +144,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fulfillmentActivity")
       private final @Nullable Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity;
 
-    public Output<IntentFulfillmentActivityGetArgs> getFulfillmentActivity() {
+    public Output<IntentFulfillmentActivityGetArgs> fulfillmentActivity() {
         return this.fulfillmentActivity == null ? Codegen.empty() : this.fulfillmentActivity;
     }
 
@@ -155,7 +155,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
@@ -166,7 +166,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -180,7 +180,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentIntentSignature")
       private final @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> getParentIntentSignature() {
+    public Output<String> parentIntentSignature() {
         return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
     }
 
@@ -193,7 +193,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rejectionStatement")
       private final @Nullable Output<IntentRejectionStatementGetArgs> rejectionStatement;
 
-    public Output<IntentRejectionStatementGetArgs> getRejectionStatement() {
+    public Output<IntentRejectionStatementGetArgs> rejectionStatement() {
         return this.rejectionStatement == null ? Codegen.empty() : this.rejectionStatement;
     }
 
@@ -206,7 +206,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> getSampleUtterances() {
+    public Output<List<String>> sampleUtterances() {
         return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
@@ -218,7 +218,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="slots")
       private final @Nullable Output<List<IntentSlotGetArgs>> slots;
 
-    public Output<List<IntentSlotGetArgs>> getSlots() {
+    public Output<List<IntentSlotGetArgs>> slots() {
         return this.slots == null ? Codegen.empty() : this.slots;
     }
 
@@ -229,7 +229,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

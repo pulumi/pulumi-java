@@ -20,7 +20,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -31,7 +31,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -42,14 +42,14 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="className")
       private final @Nullable Output<String> className;
 
-    public Output<String> getClassName() {
+    public Output<String> className() {
         return this.className == null ? Codegen.empty() : this.className;
     }
 
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -60,7 +60,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -71,7 +71,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="ownerName")
       private final @Nullable Output<String> ownerName;
 
-    public Output<String> getOwnerName() {
+    public Output<String> ownerName() {
         return this.ownerName == null ? Codegen.empty() : this.ownerName;
     }
 
@@ -93,7 +93,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="ownerType")
       private final @Nullable Output<String> ownerType;
 
-    public Output<String> getOwnerType() {
+    public Output<String> ownerType() {
         return this.ownerType == null ? Codegen.empty() : this.ownerType;
     }
 
@@ -104,7 +104,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     @Import(name="resourceUris")
       private final @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
 
-    public Output<List<UserDefinedFunctionResourceUriGetArgs>> getResourceUris() {
+    public Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris() {
         return this.resourceUris == null ? Codegen.empty() : this.resourceUris;
     }
 

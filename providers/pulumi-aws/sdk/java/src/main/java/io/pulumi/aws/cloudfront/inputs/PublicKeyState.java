@@ -22,7 +22,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
@@ -33,7 +33,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -44,7 +44,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encodedKey")
       private final @Nullable Output<String> encodedKey;
 
-    public Output<String> getEncodedKey() {
+    public Output<String> encodedKey() {
         return this.encodedKey == null ? Codegen.empty() : this.encodedKey;
     }
 
@@ -55,7 +55,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -66,7 +66,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 

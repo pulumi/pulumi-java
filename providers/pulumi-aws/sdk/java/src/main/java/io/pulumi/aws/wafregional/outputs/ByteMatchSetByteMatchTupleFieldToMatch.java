@@ -34,14 +34,14 @@ public final class ByteMatchSetByteMatchTupleFieldToMatch {
      * When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
      * 
     */
-    public Optional<String> getData() {
+    public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
      * The part of the web request that you want AWS WAF to search for a specified string.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

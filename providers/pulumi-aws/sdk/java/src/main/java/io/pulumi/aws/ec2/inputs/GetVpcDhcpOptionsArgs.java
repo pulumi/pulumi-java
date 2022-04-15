@@ -24,7 +24,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="dhcpOptionsId")
       private final @Nullable String dhcpOptionsId;
 
-    public Optional<String> getDhcpOptionsId() {
+    public Optional<String> dhcpOptionsId() {
         return this.dhcpOptionsId == null ? Optional.empty() : Optional.ofNullable(this.dhcpOptionsId);
     }
 
@@ -35,7 +35,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="filters")
       private final @Nullable List<GetVpcDhcpOptionsFilter> filters;
 
-    public List<GetVpcDhcpOptionsFilter> getFilters() {
+    public List<GetVpcDhcpOptionsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -46,7 +46,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

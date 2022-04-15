@@ -24,7 +24,7 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -35,7 +35,7 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     @Import(name="ebs")
       private final @Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
 
-    public Output<ImageRecipeBlockDeviceMappingEbsArgs> getEbs() {
+    public Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs() {
         return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
@@ -46,7 +46,7 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> getNoDevice() {
+    public Output<Boolean> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
@@ -57,7 +57,7 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

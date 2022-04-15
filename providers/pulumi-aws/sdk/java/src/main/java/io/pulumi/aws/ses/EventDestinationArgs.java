@@ -27,7 +27,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudwatchDestinations")
       private final @Nullable Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations;
 
-    public Output<List<EventDestinationCloudwatchDestinationArgs>> getCloudwatchDestinations() {
+    public Output<List<EventDestinationCloudwatchDestinationArgs>> cloudwatchDestinations() {
         return this.cloudwatchDestinations == null ? Codegen.empty() : this.cloudwatchDestinations;
     }
 
@@ -38,7 +38,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configurationSetName", required=true)
       private final Output<String> configurationSetName;
 
-    public Output<String> getConfigurationSetName() {
+    public Output<String> configurationSetName() {
         return this.configurationSetName;
     }
 
@@ -49,7 +49,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -60,7 +60,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kinesisDestination")
       private final @Nullable Output<EventDestinationKinesisDestinationArgs> kinesisDestination;
 
-    public Output<EventDestinationKinesisDestinationArgs> getKinesisDestination() {
+    public Output<EventDestinationKinesisDestinationArgs> kinesisDestination() {
         return this.kinesisDestination == null ? Codegen.empty() : this.kinesisDestination;
     }
 
@@ -71,7 +71,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="matchingTypes", required=true)
       private final Output<List<String>> matchingTypes;
 
-    public Output<List<String>> getMatchingTypes() {
+    public Output<List<String>> matchingTypes() {
         return this.matchingTypes;
     }
 
@@ -82,7 +82,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class EventDestinationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="snsDestination")
       private final @Nullable Output<EventDestinationSnsDestinationArgs> snsDestination;
 
-    public Output<EventDestinationSnsDestinationArgs> getSnsDestination() {
+    public Output<EventDestinationSnsDestinationArgs> snsDestination() {
         return this.snsDestination == null ? Codegen.empty() : this.snsDestination;
     }
 

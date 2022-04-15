@@ -32,14 +32,14 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * ID of profile to use for field-level encryption query argument-profile mapping
      * 
     */
-    public String getProfileId() {
+    public String profileId() {
         return this.profileId;
     }
     /**
      * Query argument for field-level encryption query argument-profile mapping.
      * 
     */
-    public String getQueryArg() {
+    public String queryArg() {
         return this.queryArg;
     }
 

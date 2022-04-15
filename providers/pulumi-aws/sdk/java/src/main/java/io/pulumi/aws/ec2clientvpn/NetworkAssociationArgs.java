@@ -23,7 +23,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clientVpnEndpointId", required=true)
       private final Output<String> clientVpnEndpointId;
 
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

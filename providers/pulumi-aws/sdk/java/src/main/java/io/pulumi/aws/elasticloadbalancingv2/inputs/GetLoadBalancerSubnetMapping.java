@@ -15,35 +15,35 @@ public final class GetLoadBalancerSubnetMapping extends io.pulumi.resources.Invo
     @Import(name="allocationId", required=true)
       private final String allocationId;
 
-    public String getAllocationId() {
+    public String allocationId() {
         return this.allocationId;
     }
 
     @Import(name="ipv6Address", required=true)
       private final String ipv6Address;
 
-    public String getIpv6Address() {
+    public String ipv6Address() {
         return this.ipv6Address;
     }
 
     @Import(name="outpostId", required=true)
       private final String outpostId;
 
-    public String getOutpostId() {
+    public String outpostId() {
         return this.outpostId;
     }
 
     @Import(name="privateIpv4Address", required=true)
       private final String privateIpv4Address;
 
-    public String getPrivateIpv4Address() {
+    public String privateIpv4Address() {
         return this.privateIpv4Address;
     }
 
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

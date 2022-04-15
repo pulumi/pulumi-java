@@ -22,7 +22,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 

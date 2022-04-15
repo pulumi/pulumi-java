@@ -22,7 +22,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accepts")
       private final @Nullable String accepts;
 
-    public Optional<String> getAccepts() {
+    public Optional<String> accepts() {
         return this.accepts == null ? Optional.empty() : Optional.ofNullable(this.accepts);
     }
 
@@ -33,7 +33,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="exportType", required=true)
       private final String exportType;
 
-    public String getExportType() {
+    public String exportType() {
         return this.exportType;
     }
 
@@ -44,7 +44,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -55,7 +55,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 
@@ -66,7 +66,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
       private final String stageName;
 
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
 

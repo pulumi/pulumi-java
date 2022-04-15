@@ -24,7 +24,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,14 +35,14 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumEngineVersion")
       private final @Nullable Output<String> minimumEngineVersion;
 
-    public Output<String> getMinimumEngineVersion() {
+    public Output<String> minimumEngineVersion() {
         return this.minimumEngineVersion == null ? Codegen.empty() : this.minimumEngineVersion;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -64,7 +64,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -75,7 +75,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -86,7 +86,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userNames")
       private final @Nullable Output<List<String>> userNames;
 
-    public Output<List<String>> getUserNames() {
+    public Output<List<String>> userNames() {
         return this.userNames == null ? Codegen.empty() : this.userNames;
     }
 

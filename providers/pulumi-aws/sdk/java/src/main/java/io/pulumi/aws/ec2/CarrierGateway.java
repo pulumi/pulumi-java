@@ -41,7 +41,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The ARN of the carrier gateway.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the owner of the carrier gateway.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -69,7 +69,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -83,7 +83,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -97,7 +97,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC to associate with the carrier gateway.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

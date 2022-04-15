@@ -24,7 +24,7 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplication {
      * Whether delete markers should be replicated. Either `"Enabled"` or `"Disabled"`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

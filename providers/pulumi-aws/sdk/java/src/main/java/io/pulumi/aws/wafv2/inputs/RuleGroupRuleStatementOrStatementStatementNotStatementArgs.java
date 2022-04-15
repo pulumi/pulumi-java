@@ -22,7 +22,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementArgs ex
     @Import(name="statements", required=true)
       private final Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs>> statements;
 
-    public Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs>> getStatements() {
+    public Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs>> statements() {
         return this.statements;
     }
 

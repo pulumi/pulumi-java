@@ -22,7 +22,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -33,7 +33,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
 
@@ -44,7 +44,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

@@ -49,35 +49,35 @@ public final class GetResolverEndpointResult {
         this.vpcId = vpcId;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
-    public List<GetResolverEndpointFilter> getFilters() {
+    public List<GetResolverEndpointFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getResolverEndpointId() {
+    public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

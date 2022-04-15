@@ -22,7 +22,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     @Import(name="emailMessage")
       private final @Nullable Output<String> emailMessage;
 
-    public Output<String> getEmailMessage() {
+    public Output<String> emailMessage() {
         return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
-    public Output<String> getEmailSubject() {
+    public Output<String> emailSubject() {
         return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     @Import(name="smsMessage")
       private final @Nullable Output<String> smsMessage;
 
-    public Output<String> getSmsMessage() {
+    public Output<String> smsMessage() {
         return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
     }
 

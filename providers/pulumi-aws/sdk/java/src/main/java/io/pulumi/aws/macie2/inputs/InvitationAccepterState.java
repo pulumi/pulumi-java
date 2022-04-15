@@ -22,7 +22,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="administratorAccountId")
       private final @Nullable Output<String> administratorAccountId;
 
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="invitationId")
       private final @Nullable Output<String> invitationId;
 
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId == null ? Codegen.empty() : this.invitationId;
     }
 

@@ -37,7 +37,7 @@ public class ScramSecretAssociation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the MSK cluster.
      * 
      */
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -51,7 +51,7 @@ public class ScramSecretAssociation extends io.pulumi.resources.CustomResource {
      * @return List of AWS Secrets Manager secret ARNs.
      * 
      */
-    public Output<List<String>> getSecretArnLists() {
+    public Output<List<String>> secretArnLists() {
         return this.secretArnLists;
     }
 

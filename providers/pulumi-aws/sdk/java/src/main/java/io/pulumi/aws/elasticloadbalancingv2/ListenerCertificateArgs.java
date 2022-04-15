@@ -21,7 +21,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
@@ -32,7 +32,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 

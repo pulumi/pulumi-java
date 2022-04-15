@@ -21,7 +21,7 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -32,7 +32,7 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
     @Import(name="thing", required=true)
       private final Output<String> thing;
 
-    public Output<String> getThing() {
+    public Output<String> thing() {
         return this.thing;
     }
 

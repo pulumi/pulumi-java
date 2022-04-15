@@ -41,7 +41,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return AWS account ID for member account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -55,7 +55,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return The detector ID of the GuardDuty account where you want to create member accounts.
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
     /**
@@ -69,7 +69,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return Boolean whether an email notification is sent to the accounts. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableEmailNotification() {
+    public Output</* @Nullable */ Boolean> disableEmailNotification() {
         return this.disableEmailNotification;
     }
     /**
@@ -83,7 +83,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return Email address for member account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -97,7 +97,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return Message for invitation.
      * 
      */
-    public Output</* @Nullable */ String> getInvitationMessage() {
+    public Output</* @Nullable */ String> invitationMessage() {
         return this.invitationMessage;
     }
     /**
@@ -111,7 +111,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInvite() {
+    public Output</* @Nullable */ Boolean> invite() {
         return this.invite;
     }
     /**
@@ -125,7 +125,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * @return The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
      * 
      */
-    public Output<String> getRelationshipStatus() {
+    public Output<String> relationshipStatus() {
         return this.relationshipStatus;
     }
 

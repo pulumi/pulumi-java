@@ -20,7 +20,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
     @Import(name="cloudwatchLogGroupArn", required=true)
       private final String cloudwatchLogGroupArn;
 
-    public String getCloudwatchLogGroupArn() {
+    public String cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -31,7 +31,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -42,7 +42,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
     @Import(name="logType", required=true)
       private final String logType;
 
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

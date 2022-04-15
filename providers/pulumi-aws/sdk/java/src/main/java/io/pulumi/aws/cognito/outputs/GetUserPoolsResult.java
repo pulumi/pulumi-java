@@ -43,24 +43,24 @@ public final class GetUserPoolsResult {
      * The set of cognito user pool Amazon Resource Names (ARNs).
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The set of cognito user pool ids.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

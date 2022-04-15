@@ -23,7 +23,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
     @Import(name="invocationType")
       private final @Nullable Output<String> invocationType;
 
-    public Output<String> getInvocationType() {
+    public Output<String> invocationType() {
         return this.invocationType == null ? Codegen.empty() : this.invocationType;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -56,7 +56,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

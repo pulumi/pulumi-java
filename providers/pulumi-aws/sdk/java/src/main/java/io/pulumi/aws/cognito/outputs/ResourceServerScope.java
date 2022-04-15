@@ -32,14 +32,14 @@ public final class ResourceServerScope {
      * The scope description.
      * 
     */
-    public String getScopeDescription() {
+    public String scopeDescription() {
         return this.scopeDescription;
     }
     /**
      * The scope name.
      * 
     */
-    public String getScopeName() {
+    public String scopeName() {
         return this.scopeName;
     }
 

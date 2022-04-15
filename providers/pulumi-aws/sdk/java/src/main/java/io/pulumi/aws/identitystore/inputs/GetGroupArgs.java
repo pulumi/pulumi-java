@@ -23,7 +23,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters", required=true)
       private final List<GetGroupFilter> filters;
 
-    public List<GetGroupFilter> getFilters() {
+    public List<GetGroupFilter> filters() {
         return this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -45,7 +45,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="identityStoreId", required=true)
       private final String identityStoreId;
 
-    public String getIdentityStoreId() {
+    public String identityStoreId() {
         return this.identityStoreId;
     }
 

@@ -28,7 +28,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeCapacity", required=true)
       private final Output<FleetComputeCapacityArgs> computeCapacity;
 
-    public Output<FleetComputeCapacityArgs> getComputeCapacity() {
+    public Output<FleetComputeCapacityArgs> computeCapacity() {
         return this.computeCapacity;
     }
 
@@ -39,7 +39,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> disconnectTimeoutInSeconds;
 
-    public Output<Integer> getDisconnectTimeoutInSeconds() {
+    public Output<Integer> disconnectTimeoutInSeconds() {
         return this.disconnectTimeoutInSeconds == null ? Codegen.empty() : this.disconnectTimeoutInSeconds;
     }
 
@@ -61,7 +61,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -72,7 +72,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainJoinInfo")
       private final @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
 
-    public Output<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
+    public Output<FleetDomainJoinInfoArgs> domainJoinInfo() {
         return this.domainJoinInfo == null ? Codegen.empty() : this.domainJoinInfo;
     }
 
@@ -83,7 +83,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDefaultInternetAccess")
       private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Output<Boolean> getEnableDefaultInternetAccess() {
+    public Output<Boolean> enableDefaultInternetAccess() {
         return this.enableDefaultInternetAccess == null ? Codegen.empty() : this.enableDefaultInternetAccess;
     }
 
@@ -94,7 +94,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
-    public Output<String> getFleetType() {
+    public Output<String> fleetType() {
         return this.fleetType == null ? Codegen.empty() : this.fleetType;
     }
 
@@ -105,7 +105,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
@@ -116,7 +116,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleDisconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
 
-    public Output<Integer> getIdleDisconnectTimeoutInSeconds() {
+    public Output<Integer> idleDisconnectTimeoutInSeconds() {
         return this.idleDisconnectTimeoutInSeconds == null ? Codegen.empty() : this.idleDisconnectTimeoutInSeconds;
     }
 
@@ -127,7 +127,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn == null ? Codegen.empty() : this.imageArn;
     }
 
@@ -138,7 +138,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
@@ -149,7 +149,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -160,7 +160,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxUserDurationInSeconds")
       private final @Nullable Output<Integer> maxUserDurationInSeconds;
 
-    public Output<Integer> getMaxUserDurationInSeconds() {
+    public Output<Integer> maxUserDurationInSeconds() {
         return this.maxUserDurationInSeconds == null ? Codegen.empty() : this.maxUserDurationInSeconds;
     }
 
@@ -171,7 +171,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -182,7 +182,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamView")
       private final @Nullable Output<String> streamView;
 
-    public Output<String> getStreamView() {
+    public Output<String> streamView() {
         return this.streamView == null ? Codegen.empty() : this.streamView;
     }
 
@@ -193,7 +193,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -204,7 +204,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
-    public Output<FleetVpcConfigArgs> getVpcConfig() {
+    public Output<FleetVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

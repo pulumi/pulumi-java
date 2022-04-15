@@ -19,7 +19,7 @@ public final class GetStreamStreamModeDetail extends io.pulumi.resources.InvokeA
     @Import(name="streamMode", required=true)
       private final String streamMode;
 
-    public String getStreamMode() {
+    public String streamMode() {
         return this.streamMode;
     }
 

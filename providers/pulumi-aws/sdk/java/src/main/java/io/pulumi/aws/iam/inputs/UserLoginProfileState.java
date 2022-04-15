@@ -24,7 +24,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="encryptedPassword")
       private final @Nullable Output<String> encryptedPassword;
 
-    public Output<String> getEncryptedPassword() {
+    public Output<String> encryptedPassword() {
         return this.encryptedPassword == null ? Codegen.empty() : this.encryptedPassword;
     }
 
@@ -35,7 +35,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="keyFingerprint")
       private final @Nullable Output<String> keyFingerprint;
 
-    public Output<String> getKeyFingerprint() {
+    public Output<String> keyFingerprint() {
         return this.keyFingerprint == null ? Codegen.empty() : this.keyFingerprint;
     }
 
@@ -46,7 +46,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="passwordLength")
       private final @Nullable Output<Integer> passwordLength;
 
-    public Output<Integer> getPasswordLength() {
+    public Output<Integer> passwordLength() {
         return this.passwordLength == null ? Codegen.empty() : this.passwordLength;
     }
 
@@ -57,7 +57,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="passwordResetRequired")
       private final @Nullable Output<Boolean> passwordResetRequired;
 
-    public Output<Boolean> getPasswordResetRequired() {
+    public Output<Boolean> passwordResetRequired() {
         return this.passwordResetRequired == null ? Codegen.empty() : this.passwordResetRequired;
     }
 
@@ -68,7 +68,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
+    public Output<String> pgpKey() {
         return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
@@ -79,7 +79,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

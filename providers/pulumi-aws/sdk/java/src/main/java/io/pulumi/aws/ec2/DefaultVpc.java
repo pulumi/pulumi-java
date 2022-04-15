@@ -52,7 +52,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of VPC
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +68,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * block with a /56 prefix length for the VPC was assigned
      * 
      */
-    public Output<Boolean> getAssignGeneratedIpv6CidrBlock() {
+    public Output<Boolean> assignGeneratedIpv6CidrBlock() {
         return this.assignGeneratedIpv6CidrBlock;
     }
     /**
@@ -82,7 +82,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The CIDR block of the VPC
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -96,7 +96,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The ID of the network ACL created by default on VPC creation
      * 
      */
-    public Output<String> getDefaultNetworkAclId() {
+    public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId;
     }
     /**
@@ -110,7 +110,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The ID of the route table created by default on VPC creation
      * 
      */
-    public Output<String> getDefaultRouteTableId() {
+    public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId;
     }
     /**
@@ -124,13 +124,13 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The ID of the security group created by default on VPC creation
      * 
      */
-    public Output<String> getDefaultSecurityGroupId() {
+    public Output<String> defaultSecurityGroupId() {
         return this.defaultSecurityGroupId;
     }
     @Export(name="dhcpOptionsId", type=String.class, parameters={})
     private Output<String> dhcpOptionsId;
 
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
@@ -148,13 +148,13 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
      * 
      */
-    public Output<Boolean> getEnableClassiclink() {
+    public Output<Boolean> enableClassiclink() {
         return this.enableClassiclink;
     }
     @Export(name="enableClassiclinkDnsSupport", type=Boolean.class, parameters={})
     private Output<Boolean> enableClassiclinkDnsSupport;
 
-    public Output<Boolean> getEnableClassiclinkDnsSupport() {
+    public Output<Boolean> enableClassiclinkDnsSupport() {
         return this.enableClassiclinkDnsSupport;
     }
     /**
@@ -168,7 +168,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
      * 
      */
-    public Output<Boolean> getEnableDnsHostnames() {
+    public Output<Boolean> enableDnsHostnames() {
         return this.enableDnsHostnames;
     }
     /**
@@ -182,7 +182,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDnsSupport() {
+    public Output</* @Nullable */ Boolean> enableDnsSupport() {
         return this.enableDnsSupport;
     }
     /**
@@ -196,19 +196,19 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return Tenancy of instances spin up within VPC.
      * 
      */
-    public Output<String> getInstanceTenancy() {
+    public Output<String> instanceTenancy() {
         return this.instanceTenancy;
     }
     @Export(name="ipv4IpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv4IpamPoolId;
 
-    public Output</* @Nullable */ String> getIpv4IpamPoolId() {
+    public Output</* @Nullable */ String> ipv4IpamPoolId() {
         return this.ipv4IpamPoolId;
     }
     @Export(name="ipv4NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv4NetmaskLength;
 
-    public Output</* @Nullable */ Integer> getIpv4NetmaskLength() {
+    public Output</* @Nullable */ Integer> ipv4NetmaskLength() {
         return this.ipv4NetmaskLength;
     }
     /**
@@ -222,7 +222,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The association ID for the IPv6 CIDR block of the VPC
      * 
      */
-    public Output<String> getIpv6AssociationId() {
+    public Output<String> ipv6AssociationId() {
         return this.ipv6AssociationId;
     }
     /**
@@ -236,25 +236,25 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The IPv6 CIDR block of the VPC
      * 
      */
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     @Export(name="ipv6CidrBlockNetworkBorderGroup", type=String.class, parameters={})
     private Output<String> ipv6CidrBlockNetworkBorderGroup;
 
-    public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
+    public Output<String> ipv6CidrBlockNetworkBorderGroup() {
         return this.ipv6CidrBlockNetworkBorderGroup;
     }
     @Export(name="ipv6IpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv6IpamPoolId;
 
-    public Output</* @Nullable */ String> getIpv6IpamPoolId() {
+    public Output</* @Nullable */ String> ipv6IpamPoolId() {
         return this.ipv6IpamPoolId;
     }
     @Export(name="ipv6NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv6NetmaskLength;
 
-    public Output</* @Nullable */ Integer> getIpv6NetmaskLength() {
+    public Output</* @Nullable */ Integer> ipv6NetmaskLength() {
         return this.ipv6NetmaskLength;
     }
     /**
@@ -272,7 +272,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * `aws.ec2.MainRouteTableAssociation`
      * 
      */
-    public Output<String> getMainRouteTableId() {
+    public Output<String> mainRouteTableId() {
         return this.mainRouteTableId;
     }
     /**
@@ -286,7 +286,7 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the VPC.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -300,13 +300,13 @@ public class DefaultVpc extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

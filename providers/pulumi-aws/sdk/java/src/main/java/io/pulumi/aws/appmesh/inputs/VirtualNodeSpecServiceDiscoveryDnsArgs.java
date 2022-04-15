@@ -21,7 +21,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 

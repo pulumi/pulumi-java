@@ -24,7 +24,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
     @Import(name="instancePorts")
       private final @Nullable Output<List<String>> instancePorts;
 
-    public Output<List<String>> getInstancePorts() {
+    public Output<List<String>> instancePorts() {
         return this.instancePorts == null ? Codegen.empty() : this.instancePorts;
     }
 
@@ -36,7 +36,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
     @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 

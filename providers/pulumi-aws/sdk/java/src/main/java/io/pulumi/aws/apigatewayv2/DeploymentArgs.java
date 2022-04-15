@@ -23,7 +23,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

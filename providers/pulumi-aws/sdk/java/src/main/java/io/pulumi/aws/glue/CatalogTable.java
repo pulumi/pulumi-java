@@ -47,7 +47,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Glue Table.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return ID of the Data Catalog in which the table resides.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -75,7 +75,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Name of the catalog database that contains the target table.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -89,7 +89,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Description of the table.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Name of the target table.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Owner of the table.
      * 
      */
-    public Output</* @Nullable */ String> getOwner() {
+    public Output</* @Nullable */ String> owner() {
         return this.owner;
     }
     /**
@@ -131,7 +131,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -145,7 +145,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
      * 
      */
-    public Output<List<CatalogTablePartitionIndex>> getPartitionIndices() {
+    public Output<List<CatalogTablePartitionIndex>> partitionIndices() {
         return this.partitionIndices;
     }
     /**
@@ -159,7 +159,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
      * 
      */
-    public Output</* @Nullable */ List<CatalogTablePartitionKey>> getPartitionKeys() {
+    public Output</* @Nullable */ List<CatalogTablePartitionKey>> partitionKeys() {
         return this.partitionKeys;
     }
     /**
@@ -173,7 +173,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Retention time for this table.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetention() {
+    public Output</* @Nullable */ Integer> retention() {
         return this.retention;
     }
     /**
@@ -187,7 +187,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
      * 
      */
-    public Output</* @Nullable */ CatalogTableStorageDescriptor> getStorageDescriptor() {
+    public Output</* @Nullable */ CatalogTableStorageDescriptor> storageDescriptor() {
         return this.storageDescriptor;
     }
     /**
@@ -201,7 +201,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
      * 
      */
-    public Output</* @Nullable */ String> getTableType() {
+    public Output</* @Nullable */ String> tableType() {
         return this.tableType;
     }
     /**
@@ -215,7 +215,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return Configuration block of a target table for resource linking. See `target_table` below.
      * 
      */
-    public Output</* @Nullable */ CatalogTableTargetTable> getTargetTable() {
+    public Output</* @Nullable */ CatalogTableTargetTable> targetTable() {
         return this.targetTable;
     }
     /**
@@ -229,7 +229,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return If the table is a view, the expanded text of the view; otherwise null.
      * 
      */
-    public Output</* @Nullable */ String> getViewExpandedText() {
+    public Output</* @Nullable */ String> viewExpandedText() {
         return this.viewExpandedText;
     }
     /**
@@ -243,7 +243,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * @return If the table is a view, the original text of the view; otherwise null.
      * 
      */
-    public Output</* @Nullable */ String> getViewOriginalText() {
+    public Output</* @Nullable */ String> viewOriginalText() {
         return this.viewOriginalText;
     }
 

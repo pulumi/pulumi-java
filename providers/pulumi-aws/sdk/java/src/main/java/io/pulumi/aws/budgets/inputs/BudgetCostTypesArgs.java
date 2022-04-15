@@ -22,7 +22,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeCredit")
       private final @Nullable Output<Boolean> includeCredit;
 
-    public Output<Boolean> getIncludeCredit() {
+    public Output<Boolean> includeCredit() {
         return this.includeCredit == null ? Codegen.empty() : this.includeCredit;
     }
 
@@ -33,7 +33,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeDiscount")
       private final @Nullable Output<Boolean> includeDiscount;
 
-    public Output<Boolean> getIncludeDiscount() {
+    public Output<Boolean> includeDiscount() {
         return this.includeDiscount == null ? Codegen.empty() : this.includeDiscount;
     }
 
@@ -44,7 +44,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeOtherSubscription")
       private final @Nullable Output<Boolean> includeOtherSubscription;
 
-    public Output<Boolean> getIncludeOtherSubscription() {
+    public Output<Boolean> includeOtherSubscription() {
         return this.includeOtherSubscription == null ? Codegen.empty() : this.includeOtherSubscription;
     }
 
@@ -55,7 +55,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeRecurring")
       private final @Nullable Output<Boolean> includeRecurring;
 
-    public Output<Boolean> getIncludeRecurring() {
+    public Output<Boolean> includeRecurring() {
         return this.includeRecurring == null ? Codegen.empty() : this.includeRecurring;
     }
 
@@ -66,7 +66,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeRefund")
       private final @Nullable Output<Boolean> includeRefund;
 
-    public Output<Boolean> getIncludeRefund() {
+    public Output<Boolean> includeRefund() {
         return this.includeRefund == null ? Codegen.empty() : this.includeRefund;
     }
 
@@ -77,7 +77,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeSubscription")
       private final @Nullable Output<Boolean> includeSubscription;
 
-    public Output<Boolean> getIncludeSubscription() {
+    public Output<Boolean> includeSubscription() {
         return this.includeSubscription == null ? Codegen.empty() : this.includeSubscription;
     }
 
@@ -88,7 +88,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeSupport")
       private final @Nullable Output<Boolean> includeSupport;
 
-    public Output<Boolean> getIncludeSupport() {
+    public Output<Boolean> includeSupport() {
         return this.includeSupport == null ? Codegen.empty() : this.includeSupport;
     }
 
@@ -99,7 +99,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeTax")
       private final @Nullable Output<Boolean> includeTax;
 
-    public Output<Boolean> getIncludeTax() {
+    public Output<Boolean> includeTax() {
         return this.includeTax == null ? Codegen.empty() : this.includeTax;
     }
 
@@ -110,7 +110,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includeUpfront")
       private final @Nullable Output<Boolean> includeUpfront;
 
-    public Output<Boolean> getIncludeUpfront() {
+    public Output<Boolean> includeUpfront() {
         return this.includeUpfront == null ? Codegen.empty() : this.includeUpfront;
     }
 
@@ -121,7 +121,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useAmortized")
       private final @Nullable Output<Boolean> useAmortized;
 
-    public Output<Boolean> getUseAmortized() {
+    public Output<Boolean> useAmortized() {
         return this.useAmortized == null ? Codegen.empty() : this.useAmortized;
     }
 
@@ -132,7 +132,7 @@ public final class BudgetCostTypesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useBlended")
       private final @Nullable Output<Boolean> useBlended;
 
-    public Output<Boolean> getUseBlended() {
+    public Output<Boolean> useBlended() {
         return this.useBlended == null ? Codegen.empty() : this.useBlended;
     }
 

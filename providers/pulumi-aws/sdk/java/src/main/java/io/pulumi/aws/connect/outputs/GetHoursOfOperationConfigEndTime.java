@@ -32,14 +32,14 @@ public final class GetHoursOfOperationConfigEndTime {
      * Specifies the hour of opening.
      * 
     */
-    public Integer getHours() {
+    public Integer hours() {
         return this.hours;
     }
     /**
      * Specifies the minute of opening.
      * 
     */
-    public Integer getMinutes() {
+    public Integer minutes() {
         return this.minutes;
     }
 

@@ -45,24 +45,24 @@ public final class GetAmiIdsResult {
      * A list of the Autoscaling Groups Arns in the current region.
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
-    public List<GetAmiIdsFilter> getFilters() {
+    public List<GetAmiIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of the Autoscaling Groups in the current region.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

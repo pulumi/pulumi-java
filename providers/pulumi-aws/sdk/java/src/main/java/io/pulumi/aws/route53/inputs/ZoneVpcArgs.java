@@ -22,7 +22,7 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -33,7 +33,7 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcRegion")
       private final @Nullable Output<String> vpcRegion;
 
-    public Output<String> getVpcRegion() {
+    public Output<String> vpcRegion() {
         return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 

@@ -28,7 +28,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="enableEcsManagedTags")
       private final @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Output<Boolean> getEnableEcsManagedTags() {
+    public Output<Boolean> enableEcsManagedTags() {
         return this.enableEcsManagedTags == null ? Codegen.empty() : this.enableEcsManagedTags;
     }
 
@@ -39,7 +39,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> getEnableExecuteCommand() {
+    public Output<Boolean> enableExecuteCommand() {
         return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
     }
 
@@ -50,7 +50,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -61,7 +61,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
-    public Output<String> getLaunchType() {
+    public Output<String> launchType() {
         return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
@@ -72,7 +72,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="networkConfiguration")
       private final @Nullable Output<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<EventTargetEcsTargetNetworkConfigurationArgs> getNetworkConfiguration() {
+    public Output<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
@@ -83,7 +83,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="placementConstraints")
       private final @Nullable Output<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<EventTargetEcsTargetPlacementConstraintArgs>> getPlacementConstraints() {
+    public Output<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints() {
         return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
@@ -94,7 +94,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
@@ -105,7 +105,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="propagateTags")
       private final @Nullable Output<String> propagateTags;
 
-    public Output<String> getPropagateTags() {
+    public Output<String> propagateTags() {
         return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
@@ -116,7 +116,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -127,7 +127,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="taskCount")
       private final @Nullable Output<Integer> taskCount;
 
-    public Output<Integer> getTaskCount() {
+    public Output<Integer> taskCount() {
         return this.taskCount == null ? Codegen.empty() : this.taskCount;
     }
 
@@ -138,7 +138,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     @Import(name="taskDefinitionArn", required=true)
       private final Output<String> taskDefinitionArn;
 
-    public Output<String> getTaskDefinitionArn() {
+    public Output<String> taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 

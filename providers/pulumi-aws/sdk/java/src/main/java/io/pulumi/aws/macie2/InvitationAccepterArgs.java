@@ -21,7 +21,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="administratorAccountId", required=true)
       private final Output<String> administratorAccountId;
 
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId;
     }
 

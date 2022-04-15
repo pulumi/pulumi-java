@@ -22,7 +22,7 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
     @Import(name="workGroup")
       private final @Nullable Output<String> workGroup;
 
-    public Output<String> getWorkGroup() {
+    public Output<String> workGroup() {
         return this.workGroup == null ? Codegen.empty() : this.workGroup;
     }
 

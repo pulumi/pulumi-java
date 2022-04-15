@@ -41,7 +41,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this data set.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return The type of asset that is added to a data set. Valid values are: `S3_SNAPSHOT`, `REDSHIFT_DATA_SHARE`, and `API_GATEWAY_API`.
      * 
      */
-    public Output<String> getAssetType() {
+    public Output<String> assetType() {
         return this.assetType;
     }
     /**
@@ -69,7 +69,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return A description for the data set.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -83,7 +83,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return The name of the data set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +97,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -111,7 +111,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

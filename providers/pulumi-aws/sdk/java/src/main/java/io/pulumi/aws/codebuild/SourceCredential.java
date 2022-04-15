@@ -43,7 +43,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * @return The ARN of Source Credential.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * @return The type of authentication used to connect to a GitHub, GitHub Enterprise, or Bitbucket repository. An OAUTH connection is not supported by the API.
      * 
      */
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
     /**
@@ -71,7 +71,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * @return The source provider used for this project.
      * 
      */
-    public Output<String> getServerType() {
+    public Output<String> serverType() {
         return this.serverType;
     }
     /**
@@ -85,7 +85,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * @return For `GitHub` or `GitHub Enterprise`, this is the personal access token. For `Bitbucket`, this is the app password.
      * 
      */
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token;
     }
     /**
@@ -99,7 +99,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * @return The Bitbucket username when the authType is `BASIC_AUTH`. This parameter is not valid for other types of source providers or connections.
      * 
      */
-    public Output</* @Nullable */ String> getUserName() {
+    public Output</* @Nullable */ String> userName() {
         return this.userName;
     }
 

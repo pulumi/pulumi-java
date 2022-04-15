@@ -42,7 +42,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * @return The ID of the invitation.
      * 
      */
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
     /**
@@ -56,7 +56,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * @return The account ID of the master Security Hub account whose invitation you're accepting.
      * 
      */
-    public Output<String> getMasterId() {
+    public Output<String> masterId() {
         return this.masterId;
     }
 

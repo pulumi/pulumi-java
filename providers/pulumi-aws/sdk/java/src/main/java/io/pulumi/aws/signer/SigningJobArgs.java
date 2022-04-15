@@ -25,7 +25,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<SigningJobDestinationArgs> destination;
 
-    public Output<SigningJobDestinationArgs> getDestination() {
+    public Output<SigningJobDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -36,7 +36,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreSigningJobFailure")
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
-    public Output<Boolean> getIgnoreSigningJobFailure() {
+    public Output<Boolean> ignoreSigningJobFailure() {
         return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
     }
 
@@ -47,7 +47,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -58,7 +58,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<SigningJobSourceArgs> source;
 
-    public Output<SigningJobSourceArgs> getSource() {
+    public Output<SigningJobSourceArgs> source() {
         return this.source;
     }
 

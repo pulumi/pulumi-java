@@ -22,7 +22,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroupName")
       private final @Nullable Output<String> securityGroupName;
 
-    public Output<String> getSecurityGroupName() {
+    public Output<String> securityGroupName() {
         return this.securityGroupName == null ? Codegen.empty() : this.securityGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroupOwnerId")
       private final @Nullable Output<String> securityGroupOwnerId;
 
-    public Output<String> getSecurityGroupOwnerId() {
+    public Output<String> securityGroupOwnerId() {
         return this.securityGroupOwnerId == null ? Codegen.empty() : this.securityGroupOwnerId;
     }
 

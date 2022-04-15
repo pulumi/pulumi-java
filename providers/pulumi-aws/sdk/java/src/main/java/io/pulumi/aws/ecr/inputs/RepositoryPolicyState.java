@@ -22,7 +22,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -33,7 +33,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -44,7 +44,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 

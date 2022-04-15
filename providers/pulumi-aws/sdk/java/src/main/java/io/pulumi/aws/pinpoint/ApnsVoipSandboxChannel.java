@@ -41,7 +41,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -55,7 +55,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
-    public Output</* @Nullable */ String> getBundleId() {
+    public Output</* @Nullable */ String> bundleId() {
         return this.bundleId;
     }
     /**
@@ -69,7 +69,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The pem encoded TLS Certificate from Apple.
      * 
      */
-    public Output</* @Nullable */ String> getCertificate() {
+    public Output</* @Nullable */ String> certificate() {
         return this.certificate;
     }
     /**
@@ -89,7 +89,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultAuthenticationMethod() {
+    public Output</* @Nullable */ String> defaultAuthenticationMethod() {
         return this.defaultAuthenticationMethod;
     }
     /**
@@ -103,7 +103,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -117,7 +117,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The Certificate Private Key file (ie. `.key` file).
      * 
      */
-    public Output</* @Nullable */ String> getPrivateKey() {
+    public Output</* @Nullable */ String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -131,7 +131,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The ID assigned to your Apple developer account team. This value is provided on the Membership page.
      * 
      */
-    public Output</* @Nullable */ String> getTeamId() {
+    public Output</* @Nullable */ String> teamId() {
         return this.teamId;
     }
     /**
@@ -145,7 +145,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The `.p8` file that you download from your Apple developer account when you create an authentication key.
      * 
      */
-    public Output</* @Nullable */ String> getTokenKey() {
+    public Output</* @Nullable */ String> tokenKey() {
         return this.tokenKey;
     }
     /**
@@ -159,7 +159,7 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
      * @return The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
      * 
      */
-    public Output</* @Nullable */ String> getTokenKeyId() {
+    public Output</* @Nullable */ String> tokenKeyId() {
         return this.tokenKeyId;
     }
 

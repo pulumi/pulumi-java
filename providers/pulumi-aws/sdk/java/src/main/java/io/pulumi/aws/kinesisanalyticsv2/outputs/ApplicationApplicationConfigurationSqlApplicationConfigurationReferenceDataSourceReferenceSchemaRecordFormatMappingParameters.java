@@ -35,14 +35,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Provides additional mapping information when the record format uses delimiters (for example, CSV).
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters> getCsvMappingParameters() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters> csvMappingParameters() {
         return Optional.ofNullable(this.csvMappingParameters);
     }
     /**
      * Provides additional mapping information when JSON is the record format on the streaming source.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters> getJsonMappingParameters() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters> jsonMappingParameters() {
         return Optional.ofNullable(this.jsonMappingParameters);
     }
 

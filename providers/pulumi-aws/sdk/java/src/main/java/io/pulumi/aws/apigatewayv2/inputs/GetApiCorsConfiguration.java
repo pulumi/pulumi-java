@@ -22,7 +22,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="allowCredentials", required=true)
       private final Boolean allowCredentials;
 
-    public Boolean getAllowCredentials() {
+    public Boolean allowCredentials() {
         return this.allowCredentials;
     }
 
@@ -33,7 +33,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="allowHeaders", required=true)
       private final List<String> allowHeaders;
 
-    public List<String> getAllowHeaders() {
+    public List<String> allowHeaders() {
         return this.allowHeaders;
     }
 
@@ -44,7 +44,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="allowMethods", required=true)
       private final List<String> allowMethods;
 
-    public List<String> getAllowMethods() {
+    public List<String> allowMethods() {
         return this.allowMethods;
     }
 
@@ -55,7 +55,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="allowOrigins", required=true)
       private final List<String> allowOrigins;
 
-    public List<String> getAllowOrigins() {
+    public List<String> allowOrigins() {
         return this.allowOrigins;
     }
 
@@ -66,7 +66,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="exposeHeaders", required=true)
       private final List<String> exposeHeaders;
 
-    public List<String> getExposeHeaders() {
+    public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
 
@@ -77,7 +77,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
     @Import(name="maxAge", required=true)
       private final Integer maxAge;
 
-    public Integer getMaxAge() {
+    public Integer maxAge() {
         return this.maxAge;
     }
 

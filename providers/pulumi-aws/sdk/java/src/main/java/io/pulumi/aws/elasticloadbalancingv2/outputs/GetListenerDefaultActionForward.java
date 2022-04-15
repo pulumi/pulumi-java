@@ -22,10 +22,10 @@ public final class GetListenerDefaultActionForward {
         this.targetGroups = targetGroups;
     }
 
-    public List<GetListenerDefaultActionForwardStickiness> getStickinesses() {
+    public List<GetListenerDefaultActionForwardStickiness> stickinesses() {
         return this.stickinesses;
     }
-    public List<GetListenerDefaultActionForwardTargetGroup> getTargetGroups() {
+    public List<GetListenerDefaultActionForwardTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 

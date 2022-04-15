@@ -25,7 +25,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
-    public Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
+    public Output<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation() {
         return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
@@ -36,7 +36,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -47,7 +47,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -58,7 +58,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="metrics")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics;
 
-    public Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> getMetrics() {
+    public Output<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -70,7 +70,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="replicaKmsKeyId")
       private final @Nullable Output<String> replicaKmsKeyId;
 
-    public Output<String> getReplicaKmsKeyId() {
+    public Output<String> replicaKmsKeyId() {
         return this.replicaKmsKeyId == null ? Codegen.empty() : this.replicaKmsKeyId;
     }
 
@@ -81,7 +81,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime;
 
-    public Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
+    public Output<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime() {
         return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
@@ -92,7 +92,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 

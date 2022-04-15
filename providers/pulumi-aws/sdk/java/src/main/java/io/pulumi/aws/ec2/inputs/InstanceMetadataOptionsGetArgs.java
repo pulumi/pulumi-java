@@ -23,7 +23,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="httpEndpoint")
       private final @Nullable Output<String> httpEndpoint;
 
-    public Output<String> getHttpEndpoint() {
+    public Output<String> httpEndpoint() {
         return this.httpEndpoint == null ? Codegen.empty() : this.httpEndpoint;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Output<Integer> getHttpPutResponseHopLimit() {
+    public Output<Integer> httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="httpTokens")
       private final @Nullable Output<String> httpTokens;
 
-    public Output<String> getHttpTokens() {
+    public Output<String> httpTokens() {
         return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="instanceMetadataTags")
       private final @Nullable Output<String> instanceMetadataTags;
 
-    public Output<String> getInstanceMetadataTags() {
+    public Output<String> instanceMetadataTags() {
         return this.instanceMetadataTags == null ? Codegen.empty() : this.instanceMetadataTags;
     }
 

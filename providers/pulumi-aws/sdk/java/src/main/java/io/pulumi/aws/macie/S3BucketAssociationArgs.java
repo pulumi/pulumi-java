@@ -23,7 +23,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -34,7 +34,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="classificationType")
       private final @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
 
-    public Output<S3BucketAssociationClassificationTypeArgs> getClassificationType() {
+    public Output<S3BucketAssociationClassificationTypeArgs> classificationType() {
         return this.classificationType == null ? Codegen.empty() : this.classificationType;
     }
 
@@ -45,7 +45,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="memberAccountId")
       private final @Nullable Output<String> memberAccountId;
 
-    public Output<String> getMemberAccountId() {
+    public Output<String> memberAccountId() {
         return this.memberAccountId == null ? Codegen.empty() : this.memberAccountId;
     }
 
@@ -56,7 +56,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

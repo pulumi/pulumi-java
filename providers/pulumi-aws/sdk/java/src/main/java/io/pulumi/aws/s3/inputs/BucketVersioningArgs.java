@@ -22,7 +22,7 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -33,7 +33,7 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mfaDelete")
       private final @Nullable Output<Boolean> mfaDelete;
 
-    public Output<Boolean> getMfaDelete() {
+    public Output<Boolean> mfaDelete() {
         return this.mfaDelete == null ? Codegen.empty() : this.mfaDelete;
     }
 

@@ -25,7 +25,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="arguments")
       private final @Nullable Output<Map<String,String>> arguments;
 
-    public Output<Map<String,String>> getArguments() {
+    public Output<Map<String,String>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -36,7 +36,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="crawlerName")
       private final @Nullable Output<String> crawlerName;
 
-    public Output<String> getCrawlerName() {
+    public Output<String> crawlerName() {
         return this.crawlerName == null ? Codegen.empty() : this.crawlerName;
     }
 
@@ -47,7 +47,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
@@ -58,7 +58,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="notificationProperty")
       private final @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty;
 
-    public Output<TriggerActionNotificationPropertyGetArgs> getNotificationProperty() {
+    public Output<TriggerActionNotificationPropertyGetArgs> notificationProperty() {
         return this.notificationProperty == null ? Codegen.empty() : this.notificationProperty;
     }
 
@@ -69,7 +69,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
-    public Output<String> getSecurityConfiguration() {
+    public Output<String> securityConfiguration() {
         return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
@@ -80,7 +80,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

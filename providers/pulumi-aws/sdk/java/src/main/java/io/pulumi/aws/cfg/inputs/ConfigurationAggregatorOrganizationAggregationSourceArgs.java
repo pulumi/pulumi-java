@@ -24,7 +24,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="allRegions")
       private final @Nullable Output<Boolean> allRegions;
 
-    public Output<Boolean> getAllRegions() {
+    public Output<Boolean> allRegions() {
         return this.allRegions == null ? Codegen.empty() : this.allRegions;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

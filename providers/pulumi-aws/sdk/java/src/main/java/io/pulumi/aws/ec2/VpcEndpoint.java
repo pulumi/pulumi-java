@@ -51,7 +51,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the VPC endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -65,7 +65,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoAccept() {
+    public Output</* @Nullable */ Boolean> autoAccept() {
         return this.autoAccept;
     }
     /**
@@ -79,7 +79,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
      */
-    public Output<List<String>> getCidrBlocks() {
+    public Output<List<String>> cidrBlocks() {
         return this.cidrBlocks;
     }
     /**
@@ -93,7 +93,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
      * 
      */
-    public Output<List<VpcEndpointDnsEntry>> getDnsEntries() {
+    public Output<List<VpcEndpointDnsEntry>> dnsEntries() {
         return this.dnsEntries;
     }
     /**
@@ -107,7 +107,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
      * 
      */
-    public Output<List<String>> getNetworkInterfaceIds() {
+    public Output<List<String>> networkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
@@ -121,7 +121,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the VPC endpoint.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -135,7 +135,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -149,7 +149,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The prefix list ID of the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
      */
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
     /**
@@ -165,7 +165,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPrivateDnsEnabled() {
+    public Output</* @Nullable */ Boolean> privateDnsEnabled() {
         return this.privateDnsEnabled;
     }
     /**
@@ -179,7 +179,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return Whether or not the VPC Endpoint is being managed by its service - `true` or `false`.
      * 
      */
-    public Output<Boolean> getRequesterManaged() {
+    public Output<Boolean> requesterManaged() {
         return this.requesterManaged;
     }
     /**
@@ -193,7 +193,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return One or more route table IDs. Applicable for endpoints of type `Gateway`.
      * 
      */
-    public Output<List<String>> getRouteTableIds() {
+    public Output<List<String>> routeTableIds() {
         return this.routeTableIds;
     }
     /**
@@ -207,7 +207,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -221,7 +221,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The service name. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -235,7 +235,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The state of the VPC endpoint.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -249,7 +249,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -263,7 +263,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -277,7 +277,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -291,7 +291,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointType() {
+    public Output</* @Nullable */ String> vpcEndpointType() {
         return this.vpcEndpointType;
     }
     /**
@@ -305,7 +305,7 @@ public class VpcEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC in which the endpoint will be used.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

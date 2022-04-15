@@ -16,14 +16,14 @@ public final class GetRestApiEndpointConfiguration extends io.pulumi.resources.I
     @Import(name="types", required=true)
       private final List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
 
     @Import(name="vpcEndpointIds", required=true)
       private final List<String> vpcEndpointIds;
 
-    public List<String> getVpcEndpointIds() {
+    public List<String> vpcEndpointIds() {
         return this.vpcEndpointIds;
     }
 

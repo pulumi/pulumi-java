@@ -22,7 +22,7 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -33,7 +33,7 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
     @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
-    public Output<String> getS3Uri() {
+    public Output<String> s3Uri() {
         return this.s3Uri;
     }
 

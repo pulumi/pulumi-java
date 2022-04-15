@@ -24,7 +24,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -46,7 +46,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -57,7 +57,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="fsxFilesystemArn")
       private final @Nullable Output<String> fsxFilesystemArn;
 
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn == null ? Codegen.empty() : this.fsxFilesystemArn;
     }
 
@@ -68,7 +68,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -79,7 +79,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
@@ -90,7 +90,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -101,7 +101,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -123,7 +123,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -134,7 +134,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

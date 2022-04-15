@@ -43,7 +43,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) that identifies the cluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,13 +57,13 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return A friendly description of the regular expression pattern set.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="lockToken", type=String.class, parameters={})
     private Output<String> lockToken;
 
-    public Output<String> getLockToken() {
+    public Output<String> lockToken() {
         return this.lockToken;
     }
     /**
@@ -77,7 +77,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return A friendly name of the regular expression pattern set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
      * 
      */
-    public Output</* @Nullable */ List<RegexPatternSetRegularExpression>> getRegularExpressions() {
+    public Output</* @Nullable */ List<RegexPatternSetRegularExpression>> regularExpressions() {
         return this.regularExpressions;
     }
     /**
@@ -105,7 +105,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -119,7 +119,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -133,7 +133,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

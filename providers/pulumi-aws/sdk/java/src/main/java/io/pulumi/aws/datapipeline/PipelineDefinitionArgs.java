@@ -26,7 +26,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterObjects")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
 
-    public Output<List<PipelineDefinitionParameterObjectArgs>> getParameterObjects() {
+    public Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects() {
         return this.parameterObjects == null ? Codegen.empty() : this.parameterObjects;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parameterValues")
       private final @Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues;
 
-    public Output<List<PipelineDefinitionParameterValueArgs>> getParameterValues() {
+    public Output<List<PipelineDefinitionParameterValueArgs>> parameterValues() {
         return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
     }
 
@@ -48,7 +48,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pipelineId", required=true)
       private final Output<String> pipelineId;
 
-    public Output<String> getPipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId;
     }
 
@@ -59,7 +59,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pipelineObjects", required=true)
       private final Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
 
-    public Output<List<PipelineDefinitionPipelineObjectArgs>> getPipelineObjects() {
+    public Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects() {
         return this.pipelineObjects;
     }
 

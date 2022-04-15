@@ -23,7 +23,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias", required=true)
       private final Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -34,7 +34,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialDuration")
       private final @Nullable Output<Integer> credentialDuration;
 
-    public Output<Integer> getCredentialDuration() {
+    public Output<Integer> credentialDuration() {
         return this.credentialDuration == null ? Codegen.empty() : this.credentialDuration;
     }
 
@@ -45,7 +45,7 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

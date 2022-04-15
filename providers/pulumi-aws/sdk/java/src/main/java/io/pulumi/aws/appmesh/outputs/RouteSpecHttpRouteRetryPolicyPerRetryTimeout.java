@@ -33,14 +33,14 @@ public final class RouteSpecHttpRouteRetryPolicyPerRetryTimeout {
      * Retry unit. Valid values: `ms`, `s`.
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
     /**
      * Retry value.
      * 
     */
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

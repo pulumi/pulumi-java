@@ -17,7 +17,7 @@ public final class GetFunctionEnvironment {
         this.variables = variables;
     }
 
-    public Map<String,String> getVariables() {
+    public Map<String,String> variables() {
         return this.variables;
     }
 

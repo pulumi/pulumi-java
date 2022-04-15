@@ -28,7 +28,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appServer")
       private final @Nullable Output<String> appServer;
 
-    public Output<String> getAppServer() {
+    public Output<String> appServer() {
         return this.appServer == null ? Codegen.empty() : this.appServer;
     }
 
@@ -39,7 +39,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoAssignElasticIps")
       private final @Nullable Output<Boolean> autoAssignElasticIps;
 
-    public Output<Boolean> getAutoAssignElasticIps() {
+    public Output<Boolean> autoAssignElasticIps() {
         return this.autoAssignElasticIps == null ? Codegen.empty() : this.autoAssignElasticIps;
     }
 
@@ -50,7 +50,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoAssignPublicIps")
       private final @Nullable Output<Boolean> autoAssignPublicIps;
 
-    public Output<Boolean> getAutoAssignPublicIps() {
+    public Output<Boolean> autoAssignPublicIps() {
         return this.autoAssignPublicIps == null ? Codegen.empty() : this.autoAssignPublicIps;
     }
 
@@ -61,7 +61,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoHealing")
       private final @Nullable Output<Boolean> autoHealing;
 
-    public Output<Boolean> getAutoHealing() {
+    public Output<Boolean> autoHealing() {
         return this.autoHealing == null ? Codegen.empty() : this.autoHealing;
     }
 
@@ -72,28 +72,28 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundlerVersion")
       private final @Nullable Output<String> bundlerVersion;
 
-    public Output<String> getBundlerVersion() {
+    public Output<String> bundlerVersion() {
         return this.bundlerVersion == null ? Codegen.empty() : this.bundlerVersion;
     }
 
     @Import(name="cloudwatchConfiguration")
       private final @Nullable Output<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Output<RailsAppLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
+    public Output<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration() {
         return this.cloudwatchConfiguration == null ? Codegen.empty() : this.cloudwatchConfiguration;
     }
 
     @Import(name="customConfigureRecipes")
       private final @Nullable Output<List<String>> customConfigureRecipes;
 
-    public Output<List<String>> getCustomConfigureRecipes() {
+    public Output<List<String>> customConfigureRecipes() {
         return this.customConfigureRecipes == null ? Codegen.empty() : this.customConfigureRecipes;
     }
 
     @Import(name="customDeployRecipes")
       private final @Nullable Output<List<String>> customDeployRecipes;
 
-    public Output<List<String>> getCustomDeployRecipes() {
+    public Output<List<String>> customDeployRecipes() {
         return this.customDeployRecipes == null ? Codegen.empty() : this.customDeployRecipes;
     }
 
@@ -104,7 +104,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customInstanceProfileArn")
       private final @Nullable Output<String> customInstanceProfileArn;
 
-    public Output<String> getCustomInstanceProfileArn() {
+    public Output<String> customInstanceProfileArn() {
         return this.customInstanceProfileArn == null ? Codegen.empty() : this.customInstanceProfileArn;
     }
 
@@ -115,7 +115,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
-    public Output<String> getCustomJson() {
+    public Output<String> customJson() {
         return this.customJson == null ? Codegen.empty() : this.customJson;
     }
 
@@ -126,28 +126,28 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customSecurityGroupIds")
       private final @Nullable Output<List<String>> customSecurityGroupIds;
 
-    public Output<List<String>> getCustomSecurityGroupIds() {
+    public Output<List<String>> customSecurityGroupIds() {
         return this.customSecurityGroupIds == null ? Codegen.empty() : this.customSecurityGroupIds;
     }
 
     @Import(name="customSetupRecipes")
       private final @Nullable Output<List<String>> customSetupRecipes;
 
-    public Output<List<String>> getCustomSetupRecipes() {
+    public Output<List<String>> customSetupRecipes() {
         return this.customSetupRecipes == null ? Codegen.empty() : this.customSetupRecipes;
     }
 
     @Import(name="customShutdownRecipes")
       private final @Nullable Output<List<String>> customShutdownRecipes;
 
-    public Output<List<String>> getCustomShutdownRecipes() {
+    public Output<List<String>> customShutdownRecipes() {
         return this.customShutdownRecipes == null ? Codegen.empty() : this.customShutdownRecipes;
     }
 
     @Import(name="customUndeployRecipes")
       private final @Nullable Output<List<String>> customUndeployRecipes;
 
-    public Output<List<String>> getCustomUndeployRecipes() {
+    public Output<List<String>> customUndeployRecipes() {
         return this.customUndeployRecipes == null ? Codegen.empty() : this.customUndeployRecipes;
     }
 
@@ -158,7 +158,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drainElbOnShutdown")
       private final @Nullable Output<Boolean> drainElbOnShutdown;
 
-    public Output<Boolean> getDrainElbOnShutdown() {
+    public Output<Boolean> drainElbOnShutdown() {
         return this.drainElbOnShutdown == null ? Codegen.empty() : this.drainElbOnShutdown;
     }
 
@@ -169,7 +169,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsVolumes")
       private final @Nullable Output<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes;
 
-    public Output<List<RailsAppLayerEbsVolumeArgs>> getEbsVolumes() {
+    public Output<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes() {
         return this.ebsVolumes == null ? Codegen.empty() : this.ebsVolumes;
     }
 
@@ -180,7 +180,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticLoadBalancer")
       private final @Nullable Output<String> elasticLoadBalancer;
 
-    public Output<String> getElasticLoadBalancer() {
+    public Output<String> elasticLoadBalancer() {
         return this.elasticLoadBalancer == null ? Codegen.empty() : this.elasticLoadBalancer;
     }
 
@@ -191,7 +191,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="installUpdatesOnBoot")
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
-    public Output<Boolean> getInstallUpdatesOnBoot() {
+    public Output<Boolean> installUpdatesOnBoot() {
         return this.installUpdatesOnBoot == null ? Codegen.empty() : this.installUpdatesOnBoot;
     }
 
@@ -202,7 +202,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceShutdownTimeout")
       private final @Nullable Output<Integer> instanceShutdownTimeout;
 
-    public Output<Integer> getInstanceShutdownTimeout() {
+    public Output<Integer> instanceShutdownTimeout() {
         return this.instanceShutdownTimeout == null ? Codegen.empty() : this.instanceShutdownTimeout;
     }
 
@@ -213,7 +213,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manageBundler")
       private final @Nullable Output<Boolean> manageBundler;
 
-    public Output<Boolean> getManageBundler() {
+    public Output<Boolean> manageBundler() {
         return this.manageBundler == null ? Codegen.empty() : this.manageBundler;
     }
 
@@ -224,7 +224,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -235,7 +235,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passengerVersion")
       private final @Nullable Output<String> passengerVersion;
 
-    public Output<String> getPassengerVersion() {
+    public Output<String> passengerVersion() {
         return this.passengerVersion == null ? Codegen.empty() : this.passengerVersion;
     }
 
@@ -246,7 +246,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rubyVersion")
       private final @Nullable Output<String> rubyVersion;
 
-    public Output<String> getRubyVersion() {
+    public Output<String> rubyVersion() {
         return this.rubyVersion == null ? Codegen.empty() : this.rubyVersion;
     }
 
@@ -257,7 +257,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rubygemsVersion")
       private final @Nullable Output<String> rubygemsVersion;
 
-    public Output<String> getRubygemsVersion() {
+    public Output<String> rubygemsVersion() {
         return this.rubygemsVersion == null ? Codegen.empty() : this.rubygemsVersion;
     }
 
@@ -268,7 +268,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 
@@ -279,7 +279,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemPackages")
       private final @Nullable Output<List<String>> systemPackages;
 
-    public Output<List<String>> getSystemPackages() {
+    public Output<List<String>> systemPackages() {
         return this.systemPackages == null ? Codegen.empty() : this.systemPackages;
     }
 
@@ -290,7 +290,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -301,7 +301,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useEbsOptimizedInstances")
       private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
-    public Output<Boolean> getUseEbsOptimizedInstances() {
+    public Output<Boolean> useEbsOptimizedInstances() {
         return this.useEbsOptimizedInstances == null ? Codegen.empty() : this.useEbsOptimizedInstances;
     }
 

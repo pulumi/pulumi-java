@@ -57,7 +57,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
      * * PUT Bucket calls fail if the request includes a public ACL.
      * 
     */
-    public Optional<Boolean> getBlockPublicAcls() {
+    public Optional<Boolean> blockPublicAcls() {
         return Optional.ofNullable(this.blockPublicAcls);
     }
     /**
@@ -65,7 +65,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
     */
-    public Optional<Boolean> getBlockPublicPolicy() {
+    public Optional<Boolean> blockPublicPolicy() {
         return Optional.ofNullable(this.blockPublicPolicy);
     }
     /**
@@ -73,7 +73,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
     */
-    public Optional<Boolean> getIgnorePublicAcls() {
+    public Optional<Boolean> ignorePublicAcls() {
         return Optional.ofNullable(this.ignorePublicAcls);
     }
     /**
@@ -81,7 +81,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
     */
-    public Optional<Boolean> getRestrictPublicBuckets() {
+    public Optional<Boolean> restrictPublicBuckets() {
         return Optional.ofNullable(this.restrictPublicBuckets);
     }
 

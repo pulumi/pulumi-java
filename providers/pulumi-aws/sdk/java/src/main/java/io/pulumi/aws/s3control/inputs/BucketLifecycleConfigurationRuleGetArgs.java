@@ -25,7 +25,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> getAbortIncompleteMultipartUpload() {
+    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
@@ -36,7 +36,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     @Import(name="expiration")
       private final @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
 
-    public Output<BucketLifecycleConfigurationRuleExpirationGetArgs> getExpiration() {
+    public Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -47,7 +47,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     @Import(name="filter")
       private final @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
 
-    public Output<BucketLifecycleConfigurationRuleFilterGetArgs> getFilter() {
+    public Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -58,7 +58,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -69,7 +69,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

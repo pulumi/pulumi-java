@@ -22,7 +22,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     @Import(name="changeComputeType")
       private final @Nullable Output<Boolean> changeComputeType;
 
-    public Output<Boolean> getChangeComputeType() {
+    public Output<Boolean> changeComputeType() {
         return this.changeComputeType == null ? Codegen.empty() : this.changeComputeType;
     }
 
@@ -33,7 +33,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     @Import(name="increaseVolumeSize")
       private final @Nullable Output<Boolean> increaseVolumeSize;
 
-    public Output<Boolean> getIncreaseVolumeSize() {
+    public Output<Boolean> increaseVolumeSize() {
         return this.increaseVolumeSize == null ? Codegen.empty() : this.increaseVolumeSize;
     }
 
@@ -44,7 +44,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     @Import(name="rebuildWorkspace")
       private final @Nullable Output<Boolean> rebuildWorkspace;
 
-    public Output<Boolean> getRebuildWorkspace() {
+    public Output<Boolean> rebuildWorkspace() {
         return this.rebuildWorkspace == null ? Codegen.empty() : this.rebuildWorkspace;
     }
 
@@ -55,7 +55,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     @Import(name="restartWorkspace")
       private final @Nullable Output<Boolean> restartWorkspace;
 
-    public Output<Boolean> getRestartWorkspace() {
+    public Output<Boolean> restartWorkspace() {
         return this.restartWorkspace == null ? Codegen.empty() : this.restartWorkspace;
     }
 
@@ -66,7 +66,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
     @Import(name="switchRunningMode")
       private final @Nullable Output<Boolean> switchRunningMode;
 
-    public Output<Boolean> getSwitchRunningMode() {
+    public Output<Boolean> switchRunningMode() {
         return this.switchRunningMode == null ? Codegen.empty() : this.switchRunningMode;
     }
 

@@ -21,7 +21,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -32,7 +32,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

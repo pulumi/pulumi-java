@@ -23,7 +23,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -34,7 +34,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

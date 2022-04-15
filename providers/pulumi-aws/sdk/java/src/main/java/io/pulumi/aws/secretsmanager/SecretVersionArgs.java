@@ -23,7 +23,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretBinary")
       private final @Nullable Output<String> secretBinary;
 
-    public Output<String> getSecretBinary() {
+    public Output<String> secretBinary() {
         return this.secretBinary == null ? Codegen.empty() : this.secretBinary;
     }
 
@@ -34,7 +34,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -45,7 +45,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretString")
       private final @Nullable Output<String> secretString;
 
-    public Output<String> getSecretString() {
+    public Output<String> secretString() {
         return this.secretString == null ? Codegen.empty() : this.secretString;
     }
 
@@ -56,7 +56,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionStages")
       private final @Nullable Output<List<String>> versionStages;
 
-    public Output<List<String>> getVersionStages() {
+    public Output<List<String>> versionStages() {
         return this.versionStages == null ? Codegen.empty() : this.versionStages;
     }
 

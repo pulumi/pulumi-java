@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
      * 
     */
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer getSerializer() {
+    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer serializer() {
         return this.serializer;
     }
 

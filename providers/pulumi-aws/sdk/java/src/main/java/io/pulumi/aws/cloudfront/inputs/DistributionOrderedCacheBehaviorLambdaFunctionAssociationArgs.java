@@ -24,7 +24,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs
     @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
-    public Output<Boolean> getIncludeBody() {
+    public Output<Boolean> includeBody() {
         return this.includeBody == null ? Codegen.empty() : this.includeBody;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
-    public Output<String> getLambdaArn() {
+    public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
 

@@ -21,7 +21,7 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     @Import(name="bucket", required=true)
       private final Output<InventoryDestinationBucketArgs> bucket;
 
-    public Output<InventoryDestinationBucketArgs> getBucket() {
+    public Output<InventoryDestinationBucketArgs> bucket() {
         return this.bucket;
     }
 

@@ -25,7 +25,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
-    public Output<String> getInputParameters() {
+    public Output<String> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -47,7 +47,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
+    public Output<String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
@@ -58,7 +58,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<RuleScopeArgs> scope;
 
-    public Output<RuleScopeArgs> getScope() {
+    public Output<RuleScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -80,7 +80,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<RuleSourceArgs> source;
 
-    public Output<RuleSourceArgs> getSource() {
+    public Output<RuleSourceArgs> source() {
         return this.source;
     }
 
@@ -91,7 +91,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

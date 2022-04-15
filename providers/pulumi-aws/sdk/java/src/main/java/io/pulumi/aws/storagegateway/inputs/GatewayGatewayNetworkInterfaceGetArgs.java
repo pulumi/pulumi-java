@@ -22,7 +22,7 @@ public final class GatewayGatewayNetworkInterfaceGetArgs extends io.pulumi.resou
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 

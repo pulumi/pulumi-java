@@ -22,7 +22,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -33,7 +33,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -66,7 +66,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 

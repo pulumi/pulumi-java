@@ -22,7 +22,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs
     @Import(name="frameOption", required=true)
       private final Output<String> frameOption;
 
-    public Output<String> getFrameOption() {
+    public Output<String> frameOption() {
         return this.frameOption;
     }
 
@@ -33,7 +33,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 

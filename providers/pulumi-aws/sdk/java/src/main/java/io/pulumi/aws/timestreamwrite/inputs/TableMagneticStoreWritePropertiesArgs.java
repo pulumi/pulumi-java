@@ -23,7 +23,7 @@ public final class TableMagneticStoreWritePropertiesArgs extends io.pulumi.resou
     @Import(name="enableMagneticStoreWrites")
       private final @Nullable Output<Boolean> enableMagneticStoreWrites;
 
-    public Output<Boolean> getEnableMagneticStoreWrites() {
+    public Output<Boolean> enableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites == null ? Codegen.empty() : this.enableMagneticStoreWrites;
     }
 
@@ -34,7 +34,7 @@ public final class TableMagneticStoreWritePropertiesArgs extends io.pulumi.resou
     @Import(name="magneticStoreRejectedDataLocation")
       private final @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> magneticStoreRejectedDataLocation;
 
-    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> getMagneticStoreRejectedDataLocation() {
+    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> magneticStoreRejectedDataLocation() {
         return this.magneticStoreRejectedDataLocation == null ? Codegen.empty() : this.magneticStoreRejectedDataLocation;
     }
 

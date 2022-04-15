@@ -24,7 +24,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
-    public Output<String> getProjectDescription() {
+    public Output<String> projectDescription() {
         return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
     }
 
@@ -46,7 +46,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
@@ -68,7 +68,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails")
       private final @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
 
-    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> getServiceCatalogProvisioningDetails() {
+    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails == null ? Codegen.empty() : this.serviceCatalogProvisioningDetails;
     }
 
@@ -79,7 +79,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

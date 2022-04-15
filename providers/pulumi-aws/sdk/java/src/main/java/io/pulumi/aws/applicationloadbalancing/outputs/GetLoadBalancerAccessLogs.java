@@ -24,13 +24,13 @@ public final class GetLoadBalancerAccessLogs {
         this.prefix = prefix;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 

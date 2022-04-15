@@ -41,7 +41,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A description of the subnet group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -55,7 +55,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the subnet group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A list of VPC subnet IDs for the subnet group.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -83,7 +83,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return VPC ID of the subnet group.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

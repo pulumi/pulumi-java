@@ -21,7 +21,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceAlias")
       private final @Nullable String instanceAlias;
 
-    public Optional<String> getInstanceAlias() {
+    public Optional<String> instanceAlias() {
         return this.instanceAlias == null ? Optional.empty() : Optional.ofNullable(this.instanceAlias);
     }
 
@@ -32,7 +32,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId")
       private final @Nullable String instanceId;
 
-    public Optional<String> getInstanceId() {
+    public Optional<String> instanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
     }
 

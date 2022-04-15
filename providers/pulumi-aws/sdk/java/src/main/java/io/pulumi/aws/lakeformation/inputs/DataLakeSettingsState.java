@@ -25,7 +25,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
     @Import(name="admins")
       private final @Nullable Output<List<String>> admins;
 
-    public Output<List<String>> getAdmins() {
+    public Output<List<String>> admins() {
         return this.admins == null ? Codegen.empty() : this.admins;
     }
 
@@ -36,7 +36,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -47,7 +47,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
     @Import(name="createDatabaseDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> getCreateDatabaseDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions() {
         return this.createDatabaseDefaultPermissions == null ? Codegen.empty() : this.createDatabaseDefaultPermissions;
     }
 
@@ -58,7 +58,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
     @Import(name="createTableDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
 
-    public Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> getCreateTableDefaultPermissions() {
+    public Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions() {
         return this.createTableDefaultPermissions == null ? Codegen.empty() : this.createTableDefaultPermissions;
     }
 
@@ -69,7 +69,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
     @Import(name="trustedResourceOwners")
       private final @Nullable Output<List<String>> trustedResourceOwners;
 
-    public Output<List<String>> getTrustedResourceOwners() {
+    public Output<List<String>> trustedResourceOwners() {
         return this.trustedResourceOwners == null ? Codegen.empty() : this.trustedResourceOwners;
     }
 

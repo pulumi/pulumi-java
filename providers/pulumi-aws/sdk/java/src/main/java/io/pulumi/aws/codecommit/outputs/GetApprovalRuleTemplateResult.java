@@ -77,59 +77,59 @@ public final class GetApprovalRuleTemplateResult {
      * The ID of the approval rule template.
      * 
     */
-    public String getApprovalRuleTemplateId() {
+    public String approvalRuleTemplateId() {
         return this.approvalRuleTemplateId;
     }
     /**
      * The content of the approval rule template.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The description of the approval rule template.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public String getLastModifiedDate() {
+    public String lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
      * 
     */
-    public String getLastModifiedUser() {
+    public String lastModifiedUser() {
         return this.lastModifiedUser;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SHA-256 hash signature for the content of the approval rule template.
      * 
     */
-    public String getRuleContentSha256() {
+    public String ruleContentSha256() {
         return this.ruleContentSha256;
     }
 

@@ -23,7 +23,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="cloudwatchLogsRoleArn", required=true)
       private final Output<String> cloudwatchLogsRoleArn;
 
-    public Output<String> getCloudwatchLogsRoleArn() {
+    public Output<String> cloudwatchLogsRoleArn() {
         return this.cloudwatchLogsRoleArn;
     }
 
@@ -34,7 +34,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="excludeVerboseContent")
       private final @Nullable Output<Boolean> excludeVerboseContent;
 
-    public Output<Boolean> getExcludeVerboseContent() {
+    public Output<Boolean> excludeVerboseContent() {
         return this.excludeVerboseContent == null ? Codegen.empty() : this.excludeVerboseContent;
     }
 
@@ -45,7 +45,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="fieldLogLevel", required=true)
       private final Output<String> fieldLogLevel;
 
-    public Output<String> getFieldLogLevel() {
+    public Output<String> fieldLogLevel() {
         return this.fieldLogLevel;
     }
 

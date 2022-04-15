@@ -22,7 +22,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -33,7 +33,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="domainOwner")
       private final @Nullable String domainOwner;
 
-    public Optional<String> getDomainOwner() {
+    public Optional<String> domainOwner() {
         return this.domainOwner == null ? Optional.empty() : Optional.ofNullable(this.domainOwner);
     }
 
@@ -44,7 +44,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
-    public Optional<Integer> getDurationSeconds() {
+    public Optional<Integer> durationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 

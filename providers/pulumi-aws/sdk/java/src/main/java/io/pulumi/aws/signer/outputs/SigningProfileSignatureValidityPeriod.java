@@ -21,10 +21,10 @@ public final class SigningProfileSignatureValidityPeriod {
         this.value = value;
     }
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

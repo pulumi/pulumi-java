@@ -45,7 +45,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return The name of the source bucket that inventory lists the objects for.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -59,7 +59,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Contains information about where to publish the inventory results (documented below).
      * 
      */
-    public Output<InventoryDestination> getDestination() {
+    public Output<InventoryDestination> destination() {
         return this.destination;
     }
     /**
@@ -73,7 +73,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the inventory is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -87,7 +87,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    public Output</* @Nullable */ InventoryFilter> getFilter() {
+    public Output</* @Nullable */ InventoryFilter> filter() {
         return this.filter;
     }
     /**
@@ -101,7 +101,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Object versions to include in the inventory list. Valid values: `All`, `Current`.
      * 
      */
-    public Output<String> getIncludedObjectVersions() {
+    public Output<String> includedObjectVersions() {
         return this.includedObjectVersions;
     }
     /**
@@ -115,7 +115,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the inventory configuration for the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return List of optional fields that are included in the inventory results. Please refer to the S3 [documentation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_InventoryConfiguration.html#AmazonS3-Type-InventoryConfiguration-OptionalFields) for more details.
      * 
      */
-    public Output</* @Nullable */ List<String>> getOptionalFields() {
+    public Output</* @Nullable */ List<String>> optionalFields() {
         return this.optionalFields;
     }
     /**
@@ -143,7 +143,7 @@ public class Inventory extends io.pulumi.resources.CustomResource {
      * @return Specifies the schedule for generating inventory results (documented below).
      * 
      */
-    public Output<InventorySchedule> getSchedule() {
+    public Output<InventorySchedule> schedule() {
         return this.schedule;
     }
 

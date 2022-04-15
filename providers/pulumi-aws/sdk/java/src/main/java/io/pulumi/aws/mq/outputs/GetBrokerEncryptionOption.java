@@ -21,10 +21,10 @@ public final class GetBrokerEncryptionOption {
         this.useAwsOwnedKey = useAwsOwnedKey;
     }
 
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public Boolean getUseAwsOwnedKey() {
+    public Boolean useAwsOwnedKey() {
         return this.useAwsOwnedKey;
     }
 

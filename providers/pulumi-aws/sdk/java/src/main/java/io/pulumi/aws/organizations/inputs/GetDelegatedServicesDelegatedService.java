@@ -19,7 +19,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
     @Import(name="delegationEnabledDate", required=true)
       private final String delegationEnabledDate;
 
-    public String getDelegationEnabledDate() {
+    public String delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
 
@@ -30,7 +30,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
     @Import(name="servicePrincipal", required=true)
       private final String servicePrincipal;
 
-    public String getServicePrincipal() {
+    public String servicePrincipal() {
         return this.servicePrincipal;
     }
 

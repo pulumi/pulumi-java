@@ -23,7 +23,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
     @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
 
@@ -34,7 +34,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
     @Import(name="dnsRecord")
       private final @Nullable Output<String> dnsRecord;
 
-    public Output<String> getDnsRecord() {
+    public Output<String> dnsRecord() {
         return this.dnsRecord == null ? Codegen.empty() : this.dnsRecord;
     }
 
@@ -45,7 +45,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 
@@ -56,7 +56,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
     @Import(name="verified")
       private final @Nullable Output<Boolean> verified;
 
-    public Output<Boolean> getVerified() {
+    public Output<Boolean> verified() {
         return this.verified == null ? Codegen.empty() : this.verified;
     }
 

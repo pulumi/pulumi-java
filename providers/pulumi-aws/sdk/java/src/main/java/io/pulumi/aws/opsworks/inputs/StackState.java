@@ -26,14 +26,14 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -44,7 +44,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="berkshelfVersion")
       private final @Nullable Output<String> berkshelfVersion;
 
-    public Output<String> getBerkshelfVersion() {
+    public Output<String> berkshelfVersion() {
         return this.berkshelfVersion == null ? Codegen.empty() : this.berkshelfVersion;
     }
 
@@ -55,7 +55,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="color")
       private final @Nullable Output<String> color;
 
-    public Output<String> getColor() {
+    public Output<String> color() {
         return this.color == null ? Codegen.empty() : this.color;
     }
 
@@ -66,7 +66,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerName")
       private final @Nullable Output<String> configurationManagerName;
 
-    public Output<String> getConfigurationManagerName() {
+    public Output<String> configurationManagerName() {
         return this.configurationManagerName == null ? Codegen.empty() : this.configurationManagerName;
     }
 
@@ -77,7 +77,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerVersion")
       private final @Nullable Output<String> configurationManagerVersion;
 
-    public Output<String> getConfigurationManagerVersion() {
+    public Output<String> configurationManagerVersion() {
         return this.configurationManagerVersion == null ? Codegen.empty() : this.configurationManagerVersion;
     }
 
@@ -89,7 +89,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customCookbooksSources")
       private final @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
 
-    public Output<List<StackCustomCookbooksSourceGetArgs>> getCustomCookbooksSources() {
+    public Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources() {
         return this.customCookbooksSources == null ? Codegen.empty() : this.customCookbooksSources;
     }
 
@@ -100,7 +100,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
-    public Output<String> getCustomJson() {
+    public Output<String> customJson() {
         return this.customJson == null ? Codegen.empty() : this.customJson;
     }
 
@@ -112,7 +112,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAvailabilityZone")
       private final @Nullable Output<String> defaultAvailabilityZone;
 
-    public Output<String> getDefaultAvailabilityZone() {
+    public Output<String> defaultAvailabilityZone() {
         return this.defaultAvailabilityZone == null ? Codegen.empty() : this.defaultAvailabilityZone;
     }
 
@@ -124,7 +124,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultInstanceProfileArn")
       private final @Nullable Output<String> defaultInstanceProfileArn;
 
-    public Output<String> getDefaultInstanceProfileArn() {
+    public Output<String> defaultInstanceProfileArn() {
         return this.defaultInstanceProfileArn == null ? Codegen.empty() : this.defaultInstanceProfileArn;
     }
 
@@ -135,7 +135,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultOs")
       private final @Nullable Output<String> defaultOs;
 
-    public Output<String> getDefaultOs() {
+    public Output<String> defaultOs() {
         return this.defaultOs == null ? Codegen.empty() : this.defaultOs;
     }
 
@@ -146,7 +146,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRootDeviceType")
       private final @Nullable Output<String> defaultRootDeviceType;
 
-    public Output<String> getDefaultRootDeviceType() {
+    public Output<String> defaultRootDeviceType() {
         return this.defaultRootDeviceType == null ? Codegen.empty() : this.defaultRootDeviceType;
     }
 
@@ -157,7 +157,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSshKeyName")
       private final @Nullable Output<String> defaultSshKeyName;
 
-    public Output<String> getDefaultSshKeyName() {
+    public Output<String> defaultSshKeyName() {
         return this.defaultSshKeyName == null ? Codegen.empty() : this.defaultSshKeyName;
     }
 
@@ -169,7 +169,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSubnetId")
       private final @Nullable Output<String> defaultSubnetId;
 
-    public Output<String> getDefaultSubnetId() {
+    public Output<String> defaultSubnetId() {
         return this.defaultSubnetId == null ? Codegen.empty() : this.defaultSubnetId;
     }
 
@@ -181,7 +181,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnameTheme")
       private final @Nullable Output<String> hostnameTheme;
 
-    public Output<String> getHostnameTheme() {
+    public Output<String> hostnameTheme() {
         return this.hostnameTheme == null ? Codegen.empty() : this.hostnameTheme;
     }
 
@@ -192,7 +192,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="manageBerkshelf")
       private final @Nullable Output<Boolean> manageBerkshelf;
 
-    public Output<Boolean> getManageBerkshelf() {
+    public Output<Boolean> manageBerkshelf() {
         return this.manageBerkshelf == null ? Codegen.empty() : this.manageBerkshelf;
     }
 
@@ -203,7 +203,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -214,7 +214,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -225,14 +225,14 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
     @Import(name="stackEndpoint")
       private final @Nullable Output<String> stackEndpoint;
 
-    public Output<String> getStackEndpoint() {
+    public Output<String> stackEndpoint() {
         return this.stackEndpoint == null ? Codegen.empty() : this.stackEndpoint;
     }
 
@@ -243,7 +243,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -254,7 +254,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -266,7 +266,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="useCustomCookbooks")
       private final @Nullable Output<Boolean> useCustomCookbooks;
 
-    public Output<Boolean> getUseCustomCookbooks() {
+    public Output<Boolean> useCustomCookbooks() {
         return this.useCustomCookbooks == null ? Codegen.empty() : this.useCustomCookbooks;
     }
 
@@ -278,7 +278,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="useOpsworksSecurityGroups")
       private final @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
-    public Output<Boolean> getUseOpsworksSecurityGroups() {
+    public Output<Boolean> useOpsworksSecurityGroups() {
         return this.useOpsworksSecurityGroups == null ? Codegen.empty() : this.useOpsworksSecurityGroups;
     }
 
@@ -289,7 +289,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

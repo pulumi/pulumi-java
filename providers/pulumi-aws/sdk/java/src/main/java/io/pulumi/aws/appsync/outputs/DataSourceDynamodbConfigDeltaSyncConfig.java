@@ -26,13 +26,13 @@ public final class DataSourceDynamodbConfigDeltaSyncConfig {
         this.deltaSyncTableTtl = deltaSyncTableTtl;
     }
 
-    public Optional<Integer> getBaseTableTtl() {
+    public Optional<Integer> baseTableTtl() {
         return Optional.ofNullable(this.baseTableTtl);
     }
-    public String getDeltaSyncTableName() {
+    public String deltaSyncTableName() {
         return this.deltaSyncTableName;
     }
-    public Optional<Integer> getDeltaSyncTableTtl() {
+    public Optional<Integer> deltaSyncTableTtl() {
         return Optional.ofNullable(this.deltaSyncTableTtl);
     }
 

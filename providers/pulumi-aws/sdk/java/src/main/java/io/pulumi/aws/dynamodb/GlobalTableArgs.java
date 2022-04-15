@@ -24,7 +24,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaArgs>> replicas() {
         return this.replicas;
     }
 

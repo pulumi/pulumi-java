@@ -35,14 +35,14 @@ public final class InstanceFleetLaunchSpecifications {
      * Configuration block for on demand instances launch specifications
      * 
     */
-    public List<InstanceFleetLaunchSpecificationsOnDemandSpecification> getOnDemandSpecifications() {
+    public List<InstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? List.of() : this.onDemandSpecifications;
     }
     /**
      * Configuration block for spot instances launch specifications
      * 
     */
-    public List<InstanceFleetLaunchSpecificationsSpotSpecification> getSpotSpecifications() {
+    public List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications() {
         return this.spotSpecifications == null ? List.of() : this.spotSpecifications;
     }
 

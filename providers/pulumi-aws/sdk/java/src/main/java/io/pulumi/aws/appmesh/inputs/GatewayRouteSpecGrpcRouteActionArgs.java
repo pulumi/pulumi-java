@@ -21,7 +21,7 @@ public final class GatewayRouteSpecGrpcRouteActionArgs extends io.pulumi.resourc
     @Import(name="target", required=true)
       private final Output<GatewayRouteSpecGrpcRouteActionTargetArgs> target;
 
-    public Output<GatewayRouteSpecGrpcRouteActionTargetArgs> getTarget() {
+    public Output<GatewayRouteSpecGrpcRouteActionTargetArgs> target() {
         return this.target;
     }
 

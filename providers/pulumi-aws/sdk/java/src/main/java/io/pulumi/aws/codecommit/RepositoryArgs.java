@@ -23,7 +23,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultBranch")
       private final @Nullable Output<String> defaultBranch;
 
-    public Output<String> getDefaultBranch() {
+    public Output<String> defaultBranch() {
         return this.defaultBranch == null ? Codegen.empty() : this.defaultBranch;
     }
 
@@ -34,7 +34,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -56,7 +56,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

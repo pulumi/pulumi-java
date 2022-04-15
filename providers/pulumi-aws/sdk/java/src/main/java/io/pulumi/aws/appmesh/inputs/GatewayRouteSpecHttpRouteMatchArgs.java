@@ -21,7 +21,7 @@ public final class GatewayRouteSpecHttpRouteMatchArgs extends io.pulumi.resource
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 

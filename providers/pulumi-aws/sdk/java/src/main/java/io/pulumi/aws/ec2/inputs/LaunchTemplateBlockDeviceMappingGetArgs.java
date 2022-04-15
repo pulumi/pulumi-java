@@ -23,7 +23,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     @Import(name="ebs")
       private final @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
 
-    public Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> getEbs() {
+    public Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs() {
         return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
@@ -45,7 +45,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
-    public Output<String> getNoDevice() {
+    public Output<String> noDevice() {
         return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
@@ -58,7 +58,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 

@@ -40,7 +40,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * @return The detector ID of the member GuardDuty account.
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
     /**
@@ -54,7 +54,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * @return AWS account ID for primary account.
      * 
      */
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId;
     }
 

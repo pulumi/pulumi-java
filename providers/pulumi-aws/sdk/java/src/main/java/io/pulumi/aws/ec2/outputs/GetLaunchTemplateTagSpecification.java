@@ -25,14 +25,14 @@ public final class GetLaunchTemplateTagSpecification {
         this.tags = tags;
     }
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

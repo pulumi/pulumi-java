@@ -22,7 +22,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn == null ? Codegen.empty() : this.graphArn;
     }
 

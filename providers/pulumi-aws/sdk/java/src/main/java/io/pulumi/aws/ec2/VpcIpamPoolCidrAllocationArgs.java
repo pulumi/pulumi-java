@@ -24,7 +24,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
@@ -35,7 +35,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
-    public Output<List<String>> getDisallowedCidrs() {
+    public Output<List<String>> disallowedCidrs() {
         return this.disallowedCidrs == null ? Codegen.empty() : this.disallowedCidrs;
     }
 
@@ -57,7 +57,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -68,7 +68,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
     @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> getNetmaskLength() {
+    public Output<Integer> netmaskLength() {
         return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 

@@ -24,7 +24,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -35,7 +35,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="privateZone")
       private final @Nullable Boolean privateZone;
 
-    public Optional<Boolean> getPrivateZone() {
+    public Optional<Boolean> privateZone() {
         return this.privateZone == null ? Optional.empty() : Optional.ofNullable(this.privateZone);
     }
 
@@ -46,7 +46,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceRecordSetCount")
       private final @Nullable Integer resourceRecordSetCount;
 
-    public Optional<Integer> getResourceRecordSetCount() {
+    public Optional<Integer> resourceRecordSetCount() {
         return this.resourceRecordSetCount == null ? Optional.empty() : Optional.ofNullable(this.resourceRecordSetCount);
     }
 
@@ -57,7 +57,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
       private final @Nullable String vpcId;
 
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
     }
 
@@ -79,7 +79,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="zoneId")
       private final @Nullable String zoneId;
 
-    public Optional<String> getZoneId() {
+    public Optional<String> zoneId() {
         return this.zoneId == null ? Optional.empty() : Optional.ofNullable(this.zoneId);
     }
 

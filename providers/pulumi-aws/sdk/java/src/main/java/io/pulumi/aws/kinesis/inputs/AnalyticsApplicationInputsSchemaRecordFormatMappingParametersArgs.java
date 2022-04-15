@@ -24,7 +24,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     @Import(name="csv")
       private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs> csv;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs> getCsv() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs> csv() {
         return this.csv == null ? Codegen.empty() : this.csv;
     }
 
@@ -36,7 +36,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     @Import(name="json")
       private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs> json;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs> getJson() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs> json() {
         return this.json == null ? Codegen.empty() : this.json;
     }
 

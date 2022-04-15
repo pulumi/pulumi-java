@@ -35,14 +35,14 @@ public final class VirtualServiceSpecProvider {
      * The virtual node associated with a virtual service.
      * 
     */
-    public Optional<VirtualServiceSpecProviderVirtualNode> getVirtualNode() {
+    public Optional<VirtualServiceSpecProviderVirtualNode> virtualNode() {
         return Optional.ofNullable(this.virtualNode);
     }
     /**
      * The virtual router associated with a virtual service.
      * 
     */
-    public Optional<VirtualServiceSpecProviderVirtualRouter> getVirtualRouter() {
+    public Optional<VirtualServiceSpecProviderVirtualRouter> virtualRouter() {
         return Optional.ofNullable(this.virtualRouter);
     }
 

@@ -23,7 +23,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
-    public Output<String> getEventPattern() {
+    public Output<String> eventPattern() {
         return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
@@ -45,7 +45,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventSourceArn", required=true)
       private final Output<String> eventSourceArn;
 
-    public Output<String> getEventSourceArn() {
+    public Output<String> eventSourceArn() {
         return this.eventSourceArn;
     }
 
@@ -56,7 +56,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 

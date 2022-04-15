@@ -41,7 +41,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * @return The JSON policy for the SQS queue.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -55,7 +55,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * @return The URL of the SQS Queue to which to attach the policy
      * 
      */
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 

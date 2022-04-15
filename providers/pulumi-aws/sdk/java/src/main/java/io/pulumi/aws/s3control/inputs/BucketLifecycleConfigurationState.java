@@ -24,7 +24,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     @Import(name="rules")
       private final @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
-    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {
+    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

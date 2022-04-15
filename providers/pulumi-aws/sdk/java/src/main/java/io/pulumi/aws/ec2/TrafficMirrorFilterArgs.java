@@ -24,7 +24,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="networkServices")
       private final @Nullable Output<List<String>> networkServices;
 
-    public Output<List<String>> getNetworkServices() {
+    public Output<List<String>> networkServices() {
         return this.networkServices == null ? Codegen.empty() : this.networkServices;
     }
 
@@ -46,7 +46,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -44,21 +44,21 @@ public final class RuleGroupRuleActionBlockCustomResponse {
      * References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
      * 
     */
-    public Optional<String> getCustomResponseBodyKey() {
+    public Optional<String> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
     /**
      * The HTTP status code to return to the client.
      * 
     */
-    public Integer getResponseCode() {
+    public Integer responseCode() {
         return this.responseCode;
     }
     /**
      * The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
      * 
     */
-    public List<RuleGroupRuleActionBlockCustomResponseResponseHeader> getResponseHeaders() {
+    public List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
     }
 

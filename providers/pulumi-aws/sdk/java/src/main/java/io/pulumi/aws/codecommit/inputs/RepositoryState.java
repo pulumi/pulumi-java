@@ -23,7 +23,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloneUrlHttp")
       private final @Nullable Output<String> cloneUrlHttp;
 
-    public Output<String> getCloneUrlHttp() {
+    public Output<String> cloneUrlHttp() {
         return this.cloneUrlHttp == null ? Codegen.empty() : this.cloneUrlHttp;
     }
 
@@ -45,7 +45,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloneUrlSsh")
       private final @Nullable Output<String> cloneUrlSsh;
 
-    public Output<String> getCloneUrlSsh() {
+    public Output<String> cloneUrlSsh() {
         return this.cloneUrlSsh == null ? Codegen.empty() : this.cloneUrlSsh;
     }
 
@@ -56,7 +56,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultBranch")
       private final @Nullable Output<String> defaultBranch;
 
-    public Output<String> getDefaultBranch() {
+    public Output<String> defaultBranch() {
         return this.defaultBranch == null ? Codegen.empty() : this.defaultBranch;
     }
 
@@ -67,7 +67,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
-    public Output<String> getRepositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
     }
 
@@ -89,7 +89,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -100,7 +100,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -111,7 +111,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

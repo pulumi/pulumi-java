@@ -23,7 +23,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
@@ -34,7 +34,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<TagTagGetArgs> tag;
 
-    public Output<TagTagGetArgs> getTag() {
+    public Output<TagTagGetArgs> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

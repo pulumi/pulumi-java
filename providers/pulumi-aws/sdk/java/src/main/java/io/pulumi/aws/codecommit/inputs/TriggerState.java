@@ -24,7 +24,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
 
-    public Output<String> getConfigurationId() {
+    public Output<String> configurationId() {
         return this.configurationId == null ? Codegen.empty() : this.configurationId;
     }
 
@@ -35,14 +35,14 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
 
-    public Output<List<TriggerTriggerGetArgs>> getTriggers() {
+    public Output<List<TriggerTriggerGetArgs>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

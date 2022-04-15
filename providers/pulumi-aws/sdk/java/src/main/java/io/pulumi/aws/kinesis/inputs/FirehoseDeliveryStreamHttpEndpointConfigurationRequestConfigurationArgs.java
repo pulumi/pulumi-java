@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="commonAttributes")
       private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
 
-    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> getCommonAttributes() {
+    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes() {
         return this.commonAttributes == null ? Codegen.empty() : this.commonAttributes;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 

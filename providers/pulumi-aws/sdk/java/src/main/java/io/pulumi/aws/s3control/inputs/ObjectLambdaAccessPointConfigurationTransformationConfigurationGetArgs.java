@@ -23,7 +23,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
@@ -34,7 +34,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="contentTransformation", required=true)
       private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation;
 
-    public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> getContentTransformation() {
+    public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs> contentTransformation() {
         return this.contentTransformation;
     }
 

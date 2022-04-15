@@ -56,7 +56,7 @@ public final class DistributionCustomErrorResponse {
      * origin to see whether the object has been updated.
      * 
     */
-    public Optional<Integer> getErrorCachingMinTtl() {
+    public Optional<Integer> errorCachingMinTtl() {
         return Optional.ofNullable(this.errorCachingMinTtl);
     }
     /**
@@ -64,7 +64,7 @@ public final class DistributionCustomErrorResponse {
      * customize.
      * 
     */
-    public Integer getErrorCode() {
+    public Integer errorCode() {
         return this.errorCode;
     }
     /**
@@ -72,7 +72,7 @@ public final class DistributionCustomErrorResponse {
      * to return with the custom error page to the viewer.
      * 
     */
-    public Optional<Integer> getResponseCode() {
+    public Optional<Integer> responseCode() {
         return Optional.ofNullable(this.responseCode);
     }
     /**
@@ -80,7 +80,7 @@ public final class DistributionCustomErrorResponse {
      * example, `/custom_404.html`).
      * 
     */
-    public Optional<String> getResponsePagePath() {
+    public Optional<String> responsePagePath() {
         return Optional.ofNullable(this.responsePagePath);
     }
 

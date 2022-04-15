@@ -19,7 +19,7 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends io.pulumi.
     @Import(name="s3BucketName", required=true)
       private final String s3BucketName;
 
-    public String getS3BucketName() {
+    public String s3BucketName() {
         return this.s3BucketName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends io.pulumi.
     @Import(name="s3KeyPrefix", required=true)
       private final String s3KeyPrefix;
 
-    public String getS3KeyPrefix() {
+    public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
 

@@ -40,7 +40,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return A JSON-formatted resource policy. For more information, see [Sharing a Projec](https://docs.aws.amazon.com/codebuild/latest/userguide/project-sharing.html#project-sharing-share) and [Sharing a Report Group](https://docs.aws.amazon.com/codebuild/latest/userguide/report-groups-sharing.html#report-groups-sharing-share).
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -54,7 +54,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Project or ReportGroup resource you want to associate with a resource policy.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

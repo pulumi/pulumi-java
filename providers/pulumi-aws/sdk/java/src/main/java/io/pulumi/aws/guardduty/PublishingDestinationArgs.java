@@ -22,7 +22,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
@@ -33,7 +33,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
@@ -44,7 +44,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -55,7 +55,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     @Import(name="kmsKeyArn", required=true)
       private final Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
 

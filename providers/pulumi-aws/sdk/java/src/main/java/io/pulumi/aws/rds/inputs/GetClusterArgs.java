@@ -22,14 +22,14 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

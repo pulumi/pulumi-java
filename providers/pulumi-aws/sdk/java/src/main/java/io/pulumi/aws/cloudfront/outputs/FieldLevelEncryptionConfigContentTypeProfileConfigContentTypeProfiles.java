@@ -17,7 +17,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
         this.items = items;
     }
 
-    public List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> getItems() {
+    public List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items() {
         return this.items;
     }
 

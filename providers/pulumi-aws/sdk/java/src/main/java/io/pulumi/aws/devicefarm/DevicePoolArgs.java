@@ -26,7 +26,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDevices")
       private final @Nullable Output<Integer> maxDevices;
 
-    public Output<Integer> getMaxDevices() {
+    public Output<Integer> maxDevices() {
         return this.maxDevices == null ? Codegen.empty() : this.maxDevices;
     }
 
@@ -48,7 +48,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
 
@@ -70,7 +70,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules", required=true)
       private final Output<List<DevicePoolRuleArgs>> rules;
 
-    public Output<List<DevicePoolRuleArgs>> getRules() {
+    public Output<List<DevicePoolRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -81,7 +81,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

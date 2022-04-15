@@ -22,7 +22,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
     @Import(name="approvalRuleTemplateName")
       private final @Nullable Output<String> approvalRuleTemplateName;
 
-    public Output<String> getApprovalRuleTemplateName() {
+    public Output<String> approvalRuleTemplateName() {
         return this.approvalRuleTemplateName == null ? Codegen.empty() : this.approvalRuleTemplateName;
     }
 
@@ -33,7 +33,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 

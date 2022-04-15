@@ -44,7 +44,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The API ID for the GraphQL API.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -58,7 +58,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The ARN
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The CachingConfig.
      * 
      */
-    public Output</* @Nullable */ ResolverCachingConfig> getCachingConfig() {
+    public Output</* @Nullable */ ResolverCachingConfig> cachingConfig() {
         return this.cachingConfig;
     }
     /**
@@ -86,7 +86,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The DataSource name.
      * 
      */
-    public Output</* @Nullable */ String> getDataSource() {
+    public Output</* @Nullable */ String> dataSource() {
         return this.dataSource;
     }
     /**
@@ -100,7 +100,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The field name from the schema defined in the GraphQL API.
      * 
      */
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field;
     }
     /**
@@ -114,7 +114,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The resolver type. Valid values are `UNIT` and `PIPELINE`.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -128,7 +128,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxBatchSize() {
+    public Output</* @Nullable */ Integer> maxBatchSize() {
         return this.maxBatchSize;
     }
     /**
@@ -142,7 +142,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The PipelineConfig.
      * 
      */
-    public Output</* @Nullable */ ResolverPipelineConfig> getPipelineConfig() {
+    public Output</* @Nullable */ ResolverPipelineConfig> pipelineConfig() {
         return this.pipelineConfig;
     }
     /**
@@ -156,7 +156,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    public Output</* @Nullable */ String> getRequestTemplate() {
+    public Output</* @Nullable */ String> requestTemplate() {
         return this.requestTemplate;
     }
     /**
@@ -170,7 +170,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    public Output</* @Nullable */ String> getResponseTemplate() {
+    public Output</* @Nullable */ String> responseTemplate() {
         return this.responseTemplate;
     }
     /**
@@ -184,7 +184,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Output</* @Nullable */ ResolverSyncConfig> getSyncConfig() {
+    public Output</* @Nullable */ ResolverSyncConfig> syncConfig() {
         return this.syncConfig;
     }
     /**
@@ -198,7 +198,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @return The type name from the schema defined in the GraphQL API.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

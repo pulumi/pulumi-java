@@ -18,7 +18,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -29,7 +29,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
@@ -40,7 +40,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -51,7 +51,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="memberName")
       private final @Nullable Output<String> memberName;
 
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName == null ? Codegen.empty() : this.memberName;
     }
 
@@ -62,7 +62,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

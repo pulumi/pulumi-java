@@ -18,7 +18,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     @Import(name="cloudwatchLoggingOptionId")
       private final @Nullable Output<String> cloudwatchLoggingOptionId;
 
-    public Output<String> getCloudwatchLoggingOptionId() {
+    public Output<String> cloudwatchLoggingOptionId() {
         return this.cloudwatchLoggingOptionId == null ? Codegen.empty() : this.cloudwatchLoggingOptionId;
     }
 
@@ -29,7 +29,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
     @Import(name="logStreamArn", required=true)
       private final Output<String> logStreamArn;
 
-    public Output<String> getLogStreamArn() {
+    public Output<String> logStreamArn() {
         return this.logStreamArn;
     }
 

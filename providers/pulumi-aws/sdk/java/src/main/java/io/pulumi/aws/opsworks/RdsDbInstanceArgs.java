@@ -21,7 +21,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbPassword", required=true)
       private final Output<String> dbPassword;
 
-    public Output<String> getDbPassword() {
+    public Output<String> dbPassword() {
         return this.dbPassword;
     }
 
@@ -32,7 +32,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbUser", required=true)
       private final Output<String> dbUser;
 
-    public Output<String> getDbUser() {
+    public Output<String> dbUser() {
         return this.dbUser;
     }
 
@@ -43,7 +43,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rdsDbInstanceArn", required=true)
       private final Output<String> rdsDbInstanceArn;
 
-    public Output<String> getRdsDbInstanceArn() {
+    public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
     }
 
@@ -54,7 +54,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 

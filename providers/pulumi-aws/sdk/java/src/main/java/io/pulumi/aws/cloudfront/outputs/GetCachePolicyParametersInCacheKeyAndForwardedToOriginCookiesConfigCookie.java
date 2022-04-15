@@ -25,7 +25,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * A list of item names (`cookies`, `headers`, or `query_strings`).
      * 
     */
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

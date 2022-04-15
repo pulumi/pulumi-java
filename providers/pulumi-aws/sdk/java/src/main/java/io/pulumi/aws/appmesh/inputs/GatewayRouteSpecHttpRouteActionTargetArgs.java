@@ -21,7 +21,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetArgs extends io.pulumi.r
     @Import(name="virtualService", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> virtualService;
 
-    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> getVirtualService() {
+    public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs> virtualService() {
         return this.virtualService;
     }
 

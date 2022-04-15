@@ -25,7 +25,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatement> getStatements() {
+    public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatement> statements() {
         return this.statements;
     }
 

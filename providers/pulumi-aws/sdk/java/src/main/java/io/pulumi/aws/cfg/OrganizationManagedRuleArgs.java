@@ -23,7 +23,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> getExcludedAccounts() {
+    public Output<List<String>> excludedAccounts() {
         return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
     }
 
@@ -45,7 +45,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
-    public Output<String> getInputParameters() {
+    public Output<String> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -56,7 +56,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
+    public Output<String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
@@ -67,7 +67,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="resourceIdScope")
       private final @Nullable Output<String> resourceIdScope;
 
-    public Output<String> getResourceIdScope() {
+    public Output<String> resourceIdScope() {
         return this.resourceIdScope == null ? Codegen.empty() : this.resourceIdScope;
     }
 
@@ -89,7 +89,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="resourceTypesScopes")
       private final @Nullable Output<List<String>> resourceTypesScopes;
 
-    public Output<List<String>> getResourceTypesScopes() {
+    public Output<List<String>> resourceTypesScopes() {
         return this.resourceTypesScopes == null ? Codegen.empty() : this.resourceTypesScopes;
     }
 
@@ -100,7 +100,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="ruleIdentifier", required=true)
       private final Output<String> ruleIdentifier;
 
-    public Output<String> getRuleIdentifier() {
+    public Output<String> ruleIdentifier() {
         return this.ruleIdentifier;
     }
 
@@ -111,7 +111,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="tagKeyScope")
       private final @Nullable Output<String> tagKeyScope;
 
-    public Output<String> getTagKeyScope() {
+    public Output<String> tagKeyScope() {
         return this.tagKeyScope == null ? Codegen.empty() : this.tagKeyScope;
     }
 
@@ -122,7 +122,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="tagValueScope")
       private final @Nullable Output<String> tagValueScope;
 
-    public Output<String> getTagValueScope() {
+    public Output<String> tagValueScope() {
         return this.tagValueScope == null ? Codegen.empty() : this.tagValueScope;
     }
 

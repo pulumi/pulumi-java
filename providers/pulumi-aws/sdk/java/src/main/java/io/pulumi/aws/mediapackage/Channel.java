@@ -43,7 +43,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The ARN of the channel
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A unique identifier describing the channel
      * 
      */
-    public Output<String> getChannelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
     /**
@@ -71,7 +71,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A description of the channel
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A single item list of HLS ingest information
      * 
      */
-    public Output<List<ChannelHlsIngest>> getHlsIngests() {
+    public Output<List<ChannelHlsIngest>> hlsIngests() {
         return this.hlsIngests;
     }
     /**
@@ -99,7 +99,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

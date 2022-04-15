@@ -21,7 +21,7 @@ public final class EventSourceMappingSourceAccessConfigurationGetArgs extends io
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -32,7 +32,7 @@ public final class EventSourceMappingSourceAccessConfigurationGetArgs extends io
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

@@ -23,7 +23,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
     @Import(name="enableSipLogs")
       private final @Nullable Output<Boolean> enableSipLogs;
 
-    public Output<Boolean> getEnableSipLogs() {
+    public Output<Boolean> enableSipLogs() {
         return this.enableSipLogs == null ? Codegen.empty() : this.enableSipLogs;
     }
 
@@ -34,7 +34,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
     @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

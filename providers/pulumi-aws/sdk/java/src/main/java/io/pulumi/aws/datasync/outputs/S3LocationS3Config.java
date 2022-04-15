@@ -24,7 +24,7 @@ public final class S3LocationS3Config {
      * Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.
      * 
     */
-    public String getBucketAccessRoleArn() {
+    public String bucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
 

@@ -27,7 +27,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeEnvironments", required=true)
       private final Output<List<String>> computeEnvironments;
 
-    public Output<List<String>> getComputeEnvironments() {
+    public Output<List<String>> computeEnvironments() {
         return this.computeEnvironments;
     }
 
@@ -38,7 +38,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -61,7 +61,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingPolicyArn")
       private final @Nullable Output<String> schedulingPolicyArn;
 
-    public Output<String> getSchedulingPolicyArn() {
+    public Output<String> schedulingPolicyArn() {
         return this.schedulingPolicyArn == null ? Codegen.empty() : this.schedulingPolicyArn;
     }
 
@@ -72,7 +72,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -83,7 +83,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

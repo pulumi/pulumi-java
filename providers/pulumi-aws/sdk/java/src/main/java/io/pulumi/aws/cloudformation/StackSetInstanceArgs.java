@@ -25,7 +25,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -36,7 +36,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentTargets")
       private final @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
-    public Output<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
+    public Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets() {
         return this.deploymentTargets == null ? Codegen.empty() : this.deploymentTargets;
     }
 
@@ -47,7 +47,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameterOverrides")
       private final @Nullable Output<Map<String,String>> parameterOverrides;
 
-    public Output<Map<String,String>> getParameterOverrides() {
+    public Output<Map<String,String>> parameterOverrides() {
         return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
@@ -58,7 +58,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -69,7 +69,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="retainStack")
       private final @Nullable Output<Boolean> retainStack;
 
-    public Output<Boolean> getRetainStack() {
+    public Output<Boolean> retainStack() {
         return this.retainStack == null ? Codegen.empty() : this.retainStack;
     }
 
@@ -80,7 +80,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="stackSetName", required=true)
       private final Output<String> stackSetName;
 
-    public Output<String> getStackSetName() {
+    public Output<String> stackSetName() {
         return this.stackSetName;
     }
 

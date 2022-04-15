@@ -21,7 +21,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -32,7 +32,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -43,7 +43,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
     @Import(name="index", required=true)
       private final Output<String> index;
 
-    public Output<String> getIndex() {
+    public Output<String> index() {
         return this.index;
     }
 
@@ -54,7 +54,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -65,7 +65,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

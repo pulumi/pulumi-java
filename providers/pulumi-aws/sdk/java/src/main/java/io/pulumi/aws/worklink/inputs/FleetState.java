@@ -25,7 +25,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditStreamArn")
       private final @Nullable Output<String> auditStreamArn;
 
-    public Output<String> getAuditStreamArn() {
+    public Output<String> auditStreamArn() {
         return this.auditStreamArn == null ? Codegen.empty() : this.auditStreamArn;
     }
 
@@ -47,7 +47,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="companyCode")
       private final @Nullable Output<String> companyCode;
 
-    public Output<String> getCompanyCode() {
+    public Output<String> companyCode() {
         return this.companyCode == null ? Codegen.empty() : this.companyCode;
     }
 
@@ -58,7 +58,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -69,7 +69,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceCaCertificate")
       private final @Nullable Output<String> deviceCaCertificate;
 
-    public Output<String> getDeviceCaCertificate() {
+    public Output<String> deviceCaCertificate() {
         return this.deviceCaCertificate == null ? Codegen.empty() : this.deviceCaCertificate;
     }
 
@@ -80,7 +80,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -91,7 +91,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityProvider")
       private final @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
 
-    public Output<FleetIdentityProviderGetArgs> getIdentityProvider() {
+    public Output<FleetIdentityProviderGetArgs> identityProvider() {
         return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
@@ -102,7 +102,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
@@ -113,7 +113,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -124,7 +124,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<FleetNetworkGetArgs> network;
 
-    public Output<FleetNetworkGetArgs> getNetwork() {
+    public Output<FleetNetworkGetArgs> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -135,7 +135,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="optimizeForEndUserLocation")
       private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
-    public Output<Boolean> getOptimizeForEndUserLocation() {
+    public Output<Boolean> optimizeForEndUserLocation() {
         return this.optimizeForEndUserLocation == null ? Codegen.empty() : this.optimizeForEndUserLocation;
     }
 

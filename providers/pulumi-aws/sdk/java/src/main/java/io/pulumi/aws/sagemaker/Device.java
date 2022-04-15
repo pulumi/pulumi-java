@@ -33,7 +33,7 @@ public class Device extends io.pulumi.resources.CustomResource {
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -47,7 +47,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Device.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The device to register with SageMaker Edge Manager. See Device details below.
      * 
      */
-    public Output<DeviceDevice> getDevice() {
+    public Output<DeviceDevice> device() {
         return this.device;
     }
     /**
@@ -75,7 +75,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The name of the Device Fleet.
      * 
      */
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
 

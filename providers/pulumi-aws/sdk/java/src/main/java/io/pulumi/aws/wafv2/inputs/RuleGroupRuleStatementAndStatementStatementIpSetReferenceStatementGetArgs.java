@@ -23,7 +23,7 @@ public final class RuleGroupRuleStatementAndStatementStatementIpSetReferenceStat
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class RuleGroupRuleStatementAndStatementStatementIpSetReferenceStat
     @Import(name="ipSetForwardedIpConfig")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs> ipSetForwardedIpConfig;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs> getIpSetForwardedIpConfig() {
+    public Output<RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigGetArgs> ipSetForwardedIpConfig() {
         return this.ipSetForwardedIpConfig == null ? Codegen.empty() : this.ipSetForwardedIpConfig;
     }
 

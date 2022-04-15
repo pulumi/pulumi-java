@@ -22,7 +22,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="meshName", required=true)
       private final String meshName;
 
-    public String getMeshName() {
+    public String meshName() {
         return this.meshName;
     }
 
@@ -33,7 +33,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="meshOwner")
       private final @Nullable String meshOwner;
 
-    public Optional<String> getMeshOwner() {
+    public Optional<String> meshOwner() {
         return this.meshOwner == null ? Optional.empty() : Optional.ofNullable(this.meshOwner);
     }
 
@@ -44,7 +44,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

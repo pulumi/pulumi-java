@@ -42,7 +42,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -56,7 +56,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The API resource ID
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -70,7 +70,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return A map of the API models used for the response's content type
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseModels() {
+    public Output</* @Nullable */ Map<String,String>> responseModels() {
         return this.responseModels;
     }
     /**
@@ -88,7 +88,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */
-    public Output</* @Nullable */ Map<String,Boolean>> getResponseParameters() {
+    public Output</* @Nullable */ Map<String,Boolean>> responseParameters() {
         return this.responseParameters;
     }
     /**
@@ -102,7 +102,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -116,7 +116,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP status code
      * 
      */
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

@@ -21,7 +21,7 @@ public final class AvailabilityZoneGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -32,7 +32,7 @@ public final class AvailabilityZoneGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="optInStatus", required=true)
       private final Output<String> optInStatus;
 
-    public Output<String> getOptInStatus() {
+    public Output<String> optInStatus() {
         return this.optInStatus;
     }
 

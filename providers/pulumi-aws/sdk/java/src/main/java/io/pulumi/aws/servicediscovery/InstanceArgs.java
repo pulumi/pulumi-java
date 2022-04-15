@@ -22,7 +22,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes", required=true)
       private final Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -44,7 +44,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 

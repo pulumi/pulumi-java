@@ -42,7 +42,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return The ARN of the application from the Serverless Application Repository.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +56,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return A list of capabilities. Valid values are `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_RESOURCE_POLICY`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities;
     }
     /**
@@ -70,7 +70,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return The name of the stack to create. The resource deployed in AWS will be prefixed with `serverlessrepo-`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return A map of outputs from the stack.
      * 
      */
-    public Output<Map<String,String>> getOutputs() {
+    public Output<Map<String,String>> outputs() {
         return this.outputs;
     }
     /**
@@ -98,7 +98,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -112,7 +112,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return The version of the application to deploy. If not supplied, deploys the latest version.
      * 
      */
-    public Output<String> getSemanticVersion() {
+    public Output<String> semanticVersion() {
         return this.semanticVersion;
     }
     /**
@@ -126,7 +126,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return A list of tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +140,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

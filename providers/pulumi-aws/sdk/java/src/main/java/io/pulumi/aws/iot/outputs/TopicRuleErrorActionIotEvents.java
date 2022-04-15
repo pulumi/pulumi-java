@@ -41,21 +41,21 @@ public final class TopicRuleErrorActionIotEvents {
      * The name of the AWS IoT Events input.
      * 
     */
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
     /**
      * Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
      * 
     */
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * The ARN of the IAM role that grants access.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

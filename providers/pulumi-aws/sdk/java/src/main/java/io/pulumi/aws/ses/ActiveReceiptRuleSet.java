@@ -32,7 +32,7 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
      * @return The SES receipt rule set ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
      * @return The name of the rule set
      * 
      */
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 

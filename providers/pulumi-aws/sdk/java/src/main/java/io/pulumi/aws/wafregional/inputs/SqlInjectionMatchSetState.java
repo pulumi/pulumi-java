@@ -24,7 +24,7 @@ public final class SqlInjectionMatchSetState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class SqlInjectionMatchSetState extends io.pulumi.resources.Resourc
     @Import(name="sqlInjectionMatchTuples")
       private final @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples;
 
-    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> getSqlInjectionMatchTuples() {
+    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples() {
         return this.sqlInjectionMatchTuples == null ? Codegen.empty() : this.sqlInjectionMatchTuples;
     }
 

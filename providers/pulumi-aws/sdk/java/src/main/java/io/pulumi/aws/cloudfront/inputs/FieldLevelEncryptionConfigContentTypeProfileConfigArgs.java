@@ -22,7 +22,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
     @Import(name="contentTypeProfiles", required=true)
       private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles;
 
-    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> getContentTypeProfiles() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesArgs> contentTypeProfiles() {
         return this.contentTypeProfiles;
     }
 
@@ -33,7 +33,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigArgs extend
     @Import(name="forwardWhenContentTypeIsUnknown", required=true)
       private final Output<Boolean> forwardWhenContentTypeIsUnknown;
 
-    public Output<Boolean> getForwardWhenContentTypeIsUnknown() {
+    public Output<Boolean> forwardWhenContentTypeIsUnknown() {
         return this.forwardWhenContentTypeIsUnknown;
     }
 

@@ -61,38 +61,38 @@ public final class GetDataLakeSettingsResult {
      * List of ARNs of AWS Lake Formation principals (IAM users or roles).
      * 
     */
-    public List<String> getAdmins() {
+    public List<String> admins() {
         return this.admins;
     }
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
      * 
     */
-    public List<GetDataLakeSettingsCreateDatabaseDefaultPermission> getCreateDatabaseDefaultPermissions() {
+    public List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions() {
         return this.createDatabaseDefaultPermissions;
     }
     /**
      * Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
      * 
     */
-    public List<GetDataLakeSettingsCreateTableDefaultPermission> getCreateTableDefaultPermissions() {
+    public List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions() {
         return this.createTableDefaultPermissions;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
      * 
     */
-    public List<String> getTrustedResourceOwners() {
+    public List<String> trustedResourceOwners() {
         return this.trustedResourceOwners;
     }
 

@@ -21,7 +21,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="attachedEniId", required=true)
       private final String attachedEniId;
 
-    public String getAttachedEniId() {
+    public String attachedEniId() {
         return this.attachedEniId;
     }
 
@@ -32,7 +32,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="brokerId", required=true)
       private final Double brokerId;
 
-    public Double getBrokerId() {
+    public Double brokerId() {
         return this.brokerId;
     }
 
@@ -43,7 +43,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="clientSubnet", required=true)
       private final String clientSubnet;
 
-    public String getClientSubnet() {
+    public String clientSubnet() {
         return this.clientSubnet;
     }
 
@@ -54,7 +54,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="clientVpcIpAddress", required=true)
       private final String clientVpcIpAddress;
 
-    public String getClientVpcIpAddress() {
+    public String clientVpcIpAddress() {
         return this.clientVpcIpAddress;
     }
 
@@ -65,7 +65,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints;
     }
 
@@ -76,7 +76,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     @Import(name="nodeArn", required=true)
       private final String nodeArn;
 
-    public String getNodeArn() {
+    public String nodeArn() {
         return this.nodeArn;
     }
 

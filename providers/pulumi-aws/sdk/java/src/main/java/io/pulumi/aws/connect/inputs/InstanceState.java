@@ -23,7 +23,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoResolveBestVoicesEnabled")
       private final @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
-    public Output<Boolean> getAutoResolveBestVoicesEnabled() {
+    public Output<Boolean> autoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled == null ? Codegen.empty() : this.autoResolveBestVoicesEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactFlowLogsEnabled")
       private final @Nullable Output<Boolean> contactFlowLogsEnabled;
 
-    public Output<Boolean> getContactFlowLogsEnabled() {
+    public Output<Boolean> contactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled == null ? Codegen.empty() : this.contactFlowLogsEnabled;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactLensEnabled")
       private final @Nullable Output<Boolean> contactLensEnabled;
 
-    public Output<Boolean> getContactLensEnabled() {
+    public Output<Boolean> contactLensEnabled() {
         return this.contactLensEnabled == null ? Codegen.empty() : this.contactLensEnabled;
     }
 
@@ -67,7 +67,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -78,7 +78,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -89,7 +89,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="earlyMediaEnabled")
       private final @Nullable Output<Boolean> earlyMediaEnabled;
 
-    public Output<Boolean> getEarlyMediaEnabled() {
+    public Output<Boolean> earlyMediaEnabled() {
         return this.earlyMediaEnabled == null ? Codegen.empty() : this.earlyMediaEnabled;
     }
 
@@ -100,7 +100,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityManagementType")
       private final @Nullable Output<String> identityManagementType;
 
-    public Output<String> getIdentityManagementType() {
+    public Output<String> identityManagementType() {
         return this.identityManagementType == null ? Codegen.empty() : this.identityManagementType;
     }
 
@@ -111,7 +111,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inboundCallsEnabled")
       private final @Nullable Output<Boolean> inboundCallsEnabled;
 
-    public Output<Boolean> getInboundCallsEnabled() {
+    public Output<Boolean> inboundCallsEnabled() {
         return this.inboundCallsEnabled == null ? Codegen.empty() : this.inboundCallsEnabled;
     }
 
@@ -122,7 +122,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceAlias")
       private final @Nullable Output<String> instanceAlias;
 
-    public Output<String> getInstanceAlias() {
+    public Output<String> instanceAlias() {
         return this.instanceAlias == null ? Codegen.empty() : this.instanceAlias;
     }
 
@@ -134,7 +134,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outboundCallsEnabled")
       private final @Nullable Output<Boolean> outboundCallsEnabled;
 
-    public Output<Boolean> getOutboundCallsEnabled() {
+    public Output<Boolean> outboundCallsEnabled() {
         return this.outboundCallsEnabled == null ? Codegen.empty() : this.outboundCallsEnabled;
     }
 
@@ -145,7 +145,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
@@ -156,7 +156,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

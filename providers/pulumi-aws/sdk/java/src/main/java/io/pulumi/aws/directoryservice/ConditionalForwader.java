@@ -41,7 +41,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return The id of directory.
      * 
      */
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -55,7 +55,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return A list of forwarder IP addresses.
      * 
      */
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
     /**
@@ -69,7 +69,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of the remote domain for which forwarders will be used.
      * 
      */
-    public Output<String> getRemoteDomainName() {
+    public Output<String> remoteDomainName() {
         return this.remoteDomainName;
     }
 

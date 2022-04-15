@@ -22,56 +22,56 @@ public final class GetListenerDefaultAction extends io.pulumi.resources.InvokeAr
     @Import(name="authenticateCognitos", required=true)
       private final List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos;
 
-    public List<GetListenerDefaultActionAuthenticateCognito> getAuthenticateCognitos() {
+    public List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos() {
         return this.authenticateCognitos;
     }
 
     @Import(name="authenticateOidcs", required=true)
       private final List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs;
 
-    public List<GetListenerDefaultActionAuthenticateOidc> getAuthenticateOidcs() {
+    public List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs() {
         return this.authenticateOidcs;
     }
 
     @Import(name="fixedResponses", required=true)
       private final List<GetListenerDefaultActionFixedResponse> fixedResponses;
 
-    public List<GetListenerDefaultActionFixedResponse> getFixedResponses() {
+    public List<GetListenerDefaultActionFixedResponse> fixedResponses() {
         return this.fixedResponses;
     }
 
     @Import(name="forwards", required=true)
       private final List<GetListenerDefaultActionForward> forwards;
 
-    public List<GetListenerDefaultActionForward> getForwards() {
+    public List<GetListenerDefaultActionForward> forwards() {
         return this.forwards;
     }
 
     @Import(name="order", required=true)
       private final Integer order;
 
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 
     @Import(name="redirects", required=true)
       private final List<GetListenerDefaultActionRedirect> redirects;
 
-    public List<GetListenerDefaultActionRedirect> getRedirects() {
+    public List<GetListenerDefaultActionRedirect> redirects() {
         return this.redirects;
     }
 
     @Import(name="targetGroupArn", required=true)
       private final String targetGroupArn;
 
-    public String getTargetGroupArn() {
+    public String targetGroupArn() {
         return this.targetGroupArn;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> getDeleteOnTermination() {
+    public Output<Boolean> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
     @Import(name="deviceIndex", required=true)
       private final Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceNetworkInterfaceArgs extends io.pulumi.resources.Reso
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 

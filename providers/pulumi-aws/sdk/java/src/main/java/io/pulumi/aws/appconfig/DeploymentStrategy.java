@@ -43,7 +43,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppConfig Deployment Strategy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return Total amount of time for a deployment to last. Minimum value of 0, maximum value of 1440.
      * 
      */
-    public Output<Integer> getDeploymentDurationInMinutes() {
+    public Output<Integer> deploymentDurationInMinutes() {
         return this.deploymentDurationInMinutes;
     }
     /**
@@ -71,7 +71,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return A description of the deployment strategy. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back. Minimum value of 0, maximum value of 1440.
      * 
      */
-    public Output</* @Nullable */ Integer> getFinalBakeTimeInMinutes() {
+    public Output</* @Nullable */ Integer> finalBakeTimeInMinutes() {
         return this.finalBakeTimeInMinutes;
     }
     /**
@@ -99,7 +99,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return The percentage of targets to receive a deployed configuration during each interval. Minimum value of 1.0, maximum value of 100.0.
      * 
      */
-    public Output<Double> getGrowthFactor() {
+    public Output<Double> growthFactor() {
         return this.growthFactor;
     }
     /**
@@ -113,7 +113,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return The algorithm used to define how percentage grows over time. Valid value: `LINEAR` and `EXPONENTIAL`. Defaults to `LINEAR`.
      * 
      */
-    public Output</* @Nullable */ String> getGrowthType() {
+    public Output</* @Nullable */ String> growthType() {
         return this.growthType;
     }
     /**
@@ -127,7 +127,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return A name for the deployment strategy. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return Where to save the deployment strategy. Valid values: `NONE` and `SSM_DOCUMENT`.
      * 
      */
-    public Output<String> getReplicateTo() {
+    public Output<String> replicateTo() {
         return this.replicateTo;
     }
     /**
@@ -155,7 +155,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +169,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -19,14 +19,14 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
     @Import(name="headerBehavior")
       private final @Nullable Output<String> headerBehavior;
 
-    public Output<String> getHeaderBehavior() {
+    public Output<String> headerBehavior() {
         return this.headerBehavior == null ? Codegen.empty() : this.headerBehavior;
     }
 
     @Import(name="headers")
       private final @Nullable Output<OriginRequestPolicyHeadersConfigHeadersArgs> headers;
 
-    public Output<OriginRequestPolicyHeadersConfigHeadersArgs> getHeaders() {
+    public Output<OriginRequestPolicyHeadersConfigHeadersArgs> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 

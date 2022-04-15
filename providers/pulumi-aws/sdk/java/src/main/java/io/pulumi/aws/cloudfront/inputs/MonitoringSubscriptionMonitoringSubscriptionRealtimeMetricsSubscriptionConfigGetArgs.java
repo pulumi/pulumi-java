@@ -21,7 +21,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     @Import(name="realtimeMetricsSubscriptionStatus", required=true)
       private final Output<String> realtimeMetricsSubscriptionStatus;
 
-    public Output<String> getRealtimeMetricsSubscriptionStatus() {
+    public Output<String> realtimeMetricsSubscriptionStatus() {
         return this.realtimeMetricsSubscriptionStatus;
     }
 

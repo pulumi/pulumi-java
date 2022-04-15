@@ -22,7 +22,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 

@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      * The criteria for determining a SAN's match.
      * 
     */
-    public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch getMatch() {
+    public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch match() {
         return this.match;
     }
 

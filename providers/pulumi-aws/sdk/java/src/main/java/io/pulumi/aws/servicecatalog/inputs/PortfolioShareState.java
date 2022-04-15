@@ -23,7 +23,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -34,7 +34,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="accepted")
       private final @Nullable Output<Boolean> accepted;
 
-    public Output<Boolean> getAccepted() {
+    public Output<Boolean> accepted() {
         return this.accepted == null ? Codegen.empty() : this.accepted;
     }
 
@@ -45,7 +45,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="portfolioId")
       private final @Nullable Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
@@ -56,7 +56,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -67,7 +67,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="shareTagOptions")
       private final @Nullable Output<Boolean> shareTagOptions;
 
-    public Output<Boolean> getShareTagOptions() {
+    public Output<Boolean> shareTagOptions() {
         return this.shareTagOptions == null ? Codegen.empty() : this.shareTagOptions;
     }
 
@@ -78,7 +78,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -89,7 +89,7 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     @Import(name="waitForAcceptance")
       private final @Nullable Output<Boolean> waitForAcceptance;
 
-    public Output<Boolean> getWaitForAcceptance() {
+    public Output<Boolean> waitForAcceptance() {
         return this.waitForAcceptance == null ? Codegen.empty() : this.waitForAcceptance;
     }
 

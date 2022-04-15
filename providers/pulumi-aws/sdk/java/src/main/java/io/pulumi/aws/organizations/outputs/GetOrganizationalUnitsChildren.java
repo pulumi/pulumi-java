@@ -39,21 +39,21 @@ public final class GetOrganizationalUnitsChildren {
      * ARN of the organizational unit
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Parent identifier of the organizational units.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the organizational unit
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

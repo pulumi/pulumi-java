@@ -38,7 +38,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The root certificate of the Certificate Authority.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -52,7 +52,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The certificate name to display.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -66,7 +66,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return The ARN of the fleet.
      * 
      */
-    public Output<String> getFleetArn() {
+    public Output<String> fleetArn() {
         return this.fleetArn;
     }
     /**
@@ -80,7 +80,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * @return A unique identifier for the Certificate Authority.
      * 
      */
-    public Output<String> getWebsiteCaId() {
+    public Output<String> websiteCaId() {
         return this.websiteCaId;
     }
 

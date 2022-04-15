@@ -23,7 +23,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
@@ -45,7 +45,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> getDisableEmailNotification() {
+    public Output<Boolean> disableEmailNotification() {
         return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
@@ -56,7 +56,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -67,7 +67,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
-    public Output<String> getInvitationMessage() {
+    public Output<String> invitationMessage() {
         return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
     }
 
@@ -78,7 +78,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> getInvite() {
+    public Output<Boolean> invite() {
         return this.invite == null ? Codegen.empty() : this.invite;
     }
 
@@ -89,7 +89,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationshipStatus")
       private final @Nullable Output<String> relationshipStatus;
 
-    public Output<String> getRelationshipStatus() {
+    public Output<String> relationshipStatus() {
         return this.relationshipStatus == null ? Codegen.empty() : this.relationshipStatus;
     }
 

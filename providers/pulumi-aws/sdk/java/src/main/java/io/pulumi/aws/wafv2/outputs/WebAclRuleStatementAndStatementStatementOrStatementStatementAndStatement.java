@@ -25,7 +25,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatement> getStatements() {
+    public List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatement> statements() {
         return this.statements;
     }
 

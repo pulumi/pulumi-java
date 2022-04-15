@@ -21,7 +21,7 @@ public final class FlowDefinitionHumanLoopRequestSourceGetArgs extends io.pulumi
     @Import(name="awsManagedHumanLoopRequestSource", required=true)
       private final Output<String> awsManagedHumanLoopRequestSource;
 
-    public Output<String> getAwsManagedHumanLoopRequestSource() {
+    public Output<String> awsManagedHumanLoopRequestSource() {
         return this.awsManagedHumanLoopRequestSource;
     }
 

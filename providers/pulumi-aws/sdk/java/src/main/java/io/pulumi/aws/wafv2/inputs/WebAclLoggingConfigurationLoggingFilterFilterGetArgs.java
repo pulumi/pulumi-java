@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
     @Import(name="behavior", required=true)
       private final Output<String> behavior;
 
-    public Output<String> getBehavior() {
+    public Output<String> behavior() {
         return this.behavior;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
     @Import(name="conditions", required=true)
       private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions;
 
-    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> getConditions() {
+    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions() {
         return this.conditions;
     }
 
@@ -45,7 +45,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
     @Import(name="requirement", required=true)
       private final Output<String> requirement;
 
-    public Output<String> getRequirement() {
+    public Output<String> requirement() {
         return this.requirement;
     }
 

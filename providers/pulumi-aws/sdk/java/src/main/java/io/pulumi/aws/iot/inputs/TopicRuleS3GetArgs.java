@@ -21,7 +21,7 @@ public final class TopicRuleS3GetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,7 +32,7 @@ public final class TopicRuleS3GetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -43,7 +43,7 @@ public final class TopicRuleS3GetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

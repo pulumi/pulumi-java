@@ -22,7 +22,7 @@ public final class WebAclDefaultActionAllowArgs extends io.pulumi.resources.Reso
     @Import(name="customRequestHandling")
       private final @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<WebAclDefaultActionAllowCustomRequestHandlingArgs> getCustomRequestHandling() {
+    public Output<WebAclDefaultActionAllowCustomRequestHandlingArgs> customRequestHandling() {
         return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 

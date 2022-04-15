@@ -24,7 +24,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
     @Import(name="cloudformationStackArn")
       private final @Nullable Output<String> cloudformationStackArn;
 
-    public Output<String> getCloudformationStackArn() {
+    public Output<String> cloudformationStackArn() {
         return this.cloudformationStackArn == null ? Codegen.empty() : this.cloudformationStackArn;
     }
 
@@ -35,7 +35,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
     @Import(name="tagFilters")
       private final @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
 
-    public Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> getTagFilters() {
+    public Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters() {
         return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 

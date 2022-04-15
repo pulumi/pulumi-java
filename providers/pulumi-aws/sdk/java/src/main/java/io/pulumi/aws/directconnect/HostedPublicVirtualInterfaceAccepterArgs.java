@@ -23,7 +23,7 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -34,7 +34,7 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 

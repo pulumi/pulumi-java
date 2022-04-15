@@ -17,14 +17,14 @@ public final class GetOriginRequestPolicyHeadersConfig extends io.pulumi.resourc
     @Import(name="headerBehavior", required=true)
       private final String headerBehavior;
 
-    public String getHeaderBehavior() {
+    public String headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers", required=true)
       private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
-    public List<GetOriginRequestPolicyHeadersConfigHeader> getHeaders() {
+    public List<GetOriginRequestPolicyHeadersConfigHeader> headers() {
         return this.headers;
     }
 

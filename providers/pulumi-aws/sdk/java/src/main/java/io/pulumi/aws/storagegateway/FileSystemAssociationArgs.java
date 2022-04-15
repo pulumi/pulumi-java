@@ -24,7 +24,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> getAuditDestinationArn() {
+    public Output<String> auditDestinationArn() {
         return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
@@ -35,7 +35,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="cacheAttributes")
       private final @Nullable Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
 
-    public Output<FileSystemAssociationCacheAttributesArgs> getCacheAttributes() {
+    public Output<FileSystemAssociationCacheAttributesArgs> cacheAttributes() {
         return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
@@ -46,7 +46,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -57,7 +57,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="locationArn", required=true)
       private final Output<String> locationArn;
 
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
 
@@ -68,7 +68,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -79,7 +79,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

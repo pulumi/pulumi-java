@@ -47,7 +47,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -61,7 +61,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Whether the deployment was automatically released.
      * 
      */
-    public Output<Boolean> getAutoDeployed() {
+    public Output<Boolean> autoDeployed() {
         return this.autoDeployed;
     }
     /**
@@ -75,7 +75,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The description for the deployment resource. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -89,7 +89,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTriggers() {
+    public Output</* @Nullable */ Map<String,String>> triggers() {
         return this.triggers;
     }
 

@@ -28,7 +28,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerProperties")
       private final @Nullable Output<String> containerProperties;
 
-    public Output<String> getContainerProperties() {
+    public Output<String> containerProperties() {
         return this.containerProperties == null ? Codegen.empty() : this.containerProperties;
     }
 
@@ -39,7 +39,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -61,7 +61,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformCapabilities")
       private final @Nullable Output<List<String>> platformCapabilities;
 
-    public Output<List<String>> getPlatformCapabilities() {
+    public Output<List<String>> platformCapabilities() {
         return this.platformCapabilities == null ? Codegen.empty() : this.platformCapabilities;
     }
 
@@ -72,7 +72,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="propagateTags")
       private final @Nullable Output<Boolean> propagateTags;
 
-    public Output<Boolean> getPropagateTags() {
+    public Output<Boolean> propagateTags() {
         return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
@@ -84,7 +84,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryStrategy")
       private final @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
 
-    public Output<JobDefinitionRetryStrategyArgs> getRetryStrategy() {
+    public Output<JobDefinitionRetryStrategyArgs> retryStrategy() {
         return this.retryStrategy == null ? Codegen.empty() : this.retryStrategy;
     }
 
@@ -95,7 +95,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -106,7 +106,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<JobDefinitionTimeoutArgs> timeout;
 
-    public Output<JobDefinitionTimeoutArgs> getTimeout() {
+    public Output<JobDefinitionTimeoutArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -117,7 +117,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

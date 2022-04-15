@@ -22,7 +22,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementArgs>> statements;
 
-    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementNotStatementStatementArgs>> statements() {
         return this.statements;
     }
 

@@ -23,10 +23,10 @@ public final class StackApplicationSettings {
         this.settingsGroup = settingsGroup;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getSettingsGroup() {
+    public Optional<String> settingsGroup() {
         return Optional.ofNullable(this.settingsGroup);
     }
 
