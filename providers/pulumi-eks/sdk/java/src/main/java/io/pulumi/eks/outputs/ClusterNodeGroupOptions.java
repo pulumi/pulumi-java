@@ -253,7 +253,7 @@ public final class ClusterNodeGroupOptions {
      * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
      * 
     */
-    public Optional<String> getAmiId() {
+    public Optional<String> amiId() {
         return Optional.ofNullable(this.amiId);
     }
     /**
@@ -264,14 +264,14 @@ public final class ClusterNodeGroupOptions {
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
      * 
     */
-    public Map<String,String> getAutoScalingGroupTags() {
+    public Map<String,String> autoScalingGroupTags() {
         return this.autoScalingGroupTags == null ? Map.of() : this.autoScalingGroupTags;
     }
     /**
      * Additional args to pass directly to `/etc/eks/bootstrap.sh`. For details on available options, see: https://github.com/awslabs/amazon-eks-ami/blob/master/files/bootstrap.sh. Note that the `--apiserver-endpoint`, `--b64-cluster-ca` and `--kubelet-extra-args` flags are included automatically based on other configuration parameters.
      * 
     */
-    public Optional<String> getBootstrapExtraArgs() {
+    public Optional<String> bootstrapExtraArgs() {
         return Optional.ofNullable(this.bootstrapExtraArgs);
     }
     /**
@@ -280,28 +280,28 @@ public final class ClusterNodeGroupOptions {
      * Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, you should either supply the tag in `autoScalingGroupTags` or `cloudFormationTags`, but not both.
      * 
     */
-    public Map<String,String> getCloudFormationTags() {
+    public Map<String,String> cloudFormationTags() {
         return this.cloudFormationTags == null ? Map.of() : this.cloudFormationTags;
     }
     /**
      * The ingress rule that gives node group access.
      * 
     */
-    public Optional<SecurityGroupRule> getClusterIngressRule() {
+    public Optional<SecurityGroupRule> clusterIngressRule() {
         return Optional.ofNullable(this.clusterIngressRule);
     }
     /**
      * The number of worker nodes that should be running in the cluster. Defaults to 2.
      * 
     */
-    public Optional<Integer> getDesiredCapacity() {
+    public Optional<Integer> desiredCapacity() {
         return Optional.ofNullable(this.desiredCapacity);
     }
     /**
      * Encrypt the root block device of the nodes in the node group.
      * 
     */
-    public Optional<Boolean> getEncryptRootBlockDevice() {
+    public Optional<Boolean> encryptRootBlockDevice() {
         return Optional.ofNullable(this.encryptRootBlockDevice);
     }
     /**
@@ -310,7 +310,7 @@ public final class ClusterNodeGroupOptions {
      * This additional set of security groups captures any user application rules that will be needed for the nodes.
      * 
     */
-    public List<SecurityGroup> getExtraNodeSecurityGroups() {
+    public List<SecurityGroup> extraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups == null ? List.of() : this.extraNodeSecurityGroups;
     }
     /**
@@ -325,63 +325,63 @@ public final class ClusterNodeGroupOptions {
      * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
      * 
     */
-    public Optional<Boolean> getGpu() {
+    public Optional<Boolean> gpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The ingress rule that gives node group access.
      * 
     */
-    public Optional<InstanceProfile> getInstanceProfile() {
+    public Optional<InstanceProfile> instanceProfile() {
         return Optional.ofNullable(this.instanceProfile);
     }
     /**
      * The instance type to use for the cluster's nodes. Defaults to "t2.medium".
      * 
     */
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Name of the key pair to use for SSH access to worker nodes.
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Extra args to pass to the Kubelet. Corresponds to the options passed in the `--kubeletExtraArgs` flag to `/etc/eks/bootstrap.sh`. For example, '--port=10251 --address=0.0.0.0'. Note that the `labels` and `taints` properties will be applied to this list (using `--node-labels` and `--register-with-taints` respectively) after to the explicit `kubeletExtraArgs`.
      * 
     */
-    public Optional<String> getKubeletExtraArgs() {
+    public Optional<String> kubeletExtraArgs() {
         return Optional.ofNullable(this.kubeletExtraArgs);
     }
     /**
      * Custom k8s node labels to be attached to each worker node. Adds the given key/value pairs to the `--node-labels` kubelet argument.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * The maximum number of worker nodes running in the cluster. Defaults to 2.
      * 
     */
-    public Optional<Integer> getMaxSize() {
+    public Optional<Integer> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
     /**
      * The minimum number of worker nodes running in the cluster. Defaults to 1.
      * 
     */
-    public Optional<Integer> getMinSize() {
+    public Optional<Integer> minSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
      * Whether or not to auto-assign public IP addresses on the EKS worker nodes. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
      * 
     */
-    public Optional<Boolean> getNodeAssociatePublicIpAddress() {
+    public Optional<Boolean> nodeAssociatePublicIpAddress() {
         return Optional.ofNullable(this.nodeAssociatePublicIpAddress);
     }
     /**
@@ -390,14 +390,14 @@ public final class ClusterNodeGroupOptions {
      * If not provided, no SSH access is enabled on VMs.
      * 
     */
-    public Optional<String> getNodePublicKey() {
+    public Optional<String> nodePublicKey() {
         return Optional.ofNullable(this.nodePublicKey);
     }
     /**
      * The size in GiB of a cluster node's root volume. Defaults to 20.
      * 
     */
-    public Optional<Integer> getNodeRootVolumeSize() {
+    public Optional<Integer> nodeRootVolumeSize() {
         return Optional.ofNullable(this.nodeRootVolumeSize);
     }
     /**
@@ -411,7 +411,7 @@ public final class ClusterNodeGroupOptions {
      * Note: The `nodeSecurityGroup` option and the cluster option`nodeSecurityGroupTags` are mutually exclusive.
      * 
     */
-    public Optional<SecurityGroup> getNodeSecurityGroup() {
+    public Optional<SecurityGroup> nodeSecurityGroup() {
         return Optional.ofNullable(this.nodeSecurityGroup);
     }
     /**
@@ -420,14 +420,14 @@ public final class ClusterNodeGroupOptions {
      * Setting this option overrides which subnets to use for the worker node group, regardless if the cluster's `subnetIds` is set, or if `publicSubnetIds` and/or `privateSubnetIds` were set.
      * 
     */
-    public List<String> getNodeSubnetIds() {
+    public List<String> nodeSubnetIds() {
         return this.nodeSubnetIds == null ? List.of() : this.nodeSubnetIds;
     }
     /**
      * Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
      * 
     */
-    public Optional<String> getNodeUserData() {
+    public Optional<String> nodeUserData() {
         return Optional.ofNullable(this.nodeUserData);
     }
     /**
@@ -436,28 +436,28 @@ public final class ClusterNodeGroupOptions {
      * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.html
      * 
     */
-    public Optional<String> getNodeUserDataOverride() {
+    public Optional<String> nodeUserDataOverride() {
         return Optional.ofNullable(this.nodeUserDataOverride);
     }
     /**
      * Bidding price for spot instance. If set, only spot instances will be added as worker node.
      * 
     */
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
      * Custom k8s node taints to be attached to each worker node. Adds the given taints to the `--register-with-taints` kubelet argument
      * 
     */
-    public Map<String,Taint> getTaints() {
+    public Map<String,Taint> taints() {
         return this.taints == null ? Map.of() : this.taints;
     }
     /**
      * Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

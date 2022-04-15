@@ -22,14 +22,14 @@ public final class CreationRoleProviderArgs extends io.pulumi.resources.Resource
     @Import(name="provider", required=true)
       private final Output<Provider> provider;
 
-    public Output<Provider> getProvider() {
+    public Output<Provider> provider() {
         return this.provider;
     }
 
     @Import(name="role", required=true)
       private final Output<Role> role;
 
-    public Output<Role> getRole() {
+    public Output<Role> role() {
         return this.role;
     }
 
