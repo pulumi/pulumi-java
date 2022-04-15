@@ -26,7 +26,7 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="instanceTypeConfigs")
       private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
-    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigArgs>> getInstanceTypeConfigs() {
+    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? Codegen.empty() : this.instanceTypeConfigs;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="launchSpecifications")
       private final @Nullable Output<ClusterCoreInstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
-    public Output<ClusterCoreInstanceFleetLaunchSpecificationsArgs> getLaunchSpecifications() {
+    public Output<ClusterCoreInstanceFleetLaunchSpecificationsArgs> launchSpecifications() {
         return this.launchSpecifications == null ? Codegen.empty() : this.launchSpecifications;
     }
 
@@ -59,21 +59,21 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="provisionedOnDemandCapacity")
       private final @Nullable Output<Integer> provisionedOnDemandCapacity;
 
-    public Output<Integer> getProvisionedOnDemandCapacity() {
+    public Output<Integer> provisionedOnDemandCapacity() {
         return this.provisionedOnDemandCapacity == null ? Codegen.empty() : this.provisionedOnDemandCapacity;
     }
 
     @Import(name="provisionedSpotCapacity")
       private final @Nullable Output<Integer> provisionedSpotCapacity;
 
-    public Output<Integer> getProvisionedSpotCapacity() {
+    public Output<Integer> provisionedSpotCapacity() {
         return this.provisionedSpotCapacity == null ? Codegen.empty() : this.provisionedSpotCapacity;
     }
 
@@ -84,7 +84,7 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="targetOnDemandCapacity")
       private final @Nullable Output<Integer> targetOnDemandCapacity;
 
-    public Output<Integer> getTargetOnDemandCapacity() {
+    public Output<Integer> targetOnDemandCapacity() {
         return this.targetOnDemandCapacity == null ? Codegen.empty() : this.targetOnDemandCapacity;
     }
 
@@ -95,7 +95,7 @@ public final class ClusterCoreInstanceFleetArgs extends io.pulumi.resources.Reso
     @Import(name="targetSpotCapacity")
       private final @Nullable Output<Integer> targetSpotCapacity;
 
-    public Output<Integer> getTargetSpotCapacity() {
+    public Output<Integer> targetSpotCapacity() {
         return this.targetSpotCapacity == null ? Codegen.empty() : this.targetSpotCapacity;
     }
 

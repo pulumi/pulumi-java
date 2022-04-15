@@ -44,7 +44,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -58,7 +58,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The ARN of the budget.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Whether this budget tracks monetary cost or usage.
      * 
      */
-    public Output<String> getBudgetType() {
+    public Output<String> budgetType() {
         return this.budgetType;
     }
     /**
@@ -86,7 +86,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Map of CostFilters key/value pairs to apply to the budget.
      * 
      */
-    public Output<Map<String,String>> getCostFilters() {
+    public Output<Map<String,String>> costFilters() {
         return this.costFilters;
     }
     /**
@@ -100,7 +100,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
      * 
      */
-    public Output<BudgetCostTypes> getCostTypes() {
+    public Output<BudgetCostTypes> costTypes() {
         return this.costTypes;
     }
     /**
@@ -114,7 +114,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The amount of cost or usage being measured for a budget.
      * 
      */
-    public Output<String> getLimitAmount() {
+    public Output<String> limitAmount() {
         return this.limitAmount;
     }
     /**
@@ -128,7 +128,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
      * 
      */
-    public Output<String> getLimitUnit() {
+    public Output<String> limitUnit() {
         return this.limitUnit;
     }
     /**
@@ -142,7 +142,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The name of a budget. Unique within accounts.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +156,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The prefix of the name of a budget. Unique within accounts.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -170,7 +170,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
      * 
      */
-    public Output</* @Nullable */ List<BudgetNotification>> getNotifications() {
+    public Output</* @Nullable */ List<BudgetNotification>> notifications() {
         return this.notifications;
     }
     /**
@@ -184,7 +184,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
      * 
      */
-    public Output</* @Nullable */ String> getTimePeriodEnd() {
+    public Output</* @Nullable */ String> timePeriodEnd() {
         return this.timePeriodEnd;
     }
     /**
@@ -198,7 +198,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
      * 
      */
-    public Output<String> getTimePeriodStart() {
+    public Output<String> timePeriodStart() {
         return this.timePeriodStart;
     }
     /**
@@ -212,7 +212,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
      * 
      */
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit;
     }
 

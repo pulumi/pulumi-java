@@ -42,21 +42,21 @@ public final class PartitionStorageDescriptorSkewedInfo {
      * A list of names of columns that contain skewed values.
      * 
     */
-    public List<String> getSkewedColumnNames() {
+    public List<String> skewedColumnNames() {
         return this.skewedColumnNames == null ? List.of() : this.skewedColumnNames;
     }
     /**
      * A list of values that appear so frequently as to be considered skewed.
      * 
     */
-    public Map<String,String> getSkewedColumnValueLocationMaps() {
+    public Map<String,String> skewedColumnValueLocationMaps() {
         return this.skewedColumnValueLocationMaps == null ? Map.of() : this.skewedColumnValueLocationMaps;
     }
     /**
      * A map of skewed values to the columns that contain them.
      * 
     */
-    public List<String> getSkewedColumnValues() {
+    public List<String> skewedColumnValues() {
         return this.skewedColumnValues == null ? List.of() : this.skewedColumnValues;
     }
 

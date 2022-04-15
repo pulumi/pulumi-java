@@ -32,14 +32,14 @@ public final class ProjectEnvironmentRegistryCredential {
      * ARN or name of credentials created using AWS Secrets Manager.
      * 
     */
-    public String getCredential() {
+    public String credential() {
         return this.credential;
     }
     /**
      * Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
      * 
     */
-    public String getCredentialProvider() {
+    public String credentialProvider() {
         return this.credentialProvider;
     }
 

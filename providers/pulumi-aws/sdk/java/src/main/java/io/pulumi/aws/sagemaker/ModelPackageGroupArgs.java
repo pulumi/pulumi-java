@@ -23,7 +23,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Output<String> getModelPackageGroupDescription() {
+    public Output<String> modelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
     }
 
@@ -34,7 +34,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="modelPackageGroupName", required=true)
       private final Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

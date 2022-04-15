@@ -22,7 +22,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -33,7 +33,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="functionPayload")
       private final @Nullable Output<String> functionPayload;
 
-    public Output<String> getFunctionPayload() {
+    public Output<String> functionPayload() {
         return this.functionPayload == null ? Codegen.empty() : this.functionPayload;
     }
 

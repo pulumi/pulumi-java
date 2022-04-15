@@ -26,7 +26,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="childHealthThreshold")
       private final @Nullable Output<Integer> childHealthThreshold;
 
-    public Output<Integer> getChildHealthThreshold() {
+    public Output<Integer> childHealthThreshold() {
         return this.childHealthThreshold == null ? Codegen.empty() : this.childHealthThreshold;
     }
 
@@ -37,7 +37,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="childHealthchecks")
       private final @Nullable Output<List<String>> childHealthchecks;
 
-    public Output<List<String>> getChildHealthchecks() {
+    public Output<List<String>> childHealthchecks() {
         return this.childHealthchecks == null ? Codegen.empty() : this.childHealthchecks;
     }
 
@@ -48,7 +48,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchAlarmName")
       private final @Nullable Output<String> cloudwatchAlarmName;
 
-    public Output<String> getCloudwatchAlarmName() {
+    public Output<String> cloudwatchAlarmName() {
         return this.cloudwatchAlarmName == null ? Codegen.empty() : this.cloudwatchAlarmName;
     }
 
@@ -59,7 +59,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchAlarmRegion")
       private final @Nullable Output<String> cloudwatchAlarmRegion;
 
-    public Output<String> getCloudwatchAlarmRegion() {
+    public Output<String> cloudwatchAlarmRegion() {
         return this.cloudwatchAlarmRegion == null ? Codegen.empty() : this.cloudwatchAlarmRegion;
     }
 
@@ -73,7 +73,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -84,7 +84,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableSni")
       private final @Nullable Output<Boolean> enableSni;
 
-    public Output<Boolean> getEnableSni() {
+    public Output<Boolean> enableSni() {
         return this.enableSni == null ? Codegen.empty() : this.enableSni;
     }
 
@@ -95,7 +95,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -106,7 +106,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -117,7 +117,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insufficientDataHealthStatus")
       private final @Nullable Output<String> insufficientDataHealthStatus;
 
-    public Output<String> getInsufficientDataHealthStatus() {
+    public Output<String> insufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus == null ? Codegen.empty() : this.insufficientDataHealthStatus;
     }
 
@@ -128,7 +128,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invertHealthcheck")
       private final @Nullable Output<Boolean> invertHealthcheck;
 
-    public Output<Boolean> getInvertHealthcheck() {
+    public Output<Boolean> invertHealthcheck() {
         return this.invertHealthcheck == null ? Codegen.empty() : this.invertHealthcheck;
     }
 
@@ -139,7 +139,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -150,7 +150,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="measureLatency")
       private final @Nullable Output<Boolean> measureLatency;
 
-    public Output<Boolean> getMeasureLatency() {
+    public Output<Boolean> measureLatency() {
         return this.measureLatency == null ? Codegen.empty() : this.measureLatency;
     }
 
@@ -161,7 +161,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -173,7 +173,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 
@@ -184,7 +184,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
@@ -195,7 +195,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestInterval")
       private final @Nullable Output<Integer> requestInterval;
 
-    public Output<Integer> getRequestInterval() {
+    public Output<Integer> requestInterval() {
         return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
     }
 
@@ -206,7 +206,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
+    public Output<String> resourcePath() {
         return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
@@ -217,7 +217,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingControlArn")
       private final @Nullable Output<String> routingControlArn;
 
-    public Output<String> getRoutingControlArn() {
+    public Output<String> routingControlArn() {
         return this.routingControlArn == null ? Codegen.empty() : this.routingControlArn;
     }
 
@@ -228,7 +228,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString == null ? Codegen.empty() : this.searchString;
     }
 
@@ -239,7 +239,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -250,7 +250,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

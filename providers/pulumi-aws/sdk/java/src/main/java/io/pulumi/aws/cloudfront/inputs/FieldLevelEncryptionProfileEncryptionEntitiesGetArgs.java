@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     @Import(name="items")
       private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
-    public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> getItems() {
+    public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

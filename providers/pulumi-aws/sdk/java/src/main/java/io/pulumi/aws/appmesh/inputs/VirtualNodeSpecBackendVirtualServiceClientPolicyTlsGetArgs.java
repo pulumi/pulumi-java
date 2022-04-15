@@ -26,7 +26,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs ex
     @Import(name="certificate")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs> certificate;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs> getCertificate() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs ex
     @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> getEnforce() {
+    public Output<Boolean> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs ex
     @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> getPorts() {
+    public Output<List<Integer>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs ex
     @Import(name="validation", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs> validation;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs> getValidation() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs> validation() {
         return this.validation;
     }
 

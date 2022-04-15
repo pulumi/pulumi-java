@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpGetArgs extends io.pulumi.r
     @Import(name="idle")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpIdleGetArgs> idle;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttpIdleGetArgs> getIdle() {
+    public Output<VirtualNodeSpecListenerTimeoutHttpIdleGetArgs> idle() {
         return this.idle == null ? Codegen.empty() : this.idle;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpGetArgs extends io.pulumi.r
     @Import(name="perRequest")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpPerRequestGetArgs> perRequest;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttpPerRequestGetArgs> getPerRequest() {
+    public Output<VirtualNodeSpecListenerTimeoutHttpPerRequestGetArgs> perRequest() {
         return this.perRequest == null ? Codegen.empty() : this.perRequest;
     }
 

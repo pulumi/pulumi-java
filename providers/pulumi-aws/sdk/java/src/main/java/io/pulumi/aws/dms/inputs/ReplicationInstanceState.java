@@ -26,7 +26,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="allocatedStorage")
       private final @Nullable Output<Integer> allocatedStorage;
 
-    public Output<Integer> getAllocatedStorage() {
+    public Output<Integer> allocatedStorage() {
         return this.allocatedStorage == null ? Codegen.empty() : this.allocatedStorage;
     }
 
@@ -37,7 +37,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="allowMajorVersionUpgrade")
       private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
-    public Output<Boolean> getAllowMajorVersionUpgrade() {
+    public Output<Boolean> allowMajorVersionUpgrade() {
         return this.allowMajorVersionUpgrade == null ? Codegen.empty() : this.allowMajorVersionUpgrade;
     }
 
@@ -48,7 +48,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
@@ -59,7 +59,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
@@ -70,7 +70,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -81,7 +81,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -92,7 +92,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -103,7 +103,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> getMultiAz() {
+    public Output<Boolean> multiAz() {
         return this.multiAz == null ? Codegen.empty() : this.multiAz;
     }
 
@@ -114,7 +114,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
@@ -125,7 +125,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> getPubliclyAccessible() {
+    public Output<Boolean> publiclyAccessible() {
         return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
     }
 
@@ -136,7 +136,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationInstanceArn")
       private final @Nullable Output<String> replicationInstanceArn;
 
-    public Output<String> getReplicationInstanceArn() {
+    public Output<String> replicationInstanceArn() {
         return this.replicationInstanceArn == null ? Codegen.empty() : this.replicationInstanceArn;
     }
 
@@ -147,7 +147,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationInstanceClass")
       private final @Nullable Output<String> replicationInstanceClass;
 
-    public Output<String> getReplicationInstanceClass() {
+    public Output<String> replicationInstanceClass() {
         return this.replicationInstanceClass == null ? Codegen.empty() : this.replicationInstanceClass;
     }
 
@@ -158,7 +158,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationInstanceId")
       private final @Nullable Output<String> replicationInstanceId;
 
-    public Output<String> getReplicationInstanceId() {
+    public Output<String> replicationInstanceId() {
         return this.replicationInstanceId == null ? Codegen.empty() : this.replicationInstanceId;
     }
 
@@ -169,7 +169,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationInstancePrivateIps")
       private final @Nullable Output<List<String>> replicationInstancePrivateIps;
 
-    public Output<List<String>> getReplicationInstancePrivateIps() {
+    public Output<List<String>> replicationInstancePrivateIps() {
         return this.replicationInstancePrivateIps == null ? Codegen.empty() : this.replicationInstancePrivateIps;
     }
 
@@ -180,7 +180,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationInstancePublicIps")
       private final @Nullable Output<List<String>> replicationInstancePublicIps;
 
-    public Output<List<String>> getReplicationInstancePublicIps() {
+    public Output<List<String>> replicationInstancePublicIps() {
         return this.replicationInstancePublicIps == null ? Codegen.empty() : this.replicationInstancePublicIps;
     }
 
@@ -191,7 +191,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="replicationSubnetGroupId")
       private final @Nullable Output<String> replicationSubnetGroupId;
 
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId == null ? Codegen.empty() : this.replicationSubnetGroupId;
     }
 
@@ -202,7 +202,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -213,7 +213,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -224,7 +224,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 

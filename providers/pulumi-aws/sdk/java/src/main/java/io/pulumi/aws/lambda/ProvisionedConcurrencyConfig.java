@@ -41,7 +41,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Name or Amazon Resource Name (ARN) of the Lambda Function.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -55,7 +55,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Amount of capacity to allocate. Must be greater than or equal to `1`.
      * 
      */
-    public Output<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> provisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
     }
     /**
@@ -69,7 +69,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * @return Lambda Function version or Lambda Alias name.
      * 
      */
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier;
     }
 

@@ -23,7 +23,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="includeControlDetails")
       private final @Nullable Output<Boolean> includeControlDetails;
 
-    public Output<Boolean> getIncludeControlDetails() {
+    public Output<Boolean> includeControlDetails() {
         return this.includeControlDetails == null ? Codegen.empty() : this.includeControlDetails;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="includeNullAndEmpty")
       private final @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Output<Boolean> getIncludeNullAndEmpty() {
+    public Output<Boolean> includeNullAndEmpty() {
         return this.includeNullAndEmpty == null ? Codegen.empty() : this.includeNullAndEmpty;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="includePartitionValue")
       private final @Nullable Output<Boolean> includePartitionValue;
 
-    public Output<Boolean> getIncludePartitionValue() {
+    public Output<Boolean> includePartitionValue() {
         return this.includePartitionValue == null ? Codegen.empty() : this.includePartitionValue;
     }
 
@@ -56,7 +56,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="includeTableAlterOperations")
       private final @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Output<Boolean> getIncludeTableAlterOperations() {
+    public Output<Boolean> includeTableAlterOperations() {
         return this.includeTableAlterOperations == null ? Codegen.empty() : this.includeTableAlterOperations;
     }
 
@@ -67,7 +67,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="includeTransactionDetails")
       private final @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Output<Boolean> getIncludeTransactionDetails() {
+    public Output<Boolean> includeTransactionDetails() {
         return this.includeTransactionDetails == null ? Codegen.empty() : this.includeTransactionDetails;
     }
 
@@ -78,7 +78,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
@@ -89,7 +89,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="partitionIncludeSchemaTable")
       private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Output<Boolean> getPartitionIncludeSchemaTable() {
+    public Output<Boolean> partitionIncludeSchemaTable() {
         return this.partitionIncludeSchemaTable == null ? Codegen.empty() : this.partitionIncludeSchemaTable;
     }
 
@@ -100,7 +100,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="serviceAccessRoleArn")
       private final @Nullable Output<String> serviceAccessRoleArn;
 
-    public Output<String> getServiceAccessRoleArn() {
+    public Output<String> serviceAccessRoleArn() {
         return this.serviceAccessRoleArn == null ? Codegen.empty() : this.serviceAccessRoleArn;
     }
 
@@ -111,7 +111,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 

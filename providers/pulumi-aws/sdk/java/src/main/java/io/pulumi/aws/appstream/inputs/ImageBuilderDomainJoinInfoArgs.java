@@ -22,7 +22,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
     @Import(name="directoryName")
       private final @Nullable Output<String> directoryName;
 
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
@@ -33,7 +33,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> getOrganizationalUnitDistinguishedName() {
+    public Output<String> organizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 

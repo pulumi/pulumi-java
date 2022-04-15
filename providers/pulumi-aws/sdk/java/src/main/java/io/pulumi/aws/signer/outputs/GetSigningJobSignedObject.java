@@ -17,7 +17,7 @@ public final class GetSigningJobSignedObject {
         this.s3s = s3s;
     }
 
-    public List<GetSigningJobSignedObjectS3> getS3s() {
+    public List<GetSigningJobSignedObjectS3> s3s() {
         return this.s3s;
     }
 

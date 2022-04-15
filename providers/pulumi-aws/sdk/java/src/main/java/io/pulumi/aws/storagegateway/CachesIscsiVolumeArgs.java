@@ -25,7 +25,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -36,7 +36,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> getKmsEncrypted() {
+    public Output<Boolean> kmsEncrypted() {
         return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
@@ -47,7 +47,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
@@ -58,7 +58,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -69,7 +69,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -80,7 +80,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceVolumeArn")
       private final @Nullable Output<String> sourceVolumeArn;
 
-    public Output<String> getSourceVolumeArn() {
+    public Output<String> sourceVolumeArn() {
         return this.sourceVolumeArn == null ? Codegen.empty() : this.sourceVolumeArn;
     }
 
@@ -91,7 +91,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 
@@ -113,7 +113,7 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="volumeSizeInBytes", required=true)
       private final Output<Integer> volumeSizeInBytes;
 
-    public Output<Integer> getVolumeSizeInBytes() {
+    public Output<Integer> volumeSizeInBytes() {
         return this.volumeSizeInBytes;
     }
 

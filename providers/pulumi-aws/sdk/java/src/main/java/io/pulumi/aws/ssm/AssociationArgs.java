@@ -27,7 +27,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applyOnlyAtCronInterval")
       private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
-    public Output<Boolean> getApplyOnlyAtCronInterval() {
+    public Output<Boolean> applyOnlyAtCronInterval() {
         return this.applyOnlyAtCronInterval == null ? Codegen.empty() : this.applyOnlyAtCronInterval;
     }
 
@@ -38,7 +38,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
-    public Output<String> getAssociationName() {
+    public Output<String> associationName() {
         return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
@@ -49,7 +49,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationTargetParameterName")
       private final @Nullable Output<String> automationTargetParameterName;
 
-    public Output<String> getAutomationTargetParameterName() {
+    public Output<String> automationTargetParameterName() {
         return this.automationTargetParameterName == null ? Codegen.empty() : this.automationTargetParameterName;
     }
 
@@ -60,7 +60,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="complianceSeverity")
       private final @Nullable Output<String> complianceSeverity;
 
-    public Output<String> getComplianceSeverity() {
+    public Output<String> complianceSeverity() {
         return this.complianceSeverity == null ? Codegen.empty() : this.complianceSeverity;
     }
 
@@ -71,7 +71,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
+    public Output<String> documentVersion() {
         return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
@@ -82,7 +82,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -93,7 +93,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
-    public Output<String> getMaxConcurrency() {
+    public Output<String> maxConcurrency() {
         return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
@@ -104,7 +104,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
-    public Output<String> getMaxErrors() {
+    public Output<String> maxErrors() {
         return this.maxErrors == null ? Codegen.empty() : this.maxErrors;
     }
 
@@ -115,7 +115,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -126,7 +126,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputLocation")
       private final @Nullable Output<AssociationOutputLocationArgs> outputLocation;
 
-    public Output<AssociationOutputLocationArgs> getOutputLocation() {
+    public Output<AssociationOutputLocationArgs> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
@@ -137,7 +137,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -148,7 +148,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
@@ -159,7 +159,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targets")
       private final @Nullable Output<List<AssociationTargetArgs>> targets;
 
-    public Output<List<AssociationTargetArgs>> getTargets() {
+    public Output<List<AssociationTargetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 

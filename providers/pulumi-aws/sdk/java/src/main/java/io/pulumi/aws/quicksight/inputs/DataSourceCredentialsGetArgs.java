@@ -24,7 +24,7 @@ public final class DataSourceCredentialsGetArgs extends io.pulumi.resources.Reso
     @Import(name="copySourceArn")
       private final @Nullable Output<String> copySourceArn;
 
-    public Output<String> getCopySourceArn() {
+    public Output<String> copySourceArn() {
         return this.copySourceArn == null ? Codegen.empty() : this.copySourceArn;
     }
 
@@ -35,7 +35,7 @@ public final class DataSourceCredentialsGetArgs extends io.pulumi.resources.Reso
     @Import(name="credentialPair")
       private final @Nullable Output<DataSourceCredentialsCredentialPairGetArgs> credentialPair;
 
-    public Output<DataSourceCredentialsCredentialPairGetArgs> getCredentialPair() {
+    public Output<DataSourceCredentialsCredentialPairGetArgs> credentialPair() {
         return this.credentialPair == null ? Codegen.empty() : this.credentialPair;
     }
 

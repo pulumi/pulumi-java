@@ -16,14 +16,14 @@ public final class GetSigningProfileSignatureValidityPeriod extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
       private final Integer value;
 
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

@@ -42,21 +42,21 @@ public final class FunctionSyncConfig {
      * The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
      * 
     */
-    public Optional<String> getConflictDetection() {
+    public Optional<String> conflictDetection() {
         return Optional.ofNullable(this.conflictDetection);
     }
     /**
      * The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
      * 
     */
-    public Optional<String> getConflictHandler() {
+    public Optional<String> conflictHandler() {
         return Optional.ofNullable(this.conflictHandler);
     }
     /**
      * The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
      * 
     */
-    public Optional<FunctionSyncConfigLambdaConflictHandlerConfig> getLambdaConflictHandlerConfig() {
+    public Optional<FunctionSyncConfigLambdaConflictHandlerConfig> lambdaConflictHandlerConfig() {
         return Optional.ofNullable(this.lambdaConflictHandlerConfig);
     }
 

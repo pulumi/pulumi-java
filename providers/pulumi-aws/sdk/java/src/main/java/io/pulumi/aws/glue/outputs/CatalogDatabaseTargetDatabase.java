@@ -32,14 +32,14 @@ public final class CatalogDatabaseTargetDatabase {
      * ID of the Data Catalog in which the database resides.
      * 
     */
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
     /**
      * Name of the catalog database.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 

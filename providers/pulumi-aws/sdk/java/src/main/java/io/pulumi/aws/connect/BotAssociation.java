@@ -44,7 +44,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -58,7 +58,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * @return Configuration information of an Amazon Lex (V1) bot. Detailed below.
      * 
      */
-    public Output<BotAssociationLexBot> getLexBot() {
+    public Output<BotAssociationLexBot> lexBot() {
         return this.lexBot;
     }
 

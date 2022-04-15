@@ -24,7 +24,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="confirmationTimeoutInMinutes")
       private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
-    public Output<Integer> getConfirmationTimeoutInMinutes() {
+    public Output<Integer> confirmationTimeoutInMinutes() {
         return this.confirmationTimeoutInMinutes == null ? Codegen.empty() : this.confirmationTimeoutInMinutes;
     }
 
@@ -35,7 +35,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deliveryPolicy")
       private final @Nullable Output<String> deliveryPolicy;
 
-    public Output<String> getDeliveryPolicy() {
+    public Output<String> deliveryPolicy() {
         return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
@@ -46,7 +46,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -57,7 +57,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endpointAutoConfirms")
       private final @Nullable Output<Boolean> endpointAutoConfirms;
 
-    public Output<Boolean> getEndpointAutoConfirms() {
+    public Output<Boolean> endpointAutoConfirms() {
         return this.endpointAutoConfirms == null ? Codegen.empty() : this.endpointAutoConfirms;
     }
 
@@ -68,7 +68,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="filterPolicy")
       private final @Nullable Output<String> filterPolicy;
 
-    public Output<String> getFilterPolicy() {
+    public Output<String> filterPolicy() {
         return this.filterPolicy == null ? Codegen.empty() : this.filterPolicy;
     }
 
@@ -79,7 +79,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -90,7 +90,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rawMessageDelivery")
       private final @Nullable Output<Boolean> rawMessageDelivery;
 
-    public Output<Boolean> getRawMessageDelivery() {
+    public Output<Boolean> rawMessageDelivery() {
         return this.rawMessageDelivery == null ? Codegen.empty() : this.rawMessageDelivery;
     }
 
@@ -101,7 +101,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="redrivePolicy")
       private final @Nullable Output<String> redrivePolicy;
 
-    public Output<String> getRedrivePolicy() {
+    public Output<String> redrivePolicy() {
         return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
     }
 
@@ -112,7 +112,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subscriptionRoleArn")
       private final @Nullable Output<String> subscriptionRoleArn;
 
-    public Output<String> getSubscriptionRoleArn() {
+    public Output<String> subscriptionRoleArn() {
         return this.subscriptionRoleArn == null ? Codegen.empty() : this.subscriptionRoleArn;
     }
 
@@ -123,7 +123,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

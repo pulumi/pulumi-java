@@ -22,7 +22,7 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class SigningJobSignedObjectS3Args extends io.pulumi.resources.Reso
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

@@ -24,7 +24,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -35,7 +35,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributor")
       private final @Nullable Output<String> distributor;
 
-    public Output<String> getDistributor() {
+    public Output<String> distributor() {
         return this.distributor == null ? Codegen.empty() : this.distributor;
     }
 
@@ -57,7 +57,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -79,7 +79,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningArtifactParameters", required=true)
       private final Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
-    public Output<ProductProvisioningArtifactParametersArgs> getProvisioningArtifactParameters() {
+    public Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters() {
         return this.provisioningArtifactParameters;
     }
 
@@ -90,7 +90,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportDescription")
       private final @Nullable Output<String> supportDescription;
 
-    public Output<String> getSupportDescription() {
+    public Output<String> supportDescription() {
         return this.supportDescription == null ? Codegen.empty() : this.supportDescription;
     }
 
@@ -101,7 +101,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
@@ -112,7 +112,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
-    public Output<String> getSupportUrl() {
+    public Output<String> supportUrl() {
         return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
@@ -123,7 +123,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

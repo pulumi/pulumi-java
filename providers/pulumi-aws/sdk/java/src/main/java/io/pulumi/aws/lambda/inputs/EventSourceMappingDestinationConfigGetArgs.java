@@ -22,7 +22,7 @@ public final class EventSourceMappingDestinationConfigGetArgs extends io.pulumi.
     @Import(name="onFailure")
       private final @Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure;
 
-    public Output<EventSourceMappingDestinationConfigOnFailureGetArgs> getOnFailure() {
+    public Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure() {
         return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 

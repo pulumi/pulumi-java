@@ -23,7 +23,7 @@ public final class GroupWarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Output<Integer> getMaxGroupPreparedCapacity() {
+    public Output<Integer> maxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
     }
 
@@ -34,7 +34,7 @@ public final class GroupWarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -45,7 +45,7 @@ public final class GroupWarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
-    public Output<String> getPoolState() {
+    public Output<String> poolState() {
         return this.poolState == null ? Codegen.empty() : this.poolState;
     }
 

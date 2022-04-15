@@ -21,7 +21,7 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
     @Import(name="portMapping", required=true)
       private final Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
-    public Output<VirtualRouterSpecListenerPortMappingArgs> getPortMapping() {
+    public Output<VirtualRouterSpecListenerPortMappingArgs> portMapping() {
         return this.portMapping;
     }
 

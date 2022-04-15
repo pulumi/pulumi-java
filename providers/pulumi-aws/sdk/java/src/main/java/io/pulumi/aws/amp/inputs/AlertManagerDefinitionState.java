@@ -22,7 +22,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
     @Import(name="definition")
       private final @Nullable Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
@@ -33,7 +33,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

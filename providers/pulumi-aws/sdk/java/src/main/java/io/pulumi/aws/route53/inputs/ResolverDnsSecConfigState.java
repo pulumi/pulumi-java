@@ -22,7 +22,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -44,7 +44,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -55,7 +55,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     @Import(name="validationStatus")
       private final @Nullable Output<String> validationStatus;
 
-    public Output<String> getValidationStatus() {
+    public Output<String> validationStatus() {
         return this.validationStatus == null ? Codegen.empty() : this.validationStatus;
     }
 

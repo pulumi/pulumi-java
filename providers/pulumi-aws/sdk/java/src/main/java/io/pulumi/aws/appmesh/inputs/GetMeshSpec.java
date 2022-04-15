@@ -20,7 +20,7 @@ public final class GetMeshSpec extends io.pulumi.resources.InvokeArgs {
     @Import(name="egressFilters", required=true)
       private final List<GetMeshSpecEgressFilter> egressFilters;
 
-    public List<GetMeshSpecEgressFilter> getEgressFilters() {
+    public List<GetMeshSpecEgressFilter> egressFilters() {
         return this.egressFilters;
     }
 

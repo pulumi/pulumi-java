@@ -25,7 +25,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -39,7 +39,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
@@ -51,7 +51,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerMasterKeySpec")
       private final @Nullable Output<String> customerMasterKeySpec;
 
-    public Output<String> getCustomerMasterKeySpec() {
+    public Output<String> customerMasterKeySpec() {
         return this.customerMasterKeySpec == null ? Codegen.empty() : this.customerMasterKeySpec;
     }
 
@@ -64,7 +64,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> getDeletionWindowInDays() {
+    public Output<Integer> deletionWindowInDays() {
         return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
     }
 
@@ -75,7 +75,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -86,7 +86,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableKeyRotation")
       private final @Nullable Output<Boolean> enableKeyRotation;
 
-    public Output<Boolean> getEnableKeyRotation() {
+    public Output<Boolean> enableKeyRotation() {
         return this.enableKeyRotation == null ? Codegen.empty() : this.enableKeyRotation;
     }
 
@@ -97,7 +97,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -108,7 +108,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -120,7 +120,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
-    public Output<String> getKeyUsage() {
+    public Output<String> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
@@ -131,7 +131,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiRegion")
       private final @Nullable Output<Boolean> multiRegion;
 
-    public Output<Boolean> getMultiRegion() {
+    public Output<Boolean> multiRegion() {
         return this.multiRegion == null ? Codegen.empty() : this.multiRegion;
     }
 
@@ -142,7 +142,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -153,7 +153,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -164,7 +164,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

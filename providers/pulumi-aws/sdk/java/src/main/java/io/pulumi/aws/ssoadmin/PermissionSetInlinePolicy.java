@@ -41,7 +41,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The IAM inline policy to attach to a Permission Set.
      * 
      */
-    public Output<String> getInlinePolicy() {
+    public Output<String> inlinePolicy() {
         return this.inlinePolicy;
     }
     /**
@@ -55,7 +55,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -69,7 +69,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * @return The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 

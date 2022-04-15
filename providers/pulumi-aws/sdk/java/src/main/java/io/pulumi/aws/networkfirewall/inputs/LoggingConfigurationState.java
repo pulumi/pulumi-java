@@ -23,7 +23,7 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     @Import(name="firewallArn")
       private final @Nullable Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn == null ? Codegen.empty() : this.firewallArn;
     }
 
@@ -34,7 +34,7 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     @Import(name="loggingConfiguration")
       private final @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<LoggingConfigurationLoggingConfigurationGetArgs> getLoggingConfiguration() {
+    public Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 

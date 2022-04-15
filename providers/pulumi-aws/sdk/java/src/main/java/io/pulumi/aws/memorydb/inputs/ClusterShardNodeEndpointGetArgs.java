@@ -23,7 +23,7 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterShardNodeEndpointGetArgs extends io.pulumi.resources.R
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

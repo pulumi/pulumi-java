@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> getParameters() {
+    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="aclName")
       private final @Nullable Output<String> aclName;
 
-    public Output<String> getAclName() {
+    public Output<String> aclName() {
         return this.aclName == null ? Codegen.empty() : this.aclName;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -51,21 +51,21 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
     @Import(name="clusterEndpoints")
       private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
-    public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
+    public Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints() {
         return this.clusterEndpoints == null ? Codegen.empty() : this.clusterEndpoints;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enginePatchVersion")
       private final @Nullable Output<String> enginePatchVersion;
 
-    public Output<String> getEnginePatchVersion() {
+    public Output<String> enginePatchVersion() {
         return this.enginePatchVersion == null ? Codegen.empty() : this.enginePatchVersion;
     }
 
@@ -87,7 +87,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -98,7 +98,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="finalSnapshotName")
       private final @Nullable Output<String> finalSnapshotName;
 
-    public Output<String> getFinalSnapshotName() {
+    public Output<String> finalSnapshotName() {
         return this.finalSnapshotName == null ? Codegen.empty() : this.finalSnapshotName;
     }
 
@@ -109,7 +109,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -120,7 +120,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -132,7 +132,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -143,7 +143,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -154,7 +154,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
@@ -165,7 +165,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numReplicasPerShard")
       private final @Nullable Output<Integer> numReplicasPerShard;
 
-    public Output<Integer> getNumReplicasPerShard() {
+    public Output<Integer> numReplicasPerShard() {
         return this.numReplicasPerShard == null ? Codegen.empty() : this.numReplicasPerShard;
     }
 
@@ -176,7 +176,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numShards")
       private final @Nullable Output<Integer> numShards;
 
-    public Output<Integer> getNumShards() {
+    public Output<Integer> numShards() {
         return this.numShards == null ? Codegen.empty() : this.numShards;
     }
 
@@ -187,7 +187,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
@@ -198,7 +198,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -209,7 +209,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -220,7 +220,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shards")
       private final @Nullable Output<List<ClusterShardGetArgs>> shards;
 
-    public Output<List<ClusterShardGetArgs>> getShards() {
+    public Output<List<ClusterShardGetArgs>> shards() {
         return this.shards == null ? Codegen.empty() : this.shards;
     }
 
@@ -231,7 +231,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotArns")
       private final @Nullable Output<String> snapshotArns;
 
-    public Output<String> getSnapshotArns() {
+    public Output<String> snapshotArns() {
         return this.snapshotArns == null ? Codegen.empty() : this.snapshotArns;
     }
 
@@ -242,7 +242,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
@@ -253,7 +253,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Output<Integer> getSnapshotRetentionLimit() {
+    public Output<Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
     }
 
@@ -264,7 +264,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
     }
 
@@ -275,7 +275,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
@@ -286,7 +286,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
@@ -297,7 +297,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -308,7 +308,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -319,7 +319,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tlsEnabled")
       private final @Nullable Output<Boolean> tlsEnabled;
 
-    public Output<Boolean> getTlsEnabled() {
+    public Output<Boolean> tlsEnabled() {
         return this.tlsEnabled == null ? Codegen.empty() : this.tlsEnabled;
     }
 

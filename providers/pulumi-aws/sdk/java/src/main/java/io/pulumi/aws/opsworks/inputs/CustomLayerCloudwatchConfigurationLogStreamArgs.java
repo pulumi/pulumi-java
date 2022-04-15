@@ -23,7 +23,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
-    public Output<Integer> getBatchCount() {
+    public Output<Integer> batchCount() {
         return this.batchCount == null ? Codegen.empty() : this.batchCount;
     }
 
@@ -34,7 +34,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
+    public Output<Integer> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -45,7 +45,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="bufferDuration")
       private final @Nullable Output<Integer> bufferDuration;
 
-    public Output<Integer> getBufferDuration() {
+    public Output<Integer> bufferDuration() {
         return this.bufferDuration == null ? Codegen.empty() : this.bufferDuration;
     }
 
@@ -56,7 +56,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="datetimeFormat")
       private final @Nullable Output<String> datetimeFormat;
 
-    public Output<String> getDatetimeFormat() {
+    public Output<String> datetimeFormat() {
         return this.datetimeFormat == null ? Codegen.empty() : this.datetimeFormat;
     }
 
@@ -67,7 +67,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -78,7 +78,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="file", required=true)
       private final Output<String> file;
 
-    public Output<String> getFile() {
+    public Output<String> file() {
         return this.file;
     }
 
@@ -89,7 +89,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="fileFingerprintLines")
       private final @Nullable Output<String> fileFingerprintLines;
 
-    public Output<String> getFileFingerprintLines() {
+    public Output<String> fileFingerprintLines() {
         return this.fileFingerprintLines == null ? Codegen.empty() : this.fileFingerprintLines;
     }
 
@@ -100,7 +100,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="initialPosition")
       private final @Nullable Output<String> initialPosition;
 
-    public Output<String> getInitialPosition() {
+    public Output<String> initialPosition() {
         return this.initialPosition == null ? Codegen.empty() : this.initialPosition;
     }
 
@@ -111,7 +111,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -122,7 +122,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="multilineStartPattern")
       private final @Nullable Output<String> multilineStartPattern;
 
-    public Output<String> getMultilineStartPattern() {
+    public Output<String> multilineStartPattern() {
         return this.multilineStartPattern == null ? Codegen.empty() : this.multilineStartPattern;
     }
 
@@ -133,7 +133,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamArgs extends io.pu
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

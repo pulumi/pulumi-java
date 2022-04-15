@@ -21,7 +21,7 @@ public final class AnalyticsApplicationOutputSchemaGetArgs extends io.pulumi.res
     @Import(name="recordFormatType", required=true)
       private final Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
+    public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 

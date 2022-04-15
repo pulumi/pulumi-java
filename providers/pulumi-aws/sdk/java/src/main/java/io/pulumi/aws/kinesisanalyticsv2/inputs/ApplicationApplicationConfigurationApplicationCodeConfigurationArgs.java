@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="codeContent")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent() {
         return this.codeContent == null ? Codegen.empty() : this.codeContent;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="codeContentType", required=true)
       private final Output<String> codeContentType;
 
-    public Output<String> getCodeContentType() {
+    public Output<String> codeContentType() {
         return this.codeContentType;
     }
 

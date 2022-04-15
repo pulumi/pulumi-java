@@ -16,14 +16,14 @@ public final class GetListenerDefaultActionForwardStickiness extends io.pulumi.r
     @Import(name="duration", required=true)
       private final Integer duration;
 
-    public Integer getDuration() {
+    public Integer duration() {
         return this.duration;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

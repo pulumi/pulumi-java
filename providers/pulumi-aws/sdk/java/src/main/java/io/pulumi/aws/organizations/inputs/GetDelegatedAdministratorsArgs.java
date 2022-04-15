@@ -21,7 +21,7 @@ public final class GetDelegatedAdministratorsArgs extends io.pulumi.resources.In
     @Import(name="servicePrincipal")
       private final @Nullable String servicePrincipal;
 
-    public Optional<String> getServicePrincipal() {
+    public Optional<String> servicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
     }
 

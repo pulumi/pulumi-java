@@ -46,7 +46,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Client VPN endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Information about the authentication method to be used to authenticate clients.
      * 
      */
-    public Output<List<EndpointAuthenticationOption>> getAuthenticationOptions() {
+    public Output<List<EndpointAuthenticationOption>> authenticationOptions() {
         return this.authenticationOptions;
     }
     /**
@@ -74,7 +74,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
      * 
      */
-    public Output<String> getClientCidrBlock() {
+    public Output<String> clientCidrBlock() {
         return this.clientCidrBlock;
     }
     /**
@@ -88,7 +88,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Information about the client connection logging options.
      * 
      */
-    public Output<EndpointConnectionLogOptions> getConnectionLogOptions() {
+    public Output<EndpointConnectionLogOptions> connectionLogOptions() {
         return this.connectionLogOptions;
     }
     /**
@@ -102,7 +102,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A brief description of the Client VPN endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -116,7 +116,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The DNS name to be used by clients when establishing their VPN session.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -130,7 +130,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDnsServers() {
+    public Output</* @Nullable */ List<String>> dnsServers() {
         return this.dnsServers;
     }
     /**
@@ -144,7 +144,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
      * 
      */
-    public Output</* @Nullable */ String> getSelfServicePortal() {
+    public Output</* @Nullable */ String> selfServicePortal() {
         return this.selfServicePortal;
     }
     /**
@@ -158,7 +158,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The ARN of the ACM server certificate.
      * 
      */
-    public Output<String> getServerCertificateArn() {
+    public Output<String> serverCertificateArn() {
         return this.serverCertificateArn;
     }
     /**
@@ -172,7 +172,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSplitTunnel() {
+    public Output</* @Nullable */ Boolean> splitTunnel() {
         return this.splitTunnel;
     }
     /**
@@ -186,7 +186,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The current state of the Client VPN endpoint.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -200,7 +200,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -214,7 +214,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -228,7 +228,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The transport protocol to be used by the VPN session. Default value is `udp`.
      * 
      */
-    public Output</* @Nullable */ String> getTransportProtocol() {
+    public Output</* @Nullable */ String> transportProtocol() {
         return this.transportProtocol;
     }
 

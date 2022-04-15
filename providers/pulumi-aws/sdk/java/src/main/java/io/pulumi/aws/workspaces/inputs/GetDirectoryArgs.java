@@ -22,7 +22,7 @@ public final class GetDirectoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="directoryId", required=true)
       private final String directoryId;
 
-    public String getDirectoryId() {
+    public String directoryId() {
         return this.directoryId;
     }
 
@@ -33,7 +33,7 @@ public final class GetDirectoryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

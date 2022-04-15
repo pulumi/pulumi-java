@@ -23,7 +23,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="connectionEvents")
       private final @Nullable Output<List<String>> connectionEvents;
 
-    public Output<List<String>> getConnectionEvents() {
+    public Output<List<String>> connectionEvents() {
         return this.connectionEvents == null ? Codegen.empty() : this.connectionEvents;
     }
 
@@ -34,7 +34,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="connectionNotificationArn")
       private final @Nullable Output<String> connectionNotificationArn;
 
-    public Output<String> getConnectionNotificationArn() {
+    public Output<String> connectionNotificationArn() {
         return this.connectionNotificationArn == null ? Codegen.empty() : this.connectionNotificationArn;
     }
 
@@ -45,7 +45,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 
@@ -56,7 +56,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -67,7 +67,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
@@ -78,7 +78,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
     }
 

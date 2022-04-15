@@ -58,43 +58,43 @@ public final class GetAvailabilityZonesResult {
         this.zoneIds = zoneIds;
     }
 
-    public Optional<Boolean> getAllAvailabilityZones() {
+    public Optional<Boolean> allAvailabilityZones() {
         return Optional.ofNullable(this.allAvailabilityZones);
     }
-    public List<String> getExcludeNames() {
+    public List<String> excludeNames() {
         return this.excludeNames == null ? List.of() : this.excludeNames;
     }
-    public List<String> getExcludeZoneIds() {
+    public List<String> excludeZoneIds() {
         return this.excludeZoneIds == null ? List.of() : this.excludeZoneIds;
     }
-    public List<GetAvailabilityZonesFilter> getFilters() {
+    public List<GetAvailabilityZonesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public List<String> getGroupNames() {
+    public List<String> groupNames() {
         return this.groupNames;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of the Availability Zone names available to the account.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A list of the Availability Zone IDs available to the account.
      * 
     */
-    public List<String> getZoneIds() {
+    public List<String> zoneIds() {
         return this.zoneIds;
     }
 

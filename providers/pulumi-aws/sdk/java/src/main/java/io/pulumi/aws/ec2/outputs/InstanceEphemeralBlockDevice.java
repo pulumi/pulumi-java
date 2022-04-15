@@ -42,21 +42,21 @@ public final class InstanceEphemeralBlockDevice {
      * The name of the block device to mount on the instance.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Suppresses the specified device included in the AMI's block device mapping.
      * 
     */
-    public Optional<Boolean> getNoDevice() {
+    public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

@@ -23,7 +23,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="catalogId", required=true)
       private final String catalogId;
 
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
 
@@ -34,7 +34,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="columnNames")
       private final @Nullable List<String> columnNames;
 
-    public List<String> getColumnNames() {
+    public List<String> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
 
@@ -45,7 +45,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -56,7 +56,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="excludedColumnNames")
       private final @Nullable List<String> excludedColumnNames;
 
-    public List<String> getExcludedColumnNames() {
+    public List<String> excludedColumnNames() {
         return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
     }
 
@@ -67,7 +67,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
     @Import(name="wildcard")
       private final @Nullable Boolean wildcard;
 
-    public Optional<Boolean> getWildcard() {
+    public Optional<Boolean> wildcard() {
         return this.wildcard == null ? Optional.empty() : Optional.ofNullable(this.wildcard);
     }
 

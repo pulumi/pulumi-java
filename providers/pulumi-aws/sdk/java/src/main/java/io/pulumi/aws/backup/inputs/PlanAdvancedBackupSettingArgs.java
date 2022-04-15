@@ -22,7 +22,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
     @Import(name="backupOptions", required=true)
       private final Output<Map<String,String>> backupOptions;
 
-    public Output<Map<String,String>> getBackupOptions() {
+    public Output<Map<String,String>> backupOptions() {
         return this.backupOptions;
     }
 
@@ -33,7 +33,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 

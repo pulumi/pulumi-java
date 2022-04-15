@@ -22,7 +22,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
     @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn == null ? Codegen.empty() : this.policyArn;
     }
 
@@ -33,7 +33,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

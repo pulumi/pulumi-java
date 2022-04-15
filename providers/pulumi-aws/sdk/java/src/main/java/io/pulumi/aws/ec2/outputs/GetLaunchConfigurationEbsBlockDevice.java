@@ -83,63 +83,63 @@ public final class GetLaunchConfigurationEbsBlockDevice {
      * Whether the EBS Volume will be deleted on instance termination.
      * 
     */
-    public Boolean getDeleteOnTermination() {
+    public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
     /**
      * The Name of the device.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Whether the volume is Encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
     /**
      * The provisioned IOPs of the volume.
      * 
     */
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
     /**
      * Whether the device in the block device mapping of the AMI is suppressed.
      * 
     */
-    public Boolean getNoDevice() {
+    public Boolean noDevice() {
         return this.noDevice;
     }
     /**
      * The Snapshot ID of the mount.
      * 
     */
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
     /**
      * The Throughput of the volume.
      * 
     */
-    public Boolean getThroughput() {
+    public Boolean throughput() {
         return this.throughput;
     }
     /**
      * The Size of the volume.
      * 
     */
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
     /**
      * The Type of the volume.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

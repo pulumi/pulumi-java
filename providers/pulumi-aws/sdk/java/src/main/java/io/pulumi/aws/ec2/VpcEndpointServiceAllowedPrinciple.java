@@ -38,7 +38,7 @@ public class VpcEndpointServiceAllowedPrinciple extends io.pulumi.resources.Cust
      * @return The ARN of the principal to allow permissions.
      * 
      */
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
     /**
@@ -52,7 +52,7 @@ public class VpcEndpointServiceAllowedPrinciple extends io.pulumi.resources.Cust
      * @return The ID of the VPC endpoint service to allow permission.
      * 
      */
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 

@@ -35,14 +35,14 @@ public final class ResolverRuleTargetIp {
      * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
      * 
     */
-    public String getIp() {
+    public String ip() {
         return this.ip;
     }
     /**
      * The port at `ip` that you want to forward DNS queries to. Default value is `53`
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

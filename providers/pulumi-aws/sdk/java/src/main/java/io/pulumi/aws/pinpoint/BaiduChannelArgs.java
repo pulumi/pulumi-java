@@ -23,7 +23,7 @@ public final class BaiduChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
@@ -34,7 +34,7 @@ public final class BaiduChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -45,7 +45,7 @@ public final class BaiduChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -56,7 +56,7 @@ public final class BaiduChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretKey", required=true)
       private final Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey;
     }
 

@@ -22,7 +22,7 @@ public final class InstanceCreditSpecificationGetArgs extends io.pulumi.resource
     @Import(name="cpuCredits")
       private final @Nullable Output<String> cpuCredits;
 
-    public Output<String> getCpuCredits() {
+    public Output<String> cpuCredits() {
         return this.cpuCredits == null ? Codegen.empty() : this.cpuCredits;
     }
 

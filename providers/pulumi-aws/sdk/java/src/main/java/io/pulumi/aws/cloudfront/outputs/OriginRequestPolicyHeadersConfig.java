@@ -23,10 +23,10 @@ public final class OriginRequestPolicyHeadersConfig {
         this.headers = headers;
     }
 
-    public Optional<String> getHeaderBehavior() {
+    public Optional<String> headerBehavior() {
         return Optional.ofNullable(this.headerBehavior);
     }
-    public Optional<OriginRequestPolicyHeadersConfigHeaders> getHeaders() {
+    public Optional<OriginRequestPolicyHeadersConfigHeaders> headers() {
         return Optional.ofNullable(this.headers);
     }
 

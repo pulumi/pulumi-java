@@ -22,7 +22,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseConfigurationArn")
       private final @Nullable Output<String> licenseConfigurationArn;
 
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn == null ? Codegen.empty() : this.licenseConfigurationArn;
     }
 
@@ -33,7 +33,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 

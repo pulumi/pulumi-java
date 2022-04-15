@@ -22,7 +22,7 @@ public final class ScheduledActionScalableTargetActionArgs extends io.pulumi.res
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
+    public Output<Integer> maxCapacity() {
         return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
@@ -33,7 +33,7 @@ public final class ScheduledActionScalableTargetActionArgs extends io.pulumi.res
     @Import(name="minCapacity")
       private final @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> getMinCapacity() {
+    public Output<Integer> minCapacity() {
         return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 

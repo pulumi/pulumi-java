@@ -23,7 +23,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit;
     }
 
@@ -34,7 +34,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
-    public Output<Integer> getOffset() {
+    public Output<Integer> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 
@@ -45,7 +45,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
     @Import(name="period", required=true)
       private final Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period;
     }
 

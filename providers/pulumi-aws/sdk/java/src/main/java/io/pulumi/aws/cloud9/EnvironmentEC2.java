@@ -34,7 +34,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The ARN of the environment.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The number of minutes until the running instance is shut down after the environment has last been used.
      * 
      */
-    public Output</* @Nullable */ Integer> getAutomaticStopTimeMinutes() {
+    public Output</* @Nullable */ Integer> automaticStopTimeMinutes() {
         return this.automaticStopTimeMinutes;
     }
     /**
@@ -62,7 +62,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The description of the environment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The type of instance to connect to the environment, e.g., `t2.micro`.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -90,7 +90,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The name of the environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
      * 
      */
-    public Output<String> getOwnerArn() {
+    public Output<String> ownerArn() {
         return this.ownerArn;
     }
     /**
@@ -118,7 +118,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -132,7 +132,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -146,7 +146,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -160,7 +160,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * @return The type of the environment (e.g., `ssh` or `ec2`)
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

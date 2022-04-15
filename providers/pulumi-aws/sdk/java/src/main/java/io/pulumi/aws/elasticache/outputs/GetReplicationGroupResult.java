@@ -129,108 +129,108 @@ public final class GetReplicationGroupResult {
      * The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Specifies whether an AuthToken (password) is enabled.
      * 
     */
-    public Boolean getAuthTokenEnabled() {
+    public Boolean authTokenEnabled() {
         return this.authTokenEnabled;
     }
     /**
      * A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
      * 
     */
-    public Boolean getAutomaticFailoverEnabled() {
+    public Boolean automaticFailoverEnabled() {
         return this.automaticFailoverEnabled;
     }
     /**
      * The configuration endpoint address to allow host discovery.
      * 
     */
-    public String getConfigurationEndpointAddress() {
+    public String configurationEndpointAddress() {
         return this.configurationEndpointAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identifiers of all the nodes that are part of this replication group.
      * 
     */
-    public List<String> getMemberClusters() {
+    public List<String> memberClusters() {
         return this.memberClusters;
     }
     /**
      * Specifies whether Multi-AZ Support is enabled for the replication group.
      * 
     */
-    public Boolean getMultiAzEnabled() {
+    public Boolean multiAzEnabled() {
         return this.multiAzEnabled;
     }
     /**
      * The cluster node type.
      * 
     */
-    public String getNodeType() {
+    public String nodeType() {
         return this.nodeType;
     }
     /**
      * The number of cache clusters that the replication group has.
      * 
     */
-    public Integer getNumberCacheClusters() {
+    public Integer numberCacheClusters() {
         return this.numberCacheClusters;
     }
     /**
      * The port number on which the configuration endpoint will accept connections.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The endpoint of the primary node in this node group (shard).
      * 
     */
-    public String getPrimaryEndpointAddress() {
+    public String primaryEndpointAddress() {
         return this.primaryEndpointAddress;
     }
     /**
      * The endpoint of the reader node in this node group (shard).
      * 
     */
-    public String getReaderEndpointAddress() {
+    public String readerEndpointAddress() {
         return this.readerEndpointAddress;
     }
     /**
      * The description of the replication group.
      * 
     */
-    public String getReplicationGroupDescription() {
+    public String replicationGroupDescription() {
         return this.replicationGroupDescription;
     }
-    public String getReplicationGroupId() {
+    public String replicationGroupId() {
         return this.replicationGroupId;
     }
     /**
      * The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
      * 
     */
-    public Integer getSnapshotRetentionLimit() {
+    public Integer snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
      * The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
      * 
     */
-    public String getSnapshotWindow() {
+    public String snapshotWindow() {
         return this.snapshotWindow;
     }
 

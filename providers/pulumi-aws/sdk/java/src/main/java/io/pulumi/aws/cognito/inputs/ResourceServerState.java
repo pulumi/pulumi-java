@@ -24,7 +24,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
@@ -35,7 +35,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopeIdentifiers")
       private final @Nullable Output<List<String>> scopeIdentifiers;
 
-    public Output<List<String>> getScopeIdentifiers() {
+    public Output<List<String>> scopeIdentifiers() {
         return this.scopeIdentifiers == null ? Codegen.empty() : this.scopeIdentifiers;
     }
 
@@ -57,14 +57,14 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopes")
       private final @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
 
-    public Output<List<ResourceServerScopeGetArgs>> getScopes() {
+    public Output<List<ResourceServerScopeGetArgs>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 

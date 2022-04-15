@@ -24,7 +24,7 @@ public final class VpcPeeringConnectionRequesterArgs extends io.pulumi.resources
     @Import(name="allowClassicLinkToRemoteVpc")
       private final @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
-    public Output<Boolean> getAllowClassicLinkToRemoteVpc() {
+    public Output<Boolean> allowClassicLinkToRemoteVpc() {
         return this.allowClassicLinkToRemoteVpc == null ? Codegen.empty() : this.allowClassicLinkToRemoteVpc;
     }
 
@@ -36,7 +36,7 @@ public final class VpcPeeringConnectionRequesterArgs extends io.pulumi.resources
     @Import(name="allowRemoteVpcDnsResolution")
       private final @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
-    public Output<Boolean> getAllowRemoteVpcDnsResolution() {
+    public Output<Boolean> allowRemoteVpcDnsResolution() {
         return this.allowRemoteVpcDnsResolution == null ? Codegen.empty() : this.allowRemoteVpcDnsResolution;
     }
 
@@ -49,7 +49,7 @@ public final class VpcPeeringConnectionRequesterArgs extends io.pulumi.resources
     @Import(name="allowVpcToRemoteClassicLink")
       private final @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
-    public Output<Boolean> getAllowVpcToRemoteClassicLink() {
+    public Output<Boolean> allowVpcToRemoteClassicLink() {
         return this.allowVpcToRemoteClassicLink == null ? Codegen.empty() : this.allowVpcToRemoteClassicLink;
     }
 

@@ -49,7 +49,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IP Set that this statement references.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +63,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The web ACL capacity units (WCUs) currently being used by this web ACL.
      * 
      */
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
     /**
@@ -77,7 +77,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    public Output</* @Nullable */ List<WebAclCustomResponseBody>> getCustomResponseBodies() {
+    public Output</* @Nullable */ List<WebAclCustomResponseBody>> customResponseBodies() {
         return this.customResponseBodies;
     }
     /**
@@ -91,7 +91,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
-    public Output<WebAclDefaultAction> getDefaultAction() {
+    public Output<WebAclDefaultAction> defaultAction() {
         return this.defaultAction;
     }
     /**
@@ -105,13 +105,13 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return A friendly description of the WebACL.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="lockToken", type=String.class, parameters={})
     private Output<String> lockToken;
 
-    public Output<String> getLockToken() {
+    public Output<String> lockToken() {
         return this.lockToken;
     }
     /**
@@ -125,7 +125,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The label string.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -139,7 +139,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    public Output</* @Nullable */ List<WebAclRule>> getRules() {
+    public Output</* @Nullable */ List<WebAclRule>> rules() {
         return this.rules;
     }
     /**
@@ -153,7 +153,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -167,7 +167,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -181,7 +181,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -195,7 +195,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    public Output<WebAclVisibilityConfig> getVisibilityConfig() {
+    public Output<WebAclVisibilityConfig> visibilityConfig() {
         return this.visibilityConfig;
     }
 

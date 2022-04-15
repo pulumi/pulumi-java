@@ -23,7 +23,7 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modes")
       private final @Nullable Output<List<String>> modes;
 
-    public Output<List<String>> getModes() {
+    public Output<List<String>> modes() {
         return this.modes == null ? Codegen.empty() : this.modes;
     }
 
@@ -45,7 +45,7 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVolumeFilter> filters;
 
-    public List<GetVolumeFilter> getFilters() {
+    public List<GetVolumeFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -39,7 +39,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -50,7 +50,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -34,7 +34,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="metricTransformation")
       private final @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
 
-    public Output<LogMetricFilterMetricTransformationGetArgs> getMetricTransformation() {
+    public Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation() {
         return this.metricTransformation == null ? Codegen.empty() : this.metricTransformation;
     }
 
@@ -45,7 +45,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 

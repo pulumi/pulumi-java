@@ -22,7 +22,7 @@ public final class DeviceFleetOutputConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -33,7 +33,7 @@ public final class DeviceFleetOutputConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="s3OutputLocation", required=true)
       private final Output<String> s3OutputLocation;
 
-    public Output<String> getS3OutputLocation() {
+    public Output<String> s3OutputLocation() {
         return this.s3OutputLocation;
     }
 

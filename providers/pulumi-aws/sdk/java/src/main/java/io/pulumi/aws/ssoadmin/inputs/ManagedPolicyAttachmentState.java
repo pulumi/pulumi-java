@@ -22,7 +22,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
@@ -33,7 +33,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="managedPolicyArn")
       private final @Nullable Output<String> managedPolicyArn;
 
-    public Output<String> getManagedPolicyArn() {
+    public Output<String> managedPolicyArn() {
         return this.managedPolicyArn == null ? Codegen.empty() : this.managedPolicyArn;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="managedPolicyName")
       private final @Nullable Output<String> managedPolicyName;
 
-    public Output<String> getManagedPolicyName() {
+    public Output<String> managedPolicyName() {
         return this.managedPolicyName == null ? Codegen.empty() : this.managedPolicyName;
     }
 
@@ -55,7 +55,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 

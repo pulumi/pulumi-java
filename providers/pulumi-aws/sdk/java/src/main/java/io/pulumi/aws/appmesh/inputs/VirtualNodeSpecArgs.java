@@ -27,7 +27,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="backendDefaults")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsArgs> backendDefaults;
 
-    public Output<VirtualNodeSpecBackendDefaultsArgs> getBackendDefaults() {
+    public Output<VirtualNodeSpecBackendDefaultsArgs> backendDefaults() {
         return this.backendDefaults == null ? Codegen.empty() : this.backendDefaults;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="backends")
       private final @Nullable Output<List<VirtualNodeSpecBackendArgs>> backends;
 
-    public Output<List<VirtualNodeSpecBackendArgs>> getBackends() {
+    public Output<List<VirtualNodeSpecBackendArgs>> backends() {
         return this.backends == null ? Codegen.empty() : this.backends;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="listener")
       private final @Nullable Output<VirtualNodeSpecListenerArgs> listener;
 
-    public Output<VirtualNodeSpecListenerArgs> getListener() {
+    public Output<VirtualNodeSpecListenerArgs> listener() {
         return this.listener == null ? Codegen.empty() : this.listener;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logging")
       private final @Nullable Output<VirtualNodeSpecLoggingArgs> logging;
 
-    public Output<VirtualNodeSpecLoggingArgs> getLogging() {
+    public Output<VirtualNodeSpecLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -71,7 +71,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceDiscovery")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryArgs> serviceDiscovery;
 
-    public Output<VirtualNodeSpecServiceDiscoveryArgs> getServiceDiscovery() {
+    public Output<VirtualNodeSpecServiceDiscoveryArgs> serviceDiscovery() {
         return this.serviceDiscovery == null ? Codegen.empty() : this.serviceDiscovery;
     }
 

@@ -17,77 +17,77 @@ public final class GetBrokerLdapServerMetadata extends io.pulumi.resources.Invok
     @Import(name="hosts", required=true)
       private final List<String> hosts;
 
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
 
     @Import(name="roleBase", required=true)
       private final String roleBase;
 
-    public String getRoleBase() {
+    public String roleBase() {
         return this.roleBase;
     }
 
     @Import(name="roleName", required=true)
       private final String roleName;
 
-    public String getRoleName() {
+    public String roleName() {
         return this.roleName;
     }
 
     @Import(name="roleSearchMatching", required=true)
       private final String roleSearchMatching;
 
-    public String getRoleSearchMatching() {
+    public String roleSearchMatching() {
         return this.roleSearchMatching;
     }
 
     @Import(name="roleSearchSubtree", required=true)
       private final Boolean roleSearchSubtree;
 
-    public Boolean getRoleSearchSubtree() {
+    public Boolean roleSearchSubtree() {
         return this.roleSearchSubtree;
     }
 
     @Import(name="serviceAccountPassword", required=true)
       private final String serviceAccountPassword;
 
-    public String getServiceAccountPassword() {
+    public String serviceAccountPassword() {
         return this.serviceAccountPassword;
     }
 
     @Import(name="serviceAccountUsername", required=true)
       private final String serviceAccountUsername;
 
-    public String getServiceAccountUsername() {
+    public String serviceAccountUsername() {
         return this.serviceAccountUsername;
     }
 
     @Import(name="userBase", required=true)
       private final String userBase;
 
-    public String getUserBase() {
+    public String userBase() {
         return this.userBase;
     }
 
     @Import(name="userRoleName", required=true)
       private final String userRoleName;
 
-    public String getUserRoleName() {
+    public String userRoleName() {
         return this.userRoleName;
     }
 
     @Import(name="userSearchMatching", required=true)
       private final String userSearchMatching;
 
-    public String getUserSearchMatching() {
+    public String userSearchMatching() {
         return this.userSearchMatching;
     }
 
     @Import(name="userSearchSubtree", required=true)
       private final Boolean userSearchSubtree;
 
-    public Boolean getUserSearchSubtree() {
+    public Boolean userSearchSubtree() {
         return this.userSearchSubtree;
     }
 

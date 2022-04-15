@@ -19,7 +19,7 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends io.pulumi.re
     @Import(name="virtualNodeName", required=true)
       private final String virtualNodeName;
 
-    public String getVirtualNodeName() {
+    public String virtualNodeName() {
         return this.virtualNodeName;
     }
 

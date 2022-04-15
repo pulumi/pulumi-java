@@ -40,7 +40,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return ARN of the routing control.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return ARN of the cluster in which this routing control will reside.
      * 
      */
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -68,7 +68,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return ARN of the control panel in which this routing control will reside.
      * 
      */
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn;
     }
     /**
@@ -82,7 +82,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return The name describing the routing control.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +96,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

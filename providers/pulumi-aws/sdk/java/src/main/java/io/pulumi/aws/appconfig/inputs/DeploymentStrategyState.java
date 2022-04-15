@@ -25,7 +25,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="deploymentDurationInMinutes")
       private final @Nullable Output<Integer> deploymentDurationInMinutes;
 
-    public Output<Integer> getDeploymentDurationInMinutes() {
+    public Output<Integer> deploymentDurationInMinutes() {
         return this.deploymentDurationInMinutes == null ? Codegen.empty() : this.deploymentDurationInMinutes;
     }
 
@@ -47,7 +47,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="finalBakeTimeInMinutes")
       private final @Nullable Output<Integer> finalBakeTimeInMinutes;
 
-    public Output<Integer> getFinalBakeTimeInMinutes() {
+    public Output<Integer> finalBakeTimeInMinutes() {
         return this.finalBakeTimeInMinutes == null ? Codegen.empty() : this.finalBakeTimeInMinutes;
     }
 
@@ -69,7 +69,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="growthFactor")
       private final @Nullable Output<Double> growthFactor;
 
-    public Output<Double> getGrowthFactor() {
+    public Output<Double> growthFactor() {
         return this.growthFactor == null ? Codegen.empty() : this.growthFactor;
     }
 
@@ -80,7 +80,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="growthType")
       private final @Nullable Output<String> growthType;
 
-    public Output<String> getGrowthType() {
+    public Output<String> growthType() {
         return this.growthType == null ? Codegen.empty() : this.growthType;
     }
 
@@ -91,7 +91,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -102,7 +102,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="replicateTo")
       private final @Nullable Output<String> replicateTo;
 
-    public Output<String> getReplicateTo() {
+    public Output<String> replicateTo() {
         return this.replicateTo == null ? Codegen.empty() : this.replicateTo;
     }
 
@@ -113,7 +113,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

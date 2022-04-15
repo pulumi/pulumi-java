@@ -42,7 +42,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
      * 
      */
-    public Output</* @Nullable */ String> getBranchFilter() {
+    public Output</* @Nullable */ String> branchFilter() {
         return this.branchFilter;
     }
     /**
@@ -56,7 +56,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
      * 
      */
-    public Output</* @Nullable */ String> getBuildType() {
+    public Output</* @Nullable */ String> buildType() {
         return this.buildType;
     }
     /**
@@ -70,7 +70,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Information about the webhook's trigger. Filter group blocks are documented below.
      * 
      */
-    public Output</* @Nullable */ List<WebhookFilterGroup>> getFilterGroups() {
+    public Output</* @Nullable */ List<WebhookFilterGroup>> filterGroups() {
         return this.filterGroups;
     }
     /**
@@ -84,7 +84,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The CodeBuild endpoint where webhook events are sent.
      * 
      */
-    public Output<String> getPayloadUrl() {
+    public Output<String> payloadUrl() {
         return this.payloadUrl;
     }
     /**
@@ -98,7 +98,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name of the build project.
      * 
      */
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
     /**
@@ -112,7 +112,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
     /**
@@ -126,7 +126,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The URL to the webhook.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

@@ -42,7 +42,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @return Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
     /**
@@ -56,7 +56,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 

@@ -40,7 +40,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -54,7 +54,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the webhook.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +68,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name for a branch that is part of the Amplify app.
      * 
      */
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
     /**
@@ -82,7 +82,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The description for a webhook.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -96,7 +96,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The URL of the webhook.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

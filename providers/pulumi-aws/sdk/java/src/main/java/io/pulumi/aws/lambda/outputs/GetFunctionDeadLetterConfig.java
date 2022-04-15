@@ -16,7 +16,7 @@ public final class GetFunctionDeadLetterConfig {
         this.targetArn = targetArn;
     }
 
-    public String getTargetArn() {
+    public String targetArn() {
         return this.targetArn;
     }
 

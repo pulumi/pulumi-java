@@ -25,7 +25,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cognitoConfig")
       private final @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
-    public Output<WorkforceCognitoConfigGetArgs> getCognitoConfig() {
+    public Output<WorkforceCognitoConfigGetArgs> cognitoConfig() {
         return this.cognitoConfig == null ? Codegen.empty() : this.cognitoConfig;
     }
 
@@ -47,7 +47,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcConfig")
       private final @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
 
-    public Output<WorkforceOidcConfigGetArgs> getOidcConfig() {
+    public Output<WorkforceOidcConfigGetArgs> oidcConfig() {
         return this.oidcConfig == null ? Codegen.empty() : this.oidcConfig;
     }
 
@@ -58,7 +58,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpConfig")
       private final @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
-    public Output<WorkforceSourceIpConfigGetArgs> getSourceIpConfig() {
+    public Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig() {
         return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
     }
 
@@ -69,7 +69,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
-    public Output<String> getSubdomain() {
+    public Output<String> subdomain() {
         return this.subdomain == null ? Codegen.empty() : this.subdomain;
     }
 
@@ -80,7 +80,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="workforceName")
       private final @Nullable Output<String> workforceName;
 
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName == null ? Codegen.empty() : this.workforceName;
     }
 

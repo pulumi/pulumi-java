@@ -23,7 +23,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
     @Import(name="alarms")
       private final @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
 
-    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> getAlarms() {
+    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms() {
         return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 

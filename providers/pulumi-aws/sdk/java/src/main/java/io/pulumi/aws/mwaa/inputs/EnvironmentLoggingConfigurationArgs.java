@@ -26,7 +26,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     @Import(name="dagProcessingLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsArgs> dagProcessingLogs;
 
-    public Output<EnvironmentLoggingConfigurationDagProcessingLogsArgs> getDagProcessingLogs() {
+    public Output<EnvironmentLoggingConfigurationDagProcessingLogsArgs> dagProcessingLogs() {
         return this.dagProcessingLogs == null ? Codegen.empty() : this.dagProcessingLogs;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     @Import(name="schedulerLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs;
 
-    public Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> getSchedulerLogs() {
+    public Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs() {
         return this.schedulerLogs == null ? Codegen.empty() : this.schedulerLogs;
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     @Import(name="taskLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs;
 
-    public Output<EnvironmentLoggingConfigurationTaskLogsArgs> getTaskLogs() {
+    public Output<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs() {
         return this.taskLogs == null ? Codegen.empty() : this.taskLogs;
     }
 
@@ -59,7 +59,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     @Import(name="webserverLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs;
 
-    public Output<EnvironmentLoggingConfigurationWebserverLogsArgs> getWebserverLogs() {
+    public Output<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs() {
         return this.webserverLogs == null ? Codegen.empty() : this.webserverLogs;
     }
 
@@ -70,7 +70,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     @Import(name="workerLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs;
 
-    public Output<EnvironmentLoggingConfigurationWorkerLogsArgs> getWorkerLogs() {
+    public Output<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs() {
         return this.workerLogs == null ? Codegen.empty() : this.workerLogs;
     }
 

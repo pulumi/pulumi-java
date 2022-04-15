@@ -21,7 +21,7 @@ public final class GetStreamConsumerArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="arn")
       private final @Nullable String arn;
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
     }
 
@@ -32,7 +32,7 @@ public final class GetStreamConsumerArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -43,7 +43,7 @@ public final class GetStreamConsumerArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="streamArn", required=true)
       private final String streamArn;
 
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
 

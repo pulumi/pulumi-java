@@ -32,14 +32,14 @@ public final class BucketReplicationConfigRuleFilterTag {
      * Name of the object key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Value of the tag.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

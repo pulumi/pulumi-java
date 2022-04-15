@@ -42,7 +42,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAddresses() {
+    public Output</* @Nullable */ List<String>> addresses() {
         return this.addresses;
     }
     /**
@@ -56,7 +56,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) that identifies the cluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return A friendly description of the IP set.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,13 +84,13 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
      * 
      */
-    public Output<String> getIpAddressVersion() {
+    public Output<String> ipAddressVersion() {
         return this.ipAddressVersion;
     }
     @Export(name="lockToken", type=String.class, parameters={})
     private Output<String> lockToken;
 
-    public Output<String> getLockToken() {
+    public Output<String> lockToken() {
         return this.lockToken;
     }
     /**
@@ -104,7 +104,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return A friendly name of the IP set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -132,7 +132,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -146,7 +146,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

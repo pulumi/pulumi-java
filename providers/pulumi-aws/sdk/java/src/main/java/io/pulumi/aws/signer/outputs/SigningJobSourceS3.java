@@ -39,21 +39,21 @@ public final class SigningJobSourceS3 {
      * Name of the S3 bucket.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Key name of the bucket object that contains your unsigned code.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Version of your source image in your version enabled S3 bucket.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

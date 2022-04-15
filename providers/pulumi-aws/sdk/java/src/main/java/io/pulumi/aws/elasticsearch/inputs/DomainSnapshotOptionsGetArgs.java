@@ -21,7 +21,7 @@ public final class DomainSnapshotOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="automatedSnapshotStartHour", required=true)
       private final Output<Integer> automatedSnapshotStartHour;
 
-    public Output<Integer> getAutomatedSnapshotStartHour() {
+    public Output<Integer> automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 

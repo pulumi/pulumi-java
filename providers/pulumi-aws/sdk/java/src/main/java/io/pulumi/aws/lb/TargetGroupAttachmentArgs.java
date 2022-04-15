@@ -23,7 +23,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -34,7 +34,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -45,7 +45,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="targetGroupArn", required=true)
       private final Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
 
@@ -56,7 +56,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 

@@ -49,37 +49,37 @@ public final class GetPrebuiltEcrImageResult {
         this.repositoryName = repositoryName;
     }
 
-    public Optional<String> getDnsSuffix() {
+    public Optional<String> dnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getImageTag() {
+    public Optional<String> imageTag() {
         return Optional.ofNullable(this.imageTag);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The account ID containing the image. For example, `469771592824`.
      * 
     */
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
     /**
      * The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
      * 
     */
-    public String getRegistryPath() {
+    public String registryPath() {
         return this.registryPath;
     }
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

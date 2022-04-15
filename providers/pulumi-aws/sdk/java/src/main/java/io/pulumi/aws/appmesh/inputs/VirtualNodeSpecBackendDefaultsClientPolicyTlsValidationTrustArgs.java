@@ -24,7 +24,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> getAcm() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs> acm() {
         return this.acm == null ? Codegen.empty() : this.acm;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> getFile() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> getSds() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

@@ -35,14 +35,14 @@ public final class ListenerDefaultActionForwardTargetGroup {
      * ARN of the target group.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Weight. The range is 0 to 999.
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

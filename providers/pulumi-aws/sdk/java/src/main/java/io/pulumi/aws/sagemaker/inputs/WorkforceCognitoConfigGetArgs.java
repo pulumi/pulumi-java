@@ -21,7 +21,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -32,7 +32,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="userPool", required=true)
       private final Output<String> userPool;
 
-    public Output<String> getUserPool() {
+    public Output<String> userPool() {
         return this.userPool;
     }
 

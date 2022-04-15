@@ -86,72 +86,72 @@ public final class GetEngineVersionResult {
         this.versionDescription = versionDescription;
     }
 
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return Optional.ofNullable(this.engine);
     }
     /**
      * The description of the database engine.
      * 
     */
-    public String getEngineDescription() {
+    public String engineDescription() {
         return this.engineDescription;
     }
     /**
      * Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
     */
-    public List<String> getExportableLogTypes() {
+    public List<String> exportableLogTypes() {
         return this.exportableLogTypes;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getParameterGroupFamily() {
+    public String parameterGroupFamily() {
         return this.parameterGroupFamily;
     }
-    public List<String> getPreferredVersions() {
+    public List<String> preferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
      * Set of the time zones supported by this engine.
      * 
     */
-    public List<String> getSupportedTimezones() {
+    public List<String> supportedTimezones() {
         return this.supportedTimezones;
     }
     /**
      * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
     */
-    public Boolean getSupportsLogExportsToCloudwatch() {
+    public Boolean supportsLogExportsToCloudwatch() {
         return this.supportsLogExportsToCloudwatch;
     }
     /**
      * Indicates whether the database engine version supports read replicas.
      * 
     */
-    public Boolean getSupportsReadReplica() {
+    public Boolean supportsReadReplica() {
         return this.supportsReadReplica;
     }
     /**
      * Set of engine versions that this database engine version can be upgraded to.
      * 
     */
-    public List<String> getValidUpgradeTargets() {
+    public List<String> validUpgradeTargets() {
         return this.validUpgradeTargets;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * The description of the database engine version.
      * 
     */
-    public String getVersionDescription() {
+    public String versionDescription() {
         return this.versionDescription;
     }
 

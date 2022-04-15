@@ -24,7 +24,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId == null ? Codegen.empty() : this.domainId;
     }
 
@@ -46,7 +46,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeEfsFileSystemUid")
       private final @Nullable Output<String> homeEfsFileSystemUid;
 
-    public Output<String> getHomeEfsFileSystemUid() {
+    public Output<String> homeEfsFileSystemUid() {
         return this.homeEfsFileSystemUid == null ? Codegen.empty() : this.homeEfsFileSystemUid;
     }
 
@@ -57,7 +57,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserIdentifier")
       private final @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Output<String> getSingleSignOnUserIdentifier() {
+    public Output<String> singleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier == null ? Codegen.empty() : this.singleSignOnUserIdentifier;
     }
 
@@ -68,7 +68,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserValue")
       private final @Nullable Output<String> singleSignOnUserValue;
 
-    public Output<String> getSingleSignOnUserValue() {
+    public Output<String> singleSignOnUserValue() {
         return this.singleSignOnUserValue == null ? Codegen.empty() : this.singleSignOnUserValue;
     }
 
@@ -79,7 +79,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -101,7 +101,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName")
       private final @Nullable Output<String> userProfileName;
 
-    public Output<String> getUserProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName == null ? Codegen.empty() : this.userProfileName;
     }
 
@@ -112,7 +112,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSettings")
       private final @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
 
-    public Output<UserProfileUserSettingsGetArgs> getUserSettings() {
+    public Output<UserProfileUserSettingsGetArgs> userSettings() {
         return this.userSettings == null ? Codegen.empty() : this.userSettings;
     }
 

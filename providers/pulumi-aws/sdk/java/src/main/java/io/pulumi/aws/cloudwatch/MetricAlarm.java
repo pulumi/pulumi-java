@@ -54,7 +54,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getActionsEnabled() {
+    public Output</* @Nullable */ Boolean> actionsEnabled() {
         return this.actionsEnabled;
     }
     /**
@@ -68,7 +68,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getAlarmActions() {
+    public Output</* @Nullable */ List<String>> alarmActions() {
         return this.alarmActions;
     }
     /**
@@ -82,7 +82,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The description for the alarm.
      * 
      */
-    public Output</* @Nullable */ String> getAlarmDescription() {
+    public Output</* @Nullable */ String> alarmDescription() {
         return this.alarmDescription;
     }
     /**
@@ -96,7 +96,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The ARN of the CloudWatch Metric Alarm.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -110,7 +110,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
      * 
      */
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
@@ -124,7 +124,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The number of datapoints that must be breaching to trigger the alarm.
      * 
      */
-    public Output</* @Nullable */ Integer> getDatapointsToAlarm() {
+    public Output</* @Nullable */ Integer> datapointsToAlarm() {
         return this.datapointsToAlarm;
     }
     /**
@@ -138,7 +138,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getDimensions() {
+    public Output</* @Nullable */ Map<String,String>> dimensions() {
         return this.dimensions;
     }
     /**
@@ -162,7 +162,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The following values are supported: `ignore`, and `evaluate`.
      * 
      */
-    public Output<String> getEvaluateLowSampleCountPercentiles() {
+    public Output<String> evaluateLowSampleCountPercentiles() {
         return this.evaluateLowSampleCountPercentiles;
     }
     /**
@@ -176,7 +176,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The number of periods over which data is compared to the specified threshold.
      * 
      */
-    public Output<Integer> getEvaluationPeriods() {
+    public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
     }
     /**
@@ -190,7 +190,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
      * 
      */
-    public Output</* @Nullable */ String> getExtendedStatistic() {
+    public Output</* @Nullable */ String> extendedStatistic() {
         return this.extendedStatistic;
     }
     /**
@@ -204,7 +204,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getInsufficientDataActions() {
+    public Output</* @Nullable */ List<String>> insufficientDataActions() {
         return this.insufficientDataActions;
     }
     /**
@@ -220,7 +220,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ String> getMetricName() {
+    public Output</* @Nullable */ String> metricName() {
         return this.metricName;
     }
     /**
@@ -234,7 +234,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return Enables you to create an alarm based on a metric math expression. You may specify at most 20.
      * 
      */
-    public Output</* @Nullable */ List<MetricAlarmMetricQuery>> getMetricQueries() {
+    public Output</* @Nullable */ List<MetricAlarmMetricQuery>> metricQueries() {
         return this.metricQueries;
     }
     /**
@@ -248,7 +248,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The descriptive name for the alarm. This name must be unique within the user's AWS account
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -264,7 +264,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
     /**
@@ -278,7 +278,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> getOkActions() {
+    public Output</* @Nullable */ List<String>> okActions() {
         return this.okActions;
     }
     /**
@@ -292,7 +292,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The period in seconds over which the specified `stat` is applied.
      * 
      */
-    public Output</* @Nullable */ Integer> getPeriod() {
+    public Output</* @Nullable */ Integer> period() {
         return this.period;
     }
     /**
@@ -308,7 +308,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */
-    public Output</* @Nullable */ String> getStatistic() {
+    public Output</* @Nullable */ String> statistic() {
         return this.statistic;
     }
     /**
@@ -322,7 +322,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -336,7 +336,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -350,7 +350,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
      * 
      */
-    public Output</* @Nullable */ Double> getThreshold() {
+    public Output</* @Nullable */ Double> threshold() {
         return this.threshold;
     }
     /**
@@ -364,7 +364,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
      * 
      */
-    public Output</* @Nullable */ String> getThresholdMetricId() {
+    public Output</* @Nullable */ String> thresholdMetricId() {
         return this.thresholdMetricId;
     }
     /**
@@ -378,7 +378,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
      * 
      */
-    public Output</* @Nullable */ String> getTreatMissingData() {
+    public Output</* @Nullable */ String> treatMissingData() {
         return this.treatMissingData;
     }
     /**
@@ -392,7 +392,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * @return The unit for this metric.
      * 
      */
-    public Output</* @Nullable */ String> getUnit() {
+    public Output</* @Nullable */ String> unit() {
         return this.unit;
     }
 

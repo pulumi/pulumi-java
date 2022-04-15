@@ -33,7 +33,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> getBody() {
+    public Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -60,7 +60,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="method")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> getMethod() {
+    public Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -71,7 +71,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="queryString")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> getQueryString() {
+    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -82,7 +82,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> getSingleHeader() {
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -98,7 +98,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -109,7 +109,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="uriPath")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> getUriPath() {
+    public Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

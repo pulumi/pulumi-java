@@ -25,7 +25,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="allowUnassociatedTargets")
       private final @Nullable Output<Boolean> allowUnassociatedTargets;
 
-    public Output<Boolean> getAllowUnassociatedTargets() {
+    public Output<Boolean> allowUnassociatedTargets() {
         return this.allowUnassociatedTargets == null ? Codegen.empty() : this.allowUnassociatedTargets;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="cutoff")
       private final @Nullable Output<Integer> cutoff;
 
-    public Output<Integer> getCutoff() {
+    public Output<Integer> cutoff() {
         return this.cutoff == null ? Codegen.empty() : this.cutoff;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -69,7 +69,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -80,7 +80,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -91,7 +91,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -102,7 +102,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -113,7 +113,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="scheduleOffset")
       private final @Nullable Output<Integer> scheduleOffset;
 
-    public Output<Integer> getScheduleOffset() {
+    public Output<Integer> scheduleOffset() {
         return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
     }
 
@@ -124,7 +124,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="scheduleTimezone")
       private final @Nullable Output<String> scheduleTimezone;
 
-    public Output<String> getScheduleTimezone() {
+    public Output<String> scheduleTimezone() {
         return this.scheduleTimezone == null ? Codegen.empty() : this.scheduleTimezone;
     }
 
@@ -135,7 +135,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
@@ -146,7 +146,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -157,7 +157,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

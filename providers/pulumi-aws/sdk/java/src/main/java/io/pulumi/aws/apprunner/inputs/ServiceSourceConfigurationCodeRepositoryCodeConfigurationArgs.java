@@ -23,7 +23,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
     @Import(name="codeConfigurationValues")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> getCodeConfigurationValues() {
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues() {
         return this.codeConfigurationValues == null ? Codegen.empty() : this.codeConfigurationValues;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
     @Import(name="configurationSource", required=true)
       private final Output<String> configurationSource;
 
-    public Output<String> getConfigurationSource() {
+    public Output<String> configurationSource() {
         return this.configurationSource;
     }
 

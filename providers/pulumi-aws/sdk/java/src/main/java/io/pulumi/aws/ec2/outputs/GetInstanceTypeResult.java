@@ -362,140 +362,140 @@ public final class GetInstanceTypeResult {
      * `true` if auto recovery is supported.
      * 
     */
-    public Boolean getAutoRecoverySupported() {
+    public Boolean autoRecoverySupported() {
         return this.autoRecoverySupported;
     }
     /**
      * `true` if it is a bare metal instance type.
      * 
     */
-    public Boolean getBareMetal() {
+    public Boolean bareMetal() {
         return this.bareMetal;
     }
     /**
      * `true` if the instance type is a burstable performance instance type.
      * 
     */
-    public Boolean getBurstablePerformanceSupported() {
+    public Boolean burstablePerformanceSupported() {
         return this.burstablePerformanceSupported;
     }
     /**
      * `true`  if the instance type is a current generation.
      * 
     */
-    public Boolean getCurrentGeneration() {
+    public Boolean currentGeneration() {
         return this.currentGeneration;
     }
     /**
      * `true` if Dedicated Hosts are supported on the instance type.
      * 
     */
-    public Boolean getDedicatedHostsSupported() {
+    public Boolean dedicatedHostsSupported() {
         return this.dedicatedHostsSupported;
     }
     /**
      * The default number of cores for the instance type.
      * 
     */
-    public Integer getDefaultCores() {
+    public Integer defaultCores() {
         return this.defaultCores;
     }
     /**
      * The  default  number of threads per core for the instance type.
      * 
     */
-    public Integer getDefaultThreadsPerCore() {
+    public Integer defaultThreadsPerCore() {
         return this.defaultThreadsPerCore;
     }
     /**
      * The default number of vCPUs for the instance type.
      * 
     */
-    public Integer getDefaultVcpus() {
+    public Integer defaultVcpus() {
         return this.defaultVcpus;
     }
     /**
      * Indicates whether Amazon EBS encryption is supported.
      * 
     */
-    public String getEbsEncryptionSupport() {
+    public String ebsEncryptionSupport() {
         return this.ebsEncryptionSupport;
     }
     /**
      * Indicates whether non-volatile memory express (NVMe) is supported.
      * 
     */
-    public String getEbsNvmeSupport() {
+    public String ebsNvmeSupport() {
         return this.ebsNvmeSupport;
     }
     /**
      * Indicates that the instance type is Amazon EBS-optimized.
      * 
     */
-    public String getEbsOptimizedSupport() {
+    public String ebsOptimizedSupport() {
         return this.ebsOptimizedSupport;
     }
     /**
      * The baseline bandwidth performance for an EBS-optimized instance type, in Mbps.
      * 
     */
-    public Integer getEbsPerformanceBaselineBandwidth() {
+    public Integer ebsPerformanceBaselineBandwidth() {
         return this.ebsPerformanceBaselineBandwidth;
     }
     /**
      * The baseline input/output storage operations per seconds for an EBS-optimized instance type.
      * 
     */
-    public Integer getEbsPerformanceBaselineIops() {
+    public Integer ebsPerformanceBaselineIops() {
         return this.ebsPerformanceBaselineIops;
     }
     /**
      * The baseline throughput performance for an EBS-optimized instance type, in MBps.
      * 
     */
-    public Double getEbsPerformanceBaselineThroughput() {
+    public Double ebsPerformanceBaselineThroughput() {
         return this.ebsPerformanceBaselineThroughput;
     }
     /**
      * The maximum bandwidth performance for an EBS-optimized instance type, in Mbps.
      * 
     */
-    public Integer getEbsPerformanceMaximumBandwidth() {
+    public Integer ebsPerformanceMaximumBandwidth() {
         return this.ebsPerformanceMaximumBandwidth;
     }
     /**
      * The maximum input/output storage operations per second for an EBS-optimized instance type.
      * 
     */
-    public Integer getEbsPerformanceMaximumIops() {
+    public Integer ebsPerformanceMaximumIops() {
         return this.ebsPerformanceMaximumIops;
     }
     /**
      * The maximum throughput performance for an EBS-optimized instance type, in MBps.
      * 
     */
-    public Double getEbsPerformanceMaximumThroughput() {
+    public Double ebsPerformanceMaximumThroughput() {
         return this.ebsPerformanceMaximumThroughput;
     }
     /**
      * Indicates whether Elastic Fabric Adapter (EFA) is supported.
      * 
     */
-    public Boolean getEfaSupported() {
+    public Boolean efaSupported() {
         return this.efaSupported;
     }
     /**
      * Indicates whether Elastic Network Adapter (ENA) is supported.
      * 
     */
-    public String getEnaSupport() {
+    public String enaSupport() {
         return this.enaSupport;
     }
     /**
      * Indicates whether encryption in-transit between instances is supported.
      * 
     */
-    public Boolean getEncryptionInTransitSupported() {
+    public Boolean encryptionInTransitSupported() {
         return this.encryptionInTransitSupported;
     }
     /**
@@ -506,14 +506,14 @@ public final class GetInstanceTypeResult {
      * * `fpgas.#.name` - The name of the FPGA accelerator.
      * 
     */
-    public List<GetInstanceTypeFpga> getFpgas() {
+    public List<GetInstanceTypeFpga> fpgas() {
         return this.fpgas;
     }
     /**
      * `true` if the instance type is eligible for the free tier.
      * 
     */
-    public Boolean getFreeTierEligible() {
+    public Boolean freeTierEligible() {
         return this.freeTierEligible;
     }
     /**
@@ -524,14 +524,14 @@ public final class GetInstanceTypeResult {
      * * `gpus.#.name` - The name of the GPU accelerator.
      * 
     */
-    public List<GetInstanceTypeGpus> getGpuses() {
+    public List<GetInstanceTypeGpus> gpuses() {
         return this.gpuses;
     }
     /**
      * `true` if On-Demand hibernation is supported.
      * 
     */
-    public Boolean getHibernationSupported() {
+    public Boolean hibernationSupported() {
         return this.hibernationSupported;
     }
     /**
@@ -542,17 +542,17 @@ public final class GetInstanceTypeResult {
      * * `inference_accelerators.#.name` - The name of the Inference accelerator.
      * 
     */
-    public String getHypervisor() {
+    public String hypervisor() {
         return this.hypervisor;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetInstanceTypeInferenceAccelerator> getInferenceAccelerators() {
+    public List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators() {
         return this.inferenceAccelerators;
     }
     /**
@@ -562,136 +562,136 @@ public final class GetInstanceTypeResult {
      * * `instance_disks.#.type` - The type of disk.
      * 
     */
-    public List<GetInstanceTypeInstanceDisk> getInstanceDisks() {
+    public List<GetInstanceTypeInstanceDisk> instanceDisks() {
         return this.instanceDisks;
     }
     /**
      * `true` if instance storage is supported.
      * 
     */
-    public Boolean getInstanceStorageSupported() {
+    public Boolean instanceStorageSupported() {
         return this.instanceStorageSupported;
     }
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * `true` if IPv6 is supported.
      * 
     */
-    public Boolean getIpv6Supported() {
+    public Boolean ipv6Supported() {
         return this.ipv6Supported;
     }
     /**
      * The maximum number of IPv4 addresses per network interface.
      * 
     */
-    public Integer getMaximumIpv4AddressesPerInterface() {
+    public Integer maximumIpv4AddressesPerInterface() {
         return this.maximumIpv4AddressesPerInterface;
     }
     /**
      * The maximum number of IPv6 addresses per network interface.
      * 
     */
-    public Integer getMaximumIpv6AddressesPerInterface() {
+    public Integer maximumIpv6AddressesPerInterface() {
         return this.maximumIpv6AddressesPerInterface;
     }
     /**
      * The maximum number of network interfaces for the instance type.
      * 
     */
-    public Integer getMaximumNetworkInterfaces() {
+    public Integer maximumNetworkInterfaces() {
         return this.maximumNetworkInterfaces;
     }
     /**
      * Size of the instance memory, in MiB.
      * 
     */
-    public Integer getMemorySize() {
+    public Integer memorySize() {
         return this.memorySize;
     }
     /**
      * Describes the network performance.
      * 
     */
-    public String getNetworkPerformance() {
+    public String networkPerformance() {
         return this.networkPerformance;
     }
     /**
      * A list of architectures supported by the instance type.
      * 
     */
-    public List<String> getSupportedArchitectures() {
+    public List<String> supportedArchitectures() {
         return this.supportedArchitectures;
     }
     /**
      * A list of supported placement groups types.
      * 
     */
-    public List<String> getSupportedPlacementStrategies() {
+    public List<String> supportedPlacementStrategies() {
         return this.supportedPlacementStrategies;
     }
     /**
      * Indicates the supported root device types.
      * 
     */
-    public List<String> getSupportedRootDeviceTypes() {
+    public List<String> supportedRootDeviceTypes() {
         return this.supportedRootDeviceTypes;
     }
     /**
      * Indicates whether the instance type is offered for spot or On-Demand.
      * 
     */
-    public List<String> getSupportedUsagesClasses() {
+    public List<String> supportedUsagesClasses() {
         return this.supportedUsagesClasses;
     }
     /**
      * The supported virtualization types.
      * 
     */
-    public List<String> getSupportedVirtualizationTypes() {
+    public List<String> supportedVirtualizationTypes() {
         return this.supportedVirtualizationTypes;
     }
     /**
      * The speed of the processor, in GHz.
      * 
     */
-    public Double getSustainedClockSpeed() {
+    public Double sustainedClockSpeed() {
         return this.sustainedClockSpeed;
     }
     /**
      * The total memory of all FPGA accelerators for the instance type (in MiB).
      * 
     */
-    public Integer getTotalFpgaMemory() {
+    public Integer totalFpgaMemory() {
         return this.totalFpgaMemory;
     }
     /**
      * The total size of the memory for the GPU accelerators for the instance type (in MiB).
      * 
     */
-    public Integer getTotalGpuMemory() {
+    public Integer totalGpuMemory() {
         return this.totalGpuMemory;
     }
     /**
      * The total size of the instance disks, in GB.
      * 
     */
-    public Integer getTotalInstanceStorage() {
+    public Integer totalInstanceStorage() {
         return this.totalInstanceStorage;
     }
     /**
      * List of the valid number of cores that can be configured for the instance type.
      * 
     */
-    public List<Integer> getValidCores() {
+    public List<Integer> validCores() {
         return this.validCores;
     }
     /**
      * List of the valid number of threads per core that can be configured for the instance type.
      * 
     */
-    public List<Integer> getValidThreadsPerCores() {
+    public List<Integer> validThreadsPerCores() {
         return this.validThreadsPerCores;
     }
 

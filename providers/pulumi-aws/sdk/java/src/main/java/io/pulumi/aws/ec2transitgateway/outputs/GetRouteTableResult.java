@@ -68,45 +68,45 @@ public final class GetRouteTableResult {
      * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Boolean whether this is the default association route table for the EC2 Transit Gateway
      * 
     */
-    public Boolean getDefaultAssociationRouteTable() {
+    public Boolean defaultAssociationRouteTable() {
         return this.defaultAssociationRouteTable;
     }
     /**
      * Boolean whether this is the default propagation route table for the EC2 Transit Gateway
      * 
     */
-    public Boolean getDefaultPropagationRouteTable() {
+    public Boolean defaultPropagationRouteTable() {
         return this.defaultPropagationRouteTable;
     }
-    public List<GetRouteTableFilter> getFilters() {
+    public List<GetRouteTableFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * EC2 Transit Gateway Route Table identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Key-value tags for the EC2 Transit Gateway Route Table
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * EC2 Transit Gateway identifier
      * 
     */
-    public String getTransitGatewayId() {
+    public String transitGatewayId() {
         return this.transitGatewayId;
     }
 

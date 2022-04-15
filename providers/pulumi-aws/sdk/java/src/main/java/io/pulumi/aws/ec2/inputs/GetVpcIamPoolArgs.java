@@ -24,7 +24,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="allocationResourceTags")
       private final @Nullable Map<String,String> allocationResourceTags;
 
-    public Map<String,String> getAllocationResourceTags() {
+    public Map<String,String> allocationResourceTags() {
         return this.allocationResourceTags == null ? Map.of() : this.allocationResourceTags;
     }
 
@@ -35,7 +35,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVpcIamPoolFilter> filters;
 
-    public List<GetVpcIamPoolFilter> getFilters() {
+    public List<GetVpcIamPoolFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -46,14 +46,14 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="ipamPoolId")
       private final @Nullable String ipamPoolId;
 
-    public Optional<String> getIpamPoolId() {
+    public Optional<String> ipamPoolId() {
         return this.ipamPoolId == null ? Optional.empty() : Optional.ofNullable(this.ipamPoolId);
     }
 
@@ -64,7 +64,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

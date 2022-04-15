@@ -28,7 +28,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteria {
      * in `destination` must be specified as well.
      * 
     */
-    public Optional<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects> getSseKmsEncryptedObjects() {
+    public Optional<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects> sseKmsEncryptedObjects() {
         return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }
 

@@ -42,21 +42,21 @@ public final class ClusterLoggingInfoBrokerLogsS3 {
      * Name of the S3 bucket to deliver logs to.
      * 
     */
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Prefix to append to the folder name.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

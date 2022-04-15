@@ -59,28 +59,28 @@ public final class TaskDefinitionVolume {
      * Configuration block to configure a docker volume. Detailed below.
      * 
     */
-    public Optional<TaskDefinitionVolumeDockerVolumeConfiguration> getDockerVolumeConfiguration() {
+    public Optional<TaskDefinitionVolumeDockerVolumeConfiguration> dockerVolumeConfiguration() {
         return Optional.ofNullable(this.dockerVolumeConfiguration);
     }
     /**
      * Configuration block for an EFS volume. Detailed below.
      * 
     */
-    public Optional<TaskDefinitionVolumeEfsVolumeConfiguration> getEfsVolumeConfiguration() {
+    public Optional<TaskDefinitionVolumeEfsVolumeConfiguration> efsVolumeConfiguration() {
         return Optional.ofNullable(this.efsVolumeConfiguration);
     }
     /**
      * Configuration block for an FSX Windows File Server volume. Detailed below.
      * 
     */
-    public Optional<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration> getFsxWindowsFileServerVolumeConfiguration() {
+    public Optional<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration> fsxWindowsFileServerVolumeConfiguration() {
         return Optional.ofNullable(this.fsxWindowsFileServerVolumeConfiguration);
     }
     /**
      * Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
      * 
     */
-    public Optional<String> getHostPath() {
+    public Optional<String> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
     /**
@@ -88,7 +88,7 @@ public final class TaskDefinitionVolume {
      * parameter of container definition in the `mountPoints` section.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

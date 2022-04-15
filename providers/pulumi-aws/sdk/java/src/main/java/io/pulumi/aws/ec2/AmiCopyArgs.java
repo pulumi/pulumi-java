@@ -27,7 +27,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationOutpostArn")
       private final @Nullable Output<String> destinationOutpostArn;
 
-    public Output<String> getDestinationOutpostArn() {
+    public Output<String> destinationOutpostArn() {
         return this.destinationOutpostArn == null ? Codegen.empty() : this.destinationOutpostArn;
     }
 
@@ -51,7 +51,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<AmiCopyEbsBlockDeviceArgs>> getEbsBlockDevices() {
+    public Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -62,7 +62,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -74,7 +74,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiCopyEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
+    public Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
@@ -87,7 +87,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -98,7 +98,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -110,7 +110,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiId", required=true)
       private final Output<String> sourceAmiId;
 
-    public Output<String> getSourceAmiId() {
+    public Output<String> sourceAmiId() {
         return this.sourceAmiId;
     }
 
@@ -122,7 +122,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiRegion", required=true)
       private final Output<String> sourceAmiRegion;
 
-    public Output<String> getSourceAmiRegion() {
+    public Output<String> sourceAmiRegion() {
         return this.sourceAmiRegion;
     }
 
@@ -133,7 +133,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

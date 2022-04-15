@@ -49,28 +49,28 @@ public final class FleetTargetCapacitySpecification {
      * Default target capacity type. Valid values: `on-demand`, `spot`.
      * 
     */
-    public String getDefaultTargetCapacityType() {
+    public String defaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
     }
     /**
      * The number of On-Demand units to request.
      * 
     */
-    public Optional<Integer> getOnDemandTargetCapacity() {
+    public Optional<Integer> onDemandTargetCapacity() {
         return Optional.ofNullable(this.onDemandTargetCapacity);
     }
     /**
      * The number of Spot units to request.
      * 
     */
-    public Optional<Integer> getSpotTargetCapacity() {
+    public Optional<Integer> spotTargetCapacity() {
         return Optional.ofNullable(this.spotTargetCapacity);
     }
     /**
      * The number of units to request, filled using `default_target_capacity_type`.
      * 
     */
-    public Integer getTotalTargetCapacity() {
+    public Integer totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

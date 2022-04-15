@@ -60,21 +60,21 @@ public final class RouteSpec {
      * The gRPC routing information for the route.
      * 
     */
-    public Optional<RouteSpecGrpcRoute> getGrpcRoute() {
+    public Optional<RouteSpecGrpcRoute> grpcRoute() {
         return Optional.ofNullable(this.grpcRoute);
     }
     /**
      * The HTTP/2 routing information for the route.
      * 
     */
-    public Optional<RouteSpecHttp2Route> getHttp2Route() {
+    public Optional<RouteSpecHttp2Route> http2Route() {
         return Optional.ofNullable(this.http2Route);
     }
     /**
      * The HTTP routing information for the route.
      * 
     */
-    public Optional<RouteSpecHttpRoute> getHttpRoute() {
+    public Optional<RouteSpecHttpRoute> httpRoute() {
         return Optional.ofNullable(this.httpRoute);
     }
     /**
@@ -82,14 +82,14 @@ public final class RouteSpec {
      * Routes are matched based on the specified value, where `0` is the highest priority.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The TCP routing information for the route.
      * 
     */
-    public Optional<RouteSpecTcpRoute> getTcpRoute() {
+    public Optional<RouteSpecTcpRoute> tcpRoute() {
         return Optional.ofNullable(this.tcpRoute);
     }
 

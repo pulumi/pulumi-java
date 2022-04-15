@@ -50,7 +50,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Full ARN of the Task Definition (including both `family` and `revision`).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return A list of valid [container definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
      * 
      */
-    public Output<String> getContainerDefinitions() {
+    public Output<String> containerDefinitions() {
         return this.containerDefinitions;
     }
     /**
@@ -78,7 +78,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    public Output</* @Nullable */ String> getCpu() {
+    public Output</* @Nullable */ String> cpu() {
         return this.cpu;
     }
     /**
@@ -92,7 +92,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> getEphemeralStorage() {
+    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage() {
         return this.ephemeralStorage;
     }
     /**
@@ -106,7 +106,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
      * 
      */
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -120,7 +120,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return A unique name for your task definition.
      * 
      */
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
     /**
@@ -134,7 +134,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block(s) with Inference Accelerators settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> getInferenceAccelerators() {
+    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators() {
         return this.inferenceAccelerators;
     }
     /**
@@ -148,7 +148,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
      * 
      */
-    public Output</* @Nullable */ String> getIpcMode() {
+    public Output</* @Nullable */ String> ipcMode() {
         return this.ipcMode;
     }
     /**
@@ -162,7 +162,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    public Output</* @Nullable */ String> getMemory() {
+    public Output</* @Nullable */ String> memory() {
         return this.memory;
     }
     /**
@@ -176,7 +176,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
      * 
      */
-    public Output<String> getNetworkMode() {
+    public Output<String> networkMode() {
         return this.networkMode;
     }
     /**
@@ -190,7 +190,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Process namespace to use for the containers in the task. The valid values are `host` and `task`.
      * 
      */
-    public Output</* @Nullable */ String> getPidMode() {
+    public Output</* @Nullable */ String> pidMode() {
         return this.pidMode;
     }
     /**
@@ -204,7 +204,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> getPlacementConstraints() {
+    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints() {
         return this.placementConstraints;
     }
     /**
@@ -218,7 +218,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the App Mesh proxy. Detailed below.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> getProxyConfiguration() {
+    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration() {
         return this.proxyConfiguration;
     }
     /**
@@ -232,7 +232,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRequiresCompatibilities() {
+    public Output</* @Nullable */ List<String>> requiresCompatibilities() {
         return this.requiresCompatibilities;
     }
     /**
@@ -246,7 +246,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Revision of the task in a particular family.
      * 
      */
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
     /**
@@ -260,13 +260,13 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for runtime_platform that containers in your task may use.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> getRuntimePlatform() {
+    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform() {
         return this.runtimePlatform;
     }
     @Export(name="skipDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipDestroy;
 
-    public Output</* @Nullable */ Boolean> getSkipDestroy() {
+    public Output</* @Nullable */ Boolean> skipDestroy() {
         return this.skipDestroy;
     }
     /**
@@ -280,7 +280,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -294,7 +294,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -308,7 +308,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
      * 
      */
-    public Output</* @Nullable */ String> getTaskRoleArn() {
+    public Output</* @Nullable */ String> taskRoleArn() {
         return this.taskRoleArn;
     }
     /**
@@ -322,7 +322,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for volumes that containers in your task may use. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionVolume>> getVolumes() {
+    public Output</* @Nullable */ List<TaskDefinitionVolume>> volumes() {
         return this.volumes;
     }
 

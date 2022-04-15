@@ -23,7 +23,7 @@ public final class StackStorageConnectorArgs extends io.pulumi.resources.Resourc
     @Import(name="connectorType", required=true)
       private final Output<String> connectorType;
 
-    public Output<String> getConnectorType() {
+    public Output<String> connectorType() {
         return this.connectorType;
     }
 
@@ -34,7 +34,7 @@ public final class StackStorageConnectorArgs extends io.pulumi.resources.Resourc
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains == null ? Codegen.empty() : this.domains;
     }
 
@@ -45,7 +45,7 @@ public final class StackStorageConnectorArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceIdentifier")
       private final @Nullable Output<String> resourceIdentifier;
 
-    public Output<String> getResourceIdentifier() {
+    public Output<String> resourceIdentifier() {
         return this.resourceIdentifier == null ? Codegen.empty() : this.resourceIdentifier;
     }
 

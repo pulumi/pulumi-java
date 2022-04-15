@@ -33,7 +33,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return Whether the user is allowed to use SSH to communicate with the instance
      * 
      */
-    public Output<Boolean> getAllowSsh() {
+    public Output<Boolean> allowSsh() {
         return this.allowSsh;
     }
     /**
@@ -47,7 +47,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return Whether the user is allowed to use sudo to elevate privileges
      * 
      */
-    public Output<Boolean> getAllowSudo() {
+    public Output<Boolean> allowSudo() {
         return this.allowSudo;
     }
     /**
@@ -61,7 +61,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
      * 
      */
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level;
     }
     /**
@@ -75,7 +75,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The stack to set the permissions for
      * 
      */
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
     /**
@@ -89,7 +89,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * @return The user's IAM ARN to set permissions for
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 

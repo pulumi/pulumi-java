@@ -16,35 +16,35 @@ public final class GetLoadBalancerListener extends io.pulumi.resources.InvokeArg
     @Import(name="instancePort", required=true)
       private final Integer instancePort;
 
-    public Integer getInstancePort() {
+    public Integer instancePort() {
         return this.instancePort;
     }
 
     @Import(name="instanceProtocol", required=true)
       private final String instanceProtocol;
 
-    public String getInstanceProtocol() {
+    public String instanceProtocol() {
         return this.instanceProtocol;
     }
 
     @Import(name="lbPort", required=true)
       private final Integer lbPort;
 
-    public Integer getLbPort() {
+    public Integer lbPort() {
         return this.lbPort;
     }
 
     @Import(name="lbProtocol", required=true)
       private final String lbProtocol;
 
-    public String getLbProtocol() {
+    public String lbProtocol() {
         return this.lbProtocol;
     }
 
     @Import(name="sslCertificateId", required=true)
       private final String sslCertificateId;
 
-    public String getSslCertificateId() {
+    public String sslCertificateId() {
         return this.sslCertificateId;
     }
 

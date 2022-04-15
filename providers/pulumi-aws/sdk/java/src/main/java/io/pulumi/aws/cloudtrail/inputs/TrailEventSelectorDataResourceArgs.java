@@ -22,7 +22,7 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -33,7 +33,7 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

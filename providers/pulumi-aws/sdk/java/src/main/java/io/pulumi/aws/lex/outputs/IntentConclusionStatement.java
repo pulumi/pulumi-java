@@ -42,7 +42,7 @@ public final class IntentConclusionStatement {
      * Attributes are documented under message. Must contain between 1 and 15 messages.
      * 
     */
-    public List<IntentConclusionStatementMessage> getMessages() {
+    public List<IntentConclusionStatementMessage> messages() {
         return this.messages;
     }
     /**
@@ -51,7 +51,7 @@ public final class IntentConclusionStatement {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
     */
-    public Optional<String> getResponseCard() {
+    public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
 

@@ -56,35 +56,35 @@ public final class ReceiptRuleS3Action {
      * The name of the S3 bucket
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The ARN of the KMS key
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * The key prefix of the S3 bucket
      * 
     */
-    public Optional<String> getObjectKeyPrefix() {
+    public Optional<String> objectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
     /**
      * The position of the action in the receipt rule
      * 
     */
-    public Integer getPosition() {
+    public Integer position() {
         return this.position;
     }
     /**
      * The ARN of an SNS topic to notify
      * 
     */
-    public Optional<String> getTopicArn() {
+    public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
 

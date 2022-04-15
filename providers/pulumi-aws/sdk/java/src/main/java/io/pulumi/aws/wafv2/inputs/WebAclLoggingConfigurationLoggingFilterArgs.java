@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
     @Import(name="defaultBehavior", required=true)
       private final Output<String> defaultBehavior;
 
-    public Output<String> getDefaultBehavior() {
+    public Output<String> defaultBehavior() {
         return this.defaultBehavior;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
     @Import(name="filters", required=true)
       private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> filters;
 
-    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> getFilters() {
+    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> filters() {
         return this.filters;
     }
 

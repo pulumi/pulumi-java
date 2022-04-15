@@ -45,7 +45,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * @return The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
      * 
      */
-    public Output</* @Nullable */ String> getAction() {
+    public Output</* @Nullable */ String> action() {
         return this.action;
     }
     /**
@@ -59,7 +59,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * @return Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
      * 
      */
-    public Output</* @Nullable */ EventPermissionCondition> getCondition() {
+    public Output</* @Nullable */ EventPermissionCondition> condition() {
         return this.condition;
     }
     /**
@@ -73,7 +73,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    public Output</* @Nullable */ String> getEventBusName() {
+    public Output</* @Nullable */ String> eventBusName() {
         return this.eventBusName;
     }
     /**
@@ -87,7 +87,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * @return The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
      * 
      */
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     /**
@@ -101,7 +101,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * @return An identifier string for the external account that you are granting permissions to.
      * 
      */
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId;
     }
 

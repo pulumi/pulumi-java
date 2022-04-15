@@ -22,7 +22,7 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupArn")
       private final @Nullable Output<String> resourceGroupArn;
 
-    public Output<String> getResourceGroupArn() {
+    public Output<String> resourceGroupArn() {
         return this.resourceGroupArn == null ? Codegen.empty() : this.resourceGroupArn;
     }
 

@@ -23,7 +23,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     @Import(name="marketType")
       private final @Nullable Output<String> marketType;
 
-    public Output<String> getMarketType() {
+    public Output<String> marketType() {
         return this.marketType == null ? Codegen.empty() : this.marketType;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     @Import(name="spotOptions")
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
 
-    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> getSpotOptions() {
+    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions() {
         return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 

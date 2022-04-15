@@ -20,7 +20,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="filters")
       private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
 
-    public List<GetLocalGatewayRouteTableFilter> getFilters() {
+    public List<GetLocalGatewayRouteTableFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -31,7 +31,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="localGatewayId")
       private final @Nullable String localGatewayId;
 
-    public Optional<String> getLocalGatewayId() {
+    public Optional<String> localGatewayId() {
         return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
     }
 
@@ -42,7 +42,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="localGatewayRouteTableId")
       private final @Nullable String localGatewayRouteTableId;
 
-    public Optional<String> getLocalGatewayRouteTableId() {
+    public Optional<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
@@ -53,7 +53,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="outpostArn")
       private final @Nullable String outpostArn;
 
-    public Optional<String> getOutpostArn() {
+    public Optional<String> outpostArn() {
         return this.outpostArn == null ? Optional.empty() : Optional.ofNullable(this.outpostArn);
     }
 
@@ -64,7 +64,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -76,7 +76,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

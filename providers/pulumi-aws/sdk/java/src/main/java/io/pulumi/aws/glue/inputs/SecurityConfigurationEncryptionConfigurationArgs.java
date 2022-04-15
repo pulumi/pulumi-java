@@ -19,14 +19,14 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     @Import(name="cloudwatchEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> getCloudwatchEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @Import(name="jobBookmarksEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> getJobBookmarksEncryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
     }
 
@@ -37,7 +37,7 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     @Import(name="s3Encryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
 
-    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> getS3Encryption() {
+    public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption() {
         return this.s3Encryption;
     }
 

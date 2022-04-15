@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
     @Import(name="exacts", required=true)
       private final Output<List<String>> exacts;
 
-    public Output<List<String>> getExacts() {
+    public Output<List<String>> exacts() {
         return this.exacts;
     }
 

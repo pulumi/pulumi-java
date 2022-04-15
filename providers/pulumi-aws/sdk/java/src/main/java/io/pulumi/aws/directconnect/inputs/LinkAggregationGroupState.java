@@ -24,7 +24,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -46,7 +46,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="connectionsBandwidth")
       private final @Nullable Output<String> connectionsBandwidth;
 
-    public Output<String> getConnectionsBandwidth() {
+    public Output<String> connectionsBandwidth() {
         return this.connectionsBandwidth == null ? Codegen.empty() : this.connectionsBandwidth;
     }
 
@@ -57,7 +57,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -68,14 +68,14 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> getHasLogicalRedundancy() {
+    public Output<String> hasLogicalRedundancy() {
         return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
@@ -86,7 +86,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -97,7 +97,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -108,7 +108,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
@@ -119,7 +119,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -130,7 +130,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -141,7 +141,7 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -24,7 +24,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     @Import(name="humanTaskUiName")
       private final @Nullable Output<String> humanTaskUiName;
 
-    public Output<String> getHumanTaskUiName() {
+    public Output<String> humanTaskUiName() {
         return this.humanTaskUiName == null ? Codegen.empty() : this.humanTaskUiName;
     }
 
@@ -46,7 +46,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -68,7 +68,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uiTemplate")
       private final @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
-    public Output<HumanTaskUIUiTemplateGetArgs> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplateGetArgs> uiTemplate() {
         return this.uiTemplate == null ? Codegen.empty() : this.uiTemplate;
     }
 

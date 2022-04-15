@@ -24,14 +24,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogData")
       private final @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
-    public Output<RepositoryCatalogDataArgs> getCatalogData() {
+    public Output<RepositoryCatalogDataArgs> catalogData() {
         return this.catalogData == null ? Codegen.empty() : this.catalogData;
     }
 
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -42,7 +42,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 

@@ -25,7 +25,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="direction")
       private final @Nullable Output<String> direction;
 
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -49,7 +49,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="hostVpcId")
       private final @Nullable Output<String> hostVpcId;
 
-    public Output<String> getHostVpcId() {
+    public Output<String> hostVpcId() {
         return this.hostVpcId == null ? Codegen.empty() : this.hostVpcId;
     }
 
@@ -61,7 +61,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="ipAddresses")
       private final @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
 
-    public Output<List<ResolverEndpointIpAddressGetArgs>> getIpAddresses() {
+    public Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -72,7 +72,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -94,7 +94,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -105,7 +105,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

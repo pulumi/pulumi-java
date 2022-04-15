@@ -22,7 +22,7 @@ public final class TopicRuleErrorActionSqsGetArgs extends io.pulumi.resources.Re
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
@@ -33,7 +33,7 @@ public final class TopicRuleErrorActionSqsGetArgs extends io.pulumi.resources.Re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -44,7 +44,7 @@ public final class TopicRuleErrorActionSqsGetArgs extends io.pulumi.resources.Re
     @Import(name="useBase64", required=true)
       private final Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
+    public Output<Boolean> useBase64() {
         return this.useBase64;
     }
 

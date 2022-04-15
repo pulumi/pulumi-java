@@ -76,56 +76,56 @@ public final class DirectoryWorkspaceAccessProperties {
      * Indicates whether users can use Android devices to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeAndroid() {
+    public Optional<String> deviceTypeAndroid() {
         return Optional.ofNullable(this.deviceTypeAndroid);
     }
     /**
      * Indicates whether users can use Chromebooks to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeChromeos() {
+    public Optional<String> deviceTypeChromeos() {
         return Optional.ofNullable(this.deviceTypeChromeos);
     }
     /**
      * Indicates whether users can use iOS devices to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeIos() {
+    public Optional<String> deviceTypeIos() {
         return Optional.ofNullable(this.deviceTypeIos);
     }
     /**
      * Indicates whether users can use Linux clients to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeLinux() {
+    public Optional<String> deviceTypeLinux() {
         return Optional.ofNullable(this.deviceTypeLinux);
     }
     /**
      * Indicates whether users can use macOS clients to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeOsx() {
+    public Optional<String> deviceTypeOsx() {
         return Optional.ofNullable(this.deviceTypeOsx);
     }
     /**
      * Indicates whether users can access their WorkSpaces through a web browser.
      * 
     */
-    public Optional<String> getDeviceTypeWeb() {
+    public Optional<String> deviceTypeWeb() {
         return Optional.ofNullable(this.deviceTypeWeb);
     }
     /**
      * Indicates whether users can use Windows clients to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeWindows() {
+    public Optional<String> deviceTypeWindows() {
         return Optional.ofNullable(this.deviceTypeWindows);
     }
     /**
      * Indicates whether users can use zero client devices to access their WorkSpaces.
      * 
     */
-    public Optional<String> getDeviceTypeZeroclient() {
+    public Optional<String> deviceTypeZeroclient() {
         return Optional.ofNullable(this.deviceTypeZeroclient);
     }
 

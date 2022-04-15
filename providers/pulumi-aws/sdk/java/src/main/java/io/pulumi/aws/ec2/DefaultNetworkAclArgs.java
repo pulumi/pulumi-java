@@ -26,7 +26,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultNetworkAclId", required=true)
       private final Output<String> defaultNetworkAclId;
 
-    public Output<String> getDefaultNetworkAclId() {
+    public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId;
     }
 
@@ -37,7 +37,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     @Import(name="egress")
       private final @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress;
 
-    public Output<List<DefaultNetworkAclEgressArgs>> getEgress() {
+    public Output<List<DefaultNetworkAclEgressArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -48,7 +48,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ingress")
       private final @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress;
 
-    public Output<List<DefaultNetworkAclIngressArgs>> getIngress() {
+    public Output<List<DefaultNetworkAclIngressArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -59,7 +59,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -70,7 +70,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

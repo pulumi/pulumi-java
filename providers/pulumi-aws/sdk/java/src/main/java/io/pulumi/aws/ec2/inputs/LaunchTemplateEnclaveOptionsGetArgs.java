@@ -22,7 +22,7 @@ public final class LaunchTemplateEnclaveOptionsGetArgs extends io.pulumi.resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

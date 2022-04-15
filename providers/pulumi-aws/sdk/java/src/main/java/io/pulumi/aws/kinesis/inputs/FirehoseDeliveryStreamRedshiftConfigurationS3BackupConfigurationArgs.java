@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="bufferInterval")
       private final @Nullable Output<Integer> bufferInterval;
 
-    public Output<Integer> getBufferInterval() {
+    public Output<Integer> bufferInterval() {
         return this.bufferInterval == null ? Codegen.empty() : this.bufferInterval;
     }
 
@@ -47,7 +47,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="bufferSize")
       private final @Nullable Output<Integer> bufferSize;
 
-    public Output<Integer> getBufferSize() {
+    public Output<Integer> bufferSize() {
         return this.bufferSize == null ? Codegen.empty() : this.bufferSize;
     }
 
@@ -58,7 +58,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+    public Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -69,7 +69,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="compressionFormat")
       private final @Nullable Output<String> compressionFormat;
 
-    public Output<String> getCompressionFormat() {
+    public Output<String> compressionFormat() {
         return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
@@ -80,7 +80,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
-    public Output<String> getErrorOutputPrefix() {
+    public Output<String> errorOutputPrefix() {
         return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
     }
 
@@ -92,7 +92,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -103,7 +103,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -114,7 +114,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

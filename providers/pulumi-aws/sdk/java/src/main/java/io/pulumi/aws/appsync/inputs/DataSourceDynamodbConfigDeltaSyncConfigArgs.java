@@ -19,21 +19,21 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigArgs extends io.pulumi
     @Import(name="baseTableTtl")
       private final @Nullable Output<Integer> baseTableTtl;
 
-    public Output<Integer> getBaseTableTtl() {
+    public Output<Integer> baseTableTtl() {
         return this.baseTableTtl == null ? Codegen.empty() : this.baseTableTtl;
     }
 
     @Import(name="deltaSyncTableName", required=true)
       private final Output<String> deltaSyncTableName;
 
-    public Output<String> getDeltaSyncTableName() {
+    public Output<String> deltaSyncTableName() {
         return this.deltaSyncTableName;
     }
 
     @Import(name="deltaSyncTableTtl")
       private final @Nullable Output<Integer> deltaSyncTableTtl;
 
-    public Output<Integer> getDeltaSyncTableTtl() {
+    public Output<Integer> deltaSyncTableTtl() {
         return this.deltaSyncTableTtl == null ? Codegen.empty() : this.deltaSyncTableTtl;
     }
 

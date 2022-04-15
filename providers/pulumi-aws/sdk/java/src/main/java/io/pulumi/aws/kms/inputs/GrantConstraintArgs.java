@@ -23,7 +23,7 @@ public final class GrantConstraintArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryptionContextEquals")
       private final @Nullable Output<Map<String,String>> encryptionContextEquals;
 
-    public Output<Map<String,String>> getEncryptionContextEquals() {
+    public Output<Map<String,String>> encryptionContextEquals() {
         return this.encryptionContextEquals == null ? Codegen.empty() : this.encryptionContextEquals;
     }
 
@@ -34,7 +34,7 @@ public final class GrantConstraintArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encryptionContextSubset")
       private final @Nullable Output<Map<String,String>> encryptionContextSubset;
 
-    public Output<Map<String,String>> getEncryptionContextSubset() {
+    public Output<Map<String,String>> encryptionContextSubset() {
         return this.encryptionContextSubset == null ? Codegen.empty() : this.encryptionContextSubset;
     }
 

@@ -21,7 +21,7 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -32,7 +32,7 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 

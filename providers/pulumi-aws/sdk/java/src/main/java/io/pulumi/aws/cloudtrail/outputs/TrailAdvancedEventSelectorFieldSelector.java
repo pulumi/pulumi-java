@@ -69,49 +69,49 @@ public final class TrailAdvancedEventSelectorFieldSelector {
      * A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
      * 
     */
-    public List<String> getEndsWiths() {
+    public List<String> endsWiths() {
         return this.endsWiths == null ? List.of() : this.endsWiths;
     }
     /**
      * A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
      * 
     */
-    public List<String> getEquals() {
+    public List<String> equals_() {
         return this.equals == null ? List.of() : this.equals;
     }
     /**
      * Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
      * 
     */
-    public List<String> getNotEndsWiths() {
+    public List<String> notEndsWiths() {
         return this.notEndsWiths == null ? List.of() : this.notEndsWiths;
     }
     /**
      * A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
      * 
     */
-    public List<String> getNotEquals() {
+    public List<String> notEquals() {
         return this.notEquals == null ? List.of() : this.notEquals;
     }
     /**
      * A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
      * 
     */
-    public List<String> getNotStartsWiths() {
+    public List<String> notStartsWiths() {
         return this.notStartsWiths == null ? List.of() : this.notStartsWiths;
     }
     /**
      * A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
      * 
     */
-    public List<String> getStartsWiths() {
+    public List<String> startsWiths() {
         return this.startsWiths == null ? List.of() : this.startsWiths;
     }
 
@@ -154,12 +154,12 @@ public final class TrailAdvancedEventSelectorFieldSelector {
         public Builder endsWiths(String... endsWiths) {
             return endsWiths(List.of(endsWiths));
         }
-        public Builder equals(@Nullable List<String> equals) {
+        public Builder equals_(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(String... equals) {
-            return equals(List.of(equals));
+        public Builder equals_(String... equals) {
+            return equals_(List.of(equals));
         }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);

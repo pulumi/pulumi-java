@@ -25,7 +25,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -49,7 +49,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
@@ -63,7 +63,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
@@ -76,7 +76,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -88,7 +88,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificatePrivateKey")
       private final @Nullable Output<String> certificatePrivateKey;
 
-    public Output<String> getCertificatePrivateKey() {
+    public Output<String> certificatePrivateKey() {
         return this.certificatePrivateKey == null ? Codegen.empty() : this.certificatePrivateKey;
     }
 
@@ -99,7 +99,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateUploadDate")
       private final @Nullable Output<String> certificateUploadDate;
 
-    public Output<String> getCertificateUploadDate() {
+    public Output<String> certificateUploadDate() {
         return this.certificateUploadDate == null ? Codegen.empty() : this.certificateUploadDate;
     }
 
@@ -111,7 +111,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudfrontDomainName")
       private final @Nullable Output<String> cloudfrontDomainName;
 
-    public Output<String> getCloudfrontDomainName() {
+    public Output<String> cloudfrontDomainName() {
         return this.cloudfrontDomainName == null ? Codegen.empty() : this.cloudfrontDomainName;
     }
 
@@ -123,7 +123,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudfrontZoneId")
       private final @Nullable Output<String> cloudfrontZoneId;
 
-    public Output<String> getCloudfrontZoneId() {
+    public Output<String> cloudfrontZoneId() {
         return this.cloudfrontZoneId == null ? Codegen.empty() : this.cloudfrontZoneId;
     }
 
@@ -134,7 +134,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -145,7 +145,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfiguration")
       private final @Nullable Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration;
 
-    public Output<DomainNameEndpointConfigurationGetArgs> getEndpointConfiguration() {
+    public Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration() {
         return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
@@ -156,7 +156,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
-    public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
+    public Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Codegen.empty() : this.mutualTlsAuthentication;
     }
 
@@ -167,7 +167,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionalCertificateArn")
       private final @Nullable Output<String> regionalCertificateArn;
 
-    public Output<String> getRegionalCertificateArn() {
+    public Output<String> regionalCertificateArn() {
         return this.regionalCertificateArn == null ? Codegen.empty() : this.regionalCertificateArn;
     }
 
@@ -179,7 +179,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionalCertificateName")
       private final @Nullable Output<String> regionalCertificateName;
 
-    public Output<String> getRegionalCertificateName() {
+    public Output<String> regionalCertificateName() {
         return this.regionalCertificateName == null ? Codegen.empty() : this.regionalCertificateName;
     }
 
@@ -190,7 +190,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionalDomainName")
       private final @Nullable Output<String> regionalDomainName;
 
-    public Output<String> getRegionalDomainName() {
+    public Output<String> regionalDomainName() {
         return this.regionalDomainName == null ? Codegen.empty() : this.regionalDomainName;
     }
 
@@ -201,7 +201,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="regionalZoneId")
       private final @Nullable Output<String> regionalZoneId;
 
-    public Output<String> getRegionalZoneId() {
+    public Output<String> regionalZoneId() {
         return this.regionalZoneId == null ? Codegen.empty() : this.regionalZoneId;
     }
 
@@ -212,7 +212,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
     }
 
@@ -223,7 +223,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -234,7 +234,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

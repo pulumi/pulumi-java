@@ -23,7 +23,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<Map<String,String>> context;
 
-    public Output<Map<String,String>> getContext() {
+    public Output<Map<String,String>> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -34,7 +34,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -45,7 +45,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plaintext", required=true)
       private final Output<String> plaintext;
 
-    public Output<String> getPlaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 

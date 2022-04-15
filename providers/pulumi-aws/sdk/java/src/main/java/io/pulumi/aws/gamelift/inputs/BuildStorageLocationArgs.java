@@ -21,7 +21,7 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,7 +32,7 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -43,7 +43,7 @@ public final class BuildStorageLocationArgs extends io.pulumi.resources.Resource
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

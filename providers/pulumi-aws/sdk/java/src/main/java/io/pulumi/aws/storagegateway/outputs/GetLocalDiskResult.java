@@ -41,23 +41,23 @@ public final class GetLocalDiskResult {
      * The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
      * 
     */
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
-    public String getDiskNode() {
+    public String diskNode() {
         return this.diskNode;
     }
-    public String getDiskPath() {
+    public String diskPath() {
         return this.diskPath;
     }
-    public String getGatewayArn() {
+    public String gatewayArn() {
         return this.gatewayArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

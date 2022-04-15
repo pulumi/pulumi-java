@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="inputStartingPosition")
       private final @Nullable Output<String> inputStartingPosition;
 
-    public Output<String> getInputStartingPosition() {
+    public Output<String> inputStartingPosition() {
         return this.inputStartingPosition == null ? Codegen.empty() : this.inputStartingPosition;
     }
 

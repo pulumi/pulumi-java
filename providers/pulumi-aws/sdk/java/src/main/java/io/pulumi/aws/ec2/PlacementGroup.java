@@ -43,7 +43,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the placement group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the placement group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * `"partition"`.  Valid values are 1 - 7 (default is `2`).
      * 
      */
-    public Output<Integer> getPartitionCount() {
+    public Output<Integer> partitionCount() {
         return this.partitionCount;
     }
     /**
@@ -89,7 +89,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the placement group.
      * 
      */
-    public Output<String> getPlacementGroupId() {
+    public Output<String> placementGroupId() {
         return this.placementGroupId;
     }
     /**
@@ -103,7 +103,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
      * 
      */
-    public Output<String> getStrategy() {
+    public Output<String> strategy() {
         return this.strategy;
     }
     /**
@@ -117,7 +117,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -131,7 +131,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

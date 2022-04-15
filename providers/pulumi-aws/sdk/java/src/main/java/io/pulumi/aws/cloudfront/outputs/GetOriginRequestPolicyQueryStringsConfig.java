@@ -22,10 +22,10 @@ public final class GetOriginRequestPolicyQueryStringsConfig {
         this.queryStrings = queryStrings;
     }
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
-    public List<GetOriginRequestPolicyQueryStringsConfigQueryString> getQueryStrings() {
+    public List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
 

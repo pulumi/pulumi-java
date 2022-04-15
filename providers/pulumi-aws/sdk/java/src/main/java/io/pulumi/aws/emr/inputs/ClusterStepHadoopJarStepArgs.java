@@ -24,7 +24,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
     @Import(name="jar", required=true)
       private final Output<String> jar;
 
-    public Output<String> getJar() {
+    public Output<String> jar() {
         return this.jar;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
     @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
-    public Output<String> getMainClass() {
+    public Output<String> mainClass() {
         return this.mainClass == null ? Codegen.empty() : this.mainClass;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

@@ -43,7 +43,7 @@ public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {
      * @return The ARN of the traffic mirror filter.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {
      * @return A description of the filter.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {
      * @return List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getNetworkServices() {
+    public Output</* @Nullable */ List<String>> networkServices() {
         return this.networkServices;
     }
     /**
@@ -85,7 +85,7 @@ public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class TrafficMirrorFilter extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

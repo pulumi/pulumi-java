@@ -51,7 +51,7 @@ public final class PolicyStepAdjustment {
      * Without a value, AWS will treat this bound as infinity.
      * 
     */
-    public Optional<String> getMetricIntervalLowerBound() {
+    public Optional<String> metricIntervalLowerBound() {
         return Optional.ofNullable(this.metricIntervalLowerBound);
     }
     /**
@@ -61,7 +61,7 @@ public final class PolicyStepAdjustment {
      * must be greater than the lower bound.
      * 
     */
-    public Optional<String> getMetricIntervalUpperBound() {
+    public Optional<String> metricIntervalUpperBound() {
         return Optional.ofNullable(this.metricIntervalUpperBound);
     }
     /**
@@ -70,7 +70,7 @@ public final class PolicyStepAdjustment {
      * up. A negative value scales down.
      * 
     */
-    public Integer getScalingAdjustment() {
+    public Integer scalingAdjustment() {
         return this.scalingAdjustment;
     }
 

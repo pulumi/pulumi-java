@@ -45,7 +45,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this instance profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return The description of the instance profile.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return An array of strings that specifies the list of app packages that should not be cleaned up from the device after a test run.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludeAppPackagesFromCleanups() {
+    public Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanups() {
         return this.excludeAppPackagesFromCleanups;
     }
     /**
@@ -87,7 +87,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return The name for the instance profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return When set to `true`, Device Farm removes app packages after a test run. The default value is `false` for private devices.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPackageCleanup() {
+    public Output</* @Nullable */ Boolean> packageCleanup() {
         return this.packageCleanup;
     }
     /**
@@ -115,7 +115,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return When set to `true`, Device Farm reboots the instance after a test run. The default value is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRebootAfterUse() {
+    public Output</* @Nullable */ Boolean> rebootAfterUse() {
         return this.rebootAfterUse;
     }
     /**
@@ -129,7 +129,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

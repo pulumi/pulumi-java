@@ -34,14 +34,14 @@ public final class RepositoryEncryptionConfiguration {
      * The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
      * 
     */
-    public Optional<String> getEncryptionType() {
+    public Optional<String> encryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
     /**
      * The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
      * 
     */
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
 

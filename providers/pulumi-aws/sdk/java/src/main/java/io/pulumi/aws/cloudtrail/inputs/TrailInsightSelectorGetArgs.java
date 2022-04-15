@@ -21,7 +21,7 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
     @Import(name="insightType", required=true)
       private final Output<String> insightType;
 
-    public Output<String> getInsightType() {
+    public Output<String> insightType() {
         return this.insightType;
     }
 

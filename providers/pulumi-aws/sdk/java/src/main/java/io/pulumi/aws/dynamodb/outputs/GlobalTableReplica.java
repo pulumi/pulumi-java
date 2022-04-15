@@ -24,7 +24,7 @@ public final class GlobalTableReplica {
      * AWS region name of replica DynamoDB TableE.g., `us-east-1`
      * 
     */
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

@@ -23,7 +23,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
 
@@ -45,7 +45,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,7 +56,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

@@ -35,14 +35,14 @@ public final class VirtualGatewaySpecListenerTlsValidationTrust {
      * The TLS validation context trust for a local file certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecListenerTlsValidationTrustFile> getFile() {
+    public Optional<VirtualGatewaySpecListenerTlsValidationTrustFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecListenerTlsValidationTrustSds> getSds() {
+    public Optional<VirtualGatewaySpecListenerTlsValidationTrustSds> sds() {
         return Optional.ofNullable(this.sds);
     }
 

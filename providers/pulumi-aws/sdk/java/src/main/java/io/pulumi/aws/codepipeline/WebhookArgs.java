@@ -26,7 +26,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
       private final Output<String> authentication;
 
-    public Output<String> getAuthentication() {
+    public Output<String> authentication() {
         return this.authentication;
     }
 
@@ -37,7 +37,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<WebhookAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+    public Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -48,7 +48,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filters", required=true)
       private final Output<List<WebhookFilterArgs>> filters;
 
-    public Output<List<WebhookFilterArgs>> getFilters() {
+    public Output<List<WebhookFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -59,7 +59,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetAction", required=true)
       private final Output<String> targetAction;
 
-    public Output<String> getTargetAction() {
+    public Output<String> targetAction() {
         return this.targetAction;
     }
 
@@ -92,7 +92,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetPipeline", required=true)
       private final Output<String> targetPipeline;
 
-    public Output<String> getTargetPipeline() {
+    public Output<String> targetPipeline() {
         return this.targetPipeline;
     }
 

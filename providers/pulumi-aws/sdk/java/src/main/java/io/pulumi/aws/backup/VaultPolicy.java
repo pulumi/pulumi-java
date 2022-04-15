@@ -40,7 +40,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the vault.
      * 
      */
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn;
     }
     /**
@@ -54,7 +54,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the backup vault to add policy for.
      * 
      */
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
     /**
@@ -68,7 +68,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * @return The backup vault access policy document in JSON format.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

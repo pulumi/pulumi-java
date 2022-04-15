@@ -22,7 +22,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -33,7 +33,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId == null ? Codegen.empty() : this.serverId;
     }
 
@@ -44,7 +44,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

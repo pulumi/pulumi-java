@@ -23,7 +23,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="cognitoMemberDefinition")
       private final @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
 
-    public Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> getCognitoMemberDefinition() {
+    public Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition() {
         return this.cognitoMemberDefinition == null ? Codegen.empty() : this.cognitoMemberDefinition;
     }
 
@@ -34,7 +34,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
     @Import(name="oidcMemberDefinition")
       private final @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
 
-    public Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> getOidcMemberDefinition() {
+    public Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition() {
         return this.oidcMemberDefinition == null ? Codegen.empty() : this.oidcMemberDefinition;
     }
 

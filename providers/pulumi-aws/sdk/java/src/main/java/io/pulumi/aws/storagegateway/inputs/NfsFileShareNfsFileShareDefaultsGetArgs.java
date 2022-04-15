@@ -22,7 +22,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="directoryMode")
       private final @Nullable Output<String> directoryMode;
 
-    public Output<String> getDirectoryMode() {
+    public Output<String> directoryMode() {
         return this.directoryMode == null ? Codegen.empty() : this.directoryMode;
     }
 
@@ -33,7 +33,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="fileMode")
       private final @Nullable Output<String> fileMode;
 
-    public Output<String> getFileMode() {
+    public Output<String> fileMode() {
         return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
@@ -44,7 +44,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -55,7 +55,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 

@@ -25,7 +25,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="activationCode")
       private final @Nullable Output<String> activationCode;
 
-    public Output<String> getActivationCode() {
+    public Output<String> activationCode() {
         return this.activationCode == null ? Codegen.empty() : this.activationCode;
     }
 
@@ -36,7 +36,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -58,7 +58,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
 
-    public Output<Boolean> getExpired() {
+    public Output<Boolean> expired() {
         return this.expired == null ? Codegen.empty() : this.expired;
     }
 
@@ -69,7 +69,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
@@ -80,7 +80,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationCount")
       private final @Nullable Output<Integer> registrationCount;
 
-    public Output<Integer> getRegistrationCount() {
+    public Output<Integer> registrationCount() {
         return this.registrationCount == null ? Codegen.empty() : this.registrationCount;
     }
 
@@ -102,7 +102,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationLimit")
       private final @Nullable Output<Integer> registrationLimit;
 
-    public Output<Integer> getRegistrationLimit() {
+    public Output<Integer> registrationLimit() {
         return this.registrationLimit == null ? Codegen.empty() : this.registrationLimit;
     }
 
@@ -113,7 +113,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

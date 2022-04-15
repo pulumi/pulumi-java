@@ -21,10 +21,10 @@ public final class GetListenerDefaultActionForwardStickiness {
         this.enabled = enabled;
     }
 
-    public Integer getDuration() {
+    public Integer duration() {
         return this.duration;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

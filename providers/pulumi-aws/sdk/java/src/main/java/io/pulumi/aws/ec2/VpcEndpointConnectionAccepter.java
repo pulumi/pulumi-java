@@ -40,7 +40,7 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @return AWS VPC Endpoint ID.
      * 
      */
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
     /**
@@ -54,7 +54,7 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @return AWS VPC Endpoint Service ID.
      * 
      */
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
     /**
@@ -68,7 +68,7 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @return State of the VPC Endpoint.
      * 
      */
-    public Output<String> getVpcEndpointState() {
+    public Output<String> vpcEndpointState() {
         return this.vpcEndpointState;
     }
 

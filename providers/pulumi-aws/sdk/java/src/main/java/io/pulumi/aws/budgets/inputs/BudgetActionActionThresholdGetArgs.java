@@ -22,7 +22,7 @@ public final class BudgetActionActionThresholdGetArgs extends io.pulumi.resource
     @Import(name="actionThresholdType", required=true)
       private final Output<String> actionThresholdType;
 
-    public Output<String> getActionThresholdType() {
+    public Output<String> actionThresholdType() {
         return this.actionThresholdType;
     }
 
@@ -33,7 +33,7 @@ public final class BudgetActionActionThresholdGetArgs extends io.pulumi.resource
     @Import(name="actionThresholdValue", required=true)
       private final Output<Double> actionThresholdValue;
 
-    public Output<Double> getActionThresholdValue() {
+    public Output<Double> actionThresholdValue() {
         return this.actionThresholdValue;
     }
 

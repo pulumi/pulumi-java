@@ -27,7 +27,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -38,7 +38,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamodbConfig")
       private final @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
 
-    public Output<DataSourceDynamodbConfigGetArgs> getDynamodbConfig() {
+    public Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig() {
         return this.dynamodbConfig == null ? Codegen.empty() : this.dynamodbConfig;
     }
 
@@ -71,7 +71,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchConfig")
       private final @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
 
-    public Output<DataSourceElasticsearchConfigGetArgs> getElasticsearchConfig() {
+    public Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig() {
         return this.elasticsearchConfig == null ? Codegen.empty() : this.elasticsearchConfig;
     }
 
@@ -82,7 +82,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpConfig")
       private final @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
 
-    public Output<DataSourceHttpConfigGetArgs> getHttpConfig() {
+    public Output<DataSourceHttpConfigGetArgs> httpConfig() {
         return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
     }
 
@@ -93,7 +93,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfig")
       private final @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
 
-    public Output<DataSourceLambdaConfigGetArgs> getLambdaConfig() {
+    public Output<DataSourceLambdaConfigGetArgs> lambdaConfig() {
         return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
     }
 
@@ -104,7 +104,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigGetArgs> getRelationalDatabaseConfig() {
+    public Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig() {
         return this.relationalDatabaseConfig == null ? Codegen.empty() : this.relationalDatabaseConfig;
     }
 
@@ -126,7 +126,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -137,7 +137,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

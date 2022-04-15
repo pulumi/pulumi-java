@@ -21,7 +21,7 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +32,7 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
     @Import(name="stringValue", required=true)
       private final Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue;
     }
 

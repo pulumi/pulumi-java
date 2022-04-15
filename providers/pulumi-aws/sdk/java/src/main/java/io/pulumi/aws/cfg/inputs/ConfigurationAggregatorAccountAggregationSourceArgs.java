@@ -24,7 +24,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     @Import(name="accountIds", required=true)
       private final Output<List<String>> accountIds;
 
-    public Output<List<String>> getAccountIds() {
+    public Output<List<String>> accountIds() {
         return this.accountIds;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     @Import(name="allRegions")
       private final @Nullable Output<Boolean> allRegions;
 
-    public Output<Boolean> getAllRegions() {
+    public Output<Boolean> allRegions() {
         return this.allRegions == null ? Codegen.empty() : this.allRegions;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 

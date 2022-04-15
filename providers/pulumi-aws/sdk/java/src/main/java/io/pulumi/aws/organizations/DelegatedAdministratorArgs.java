@@ -21,7 +21,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -32,7 +32,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     @Import(name="servicePrincipal", required=true)
       private final Output<String> servicePrincipal;
 
-    public Output<String> getServicePrincipal() {
+    public Output<String> servicePrincipal() {
         return this.servicePrincipal;
     }
 

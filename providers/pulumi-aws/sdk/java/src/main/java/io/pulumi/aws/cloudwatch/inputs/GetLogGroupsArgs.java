@@ -19,7 +19,7 @@ public final class GetLogGroupsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="logGroupNamePrefix", required=true)
       private final String logGroupNamePrefix;
 
-    public String getLogGroupNamePrefix() {
+    public String logGroupNamePrefix() {
         return this.logGroupNamePrefix;
     }
 

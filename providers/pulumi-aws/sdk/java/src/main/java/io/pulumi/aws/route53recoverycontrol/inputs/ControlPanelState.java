@@ -24,7 +24,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
@@ -46,7 +46,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultControlPanel")
       private final @Nullable Output<Boolean> defaultControlPanel;
 
-    public Output<Boolean> getDefaultControlPanel() {
+    public Output<Boolean> defaultControlPanel() {
         return this.defaultControlPanel == null ? Codegen.empty() : this.defaultControlPanel;
     }
 
@@ -57,7 +57,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingControlCount")
       private final @Nullable Output<Integer> routingControlCount;
 
-    public Output<Integer> getRoutingControlCount() {
+    public Output<Integer> routingControlCount() {
         return this.routingControlCount == null ? Codegen.empty() : this.routingControlCount;
     }
 
@@ -79,7 +79,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

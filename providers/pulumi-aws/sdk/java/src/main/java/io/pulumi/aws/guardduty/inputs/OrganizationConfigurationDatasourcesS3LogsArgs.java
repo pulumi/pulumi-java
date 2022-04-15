@@ -21,7 +21,7 @@ public final class OrganizationConfigurationDatasourcesS3LogsArgs extends io.pul
     @Import(name="autoEnable", required=true)
       private final Output<Boolean> autoEnable;
 
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
 

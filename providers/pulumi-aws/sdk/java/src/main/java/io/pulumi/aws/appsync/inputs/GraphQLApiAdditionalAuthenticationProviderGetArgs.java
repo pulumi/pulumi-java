@@ -25,7 +25,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -36,7 +36,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
     @Import(name="lambdaAuthorizerConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> getLambdaAuthorizerConfig() {
+    public Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
     }
 
@@ -47,7 +47,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
     @Import(name="openidConnectConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> getOpenidConnectConfig() {
+    public Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig() {
         return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
     }
 
@@ -58,7 +58,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
     @Import(name="userPoolConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig;
 
-    public Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> getUserPoolConfig() {
+    public Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig() {
         return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
     }
 

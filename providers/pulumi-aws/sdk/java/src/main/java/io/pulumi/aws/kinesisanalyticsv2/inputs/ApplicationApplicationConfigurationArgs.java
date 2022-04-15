@@ -28,7 +28,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="applicationCodeConfiguration", required=true)
       private final Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> getApplicationCodeConfiguration() {
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="applicationSnapshotConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration;
 
-    public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> getApplicationSnapshotConfiguration() {
+    public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration() {
         return this.applicationSnapshotConfiguration == null ? Codegen.empty() : this.applicationSnapshotConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="environmentProperties")
       private final @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties;
 
-    public Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> getEnvironmentProperties() {
+    public Output<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties() {
         return this.environmentProperties == null ? Codegen.empty() : this.environmentProperties;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="flinkApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> getFlinkApplicationConfiguration() {
+    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration() {
         return this.flinkApplicationConfiguration == null ? Codegen.empty() : this.flinkApplicationConfiguration;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="runConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationArgs> getRunConfiguration() {
+    public Output<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration() {
         return this.runConfiguration == null ? Codegen.empty() : this.runConfiguration;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="sqlApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> getSqlApplicationConfiguration() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration() {
         return this.sqlApplicationConfiguration == null ? Codegen.empty() : this.sqlApplicationConfiguration;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     @Import(name="vpcConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<ApplicationApplicationConfigurationVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

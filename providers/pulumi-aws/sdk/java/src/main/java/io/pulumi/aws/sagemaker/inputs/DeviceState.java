@@ -19,7 +19,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
@@ -30,7 +30,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -41,7 +41,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="device")
       private final @Nullable Output<DeviceDeviceGetArgs> device;
 
-    public Output<DeviceDeviceGetArgs> getDevice() {
+    public Output<DeviceDeviceGetArgs> device() {
         return this.device == null ? Codegen.empty() : this.device;
     }
 
@@ -52,7 +52,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName == null ? Codegen.empty() : this.deviceFleetName;
     }
 

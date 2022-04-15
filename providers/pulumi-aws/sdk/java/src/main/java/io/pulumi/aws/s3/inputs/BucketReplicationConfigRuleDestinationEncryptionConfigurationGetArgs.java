@@ -21,7 +21,7 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
     @Import(name="replicaKmsKeyId", required=true)
       private final Output<String> replicaKmsKeyId;
 
-    public Output<String> getReplicaKmsKeyId() {
+    public Output<String> replicaKmsKeyId() {
         return this.replicaKmsKeyId;
     }
 

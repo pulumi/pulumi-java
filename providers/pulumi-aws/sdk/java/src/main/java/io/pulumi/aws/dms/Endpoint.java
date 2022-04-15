@@ -47,7 +47,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the certificate.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -61,7 +61,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -75,7 +75,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block with Elasticsearch settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointElasticsearchSettings> getElasticsearchSettings() {
+    public Output</* @Nullable */ EndpointElasticsearchSettings> elasticsearchSettings() {
         return this.elasticsearchSettings;
     }
     /**
@@ -89,7 +89,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the endpoint.
      * 
      */
-    public Output<String> getEndpointArn() {
+    public Output<String> endpointArn() {
         return this.endpointArn;
     }
     /**
@@ -103,7 +103,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The database endpoint identifier.
      * 
      */
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId;
     }
     /**
@@ -117,7 +117,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The type of endpoint. Can be one of `source | target`.
      * 
      */
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
     /**
@@ -131,7 +131,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
      * 
      */
-    public Output<String> getEngineName() {
+    public Output<String> engineName() {
         return this.engineName;
     }
     /**
@@ -145,7 +145,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
      * 
      */
-    public Output<String> getExtraConnectionAttributes() {
+    public Output<String> extraConnectionAttributes() {
         return this.extraConnectionAttributes;
     }
     /**
@@ -159,7 +159,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block with Kafka settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointKafkaSettings> getKafkaSettings() {
+    public Output</* @Nullable */ EndpointKafkaSettings> kafkaSettings() {
         return this.kafkaSettings;
     }
     /**
@@ -173,7 +173,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block with Kinesis settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointKinesisSettings> getKinesisSettings() {
+    public Output</* @Nullable */ EndpointKinesisSettings> kinesisSettings() {
         return this.kinesisSettings;
     }
     /**
@@ -187,7 +187,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -201,7 +201,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block with MongoDB settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointMongodbSettings> getMongodbSettings() {
+    public Output</* @Nullable */ EndpointMongodbSettings> mongodbSettings() {
         return this.mongodbSettings;
     }
     /**
@@ -215,7 +215,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The password to be used to login to the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -229,7 +229,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The port used by the endpoint database.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -243,7 +243,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block with S3 settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointS3Settings> getS3Settings() {
+    public Output</* @Nullable */ EndpointS3Settings> s3Settings() {
         return this.s3Settings;
     }
     /**
@@ -257,7 +257,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
-    public Output</* @Nullable */ String> getSecretsManagerAccessRoleArn() {
+    public Output</* @Nullable */ String> secretsManagerAccessRoleArn() {
         return this.secretsManagerAccessRoleArn;
     }
     /**
@@ -271,7 +271,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
-    public Output</* @Nullable */ String> getSecretsManagerArn() {
+    public Output</* @Nullable */ String> secretsManagerArn() {
         return this.secretsManagerArn;
     }
     /**
@@ -285,7 +285,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The host name of the server.
      * 
      */
-    public Output</* @Nullable */ String> getServerName() {
+    public Output</* @Nullable */ String> serverName() {
         return this.serverName;
     }
     /**
@@ -299,7 +299,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccessRole() {
+    public Output</* @Nullable */ String> serviceAccessRole() {
         return this.serviceAccessRole;
     }
     /**
@@ -313,7 +313,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
      * 
      */
-    public Output<String> getSslMode() {
+    public Output<String> sslMode() {
         return this.sslMode;
     }
     /**
@@ -327,7 +327,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -341,7 +341,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -355,7 +355,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The user name to be used to login to the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> getUsername() {
+    public Output</* @Nullable */ String> username() {
         return this.username;
     }
 

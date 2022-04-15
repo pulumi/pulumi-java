@@ -48,34 +48,34 @@ public final class GetSpotPriceResult {
         this.spotPriceTimestamp = spotPriceTimestamp;
     }
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public List<GetSpotPriceFilter> getFilters() {
+    public List<GetSpotPriceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The most recent Spot Price value for the given instance type and AZ.
      * 
     */
-    public String getSpotPrice() {
+    public String spotPrice() {
         return this.spotPrice;
     }
     /**
      * The timestamp at which the Spot Price value was published.
      * 
     */
-    public String getSpotPriceTimestamp() {
+    public String spotPriceTimestamp() {
         return this.spotPriceTimestamp;
     }
 

@@ -36,17 +36,17 @@ public final class GetClusterCacheNode {
         this.port = port;
     }
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
     /**
      * The Availability Zone for the cache cluster.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -54,7 +54,7 @@ public final class GetClusterCacheNode {
      * accept connections.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

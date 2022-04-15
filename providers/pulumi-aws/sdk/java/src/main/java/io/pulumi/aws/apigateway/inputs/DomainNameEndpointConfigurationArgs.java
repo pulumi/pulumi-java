@@ -21,7 +21,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     @Import(name="types", required=true)
       private final Output<String> types;
 
-    public Output<String> getTypes() {
+    public Output<String> types() {
         return this.types;
     }
 

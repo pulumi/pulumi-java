@@ -23,7 +23,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -34,7 +34,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<CustomPluginLocationArgs> location;
 
-    public Output<CustomPluginLocationArgs> getLocation() {
+    public Output<CustomPluginLocationArgs> location() {
         return this.location;
     }
 
@@ -56,7 +56,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

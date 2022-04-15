@@ -56,7 +56,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
      * 
      */
-    public Output</* @Nullable */ List<TrailAdvancedEventSelector>> getAdvancedEventSelectors() {
+    public Output</* @Nullable */ List<TrailAdvancedEventSelector>> advancedEventSelectors() {
         return this.advancedEventSelectors;
     }
     /**
@@ -70,7 +70,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return ARN of the trail.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -84,7 +84,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Log group name using an ARN that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
      * 
      */
-    public Output</* @Nullable */ String> getCloudWatchLogsGroupArn() {
+    public Output</* @Nullable */ String> cloudWatchLogsGroupArn() {
         return this.cloudWatchLogsGroupArn;
     }
     /**
@@ -98,7 +98,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Role for the CloudWatch Logs endpoint to assume to write to a user’s log group.
      * 
      */
-    public Output</* @Nullable */ String> getCloudWatchLogsRoleArn() {
+    public Output</* @Nullable */ String> cloudWatchLogsRoleArn() {
         return this.cloudWatchLogsRoleArn;
     }
     /**
@@ -112,7 +112,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Whether log file integrity validation is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogFileValidation() {
+    public Output</* @Nullable */ Boolean> enableLogFileValidation() {
         return this.enableLogFileValidation;
     }
     /**
@@ -126,7 +126,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Enables logging for the trail. Defaults to `true`. Setting this to `false` will pause logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableLogging() {
+    public Output</* @Nullable */ Boolean> enableLogging() {
         return this.enableLogging;
     }
     /**
@@ -140,7 +140,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
      * 
      */
-    public Output</* @Nullable */ List<TrailEventSelector>> getEventSelectors() {
+    public Output</* @Nullable */ List<TrailEventSelector>> eventSelectors() {
         return this.eventSelectors;
     }
     /**
@@ -154,7 +154,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Region in which the trail was created.
      * 
      */
-    public Output<String> getHomeRegion() {
+    public Output<String> homeRegion() {
         return this.homeRegion;
     }
     /**
@@ -168,7 +168,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Whether the trail is publishing events from global services such as IAM to the log files. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncludeGlobalServiceEvents() {
+    public Output</* @Nullable */ Boolean> includeGlobalServiceEvents() {
         return this.includeGlobalServiceEvents;
     }
     /**
@@ -182,7 +182,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Configuration block for identifying unusual operational activity. See details below.
      * 
      */
-    public Output</* @Nullable */ List<TrailInsightSelector>> getInsightSelectors() {
+    public Output</* @Nullable */ List<TrailInsightSelector>> insightSelectors() {
         return this.insightSelectors;
     }
     /**
@@ -196,7 +196,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Whether the trail is created in the current region or in all regions. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsMultiRegionTrail() {
+    public Output</* @Nullable */ Boolean> isMultiRegionTrail() {
         return this.isMultiRegionTrail;
     }
     /**
@@ -210,7 +210,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsOrganizationTrail() {
+    public Output</* @Nullable */ Boolean> isOrganizationTrail() {
         return this.isOrganizationTrail;
     }
     /**
@@ -224,7 +224,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return KMS key ARN to use to encrypt the logs delivered by CloudTrail.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -238,7 +238,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the advanced event selector.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -252,7 +252,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Name of the S3 bucket designated for publishing log files.
      * 
      */
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
     /**
@@ -266,7 +266,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return S3 key prefix that follows the name of the bucket you have designated for log file delivery.
      * 
      */
-    public Output</* @Nullable */ String> getS3KeyPrefix() {
+    public Output</* @Nullable */ String> s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
     /**
@@ -280,7 +280,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Name of the Amazon SNS topic defined for notification of log file delivery.
      * 
      */
-    public Output</* @Nullable */ String> getSnsTopicName() {
+    public Output</* @Nullable */ String> snsTopicName() {
         return this.snsTopicName;
     }
     /**
@@ -294,7 +294,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the trail. If configured with provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -308,7 +308,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

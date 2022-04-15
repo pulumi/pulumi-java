@@ -22,7 +22,7 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
     @Import(name="newGameSessionsPerCreator")
       private final @Nullable Output<Integer> newGameSessionsPerCreator;
 
-    public Output<Integer> getNewGameSessionsPerCreator() {
+    public Output<Integer> newGameSessionsPerCreator() {
         return this.newGameSessionsPerCreator == null ? Codegen.empty() : this.newGameSessionsPerCreator;
     }
 
@@ -33,7 +33,7 @@ public final class FleetResourceCreationLimitPolicyGetArgs extends io.pulumi.res
     @Import(name="policyPeriodInMinutes")
       private final @Nullable Output<Integer> policyPeriodInMinutes;
 
-    public Output<Integer> getPolicyPeriodInMinutes() {
+    public Output<Integer> policyPeriodInMinutes() {
         return this.policyPeriodInMinutes == null ? Codegen.empty() : this.policyPeriodInMinutes;
     }
 

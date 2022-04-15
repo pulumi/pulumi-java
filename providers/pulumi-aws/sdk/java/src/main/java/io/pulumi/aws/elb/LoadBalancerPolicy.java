@@ -35,7 +35,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * @return The load balancer on which the policy is defined.
      * 
      */
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
     /**
@@ -49,7 +49,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * @return Policy attribute to apply to the policy.
      * 
      */
-    public Output<List<LoadBalancerPolicyPolicyAttribute>> getPolicyAttributes() {
+    public Output<List<LoadBalancerPolicyPolicyAttribute>> policyAttributes() {
         return this.policyAttributes;
     }
     /**
@@ -63,7 +63,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the load balancer policy.
      * 
      */
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
     /**
@@ -77,7 +77,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * @return The policy type.
      * 
      */
-    public Output<String> getPolicyTypeName() {
+    public Output<String> policyTypeName() {
         return this.policyTypeName;
     }
 

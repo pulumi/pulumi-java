@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
     @Import(name="definitions", required=true)
       private final Output<List<String>> definitions;
 
-    public Output<List<String>> getDefinitions() {
+    public Output<List<String>> definitions() {
         return this.definitions;
     }
 

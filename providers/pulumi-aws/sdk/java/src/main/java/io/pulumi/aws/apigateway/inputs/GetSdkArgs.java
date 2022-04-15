@@ -22,7 +22,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -33,7 +33,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 
@@ -44,7 +44,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sdkType", required=true)
       private final String sdkType;
 
-    public String getSdkType() {
+    public String sdkType() {
         return this.sdkType;
     }
 
@@ -55,7 +55,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
       private final String stageName;
 
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
 

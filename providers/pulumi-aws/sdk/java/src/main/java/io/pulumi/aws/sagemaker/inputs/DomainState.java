@@ -26,7 +26,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkAccessType")
       private final @Nullable Output<String> appNetworkAccessType;
 
-    public Output<String> getAppNetworkAccessType() {
+    public Output<String> appNetworkAccessType() {
         return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
     }
 
@@ -37,7 +37,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authMode")
       private final @Nullable Output<String> authMode;
 
-    public Output<String> getAuthMode() {
+    public Output<String> authMode() {
         return this.authMode == null ? Codegen.empty() : this.authMode;
     }
 
@@ -59,7 +59,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultUserSettings")
       private final @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
 
-    public Output<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
+    public Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings() {
         return this.defaultUserSettings == null ? Codegen.empty() : this.defaultUserSettings;
     }
 
@@ -70,7 +70,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -81,7 +81,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeEfsFileSystemId")
       private final @Nullable Output<String> homeEfsFileSystemId;
 
-    public Output<String> getHomeEfsFileSystemId() {
+    public Output<String> homeEfsFileSystemId() {
         return this.homeEfsFileSystemId == null ? Codegen.empty() : this.homeEfsFileSystemId;
     }
 
@@ -92,7 +92,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -103,7 +103,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
 
-    public Output<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
+    public Output<DomainRetentionPolicyGetArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -114,7 +114,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnManagedApplicationInstanceId")
       private final @Nullable Output<String> singleSignOnManagedApplicationInstanceId;
 
-    public Output<String> getSingleSignOnManagedApplicationInstanceId() {
+    public Output<String> singleSignOnManagedApplicationInstanceId() {
         return this.singleSignOnManagedApplicationInstanceId == null ? Codegen.empty() : this.singleSignOnManagedApplicationInstanceId;
     }
 
@@ -125,7 +125,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -136,7 +136,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -147,7 +147,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -158,7 +158,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -169,7 +169,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

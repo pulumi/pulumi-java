@@ -21,7 +21,7 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
     @Import(name="ruleSetName", required=true)
       private final Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 

@@ -23,7 +23,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     @Import(name="imageConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
 
-    public Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> getImageConfiguration() {
+    public Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration() {
         return this.imageConfiguration == null ? Codegen.empty() : this.imageConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     @Import(name="imageIdentifier", required=true)
       private final Output<String> imageIdentifier;
 
-    public Output<String> getImageIdentifier() {
+    public Output<String> imageIdentifier() {
         return this.imageIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     @Import(name="imageRepositoryType", required=true)
       private final Output<String> imageRepositoryType;
 
-    public Output<String> getImageRepositoryType() {
+    public Output<String> imageRepositoryType() {
         return this.imageRepositoryType;
     }
 

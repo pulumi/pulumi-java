@@ -21,7 +21,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body", required=true)
       private final Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
 
@@ -32,7 +32,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -43,7 +43,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

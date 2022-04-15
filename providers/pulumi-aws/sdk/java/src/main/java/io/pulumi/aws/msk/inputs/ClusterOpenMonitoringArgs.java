@@ -21,7 +21,7 @@ public final class ClusterOpenMonitoringArgs extends io.pulumi.resources.Resourc
     @Import(name="prometheus", required=true)
       private final Output<ClusterOpenMonitoringPrometheusArgs> prometheus;
 
-    public Output<ClusterOpenMonitoringPrometheusArgs> getPrometheus() {
+    public Output<ClusterOpenMonitoringPrometheusArgs> prometheus() {
         return this.prometheus;
     }
 

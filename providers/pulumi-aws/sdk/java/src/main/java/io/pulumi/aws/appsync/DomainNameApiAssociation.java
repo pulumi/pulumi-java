@@ -40,7 +40,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * @return The API ID.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -54,7 +54,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * @return The Appsync domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

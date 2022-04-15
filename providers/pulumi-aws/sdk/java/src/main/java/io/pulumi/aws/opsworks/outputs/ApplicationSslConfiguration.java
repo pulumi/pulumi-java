@@ -41,21 +41,21 @@ public final class ApplicationSslConfiguration {
      * The contents of the certificate's domain.crt file.
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
     /**
      * Can be used to specify an intermediate certificate authority key or client authentication.
      * 
     */
-    public Optional<String> getChain() {
+    public Optional<String> chain() {
         return Optional.ofNullable(this.chain);
     }
     /**
      * The private key; the contents of the certificate's domain.key file.
      * 
     */
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
 

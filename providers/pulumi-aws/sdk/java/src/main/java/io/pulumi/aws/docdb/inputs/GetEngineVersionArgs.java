@@ -22,7 +22,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="engine")
       private final @Nullable String engine;
 
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
     }
 
@@ -33,7 +33,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameterGroupFamily")
       private final @Nullable String parameterGroupFamily;
 
-    public Optional<String> getParameterGroupFamily() {
+    public Optional<String> parameterGroupFamily() {
         return this.parameterGroupFamily == null ? Optional.empty() : Optional.ofNullable(this.parameterGroupFamily);
     }
 
@@ -44,7 +44,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="preferredVersions")
       private final @Nullable List<String> preferredVersions;
 
-    public List<String> getPreferredVersions() {
+    public List<String> preferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
 
@@ -55,7 +55,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

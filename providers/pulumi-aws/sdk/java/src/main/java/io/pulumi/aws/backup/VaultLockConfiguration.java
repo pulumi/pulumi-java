@@ -41,7 +41,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The ARN of the vault.
      * 
      */
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn;
     }
     /**
@@ -55,7 +55,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return Name of the backup vault to add a lock configuration for.
      * 
      */
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
     /**
@@ -69,7 +69,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The number of days before the lock date.
      * 
      */
-    public Output</* @Nullable */ Integer> getChangeableForDays() {
+    public Output</* @Nullable */ Integer> changeableForDays() {
         return this.changeableForDays;
     }
     /**
@@ -83,7 +83,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The maximum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxRetentionDays() {
+    public Output</* @Nullable */ Integer> maxRetentionDays() {
         return this.maxRetentionDays;
     }
     /**
@@ -97,7 +97,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * @return The minimum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinRetentionDays() {
+    public Output</* @Nullable */ Integer> minRetentionDays() {
         return this.minRetentionDays;
     }
 

@@ -38,7 +38,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Gamelift Build ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -52,7 +52,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Name of the build
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -66,7 +66,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Operating system that the game server binaries are built to run onE.g., `WINDOWS_2012`, `AMAZON_LINUX` or `AMAZON_LINUX_2`.
      * 
      */
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
     /**
@@ -80,7 +80,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Information indicating where your game build files are stored. See below.
      * 
      */
-    public Output<BuildStorageLocation> getStorageLocation() {
+    public Output<BuildStorageLocation> storageLocation() {
         return this.storageLocation;
     }
     /**
@@ -94,7 +94,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -108,7 +108,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -122,7 +122,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @return Version that is associated with this build.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

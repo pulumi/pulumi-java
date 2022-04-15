@@ -35,14 +35,14 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
      * Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.
      * 
     */
-    public Boolean getForwardWhenQueryArgProfileIsUnknown() {
+    public Boolean forwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
     }
     /**
      * Object that contains an attribute `items` that contains the list ofrofiles specified for query argument-profile mapping for field-level encryption. see Query Arg Profile.
      * 
     */
-    public Optional<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles> getQueryArgProfiles() {
+    public Optional<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles> queryArgProfiles() {
         return Optional.ofNullable(this.queryArgProfiles);
     }
 

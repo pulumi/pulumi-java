@@ -44,7 +44,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The CodePipeline webhook's ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
      * 
      */
-    public Output<String> getAuthentication() {
+    public Output<String> authentication() {
         return this.authentication;
     }
     /**
@@ -72,7 +72,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
      * 
      */
-    public Output</* @Nullable */ WebhookAuthenticationConfiguration> getAuthenticationConfiguration() {
+    public Output</* @Nullable */ WebhookAuthenticationConfiguration> authenticationConfiguration() {
         return this.authenticationConfiguration;
     }
     /**
@@ -86,7 +86,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return One or more `filter` blocks. Filter blocks are documented below.
      * 
      */
-    public Output<List<WebhookFilter>> getFilters() {
+    public Output<List<WebhookFilter>> filters() {
         return this.filters;
     }
     /**
@@ -100,7 +100,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name of the webhook.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +128,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -142,7 +142,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
      * 
      */
-    public Output<String> getTargetAction() {
+    public Output<String> targetAction() {
         return this.targetAction;
     }
     /**
@@ -156,7 +156,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name of the pipeline.
      * 
      */
-    public Output<String> getTargetPipeline() {
+    public Output<String> targetPipeline() {
         return this.targetPipeline;
     }
     /**
@@ -170,7 +170,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

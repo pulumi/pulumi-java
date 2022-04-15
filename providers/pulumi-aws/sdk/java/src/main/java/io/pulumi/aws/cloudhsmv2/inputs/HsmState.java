@@ -22,7 +22,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -33,7 +33,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -44,7 +44,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmEniId")
       private final @Nullable Output<String> hsmEniId;
 
-    public Output<String> getHsmEniId() {
+    public Output<String> hsmEniId() {
         return this.hsmEniId == null ? Codegen.empty() : this.hsmEniId;
     }
 
@@ -55,7 +55,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmId")
       private final @Nullable Output<String> hsmId;
 
-    public Output<String> getHsmId() {
+    public Output<String> hsmId() {
         return this.hsmId == null ? Codegen.empty() : this.hsmId;
     }
 
@@ -66,7 +66,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmState")
       private final @Nullable Output<String> hsmState;
 
-    public Output<String> getHsmState() {
+    public Output<String> hsmState() {
         return this.hsmState == null ? Codegen.empty() : this.hsmState;
     }
 
@@ -77,7 +77,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -88,7 +88,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

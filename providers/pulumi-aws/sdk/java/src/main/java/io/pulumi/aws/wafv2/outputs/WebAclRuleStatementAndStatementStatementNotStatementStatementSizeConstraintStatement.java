@@ -52,28 +52,28 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
      * The operator to use to compare the request part to the size setting. Valid values include: `EQ`, `NE`, `LE`, `LT`, `GE`, or `GT`.
      * 
     */
-    public String getComparisonOperator() {
+    public String comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
      * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch> getFieldToMatch() {
+    public Optional<WebAclRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
      * The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
     */
-    public List<WebAclRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> getTextTransformations() {
+    public List<WebAclRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 

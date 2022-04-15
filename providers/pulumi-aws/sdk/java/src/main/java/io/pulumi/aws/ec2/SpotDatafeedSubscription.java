@@ -43,7 +43,7 @@ public class SpotDatafeedSubscription extends io.pulumi.resources.CustomResource
      * @return The Amazon S3 bucket in which to store the Spot instance data feed.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -57,7 +57,7 @@ public class SpotDatafeedSubscription extends io.pulumi.resources.CustomResource
      * @return Path of folder inside bucket to place spot pricing data.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
 

@@ -46,7 +46,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for Csv content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierCsvClassifier> getCsvClassifier() {
+    public Output</* @Nullable */ ClassifierCsvClassifier> csvClassifier() {
         return this.csvClassifier;
     }
     /**
@@ -60,7 +60,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier that uses grok patterns. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierGrokClassifier> getGrokClassifier() {
+    public Output</* @Nullable */ ClassifierGrokClassifier> grokClassifier() {
         return this.grokClassifier;
     }
     /**
@@ -74,7 +74,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for JSON content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierJsonClassifier> getJsonClassifier() {
+    public Output</* @Nullable */ ClassifierJsonClassifier> jsonClassifier() {
         return this.jsonClassifier;
     }
     /**
@@ -88,7 +88,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return The name of the classifier.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for XML content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierXmlClassifier> getXmlClassifier() {
+    public Output</* @Nullable */ ClassifierXmlClassifier> xmlClassifier() {
         return this.xmlClassifier;
     }
 

@@ -23,7 +23,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactFlowId")
       private final @Nullable Output<String> contactFlowId;
 
-    public Output<String> getContactFlowId() {
+    public Output<String> contactFlowId() {
         return this.contactFlowId == null ? Codegen.empty() : this.contactFlowId;
     }
 
@@ -45,14 +45,14 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
-    public Output<String> getContentHash() {
+    public Output<String> contentHash() {
         return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
@@ -63,7 +63,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -74,7 +74,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename == null ? Codegen.empty() : this.filename;
     }
 
@@ -85,7 +85,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -96,7 +96,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -118,7 +118,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -129,7 +129,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

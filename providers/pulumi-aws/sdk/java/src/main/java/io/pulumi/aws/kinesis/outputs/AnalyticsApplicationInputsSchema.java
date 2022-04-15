@@ -47,14 +47,14 @@ public final class AnalyticsApplicationInputsSchema {
      * See Record Columns below for more details.
      * 
     */
-    public List<AnalyticsApplicationInputsSchemaRecordColumn> getRecordColumns() {
+    public List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns() {
         return this.recordColumns;
     }
     /**
      * The Encoding of the record in the streaming source.
      * 
     */
-    public Optional<String> getRecordEncoding() {
+    public Optional<String> recordEncoding() {
         return Optional.ofNullable(this.recordEncoding);
     }
     /**
@@ -62,7 +62,7 @@ public final class AnalyticsApplicationInputsSchema {
      * See Record Format below for more details.
      * 
     */
-    public AnalyticsApplicationInputsSchemaRecordFormat getRecordFormat() {
+    public AnalyticsApplicationInputsSchemaRecordFormat recordFormat() {
         return this.recordFormat;
     }
 

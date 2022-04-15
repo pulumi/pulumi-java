@@ -42,7 +42,7 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * @return The id of the EMR cluster
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -56,7 +56,7 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * @return Configuration block with compute limit settings. Described below.
      * 
      */
-    public Output<List<ManagedScalingPolicyComputeLimit>> getComputeLimits() {
+    public Output<List<ManagedScalingPolicyComputeLimit>> computeLimits() {
         return this.computeLimits;
     }
 

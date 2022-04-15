@@ -24,7 +24,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersions")
       private final @Nullable Output<List<String>> kafkaVersions;
 
-    public Output<List<String>> getKafkaVersions() {
+    public Output<List<String>> kafkaVersions() {
         return this.kafkaVersions == null ? Codegen.empty() : this.kafkaVersions;
     }
 
@@ -57,7 +57,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -68,7 +68,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverProperties")
       private final @Nullable Output<String> serverProperties;
 
-    public Output<String> getServerProperties() {
+    public Output<String> serverProperties() {
         return this.serverProperties == null ? Codegen.empty() : this.serverProperties;
     }
 

@@ -22,7 +22,7 @@ public final class GetAutoscalingGroupsArgs extends io.pulumi.resources.InvokeAr
     @Import(name="filters")
       private final @Nullable List<GetAutoscalingGroupsFilter> filters;
 
-    public List<GetAutoscalingGroupsFilter> getFilters() {
+    public List<GetAutoscalingGroupsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

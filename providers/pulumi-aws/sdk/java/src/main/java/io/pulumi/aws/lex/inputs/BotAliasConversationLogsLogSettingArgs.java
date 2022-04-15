@@ -22,7 +22,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -33,7 +33,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -44,7 +44,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 
@@ -55,7 +55,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -66,7 +66,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     @Import(name="resourcePrefix")
       private final @Nullable Output<String> resourcePrefix;
 
-    public Output<String> getResourcePrefix() {
+    public Output<String> resourcePrefix() {
         return this.resourcePrefix == null ? Codegen.empty() : this.resourcePrefix;
     }
 

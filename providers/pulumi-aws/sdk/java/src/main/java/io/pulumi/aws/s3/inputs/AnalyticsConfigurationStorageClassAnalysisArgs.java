@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisArgs extends io.pul
     @Import(name="dataExport", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> getDataExport() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport() {
         return this.dataExport;
     }
 

@@ -71,52 +71,52 @@ public final class GetTaskDefinitionResult {
      * The ARN of the task definition
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The family of this task definition
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Docker networking mode to use for the containers in this task.
      * 
     */
-    public String getNetworkMode() {
+    public String networkMode() {
         return this.networkMode;
     }
     /**
      * The revision of this task definition
      * 
     */
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
     /**
      * The status of this task definition
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getTaskDefinition() {
+    public String taskDefinition() {
         return this.taskDefinition;
     }
     /**
      * The ARN of the IAM role that containers in this task can assume
      * 
     */
-    public String getTaskRoleArn() {
+    public String taskRoleArn() {
         return this.taskRoleArn;
     }
 

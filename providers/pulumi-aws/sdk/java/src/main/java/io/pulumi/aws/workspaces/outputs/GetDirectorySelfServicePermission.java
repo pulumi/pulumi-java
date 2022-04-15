@@ -53,35 +53,35 @@ public final class GetDirectorySelfServicePermission {
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
      * 
     */
-    public Boolean getChangeComputeType() {
+    public Boolean changeComputeType() {
         return this.changeComputeType;
     }
     /**
      * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
      * 
     */
-    public Boolean getIncreaseVolumeSize() {
+    public Boolean increaseVolumeSize() {
         return this.increaseVolumeSize;
     }
     /**
      * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
      * 
     */
-    public Boolean getRebuildWorkspace() {
+    public Boolean rebuildWorkspace() {
         return this.rebuildWorkspace;
     }
     /**
      * Whether WorkSpaces directory users can restart their workspace.
      * 
     */
-    public Boolean getRestartWorkspace() {
+    public Boolean restartWorkspace() {
         return this.restartWorkspace;
     }
     /**
      * Whether WorkSpaces directory users can switch the running mode of their workspace.
      * 
     */
-    public Boolean getSwitchRunningMode() {
+    public Boolean switchRunningMode() {
         return this.switchRunningMode;
     }
 

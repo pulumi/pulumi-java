@@ -21,7 +21,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
     @Import(name="lambda", required=true)
       private final Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
 
-    public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> getLambda() {
+    public Output<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda() {
         return this.lambda;
     }
 

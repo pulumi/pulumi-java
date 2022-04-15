@@ -27,7 +27,7 @@ public final class RouteSpecGrpcRouteAction {
      * You can specify one or more targets and their relative weights with which to distribute traffic.
      * 
     */
-    public List<RouteSpecGrpcRouteActionWeightedTarget> getWeightedTargets() {
+    public List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets() {
         return this.weightedTargets;
     }
 

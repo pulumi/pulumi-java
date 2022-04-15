@@ -24,7 +24,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="grpcRoute")
       private final @Nullable Output<GatewayRouteSpecGrpcRouteArgs> grpcRoute;
 
-    public Output<GatewayRouteSpecGrpcRouteArgs> getGrpcRoute() {
+    public Output<GatewayRouteSpecGrpcRouteArgs> grpcRoute() {
         return this.grpcRoute == null ? Codegen.empty() : this.grpcRoute;
     }
 
@@ -35,7 +35,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="http2Route")
       private final @Nullable Output<GatewayRouteSpecHttp2RouteArgs> http2Route;
 
-    public Output<GatewayRouteSpecHttp2RouteArgs> getHttp2Route() {
+    public Output<GatewayRouteSpecHttp2RouteArgs> http2Route() {
         return this.http2Route == null ? Codegen.empty() : this.http2Route;
     }
 
@@ -46,7 +46,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="httpRoute")
       private final @Nullable Output<GatewayRouteSpecHttpRouteArgs> httpRoute;
 
-    public Output<GatewayRouteSpecHttpRouteArgs> getHttpRoute() {
+    public Output<GatewayRouteSpecHttpRouteArgs> httpRoute() {
         return this.httpRoute == null ? Codegen.empty() : this.httpRoute;
     }
 

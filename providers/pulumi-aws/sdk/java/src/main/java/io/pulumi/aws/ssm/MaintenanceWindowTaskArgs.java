@@ -26,7 +26,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="maxConcurrency", required=true)
       private final Output<String> maxConcurrency;
 
-    public Output<String> getMaxConcurrency() {
+    public Output<String> maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -48,7 +48,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="maxErrors", required=true)
       private final Output<String> maxErrors;
 
-    public Output<String> getMaxErrors() {
+    public Output<String> maxErrors() {
         return this.maxErrors;
     }
 
@@ -59,7 +59,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -81,7 +81,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -92,7 +92,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="targets")
       private final @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
 
-    public Output<List<MaintenanceWindowTaskTargetArgs>> getTargets() {
+    public Output<List<MaintenanceWindowTaskTargetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 
@@ -103,7 +103,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="taskArn", required=true)
       private final Output<String> taskArn;
 
-    public Output<String> getTaskArn() {
+    public Output<String> taskArn() {
         return this.taskArn;
     }
 
@@ -114,7 +114,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="taskInvocationParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersArgs> getTaskInvocationParameters() {
+    public Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters() {
         return this.taskInvocationParameters == null ? Codegen.empty() : this.taskInvocationParameters;
     }
 
@@ -125,7 +125,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 
@@ -136,7 +136,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     @Import(name="windowId", required=true)
       private final Output<String> windowId;
 
-    public Output<String> getWindowId() {
+    public Output<String> windowId() {
         return this.windowId;
     }
 

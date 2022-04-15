@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecListenerPortMappingGetArgs extends io.pulum
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -33,7 +33,7 @@ public final class VirtualGatewaySpecListenerPortMappingGetArgs extends io.pulum
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 

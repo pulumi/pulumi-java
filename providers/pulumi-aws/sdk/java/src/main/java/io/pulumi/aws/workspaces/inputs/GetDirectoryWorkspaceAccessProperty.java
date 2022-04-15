@@ -19,7 +19,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeAndroid", required=true)
       private final String deviceTypeAndroid;
 
-    public String getDeviceTypeAndroid() {
+    public String deviceTypeAndroid() {
         return this.deviceTypeAndroid;
     }
 
@@ -30,7 +30,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeChromeos", required=true)
       private final String deviceTypeChromeos;
 
-    public String getDeviceTypeChromeos() {
+    public String deviceTypeChromeos() {
         return this.deviceTypeChromeos;
     }
 
@@ -41,7 +41,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeIos", required=true)
       private final String deviceTypeIos;
 
-    public String getDeviceTypeIos() {
+    public String deviceTypeIos() {
         return this.deviceTypeIos;
     }
 
@@ -52,7 +52,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeLinux", required=true)
       private final String deviceTypeLinux;
 
-    public String getDeviceTypeLinux() {
+    public String deviceTypeLinux() {
         return this.deviceTypeLinux;
     }
 
@@ -63,7 +63,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeOsx", required=true)
       private final String deviceTypeOsx;
 
-    public String getDeviceTypeOsx() {
+    public String deviceTypeOsx() {
         return this.deviceTypeOsx;
     }
 
@@ -74,7 +74,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeWeb", required=true)
       private final String deviceTypeWeb;
 
-    public String getDeviceTypeWeb() {
+    public String deviceTypeWeb() {
         return this.deviceTypeWeb;
     }
 
@@ -85,7 +85,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeWindows", required=true)
       private final String deviceTypeWindows;
 
-    public String getDeviceTypeWindows() {
+    public String deviceTypeWindows() {
         return this.deviceTypeWindows;
     }
 
@@ -96,7 +96,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
     @Import(name="deviceTypeZeroclient", required=true)
       private final String deviceTypeZeroclient;
 
-    public String getDeviceTypeZeroclient() {
+    public String deviceTypeZeroclient() {
         return this.deviceTypeZeroclient;
     }
 

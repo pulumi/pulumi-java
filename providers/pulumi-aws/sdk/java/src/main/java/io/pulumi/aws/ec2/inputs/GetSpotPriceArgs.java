@@ -23,7 +23,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -34,7 +34,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetSpotPriceFilter> filters;
 
-    public List<GetSpotPriceFilter> getFilters() {
+    public List<GetSpotPriceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -45,7 +45,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceType")
       private final @Nullable String instanceType;
 
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 

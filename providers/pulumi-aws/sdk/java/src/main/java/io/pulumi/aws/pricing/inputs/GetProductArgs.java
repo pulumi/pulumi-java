@@ -21,7 +21,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters", required=true)
       private final List<GetProductFilter> filters;
 
-    public List<GetProductFilter> getFilters() {
+    public List<GetProductFilter> filters() {
         return this.filters;
     }
 
@@ -32,7 +32,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceCode", required=true)
       private final String serviceCode;
 
-    public String getServiceCode() {
+    public String serviceCode() {
         return this.serviceCode;
     }
 

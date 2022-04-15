@@ -42,7 +42,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The description of the Redshift security group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return A list of ingress rules.
      * 
      */
-    public Output<List<SecurityGroupIngress>> getIngress() {
+    public Output<List<SecurityGroupIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -70,7 +70,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the Redshift security group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

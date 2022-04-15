@@ -23,7 +23,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @Import(name="cloudWatchEncryptionEnabled")
       private final @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
 
-    public Output<Boolean> getCloudWatchEncryptionEnabled() {
+    public Output<Boolean> cloudWatchEncryptionEnabled() {
         return this.cloudWatchEncryptionEnabled == null ? Codegen.empty() : this.cloudWatchEncryptionEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @Import(name="cloudWatchLogGroupName")
       private final @Nullable Output<String> cloudWatchLogGroupName;
 
-    public Output<String> getCloudWatchLogGroupName() {
+    public Output<String> cloudWatchLogGroupName() {
         return this.cloudWatchLogGroupName == null ? Codegen.empty() : this.cloudWatchLogGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @Import(name="s3BucketEncryptionEnabled")
       private final @Nullable Output<Boolean> s3BucketEncryptionEnabled;
 
-    public Output<Boolean> getS3BucketEncryptionEnabled() {
+    public Output<Boolean> s3BucketEncryptionEnabled() {
         return this.s3BucketEncryptionEnabled == null ? Codegen.empty() : this.s3BucketEncryptionEnabled;
     }
 
@@ -56,7 +56,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 

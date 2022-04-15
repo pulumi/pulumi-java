@@ -22,7 +22,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupNames", required=true)
       private final Output<List<String>> groupNames;
 
-    public Output<List<String>> getGroupNames() {
+    public Output<List<String>> groupNames() {
         return this.groupNames;
     }
 
@@ -34,7 +34,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notifications", required=true)
       private final Output<List<String>> notifications;
 
-    public Output<List<String>> getNotifications() {
+    public Output<List<String>> notifications() {
         return this.notifications;
     }
 
@@ -45,7 +45,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 

@@ -19,7 +19,7 @@ public final class GetLambdaFunctionAssociationArgs extends io.pulumi.resources.
     @Import(name="functionArn", required=true)
       private final String functionArn;
 
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
 
@@ -30,7 +30,7 @@ public final class GetLambdaFunctionAssociationArgs extends io.pulumi.resources.
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 

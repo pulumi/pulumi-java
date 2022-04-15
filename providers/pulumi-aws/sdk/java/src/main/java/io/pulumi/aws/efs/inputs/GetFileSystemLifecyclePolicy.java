@@ -15,14 +15,14 @@ public final class GetFileSystemLifecyclePolicy extends io.pulumi.resources.Invo
     @Import(name="transitionToIa", required=true)
       private final String transitionToIa;
 
-    public String getTransitionToIa() {
+    public String transitionToIa() {
         return this.transitionToIa;
     }
 
     @Import(name="transitionToPrimaryStorageClass", required=true)
       private final String transitionToPrimaryStorageClass;
 
-    public String getTransitionToPrimaryStorageClass() {
+    public String transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass;
     }
 

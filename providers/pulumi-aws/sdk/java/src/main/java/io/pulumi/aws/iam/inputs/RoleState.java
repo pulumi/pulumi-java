@@ -27,7 +27,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assumeRolePolicy")
       private final @Nullable Output<String> assumeRolePolicy;
 
-    public Output<String> getAssumeRolePolicy() {
+    public Output<String> assumeRolePolicy() {
         return this.assumeRolePolicy == null ? Codegen.empty() : this.assumeRolePolicy;
     }
 
@@ -49,7 +49,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate == null ? Codegen.empty() : this.createDate;
     }
 
@@ -60,7 +60,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDetachPolicies")
       private final @Nullable Output<Boolean> forceDetachPolicies;
 
-    public Output<Boolean> getForceDetachPolicies() {
+    public Output<Boolean> forceDetachPolicies() {
         return this.forceDetachPolicies == null ? Codegen.empty() : this.forceDetachPolicies;
     }
 
@@ -82,7 +82,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inlinePolicies")
       private final @Nullable Output<List<RoleInlinePolicyGetArgs>> inlinePolicies;
 
-    public Output<List<RoleInlinePolicyGetArgs>> getInlinePolicies() {
+    public Output<List<RoleInlinePolicyGetArgs>> inlinePolicies() {
         return this.inlinePolicies == null ? Codegen.empty() : this.inlinePolicies;
     }
 
@@ -93,7 +93,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedPolicyArns")
       private final @Nullable Output<List<String>> managedPolicyArns;
 
-    public Output<List<String>> getManagedPolicyArns() {
+    public Output<List<String>> managedPolicyArns() {
         return this.managedPolicyArns == null ? Codegen.empty() : this.managedPolicyArns;
     }
 
@@ -104,7 +104,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionDuration")
       private final @Nullable Output<Integer> maxSessionDuration;
 
-    public Output<Integer> getMaxSessionDuration() {
+    public Output<Integer> maxSessionDuration() {
         return this.maxSessionDuration == null ? Codegen.empty() : this.maxSessionDuration;
     }
 
@@ -115,7 +115,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -126,7 +126,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -137,7 +137,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -148,7 +148,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> getPermissionsBoundary() {
+    public Output<String> permissionsBoundary() {
         return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
@@ -159,7 +159,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -181,7 +181,7 @@ public final class RoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 

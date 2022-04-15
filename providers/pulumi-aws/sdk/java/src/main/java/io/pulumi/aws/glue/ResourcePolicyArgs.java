@@ -18,7 +18,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableHybrid")
       private final @Nullable Output<String> enableHybrid;
 
-    public Output<String> getEnableHybrid() {
+    public Output<String> enableHybrid() {
         return this.enableHybrid == null ? Codegen.empty() : this.enableHybrid;
     }
 
@@ -29,7 +29,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

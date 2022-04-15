@@ -27,7 +27,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -38,7 +38,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamodbConfig")
       private final @Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig;
 
-    public Output<DataSourceDynamodbConfigArgs> getDynamodbConfig() {
+    public Output<DataSourceDynamodbConfigArgs> dynamodbConfig() {
         return this.dynamodbConfig == null ? Codegen.empty() : this.dynamodbConfig;
     }
 
@@ -60,7 +60,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchConfig")
       private final @Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig;
 
-    public Output<DataSourceElasticsearchConfigArgs> getElasticsearchConfig() {
+    public Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig() {
         return this.elasticsearchConfig == null ? Codegen.empty() : this.elasticsearchConfig;
     }
 
@@ -71,7 +71,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpConfig")
       private final @Nullable Output<DataSourceHttpConfigArgs> httpConfig;
 
-    public Output<DataSourceHttpConfigArgs> getHttpConfig() {
+    public Output<DataSourceHttpConfigArgs> httpConfig() {
         return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
     }
 
@@ -82,7 +82,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lambdaConfig")
       private final @Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig;
 
-    public Output<DataSourceLambdaConfigArgs> getLambdaConfig() {
+    public Output<DataSourceLambdaConfigArgs> lambdaConfig() {
         return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
     }
 
@@ -93,7 +93,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationalDatabaseConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigArgs> getRelationalDatabaseConfig() {
+    public Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig() {
         return this.relationalDatabaseConfig == null ? Codegen.empty() : this.relationalDatabaseConfig;
     }
 
@@ -115,7 +115,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
@@ -126,7 +126,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

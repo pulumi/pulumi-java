@@ -22,7 +22,7 @@ public final class LocationSmbMountOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -16,7 +16,7 @@ public final class GetOriginRequestPolicyHeadersConfigHeader extends io.pulumi.r
     @Import(name="items", required=true)
       private final List<String> items;
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

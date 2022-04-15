@@ -22,7 +22,7 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="provider")
       private final @Nullable Output<VirtualServiceSpecProviderArgs> provider;
 
-    public Output<VirtualServiceSpecProviderArgs> getProvider() {
+    public Output<VirtualServiceSpecProviderArgs> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

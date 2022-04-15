@@ -21,7 +21,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
     @Import(name="cronExpressionForRecurrence", required=true)
       private final String cronExpressionForRecurrence;
 
-    public String getCronExpressionForRecurrence() {
+    public String cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
 
@@ -32,7 +32,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
     @Import(name="durations", required=true)
       private final List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
 
-    public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> getDurations() {
+    public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations() {
         return this.durations;
     }
 
@@ -43,7 +43,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
     @Import(name="startAt", required=true)
       private final String startAt;
 
-    public String getStartAt() {
+    public String startAt() {
         return this.startAt;
     }
 

@@ -15,7 +15,7 @@ public final class GetLaunchTemplateHibernationOption extends io.pulumi.resource
     @Import(name="configured", required=true)
       private final Boolean configured;
 
-    public Boolean getConfigured() {
+    public Boolean configured() {
         return this.configured;
     }
 

@@ -43,7 +43,7 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
      * @return The ARN (Amazon Resource Name) of the Route53 Health Check resource which will be associated to the protected resource.
      * 
      */
-    public Output<String> getHealthCheckArn() {
+    public Output<String> healthCheckArn() {
         return this.healthCheckArn;
     }
     /**
@@ -57,7 +57,7 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
      * @return The ID of the protected resource.
      * 
      */
-    public Output<String> getShieldProtectionId() {
+    public Output<String> shieldProtectionId() {
         return this.shieldProtectionId;
     }
 

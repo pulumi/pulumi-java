@@ -43,14 +43,14 @@ public final class BotClarificationPromptMessage {
      * The text of the message.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The content type of the message string.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
@@ -58,7 +58,7 @@ public final class BotClarificationPromptMessage {
      * is assigned to a message, Amazon Lex returns one message from each group in the response.
      * 
     */
-    public Optional<Integer> getGroupNumber() {
+    public Optional<Integer> groupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }
 

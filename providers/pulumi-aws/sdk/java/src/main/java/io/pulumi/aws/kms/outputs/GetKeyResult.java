@@ -76,62 +76,62 @@ public final class GetKeyResult {
         this.validTo = validTo;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
-    public String getCustomerMasterKeySpec() {
+    public String customerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
-    public String getDeletionDate() {
+    public String deletionDate() {
         return this.deletionDate;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getExpirationModel() {
+    public String expirationModel() {
         return this.expirationModel;
     }
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
-    public String getKeyManager() {
+    public String keyManager() {
         return this.keyManager;
     }
-    public String getKeyState() {
+    public String keyState() {
         return this.keyState;
     }
-    public String getKeyUsage() {
+    public String keyUsage() {
         return this.keyUsage;
     }
-    public Boolean getMultiRegion() {
+    public Boolean multiRegion() {
         return this.multiRegion;
     }
-    public List<GetKeyMultiRegionConfiguration> getMultiRegionConfigurations() {
+    public List<GetKeyMultiRegionConfiguration> multiRegionConfigurations() {
         return this.multiRegionConfigurations;
     }
-    public String getOrigin() {
+    public String origin() {
         return this.origin;
     }
-    public String getValidTo() {
+    public String validTo() {
         return this.validTo;
     }
 

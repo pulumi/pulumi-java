@@ -50,28 +50,28 @@ public final class ImageRecipeBlockDeviceMapping {
      * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
      * 
     */
-    public Optional<ImageRecipeBlockDeviceMappingEbs> getEbs() {
+    public Optional<ImageRecipeBlockDeviceMappingEbs> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Set to `true` to remove a mapping from the parent image.
      * 
     */
-    public Optional<Boolean> getNoDevice() {
+    public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

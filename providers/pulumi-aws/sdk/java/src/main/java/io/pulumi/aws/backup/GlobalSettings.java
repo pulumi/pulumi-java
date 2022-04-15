@@ -41,7 +41,7 @@ public class GlobalSettings extends io.pulumi.resources.CustomResource {
      * @return A list of resources along with the opt-in preferences for the account.
      * 
      */
-    public Output<Map<String,String>> getGlobalSettings() {
+    public Output<Map<String,String>> globalSettings() {
         return this.globalSettings;
     }
 

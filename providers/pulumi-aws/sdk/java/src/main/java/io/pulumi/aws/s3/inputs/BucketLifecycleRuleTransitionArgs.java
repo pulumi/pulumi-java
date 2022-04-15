@@ -23,7 +23,7 @@ public final class BucketLifecycleRuleTransitionArgs extends io.pulumi.resources
     @Import(name="date")
       private final @Nullable Output<String> date;
 
-    public Output<String> getDate() {
+    public Output<String> date() {
         return this.date == null ? Codegen.empty() : this.date;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLifecycleRuleTransitionArgs extends io.pulumi.resources
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -45,7 +45,7 @@ public final class BucketLifecycleRuleTransitionArgs extends io.pulumi.resources
     @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
 

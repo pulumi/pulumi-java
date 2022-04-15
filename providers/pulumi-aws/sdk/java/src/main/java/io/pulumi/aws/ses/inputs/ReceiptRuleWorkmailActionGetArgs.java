@@ -23,7 +23,7 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
     @Import(name="organizationArn", required=true)
       private final Output<String> organizationArn;
 
-    public Output<String> getOrganizationArn() {
+    public Output<String> organizationArn() {
         return this.organizationArn;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleWorkmailActionGetArgs extends io.pulumi.resources.
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

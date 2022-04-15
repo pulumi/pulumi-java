@@ -23,7 +23,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="cloudwatchLogGroupName")
       private final @Nullable Output<String> cloudwatchLogGroupName;
 
-    public Output<String> getCloudwatchLogGroupName() {
+    public Output<String> cloudwatchLogGroupName() {
         return this.cloudwatchLogGroupName == null ? Codegen.empty() : this.cloudwatchLogGroupName;
     }
 
@@ -34,7 +34,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="cloudwatchOutputEnabled")
       private final @Nullable Output<Boolean> cloudwatchOutputEnabled;
 
-    public Output<Boolean> getCloudwatchOutputEnabled() {
+    public Output<Boolean> cloudwatchOutputEnabled() {
         return this.cloudwatchOutputEnabled == null ? Codegen.empty() : this.cloudwatchOutputEnabled;
     }
 

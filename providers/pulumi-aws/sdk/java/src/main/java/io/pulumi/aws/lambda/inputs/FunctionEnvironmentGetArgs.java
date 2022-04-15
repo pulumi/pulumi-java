@@ -23,7 +23,7 @@ public final class FunctionEnvironmentGetArgs extends io.pulumi.resources.Resour
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
+    public Output<Map<String,String>> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

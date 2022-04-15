@@ -21,7 +21,7 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="magneticStoreRetentionPeriodInDays", required=true)
       private final Output<Integer> magneticStoreRetentionPeriodInDays;
 
-    public Output<Integer> getMagneticStoreRetentionPeriodInDays() {
+    public Output<Integer> magneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
     }
 
@@ -32,7 +32,7 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="memoryStoreRetentionPeriodInHours", required=true)
       private final Output<Integer> memoryStoreRetentionPeriodInHours;
 
-    public Output<Integer> getMemoryStoreRetentionPeriodInHours() {
+    public Output<Integer> memoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;
     }
 

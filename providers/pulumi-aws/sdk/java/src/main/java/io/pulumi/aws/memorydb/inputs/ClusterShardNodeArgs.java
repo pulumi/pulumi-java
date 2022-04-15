@@ -24,7 +24,7 @@ public final class ClusterShardNodeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -35,14 +35,14 @@ public final class ClusterShardNodeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints;
 
-    public Output<List<ClusterShardNodeEndpointArgs>> getEndpoints() {
+    public Output<List<ClusterShardNodeEndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -54,7 +54,7 @@ public final class ClusterShardNodeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

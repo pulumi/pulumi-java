@@ -24,7 +24,7 @@ public final class GetVirtualServiceSpecProviderVirtualNode {
      * The name of the virtual node that is acting as a service provider.
      * 
     */
-    public String getVirtualNodeName() {
+    public String virtualNodeName() {
         return this.virtualNodeName;
     }
 

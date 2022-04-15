@@ -21,7 +21,7 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
     @Import(name="entry", required=true)
       private final Output<String> entry;
 
-    public Output<String> getEntry() {
+    public Output<String> entry() {
         return this.entry;
     }
 
@@ -32,7 +32,7 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

@@ -23,7 +23,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 

@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
     @Import(name="trust", required=true)
       private final Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
 

@@ -29,19 +29,19 @@ public final class GetLoadBalancerSubnetMapping {
         this.subnetId = subnetId;
     }
 
-    public String getAllocationId() {
+    public String allocationId() {
         return this.allocationId;
     }
-    public String getIpv6Address() {
+    public String ipv6Address() {
         return this.ipv6Address;
     }
-    public String getOutpostId() {
+    public String outpostId() {
         return this.outpostId;
     }
-    public String getPrivateIpv4Address() {
+    public String privateIpv4Address() {
         return this.privateIpv4Address;
     }
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

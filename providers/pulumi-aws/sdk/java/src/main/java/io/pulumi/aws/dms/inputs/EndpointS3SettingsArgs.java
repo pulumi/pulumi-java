@@ -23,7 +23,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucketFolder")
       private final @Nullable Output<String> bucketFolder;
 
-    public Output<String> getBucketFolder() {
+    public Output<String> bucketFolder() {
         return this.bucketFolder == null ? Codegen.empty() : this.bucketFolder;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="compressionType")
       private final @Nullable Output<String> compressionType;
 
-    public Output<String> getCompressionType() {
+    public Output<String> compressionType() {
         return this.compressionType == null ? Codegen.empty() : this.compressionType;
     }
 
@@ -56,7 +56,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
-    public Output<String> getCsvDelimiter() {
+    public Output<String> csvDelimiter() {
         return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
@@ -67,7 +67,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="csvRowDelimiter")
       private final @Nullable Output<String> csvRowDelimiter;
 
-    public Output<String> getCsvRowDelimiter() {
+    public Output<String> csvRowDelimiter() {
         return this.csvRowDelimiter == null ? Codegen.empty() : this.csvRowDelimiter;
     }
 
@@ -78,7 +78,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataFormat")
       private final @Nullable Output<String> dataFormat;
 
-    public Output<String> getDataFormat() {
+    public Output<String> dataFormat() {
         return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
@@ -89,7 +89,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="datePartitionEnabled")
       private final @Nullable Output<Boolean> datePartitionEnabled;
 
-    public Output<Boolean> getDatePartitionEnabled() {
+    public Output<Boolean> datePartitionEnabled() {
         return this.datePartitionEnabled == null ? Codegen.empty() : this.datePartitionEnabled;
     }
 
@@ -100,7 +100,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="encryptionMode")
       private final @Nullable Output<String> encryptionMode;
 
-    public Output<String> getEncryptionMode() {
+    public Output<String> encryptionMode() {
         return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
     }
 
@@ -111,7 +111,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="externalTableDefinition")
       private final @Nullable Output<String> externalTableDefinition;
 
-    public Output<String> getExternalTableDefinition() {
+    public Output<String> externalTableDefinition() {
         return this.externalTableDefinition == null ? Codegen.empty() : this.externalTableDefinition;
     }
 
@@ -122,7 +122,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parquetTimestampInMillisecond")
       private final @Nullable Output<Boolean> parquetTimestampInMillisecond;
 
-    public Output<Boolean> getParquetTimestampInMillisecond() {
+    public Output<Boolean> parquetTimestampInMillisecond() {
         return this.parquetTimestampInMillisecond == null ? Codegen.empty() : this.parquetTimestampInMillisecond;
     }
 
@@ -133,7 +133,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="parquetVersion")
       private final @Nullable Output<String> parquetVersion;
 
-    public Output<String> getParquetVersion() {
+    public Output<String> parquetVersion() {
         return this.parquetVersion == null ? Codegen.empty() : this.parquetVersion;
     }
 
@@ -144,7 +144,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serverSideEncryptionKmsKeyId")
       private final @Nullable Output<String> serverSideEncryptionKmsKeyId;
 
-    public Output<String> getServerSideEncryptionKmsKeyId() {
+    public Output<String> serverSideEncryptionKmsKeyId() {
         return this.serverSideEncryptionKmsKeyId == null ? Codegen.empty() : this.serverSideEncryptionKmsKeyId;
     }
 
@@ -155,7 +155,7 @@ public final class EndpointS3SettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceAccessRoleArn")
       private final @Nullable Output<String> serviceAccessRoleArn;
 
-    public Output<String> getServiceAccessRoleArn() {
+    public Output<String> serviceAccessRoleArn() {
         return this.serviceAccessRoleArn == null ? Codegen.empty() : this.serviceAccessRoleArn;
     }
 

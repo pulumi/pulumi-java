@@ -22,7 +22,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="css")
       private final @Nullable Output<String> css;
 
-    public Output<String> getCss() {
+    public Output<String> css() {
         return this.css == null ? Codegen.empty() : this.css;
     }
 
@@ -55,7 +55,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="cssVersion")
       private final @Nullable Output<String> cssVersion;
 
-    public Output<String> getCssVersion() {
+    public Output<String> cssVersion() {
         return this.cssVersion == null ? Codegen.empty() : this.cssVersion;
     }
 
@@ -66,7 +66,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="imageFile")
       private final @Nullable Output<String> imageFile;
 
-    public Output<String> getImageFile() {
+    public Output<String> imageFile() {
         return this.imageFile == null ? Codegen.empty() : this.imageFile;
     }
 
@@ -77,7 +77,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
-    public Output<String> getImageUrl() {
+    public Output<String> imageUrl() {
         return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
     }
 
@@ -88,7 +88,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
     }
 
@@ -99,7 +99,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 

@@ -23,7 +23,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
     @Import(name="awsKmsKeyId")
       private final @Nullable Output<String> awsKmsKeyId;
 
-    public Output<String> getAwsKmsKeyId() {
+    public Output<String> awsKmsKeyId() {
         return this.awsKmsKeyId == null ? Codegen.empty() : this.awsKmsKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
     @Import(name="returnConnectionPasswordEncrypted", required=true)
       private final Output<Boolean> returnConnectionPasswordEncrypted;
 
-    public Output<Boolean> getReturnConnectionPasswordEncrypted() {
+    public Output<Boolean> returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
 

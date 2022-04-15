@@ -23,7 +23,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
@@ -35,7 +35,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowReassociation")
       private final @Nullable Output<Boolean> allowReassociation;
 
-    public Output<Boolean> getAllowReassociation() {
+    public Output<Boolean> allowReassociation() {
         return this.allowReassociation == null ? Codegen.empty() : this.allowReassociation;
     }
 
@@ -49,7 +49,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -62,7 +62,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -76,7 +76,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -87,7 +87,7 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 

@@ -25,7 +25,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="dockerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration;
 
-    public Output<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> getDockerVolumeConfiguration() {
+    public Output<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration() {
         return this.dockerVolumeConfiguration == null ? Codegen.empty() : this.dockerVolumeConfiguration;
     }
 
@@ -36,7 +36,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="efsVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration;
 
-    public Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> getEfsVolumeConfiguration() {
+    public Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration() {
         return this.efsVolumeConfiguration == null ? Codegen.empty() : this.efsVolumeConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="fsxWindowsFileServerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration;
 
-    public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> getFsxWindowsFileServerVolumeConfiguration() {
+    public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration() {
         return this.fsxWindowsFileServerVolumeConfiguration == null ? Codegen.empty() : this.fsxWindowsFileServerVolumeConfiguration;
     }
 
@@ -58,7 +58,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
-    public Output<String> getHostPath() {
+    public Output<String> hostPath() {
         return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
@@ -70,7 +70,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

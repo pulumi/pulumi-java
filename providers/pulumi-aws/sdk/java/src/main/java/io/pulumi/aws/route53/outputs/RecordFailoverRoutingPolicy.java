@@ -24,7 +24,7 @@ public final class RecordFailoverRoutingPolicy {
      * `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

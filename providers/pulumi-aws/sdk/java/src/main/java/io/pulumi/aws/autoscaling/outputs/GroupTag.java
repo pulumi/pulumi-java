@@ -41,7 +41,7 @@ public final class GroupTag {
      * Key
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -49,14 +49,14 @@ public final class GroupTag {
      * Amazon EC2 instances launched via this ASG
      * 
     */
-    public Boolean getPropagateAtLaunch() {
+    public Boolean propagateAtLaunch() {
         return this.propagateAtLaunch;
     }
     /**
      * Value
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

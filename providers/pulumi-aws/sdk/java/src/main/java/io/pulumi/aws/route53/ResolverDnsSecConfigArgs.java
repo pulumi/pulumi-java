@@ -21,7 +21,7 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

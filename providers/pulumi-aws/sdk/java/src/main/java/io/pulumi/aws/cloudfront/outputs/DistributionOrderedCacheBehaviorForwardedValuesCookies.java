@@ -42,7 +42,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookies {
      * subsequent `whitelisted_names`
      * 
     */
-    public String getForward() {
+    public String forward() {
         return this.forward;
     }
     /**
@@ -51,7 +51,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookies {
      * your origin.
      * 
     */
-    public List<String> getWhitelistedNames() {
+    public List<String> whitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
     }
 

@@ -22,14 +22,14 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
-    public Output<String> getEventBusName() {
+    public Output<String> eventBusName() {
         return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
