@@ -22,8 +22,6 @@ public class ProviderResource extends CustomResource {
     private final String aPackage;
     private final CompletableFuture<String> registrationId;
 
-    private final ProviderResourceInternal internal = new ProviderResourceInternal(this);
-
     /**
      * Creates and registers a new provider resource for a particular package.
      *
@@ -82,7 +80,7 @@ public class ProviderResource extends CustomResource {
         }
 
         public static ProviderResourceInternal from(ProviderResource r) {
-            return r.internal;
+            return new ProviderResourceInternal(r);
         }
 
         @InternalUse

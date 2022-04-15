@@ -28,8 +28,6 @@ public final class CallOptions {
     @Nullable
     private final String version;
 
-    public final CallOptionsInternal internal = new CallOptionsInternal(this);
-
     public CallOptions() {
         this(null, null, null);
     }
@@ -74,7 +72,7 @@ public final class CallOptions {
         }
 
         public static CallOptionsInternal from(CallOptions options) {
-            return options.internal;
+            return new CallOptionsInternal(options);
         }
 
         public Optional<ProviderResource> getNestedProvider(String token) {
