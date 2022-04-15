@@ -43,7 +43,7 @@ repositories {
 
 var prerelease = version.contains("+")
 
-var defaultPulumiJavaSdkVersion = "0.0.1-SNAPSHOT";
+var defaultPulumiJavaSdkVersion = "0.0.1";
 
 var pulumiJavaSdkVersion = prerelease
     ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)
