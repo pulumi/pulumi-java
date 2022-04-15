@@ -24,7 +24,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="accountKey")
       private final @Nullable String accountKey;
 
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -35,7 +35,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -46,7 +46,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="areWorkspaceManagedIdentitiesAllowed")
       private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
 
-    public Optional<Boolean> getAreWorkspaceManagedIdentitiesAllowed() {
+    public Optional<Boolean> areWorkspaceManagedIdentitiesAllowed() {
         return this.areWorkspaceManagedIdentitiesAllowed == null ? Optional.empty() : Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
 
@@ -57,14 +57,14 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="blobCacheTimeout")
       private final @Nullable Integer blobCacheTimeout;
 
-    public Optional<Integer> getBlobCacheTimeout() {
+    public Optional<Integer> blobCacheTimeout() {
         return this.blobCacheTimeout == null ? Optional.empty() : Optional.ofNullable(this.blobCacheTimeout);
     }
 
     @Import(name="clientCredentials")
       private final @Nullable ClientCredentialsResponse clientCredentials;
 
-    public Optional<ClientCredentialsResponse> getClientCredentials() {
+    public Optional<ClientCredentialsResponse> clientCredentials() {
         return this.clientCredentials == null ? Optional.empty() : Optional.ofNullable(this.clientCredentials);
     }
 
@@ -75,7 +75,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -86,7 +86,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="credential")
       private final @Nullable String credential;
 
-    public Optional<String> getCredential() {
+    public Optional<String> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -97,7 +97,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="credentialType")
       private final @Nullable String credentialType;
 
-    public Optional<String> getCredentialType() {
+    public Optional<String> credentialType() {
         return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
     }
 
@@ -108,7 +108,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
@@ -119,7 +119,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="isSas")
       private final @Nullable Boolean isSas;
 
-    public Optional<Boolean> getIsSas() {
+    public Optional<Boolean> isSas() {
         return this.isSas == null ? Optional.empty() : Optional.ofNullable(this.isSas);
     }
 
@@ -130,7 +130,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -141,7 +141,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
@@ -152,7 +152,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="sasToken")
       private final @Nullable String sasToken;
 
-    public Optional<String> getSasToken() {
+    public Optional<String> sasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
@@ -163,7 +163,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="serviceDataAccessAuthIdentity")
       private final @Nullable String serviceDataAccessAuthIdentity;
 
-    public Optional<String> getServiceDataAccessAuthIdentity() {
+    public Optional<String> serviceDataAccessAuthIdentity() {
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
@@ -174,7 +174,7 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 

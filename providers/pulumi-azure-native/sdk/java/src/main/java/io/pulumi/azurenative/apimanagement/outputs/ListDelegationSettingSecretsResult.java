@@ -26,7 +26,7 @@ public final class ListDelegationSettingSecretsResult {
      * This is secret value of the validation key in portal settings.
      * 
     */
-    public Optional<String> getValidationKey() {
+    public Optional<String> validationKey() {
         return Optional.ofNullable(this.validationKey);
     }
 

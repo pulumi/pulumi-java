@@ -26,7 +26,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="cognitiveServiceRegion", required=true)
       private final String cognitiveServiceRegion;
 
-    public String getCognitiveServiceRegion() {
+    public String cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
 
@@ -37,7 +37,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
       private final String cognitiveServiceSubscriptionKey;
 
-    public String getCognitiveServiceSubscriptionKey() {
+    public String cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
 
@@ -48,7 +48,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="customSpeechModelId")
       private final @Nullable String customSpeechModelId;
 
-    public Optional<String> getCustomSpeechModelId() {
+    public Optional<String> customSpeechModelId() {
         return this.customSpeechModelId == null ? Optional.empty() : Optional.ofNullable(this.customSpeechModelId);
     }
 
@@ -59,7 +59,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="customVoiceDeploymentId")
       private final @Nullable String customVoiceDeploymentId;
 
-    public Optional<String> getCustomVoiceDeploymentId() {
+    public Optional<String> customVoiceDeploymentId() {
         return this.customVoiceDeploymentId == null ? Optional.empty() : Optional.ofNullable(this.customVoiceDeploymentId);
     }
 
@@ -70,7 +70,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="isDefaultBotForCogSvcAccount")
       private final @Nullable Boolean isDefaultBotForCogSvcAccount;
 
-    public Optional<Boolean> getIsDefaultBotForCogSvcAccount() {
+    public Optional<Boolean> isDefaultBotForCogSvcAccount() {
         return this.isDefaultBotForCogSvcAccount == null ? Optional.empty() : Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
 
@@ -81,7 +81,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
     }
 

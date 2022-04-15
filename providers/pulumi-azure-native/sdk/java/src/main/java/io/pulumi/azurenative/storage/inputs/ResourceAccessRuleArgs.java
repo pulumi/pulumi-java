@@ -26,7 +26,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

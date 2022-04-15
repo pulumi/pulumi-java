@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -40,7 +40,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -64,7 +64,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     @Import(name="validationOptions")
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
-    public Output<MigrationValidationOptionsArgs> getValidationOptions() {
+    public Output<MigrationValidationOptionsArgs> validationOptions() {
         return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 

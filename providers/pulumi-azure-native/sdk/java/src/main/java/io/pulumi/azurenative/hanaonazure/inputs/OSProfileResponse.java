@@ -25,7 +25,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="computerName")
       private final @Nullable String computerName;
 
-    public Optional<String> getComputerName() {
+    public Optional<String> computerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
@@ -36,7 +36,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -47,7 +47,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sshPublicKey")
       private final @Nullable String sshPublicKey;
 
-    public Optional<String> getSshPublicKey() {
+    public Optional<String> sshPublicKey() {
         return this.sshPublicKey == null ? Optional.empty() : Optional.ofNullable(this.sshPublicKey);
     }
 
@@ -58,7 +58,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

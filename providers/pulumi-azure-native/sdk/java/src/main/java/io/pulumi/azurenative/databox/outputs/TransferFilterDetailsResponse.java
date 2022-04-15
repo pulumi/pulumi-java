@@ -52,28 +52,28 @@ public final class TransferFilterDetailsResponse {
      * Filter details to transfer Azure files.
      * 
     */
-    public Optional<AzureFileFilterDetailsResponse> getAzureFileFilterDetails() {
+    public Optional<AzureFileFilterDetailsResponse> azureFileFilterDetails() {
         return Optional.ofNullable(this.azureFileFilterDetails);
     }
     /**
      * Filter details to transfer blobs.
      * 
     */
-    public Optional<BlobFilterDetailsResponse> getBlobFilterDetails() {
+    public Optional<BlobFilterDetailsResponse> blobFilterDetails() {
         return Optional.ofNullable(this.blobFilterDetails);
     }
     /**
      * Type of the account of data.
      * 
     */
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
      * Details of the filter files to be used for data transfer.
      * 
     */
-    public List<FilterFileDetailsResponse> getFilterFileDetails() {
+    public List<FilterFileDetailsResponse> filterFileDetails() {
         return this.filterFileDetails == null ? List.of() : this.filterFileDetails;
     }
 

@@ -19,7 +19,7 @@ public final class GetDeploymentScriptArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeploymentScriptArgs extends io.pulumi.resources.InvokeArg
     @Import(name="scriptName", required=true)
       private final String scriptName;
 
-    public String getScriptName() {
+    public String scriptName() {
         return this.scriptName;
     }
 

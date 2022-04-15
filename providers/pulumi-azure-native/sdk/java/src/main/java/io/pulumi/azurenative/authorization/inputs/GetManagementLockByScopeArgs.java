@@ -19,7 +19,7 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
     @Import(name="lockName", required=true)
       private final String lockName;
 
-    public String getLockName() {
+    public String lockName() {
         return this.lockName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

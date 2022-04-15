@@ -46,7 +46,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Private store offer creation date
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -60,7 +60,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Identifier for purposes of race condition
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -74,7 +74,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Icon File Uris
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getIconFileUris() {
+    public Output</* @Nullable */ Map<String,String>> iconFileUris() {
         return this.iconFileUris;
     }
     /**
@@ -88,7 +88,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Private store offer modification date
      * 
      */
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt;
     }
     /**
@@ -102,7 +102,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return It will be displayed prominently in the marketplace
      * 
      */
-    public Output<String> getOfferDisplayName() {
+    public Output<String> offerDisplayName() {
         return this.offerDisplayName;
     }
     /**
@@ -130,7 +130,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Offer plans
      * 
      */
-    public Output</* @Nullable */ List<PlanResponse>> getPlans() {
+    public Output</* @Nullable */ List<PlanResponse>> plans() {
         return this.plans;
     }
     /**
@@ -144,7 +144,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Private store unique id
      * 
      */
-    public Output<String> getPrivateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
     /**
@@ -158,7 +158,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Publisher name that will be displayed prominently in the marketplace
      * 
      */
-    public Output<String> getPublisherDisplayName() {
+    public Output<String> publisherDisplayName() {
         return this.publisherDisplayName;
     }
     /**
@@ -172,7 +172,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Plan ids limitation for this offer
      * 
      */
-    public Output</* @Nullable */ List<String>> getSpecificPlanIdsLimitation() {
+    public Output</* @Nullable */ List<String>> specificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation;
     }
     /**
@@ -186,7 +186,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -200,7 +200,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -214,7 +214,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Offers unique id
      * 
      */
-    public Output<String> getUniqueOfferId() {
+    public Output<String> uniqueOfferId() {
         return this.uniqueOfferId;
     }
     /**
@@ -228,7 +228,7 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
      * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUpdateSuppressedDueIdempotence() {
+    public Output</* @Nullable */ Boolean> updateSuppressedDueIdempotence() {
         return this.updateSuppressedDueIdempotence;
     }
 

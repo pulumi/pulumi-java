@@ -56,35 +56,35 @@ public final class GetGuestConfigurationAssignmentResult {
      * ARM resource id of the guest configuration assignment.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Region where the VM is located.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the guest configuration assignment.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Properties of the Guest configuration assignment.
      * 
     */
-    public GuestConfigurationAssignmentPropertiesResponse getProperties() {
+    public GuestConfigurationAssignmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

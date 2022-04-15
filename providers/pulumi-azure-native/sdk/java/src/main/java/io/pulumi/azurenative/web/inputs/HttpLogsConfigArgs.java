@@ -27,7 +27,7 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
 
-    public Output<AzureBlobStorageHttpLogsConfigArgs> getAzureBlobStorage() {
+    public Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage() {
         return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
     }
 
@@ -38,7 +38,7 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;
 
-    public Output<FileSystemHttpLogsConfigArgs> getFileSystem() {
+    public Output<FileSystemHttpLogsConfigArgs> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 

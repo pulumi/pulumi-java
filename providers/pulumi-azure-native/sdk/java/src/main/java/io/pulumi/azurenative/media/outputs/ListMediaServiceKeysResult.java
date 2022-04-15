@@ -55,35 +55,35 @@ public final class ListMediaServiceKeysResult {
      * The primary authorization endpoint.
      * 
     */
-    public Optional<String> getPrimaryAuthEndpoint() {
+    public Optional<String> primaryAuthEndpoint() {
         return Optional.ofNullable(this.primaryAuthEndpoint);
     }
     /**
      * The primary key for the Media Service resource.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * The authorization scope.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The secondary authorization endpoint.
      * 
     */
-    public Optional<String> getSecondaryAuthEndpoint() {
+    public Optional<String> secondaryAuthEndpoint() {
         return Optional.ofNullable(this.secondaryAuthEndpoint);
     }
     /**
      * The secondary key for the Media Service resource.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

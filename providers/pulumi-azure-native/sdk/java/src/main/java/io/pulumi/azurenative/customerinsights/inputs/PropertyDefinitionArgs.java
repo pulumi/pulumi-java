@@ -30,7 +30,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="arrayValueSeparator")
       private final @Nullable Output<String> arrayValueSeparator;
 
-    public Output<String> getArrayValueSeparator() {
+    public Output<String> arrayValueSeparator() {
         return this.arrayValueSeparator == null ? Codegen.empty() : this.arrayValueSeparator;
     }
 
@@ -41,7 +41,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enumValidValues")
       private final @Nullable Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
 
-    public Output<List<ProfileEnumValidValuesFormatArgs>> getEnumValidValues() {
+    public Output<List<ProfileEnumValidValuesFormatArgs>> enumValidValues() {
         return this.enumValidValues == null ? Codegen.empty() : this.enumValidValues;
     }
 
@@ -52,7 +52,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fieldName", required=true)
       private final Output<String> fieldName;
 
-    public Output<String> getFieldName() {
+    public Output<String> fieldName() {
         return this.fieldName;
     }
 
@@ -63,7 +63,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fieldType", required=true)
       private final Output<String> fieldType;
 
-    public Output<String> getFieldType() {
+    public Output<String> fieldType() {
         return this.fieldType;
     }
 
@@ -74,7 +74,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isArray")
       private final @Nullable Output<Boolean> isArray;
 
-    public Output<Boolean> getIsArray() {
+    public Output<Boolean> isArray() {
         return this.isArray == null ? Codegen.empty() : this.isArray;
     }
 
@@ -85,7 +85,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isAvailableInGraph")
       private final @Nullable Output<Boolean> isAvailableInGraph;
 
-    public Output<Boolean> getIsAvailableInGraph() {
+    public Output<Boolean> isAvailableInGraph() {
         return this.isAvailableInGraph == null ? Codegen.empty() : this.isAvailableInGraph;
     }
 
@@ -96,7 +96,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isEnum")
       private final @Nullable Output<Boolean> isEnum;
 
-    public Output<Boolean> getIsEnum() {
+    public Output<Boolean> isEnum() {
         return this.isEnum == null ? Codegen.empty() : this.isEnum;
     }
 
@@ -107,7 +107,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isFlagEnum")
       private final @Nullable Output<Boolean> isFlagEnum;
 
-    public Output<Boolean> getIsFlagEnum() {
+    public Output<Boolean> isFlagEnum() {
         return this.isFlagEnum == null ? Codegen.empty() : this.isFlagEnum;
     }
 
@@ -118,7 +118,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isImage")
       private final @Nullable Output<Boolean> isImage;
 
-    public Output<Boolean> getIsImage() {
+    public Output<Boolean> isImage() {
         return this.isImage == null ? Codegen.empty() : this.isImage;
     }
 
@@ -129,7 +129,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isLocalizedString")
       private final @Nullable Output<Boolean> isLocalizedString;
 
-    public Output<Boolean> getIsLocalizedString() {
+    public Output<Boolean> isLocalizedString() {
         return this.isLocalizedString == null ? Codegen.empty() : this.isLocalizedString;
     }
 
@@ -140,7 +140,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isName")
       private final @Nullable Output<Boolean> isName;
 
-    public Output<Boolean> getIsName() {
+    public Output<Boolean> isName() {
         return this.isName == null ? Codegen.empty() : this.isName;
     }
 
@@ -151,7 +151,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isRequired")
       private final @Nullable Output<Boolean> isRequired;
 
-    public Output<Boolean> getIsRequired() {
+    public Output<Boolean> isRequired() {
         return this.isRequired == null ? Codegen.empty() : this.isRequired;
     }
 
@@ -162,7 +162,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxLength")
       private final @Nullable Output<Integer> maxLength;
 
-    public Output<Integer> getMaxLength() {
+    public Output<Integer> maxLength() {
         return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
@@ -173,7 +173,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="propertyId")
       private final @Nullable Output<String> propertyId;
 
-    public Output<String> getPropertyId() {
+    public Output<String> propertyId() {
         return this.propertyId == null ? Codegen.empty() : this.propertyId;
     }
 
@@ -184,7 +184,7 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schemaItemPropLink")
       private final @Nullable Output<String> schemaItemPropLink;
 
-    public Output<String> getSchemaItemPropLink() {
+    public Output<String> schemaItemPropLink() {
         return this.schemaItemPropLink == null ? Codegen.empty() : this.schemaItemPropLink;
     }
 

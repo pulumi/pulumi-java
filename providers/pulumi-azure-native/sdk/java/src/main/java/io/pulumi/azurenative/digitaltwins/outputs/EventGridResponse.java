@@ -84,42 +84,42 @@ public final class EventGridResponse {
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
     */
-    public String getAccessKey1() {
+    public String accessKey1() {
         return this.accessKey1;
     }
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getAccessKey2() {
+    public Optional<String> accessKey2() {
         return Optional.ofNullable(this.accessKey2);
     }
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Time when the Endpoint was added to DigitalTwinsInstance.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getDeadLetterSecret() {
+    public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
     /**
      * Dead letter storage URL for identity-based authentication.
      * 
     */
-    public Optional<String> getDeadLetterUri() {
+    public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
     /**
@@ -127,21 +127,21 @@ public final class EventGridResponse {
      * Expected value is 'EventGrid'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * EventGrid Topic Endpoint
      * 
     */
-    public String getTopicEndpoint() {
+    public String topicEndpoint() {
         return this.topicEndpoint;
     }
 

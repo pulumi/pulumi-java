@@ -31,7 +31,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="billingPartNumber")
       private final @Nullable String billingPartNumber;
 
-    public Optional<String> getBillingPartNumber() {
+    public Optional<String> billingPartNumber() {
         return this.billingPartNumber == null ? Optional.empty() : Optional.ofNullable(this.billingPartNumber);
     }
 
@@ -42,7 +42,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="compatibility")
       private final @Nullable CompatibilityResponse compatibility;
 
-    public Optional<CompatibilityResponse> getCompatibility() {
+    public Optional<CompatibilityResponse> compatibility() {
         return this.compatibility == null ? Optional.empty() : Optional.ofNullable(this.compatibility);
     }
 
@@ -53,7 +53,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -64,7 +64,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -75,7 +75,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="etag")
       private final @Nullable String etag;
 
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
@@ -86,7 +86,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="galleryItemIdentity")
       private final @Nullable String galleryItemIdentity;
 
-    public Optional<String> getGalleryItemIdentity() {
+    public Optional<String> galleryItemIdentity() {
         return this.galleryItemIdentity == null ? Optional.empty() : Optional.ofNullable(this.galleryItemIdentity);
     }
 
@@ -97,7 +97,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iconUris")
       private final @Nullable IconUrisResponse iconUris;
 
-    public Optional<IconUrisResponse> getIconUris() {
+    public Optional<IconUrisResponse> iconUris() {
         return this.iconUris == null ? Optional.empty() : Optional.ofNullable(this.iconUris);
     }
 
@@ -108,7 +108,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -119,7 +119,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="legalTerms")
       private final @Nullable String legalTerms;
 
-    public Optional<String> getLegalTerms() {
+    public Optional<String> legalTerms() {
         return this.legalTerms == null ? Optional.empty() : Optional.ofNullable(this.legalTerms);
     }
 
@@ -130,7 +130,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="links")
       private final @Nullable List<ProductLinkResponse> links;
 
-    public List<ProductLinkResponse> getLinks() {
+    public List<ProductLinkResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
 
@@ -141,7 +141,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -152,7 +152,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="offer")
       private final @Nullable String offer;
 
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
@@ -163,7 +163,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="offerVersion")
       private final @Nullable String offerVersion;
 
-    public Optional<String> getOfferVersion() {
+    public Optional<String> offerVersion() {
         return this.offerVersion == null ? Optional.empty() : Optional.ofNullable(this.offerVersion);
     }
 
@@ -174,7 +174,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="payloadLength")
       private final @Nullable Double payloadLength;
 
-    public Optional<Double> getPayloadLength() {
+    public Optional<Double> payloadLength() {
         return this.payloadLength == null ? Optional.empty() : Optional.ofNullable(this.payloadLength);
     }
 
@@ -185,7 +185,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="privacyPolicy")
       private final @Nullable String privacyPolicy;
 
-    public Optional<String> getPrivacyPolicy() {
+    public Optional<String> privacyPolicy() {
         return this.privacyPolicy == null ? Optional.empty() : Optional.ofNullable(this.privacyPolicy);
     }
 
@@ -196,7 +196,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="productKind")
       private final @Nullable String productKind;
 
-    public Optional<String> getProductKind() {
+    public Optional<String> productKind() {
         return this.productKind == null ? Optional.empty() : Optional.ofNullable(this.productKind);
     }
 
@@ -207,7 +207,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="productProperties")
       private final @Nullable ProductPropertiesResponse productProperties;
 
-    public Optional<ProductPropertiesResponse> getProductProperties() {
+    public Optional<ProductPropertiesResponse> productProperties() {
         return this.productProperties == null ? Optional.empty() : Optional.ofNullable(this.productProperties);
     }
 
@@ -218,7 +218,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publisherDisplayName")
       private final @Nullable String publisherDisplayName;
 
-    public Optional<String> getPublisherDisplayName() {
+    public Optional<String> publisherDisplayName() {
         return this.publisherDisplayName == null ? Optional.empty() : Optional.ofNullable(this.publisherDisplayName);
     }
 
@@ -229,7 +229,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publisherIdentifier")
       private final @Nullable String publisherIdentifier;
 
-    public Optional<String> getPublisherIdentifier() {
+    public Optional<String> publisherIdentifier() {
         return this.publisherIdentifier == null ? Optional.empty() : Optional.ofNullable(this.publisherIdentifier);
     }
 
@@ -240,7 +240,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sku")
       private final @Nullable String sku;
 
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -251,7 +251,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -262,7 +262,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vmExtensionType")
       private final @Nullable String vmExtensionType;
 
-    public Optional<String> getVmExtensionType() {
+    public Optional<String> vmExtensionType() {
         return this.vmExtensionType == null ? Optional.empty() : Optional.ofNullable(this.vmExtensionType);
     }
 

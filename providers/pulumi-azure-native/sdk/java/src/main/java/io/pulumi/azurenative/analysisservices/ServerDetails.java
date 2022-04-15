@@ -48,7 +48,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return A collection of AS server administrators
      * 
      */
-    public Output</* @Nullable */ ServerAdministratorsResponse> getAsAdministrators() {
+    public Output</* @Nullable */ ServerAdministratorsResponse> asAdministrators() {
         return this.asAdministrators;
     }
     /**
@@ -62,7 +62,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The SAS container URI to the backup container.
      * 
      */
-    public Output</* @Nullable */ String> getBackupBlobContainerUri() {
+    public Output</* @Nullable */ String> backupBlobContainerUri() {
         return this.backupBlobContainerUri;
     }
     /**
@@ -76,7 +76,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The gateway details configured for the AS server.
      * 
      */
-    public Output</* @Nullable */ GatewayDetailsResponse> getGatewayDetails() {
+    public Output</* @Nullable */ GatewayDetailsResponse> gatewayDetails() {
         return this.gatewayDetails;
     }
     /**
@@ -90,7 +90,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The firewall settings for the AS server.
      * 
      */
-    public Output</* @Nullable */ IPv4FirewallSettingsResponse> getIpV4FirewallSettings() {
+    public Output</* @Nullable */ IPv4FirewallSettingsResponse> ipV4FirewallSettings() {
         return this.ipV4FirewallSettings;
     }
     /**
@@ -104,7 +104,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return Location of the Analysis Services resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -118,7 +118,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The managed mode of the server (0 = not managed, 1 = managed).
      * 
      */
-    public Output</* @Nullable */ Integer> getManagedMode() {
+    public Output</* @Nullable */ Integer> managedMode() {
         return this.managedMode;
     }
     /**
@@ -132,7 +132,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The name of the Analysis Services resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -160,7 +160,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
      * 
      */
-    public Output</* @Nullable */ String> getQuerypoolConnectionMode() {
+    public Output</* @Nullable */ String> querypoolConnectionMode() {
         return this.querypoolConnectionMode;
     }
     /**
@@ -174,7 +174,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The full name of the Analysis Services resource.
      * 
      */
-    public Output<String> getServerFullName() {
+    public Output<String> serverFullName() {
         return this.serverFullName;
     }
     /**
@@ -188,7 +188,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The server monitor mode for AS server
      * 
      */
-    public Output</* @Nullable */ Integer> getServerMonitorMode() {
+    public Output</* @Nullable */ Integer> serverMonitorMode() {
         return this.serverMonitorMode;
     }
     /**
@@ -202,7 +202,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The SKU of the Analysis Services resource.
      * 
      */
-    public Output<ResourceSkuResponse> getSku() {
+    public Output<ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -216,7 +216,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -230,7 +230,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -244,7 +244,7 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
      * @return The type of the Analysis Services resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

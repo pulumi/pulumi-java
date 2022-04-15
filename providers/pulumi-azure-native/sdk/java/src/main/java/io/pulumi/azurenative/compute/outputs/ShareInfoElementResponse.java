@@ -24,7 +24,7 @@ public final class ShareInfoElementResponse {
      * A relative URI containing the ID of the VM that has the disk attached.
      * 
     */
-    public String getVmUri() {
+    public String vmUri() {
         return this.vmUri;
     }
 

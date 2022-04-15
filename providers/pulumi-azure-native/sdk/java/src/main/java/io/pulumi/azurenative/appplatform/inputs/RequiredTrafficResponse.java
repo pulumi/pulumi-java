@@ -25,7 +25,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -36,7 +36,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
     @Import(name="fqdns", required=true)
       private final List<String> fqdns;
 
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns;
     }
 
@@ -47,7 +47,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ips", required=true)
       private final List<String> ips;
 
-    public List<String> getIps() {
+    public List<String> ips() {
         return this.ips;
     }
 
@@ -58,7 +58,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -69,7 +69,7 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

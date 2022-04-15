@@ -34,14 +34,14 @@ public final class ConnectorMappingCompleteOperationResponse {
      * The type of completion operation.
      * 
     */
-    public Optional<String> getCompletionOperationType() {
+    public Optional<String> completionOperationType() {
         return Optional.ofNullable(this.completionOperationType);
     }
     /**
      * The destination folder where files will be moved to once the import is done.
      * 
     */
-    public Optional<String> getDestinationFolder() {
+    public Optional<String> destinationFolder() {
         return Optional.ofNullable(this.destinationFolder);
     }
 

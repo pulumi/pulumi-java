@@ -23,7 +23,7 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

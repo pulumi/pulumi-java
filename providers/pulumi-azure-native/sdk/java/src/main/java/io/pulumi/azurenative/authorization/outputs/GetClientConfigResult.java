@@ -46,28 +46,28 @@ public final class GetClientConfigResult {
      * Azure Client ID (Application Object ID).
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Azure Object ID of the current user or service principal.
      * 
     */
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
     /**
      * Azure Subscription ID
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Azure Tenant ID
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

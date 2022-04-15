@@ -24,7 +24,7 @@ public final class GetLiveTokenResult {
      * JWT token for accessing live metrics stream data.
      * 
     */
-    public String getLiveToken() {
+    public String liveToken() {
         return this.liveToken;
     }
 

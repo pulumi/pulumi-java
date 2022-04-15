@@ -25,7 +25,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -47,7 +47,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -58,7 +58,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
+    public Output<CreateUpdateOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -80,7 +80,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="resource", required=true)
       private final Output<SqlUserDefinedFunctionResourceArgs> resource;
 
-    public Output<SqlUserDefinedFunctionResourceArgs> getResource() {
+    public Output<SqlUserDefinedFunctionResourceArgs> resource() {
         return this.resource;
     }
 
@@ -91,7 +91,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
     @Import(name="userDefinedFunctionName")
       private final @Nullable Output<String> userDefinedFunctionName;
 
-    public Output<String> getUserDefinedFunctionName() {
+    public Output<String> userDefinedFunctionName() {
         return this.userDefinedFunctionName == null ? Codegen.empty() : this.userDefinedFunctionName;
     }
 

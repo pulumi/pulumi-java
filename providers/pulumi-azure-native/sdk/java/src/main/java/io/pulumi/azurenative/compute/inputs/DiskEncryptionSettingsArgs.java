@@ -28,7 +28,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
-    public Output<KeyVaultSecretReferenceArgs> getDiskEncryptionKey() {
+    public Output<KeyVaultSecretReferenceArgs> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
@@ -39,7 +39,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -50,7 +50,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
+    public Output<KeyVaultKeyReferenceArgs> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 

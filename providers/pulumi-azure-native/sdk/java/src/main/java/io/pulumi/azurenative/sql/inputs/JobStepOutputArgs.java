@@ -28,7 +28,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credential", required=true)
       private final Output<String> credential;
 
-    public Output<String> getCredential() {
+    public Output<String> credential() {
         return this.credential;
     }
 
@@ -39,7 +39,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -50,7 +50,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
@@ -61,7 +61,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
@@ -72,7 +72,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -83,7 +83,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -94,7 +94,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -105,7 +105,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,JobStepOutputType>> type;
 
-    public Output<Either<String,JobStepOutputType>> getType() {
+    public Output<Either<String,JobStepOutputType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

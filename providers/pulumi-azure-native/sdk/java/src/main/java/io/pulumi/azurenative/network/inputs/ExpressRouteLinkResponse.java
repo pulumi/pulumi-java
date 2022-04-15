@@ -26,7 +26,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="adminState")
       private final @Nullable String adminState;
 
-    public Optional<String> getAdminState() {
+    public Optional<String> adminState() {
         return this.adminState == null ? Optional.empty() : Optional.ofNullable(this.adminState);
     }
 
@@ -37,7 +37,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="connectorType", required=true)
       private final String connectorType;
 
-    public String getConnectorType() {
+    public String connectorType() {
         return this.connectorType;
     }
 
@@ -48,7 +48,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -59,7 +59,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -70,7 +70,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="interfaceName", required=true)
       private final String interfaceName;
 
-    public String getInterfaceName() {
+    public String interfaceName() {
         return this.interfaceName;
     }
 
@@ -81,7 +81,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="macSecConfig")
       private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
 
-    public Optional<ExpressRouteLinkMacSecConfigResponse> getMacSecConfig() {
+    public Optional<ExpressRouteLinkMacSecConfigResponse> macSecConfig() {
         return this.macSecConfig == null ? Optional.empty() : Optional.ofNullable(this.macSecConfig);
     }
 
@@ -92,7 +92,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -103,7 +103,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="patchPanelId", required=true)
       private final String patchPanelId;
 
-    public String getPatchPanelId() {
+    public String patchPanelId() {
         return this.patchPanelId;
     }
 
@@ -114,7 +114,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -125,7 +125,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rackId", required=true)
       private final String rackId;
 
-    public String getRackId() {
+    public String rackId() {
         return this.rackId;
     }
 
@@ -136,7 +136,7 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
     @Import(name="routerName", required=true)
       private final String routerName;
 
-    public String getRouterName() {
+    public String routerName() {
         return this.routerName;
     }
 

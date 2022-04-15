@@ -218,196 +218,196 @@ public final class SysctlConfigResponse {
      * Sysctl setting fs.aio-max-nr.
      * 
     */
-    public Optional<Integer> getFsAioMaxNr() {
+    public Optional<Integer> fsAioMaxNr() {
         return Optional.ofNullable(this.fsAioMaxNr);
     }
     /**
      * Sysctl setting fs.file-max.
      * 
     */
-    public Optional<Integer> getFsFileMax() {
+    public Optional<Integer> fsFileMax() {
         return Optional.ofNullable(this.fsFileMax);
     }
     /**
      * Sysctl setting fs.inotify.max_user_watches.
      * 
     */
-    public Optional<Integer> getFsInotifyMaxUserWatches() {
+    public Optional<Integer> fsInotifyMaxUserWatches() {
         return Optional.ofNullable(this.fsInotifyMaxUserWatches);
     }
     /**
      * Sysctl setting fs.nr_open.
      * 
     */
-    public Optional<Integer> getFsNrOpen() {
+    public Optional<Integer> fsNrOpen() {
         return Optional.ofNullable(this.fsNrOpen);
     }
     /**
      * Sysctl setting kernel.threads-max.
      * 
     */
-    public Optional<Integer> getKernelThreadsMax() {
+    public Optional<Integer> kernelThreadsMax() {
         return Optional.ofNullable(this.kernelThreadsMax);
     }
     /**
      * Sysctl setting net.core.netdev_max_backlog.
      * 
     */
-    public Optional<Integer> getNetCoreNetdevMaxBacklog() {
+    public Optional<Integer> netCoreNetdevMaxBacklog() {
         return Optional.ofNullable(this.netCoreNetdevMaxBacklog);
     }
     /**
      * Sysctl setting net.core.optmem_max.
      * 
     */
-    public Optional<Integer> getNetCoreOptmemMax() {
+    public Optional<Integer> netCoreOptmemMax() {
         return Optional.ofNullable(this.netCoreOptmemMax);
     }
     /**
      * Sysctl setting net.core.rmem_default.
      * 
     */
-    public Optional<Integer> getNetCoreRmemDefault() {
+    public Optional<Integer> netCoreRmemDefault() {
         return Optional.ofNullable(this.netCoreRmemDefault);
     }
     /**
      * Sysctl setting net.core.rmem_max.
      * 
     */
-    public Optional<Integer> getNetCoreRmemMax() {
+    public Optional<Integer> netCoreRmemMax() {
         return Optional.ofNullable(this.netCoreRmemMax);
     }
     /**
      * Sysctl setting net.core.somaxconn.
      * 
     */
-    public Optional<Integer> getNetCoreSomaxconn() {
+    public Optional<Integer> netCoreSomaxconn() {
         return Optional.ofNullable(this.netCoreSomaxconn);
     }
     /**
      * Sysctl setting net.core.wmem_default.
      * 
     */
-    public Optional<Integer> getNetCoreWmemDefault() {
+    public Optional<Integer> netCoreWmemDefault() {
         return Optional.ofNullable(this.netCoreWmemDefault);
     }
     /**
      * Sysctl setting net.core.wmem_max.
      * 
     */
-    public Optional<Integer> getNetCoreWmemMax() {
+    public Optional<Integer> netCoreWmemMax() {
         return Optional.ofNullable(this.netCoreWmemMax);
     }
     /**
      * Sysctl setting net.ipv4.ip_local_port_range.
      * 
     */
-    public Optional<String> getNetIpv4IpLocalPortRange() {
+    public Optional<String> netIpv4IpLocalPortRange() {
         return Optional.ofNullable(this.netIpv4IpLocalPortRange);
     }
     /**
      * Sysctl setting net.ipv4.neigh.default.gc_thresh1.
      * 
     */
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh1() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh1() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh1);
     }
     /**
      * Sysctl setting net.ipv4.neigh.default.gc_thresh2.
      * 
     */
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh2() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh2() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh2);
     }
     /**
      * Sysctl setting net.ipv4.neigh.default.gc_thresh3.
      * 
     */
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh3() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh3() {
         return Optional.ofNullable(this.netIpv4NeighDefaultGcThresh3);
     }
     /**
      * Sysctl setting net.ipv4.tcp_fin_timeout.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpFinTimeout() {
+    public Optional<Integer> netIpv4TcpFinTimeout() {
         return Optional.ofNullable(this.netIpv4TcpFinTimeout);
     }
     /**
      * Sysctl setting net.ipv4.tcp_keepalive_probes.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpKeepaliveProbes() {
+    public Optional<Integer> netIpv4TcpKeepaliveProbes() {
         return Optional.ofNullable(this.netIpv4TcpKeepaliveProbes);
     }
     /**
      * Sysctl setting net.ipv4.tcp_keepalive_time.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpKeepaliveTime() {
+    public Optional<Integer> netIpv4TcpKeepaliveTime() {
         return Optional.ofNullable(this.netIpv4TcpKeepaliveTime);
     }
     /**
      * Sysctl setting net.ipv4.tcp_max_syn_backlog.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpMaxSynBacklog() {
+    public Optional<Integer> netIpv4TcpMaxSynBacklog() {
         return Optional.ofNullable(this.netIpv4TcpMaxSynBacklog);
     }
     /**
      * Sysctl setting net.ipv4.tcp_max_tw_buckets.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpMaxTwBuckets() {
+    public Optional<Integer> netIpv4TcpMaxTwBuckets() {
         return Optional.ofNullable(this.netIpv4TcpMaxTwBuckets);
     }
     /**
      * Sysctl setting net.ipv4.tcp_tw_reuse.
      * 
     */
-    public Optional<Boolean> getNetIpv4TcpTwReuse() {
+    public Optional<Boolean> netIpv4TcpTwReuse() {
         return Optional.ofNullable(this.netIpv4TcpTwReuse);
     }
     /**
      * Sysctl setting net.ipv4.tcp_keepalive_intvl.
      * 
     */
-    public Optional<Integer> getNetIpv4TcpkeepaliveIntvl() {
+    public Optional<Integer> netIpv4TcpkeepaliveIntvl() {
         return Optional.ofNullable(this.netIpv4TcpkeepaliveIntvl);
     }
     /**
      * Sysctl setting net.netfilter.nf_conntrack_buckets.
      * 
     */
-    public Optional<Integer> getNetNetfilterNfConntrackBuckets() {
+    public Optional<Integer> netNetfilterNfConntrackBuckets() {
         return Optional.ofNullable(this.netNetfilterNfConntrackBuckets);
     }
     /**
      * Sysctl setting net.netfilter.nf_conntrack_max.
      * 
     */
-    public Optional<Integer> getNetNetfilterNfConntrackMax() {
+    public Optional<Integer> netNetfilterNfConntrackMax() {
         return Optional.ofNullable(this.netNetfilterNfConntrackMax);
     }
     /**
      * Sysctl setting vm.max_map_count.
      * 
     */
-    public Optional<Integer> getVmMaxMapCount() {
+    public Optional<Integer> vmMaxMapCount() {
         return Optional.ofNullable(this.vmMaxMapCount);
     }
     /**
      * Sysctl setting vm.swappiness.
      * 
     */
-    public Optional<Integer> getVmSwappiness() {
+    public Optional<Integer> vmSwappiness() {
         return Optional.ofNullable(this.vmSwappiness);
     }
     /**
      * Sysctl setting vm.vfs_cache_pressure.
      * 
     */
-    public Optional<Integer> getVmVfsCachePressure() {
+    public Optional<Integer> vmVfsCachePressure() {
         return Optional.ofNullable(this.vmVfsCachePressure);
     }
 

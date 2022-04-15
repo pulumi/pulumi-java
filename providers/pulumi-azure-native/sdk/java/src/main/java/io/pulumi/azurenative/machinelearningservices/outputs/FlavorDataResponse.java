@@ -26,7 +26,7 @@ public final class FlavorDataResponse {
      * Model flavor-specific data.
      * 
     */
-    public Map<String,String> getData() {
+    public Map<String,String> data() {
         return this.data == null ? Map.of() : this.data;
     }
 

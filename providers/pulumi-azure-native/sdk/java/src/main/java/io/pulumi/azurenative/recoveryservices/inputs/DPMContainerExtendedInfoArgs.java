@@ -26,7 +26,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> getLastRefreshedAt() {
+    public Output<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 

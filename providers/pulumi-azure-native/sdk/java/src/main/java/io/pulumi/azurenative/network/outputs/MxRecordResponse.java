@@ -35,14 +35,14 @@ public final class MxRecordResponse {
      * The domain name of the mail host for this MX record.
      * 
     */
-    public Optional<String> getExchange() {
+    public Optional<String> exchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
      * The preference value for this MX record.
      * 
     */
-    public Optional<Integer> getPreference() {
+    public Optional<Integer> preference() {
         return Optional.ofNullable(this.preference);
     }
 

@@ -28,7 +28,7 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
-    public Output<Either<String,FirewallPolicyFilterRuleActionType>> getType() {
+    public Output<Either<String,FirewallPolicyFilterRuleActionType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

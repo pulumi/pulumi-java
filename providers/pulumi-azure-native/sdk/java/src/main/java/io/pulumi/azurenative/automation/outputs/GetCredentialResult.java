@@ -69,49 +69,49 @@ public final class GetCredentialResult {
      * Gets the creation time.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets the last modified time.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets the user name of the credential.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

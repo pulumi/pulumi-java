@@ -26,7 +26,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
@@ -37,7 +37,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

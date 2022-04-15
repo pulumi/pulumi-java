@@ -26,7 +26,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="serviceFabricCluster")
       private final @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
-    public Output<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
+    public Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster() {
         return this.serviceFabricCluster == null ? Codegen.empty() : this.serviceFabricCluster;
     }
 

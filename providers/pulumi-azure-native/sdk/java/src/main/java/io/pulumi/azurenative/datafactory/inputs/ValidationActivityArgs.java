@@ -31,7 +31,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="childItems")
       private final @Nullable Output<Object> childItems;
 
-    public Output<Object> getChildItems() {
+    public Output<Object> childItems() {
         return this.childItems == null ? Codegen.empty() : this.childItems;
     }
 
@@ -42,7 +42,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
     }
 
@@ -53,7 +53,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -64,7 +64,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -75,7 +75,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="minimumSize")
       private final @Nullable Output<Object> minimumSize;
 
-    public Output<Object> getMinimumSize() {
+    public Output<Object> minimumSize() {
         return this.minimumSize == null ? Codegen.empty() : this.minimumSize;
     }
 
@@ -86,7 +86,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -97,7 +97,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sleep")
       private final @Nullable Output<Object> sleep;
 
-    public Output<Object> getSleep() {
+    public Output<Object> sleep() {
         return this.sleep == null ? Codegen.empty() : this.sleep;
     }
 
@@ -108,7 +108,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="timeout")
       private final @Nullable Output<Object> timeout;
 
-    public Output<Object> getTimeout() {
+    public Output<Object> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -120,7 +120,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -131,7 +131,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

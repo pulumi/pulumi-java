@@ -30,7 +30,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
         return this.pipelines == null ? Codegen.empty() : this.pipelines;
     }
 
@@ -63,7 +63,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="recurrence", required=true)
       private final Output<ScheduleTriggerRecurrenceArgs> recurrence;
 
-    public Output<ScheduleTriggerRecurrenceArgs> getRecurrence() {
+    public Output<ScheduleTriggerRecurrenceArgs> recurrence() {
         return this.recurrence;
     }
 
@@ -75,7 +75,7 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

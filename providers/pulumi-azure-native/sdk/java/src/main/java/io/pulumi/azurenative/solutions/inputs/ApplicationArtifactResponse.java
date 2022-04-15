@@ -23,7 +23,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

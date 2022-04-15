@@ -24,7 +24,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -35,7 +35,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataExportId")
       private final @Nullable Output<String> dataExportId;
 
-    public Output<String> getDataExportId() {
+    public Output<String> dataExportId() {
         return this.dataExportId == null ? Codegen.empty() : this.dataExportId;
     }
 
@@ -46,7 +46,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataExportName")
       private final @Nullable Output<String> dataExportName;
 
-    public Output<String> getDataExportName() {
+    public Output<String> dataExportName() {
         return this.dataExportName == null ? Codegen.empty() : this.dataExportName;
     }
 
@@ -57,7 +57,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -68,7 +68,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -79,7 +79,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
     }
 
@@ -90,7 +90,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -112,7 +112,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableNames", required=true)
       private final Output<List<String>> tableNames;
 
-    public Output<List<String>> getTableNames() {
+    public Output<List<String>> tableNames() {
         return this.tableNames;
     }
 
@@ -123,7 +123,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

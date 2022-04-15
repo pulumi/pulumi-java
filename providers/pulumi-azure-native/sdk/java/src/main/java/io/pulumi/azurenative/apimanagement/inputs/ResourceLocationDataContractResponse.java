@@ -25,7 +25,7 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
     @Import(name="city")
       private final @Nullable String city;
 
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
     @Import(name="countryOrRegion")
       private final @Nullable String countryOrRegion;
 
-    public Optional<String> getCountryOrRegion() {
+    public Optional<String> countryOrRegion() {
         return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
     }
 
@@ -47,7 +47,7 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
     @Import(name="district")
       private final @Nullable String district;
 
-    public Optional<String> getDistrict() {
+    public Optional<String> district() {
         return this.district == null ? Optional.empty() : Optional.ofNullable(this.district);
     }
 
@@ -58,7 +58,7 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

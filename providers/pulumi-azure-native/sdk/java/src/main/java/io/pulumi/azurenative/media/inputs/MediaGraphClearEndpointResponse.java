@@ -26,7 +26,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
     @Import(name="credentials")
       private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
-    public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
+    public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -38,7 +38,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -49,7 +49,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -22,10 +22,10 @@ public final class DefaultRolloutSpecificationResponseCanary {
         this.skipRegions = skipRegions;
     }
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
-    public List<String> getSkipRegions() {
+    public List<String> skipRegions() {
         return this.skipRegions == null ? List.of() : this.skipRegions;
     }
 

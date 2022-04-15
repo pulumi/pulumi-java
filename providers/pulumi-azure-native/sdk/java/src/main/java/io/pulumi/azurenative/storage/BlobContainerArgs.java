@@ -25,7 +25,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -47,7 +47,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionScope")
       private final @Nullable Output<String> defaultEncryptionScope;
 
-    public Output<String> getDefaultEncryptionScope() {
+    public Output<String> defaultEncryptionScope() {
         return this.defaultEncryptionScope == null ? Codegen.empty() : this.defaultEncryptionScope;
     }
 
@@ -58,7 +58,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="denyEncryptionScopeOverride")
       private final @Nullable Output<Boolean> denyEncryptionScopeOverride;
 
-    public Output<Boolean> getDenyEncryptionScopeOverride() {
+    public Output<Boolean> denyEncryptionScopeOverride() {
         return this.denyEncryptionScopeOverride == null ? Codegen.empty() : this.denyEncryptionScopeOverride;
     }
 
@@ -69,7 +69,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -80,7 +80,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicAccess")
       private final @Nullable Output<PublicAccess> publicAccess;
 
-    public Output<PublicAccess> getPublicAccess() {
+    public Output<PublicAccess> publicAccess() {
         return this.publicAccess == null ? Codegen.empty() : this.publicAccess;
     }
 
@@ -91,7 +91,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

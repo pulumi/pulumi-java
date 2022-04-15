@@ -23,7 +23,7 @@ public final class KeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyExpirationPeriodInDays", required=true)
       private final Integer keyExpirationPeriodInDays;
 
-    public Integer getKeyExpirationPeriodInDays() {
+    public Integer keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
 

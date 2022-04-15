@@ -26,7 +26,7 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
      * Expected value is 'VmmToAzure'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

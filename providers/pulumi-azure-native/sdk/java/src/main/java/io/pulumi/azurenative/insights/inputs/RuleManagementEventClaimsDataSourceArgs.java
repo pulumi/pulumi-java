@@ -26,7 +26,7 @@ public final class RuleManagementEventClaimsDataSourceArgs extends io.pulumi.res
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 

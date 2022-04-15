@@ -31,7 +31,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="capacity", required=true)
       private final Output<ScaleCapacityArgs> capacity;
 
-    public Output<ScaleCapacityArgs> getCapacity() {
+    public Output<ScaleCapacityArgs> capacity() {
         return this.capacity;
     }
 
@@ -42,7 +42,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fixedDate")
       private final @Nullable Output<TimeWindowArgs> fixedDate;
 
-    public Output<TimeWindowArgs> getFixedDate() {
+    public Output<TimeWindowArgs> fixedDate() {
         return this.fixedDate == null ? Codegen.empty() : this.fixedDate;
     }
 
@@ -53,7 +53,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -64,7 +64,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recurrence")
       private final @Nullable Output<RecurrenceArgs> recurrence;
 
-    public Output<RecurrenceArgs> getRecurrence() {
+    public Output<RecurrenceArgs> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
@@ -75,7 +75,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rules", required=true)
       private final Output<List<ScaleRuleArgs>> rules;
 
-    public Output<List<ScaleRuleArgs>> getRules() {
+    public Output<List<ScaleRuleArgs>> rules() {
         return this.rules;
     }
 

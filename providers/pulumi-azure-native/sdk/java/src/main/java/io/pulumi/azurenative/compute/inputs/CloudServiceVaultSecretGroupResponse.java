@@ -27,7 +27,7 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
     @Import(name="sourceVault")
       private final @Nullable SubResourceResponse sourceVault;
 
-    public Optional<SubResourceResponse> getSourceVault() {
+    public Optional<SubResourceResponse> sourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
     }
 
@@ -38,7 +38,7 @@ public final class CloudServiceVaultSecretGroupResponse extends io.pulumi.resour
     @Import(name="vaultCertificates")
       private final @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
 
-    public List<CloudServiceVaultCertificateResponse> getVaultCertificates() {
+    public List<CloudServiceVaultCertificateResponse> vaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
     }
 

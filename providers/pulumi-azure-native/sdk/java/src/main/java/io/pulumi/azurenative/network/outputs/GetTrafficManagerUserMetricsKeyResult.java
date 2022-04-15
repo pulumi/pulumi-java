@@ -48,28 +48,28 @@ public final class GetTrafficManagerUserMetricsKeyResult {
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The key returned by the User Metrics operation.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The name of the resource
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

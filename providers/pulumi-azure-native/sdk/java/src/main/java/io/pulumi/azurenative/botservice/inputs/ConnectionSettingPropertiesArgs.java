@@ -28,7 +28,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -50,7 +50,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -61,7 +61,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<List<ConnectionSettingParameterArgs>> parameters;
 
-    public Output<List<ConnectionSettingParameterArgs>> getParameters() {
+    public Output<List<ConnectionSettingParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -83,7 +83,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -94,7 +94,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="scopes")
       private final @Nullable Output<String> scopes;
 
-    public Output<String> getScopes() {
+    public Output<String> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
@@ -105,7 +105,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="serviceProviderDisplayName")
       private final @Nullable Output<String> serviceProviderDisplayName;
 
-    public Output<String> getServiceProviderDisplayName() {
+    public Output<String> serviceProviderDisplayName() {
         return this.serviceProviderDisplayName == null ? Codegen.empty() : this.serviceProviderDisplayName;
     }
 
@@ -116,7 +116,7 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     @Import(name="serviceProviderId")
       private final @Nullable Output<String> serviceProviderId;
 
-    public Output<String> getServiceProviderId() {
+    public Output<String> serviceProviderId() {
         return this.serviceProviderId == null ? Codegen.empty() : this.serviceProviderId;
     }
 

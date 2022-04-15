@@ -28,7 +28,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cooldown", required=true)
       private final Output<String> cooldown;
 
-    public Output<String> getCooldown() {
+    public Output<String> cooldown() {
         return this.cooldown;
     }
 
@@ -39,7 +39,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="direction", required=true)
       private final Output<ScaleDirection> direction;
 
-    public Output<ScaleDirection> getDirection() {
+    public Output<ScaleDirection> direction() {
         return this.direction;
     }
 
@@ -50,7 +50,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<ScaleType> type;
 
-    public Output<ScaleType> getType() {
+    public Output<ScaleType> type() {
         return this.type;
     }
 
@@ -61,7 +61,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -78,56 +78,56 @@ public final class IPConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The private IP address of the IP configuration.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
     */
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the IP configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the public IP resource.
      * 
     */
-    public Optional<PublicIPAddressResponse> getPublicIPAddress() {
+    public Optional<PublicIPAddressResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * The reference to the subnet resource.
      * 
     */
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

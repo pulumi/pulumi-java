@@ -26,7 +26,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="callbackUrl", required=true)
       private final String callbackUrl;
 
-    public String getCallbackUrl() {
+    public String callbackUrl() {
         return this.callbackUrl;
     }
 
@@ -37,7 +37,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="isValidated", required=true)
       private final Boolean isValidated;
 
-    public Boolean getIsValidated() {
+    public Boolean isValidated() {
         return this.isValidated;
     }
 
@@ -48,7 +48,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="lineRegistrations", required=true)
       private final List<LineRegistrationResponse> lineRegistrations;
 
-    public List<LineRegistrationResponse> getLineRegistrations() {
+    public List<LineRegistrationResponse> lineRegistrations() {
         return this.lineRegistrations;
     }
 

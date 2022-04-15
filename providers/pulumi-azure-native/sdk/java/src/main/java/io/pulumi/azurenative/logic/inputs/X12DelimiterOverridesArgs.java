@@ -29,7 +29,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
-    public Output<Integer> getComponentSeparator() {
+    public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -40,7 +40,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
-    public Output<Integer> getDataElementSeparator() {
+    public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -51,7 +51,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -62,7 +62,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="protocolVersion")
       private final @Nullable Output<String> protocolVersion;
 
-    public Output<String> getProtocolVersion() {
+    public Output<String> protocolVersion() {
         return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
     }
 
@@ -73,7 +73,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="replaceCharacter", required=true)
       private final Output<Integer> replaceCharacter;
 
-    public Output<Integer> getReplaceCharacter() {
+    public Output<Integer> replaceCharacter() {
         return this.replaceCharacter;
     }
 
@@ -84,7 +84,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="replaceSeparatorsInPayload", required=true)
       private final Output<Boolean> replaceSeparatorsInPayload;
 
-    public Output<Boolean> getReplaceSeparatorsInPayload() {
+    public Output<Boolean> replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
 
@@ -95,7 +95,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
-    public Output<Integer> getSegmentTerminator() {
+    public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -106,7 +106,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -117,7 +117,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 

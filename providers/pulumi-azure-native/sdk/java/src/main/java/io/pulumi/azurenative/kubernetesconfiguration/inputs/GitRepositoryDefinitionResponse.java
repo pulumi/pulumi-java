@@ -27,7 +27,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="httpsCAFile")
       private final @Nullable String httpsCAFile;
 
-    public Optional<String> getHttpsCAFile() {
+    public Optional<String> httpsCAFile() {
         return this.httpsCAFile == null ? Optional.empty() : Optional.ofNullable(this.httpsCAFile);
     }
 
@@ -38,7 +38,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="httpsUser")
       private final @Nullable String httpsUser;
 
-    public Optional<String> getHttpsUser() {
+    public Optional<String> httpsUser() {
         return this.httpsUser == null ? Optional.empty() : Optional.ofNullable(this.httpsUser);
     }
 
@@ -49,7 +49,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="localAuthRef")
       private final @Nullable String localAuthRef;
 
-    public Optional<String> getLocalAuthRef() {
+    public Optional<String> localAuthRef() {
         return this.localAuthRef == null ? Optional.empty() : Optional.ofNullable(this.localAuthRef);
     }
 
@@ -60,7 +60,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="repositoryRef")
       private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
 
-    public Optional<RepositoryRefDefinitionResponse> getRepositoryRef() {
+    public Optional<RepositoryRefDefinitionResponse> repositoryRef() {
         return this.repositoryRef == null ? Optional.empty() : Optional.ofNullable(this.repositoryRef);
     }
 
@@ -71,7 +71,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="sshKnownHosts")
       private final @Nullable String sshKnownHosts;
 
-    public Optional<String> getSshKnownHosts() {
+    public Optional<String> sshKnownHosts() {
         return this.sshKnownHosts == null ? Optional.empty() : Optional.ofNullable(this.sshKnownHosts);
     }
 
@@ -82,7 +82,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="syncIntervalInSeconds")
       private final @Nullable Double syncIntervalInSeconds;
 
-    public Optional<Double> getSyncIntervalInSeconds() {
+    public Optional<Double> syncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
     }
 
@@ -93,7 +93,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
 
-    public Optional<Double> getTimeoutInSeconds() {
+    public Optional<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
     }
 
@@ -104,7 +104,7 @@ public final class GitRepositoryDefinitionResponse extends io.pulumi.resources.I
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

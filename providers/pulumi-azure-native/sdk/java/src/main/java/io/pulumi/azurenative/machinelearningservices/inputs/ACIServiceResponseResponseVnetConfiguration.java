@@ -25,7 +25,7 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
     @Import(name="subnetName")
       private final @Nullable String subnetName;
 
-    public Optional<String> getSubnetName() {
+    public Optional<String> subnetName() {
         return this.subnetName == null ? Optional.empty() : Optional.ofNullable(this.subnetName);
     }
 
@@ -36,7 +36,7 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
     @Import(name="vnetName")
       private final @Nullable String vnetName;
 
-    public Optional<String> getVnetName() {
+    public Optional<String> vnetName() {
         return this.vnetName == null ? Optional.empty() : Optional.ofNullable(this.vnetName);
     }
 

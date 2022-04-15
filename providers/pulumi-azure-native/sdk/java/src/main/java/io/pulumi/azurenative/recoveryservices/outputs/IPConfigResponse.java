@@ -42,21 +42,21 @@ public final class IPConfigResponse {
      * The backend address pools associated with the IP configuration.
      * 
     */
-    public List<String> getLBBackendAddressPoolIds() {
+    public List<String> lBBackendAddressPoolIds() {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
     }
     /**
      * The Id of the public IP address associated with the IP configuration.
      * 
     */
-    public Optional<String> getPublicIpAddressId() {
+    public Optional<String> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
     /**
      * The static IP address of the IP configuration.
      * 
     */
-    public Optional<String> getStaticIPAddress() {
+    public Optional<String> staticIPAddress() {
         return Optional.ofNullable(this.staticIPAddress);
     }
 

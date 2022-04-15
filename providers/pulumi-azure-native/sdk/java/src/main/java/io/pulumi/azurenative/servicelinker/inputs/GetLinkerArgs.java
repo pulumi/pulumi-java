@@ -19,7 +19,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="linkerName", required=true)
       private final String linkerName;
 
-    public String getLinkerName() {
+    public String linkerName() {
         return this.linkerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

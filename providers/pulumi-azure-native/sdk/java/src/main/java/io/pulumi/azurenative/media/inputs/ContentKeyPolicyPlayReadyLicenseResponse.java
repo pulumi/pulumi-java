@@ -30,7 +30,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="allowTestDevices", required=true)
       private final Boolean allowTestDevices;
 
-    public Boolean getAllowTestDevices() {
+    public Boolean allowTestDevices() {
         return this.allowTestDevices;
     }
 
@@ -41,7 +41,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="beginDate")
       private final @Nullable String beginDate;
 
-    public Optional<String> getBeginDate() {
+    public Optional<String> beginDate() {
         return this.beginDate == null ? Optional.empty() : Optional.ofNullable(this.beginDate);
     }
 
@@ -52,7 +52,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="contentKeyLocation", required=true)
       private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
 
-    public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> getContentKeyLocation() {
+    public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation() {
         return this.contentKeyLocation;
     }
 
@@ -63,7 +63,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -74,7 +74,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
@@ -85,7 +85,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="gracePeriod")
       private final @Nullable String gracePeriod;
 
-    public Optional<String> getGracePeriod() {
+    public Optional<String> gracePeriod() {
         return this.gracePeriod == null ? Optional.empty() : Optional.ofNullable(this.gracePeriod);
     }
 
@@ -96,7 +96,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="licenseType", required=true)
       private final String licenseType;
 
-    public String getLicenseType() {
+    public String licenseType() {
         return this.licenseType;
     }
 
@@ -107,7 +107,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="playRight")
       private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
 
-    public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> getPlayRight() {
+    public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> playRight() {
         return this.playRight == null ? Optional.empty() : Optional.ofNullable(this.playRight);
     }
 
@@ -118,7 +118,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="relativeBeginDate")
       private final @Nullable String relativeBeginDate;
 
-    public Optional<String> getRelativeBeginDate() {
+    public Optional<String> relativeBeginDate() {
         return this.relativeBeginDate == null ? Optional.empty() : Optional.ofNullable(this.relativeBeginDate);
     }
 
@@ -129,7 +129,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     @Import(name="relativeExpirationDate")
       private final @Nullable String relativeExpirationDate;
 
-    public Optional<String> getRelativeExpirationDate() {
+    public Optional<String> relativeExpirationDate() {
         return this.relativeExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.relativeExpirationDate);
     }
 

@@ -28,7 +28,7 @@ public final class DiagnosticsDescriptionResponse extends io.pulumi.resources.In
     @Import(name="defaultSinkRefs")
       private final @Nullable List<String> defaultSinkRefs;
 
-    public List<String> getDefaultSinkRefs() {
+    public List<String> defaultSinkRefs() {
         return this.defaultSinkRefs == null ? List.of() : this.defaultSinkRefs;
     }
 
@@ -39,7 +39,7 @@ public final class DiagnosticsDescriptionResponse extends io.pulumi.resources.In
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -50,7 +50,7 @@ public final class DiagnosticsDescriptionResponse extends io.pulumi.resources.In
     @Import(name="sinks")
       private final @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
 
-    public List<AzureInternalMonitoringPipelineSinkDescriptionResponse> getSinks() {
+    public List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
 

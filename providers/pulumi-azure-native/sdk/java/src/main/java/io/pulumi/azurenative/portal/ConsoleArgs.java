@@ -23,7 +23,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
 
-    public Output<String> getConsoleName() {
+    public Output<String> consoleName() {
         return this.consoleName == null ? Codegen.empty() : this.consoleName;
     }
 
@@ -34,7 +34,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<ConsoleCreatePropertiesArgs> properties;
 
-    public Output<ConsoleCreatePropertiesArgs> getProperties() {
+    public Output<ConsoleCreatePropertiesArgs> properties() {
         return this.properties;
     }
 

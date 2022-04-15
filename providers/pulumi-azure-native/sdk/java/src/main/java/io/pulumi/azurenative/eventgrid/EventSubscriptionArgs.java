@@ -36,7 +36,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
-    public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
+    public Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination() {
         return this.deadLetterDestination == null ? Codegen.empty() : this.deadLetterDestination;
     }
 
@@ -47,7 +47,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="destination")
       private final @Nullable Output<Object> destination;
 
-    public Output<Object> getDestination() {
+    public Output<Object> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -58,7 +58,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventDeliverySchema")
       private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
-    public Output<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
+    public Output<Either<String,EventDeliverySchema>> eventDeliverySchema() {
         return this.eventDeliverySchema == null ? Codegen.empty() : this.eventDeliverySchema;
     }
 
@@ -69,7 +69,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventSubscriptionName")
       private final @Nullable Output<String> eventSubscriptionName;
 
-    public Output<String> getEventSubscriptionName() {
+    public Output<String> eventSubscriptionName() {
         return this.eventSubscriptionName == null ? Codegen.empty() : this.eventSubscriptionName;
     }
 
@@ -80,7 +80,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
 
-    public Output<String> getExpirationTimeUtc() {
+    public Output<String> expirationTimeUtc() {
         return this.expirationTimeUtc == null ? Codegen.empty() : this.expirationTimeUtc;
     }
 
@@ -91,7 +91,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="filter")
       private final @Nullable Output<EventSubscriptionFilterArgs> filter;
 
-    public Output<EventSubscriptionFilterArgs> getFilter() {
+    public Output<EventSubscriptionFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -102,7 +102,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -113,7 +113,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
+    public Output<RetryPolicyArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -124,7 +124,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

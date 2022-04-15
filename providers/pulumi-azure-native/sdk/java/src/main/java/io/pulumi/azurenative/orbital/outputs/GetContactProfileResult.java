@@ -109,84 +109,84 @@ public final class GetContactProfileResult {
      * Auto track configuration.
      * 
     */
-    public Optional<String> getAutoTrackingConfiguration() {
+    public Optional<String> autoTrackingConfiguration() {
         return Optional.ofNullable(this.autoTrackingConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The URI of the Event Hub used for telemetry
      * 
     */
-    public Optional<String> getEventHubUri() {
+    public Optional<String> eventHubUri() {
         return Optional.ofNullable(this.eventHubUri);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Links of the Contact Profile
      * 
     */
-    public List<ContactProfileLinkResponse> getLinks() {
+    public List<ContactProfileLinkResponse> links() {
         return this.links;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Minimum viable elevation for the contact in decimal degrees.
      * 
     */
-    public Optional<Double> getMinimumElevationDegrees() {
+    public Optional<Double> minimumElevationDegrees() {
         return Optional.ofNullable(this.minimumElevationDegrees);
     }
     /**
      * Minimum viable contact duration in ISO 8601 format.
      * 
     */
-    public Optional<String> getMinimumViableContactDuration() {
+    public Optional<String> minimumViableContactDuration() {
         return Optional.ofNullable(this.minimumViableContactDuration);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

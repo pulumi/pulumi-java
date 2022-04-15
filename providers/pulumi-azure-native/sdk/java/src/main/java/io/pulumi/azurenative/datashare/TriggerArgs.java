@@ -24,7 +24,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,TriggerKind>> kind;
 
-    public Output<Either<String,TriggerKind>> getKind() {
+    public Output<Either<String,TriggerKind>> kind() {
         return this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -68,7 +68,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
+    public Output<String> triggerName() {
         return this.triggerName == null ? Codegen.empty() : this.triggerName;
     }
 

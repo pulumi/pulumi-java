@@ -26,7 +26,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -37,7 +37,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> getClientSecretSettingName() {
+    public Output<String> clientSecretSettingName() {
         return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 

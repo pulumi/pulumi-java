@@ -32,14 +32,14 @@ public final class ServiceRegistryInstanceResponse {
      * Name of the Service Registry instance
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Status of the Service Registry instance
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

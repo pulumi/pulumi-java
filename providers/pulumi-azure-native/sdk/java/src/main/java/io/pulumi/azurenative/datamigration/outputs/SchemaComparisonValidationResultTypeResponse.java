@@ -39,21 +39,21 @@ public final class SchemaComparisonValidationResultTypeResponse {
      * Name of the object that has the difference
      * 
     */
-    public String getObjectName() {
+    public String objectName() {
         return this.objectName;
     }
     /**
      * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Update action type with respect to target
      * 
     */
-    public String getUpdateAction() {
+    public String updateAction() {
         return this.updateAction;
     }
 

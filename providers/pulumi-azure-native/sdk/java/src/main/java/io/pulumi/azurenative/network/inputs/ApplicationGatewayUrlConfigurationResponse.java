@@ -26,7 +26,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
     @Import(name="modifiedPath")
       private final @Nullable String modifiedPath;
 
-    public Optional<String> getModifiedPath() {
+    public Optional<String> modifiedPath() {
         return this.modifiedPath == null ? Optional.empty() : Optional.ofNullable(this.modifiedPath);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
     @Import(name="modifiedQueryString")
       private final @Nullable String modifiedQueryString;
 
-    public Optional<String> getModifiedQueryString() {
+    public Optional<String> modifiedQueryString() {
         return this.modifiedQueryString == null ? Optional.empty() : Optional.ofNullable(this.modifiedQueryString);
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
     @Import(name="reroute")
       private final @Nullable Boolean reroute;
 
-    public Optional<Boolean> getReroute() {
+    public Optional<Boolean> reroute() {
         return this.reroute == null ? Optional.empty() : Optional.ofNullable(this.reroute);
     }
 

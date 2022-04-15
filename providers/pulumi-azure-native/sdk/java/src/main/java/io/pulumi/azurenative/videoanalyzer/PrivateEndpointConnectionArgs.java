@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

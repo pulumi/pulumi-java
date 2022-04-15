@@ -28,7 +28,7 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<Either<String,AzureFirewallNatRCActionType>> type;
 
-    public Output<Either<String,AzureFirewallNatRCActionType>> getType() {
+    public Output<Either<String,AzureFirewallNatRCActionType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

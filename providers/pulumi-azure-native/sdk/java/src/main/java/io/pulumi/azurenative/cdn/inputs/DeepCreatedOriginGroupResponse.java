@@ -30,7 +30,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
     @Import(name="healthProbeSettings")
       private final @Nullable HealthProbeParametersResponse healthProbeSettings;
 
-    public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
+    public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
     }
 
@@ -41,7 +41,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
     @Import(name="origins", required=true)
       private final List<ResourceReferenceResponse> origins;
 
-    public List<ResourceReferenceResponse> getOrigins() {
+    public List<ResourceReferenceResponse> origins() {
         return this.origins;
     }
 
@@ -63,7 +63,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
     @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
 
-    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
+    public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings == null ? Optional.empty() : Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
 
@@ -74,7 +74,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Optional.empty() : Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
 

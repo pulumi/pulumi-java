@@ -42,7 +42,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalId() {
+    public Output</* @Nullable */ String> principalId() {
         return this.principalId;
     }
     /**
@@ -70,7 +70,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @return The unique identifier for the associated Role Definition.
      * 
      */
-    public Output</* @Nullable */ String> getRoleDefinitionId() {
+    public Output</* @Nullable */ String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -84,7 +84,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @return The data plane resource path for which access is being granted through this Role Assignment.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -98,7 +98,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

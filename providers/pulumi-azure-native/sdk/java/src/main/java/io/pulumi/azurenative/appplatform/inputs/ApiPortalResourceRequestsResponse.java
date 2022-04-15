@@ -23,7 +23,7 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
     @Import(name="cpu", required=true)
       private final String cpu;
 
-    public String getCpu() {
+    public String cpu() {
         return this.cpu;
     }
 
@@ -34,7 +34,7 @@ public final class ApiPortalResourceRequestsResponse extends io.pulumi.resources
     @Import(name="memory", required=true)
       private final String memory;
 
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

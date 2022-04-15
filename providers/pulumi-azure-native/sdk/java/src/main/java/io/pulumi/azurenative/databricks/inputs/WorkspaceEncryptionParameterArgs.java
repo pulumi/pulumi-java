@@ -26,7 +26,7 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<EncryptionArgs> value;
 
-    public Output<EncryptionArgs> getValue() {
+    public Output<EncryptionArgs> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

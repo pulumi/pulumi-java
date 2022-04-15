@@ -27,7 +27,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="hostPoolArmPath")
       private final @Nullable Output<String> hostPoolArmPath;
 
-    public Output<String> getHostPoolArmPath() {
+    public Output<String> hostPoolArmPath() {
         return this.hostPoolArmPath == null ? Codegen.empty() : this.hostPoolArmPath;
     }
 
@@ -38,7 +38,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="scalingPlanEnabled")
       private final @Nullable Output<Boolean> scalingPlanEnabled;
 
-    public Output<Boolean> getScalingPlanEnabled() {
+    public Output<Boolean> scalingPlanEnabled() {
         return this.scalingPlanEnabled == null ? Codegen.empty() : this.scalingPlanEnabled;
     }
 

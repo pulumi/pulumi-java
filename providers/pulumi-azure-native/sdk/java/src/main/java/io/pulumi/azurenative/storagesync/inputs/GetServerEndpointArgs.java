@@ -19,7 +19,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="serverEndpointName", required=true)
       private final String serverEndpointName;
 
-    public String getServerEndpointName() {
+    public String serverEndpointName() {
         return this.serverEndpointName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;
 
-    public String getStorageSyncServiceName() {
+    public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="syncGroupName", required=true)
       private final String syncGroupName;
 
-    public String getSyncGroupName() {
+    public String syncGroupName() {
         return this.syncGroupName;
     }
 

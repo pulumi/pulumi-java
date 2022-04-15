@@ -50,7 +50,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ CustomRuleListResponse> getCustomRules() {
+    public Output</* @Nullable */ CustomRuleListResponse> customRules() {
         return this.customRules;
     }
     /**
@@ -64,7 +64,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -78,7 +78,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes Frontend Endpoints associated with this Web Application Firewall policy.
      * 
      */
-    public Output<List<FrontendEndpointLinkResponse>> getFrontendEndpointLinks() {
+    public Output<List<FrontendEndpointLinkResponse>> frontendEndpointLinks() {
         return this.frontendEndpointLinks;
     }
     /**
@@ -92,7 +92,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -106,7 +106,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes managed rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ ManagedRuleSetListResponse> getManagedRules() {
+    public Output</* @Nullable */ ManagedRuleSetListResponse> managedRules() {
         return this.managedRules;
     }
     /**
@@ -120,7 +120,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -134,7 +134,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes settings for the policy.
      * 
      */
-    public Output</* @Nullable */ FrontDoorPolicySettingsResponse> getPolicySettings() {
+    public Output</* @Nullable */ FrontDoorPolicySettingsResponse> policySettings() {
         return this.policySettings;
     }
     /**
@@ -148,13 +148,13 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the policy.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -168,7 +168,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes Routing Rules associated with this Web Application Firewall policy.
      * 
      */
-    public Output<List<RoutingRuleLinkResponse>> getRoutingRuleLinks() {
+    public Output<List<RoutingRuleLinkResponse>> routingRuleLinks() {
         return this.routingRuleLinks;
     }
     /**
@@ -182,7 +182,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Describes Security Policy associated with this Web Application Firewall policy.
      * 
      */
-    public Output<List<SecurityPolicyLinkResponse>> getSecurityPolicyLinks() {
+    public Output<List<SecurityPolicyLinkResponse>> securityPolicyLinks() {
         return this.securityPolicyLinks;
     }
     /**
@@ -196,7 +196,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -210,7 +210,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -224,7 +224,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

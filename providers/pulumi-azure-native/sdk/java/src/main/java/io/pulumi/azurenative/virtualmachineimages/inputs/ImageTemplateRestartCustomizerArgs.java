@@ -26,7 +26,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     @Import(name="restartCheckCommand")
       private final @Nullable Output<String> restartCheckCommand;
 
-    public Output<String> getRestartCheckCommand() {
+    public Output<String> restartCheckCommand() {
         return this.restartCheckCommand == null ? Codegen.empty() : this.restartCheckCommand;
     }
 
@@ -48,7 +48,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     @Import(name="restartCommand")
       private final @Nullable Output<String> restartCommand;
 
-    public Output<String> getRestartCommand() {
+    public Output<String> restartCommand() {
         return this.restartCommand == null ? Codegen.empty() : this.restartCommand;
     }
 
@@ -59,7 +59,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     @Import(name="restartTimeout")
       private final @Nullable Output<String> restartTimeout;
 
-    public Output<String> getRestartTimeout() {
+    public Output<String> restartTimeout() {
         return this.restartTimeout == null ? Codegen.empty() : this.restartTimeout;
     }
 
@@ -71,7 +71,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -41,25 +41,25 @@ public final class ResourceTypeEndpointResponse {
         this.timeout = timeout;
     }
 
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<ResourceTypeExtensionResponse> getExtensions() {
+    public List<ResourceTypeExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
-    public Optional<ResourceTypeEndpointResponseFeaturesRule> getFeaturesRule() {
+    public Optional<ResourceTypeEndpointResponseFeaturesRule> featuresRule() {
         return Optional.ofNullable(this.featuresRule);
     }
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

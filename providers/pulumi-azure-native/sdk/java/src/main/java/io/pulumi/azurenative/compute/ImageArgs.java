@@ -28,7 +28,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -39,7 +39,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGenerationTypes>> getHyperVGeneration() {
+    public Output<Either<String,HyperVGenerationTypes>> hyperVGeneration() {
         return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
     }
 
@@ -50,7 +50,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
@@ -61,7 +61,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,7 +83,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceVirtualMachine")
       private final @Nullable Output<SubResourceArgs> sourceVirtualMachine;
 
-    public Output<SubResourceArgs> getSourceVirtualMachine() {
+    public Output<SubResourceArgs> sourceVirtualMachine() {
         return this.sourceVirtualMachine == null ? Codegen.empty() : this.sourceVirtualMachine;
     }
 
@@ -94,7 +94,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageProfile")
       private final @Nullable Output<ImageStorageProfileArgs> storageProfile;
 
-    public Output<ImageStorageProfileArgs> getStorageProfile() {
+    public Output<ImageStorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -105,7 +105,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

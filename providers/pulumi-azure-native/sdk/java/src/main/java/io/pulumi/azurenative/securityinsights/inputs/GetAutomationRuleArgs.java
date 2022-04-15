@@ -19,7 +19,7 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="automationRuleId", required=true)
       private final String automationRuleId;
 
-    public String getAutomationRuleId() {
+    public String automationRuleId() {
         return this.automationRuleId;
     }
 
@@ -30,7 +30,7 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
 
-    public String getOperationalInsightsResourceProvider() {
+    public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -41,7 +41,7 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

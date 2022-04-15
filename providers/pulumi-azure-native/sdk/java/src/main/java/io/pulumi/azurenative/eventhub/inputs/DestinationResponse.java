@@ -25,7 +25,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="archiveNameFormat")
       private final @Nullable String archiveNameFormat;
 
-    public Optional<String> getArchiveNameFormat() {
+    public Optional<String> archiveNameFormat() {
         return this.archiveNameFormat == null ? Optional.empty() : Optional.ofNullable(this.archiveNameFormat);
     }
 
@@ -36,7 +36,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="blobContainer")
       private final @Nullable String blobContainer;
 
-    public Optional<String> getBlobContainer() {
+    public Optional<String> blobContainer() {
         return this.blobContainer == null ? Optional.empty() : Optional.ofNullable(this.blobContainer);
     }
 
@@ -47,7 +47,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountResourceId")
       private final @Nullable String storageAccountResourceId;
 
-    public Optional<String> getStorageAccountResourceId() {
+    public Optional<String> storageAccountResourceId() {
         return this.storageAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountResourceId);
     }
 

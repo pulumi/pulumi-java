@@ -26,7 +26,7 @@ public final class ConsoleProfileResponse {
      * The URL to access the cluster console (immutable).
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

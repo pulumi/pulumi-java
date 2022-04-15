@@ -34,14 +34,14 @@ public final class GalleryImageFeatureResponse {
      * The name of the gallery image feature.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the gallery image feature.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

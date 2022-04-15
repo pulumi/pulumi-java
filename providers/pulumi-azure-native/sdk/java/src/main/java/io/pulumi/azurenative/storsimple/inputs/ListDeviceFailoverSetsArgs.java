@@ -19,7 +19,7 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -30,7 +30,7 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
     @Import(name="managerName", required=true)
       private final String managerName;
 
-    public String getManagerName() {
+    public String managerName() {
         return this.managerName;
     }
 
@@ -41,7 +41,7 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

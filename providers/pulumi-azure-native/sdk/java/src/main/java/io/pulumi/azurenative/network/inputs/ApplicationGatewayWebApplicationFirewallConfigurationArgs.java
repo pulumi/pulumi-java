@@ -33,7 +33,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="disabledRuleGroups")
       private final @Nullable Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
 
-    public Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> getDisabledRuleGroups() {
+    public Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups() {
         return this.disabledRuleGroups == null ? Codegen.empty() : this.disabledRuleGroups;
     }
 
@@ -44,7 +44,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -55,7 +55,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="exclusions")
       private final @Nullable Output<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
 
-    public Output<List<ApplicationGatewayFirewallExclusionArgs>> getExclusions() {
+    public Output<List<ApplicationGatewayFirewallExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -66,7 +66,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
-    public Output<Integer> getFileUploadLimitInMb() {
+    public Output<Integer> fileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Codegen.empty() : this.fileUploadLimitInMb;
     }
 
@@ -77,7 +77,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="firewallMode", required=true)
       private final Output<Either<String,ApplicationGatewayFirewallMode>> firewallMode;
 
-    public Output<Either<String,ApplicationGatewayFirewallMode>> getFirewallMode() {
+    public Output<Either<String,ApplicationGatewayFirewallMode>> firewallMode() {
         return this.firewallMode;
     }
 
@@ -88,7 +88,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="maxRequestBodySize")
       private final @Nullable Output<Integer> maxRequestBodySize;
 
-    public Output<Integer> getMaxRequestBodySize() {
+    public Output<Integer> maxRequestBodySize() {
         return this.maxRequestBodySize == null ? Codegen.empty() : this.maxRequestBodySize;
     }
 
@@ -99,7 +99,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
-    public Output<Integer> getMaxRequestBodySizeInKb() {
+    public Output<Integer> maxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Codegen.empty() : this.maxRequestBodySizeInKb;
     }
 
@@ -110,7 +110,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="requestBodyCheck")
       private final @Nullable Output<Boolean> requestBodyCheck;
 
-    public Output<Boolean> getRequestBodyCheck() {
+    public Output<Boolean> requestBodyCheck() {
         return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
     }
 
@@ -121,7 +121,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
-    public Output<String> getRuleSetType() {
+    public Output<String> ruleSetType() {
         return this.ruleSetType;
     }
 
@@ -132,7 +132,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
-    public Output<String> getRuleSetVersion() {
+    public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

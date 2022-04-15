@@ -29,7 +29,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
     @Import(name="instances", required=true)
       private final List<ConfigurationServiceInstanceResponse> instances;
 
-    public List<ConfigurationServiceInstanceResponse> getInstances() {
+    public List<ConfigurationServiceInstanceResponse> instances() {
         return this.instances;
     }
 
@@ -40,7 +40,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -51,7 +51,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
     @Import(name="resourceRequests", required=true)
       private final ConfigurationServiceResourceRequestsResponse resourceRequests;
 
-    public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
+    public ConfigurationServiceResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 
@@ -62,7 +62,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
     @Import(name="settings")
       private final @Nullable ConfigurationServiceSettingsResponse settings;
 
-    public Optional<ConfigurationServiceSettingsResponse> getSettings() {
+    public Optional<ConfigurationServiceSettingsResponse> settings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 

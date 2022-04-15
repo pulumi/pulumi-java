@@ -27,7 +27,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="globalValidation")
       private final @Nullable Output<GlobalValidationArgs> globalValidation;
 
-    public Output<GlobalValidationArgs> getGlobalValidation() {
+    public Output<GlobalValidationArgs> globalValidation() {
         return this.globalValidation == null ? Codegen.empty() : this.globalValidation;
     }
 
@@ -38,7 +38,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="httpSettings")
       private final @Nullable Output<HttpSettingsArgs> httpSettings;
 
-    public Output<HttpSettingsArgs> getHttpSettings() {
+    public Output<HttpSettingsArgs> httpSettings() {
         return this.httpSettings == null ? Codegen.empty() : this.httpSettings;
     }
 
@@ -49,7 +49,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="identityProviders")
       private final @Nullable Output<IdentityProvidersArgs> identityProviders;
 
-    public Output<IdentityProvidersArgs> getIdentityProviders() {
+    public Output<IdentityProvidersArgs> identityProviders() {
         return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
     }
 
@@ -60,7 +60,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -71,7 +71,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="login")
       private final @Nullable Output<LoginArgs> login;
 
-    public Output<LoginArgs> getLogin() {
+    public Output<LoginArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -82,7 +82,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -93,7 +93,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="platform")
       private final @Nullable Output<AuthPlatformArgs> platform;
 
-    public Output<AuthPlatformArgs> getPlatform() {
+    public Output<AuthPlatformArgs> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -104,7 +104,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,7 +115,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

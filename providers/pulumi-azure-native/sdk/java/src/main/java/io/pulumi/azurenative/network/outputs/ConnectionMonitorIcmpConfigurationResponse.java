@@ -26,7 +26,7 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
      * Value indicating whether path evaluation with trace route should be disabled.
      * 
     */
-    public Optional<Boolean> getDisableTraceRoute() {
+    public Optional<Boolean> disableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }
 

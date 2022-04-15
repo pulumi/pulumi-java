@@ -25,7 +25,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="additionalInformation", required=true)
       private final String additionalInformation;
 
-    public String getAdditionalInformation() {
+    public String additionalInformation() {
         return this.additionalInformation;
     }
 
@@ -36,7 +36,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="city")
       private final @Nullable String city;
 
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
     }
 
@@ -47,7 +47,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="countryOrRegion")
       private final @Nullable String countryOrRegion;
 
-    public Optional<String> getCountryOrRegion() {
+    public Optional<String> countryOrRegion() {
         return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
     }
 
@@ -58,7 +58,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="phone")
       private final @Nullable String phone;
 
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
     }
 
@@ -69,7 +69,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="postalCode")
       private final @Nullable String postalCode;
 
-    public Optional<String> getPostalCode() {
+    public Optional<String> postalCode() {
         return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
     }
 
@@ -80,7 +80,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="recipientName")
       private final @Nullable String recipientName;
 
-    public Optional<String> getRecipientName() {
+    public Optional<String> recipientName() {
         return this.recipientName == null ? Optional.empty() : Optional.ofNullable(this.recipientName);
     }
 
@@ -91,7 +91,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
-    public Optional<String> getStateOrProvince() {
+    public Optional<String> stateOrProvince() {
         return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
     }
 
@@ -102,7 +102,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="streetAddress1")
       private final @Nullable String streetAddress1;
 
-    public Optional<String> getStreetAddress1() {
+    public Optional<String> streetAddress1() {
         return this.streetAddress1 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress1);
     }
 
@@ -113,7 +113,7 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
     @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
-    public Optional<String> getStreetAddress2() {
+    public Optional<String> streetAddress2() {
         return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
     }
 

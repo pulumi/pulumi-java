@@ -41,7 +41,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -55,7 +55,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Connection strings.
      * 
      */
-    public Output<Map<String,ConnStringValueTypePairResponse>> getProperties() {
+    public Output<Map<String,ConnStringValueTypePairResponse>> properties() {
         return this.properties;
     }
     /**
@@ -83,7 +83,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

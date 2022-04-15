@@ -29,7 +29,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="auditLogStatus")
       private final @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
 
-    public Output<Either<String,AuditLogStatus>> getAuditLogStatus() {
+    public Output<Either<String,AuditLogStatus>> auditLogStatus() {
         return this.auditLogStatus == null ? Codegen.empty() : this.auditLogStatus;
     }
 
@@ -40,7 +40,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logLevel")
       private final @Nullable Output<Either<String,LogLevel>> logLevel;
 
-    public Output<Either<String,LogLevel>> getLogLevel() {
+    public Output<Either<String,LogLevel>> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 

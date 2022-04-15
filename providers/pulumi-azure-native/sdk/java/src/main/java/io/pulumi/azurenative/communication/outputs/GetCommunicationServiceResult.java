@@ -106,84 +106,84 @@ public final class GetCommunicationServiceResult {
      * The location where the communication service stores its data at rest.
      * 
     */
-    public String getDataLocation() {
+    public String dataLocation() {
         return this.dataLocation;
     }
     /**
      * FQDN of the CommunicationService instance.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The immutable resource Id of the communication service.
      * 
     */
-    public String getImmutableResourceId() {
+    public String immutableResourceId() {
         return this.immutableResourceId;
     }
     /**
      * The Azure location where the CommunicationService is running.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource ID of an Azure Notification Hub linked to this resource.
      * 
     */
-    public String getNotificationHubId() {
+    public String notificationHubId() {
         return this.notificationHubId;
     }
     /**
      * Provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

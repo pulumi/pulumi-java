@@ -27,7 +27,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="eTag")
       private final @Nullable String eTag;
 
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
     }
 
@@ -38,7 +38,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isBlockUserUploadEnabled")
       private final @Nullable Boolean isBlockUserUploadEnabled;
 
-    public Optional<Boolean> getIsBlockUserUploadEnabled() {
+    public Optional<Boolean> isBlockUserUploadEnabled() {
         return this.isBlockUserUploadEnabled == null ? Optional.empty() : Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
 
@@ -49,7 +49,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -60,7 +60,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isSecureSiteEnabled")
       private final @Nullable Boolean isSecureSiteEnabled;
 
-    public Optional<Boolean> getIsSecureSiteEnabled() {
+    public Optional<Boolean> isSecureSiteEnabled() {
         return this.isSecureSiteEnabled == null ? Optional.empty() : Optional.ofNullable(this.isSecureSiteEnabled);
     }
 
@@ -71,7 +71,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isTokenEnabled")
       private final @Nullable Boolean isTokenEnabled;
 
-    public Optional<Boolean> getIsTokenEnabled() {
+    public Optional<Boolean> isTokenEnabled() {
         return this.isTokenEnabled == null ? Optional.empty() : Optional.ofNullable(this.isTokenEnabled);
     }
 
@@ -82,7 +82,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isV1Enabled", required=true)
       private final Boolean isV1Enabled;
 
-    public Boolean getIsV1Enabled() {
+    public Boolean isV1Enabled() {
         return this.isV1Enabled;
     }
 
@@ -93,7 +93,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isV3Enabled", required=true)
       private final Boolean isV3Enabled;
 
-    public Boolean getIsV3Enabled() {
+    public Boolean isV3Enabled() {
         return this.isV3Enabled;
     }
 
@@ -104,7 +104,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
       private final Boolean isWebchatPreviewEnabled;
 
-    public Boolean getIsWebchatPreviewEnabled() {
+    public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
 
@@ -115,7 +115,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -126,7 +126,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key2", required=true)
       private final String key2;
 
-    public String getKey2() {
+    public String key2() {
         return this.key2;
     }
 
@@ -137,7 +137,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 
@@ -148,7 +148,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="siteName", required=true)
       private final String siteName;
 
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
 
@@ -159,7 +159,7 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trustedOrigins")
       private final @Nullable List<String> trustedOrigins;
 
-    public List<String> getTrustedOrigins() {
+    public List<String> trustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
     }
 

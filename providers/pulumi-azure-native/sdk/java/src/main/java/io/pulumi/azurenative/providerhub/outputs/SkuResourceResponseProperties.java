@@ -24,10 +24,10 @@ public final class SkuResourceResponseProperties {
         this.skuSettings = skuSettings;
     }
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-    public List<SkuSettingResponse> getSkuSettings() {
+    public List<SkuSettingResponse> skuSettings() {
         return this.skuSettings;
     }
 

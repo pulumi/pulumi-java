@@ -23,7 +23,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hybridConnectionName")
       private final @Nullable Output<String> hybridConnectionName;
 
-    public Output<String> getHybridConnectionName() {
+    public Output<String> hybridConnectionName() {
         return this.hybridConnectionName == null ? Codegen.empty() : this.hybridConnectionName;
     }
 
@@ -34,7 +34,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -45,7 +45,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requiresClientAuthorization")
       private final @Nullable Output<Boolean> requiresClientAuthorization;
 
-    public Output<Boolean> getRequiresClientAuthorization() {
+    public Output<Boolean> requiresClientAuthorization() {
         return this.requiresClientAuthorization == null ? Codegen.empty() : this.requiresClientAuthorization;
     }
 
@@ -56,7 +56,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
-    public Output<String> getUserMetadata() {
+    public Output<String> userMetadata() {
         return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
     }
 

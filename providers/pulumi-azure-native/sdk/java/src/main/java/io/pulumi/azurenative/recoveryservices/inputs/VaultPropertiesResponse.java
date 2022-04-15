@@ -29,7 +29,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="encryption")
       private final @Nullable VaultPropertiesResponseEncryption encryption;
 
-    public Optional<VaultPropertiesResponseEncryption> getEncryption() {
+    public Optional<VaultPropertiesResponseEncryption> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -40,7 +40,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionVaultPropertiesResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
 
@@ -51,7 +51,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="privateEndpointStateForBackup", required=true)
       private final String privateEndpointStateForBackup;
 
-    public String getPrivateEndpointStateForBackup() {
+    public String privateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
 
@@ -62,7 +62,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="privateEndpointStateForSiteRecovery", required=true)
       private final String privateEndpointStateForSiteRecovery;
 
-    public String getPrivateEndpointStateForSiteRecovery() {
+    public String privateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
 
@@ -73,7 +73,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -84,7 +84,7 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="upgradeDetails")
       private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
-    public Optional<UpgradeDetailsResponse> getUpgradeDetails() {
+    public Optional<UpgradeDetailsResponse> upgradeDetails() {
         return this.upgradeDetails == null ? Optional.empty() : Optional.ofNullable(this.upgradeDetails);
     }
 

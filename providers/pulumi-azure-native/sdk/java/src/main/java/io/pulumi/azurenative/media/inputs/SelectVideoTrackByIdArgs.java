@@ -27,7 +27,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -38,7 +38,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="trackId", required=true)
       private final Output<Double> trackId;
 
-    public Output<Double> getTrackId() {
+    public Output<Double> trackId() {
         return this.trackId;
     }
 

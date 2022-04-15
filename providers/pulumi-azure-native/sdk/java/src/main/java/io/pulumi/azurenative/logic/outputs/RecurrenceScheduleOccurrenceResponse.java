@@ -35,14 +35,14 @@ public final class RecurrenceScheduleOccurrenceResponse {
      * The day of the week.
      * 
     */
-    public Optional<String> getDay() {
+    public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
      * The occurrence.
      * 
     */
-    public Optional<Integer> getOccurrence() {
+    public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
 

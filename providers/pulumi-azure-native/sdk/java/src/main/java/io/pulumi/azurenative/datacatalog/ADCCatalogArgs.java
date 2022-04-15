@@ -29,7 +29,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="admins")
       private final @Nullable Output<List<PrincipalsArgs>> admins;
 
-    public Output<List<PrincipalsArgs>> getAdmins() {
+    public Output<List<PrincipalsArgs>> admins() {
         return this.admins == null ? Codegen.empty() : this.admins;
     }
 
@@ -40,7 +40,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogName")
       private final @Nullable Output<String> catalogName;
 
-    public Output<String> getCatalogName() {
+    public Output<String> catalogName() {
         return this.catalogName == null ? Codegen.empty() : this.catalogName;
     }
 
@@ -51,7 +51,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableAutomaticUnitAdjustment")
       private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
-    public Output<Boolean> getEnableAutomaticUnitAdjustment() {
+    public Output<Boolean> enableAutomaticUnitAdjustment() {
         return this.enableAutomaticUnitAdjustment == null ? Codegen.empty() : this.enableAutomaticUnitAdjustment;
     }
 
@@ -62,7 +62,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,7 +84,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<Either<String,SkuType>> sku;
 
-    public Output<Either<String,SkuType>> getSku() {
+    public Output<Either<String,SkuType>> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -95,7 +95,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successfullyProvisioned")
       private final @Nullable Output<Boolean> successfullyProvisioned;
 
-    public Output<Boolean> getSuccessfullyProvisioned() {
+    public Output<Boolean> successfullyProvisioned() {
         return this.successfullyProvisioned == null ? Codegen.empty() : this.successfullyProvisioned;
     }
 
@@ -106,7 +106,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -117,7 +117,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="units")
       private final @Nullable Output<Integer> units;
 
-    public Output<Integer> getUnits() {
+    public Output<Integer> units() {
         return this.units == null ? Codegen.empty() : this.units;
     }
 
@@ -128,7 +128,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="users")
       private final @Nullable Output<List<PrincipalsArgs>> users;
 
-    public Output<List<PrincipalsArgs>> getUsers() {
+    public Output<List<PrincipalsArgs>> users() {
         return this.users == null ? Codegen.empty() : this.users;
     }
 

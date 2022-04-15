@@ -22,7 +22,7 @@ public final class OriginGroupOverrideActionParametersArgs extends io.pulumi.res
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -33,7 +33,7 @@ public final class OriginGroupOverrideActionParametersArgs extends io.pulumi.res
     @Import(name="originGroup", required=true)
       private final Output<ResourceReferenceArgs> originGroup;
 
-    public Output<ResourceReferenceArgs> getOriginGroup() {
+    public Output<ResourceReferenceArgs> originGroup() {
         return this.originGroup;
     }
 

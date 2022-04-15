@@ -24,7 +24,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default")
       private final @Nullable Output<String> default_;
 
-    public Output<String> getDefault_() {
+    public Output<String> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -35,7 +35,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleEntries", required=true)
       private final Output<List<ScheduleEntryArgs>> scheduleEntries;
 
-    public Output<List<ScheduleEntryArgs>> getScheduleEntries() {
+    public Output<List<ScheduleEntryArgs>> scheduleEntries() {
         return this.scheduleEntries;
     }
 

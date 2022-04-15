@@ -41,21 +41,21 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
      * Name of the company of the partner
      * 
     */
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
     /**
      * Name of the product of the partner that created the assessment
      * 
     */
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * Secret to authenticate the partner and verify it created the assessment - write only
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

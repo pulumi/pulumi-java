@@ -25,7 +25,7 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -36,7 +36,7 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

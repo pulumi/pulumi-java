@@ -27,7 +27,7 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="initialRetryIntervalSeconds")
       private final @Nullable Output<Integer> initialRetryIntervalSeconds;
 
-    public Output<Integer> getInitialRetryIntervalSeconds() {
+    public Output<Integer> initialRetryIntervalSeconds() {
         return this.initialRetryIntervalSeconds == null ? Codegen.empty() : this.initialRetryIntervalSeconds;
     }
 
@@ -38,7 +38,7 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="maximumRetryIntervalSeconds")
       private final @Nullable Output<Integer> maximumRetryIntervalSeconds;
 
-    public Output<Integer> getMaximumRetryIntervalSeconds() {
+    public Output<Integer> maximumRetryIntervalSeconds() {
         return this.maximumRetryIntervalSeconds == null ? Codegen.empty() : this.maximumRetryIntervalSeconds;
     }
 
@@ -49,7 +49,7 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="retryAttempts")
       private final @Nullable Output<Integer> retryAttempts;
 
-    public Output<Integer> getRetryAttempts() {
+    public Output<Integer> retryAttempts() {
         return this.retryAttempts == null ? Codegen.empty() : this.retryAttempts;
     }
 
@@ -60,7 +60,7 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="retryIntervalBackoffMultiplier")
       private final @Nullable Output<Double> retryIntervalBackoffMultiplier;
 
-    public Output<Double> getRetryIntervalBackoffMultiplier() {
+    public Output<Double> retryIntervalBackoffMultiplier() {
         return this.retryIntervalBackoffMultiplier == null ? Codegen.empty() : this.retryIntervalBackoffMultiplier;
     }
 
@@ -71,7 +71,7 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

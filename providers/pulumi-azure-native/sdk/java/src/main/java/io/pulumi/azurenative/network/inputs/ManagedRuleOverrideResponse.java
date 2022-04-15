@@ -25,7 +25,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
     @Import(name="ruleId", required=true)
       private final String ruleId;
 
-    public String getRuleId() {
+    public String ruleId() {
         return this.ruleId;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

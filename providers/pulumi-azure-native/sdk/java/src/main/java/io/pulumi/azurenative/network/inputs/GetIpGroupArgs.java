@@ -21,7 +21,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipGroupsName", required=true)
       private final String ipGroupsName;
 
-    public String getIpGroupsName() {
+    public String ipGroupsName() {
         return this.ipGroupsName;
     }
 
@@ -43,7 +43,7 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

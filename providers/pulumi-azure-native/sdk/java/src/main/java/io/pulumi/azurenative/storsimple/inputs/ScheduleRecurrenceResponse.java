@@ -27,7 +27,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="recurrenceType", required=true)
       private final String recurrenceType;
 
-    public String getRecurrenceType() {
+    public String recurrenceType() {
         return this.recurrenceType;
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="recurrenceValue", required=true)
       private final Integer recurrenceValue;
 
-    public Integer getRecurrenceValue() {
+    public Integer recurrenceValue() {
         return this.recurrenceValue;
     }
 
@@ -49,7 +49,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="weeklyDaysList")
       private final @Nullable List<String> weeklyDaysList;
 
-    public List<String> getWeeklyDaysList() {
+    public List<String> weeklyDaysList() {
         return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
     }
 

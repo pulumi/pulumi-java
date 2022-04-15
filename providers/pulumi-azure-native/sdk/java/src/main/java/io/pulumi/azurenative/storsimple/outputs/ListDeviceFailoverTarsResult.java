@@ -26,7 +26,7 @@ public final class ListDeviceFailoverTarsResult {
      * The list of all the failover targets.
      * 
     */
-    public List<FailoverTargetResponse> getValue() {
+    public List<FailoverTargetResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

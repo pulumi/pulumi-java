@@ -94,70 +94,70 @@ public final class GetLabAccountResult {
      * Represents if region selection is enabled
      * 
     */
-    public Optional<Boolean> getEnabledRegionSelection() {
+    public Optional<Boolean> enabledRegionSelection() {
         return Optional.ofNullable(this.enabledRegionSelection);
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
     */
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Represents the size configuration under the lab account
      * 
     */
-    public SizeConfigurationPropertiesResponse getSizeConfiguration() {
+    public SizeConfigurationPropertiesResponse sizeConfiguration() {
         return this.sizeConfiguration;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public Optional<String> getUniqueIdentifier() {
+    public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
 

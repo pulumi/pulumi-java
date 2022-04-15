@@ -25,13 +25,13 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
         this.validationRequired = validationRequired;
     }
 
-    public Optional<Boolean> getCrossResourceGroupMoveEnabled() {
+    public Optional<Boolean> crossResourceGroupMoveEnabled() {
         return Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
-    public Optional<Boolean> getCrossSubscriptionMoveEnabled() {
+    public Optional<Boolean> crossSubscriptionMoveEnabled() {
         return Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
-    public Optional<Boolean> getValidationRequired() {
+    public Optional<Boolean> validationRequired() {
         return Optional.ofNullable(this.validationRequired);
     }
 

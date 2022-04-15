@@ -28,7 +28,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthStateName", required=true)
       private final Output<Either<String,HealthStateName>> healthStateName;
 
-    public Output<Either<String,HealthStateName>> getHealthStateName() {
+    public Output<Either<String,HealthStateName>> healthStateName() {
         return this.healthStateName;
     }
 
@@ -39,7 +39,7 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Double> severity;
 
-    public Output<Double> getSeverity() {
+    public Output<Double> severity() {
         return this.severity;
     }
 

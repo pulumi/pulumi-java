@@ -42,21 +42,21 @@ public final class AutoScalePropertiesResponse {
      * Whether automatic scaling is enabled for the Big Data pool.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The maximum number of nodes the Big Data pool can support.
      * 
     */
-    public Optional<Integer> getMaxNodeCount() {
+    public Optional<Integer> maxNodeCount() {
         return Optional.ofNullable(this.maxNodeCount);
     }
     /**
      * The minimum number of nodes the Big Data pool can support.
      * 
     */
-    public Optional<Integer> getMinNodeCount() {
+    public Optional<Integer> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
 

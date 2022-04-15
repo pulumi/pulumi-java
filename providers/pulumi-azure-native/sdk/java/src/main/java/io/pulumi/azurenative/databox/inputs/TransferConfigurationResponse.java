@@ -27,7 +27,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="transferAllDetails")
       private final @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
 
-    public Optional<TransferConfigurationResponseTransferAllDetails> getTransferAllDetails() {
+    public Optional<TransferConfigurationResponseTransferAllDetails> transferAllDetails() {
         return this.transferAllDetails == null ? Optional.empty() : Optional.ofNullable(this.transferAllDetails);
     }
 
@@ -38,7 +38,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="transferConfigurationType", required=true)
       private final String transferConfigurationType;
 
-    public String getTransferConfigurationType() {
+    public String transferConfigurationType() {
         return this.transferConfigurationType;
     }
 
@@ -49,7 +49,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="transferFilterDetails")
       private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
-    public Optional<TransferConfigurationResponseTransferFilterDetails> getTransferFilterDetails() {
+    public Optional<TransferConfigurationResponseTransferFilterDetails> transferFilterDetails() {
         return this.transferFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.transferFilterDetails);
     }
 

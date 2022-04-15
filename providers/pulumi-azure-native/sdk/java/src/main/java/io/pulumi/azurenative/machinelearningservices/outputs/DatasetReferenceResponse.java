@@ -34,14 +34,14 @@ public final class DatasetReferenceResponse {
      * The id of the dataset reference.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the dataset reference.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

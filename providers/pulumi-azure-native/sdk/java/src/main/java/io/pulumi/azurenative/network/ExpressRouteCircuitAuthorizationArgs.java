@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="authorizationName")
       private final @Nullable Output<String> authorizationName;
 
-    public Output<String> getAuthorizationName() {
+    public Output<String> authorizationName() {
         return this.authorizationName == null ? Codegen.empty() : this.authorizationName;
     }
 
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="authorizationUseStatus")
       private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
-    public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
+    public Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus() {
         return this.authorizationUseStatus == null ? Codegen.empty() : this.authorizationUseStatus;
     }
 
@@ -57,7 +57,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="circuitName", required=true)
       private final Output<String> circuitName;
 
-    public Output<String> getCircuitName() {
+    public Output<String> circuitName() {
         return this.circuitName;
     }
 
@@ -68,7 +68,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -79,7 +79,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

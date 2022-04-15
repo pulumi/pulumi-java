@@ -32,7 +32,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyNatRuleActionArgs> action;
 
-    public Output<FirewallPolicyNatRuleActionArgs> getAction() {
+    public Output<FirewallPolicyNatRuleActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -43,7 +43,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -54,7 +54,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -65,7 +65,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="ruleCondition")
       private final @Nullable Output<Object> ruleCondition;
 
-    public Output<Object> getRuleCondition() {
+    public Output<Object> ruleCondition() {
         return this.ruleCondition == null ? Codegen.empty() : this.ruleCondition;
     }
 
@@ -77,7 +77,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -88,7 +88,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="translatedAddress")
       private final @Nullable Output<String> translatedAddress;
 
-    public Output<String> getTranslatedAddress() {
+    public Output<String> translatedAddress() {
         return this.translatedAddress == null ? Codegen.empty() : this.translatedAddress;
     }
 
@@ -99,7 +99,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="translatedPort")
       private final @Nullable Output<String> translatedPort;
 
-    public Output<String> getTranslatedPort() {
+    public Output<String> translatedPort() {
         return this.translatedPort == null ? Codegen.empty() : this.translatedPort;
     }
 

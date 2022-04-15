@@ -25,7 +25,7 @@ public final class NetworkManagerSecurityGroupItemResponse extends io.pulumi.res
     @Import(name="networkGroupId")
       private final @Nullable String networkGroupId;
 
-    public Optional<String> getNetworkGroupId() {
+    public Optional<String> networkGroupId() {
         return this.networkGroupId == null ? Optional.empty() : Optional.ofNullable(this.networkGroupId);
     }
 

@@ -26,7 +26,7 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
     @Import(name="frequency")
       private final @Nullable String frequency;
 
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
     @Import(name="interval", required=true)
       private final Integer interval;
 
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 

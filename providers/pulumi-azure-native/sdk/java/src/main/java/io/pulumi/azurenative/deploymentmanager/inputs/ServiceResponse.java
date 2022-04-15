@@ -27,7 +27,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -38,7 +38,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceUnits")
       private final @Nullable List<ServiceUnitResponse> serviceUnits;
 
-    public List<ServiceUnitResponse> getServiceUnits() {
+    public List<ServiceUnitResponse> serviceUnits() {
         return this.serviceUnits == null ? List.of() : this.serviceUnits;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetLocation", required=true)
       private final String targetLocation;
 
-    public String getTargetLocation() {
+    public String targetLocation() {
         return this.targetLocation;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetSubscriptionId", required=true)
       private final String targetSubscriptionId;
 
-    public String getTargetSubscriptionId() {
+    public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
 

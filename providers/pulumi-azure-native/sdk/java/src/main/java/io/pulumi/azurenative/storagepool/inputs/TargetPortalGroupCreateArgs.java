@@ -28,7 +28,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="acls", required=true)
       private final Output<List<AclArgs>> acls;
 
-    public Output<List<AclArgs>> getAcls() {
+    public Output<List<AclArgs>> acls() {
         return this.acls;
     }
 
@@ -39,7 +39,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="attributes", required=true)
       private final Output<AttributesArgs> attributes;
 
-    public Output<AttributesArgs> getAttributes() {
+    public Output<AttributesArgs> attributes() {
         return this.attributes;
     }
 
@@ -50,7 +50,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     @Import(name="luns", required=true)
       private final Output<List<IscsiLunArgs>> luns;
 
-    public Output<List<IscsiLunArgs>> getLuns() {
+    public Output<List<IscsiLunArgs>> luns() {
         return this.luns;
     }
 

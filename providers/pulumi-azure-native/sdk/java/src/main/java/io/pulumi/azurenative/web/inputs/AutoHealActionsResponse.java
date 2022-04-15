@@ -26,7 +26,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="actionType")
       private final @Nullable String actionType;
 
-    public Optional<String> getActionType() {
+    public Optional<String> actionType() {
         return this.actionType == null ? Optional.empty() : Optional.ofNullable(this.actionType);
     }
 
@@ -37,7 +37,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="customAction")
       private final @Nullable AutoHealCustomActionResponse customAction;
 
-    public Optional<AutoHealCustomActionResponse> getCustomAction() {
+    public Optional<AutoHealCustomActionResponse> customAction() {
         return this.customAction == null ? Optional.empty() : Optional.ofNullable(this.customAction);
     }
 
@@ -49,7 +49,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="minProcessExecutionTime")
       private final @Nullable String minProcessExecutionTime;
 
-    public Optional<String> getMinProcessExecutionTime() {
+    public Optional<String> minProcessExecutionTime() {
         return this.minProcessExecutionTime == null ? Optional.empty() : Optional.ofNullable(this.minProcessExecutionTime);
     }
 

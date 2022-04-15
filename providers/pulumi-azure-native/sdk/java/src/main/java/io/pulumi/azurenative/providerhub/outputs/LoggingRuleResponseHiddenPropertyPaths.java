@@ -22,10 +22,10 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }
 
-    public List<String> getHiddenPathsOnRequest() {
+    public List<String> hiddenPathsOnRequest() {
         return this.hiddenPathsOnRequest == null ? List.of() : this.hiddenPathsOnRequest;
     }
-    public List<String> getHiddenPathsOnResponse() {
+    public List<String> hiddenPathsOnResponse() {
         return this.hiddenPathsOnResponse == null ? List.of() : this.hiddenPathsOnResponse;
     }
 

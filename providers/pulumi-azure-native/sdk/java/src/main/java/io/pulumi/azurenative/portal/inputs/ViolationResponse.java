@@ -23,7 +23,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -34,7 +34,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class ViolationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

@@ -30,7 +30,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="applicationPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getApplicationPorts() {
+    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
         return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
     }
 
@@ -41,7 +41,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacities")
       private final @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> getCapacities() {
+    public Output<Map<String,String>> capacities() {
         return this.capacities == null ? Codegen.empty() : this.capacities;
     }
 
@@ -52,7 +52,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="clientConnectionEndpointPort", required=true)
       private final Output<Integer> clientConnectionEndpointPort;
 
-    public Output<Integer> getClientConnectionEndpointPort() {
+    public Output<Integer> clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
 
@@ -67,7 +67,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="durabilityLevel")
       private final @Nullable Output<String> durabilityLevel;
 
-    public Output<String> getDurabilityLevel() {
+    public Output<String> durabilityLevel() {
         return this.durabilityLevel == null ? Codegen.empty() : this.durabilityLevel;
     }
 
@@ -78,7 +78,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="ephemeralPorts")
       private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> getEphemeralPorts() {
+    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
         return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
     }
 
@@ -89,7 +89,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="httpGatewayEndpointPort", required=true)
       private final Output<Integer> httpGatewayEndpointPort;
 
-    public Output<Integer> getHttpGatewayEndpointPort() {
+    public Output<Integer> httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
 
@@ -100,7 +100,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="isPrimary", required=true)
       private final Output<Boolean> isPrimary;
 
-    public Output<Boolean> getIsPrimary() {
+    public Output<Boolean> isPrimary() {
         return this.isPrimary;
     }
 
@@ -111,7 +111,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +122,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="placementProperties")
       private final @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> getPlacementProperties() {
+    public Output<Map<String,String>> placementProperties() {
         return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
     }
 
@@ -133,7 +133,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="reverseProxyEndpointPort")
       private final @Nullable Output<Integer> reverseProxyEndpointPort;
 
-    public Output<Integer> getReverseProxyEndpointPort() {
+    public Output<Integer> reverseProxyEndpointPort() {
         return this.reverseProxyEndpointPort == null ? Codegen.empty() : this.reverseProxyEndpointPort;
     }
 
@@ -144,7 +144,7 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="vmInstanceCount", required=true)
       private final Output<Integer> vmInstanceCount;
 
-    public Output<Integer> getVmInstanceCount() {
+    public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
 

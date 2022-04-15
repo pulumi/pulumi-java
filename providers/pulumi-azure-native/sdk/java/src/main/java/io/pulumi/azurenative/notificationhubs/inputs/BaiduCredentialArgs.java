@@ -26,7 +26,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="baiduApiKey")
       private final @Nullable Output<String> baiduApiKey;
 
-    public Output<String> getBaiduApiKey() {
+    public Output<String> baiduApiKey() {
         return this.baiduApiKey == null ? Codegen.empty() : this.baiduApiKey;
     }
 
@@ -37,7 +37,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="baiduEndPoint")
       private final @Nullable Output<String> baiduEndPoint;
 
-    public Output<String> getBaiduEndPoint() {
+    public Output<String> baiduEndPoint() {
         return this.baiduEndPoint == null ? Codegen.empty() : this.baiduEndPoint;
     }
 
@@ -48,7 +48,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="baiduSecretKey")
       private final @Nullable Output<String> baiduSecretKey;
 
-    public Output<String> getBaiduSecretKey() {
+    public Output<String> baiduSecretKey() {
         return this.baiduSecretKey == null ? Codegen.empty() : this.baiduSecretKey;
     }
 

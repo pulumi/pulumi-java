@@ -29,7 +29,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="details", required=true)
       private final Output<CostAllocationRuleDetailsArgs> details;
 
-    public Output<CostAllocationRuleDetailsArgs> getDetails() {
+    public Output<CostAllocationRuleDetailsArgs> details() {
         return this.details;
     }
 
@@ -51,7 +51,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     @Import(name="status", required=true)
       private final Output<Either<String,RuleStatus>> status;
 
-    public Output<Either<String,RuleStatus>> getStatus() {
+    public Output<Either<String,RuleStatus>> status() {
         return this.status;
     }
 

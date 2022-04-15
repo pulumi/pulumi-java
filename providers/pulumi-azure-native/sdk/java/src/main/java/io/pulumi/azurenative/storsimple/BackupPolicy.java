@@ -43,7 +43,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
      * 
      */
-    public Output<String> getBackupPolicyCreationType() {
+    public Output<String> backupPolicyCreationType() {
         return this.backupPolicyCreationType;
     }
     /**
@@ -57,7 +57,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +71,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The time of the last backup for the backup policy.
      * 
      */
-    public Output<String> getLastBackupTime() {
+    public Output<String> lastBackupTime() {
         return this.lastBackupTime;
     }
     /**
@@ -85,7 +85,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The time of the next backup for the backup policy.
      * 
      */
-    public Output<String> getNextBackupTime() {
+    public Output<String> nextBackupTime() {
         return this.nextBackupTime;
     }
     /**
@@ -113,7 +113,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Indicates whether at least one of the schedules in the backup policy is active or not.
      * 
      */
-    public Output<String> getScheduledBackupStatus() {
+    public Output<String> scheduledBackupStatus() {
         return this.scheduledBackupStatus;
     }
     /**
@@ -127,7 +127,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The count of schedules the backup policy contains.
      * 
      */
-    public Output<Double> getSchedulesCount() {
+    public Output<Double> schedulesCount() {
         return this.schedulesCount;
     }
     /**
@@ -141,7 +141,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
      * 
      */
-    public Output<String> getSsmHostName() {
+    public Output<String> ssmHostName() {
         return this.ssmHostName;
     }
     /**
@@ -155,7 +155,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +169,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return The path IDs of the volumes which are part of the backup policy.
      * 
      */
-    public Output<List<String>> getVolumeIds() {
+    public Output<List<String>> volumeIds() {
         return this.volumeIds;
     }
 

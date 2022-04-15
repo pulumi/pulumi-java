@@ -30,7 +30,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowCopyCommand")
       private final @Nullable Output<Object> allowCopyCommand;
 
-    public Output<Object> getAllowCopyCommand() {
+    public Output<Object> allowCopyCommand() {
         return this.allowCopyCommand == null ? Codegen.empty() : this.allowCopyCommand;
     }
 
@@ -41,7 +41,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowPolyBase")
       private final @Nullable Output<Object> allowPolyBase;
 
-    public Output<Object> getAllowPolyBase() {
+    public Output<Object> allowPolyBase() {
         return this.allowPolyBase == null ? Codegen.empty() : this.allowPolyBase;
     }
 
@@ -52,7 +52,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copyCommandSettings")
       private final @Nullable Output<DWCopyCommandSettingsArgs> copyCommandSettings;
 
-    public Output<DWCopyCommandSettingsArgs> getCopyCommandSettings() {
+    public Output<DWCopyCommandSettingsArgs> copyCommandSettings() {
         return this.copyCommandSettings == null ? Codegen.empty() : this.copyCommandSettings;
     }
 
@@ -63,7 +63,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -74,7 +74,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -85,7 +85,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="polyBaseSettings")
       private final @Nullable Output<PolybaseSettingsArgs> polyBaseSettings;
 
-    public Output<PolybaseSettingsArgs> getPolyBaseSettings() {
+    public Output<PolybaseSettingsArgs> polyBaseSettings() {
         return this.polyBaseSettings == null ? Codegen.empty() : this.polyBaseSettings;
     }
 
@@ -96,7 +96,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preCopyScript")
       private final @Nullable Output<Object> preCopyScript;
 
-    public Output<Object> getPreCopyScript() {
+    public Output<Object> preCopyScript() {
         return this.preCopyScript == null ? Codegen.empty() : this.preCopyScript;
     }
 
@@ -107,7 +107,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
+    public Output<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
@@ -118,7 +118,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
+    public Output<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
@@ -129,7 +129,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlWriterUseTableLock")
       private final @Nullable Output<Object> sqlWriterUseTableLock;
 
-    public Output<Object> getSqlWriterUseTableLock() {
+    public Output<Object> sqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Codegen.empty() : this.sqlWriterUseTableLock;
     }
 
@@ -140,7 +140,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableOption")
       private final @Nullable Output<Object> tableOption;
 
-    public Output<Object> getTableOption() {
+    public Output<Object> tableOption() {
         return this.tableOption == null ? Codegen.empty() : this.tableOption;
     }
 
@@ -152,7 +152,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -163,7 +163,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upsertSettings")
       private final @Nullable Output<SqlDWUpsertSettingsArgs> upsertSettings;
 
-    public Output<SqlDWUpsertSettingsArgs> getUpsertSettings() {
+    public Output<SqlDWUpsertSettingsArgs> upsertSettings() {
         return this.upsertSettings == null ? Codegen.empty() : this.upsertSettings;
     }
 
@@ -174,7 +174,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
+    public Output<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
@@ -185,7 +185,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
+    public Output<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
@@ -196,7 +196,7 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;
 
-    public Output<Object> getWriteBehavior() {
+    public Output<Object> writeBehavior() {
         return this.writeBehavior == null ? Codegen.empty() : this.writeBehavior;
     }
 

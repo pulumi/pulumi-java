@@ -35,14 +35,14 @@ public final class ClusterSkuResponse {
      * The capacity value
      * 
     */
-    public Optional<Double> getCapacity() {
+    public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The name of the SKU.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

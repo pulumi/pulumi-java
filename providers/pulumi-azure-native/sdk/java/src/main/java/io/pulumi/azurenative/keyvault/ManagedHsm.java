@@ -46,7 +46,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -60,7 +60,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The name of the managed HSM Pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Properties of the managed HSM
      * 
      */
-    public Output<ManagedHsmPropertiesResponse> getProperties() {
+    public Output<ManagedHsmPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -88,7 +88,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return SKU details
      * 
      */
-    public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
+    public Output</* @Nullable */ ManagedHsmSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -102,7 +102,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -116,7 +116,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The resource type of the managed HSM Pool.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

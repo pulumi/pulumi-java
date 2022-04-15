@@ -23,7 +23,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="applicationGatewayName", required=true)
       private final Output<String> applicationGatewayName;
 
-    public Output<String> getApplicationGatewayName() {
+    public Output<String> applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -78,7 +78,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

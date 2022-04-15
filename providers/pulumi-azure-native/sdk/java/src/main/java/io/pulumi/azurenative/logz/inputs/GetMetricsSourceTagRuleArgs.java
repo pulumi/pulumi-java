@@ -19,7 +19,7 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
     @Import(name="metricsSourceName", required=true)
       private final String metricsSourceName;
 
-    public String getMetricsSourceName() {
+    public String metricsSourceName() {
         return this.metricsSourceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -41,14 +41,14 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
       private final String ruleSetName;
 
-    public String getRuleSetName() {
+    public String ruleSetName() {
         return this.ruleSetName;
     }
 

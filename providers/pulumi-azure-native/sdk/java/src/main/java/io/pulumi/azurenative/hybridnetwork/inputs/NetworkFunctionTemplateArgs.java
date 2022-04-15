@@ -27,7 +27,7 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     @Import(name="networkFunctionRoleConfigurations")
       private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
-    public Output<List<NetworkFunctionRoleConfigurationArgs>> getNetworkFunctionRoleConfigurations() {
+    public Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations() {
         return this.networkFunctionRoleConfigurations == null ? Codegen.empty() : this.networkFunctionRoleConfigurations;
     }
 

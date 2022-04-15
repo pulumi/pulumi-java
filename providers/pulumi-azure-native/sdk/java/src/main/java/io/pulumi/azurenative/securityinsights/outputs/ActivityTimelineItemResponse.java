@@ -75,28 +75,28 @@ public final class ActivityTimelineItemResponse {
      * The grouping bucket end time.
      * 
     */
-    public String getBucketEndTimeUTC() {
+    public String bucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
     /**
      * The grouping bucket start time.
      * 
     */
-    public String getBucketStartTimeUTC() {
+    public String bucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
     /**
      * The activity timeline content.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The time of the first activity in the grouping bucket.
      * 
     */
-    public String getFirstActivityTimeUTC() {
+    public String firstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
     /**
@@ -104,28 +104,28 @@ public final class ActivityTimelineItemResponse {
      * Expected value is 'Activity'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The time of the last activity in the grouping bucket.
      * 
     */
-    public String getLastActivityTimeUTC() {
+    public String lastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
     /**
      * The activity query id.
      * 
     */
-    public String getQueryId() {
+    public String queryId() {
         return this.queryId;
     }
     /**
      * The activity timeline title.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

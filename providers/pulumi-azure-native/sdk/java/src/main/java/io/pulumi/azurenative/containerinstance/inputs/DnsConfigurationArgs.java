@@ -27,7 +27,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="nameServers", required=true)
       private final Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
 
@@ -38,7 +38,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="options")
       private final @Nullable Output<String> options;
 
-    public Output<String> getOptions() {
+    public Output<String> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -49,7 +49,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="searchDomains")
       private final @Nullable Output<String> searchDomains;
 
-    public Output<String> getSearchDomains() {
+    public Output<String> searchDomains() {
         return this.searchDomains == null ? Codegen.empty() : this.searchDomains;
     }
 

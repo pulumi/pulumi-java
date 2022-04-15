@@ -19,7 +19,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
     @Import(name="networkVirtualApplianceName", required=true)
       private final String networkVirtualApplianceName;
 
-    public String getNetworkVirtualApplianceName() {
+    public String networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualApplianceSiteArgs extends io.pulumi.resources.Invok
     @Import(name="siteName", required=true)
       private final String siteName;
 
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
 

@@ -28,7 +28,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     @Import(name="additionalCopyOptions")
       private final @Nullable Output<Map<String,Object>> additionalCopyOptions;
 
-    public Output<Map<String,Object>> getAdditionalCopyOptions() {
+    public Output<Map<String,Object>> additionalCopyOptions() {
         return this.additionalCopyOptions == null ? Codegen.empty() : this.additionalCopyOptions;
     }
 
@@ -39,7 +39,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     @Import(name="additionalFormatOptions")
       private final @Nullable Output<Map<String,Object>> additionalFormatOptions;
 
-    public Output<Map<String,Object>> getAdditionalFormatOptions() {
+    public Output<Map<String,Object>> additionalFormatOptions() {
         return this.additionalFormatOptions == null ? Codegen.empty() : this.additionalFormatOptions;
     }
 
@@ -51,7 +51,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

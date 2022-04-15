@@ -26,7 +26,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

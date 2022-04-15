@@ -19,7 +19,7 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="securityPolicyName", required=true)
       private final String securityPolicyName;
 
-    public String getSecurityPolicyName() {
+    public String securityPolicyName() {
         return this.securityPolicyName;
     }
 

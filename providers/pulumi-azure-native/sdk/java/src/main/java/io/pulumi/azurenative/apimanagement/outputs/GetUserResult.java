@@ -100,77 +100,77 @@ public final class GetUserResult {
      * Email address.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * First name.
      * 
     */
-    public Optional<String> getFirstName() {
+    public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Collection of groups user is part of.
      * 
     */
-    public List<GroupContractPropertiesResponse> getGroups() {
+    public List<GroupContractPropertiesResponse> groups() {
         return this.groups;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Collection of user identities.
      * 
     */
-    public List<UserIdentityContractResponse> getIdentities() {
+    public List<UserIdentityContractResponse> identities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
      * Last name.
      * 
     */
-    public Optional<String> getLastName() {
+    public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional note about a user set by the administrator.
      * 
     */
-    public Optional<String> getNote() {
+    public Optional<String> note() {
         return Optional.ofNullable(this.note);
     }
     /**
      * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
     */
-    public Optional<String> getRegistrationDate() {
+    public Optional<String> registrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

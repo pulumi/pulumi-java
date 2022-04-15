@@ -25,7 +25,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId")
       private final @Nullable String vmResourceId;
 
-    public Optional<String> getVmResourceId() {
+    public Optional<String> vmResourceId() {
         return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);
     }
 

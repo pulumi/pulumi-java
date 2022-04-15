@@ -29,7 +29,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="activeDeploymentName")
       private final @Nullable Output<String> activeDeploymentName;
 
-    public Output<String> getActiveDeploymentName() {
+    public Output<String> activeDeploymentName() {
         return this.activeDeploymentName == null ? Codegen.empty() : this.activeDeploymentName;
     }
 
@@ -40,7 +40,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -51,7 +51,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
+    public Output<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
@@ -62,7 +62,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="persistentDisk")
       private final @Nullable Output<PersistentDiskArgs> persistentDisk;
 
-    public Output<PersistentDiskArgs> getPersistentDisk() {
+    public Output<PersistentDiskArgs> persistentDisk() {
         return this.persistentDisk == null ? Codegen.empty() : this.persistentDisk;
     }
 
@@ -73,7 +73,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> getPublic_() {
+    public Output<Boolean> public_() {
         return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
@@ -84,7 +84,7 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="temporaryDisk")
       private final @Nullable Output<TemporaryDiskArgs> temporaryDisk;
 
-    public Output<TemporaryDiskArgs> getTemporaryDisk() {
+    public Output<TemporaryDiskArgs> temporaryDisk() {
         return this.temporaryDisk == null ? Codegen.empty() : this.temporaryDisk;
     }
 

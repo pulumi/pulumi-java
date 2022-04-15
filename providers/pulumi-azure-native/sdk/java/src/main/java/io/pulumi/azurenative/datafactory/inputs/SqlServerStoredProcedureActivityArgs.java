@@ -34,7 +34,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -45,7 +45,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -67,7 +67,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -89,7 +89,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="storedProcedureName", required=true)
       private final Output<Object> storedProcedureName;
 
-    public Output<Object> getStoredProcedureName() {
+    public Output<Object> storedProcedureName() {
         return this.storedProcedureName;
     }
 
@@ -100,7 +100,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="storedProcedureParameters")
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
+    public Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
     }
 
@@ -112,7 +112,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -123,7 +123,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

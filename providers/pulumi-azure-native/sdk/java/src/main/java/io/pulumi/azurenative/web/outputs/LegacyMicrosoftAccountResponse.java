@@ -51,28 +51,28 @@ public final class LegacyMicrosoftAccountResponse {
      * <code>false</code> if the legacy Microsoft Account provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow.
      * 
     */
-    public Optional<LoginScopesResponse> getLogin() {
+    public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the legacy Microsoft Account provider.
      * 
     */
-    public Optional<ClientRegistrationResponse> getRegistration() {
+    public Optional<ClientRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
     /**
      * The configuration settings of the legacy Microsoft Account provider token validation flow.
      * 
     */
-    public Optional<AllowedAudiencesValidationResponse> getValidation() {
+    public Optional<AllowedAudiencesValidationResponse> validation() {
         return Optional.ofNullable(this.validation);
     }
 

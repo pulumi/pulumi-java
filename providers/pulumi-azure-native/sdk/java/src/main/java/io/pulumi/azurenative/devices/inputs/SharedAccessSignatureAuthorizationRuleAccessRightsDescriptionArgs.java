@@ -28,7 +28,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -39,7 +39,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
+    public Output<String> primaryKey() {
         return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
@@ -50,7 +50,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="rights", required=true)
       private final Output<Either<String,AccessRightsDescription>> rights;
 
-    public Output<Either<String,AccessRightsDescription>> getRights() {
+    public Output<Either<String,AccessRightsDescription>> rights() {
         return this.rights;
     }
 
@@ -61,7 +61,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
-    public Output<String> getSecondaryKey() {
+    public Output<String> secondaryKey() {
         return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 

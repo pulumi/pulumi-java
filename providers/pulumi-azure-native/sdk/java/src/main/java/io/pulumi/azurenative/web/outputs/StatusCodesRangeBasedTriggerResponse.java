@@ -45,24 +45,24 @@ public final class StatusCodesRangeBasedTriggerResponse {
      * Request Count.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * HTTP status code.
      * 
     */
-    public Optional<String> getStatusCodes() {
+    public Optional<String> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
     /**
      * Time interval.
      * 
     */
-    public Optional<String> getTimeInterval() {
+    public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
 

@@ -41,21 +41,21 @@ public final class PrivateLinkConnectionStateResponse {
      * ActionsRequired for a private link connection
      * 
     */
-    public Optional<String> getActionsRequired() {
+    public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * Description of a private link connection
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Status of a private link connection
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

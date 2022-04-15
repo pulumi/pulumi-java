@@ -42,21 +42,21 @@ public final class ConnectionMonitorDestinationResponse {
      * Address of the connection monitor destination (IP or domain name).
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The destination port used by connection monitor.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The ID of the resource used as the destination by connection monitor.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

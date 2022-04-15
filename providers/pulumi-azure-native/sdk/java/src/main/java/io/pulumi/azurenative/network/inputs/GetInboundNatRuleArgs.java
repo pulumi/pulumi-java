@@ -21,7 +21,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="inboundNatRuleName", required=true)
       private final String inboundNatRuleName;
 
-    public String getInboundNatRuleName() {
+    public String inboundNatRuleName() {
         return this.inboundNatRuleName;
     }
 
@@ -43,7 +43,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
 
-    public String getLoadBalancerName() {
+    public String loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -54,7 +54,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

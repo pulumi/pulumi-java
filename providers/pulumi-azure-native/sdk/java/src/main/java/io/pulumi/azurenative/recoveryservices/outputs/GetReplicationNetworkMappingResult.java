@@ -56,35 +56,35 @@ public final class GetReplicationNetworkMappingResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Network Mapping Properties.
      * 
     */
-    public NetworkMappingPropertiesResponse getProperties() {
+    public NetworkMappingPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

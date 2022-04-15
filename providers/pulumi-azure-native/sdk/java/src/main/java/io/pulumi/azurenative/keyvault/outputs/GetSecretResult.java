@@ -62,42 +62,42 @@ public final class GetSecretResult {
      * Fully qualified identifier of the key vault resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure location of the key vault resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the secret
      * 
     */
-    public SecretPropertiesResponse getProperties() {
+    public SecretPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Tags assigned to the key vault resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

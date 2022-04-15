@@ -27,7 +27,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     @Import(name="parameters", required=true)
       private final Output<RemoteAddressMatchConditionParametersArgs> parameters;
 
-    public Output<RemoteAddressMatchConditionParametersArgs> getParameters() {
+    public Output<RemoteAddressMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

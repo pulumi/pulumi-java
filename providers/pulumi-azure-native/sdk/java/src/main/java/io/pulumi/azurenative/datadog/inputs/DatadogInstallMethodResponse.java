@@ -21,7 +21,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
     @Import(name="installerVersion")
       private final @Nullable String installerVersion;
 
-    public Optional<String> getInstallerVersion() {
+    public Optional<String> installerVersion() {
         return this.installerVersion == null ? Optional.empty() : Optional.ofNullable(this.installerVersion);
     }
 
@@ -32,7 +32,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
     @Import(name="tool")
       private final @Nullable String tool;
 
-    public Optional<String> getTool() {
+    public Optional<String> tool() {
         return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
     }
 
@@ -43,7 +43,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
     @Import(name="toolVersion")
       private final @Nullable String toolVersion;
 
-    public Optional<String> getToolVersion() {
+    public Optional<String> toolVersion() {
         return this.toolVersion == null ? Optional.empty() : Optional.ofNullable(this.toolVersion);
     }
 

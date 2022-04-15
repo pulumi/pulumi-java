@@ -43,7 +43,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return Name of the virtual router peering that is unique within a virtual router.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return Peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getPeerAsn() {
+    public Output</* @Nullable */ Double> peerAsn() {
         return this.peerAsn;
     }
     /**
@@ -85,7 +85,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return Peer IP.
      * 
      */
-    public Output</* @Nullable */ String> getPeerIp() {
+    public Output</* @Nullable */ String> peerIp() {
         return this.peerIp;
     }
     /**
@@ -99,7 +99,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
      * @return Peering type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -64,42 +64,42 @@ public final class KeyAttributesResponse {
      * Creation time in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Double getCreated() {
+    public Double created() {
         return this.created;
     }
     /**
      * Determines whether or not the object is enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Optional<Double> getExpires() {
+    public Optional<Double> expires() {
         return Optional.ofNullable(this.expires);
     }
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Optional<Double> getNotBefore() {
+    public Optional<Double> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
      * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
      * 
     */
-    public String getRecoveryLevel() {
+    public String recoveryLevel() {
         return this.recoveryLevel;
     }
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
      * 
     */
-    public Double getUpdated() {
+    public Double updated() {
         return this.updated;
     }
 

@@ -22,7 +22,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFileShareName")
       private final @Nullable Output<String> azureFileShareName;
 
-    public Output<String> getAzureFileShareName() {
+    public Output<String> azureFileShareName() {
         return this.azureFileShareName == null ? Codegen.empty() : this.azureFileShareName;
     }
 
@@ -33,7 +33,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudEndpointName")
       private final @Nullable Output<String> cloudEndpointName;
 
-    public Output<String> getCloudEndpointName() {
+    public Output<String> cloudEndpointName() {
         return this.cloudEndpointName == null ? Codegen.empty() : this.cloudEndpointName;
     }
 
@@ -44,7 +44,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -55,7 +55,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> getStorageAccountResourceId() {
+    public Output<String> storageAccountResourceId() {
         return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
     }
 
@@ -77,7 +77,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountTenantId")
       private final @Nullable Output<String> storageAccountTenantId;
 
-    public Output<String> getStorageAccountTenantId() {
+    public Output<String> storageAccountTenantId() {
         return this.storageAccountTenantId == null ? Codegen.empty() : this.storageAccountTenantId;
     }
 
@@ -88,7 +88,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -99,7 +99,7 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
 
-    public Output<String> getSyncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 

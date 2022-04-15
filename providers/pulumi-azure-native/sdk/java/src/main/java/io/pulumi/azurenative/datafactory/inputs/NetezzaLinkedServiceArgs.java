@@ -32,7 +32,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -43,7 +43,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -54,7 +54,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
+    public Output<Object> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -65,7 +65,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -87,7 +87,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -98,7 +98,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="pwd")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> pwd;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> getPwd() {
+    public Output<AzureKeyVaultSecretReferenceArgs> pwd() {
         return this.pwd == null ? Codegen.empty() : this.pwd;
     }
 
@@ -110,7 +110,7 @@ public final class NetezzaLinkedServiceArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

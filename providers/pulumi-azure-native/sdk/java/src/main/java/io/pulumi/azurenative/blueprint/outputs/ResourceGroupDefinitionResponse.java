@@ -71,49 +71,49 @@ public final class ResourceGroupDefinitionResponse {
      * Artifacts which need to be deployed before this resource group.
      * 
     */
-    public List<String> getDependsOn() {
+    public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Description of this parameter/resourceGroup.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * DisplayName of this parameter/resourceGroup.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
     */
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
     /**
      * Tags to be assigned to this resource group.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

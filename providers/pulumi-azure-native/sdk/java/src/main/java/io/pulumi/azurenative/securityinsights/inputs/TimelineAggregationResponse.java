@@ -24,7 +24,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

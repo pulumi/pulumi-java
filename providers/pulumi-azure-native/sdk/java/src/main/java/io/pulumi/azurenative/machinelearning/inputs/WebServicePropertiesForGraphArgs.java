@@ -40,7 +40,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="assets")
       private final @Nullable Output<Map<String,AssetItemArgs>> assets;
 
-    public Output<Map<String,AssetItemArgs>> getAssets() {
+    public Output<Map<String,AssetItemArgs>> assets() {
         return this.assets == null ? Codegen.empty() : this.assets;
     }
 
@@ -51,7 +51,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="commitmentPlan")
       private final @Nullable Output<CommitmentPlanArgs> commitmentPlan;
 
-    public Output<CommitmentPlanArgs> getCommitmentPlan() {
+    public Output<CommitmentPlanArgs> commitmentPlan() {
         return this.commitmentPlan == null ? Codegen.empty() : this.commitmentPlan;
     }
 
@@ -62,7 +62,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
 
-    public Output<DiagnosticsConfigurationArgs> getDiagnostics() {
+    public Output<DiagnosticsConfigurationArgs> diagnostics() {
         return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
@@ -84,7 +84,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="exampleRequest")
       private final @Nullable Output<ExampleRequestArgs> exampleRequest;
 
-    public Output<ExampleRequestArgs> getExampleRequest() {
+    public Output<ExampleRequestArgs> exampleRequest() {
         return this.exampleRequest == null ? Codegen.empty() : this.exampleRequest;
     }
 
@@ -95,7 +95,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="exposeSampleData")
       private final @Nullable Output<Boolean> exposeSampleData;
 
-    public Output<Boolean> getExposeSampleData() {
+    public Output<Boolean> exposeSampleData() {
         return this.exposeSampleData == null ? Codegen.empty() : this.exposeSampleData;
     }
 
@@ -106,7 +106,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="input")
       private final @Nullable Output<ServiceInputOutputSpecificationArgs> input;
 
-    public Output<ServiceInputOutputSpecificationArgs> getInput() {
+    public Output<ServiceInputOutputSpecificationArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -117,7 +117,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="keys")
       private final @Nullable Output<WebServiceKeysArgs> keys;
 
-    public Output<WebServiceKeysArgs> getKeys() {
+    public Output<WebServiceKeysArgs> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -128,7 +128,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="machineLearningWorkspace")
       private final @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
 
-    public Output<MachineLearningWorkspaceArgs> getMachineLearningWorkspace() {
+    public Output<MachineLearningWorkspaceArgs> machineLearningWorkspace() {
         return this.machineLearningWorkspace == null ? Codegen.empty() : this.machineLearningWorkspace;
     }
 
@@ -139,7 +139,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="output")
       private final @Nullable Output<ServiceInputOutputSpecificationArgs> output;
 
-    public Output<ServiceInputOutputSpecificationArgs> getOutput() {
+    public Output<ServiceInputOutputSpecificationArgs> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -150,7 +150,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="package")
       private final @Nullable Output<GraphPackageArgs> package_;
 
-    public Output<GraphPackageArgs> getPackage_() {
+    public Output<GraphPackageArgs> package_() {
         return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
@@ -162,7 +162,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="packageType", required=true)
       private final Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType;
     }
 
@@ -173,7 +173,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Output<Map<String,WebServiceParameterArgs>> getParameters() {
+    public Output<Map<String,WebServiceParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -184,7 +184,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="payloadsInBlobStorage")
       private final @Nullable Output<Boolean> payloadsInBlobStorage;
 
-    public Output<Boolean> getPayloadsInBlobStorage() {
+    public Output<Boolean> payloadsInBlobStorage() {
         return this.payloadsInBlobStorage == null ? Codegen.empty() : this.payloadsInBlobStorage;
     }
 
@@ -195,7 +195,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="payloadsLocation")
       private final @Nullable Output<BlobLocationArgs> payloadsLocation;
 
-    public Output<BlobLocationArgs> getPayloadsLocation() {
+    public Output<BlobLocationArgs> payloadsLocation() {
         return this.payloadsLocation == null ? Codegen.empty() : this.payloadsLocation;
     }
 
@@ -206,7 +206,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -217,7 +217,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="realtimeConfiguration")
       private final @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
 
-    public Output<RealtimeConfigurationArgs> getRealtimeConfiguration() {
+    public Output<RealtimeConfigurationArgs> realtimeConfiguration() {
         return this.realtimeConfiguration == null ? Codegen.empty() : this.realtimeConfiguration;
     }
 
@@ -228,7 +228,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountArgs> storageAccount;
 
-    public Output<StorageAccountArgs> getStorageAccount() {
+    public Output<StorageAccountArgs> storageAccount() {
         return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
@@ -239,7 +239,7 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

@@ -18,7 +18,7 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -29,14 +29,14 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="registryServer")
       private final @Nullable Output<String> registryServer;
 
-    public Output<String> getRegistryServer() {
+    public Output<String> registryServer() {
         return this.registryServer == null ? Codegen.empty() : this.registryServer;
     }
 
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

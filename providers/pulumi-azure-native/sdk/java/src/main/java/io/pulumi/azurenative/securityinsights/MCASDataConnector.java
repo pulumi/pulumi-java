@@ -43,7 +43,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @return The available data types for the connector.
      * 
      */
-    public Output</* @Nullable */ MCASDataConnectorDataTypesResponse> getDataTypes() {
+    public Output</* @Nullable */ MCASDataConnectorDataTypesResponse> dataTypes() {
         return this.dataTypes;
     }
     /**
@@ -57,7 +57,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -73,7 +73,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * Expected value is 'MicrosoftCloudAppSecurity'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +87,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @return The tenant id to connect to, and get the data from.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -115,7 +115,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

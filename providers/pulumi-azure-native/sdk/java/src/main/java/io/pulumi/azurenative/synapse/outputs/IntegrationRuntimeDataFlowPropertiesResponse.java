@@ -42,21 +42,21 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
      * Compute type of the cluster which will execute data flow job.
      * 
     */
-    public Optional<String> getComputeType() {
+    public Optional<String> computeType() {
         return Optional.ofNullable(this.computeType);
     }
     /**
      * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
      * 
     */
-    public Optional<Integer> getCoreCount() {
+    public Optional<Integer> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
     /**
      * Time to live (in minutes) setting of the cluster which will execute data flow job.
      * 
     */
-    public Optional<Integer> getTimeToLive() {
+    public Optional<Integer> timeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
 

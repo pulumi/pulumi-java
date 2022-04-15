@@ -80,56 +80,56 @@ public final class VirtualNicResponse {
      * guest OS customization for nic
      * 
     */
-    public Optional<GuestOSNICCustomizationResponse> getCustomization() {
+    public Optional<GuestOSNICCustomizationResponse> customization() {
         return Optional.ofNullable(this.customization);
     }
     /**
      * NIC ip address
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * NIC MAC address
      * 
     */
-    public Optional<String> getMacAddress() {
+    public Optional<String> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
     /**
      * Virtual Network
      * 
     */
-    public VirtualNetworkResponse getNetwork() {
+    public VirtualNetworkResponse network() {
         return this.network;
     }
     /**
      * NIC type
      * 
     */
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
     /**
      * Is NIC powered on/off on boot
      * 
     */
-    public Optional<Boolean> getPowerOnBoot() {
+    public Optional<Boolean> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
     /**
      * NIC id
      * 
     */
-    public Optional<String> getVirtualNicId() {
+    public Optional<String> virtualNicId() {
         return Optional.ofNullable(this.virtualNicId);
     }
     /**
      * NIC name
      * 
     */
-    public String getVirtualNicName() {
+    public String virtualNicName() {
         return this.virtualNicName;
     }
 

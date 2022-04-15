@@ -60,14 +60,14 @@ public final class LongTermRetentionPolicyResponse {
      * Daily retention schedule of the protection policy.
      * 
     */
-    public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
+    public Optional<DailyRetentionScheduleResponse> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
      * Monthly retention schedule of the protection policy.
      * 
     */
-    public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
+    public Optional<MonthlyRetentionScheduleResponse> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
@@ -75,21 +75,21 @@ public final class LongTermRetentionPolicyResponse {
      * Expected value is 'LongTermRetentionPolicy'.
      * 
     */
-    public String getRetentionPolicyType() {
+    public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
     /**
      * Weekly retention schedule of the protection policy.
      * 
     */
-    public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
+    public Optional<WeeklyRetentionScheduleResponse> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
     /**
      * Yearly retention schedule of the protection policy.
      * 
     */
-    public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {
+    public Optional<YearlyRetentionScheduleResponse> yearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }
 

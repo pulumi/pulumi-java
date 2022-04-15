@@ -27,7 +27,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -38,7 +38,7 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isConfigurationParameter")
       private final @Nullable Output<Boolean> isConfigurationParameter;
 
-    public Output<Boolean> getIsConfigurationParameter() {
+    public Output<Boolean> isConfigurationParameter() {
         return this.isConfigurationParameter == null ? Codegen.empty() : this.isConfigurationParameter;
     }
 

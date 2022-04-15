@@ -34,14 +34,14 @@ public final class ListTopLevelDomainAgreementsResult {
      * Link to next page of resources.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
     */
-    public List<TldLegalAgreementResponse> getValue() {
+    public List<TldLegalAgreementResponse> value() {
         return this.value;
     }
 

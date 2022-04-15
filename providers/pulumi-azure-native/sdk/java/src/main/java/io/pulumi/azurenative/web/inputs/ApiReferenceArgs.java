@@ -23,7 +23,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brandColor")
       private final @Nullable Output<String> brandColor;
 
-    public Output<String> getBrandColor() {
+    public Output<String> brandColor() {
         return this.brandColor == null ? Codegen.empty() : this.brandColor;
     }
 
@@ -34,7 +34,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -56,7 +56,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iconUri")
       private final @Nullable Output<String> iconUri;
 
-    public Output<String> getIconUri() {
+    public Output<String> iconUri() {
         return this.iconUri == null ? Codegen.empty() : this.iconUri;
     }
 
@@ -67,7 +67,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -78,7 +78,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="swagger")
       private final @Nullable Output<Object> swagger;
 
-    public Output<Object> getSwagger() {
+    public Output<Object> swagger() {
         return this.swagger == null ? Codegen.empty() : this.swagger;
     }
 
@@ -100,7 +100,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

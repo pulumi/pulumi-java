@@ -27,7 +27,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
+    public Output<Object> additionalColumns() {
         return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
@@ -38,7 +38,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -49,7 +49,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -60,7 +60,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<Object> query;
 
-    public Output<Object> getQuery() {
+    public Output<Object> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -71,7 +71,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> getQueryTimeout() {
+    public Output<Object> queryTimeout() {
         return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
     }
 
@@ -82,7 +82,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
+    public Output<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
@@ -93,7 +93,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
+    public Output<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
@@ -105,7 +105,7 @@ public final class DrillSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

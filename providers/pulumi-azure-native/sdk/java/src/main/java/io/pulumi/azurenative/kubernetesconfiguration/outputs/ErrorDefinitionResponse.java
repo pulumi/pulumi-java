@@ -32,14 +32,14 @@ public final class ErrorDefinitionResponse {
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Description of the error.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

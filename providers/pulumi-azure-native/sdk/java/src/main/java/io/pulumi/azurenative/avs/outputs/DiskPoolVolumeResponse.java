@@ -35,14 +35,14 @@ public final class DiskPoolVolumeResponse {
      * iSCSI provider target IP address list
      * 
     */
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Name of the LUN to be used
      * 
     */
-    public Optional<String> getLunName() {
+    public Optional<String> lunName() {
         return Optional.ofNullable(this.lunName);
     }
 

@@ -48,28 +48,28 @@ public final class SiteMachineKeyResponse {
      * Algorithm used for decryption.
      * 
     */
-    public Optional<String> getDecryption() {
+    public Optional<String> decryption() {
         return Optional.ofNullable(this.decryption);
     }
     /**
      * Decryption key.
      * 
     */
-    public Optional<String> getDecryptionKey() {
+    public Optional<String> decryptionKey() {
         return Optional.ofNullable(this.decryptionKey);
     }
     /**
      * MachineKey validation.
      * 
     */
-    public Optional<String> getValidation() {
+    public Optional<String> validation() {
         return Optional.ofNullable(this.validation);
     }
     /**
      * Validation key.
      * 
     */
-    public Optional<String> getValidationKey() {
+    public Optional<String> validationKey() {
         return Optional.ofNullable(this.validationKey);
     }
 

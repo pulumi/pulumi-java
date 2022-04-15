@@ -34,7 +34,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -56,7 +56,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -67,7 +67,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="database", required=true)
       private final Object database;
 
-    public Object getDatabase() {
+    public Object database() {
         return this.database;
     }
 
@@ -78,7 +78,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -89,7 +89,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="endpoint", required=true)
       private final Object endpoint;
 
-    public Object getEndpoint() {
+    public Object endpoint() {
         return this.endpoint;
     }
 
@@ -100,7 +100,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -111,7 +111,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -122,7 +122,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
@@ -133,7 +133,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="tenant")
       private final @Nullable Object tenant;
 
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
@@ -145,7 +145,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

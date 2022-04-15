@@ -124,98 +124,98 @@ public final class GetTableResult {
      * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
      * 
     */
-    public Integer getArchiveRetentionInDays() {
+    public Integer archiveRetentionInDays() {
         return this.archiveRetentionInDays;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The timestamp that table plan was last modified (UTC).
      * 
     */
-    public String getLastPlanModifiedDate() {
+    public String lastPlanModifiedDate() {
         return this.lastPlanModifiedDate;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The table plan.
      * 
     */
-    public Optional<String> getPlan() {
+    public Optional<String> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Parameters of the restore operation that initiated this table.
      * 
     */
-    public Optional<RestoredLogsResponse> getRestoredLogs() {
+    public Optional<RestoredLogsResponse> restoredLogs() {
         return Optional.ofNullable(this.restoredLogs);
     }
     /**
      * Search job execution statistics.
      * 
     */
-    public Optional<ResultStatisticsResponse> getResultStatistics() {
+    public Optional<ResultStatisticsResponse> resultStatistics() {
         return Optional.ofNullable(this.resultStatistics);
     }
     /**
      * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
      * 
     */
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * Table schema.
      * 
     */
-    public Optional<SchemaResponse> getSchema() {
+    public Optional<SchemaResponse> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Parameters of the search job that initiated this table.
      * 
     */
-    public Optional<SearchResultsResponse> getSearchResults() {
+    public Optional<SearchResultsResponse> searchResults() {
         return Optional.ofNullable(this.searchResults);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
      * 
     */
-    public Optional<Integer> getTotalRetentionInDays() {
+    public Optional<Integer> totalRetentionInDays() {
         return Optional.ofNullable(this.totalRetentionInDays);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

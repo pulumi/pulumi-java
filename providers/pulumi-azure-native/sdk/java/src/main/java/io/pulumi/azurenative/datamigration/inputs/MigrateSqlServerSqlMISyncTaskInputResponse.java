@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="azureApp", required=true)
       private final AzureActiveDirectoryAppResponse azureApp;
 
-    public AzureActiveDirectoryAppResponse getAzureApp() {
+    public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
     }
 
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="backupFileShare")
       private final @Nullable FileShareResponse backupFileShare;
 
-    public Optional<FileShareResponse> getBackupFileShare() {
+    public Optional<FileShareResponse> backupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
     }
 
@@ -53,7 +53,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
-    public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -64,7 +64,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -75,7 +75,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="storageResourceId", required=true)
       private final String storageResourceId;
 
-    public String getStorageResourceId() {
+    public String storageResourceId() {
         return this.storageResourceId;
     }
 
@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse extends io.pulumi.
     @Import(name="targetConnectionInfo", required=true)
       private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
-    public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
+    public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

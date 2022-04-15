@@ -27,7 +27,7 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> getAddressPrefixes() {
+    public Output<List<String>> addressPrefixes() {
         return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> getNextHopIpAddress() {
+    public Output<String> nextHopIpAddress() {
         return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
     }
 

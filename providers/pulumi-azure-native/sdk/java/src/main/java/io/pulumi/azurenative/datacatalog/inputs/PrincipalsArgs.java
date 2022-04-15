@@ -26,7 +26,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -37,7 +37,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upn")
       private final @Nullable Output<String> upn;
 
-    public Output<String> getUpn() {
+    public Output<String> upn() {
         return this.upn == null ? Codegen.empty() : this.upn;
     }
 

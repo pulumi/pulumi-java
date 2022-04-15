@@ -19,7 +19,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="availabilitySetName", required=true)
       private final String availabilitySetName;
 
-    public String getAvailabilitySetName() {
+    public String availabilitySetName() {
         return this.availabilitySetName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -37,7 +37,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -48,7 +48,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends io.
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

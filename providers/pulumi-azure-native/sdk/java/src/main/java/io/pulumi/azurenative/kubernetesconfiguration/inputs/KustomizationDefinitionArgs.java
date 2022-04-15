@@ -32,7 +32,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="dependsOn")
       private final @Nullable Output<List<DependsOnDefinitionArgs>> dependsOn;
 
-    public Output<List<DependsOnDefinitionArgs>> getDependsOn() {
+    public Output<List<DependsOnDefinitionArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -43,7 +43,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -54,7 +54,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -65,7 +65,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="prune")
       private final @Nullable Output<Boolean> prune;
 
-    public Output<Boolean> getPrune() {
+    public Output<Boolean> prune() {
         return this.prune == null ? Codegen.empty() : this.prune;
     }
 
@@ -76,7 +76,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="retryIntervalInSeconds")
       private final @Nullable Output<Double> retryIntervalInSeconds;
 
-    public Output<Double> getRetryIntervalInSeconds() {
+    public Output<Double> retryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Codegen.empty() : this.retryIntervalInSeconds;
     }
 
@@ -87,7 +87,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="syncIntervalInSeconds")
       private final @Nullable Output<Double> syncIntervalInSeconds;
 
-    public Output<Double> getSyncIntervalInSeconds() {
+    public Output<Double> syncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Codegen.empty() : this.syncIntervalInSeconds;
     }
 
@@ -98,7 +98,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Double> timeoutInSeconds;
 
-    public Output<Double> getTimeoutInSeconds() {
+    public Output<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
@@ -109,7 +109,7 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="validation")
       private final @Nullable Output<Either<String,KustomizationValidationType>> validation;
 
-    public Output<Either<String,KustomizationValidationType>> getValidation() {
+    public Output<Either<String,KustomizationValidationType>> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 

@@ -17,14 +17,14 @@ public final class InstantRPAdditionalDetailsResponse extends io.pulumi.resource
     @Import(name="azureBackupRGNamePrefix")
       private final @Nullable String azureBackupRGNamePrefix;
 
-    public Optional<String> getAzureBackupRGNamePrefix() {
+    public Optional<String> azureBackupRGNamePrefix() {
         return this.azureBackupRGNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
 
     @Import(name="azureBackupRGNameSuffix")
       private final @Nullable String azureBackupRGNameSuffix;
 
-    public Optional<String> getAzureBackupRGNameSuffix() {
+    public Optional<String> azureBackupRGNameSuffix() {
         return this.azureBackupRGNameSuffix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNameSuffix);
     }
 

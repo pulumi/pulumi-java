@@ -230,14 +230,14 @@ public final class GetExtendedDatabaseBlobAuditingPolicyResult {
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
     */
-    public List<String> getAuditActionsAndGroups() {
+    public List<String> auditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? List.of() : this.auditActionsAndGroups;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -254,28 +254,28 @@ public final class GetExtendedDatabaseBlobAuditingPolicyResult {
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
     */
-    public Optional<Boolean> getIsAzureMonitorTargetEnabled() {
+    public Optional<Boolean> isAzureMonitorTargetEnabled() {
         return Optional.ofNullable(this.isAzureMonitorTargetEnabled);
     }
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
      * 
     */
-    public Optional<Boolean> getIsStorageSecondaryKeyInUse() {
+    public Optional<Boolean> isStorageSecondaryKeyInUse() {
         return Optional.ofNullable(this.isStorageSecondaryKeyInUse);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies condition of where clause when creating an audit.
      * 
     */
-    public Optional<String> getPredicateExpression() {
+    public Optional<String> predicateExpression() {
         return Optional.ofNullable(this.predicateExpression);
     }
     /**
@@ -283,42 +283,42 @@ public final class GetExtendedDatabaseBlobAuditingPolicyResult {
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
     */
-    public Optional<Integer> getQueueDelayMs() {
+    public Optional<Integer> queueDelayMs() {
         return Optional.ofNullable(this.queueDelayMs);
     }
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
      * 
     */
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Specifies the blob storage subscription Id.
      * 
     */
-    public Optional<String> getStorageAccountSubscriptionId() {
+    public Optional<String> storageAccountSubscriptionId() {
         return Optional.ofNullable(this.storageAccountSubscriptionId);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
     */
-    public Optional<String> getStorageEndpoint() {
+    public Optional<String> storageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

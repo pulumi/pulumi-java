@@ -24,7 +24,7 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
     @Import(name="coreQuota", required=true)
       private final Integer coreQuota;
 
-    public Integer getCoreQuota() {
+    public Integer coreQuota() {
         return this.coreQuota;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

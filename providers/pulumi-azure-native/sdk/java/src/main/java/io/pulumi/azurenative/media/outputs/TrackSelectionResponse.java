@@ -26,7 +26,7 @@ public final class TrackSelectionResponse {
      * TrackSelections is a track property condition list which can specify track(s)
      * 
     */
-    public List<TrackPropertyConditionResponse> getTrackSelections() {
+    public List<TrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
     }
 

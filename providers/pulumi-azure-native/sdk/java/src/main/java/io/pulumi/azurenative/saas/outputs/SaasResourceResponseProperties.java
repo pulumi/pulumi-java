@@ -143,119 +143,119 @@ public final class SaasResourceResponseProperties {
      * Whether the SaaS subscription will auto renew upon term end.
      * 
     */
-    public Optional<Boolean> getAutoRenew() {
+    public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * The created date of this resource.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Whether the current term is a Free Trial term
      * 
     */
-    public Optional<Boolean> getIsFreeTrial() {
+    public Optional<Boolean> isFreeTrial() {
         return Optional.ofNullable(this.isFreeTrial);
     }
     /**
      * The last modifier date if this resource.
      * 
     */
-    public Optional<String> getLastModified() {
+    public Optional<String> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
     /**
      * The offer id.
      * 
     */
-    public Optional<String> getOfferId() {
+    public Optional<String> offerId() {
         return Optional.ofNullable(this.offerId);
     }
     /**
      * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
      * 
     */
-    public Map<String,String> getPaymentChannelMetadata() {
+    public Map<String,String> paymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
     }
     /**
      * The Payment channel for the SaasSubscription.
      * 
     */
-    public Optional<String> getPaymentChannelType() {
+    public Optional<String> paymentChannelType() {
         return Optional.ofNullable(this.paymentChannelType);
     }
     /**
      * The publisher id.
      * 
     */
-    public Optional<String> getPublisherId() {
+    public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
      * The environment in the publisher side for this resource.
      * 
     */
-    public Optional<String> getPublisherTestEnvironment() {
+    public Optional<String> publisherTestEnvironment() {
         return Optional.ofNullable(this.publisherTestEnvironment);
     }
     /**
      * The seat count.
      * 
     */
-    public Optional<Double> getQuantity() {
+    public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
     /**
      * The SaaS resource name.
      * 
     */
-    public Optional<String> getSaasResourceName() {
+    public Optional<String> saasResourceName() {
         return Optional.ofNullable(this.saasResourceName);
     }
     /**
      * The saas session id used for dev service migration request.
      * 
     */
-    public Optional<String> getSaasSessionId() {
+    public Optional<String> saasSessionId() {
         return Optional.ofNullable(this.saasSessionId);
     }
     /**
      * The saas subscription id used for tenant to subscription level migration request.
      * 
     */
-    public Optional<String> getSaasSubscriptionId() {
+    public Optional<String> saasSubscriptionId() {
         return Optional.ofNullable(this.saasSubscriptionId);
     }
     /**
      * The plan id.
      * 
     */
-    public Optional<String> getSkuId() {
+    public Optional<String> skuId() {
         return Optional.ofNullable(this.skuId);
     }
     /**
      * The SaaS Subscription Status.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The current Term object.
      * 
     */
-    public Optional<SaasPropertiesResponseTerm> getTerm() {
+    public Optional<SaasPropertiesResponseTerm> term() {
         return Optional.ofNullable(this.term);
     }
     /**
      * The current Term id.
      * 
     */
-    public Optional<String> getTermId() {
+    public Optional<String> termId() {
         return Optional.ofNullable(this.termId);
     }
 

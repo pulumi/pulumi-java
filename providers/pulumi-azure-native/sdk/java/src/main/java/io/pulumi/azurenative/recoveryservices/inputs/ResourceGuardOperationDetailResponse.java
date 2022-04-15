@@ -17,14 +17,14 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
     @Import(name="defaultResourceRequest")
       private final @Nullable String defaultResourceRequest;
 
-    public Optional<String> getDefaultResourceRequest() {
+    public Optional<String> defaultResourceRequest() {
         return this.defaultResourceRequest == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceRequest);
     }
 
     @Import(name="vaultCriticalOperation")
       private final @Nullable String vaultCriticalOperation;
 
-    public Optional<String> getVaultCriticalOperation() {
+    public Optional<String> vaultCriticalOperation() {
         return this.vaultCriticalOperation == null ? Optional.empty() : Optional.ofNullable(this.vaultCriticalOperation);
     }
 

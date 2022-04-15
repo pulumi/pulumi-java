@@ -43,7 +43,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    public Output<Boolean> getAutoRotationEnabled() {
+    public Output<Boolean> autoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
@@ -57,7 +57,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return The server key creation date.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -71,7 +71,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -85,7 +85,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -99,7 +99,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Subregion of the server key.
      * 
      */
-    public Output<String> getSubregion() {
+    public Output<String> subregion() {
         return this.subregion;
     }
     /**
@@ -127,7 +127,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Thumbprint of the server key.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -141,7 +141,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

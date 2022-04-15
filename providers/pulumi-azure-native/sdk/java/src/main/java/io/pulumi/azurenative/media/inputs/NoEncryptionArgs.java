@@ -26,7 +26,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
+    public Output<EnabledProtocolsArgs> enabledProtocols() {
         return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 

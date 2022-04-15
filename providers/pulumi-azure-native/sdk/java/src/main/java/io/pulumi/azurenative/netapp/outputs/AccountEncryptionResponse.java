@@ -26,7 +26,7 @@ public final class AccountEncryptionResponse {
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
      * 
     */
-    public Optional<String> getKeySource() {
+    public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
 

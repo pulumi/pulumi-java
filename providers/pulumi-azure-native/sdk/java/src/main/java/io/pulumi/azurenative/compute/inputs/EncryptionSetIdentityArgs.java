@@ -28,7 +28,7 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type;
 
-    public Output<Either<String,DiskEncryptionSetIdentityType>> getType() {
+    public Output<Either<String,DiskEncryptionSetIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

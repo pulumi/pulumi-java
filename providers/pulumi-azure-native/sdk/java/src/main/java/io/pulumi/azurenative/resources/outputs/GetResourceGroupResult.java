@@ -71,49 +71,49 @@ public final class GetResourceGroupResult {
      * The ID of the resource group.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The ID of the resource that manages this resource group.
      * 
     */
-    public Optional<String> getManagedBy() {
+    public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The name of the resource group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource group properties.
      * 
     */
-    public ResourceGroupPropertiesResponse getProperties() {
+    public ResourceGroupPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The tags attached to the resource group.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource group.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

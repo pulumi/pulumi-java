@@ -22,7 +22,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -33,7 +33,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="offer")
       private final @Nullable Output<String> offer;
 
-    public Output<String> getOffer() {
+    public Output<String> offer() {
         return this.offer == null ? Codegen.empty() : this.offer;
     }
 
@@ -44,7 +44,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -55,7 +55,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -66,7 +66,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

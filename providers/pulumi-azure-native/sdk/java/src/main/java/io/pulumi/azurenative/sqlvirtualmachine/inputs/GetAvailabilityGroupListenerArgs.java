@@ -19,7 +19,7 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
     @Import(name="availabilityGroupListenerName", required=true)
       private final String availabilityGroupListenerName;
 
-    public String getAvailabilityGroupListenerName() {
+    public String availabilityGroupListenerName() {
         return this.availabilityGroupListenerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
     @Import(name="sqlVirtualMachineGroupName", required=true)
       private final String sqlVirtualMachineGroupName;
 
-    public String getSqlVirtualMachineGroupName() {
+    public String sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 

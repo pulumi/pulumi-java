@@ -34,14 +34,14 @@ public final class GitHubActionCodeConfigurationResponse {
      * Runtime stack is used to determine the workflow file content for code base apps.
      * 
     */
-    public Optional<String> getRuntimeStack() {
+    public Optional<String> runtimeStack() {
         return Optional.ofNullable(this.runtimeStack);
     }
     /**
      * Runtime version is used to determine what build version to set in the workflow file.
      * 
     */
-    public Optional<String> getRuntimeVersion() {
+    public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
 

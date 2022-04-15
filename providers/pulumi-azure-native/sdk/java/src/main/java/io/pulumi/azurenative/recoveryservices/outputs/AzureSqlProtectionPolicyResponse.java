@@ -47,21 +47,21 @@ public final class AzureSqlProtectionPolicyResponse {
      * Expected value is 'AzureSql'.
      * 
     */
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
      * Number of items associated with this policy.
      * 
     */
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Retention policy details.
      * 
     */
-    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
 

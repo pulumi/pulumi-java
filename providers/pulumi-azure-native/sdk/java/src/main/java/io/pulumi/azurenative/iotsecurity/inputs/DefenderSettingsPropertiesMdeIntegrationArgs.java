@@ -27,7 +27,7 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
     @Import(name="status", required=true)
       private final Output<Either<String,MdeIntegration>> status;
 
-    public Output<Either<String,MdeIntegration>> getStatus() {
+    public Output<Either<String,MdeIntegration>> status() {
         return this.status;
     }
 

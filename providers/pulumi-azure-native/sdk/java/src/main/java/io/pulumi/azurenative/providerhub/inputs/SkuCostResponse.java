@@ -18,21 +18,21 @@ public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="extendedUnit")
       private final @Nullable String extendedUnit;
 
-    public Optional<String> getExtendedUnit() {
+    public Optional<String> extendedUnit() {
         return this.extendedUnit == null ? Optional.empty() : Optional.ofNullable(this.extendedUnit);
     }
 
     @Import(name="meterId", required=true)
       private final String meterId;
 
-    public String getMeterId() {
+    public String meterId() {
         return this.meterId;
     }
 
     @Import(name="quantity")
       private final @Nullable Integer quantity;
 
-    public Optional<Integer> getQuantity() {
+    public Optional<Integer> quantity() {
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
     }
 

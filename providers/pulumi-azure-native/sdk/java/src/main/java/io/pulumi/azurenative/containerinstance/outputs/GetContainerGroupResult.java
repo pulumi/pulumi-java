@@ -176,105 +176,105 @@ public final class GetContainerGroupResult {
      * The containers within the container group.
      * 
     */
-    public List<ContainerResponse> getContainers() {
+    public List<ContainerResponse> containers() {
         return this.containers;
     }
     /**
      * The diagnostic information for a container group.
      * 
     */
-    public Optional<ContainerGroupDiagnosticsResponse> getDiagnostics() {
+    public Optional<ContainerGroupDiagnosticsResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
      * The DNS config information for a container group.
      * 
     */
-    public Optional<DnsConfigurationResponse> getDnsConfig() {
+    public Optional<DnsConfigurationResponse> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
     /**
      * The encryption properties for a container group.
      * 
     */
-    public Optional<EncryptionPropertiesResponse> getEncryptionProperties() {
+    public Optional<EncryptionPropertiesResponse> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the container group, if configured.
      * 
     */
-    public Optional<ContainerGroupIdentityResponse> getIdentity() {
+    public Optional<ContainerGroupIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The image registry credentials by which the container group is created from.
      * 
     */
-    public List<ImageRegistryCredentialResponse> getImageRegistryCredentials() {
+    public List<ImageRegistryCredentialResponse> imageRegistryCredentials() {
         return this.imageRegistryCredentials == null ? List.of() : this.imageRegistryCredentials;
     }
     /**
      * The init containers for a container group.
      * 
     */
-    public List<InitContainerDefinitionResponse> getInitContainers() {
+    public List<InitContainerDefinitionResponse> initContainers() {
         return this.initContainers == null ? List.of() : this.initContainers;
     }
     /**
      * The instance view of the container group. Only valid in response.
      * 
     */
-    public ContainerGroupResponseInstanceView getInstanceView() {
+    public ContainerGroupResponseInstanceView instanceView() {
         return this.instanceView;
     }
     /**
      * The IP address type of the container group.
      * 
     */
-    public Optional<IpAddressResponse> getIpAddress() {
+    public Optional<IpAddressResponse> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The network profile information for a container group.
      * 
     */
-    public Optional<ContainerGroupNetworkProfileResponse> getNetworkProfile() {
+    public Optional<ContainerGroupNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * The operating system type required by the containers in the container group.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * The provisioning state of the container group. This only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -284,35 +284,35 @@ public final class GetContainerGroupResult {
      * - `Never` Never restart
      * 
     */
-    public Optional<String> getRestartPolicy() {
+    public Optional<String> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
     /**
      * The SKU for a container group.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The list of volumes that can be mounted by containers in this container group.
      * 
     */
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

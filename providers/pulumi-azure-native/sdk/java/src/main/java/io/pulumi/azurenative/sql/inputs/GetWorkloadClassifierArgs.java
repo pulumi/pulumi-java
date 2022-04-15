@@ -19,7 +19,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 
@@ -52,7 +52,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
     @Import(name="workloadClassifierName", required=true)
       private final String workloadClassifierName;
 
-    public String getWorkloadClassifierName() {
+    public String workloadClassifierName() {
         return this.workloadClassifierName;
     }
 
@@ -63,7 +63,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
     @Import(name="workloadGroupName", required=true)
       private final String workloadGroupName;
 
-    public String getWorkloadGroupName() {
+    public String workloadGroupName() {
         return this.workloadGroupName;
     }
 

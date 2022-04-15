@@ -30,7 +30,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> getCertificate() {
+    public Output<CertificateInformationArgs> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -41,7 +41,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="certificatePassword")
       private final @Nullable Output<String> certificatePassword;
 
-    public Output<String> getCertificatePassword() {
+    public Output<String> certificatePassword() {
         return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
     }
 
@@ -52,7 +52,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultSslBinding")
       private final @Nullable Output<Boolean> defaultSslBinding;
 
-    public Output<Boolean> getDefaultSslBinding() {
+    public Output<Boolean> defaultSslBinding() {
         return this.defaultSslBinding == null ? Codegen.empty() : this.defaultSslBinding;
     }
 
@@ -63,7 +63,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="encodedCertificate")
       private final @Nullable Output<String> encodedCertificate;
 
-    public Output<String> getEncodedCertificate() {
+    public Output<String> encodedCertificate() {
         return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
     }
 
@@ -74,7 +74,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -85,7 +85,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
+    public Output<String> identityClientId() {
         return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
@@ -96,7 +96,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
@@ -107,7 +107,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="negotiateClientCertificate")
       private final @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> getNegotiateClientCertificate() {
+    public Output<Boolean> negotiateClientCertificate() {
         return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
     }
 
@@ -118,7 +118,7 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,HostnameType>> type;
 
-    public Output<Either<String,HostnameType>> getType() {
+    public Output<Either<String,HostnameType>> type() {
         return this.type;
     }
 

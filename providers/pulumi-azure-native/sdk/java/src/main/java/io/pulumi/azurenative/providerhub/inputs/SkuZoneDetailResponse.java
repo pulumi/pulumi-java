@@ -19,14 +19,14 @@ public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="capabilities")
       private final @Nullable List<SkuCapabilityResponse> capabilities;
 
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
     @Import(name="name")
       private final @Nullable List<String> name;
 
-    public List<String> getName() {
+    public List<String> name() {
         return this.name == null ? List.of() : this.name;
     }
 

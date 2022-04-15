@@ -28,7 +28,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="container")
       private final @Nullable String container;
 
-    public Optional<String> getContainer() {
+    public Optional<String> container() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
     }
 
@@ -39,7 +39,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="dateFormat")
       private final @Nullable String dateFormat;
 
-    public Optional<String> getDateFormat() {
+    public Optional<String> dateFormat() {
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
@@ -50,7 +50,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="pathPattern")
       private final @Nullable String pathPattern;
 
-    public Optional<String> getPathPattern() {
+    public Optional<String> pathPattern() {
         return this.pathPattern == null ? Optional.empty() : Optional.ofNullable(this.pathPattern);
     }
 
@@ -61,7 +61,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="sourcePartitionCount")
       private final @Nullable Integer sourcePartitionCount;
 
-    public Optional<Integer> getSourcePartitionCount() {
+    public Optional<Integer> sourcePartitionCount() {
         return this.sourcePartitionCount == null ? Optional.empty() : Optional.ofNullable(this.sourcePartitionCount);
     }
 
@@ -72,7 +72,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="storageAccounts")
       private final @Nullable List<StorageAccountResponse> storageAccounts;
 
-    public List<StorageAccountResponse> getStorageAccounts() {
+    public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
 
@@ -83,7 +83,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="timeFormat")
       private final @Nullable String timeFormat;
 
-    public Optional<String> getTimeFormat() {
+    public Optional<String> timeFormat() {
         return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
     }
 
@@ -95,7 +95,7 @@ public final class BlobStreamInputDataSourceResponse extends io.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

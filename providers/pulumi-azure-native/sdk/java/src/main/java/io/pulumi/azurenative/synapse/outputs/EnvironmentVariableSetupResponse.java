@@ -41,21 +41,21 @@ public final class EnvironmentVariableSetupResponse {
      * Expected value is 'EnvironmentVariableSetup'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The name of the environment variable.
      * 
     */
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
     /**
      * The value of the environment variable.
      * 
     */
-    public String getVariableValue() {
+    public String variableValue() {
         return this.variableValue;
     }
 

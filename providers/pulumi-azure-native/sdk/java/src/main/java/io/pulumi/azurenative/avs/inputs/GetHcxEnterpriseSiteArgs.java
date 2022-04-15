@@ -19,7 +19,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
     @Import(name="hcxEnterpriseSiteName", required=true)
       private final String hcxEnterpriseSiteName;
 
-    public String getHcxEnterpriseSiteName() {
+    public String hcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName;
     }
 
@@ -30,7 +30,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,7 +41,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

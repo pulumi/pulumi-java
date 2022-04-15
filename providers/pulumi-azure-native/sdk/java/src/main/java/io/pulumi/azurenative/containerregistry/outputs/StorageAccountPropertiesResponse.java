@@ -24,7 +24,7 @@ public final class StorageAccountPropertiesResponse {
      * The resource ID of the storage account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

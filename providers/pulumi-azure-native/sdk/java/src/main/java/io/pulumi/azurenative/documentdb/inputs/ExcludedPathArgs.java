@@ -22,7 +22,7 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

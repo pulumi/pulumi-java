@@ -26,7 +26,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="linkedTemplates")
       private final @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
-    public Output<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
+    public Output<List<LinkedTemplateArtifactArgs>> linkedTemplates() {
         return this.linkedTemplates == null ? Codegen.empty() : this.linkedTemplates;
     }
 
@@ -48,7 +48,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="mainTemplate")
       private final @Nullable Output<Object> mainTemplate;
 
-    public Output<Object> getMainTemplate() {
+    public Output<Object> mainTemplate() {
         return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
     }
 
@@ -70,7 +70,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -81,7 +81,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="templateSpecName", required=true)
       private final Output<String> templateSpecName;
 
-    public Output<String> getTemplateSpecName() {
+    public Output<String> templateSpecName() {
         return this.templateSpecName;
     }
 
@@ -114,7 +114,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="templateSpecVersion")
       private final @Nullable Output<String> templateSpecVersion;
 
-    public Output<String> getTemplateSpecVersion() {
+    public Output<String> templateSpecVersion() {
         return this.templateSpecVersion == null ? Codegen.empty() : this.templateSpecVersion;
     }
 
@@ -125,7 +125,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     @Import(name="uiFormDefinition")
       private final @Nullable Output<Object> uiFormDefinition;
 
-    public Output<Object> getUiFormDefinition() {
+    public Output<Object> uiFormDefinition() {
         return this.uiFormDefinition == null ? Codegen.empty() : this.uiFormDefinition;
     }
 

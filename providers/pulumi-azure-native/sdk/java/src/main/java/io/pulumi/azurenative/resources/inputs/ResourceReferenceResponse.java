@@ -23,7 +23,7 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

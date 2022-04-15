@@ -62,42 +62,42 @@ public final class ImageReferenceResponse {
      * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from 'version', only if the value specified in 'version' field is 'latest'.
      * 
     */
-    public String getExactVersion() {
+    public String exactVersion() {
         return this.exactVersion;
     }
     /**
      * Resource Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The image publisher.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The image SKU.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

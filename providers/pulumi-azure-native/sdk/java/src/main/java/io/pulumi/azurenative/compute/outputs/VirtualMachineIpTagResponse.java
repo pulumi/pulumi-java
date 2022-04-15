@@ -34,14 +34,14 @@ public final class VirtualMachineIpTagResponse {
      * IP tag type. Example: FirstPartyUsage.
      * 
     */
-    public Optional<String> getIpTagType() {
+    public Optional<String> ipTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
     /**
      * IP tag associated with the public IP. Example: SQL, Storage etc.
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
 

@@ -26,7 +26,7 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     @Import(name="include")
       private final @Nullable Output<TransferFilterDetailsArgs> include;
 
-    public Output<TransferFilterDetailsArgs> getInclude() {
+    public Output<TransferFilterDetailsArgs> include() {
         return this.include == null ? Codegen.empty() : this.include;
     }
 

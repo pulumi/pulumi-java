@@ -46,7 +46,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Azure data catalog admin list.
      * 
      */
-    public Output</* @Nullable */ List<PrincipalsResponse>> getAdmins() {
+    public Output</* @Nullable */ List<PrincipalsResponse>> admins() {
         return this.admins;
     }
     /**
@@ -60,7 +60,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Automatic unit adjustment enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutomaticUnitAdjustment() {
+    public Output</* @Nullable */ Boolean> enableAutomaticUnitAdjustment() {
         return this.enableAutomaticUnitAdjustment;
     }
     /**
@@ -74,7 +74,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -88,7 +88,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -102,7 +102,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Azure data catalog SKU.
      * 
      */
-    public Output</* @Nullable */ String> getSku() {
+    public Output</* @Nullable */ String> sku() {
         return this.sku;
     }
     /**
@@ -130,7 +130,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Azure data catalog provision status.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSuccessfullyProvisioned() {
+    public Output</* @Nullable */ Boolean> successfullyProvisioned() {
         return this.successfullyProvisioned;
     }
     /**
@@ -144,7 +144,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -172,7 +172,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Azure data catalog units.
      * 
      */
-    public Output</* @Nullable */ Integer> getUnits() {
+    public Output</* @Nullable */ Integer> units() {
         return this.units;
     }
     /**
@@ -186,7 +186,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * @return Azure data catalog user list.
      * 
      */
-    public Output</* @Nullable */ List<PrincipalsResponse>> getUsers() {
+    public Output</* @Nullable */ List<PrincipalsResponse>> users() {
         return this.users;
     }
 

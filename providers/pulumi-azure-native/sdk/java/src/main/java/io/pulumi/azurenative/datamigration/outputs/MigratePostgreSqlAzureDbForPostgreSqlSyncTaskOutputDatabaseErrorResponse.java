@@ -51,21 +51,21 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * Error message
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * List of error events.
      * 
     */
-    public List<SyncMigrationDatabaseErrorEventResponse> getEvents() {
+    public List<SyncMigrationDatabaseErrorEventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -73,7 +73,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * Expected value is 'DatabaseLevelErrorOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

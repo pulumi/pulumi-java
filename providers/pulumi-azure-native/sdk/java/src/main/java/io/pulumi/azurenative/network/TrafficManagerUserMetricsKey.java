@@ -42,7 +42,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * @return The key returned by the User Metrics operation.
      * 
      */
-    public Output</* @Nullable */ String> getKey() {
+    public Output</* @Nullable */ String> key() {
         return this.key;
     }
     /**
@@ -56,7 +56,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

@@ -70,35 +70,35 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
      * Array of command properties.
      * 
     */
-    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
+    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
     */
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Task input
      * 
     */
-    public Optional<ConnectToTargetSqlDbTaskInputResponse> getInput() {
+    public Optional<ConnectToTargetSqlDbTaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
     */
-    public List<ConnectToTargetSqlDbTaskOutputResponse> getOutput() {
+    public List<ConnectToTargetSqlDbTaskOutputResponse> output() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -106,7 +106,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
      * Expected value is 'ConnectToTarget.SqlDb'.
      * 
     */
-    public String getTaskType() {
+    public String taskType() {
         return this.taskType;
     }
 

@@ -27,7 +27,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="autoCompleteRestore")
       private final @Nullable Output<Boolean> autoCompleteRestore;
 
-    public Output<Boolean> getAutoCompleteRestore() {
+    public Output<Boolean> autoCompleteRestore() {
         return this.autoCompleteRestore == null ? Codegen.empty() : this.autoCompleteRestore;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="catalogCollation")
       private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
-    public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
+    public Output<Either<String,CatalogCollationType>> catalogCollation() {
         return this.catalogCollation == null ? Codegen.empty() : this.catalogCollation;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="createMode")
       private final @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
 
-    public Output<Either<String,ManagedDatabaseCreateMode>> getCreateMode() {
+    public Output<Either<String,ManagedDatabaseCreateMode>> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -71,7 +71,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -82,7 +82,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="lastBackupName")
       private final @Nullable Output<String> lastBackupName;
 
-    public Output<String> getLastBackupName() {
+    public Output<String> lastBackupName() {
         return this.lastBackupName == null ? Codegen.empty() : this.lastBackupName;
     }
 
@@ -93,7 +93,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -104,7 +104,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="longTermRetentionBackupResourceId")
       private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
-    public Output<String> getLongTermRetentionBackupResourceId() {
+    public Output<String> longTermRetentionBackupResourceId() {
         return this.longTermRetentionBackupResourceId == null ? Codegen.empty() : this.longTermRetentionBackupResourceId;
     }
 
@@ -115,7 +115,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -126,7 +126,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
 
-    public Output<String> getRecoverableDatabaseId() {
+    public Output<String> recoverableDatabaseId() {
         return this.recoverableDatabaseId == null ? Codegen.empty() : this.recoverableDatabaseId;
     }
 
@@ -137,7 +137,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -148,7 +148,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restorableDroppedDatabaseId")
       private final @Nullable Output<String> restorableDroppedDatabaseId;
 
-    public Output<String> getRestorableDroppedDatabaseId() {
+    public Output<String> restorableDroppedDatabaseId() {
         return this.restorableDroppedDatabaseId == null ? Codegen.empty() : this.restorableDroppedDatabaseId;
     }
 
@@ -159,7 +159,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
-    public Output<String> getRestorePointInTime() {
+    public Output<String> restorePointInTime() {
         return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
     }
 
@@ -170,7 +170,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
 
-    public Output<String> getSourceDatabaseId() {
+    public Output<String> sourceDatabaseId() {
         return this.sourceDatabaseId == null ? Codegen.empty() : this.sourceDatabaseId;
     }
 
@@ -181,7 +181,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageContainerSasToken")
       private final @Nullable Output<String> storageContainerSasToken;
 
-    public Output<String> getStorageContainerSasToken() {
+    public Output<String> storageContainerSasToken() {
         return this.storageContainerSasToken == null ? Codegen.empty() : this.storageContainerSasToken;
     }
 
@@ -192,7 +192,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageContainerUri")
       private final @Nullable Output<String> storageContainerUri;
 
-    public Output<String> getStorageContainerUri() {
+    public Output<String> storageContainerUri() {
         return this.storageContainerUri == null ? Codegen.empty() : this.storageContainerUri;
     }
 
@@ -203,7 +203,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

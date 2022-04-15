@@ -23,7 +23,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<Either<String,ManagedIdentityType>> type;
 
-    public Output<Either<String,ManagedIdentityType>> getType() {
+    public Output<Either<String,ManagedIdentityType>> type() {
         return this.type;
     }
 

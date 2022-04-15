@@ -27,7 +27,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -38,7 +38,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicIPs")
       private final @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
-    public Output<HubPublicIPAddressesArgs> getPublicIPs() {
+    public Output<HubPublicIPAddressesArgs> publicIPs() {
         return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
     }
 

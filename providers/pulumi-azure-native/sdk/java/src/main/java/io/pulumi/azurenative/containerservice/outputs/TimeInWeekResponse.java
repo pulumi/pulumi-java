@@ -36,14 +36,14 @@ public final class TimeInWeekResponse {
      * A day in a week.
      * 
     */
-    public Optional<String> getDay() {
+    public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
      * hour slots in a day.
      * 
     */
-    public List<Integer> getHourSlots() {
+    public List<Integer> hourSlots() {
         return this.hourSlots == null ? List.of() : this.hourSlots;
     }
 

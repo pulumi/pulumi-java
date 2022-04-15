@@ -43,7 +43,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
      * 
      */
-    public Output<String> getMigrationState() {
+    public Output<String> migrationState() {
         return this.migrationState;
     }
     /**
@@ -57,7 +57,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Number of entities pending to be replicated.
      * 
      */
-    public Output<Double> getPendingReplicationOperationsCount() {
+    public Output<Double> pendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
@@ -85,7 +85,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Name to access Standard Namespace after migration
      * 
      */
-    public Output<String> getPostMigrationName() {
+    public Output<String> postMigrationName() {
         return this.postMigrationName;
     }
     /**
@@ -99,7 +99,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of Migration Configuration
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Existing premium Namespace ARM Id name which has no entities, will be used for migration
      * 
      */
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace;
     }
     /**
@@ -127,7 +127,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

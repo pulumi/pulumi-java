@@ -32,7 +32,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="azureApp", required=true)
       private final Output<AzureActiveDirectoryAppArgs> azureApp;
 
-    public Output<AzureActiveDirectoryAppArgs> getAzureApp() {
+    public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
     }
 
@@ -43,7 +43,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
@@ -54,7 +54,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -65,7 +65,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -76,7 +76,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="storageResourceId", required=true)
       private final Output<String> storageResourceId;
 
-    public Output<String> getStorageResourceId() {
+    public Output<String> storageResourceId() {
         return this.storageResourceId;
     }
 
@@ -87,7 +87,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

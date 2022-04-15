@@ -22,7 +22,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -33,7 +33,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -44,7 +44,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -66,7 +66,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="metadataEndpoint", required=true)
       private final Output<String> metadataEndpoint;
 
-    public Output<String> getMetadataEndpoint() {
+    public Output<String> metadataEndpoint() {
         return this.metadataEndpoint;
     }
 
@@ -77,7 +77,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="opid")
       private final @Nullable Output<String> opid;
 
-    public Output<String> getOpid() {
+    public Output<String> opid() {
         return this.opid == null ? Codegen.empty() : this.opid;
     }
 
@@ -88,7 +88,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,7 +99,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

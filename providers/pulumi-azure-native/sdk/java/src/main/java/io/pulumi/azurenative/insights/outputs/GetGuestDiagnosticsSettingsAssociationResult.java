@@ -62,42 +62,42 @@ public final class GetGuestDiagnosticsSettingsAssociationResult {
      * The guest diagnostic settings name.
      * 
     */
-    public String getGuestDiagnosticSettingsName() {
+    public String guestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

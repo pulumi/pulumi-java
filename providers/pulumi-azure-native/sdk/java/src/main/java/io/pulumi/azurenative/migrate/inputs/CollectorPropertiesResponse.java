@@ -18,7 +18,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="agentProperties")
       private final @Nullable CollectorAgentPropertiesResponse agentProperties;
 
-    public Optional<CollectorAgentPropertiesResponse> getAgentProperties() {
+    public Optional<CollectorAgentPropertiesResponse> agentProperties() {
         return this.agentProperties == null ? Optional.empty() : Optional.ofNullable(this.agentProperties);
     }
 
@@ -29,7 +29,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
-    public String getCreatedTimestamp() {
+    public String createdTimestamp() {
         return this.createdTimestamp;
     }
 
@@ -40,7 +40,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="discoverySiteId")
       private final @Nullable String discoverySiteId;
 
-    public Optional<String> getDiscoverySiteId() {
+    public Optional<String> discoverySiteId() {
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
@@ -51,7 +51,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
-    public String getUpdatedTimestamp() {
+    public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 

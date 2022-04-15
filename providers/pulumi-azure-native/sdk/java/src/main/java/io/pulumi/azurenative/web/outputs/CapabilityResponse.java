@@ -41,21 +41,21 @@ public final class CapabilityResponse {
      * Name of the SKU capability.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reason of the SKU capability.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Value of the SKU capability.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

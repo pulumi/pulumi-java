@@ -31,7 +31,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -42,7 +42,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="coverageLevel")
       private final @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
 
-    public Output<Either<String,CoverageLevel>> getCoverageLevel() {
+    public Output<Either<String,CoverageLevel>> coverageLevel() {
         return this.coverageLevel == null ? Codegen.empty() : this.coverageLevel;
     }
 
@@ -53,7 +53,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="filter")
       private final @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
 
-    public Output<ConnectionMonitorEndpointFilterArgs> getFilter() {
+    public Output<ConnectionMonitorEndpointFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -64,7 +64,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,7 +75,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -86,7 +86,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="scope")
       private final @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
 
-    public Output<ConnectionMonitorEndpointScopeArgs> getScope() {
+    public Output<ConnectionMonitorEndpointScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -97,7 +97,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,EndpointType>> type;
 
-    public Output<Either<String,EndpointType>> getType() {
+    public Output<Either<String,EndpointType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

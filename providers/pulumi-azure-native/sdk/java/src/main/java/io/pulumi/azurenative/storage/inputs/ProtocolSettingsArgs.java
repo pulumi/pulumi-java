@@ -26,7 +26,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="smb")
       private final @Nullable Output<SmbSettingArgs> smb;
 
-    public Output<SmbSettingArgs> getSmb() {
+    public Output<SmbSettingArgs> smb() {
         return this.smb == null ? Codegen.empty() : this.smb;
     }
 

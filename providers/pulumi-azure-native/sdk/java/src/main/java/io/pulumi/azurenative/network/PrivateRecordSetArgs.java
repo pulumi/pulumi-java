@@ -33,7 +33,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aRecords")
       private final @Nullable Output<List<ARecordArgs>> aRecords;
 
-    public Output<List<ARecordArgs>> getARecords() {
+    public Output<List<ARecordArgs>> aRecords() {
         return this.aRecords == null ? Codegen.empty() : this.aRecords;
     }
 
@@ -44,7 +44,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aaaaRecords")
       private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
 
-    public Output<List<AaaaRecordArgs>> getAaaaRecords() {
+    public Output<List<AaaaRecordArgs>> aaaaRecords() {
         return this.aaaaRecords == null ? Codegen.empty() : this.aaaaRecords;
     }
 
@@ -55,7 +55,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cnameRecord")
       private final @Nullable Output<CnameRecordArgs> cnameRecord;
 
-    public Output<CnameRecordArgs> getCnameRecord() {
+    public Output<CnameRecordArgs> cnameRecord() {
         return this.cnameRecord == null ? Codegen.empty() : this.cnameRecord;
     }
 
@@ -66,7 +66,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -77,7 +77,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mxRecords")
       private final @Nullable Output<List<MxRecordArgs>> mxRecords;
 
-    public Output<List<MxRecordArgs>> getMxRecords() {
+    public Output<List<MxRecordArgs>> mxRecords() {
         return this.mxRecords == null ? Codegen.empty() : this.mxRecords;
     }
 
@@ -88,7 +88,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="privateZoneName", required=true)
       private final Output<String> privateZoneName;
 
-    public Output<String> getPrivateZoneName() {
+    public Output<String> privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -99,7 +99,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ptrRecords")
       private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
 
-    public Output<List<PtrRecordArgs>> getPtrRecords() {
+    public Output<List<PtrRecordArgs>> ptrRecords() {
         return this.ptrRecords == null ? Codegen.empty() : this.ptrRecords;
     }
 
@@ -110,7 +110,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recordType", required=true)
       private final Output<String> recordType;
 
-    public Output<String> getRecordType() {
+    public Output<String> recordType() {
         return this.recordType;
     }
 
@@ -121,7 +121,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relativeRecordSetName")
       private final @Nullable Output<String> relativeRecordSetName;
 
-    public Output<String> getRelativeRecordSetName() {
+    public Output<String> relativeRecordSetName() {
         return this.relativeRecordSetName == null ? Codegen.empty() : this.relativeRecordSetName;
     }
 
@@ -132,7 +132,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -143,7 +143,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="soaRecord")
       private final @Nullable Output<SoaRecordArgs> soaRecord;
 
-    public Output<SoaRecordArgs> getSoaRecord() {
+    public Output<SoaRecordArgs> soaRecord() {
         return this.soaRecord == null ? Codegen.empty() : this.soaRecord;
     }
 
@@ -154,7 +154,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="srvRecords")
       private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
 
-    public Output<List<SrvRecordArgs>> getSrvRecords() {
+    public Output<List<SrvRecordArgs>> srvRecords() {
         return this.srvRecords == null ? Codegen.empty() : this.srvRecords;
     }
 
@@ -165,7 +165,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ttl")
       private final @Nullable Output<Double> ttl;
 
-    public Output<Double> getTtl() {
+    public Output<Double> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
@@ -176,7 +176,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="txtRecords")
       private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
 
-    public Output<List<TxtRecordArgs>> getTxtRecords() {
+    public Output<List<TxtRecordArgs>> txtRecords() {
         return this.txtRecords == null ? Codegen.empty() : this.txtRecords;
     }
 

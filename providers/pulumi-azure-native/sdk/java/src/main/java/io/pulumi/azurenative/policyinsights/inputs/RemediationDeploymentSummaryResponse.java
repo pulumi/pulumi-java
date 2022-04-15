@@ -23,7 +23,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
     @Import(name="failedDeployments", required=true)
       private final Integer failedDeployments;
 
-    public Integer getFailedDeployments() {
+    public Integer failedDeployments() {
         return this.failedDeployments;
     }
 
@@ -34,7 +34,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
     @Import(name="successfulDeployments", required=true)
       private final Integer successfulDeployments;
 
-    public Integer getSuccessfulDeployments() {
+    public Integer successfulDeployments() {
         return this.successfulDeployments;
     }
 
@@ -45,7 +45,7 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
     @Import(name="totalDeployments", required=true)
       private final Integer totalDeployments;
 
-    public Integer getTotalDeployments() {
+    public Integer totalDeployments() {
         return this.totalDeployments;
     }
 

@@ -26,7 +26,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="backupFiles", required=true)
       private final List<String> backupFiles;
 
-    public List<String> getBackupFiles() {
+    public List<String> backupFiles() {
         return this.backupFiles;
     }
 
@@ -37,7 +37,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="backupFinishDate", required=true)
       private final String backupFinishDate;
 
-    public String getBackupFinishDate() {
+    public String backupFinishDate() {
         return this.backupFinishDate;
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="backupType", required=true)
       private final String backupType;
 
-    public String getBackupType() {
+    public String backupType() {
         return this.backupType;
     }
 
@@ -59,7 +59,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -70,7 +70,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="familyCount", required=true)
       private final Integer familyCount;
 
-    public Integer getFamilyCount() {
+    public Integer familyCount() {
         return this.familyCount;
     }
 
@@ -81,7 +81,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="isCompressed", required=true)
       private final Boolean isCompressed;
 
-    public Boolean getIsCompressed() {
+    public Boolean isCompressed() {
         return this.isCompressed;
     }
 
@@ -92,7 +92,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="isDamaged", required=true)
       private final Boolean isDamaged;
 
-    public Boolean getIsDamaged() {
+    public Boolean isDamaged() {
         return this.isDamaged;
     }
 
@@ -103,7 +103,7 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="position", required=true)
       private final Integer position;
 
-    public Integer getPosition() {
+    public Integer position() {
         return this.position;
     }
 

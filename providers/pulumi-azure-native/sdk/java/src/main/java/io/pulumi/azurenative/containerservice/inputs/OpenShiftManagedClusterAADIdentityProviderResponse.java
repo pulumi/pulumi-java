@@ -25,7 +25,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -36,7 +36,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     @Import(name="customerAdminGroupId")
       private final @Nullable String customerAdminGroupId;
 
-    public Optional<String> getCustomerAdminGroupId() {
+    public Optional<String> customerAdminGroupId() {
         return this.customerAdminGroupId == null ? Optional.empty() : Optional.ofNullable(this.customerAdminGroupId);
     }
 
@@ -48,7 +48,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -59,7 +59,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     @Import(name="secret")
       private final @Nullable String secret;
 
-    public Optional<String> getSecret() {
+    public Optional<String> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 
@@ -70,7 +70,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

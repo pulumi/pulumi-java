@@ -161,119 +161,119 @@ public final class HDInsightStreamingActivityResponse {
      * User specified arguments to HDInsightActivity.
      * 
     */
-    public List<Object> getArguments() {
+    public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * Combiner executable name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getCombiner() {
+    public Optional<Object> combiner() {
         return Optional.ofNullable(this.combiner);
     }
     /**
      * Command line environment values.
      * 
     */
-    public List<Object> getCommandEnvironment() {
+    public List<Object> commandEnvironment() {
         return this.commandEnvironment == null ? List.of() : this.commandEnvironment;
     }
     /**
      * Allows user to specify defines for streaming job request.
      * 
     */
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference where the files are located.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getFileLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> fileLinkedService() {
         return Optional.ofNullable(this.fileLinkedService);
     }
     /**
      * Paths to streaming job files. Can be directories.
      * 
     */
-    public List<Object> getFilePaths() {
+    public List<Object> filePaths() {
         return this.filePaths;
     }
     /**
      * Debug info option.
      * 
     */
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Input blob path. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getInput() {
+    public Object input() {
         return this.input;
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Mapper executable name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getMapper() {
+    public Object mapper() {
         return this.mapper;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Output blob path. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getOutput() {
+    public Object output() {
         return this.output;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Reducer executable name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getReducer() {
+    public Object reducer() {
         return this.reducer;
     }
     /**
      * Storage linked service references.
      * 
     */
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
@@ -281,14 +281,14 @@ public final class HDInsightStreamingActivityResponse {
      * Expected value is 'HDInsightStreaming'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

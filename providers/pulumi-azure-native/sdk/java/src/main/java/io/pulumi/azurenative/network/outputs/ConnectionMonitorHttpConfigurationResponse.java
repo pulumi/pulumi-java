@@ -66,42 +66,42 @@ public final class ConnectionMonitorHttpConfigurationResponse {
      * The HTTP method to use.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The path component of the URI. For instance, "/dir1/dir2".
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The port to connect to.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
      * 
     */
-    public Optional<Boolean> getPreferHTTPS() {
+    public Optional<Boolean> preferHTTPS() {
         return Optional.ofNullable(this.preferHTTPS);
     }
     /**
      * The HTTP headers to transmit with the request.
      * 
     */
-    public List<HTTPHeaderResponse> getRequestHeaders() {
+    public List<HTTPHeaderResponse> requestHeaders() {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
     /**
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
      * 
     */
-    public List<String> getValidStatusCodeRanges() {
+    public List<String> validStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;
     }
 

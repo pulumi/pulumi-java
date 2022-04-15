@@ -45,7 +45,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return True if branch to branch traffic is allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowBranchToBranchTraffic() {
+    public Output</* @Nullable */ Boolean> allowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic;
     }
     /**
@@ -59,7 +59,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return True if Vnet to Vnet traffic is allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowVnetToVnetTraffic() {
+    public Output</* @Nullable */ Boolean> allowVnetToVnetTraffic() {
         return this.allowVnetToVnetTraffic;
     }
     /**
@@ -73,7 +73,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return Vpn encryption to be disabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableVpnEncryption() {
+    public Output</* @Nullable */ Boolean> disableVpnEncryption() {
         return this.disableVpnEncryption;
     }
     /**
@@ -87,7 +87,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -101,7 +101,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return The office local breakout category.
      * 
      */
-    public Output<String> getOffice365LocalBreakoutCategory() {
+    public Output<String> office365LocalBreakoutCategory() {
         return this.office365LocalBreakoutCategory;
     }
     /**
@@ -143,7 +143,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual WAN resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -157,7 +157,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +171,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -185,7 +185,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return List of VirtualHubs in the VirtualWAN.
      * 
      */
-    public Output<List<SubResourceResponse>> getVirtualHubs() {
+    public Output<List<SubResourceResponse>> virtualHubs() {
         return this.virtualHubs;
     }
     /**
@@ -199,7 +199,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * @return List of VpnSites in the VirtualWAN.
      * 
      */
-    public Output<List<SubResourceResponse>> getVpnSites() {
+    public Output<List<SubResourceResponse>> vpnSites() {
         return this.vpnSites;
     }
 

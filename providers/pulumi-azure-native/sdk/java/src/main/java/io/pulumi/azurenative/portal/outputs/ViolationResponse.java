@@ -39,21 +39,21 @@ public final class ViolationResponse {
      * Error message.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * Id of the item that violates tenant configuration.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Id of the user who owns violated item.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

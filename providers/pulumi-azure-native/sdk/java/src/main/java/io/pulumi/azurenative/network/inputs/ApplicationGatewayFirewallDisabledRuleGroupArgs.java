@@ -28,7 +28,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
     @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
     @Import(name="rules")
       private final @Nullable Output<List<Integer>> rules;
 
-    public Output<List<Integer>> getRules() {
+    public Output<List<Integer>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

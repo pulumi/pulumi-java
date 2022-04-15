@@ -29,7 +29,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowMultiSelect")
       private final @Nullable Output<Boolean> allowMultiSelect;
 
-    public Output<Boolean> getAllowMultiSelect() {
+    public Output<Boolean> allowMultiSelect() {
         return this.allowMultiSelect == null ? Codegen.empty() : this.allowMultiSelect;
     }
 
@@ -40,7 +40,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classes", required=true)
       private final Output<Map<String,LabelClassArgs>> classes;
 
-    public Output<Map<String,LabelClassArgs>> getClasses() {
+    public Output<Map<String,LabelClassArgs>> classes() {
         return this.classes;
     }
 
@@ -51,7 +51,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 

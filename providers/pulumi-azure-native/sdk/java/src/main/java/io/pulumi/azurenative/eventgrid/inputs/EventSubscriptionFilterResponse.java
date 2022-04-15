@@ -40,7 +40,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     @Import(name="advancedFilters")
       private final @Nullable List<Object> advancedFilters;
 
-    public List<Object> getAdvancedFilters() {
+    public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
 
@@ -51,7 +51,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     @Import(name="includedEventTypes")
       private final @Nullable List<String> includedEventTypes;
 
-    public List<String> getIncludedEventTypes() {
+    public List<String> includedEventTypes() {
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
     }
 
@@ -63,7 +63,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     @Import(name="isSubjectCaseSensitive")
       private final @Nullable Boolean isSubjectCaseSensitive;
 
-    public Optional<Boolean> getIsSubjectCaseSensitive() {
+    public Optional<Boolean> isSubjectCaseSensitive() {
         return this.isSubjectCaseSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSubjectCaseSensitive);
     }
 
@@ -76,7 +76,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     @Import(name="subjectBeginsWith")
       private final @Nullable String subjectBeginsWith;
 
-    public Optional<String> getSubjectBeginsWith() {
+    public Optional<String> subjectBeginsWith() {
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
     }
 
@@ -88,7 +88,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     @Import(name="subjectEndsWith")
       private final @Nullable String subjectEndsWith;
 
-    public Optional<String> getSubjectEndsWith() {
+    public Optional<String> subjectEndsWith() {
         return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
     }
 

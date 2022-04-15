@@ -43,7 +43,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return Role definition assignable scopes.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssignableScopes() {
+    public Output</* @Nullable */ List<String>> assignableScopes() {
         return this.assignableScopes;
     }
     /**
@@ -57,7 +57,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return The role definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return The role definition name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return Role definition permissions.
      * 
      */
-    public Output</* @Nullable */ List<PermissionResponse>> getPermissions() {
+    public Output</* @Nullable */ List<PermissionResponse>> permissions() {
         return this.permissions;
     }
     /**
@@ -99,7 +99,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return The role name.
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     /**
@@ -113,7 +113,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return The role type.
      * 
      */
-    public Output</* @Nullable */ String> getRoleType() {
+    public Output</* @Nullable */ String> roleType() {
         return this.roleType;
     }
     /**
@@ -127,7 +127,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * @return The role definition type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

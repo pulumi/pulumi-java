@@ -25,7 +25,7 @@ public final class ARecordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv4Address")
       private final @Nullable String ipv4Address;
 
-    public Optional<String> getIpv4Address() {
+    public Optional<String> ipv4Address() {
         return this.ipv4Address == null ? Optional.empty() : Optional.ofNullable(this.ipv4Address);
     }
 

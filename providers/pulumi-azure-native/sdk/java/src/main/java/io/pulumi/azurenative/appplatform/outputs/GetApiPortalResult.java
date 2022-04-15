@@ -65,42 +65,42 @@ public final class GetApiPortalResult {
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * API portal properties payload
      * 
     */
-    public ApiPortalPropertiesResponse getProperties() {
+    public ApiPortalPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Sku of the API portal resource
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

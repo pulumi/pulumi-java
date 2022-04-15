@@ -24,7 +24,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,SettingKind>> kind;
 
-    public Output<Either<String,SettingKind>> getKind() {
+    public Output<Either<String,SettingKind>> kind() {
         return this.kind;
     }
 
@@ -35,7 +35,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -46,7 +46,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
-    public Output<String> getSettingsName() {
+    public Output<String> settingsName() {
         return this.settingsName == null ? Codegen.empty() : this.settingsName;
     }
 
@@ -68,7 +68,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

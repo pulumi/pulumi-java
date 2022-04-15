@@ -26,7 +26,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lBBackendAddressPoolIds")
       private final @Nullable List<String> lBBackendAddressPoolIds;
 
-    public List<String> getLBBackendAddressPoolIds() {
+    public List<String> lBBackendAddressPoolIds() {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
     }
 
@@ -37,7 +37,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publicIpAddressId")
       private final @Nullable String publicIpAddressId;
 
-    public Optional<String> getPublicIpAddressId() {
+    public Optional<String> publicIpAddressId() {
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
     }
 
@@ -48,7 +48,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="staticIPAddress")
       private final @Nullable String staticIPAddress;
 
-    public Optional<String> getStaticIPAddress() {
+    public Optional<String> staticIPAddress() {
         return this.staticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.staticIPAddress);
     }
 

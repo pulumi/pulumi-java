@@ -17,7 +17,7 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -28,14 +28,14 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
     @Import(name="registryServer")
       private final @Nullable String registryServer;
 
-    public Optional<String> getRegistryServer() {
+    public Optional<String> registryServer() {
         return this.registryServer == null ? Optional.empty() : Optional.ofNullable(this.registryServer);
     }
 
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

@@ -19,7 +19,7 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

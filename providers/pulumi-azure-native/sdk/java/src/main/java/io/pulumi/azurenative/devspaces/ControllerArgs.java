@@ -24,7 +24,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -68,7 +68,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostCredentialsBase64", required=true)
       private final Output<String> targetContainerHostCredentialsBase64;
 
-    public Output<String> getTargetContainerHostCredentialsBase64() {
+    public Output<String> targetContainerHostCredentialsBase64() {
         return this.targetContainerHostCredentialsBase64;
     }
 
@@ -90,7 +90,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostResourceId", required=true)
       private final Output<String> targetContainerHostResourceId;
 
-    public Output<String> getTargetContainerHostResourceId() {
+    public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
 

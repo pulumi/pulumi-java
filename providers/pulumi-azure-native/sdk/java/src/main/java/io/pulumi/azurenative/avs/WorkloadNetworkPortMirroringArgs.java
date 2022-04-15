@@ -25,7 +25,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -36,7 +36,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="direction")
       private final @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
 
-    public Output<Either<String,PortMirroringDirectionEnum>> getDirection() {
+    public Output<Either<String,PortMirroringDirectionEnum>> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -47,7 +47,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="portMirroringId")
       private final @Nullable Output<String> portMirroringId;
 
-    public Output<String> getPortMirroringId() {
+    public Output<String> portMirroringId() {
         return this.portMirroringId == null ? Codegen.empty() : this.portMirroringId;
     }
 
@@ -69,7 +69,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -80,7 +80,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -102,7 +102,7 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

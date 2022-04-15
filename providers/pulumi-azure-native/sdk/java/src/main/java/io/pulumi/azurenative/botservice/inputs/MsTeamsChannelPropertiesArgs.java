@@ -27,7 +27,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="acceptedTerms")
       private final @Nullable Output<Boolean> acceptedTerms;
 
-    public Output<Boolean> getAcceptedTerms() {
+    public Output<Boolean> acceptedTerms() {
         return this.acceptedTerms == null ? Codegen.empty() : this.acceptedTerms;
     }
 
@@ -38,7 +38,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="callingWebHook")
       private final @Nullable Output<String> callingWebHook;
 
-    public Output<String> getCallingWebHook() {
+    public Output<String> callingWebHook() {
         return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
     }
 
@@ -49,7 +49,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="deploymentEnvironment")
       private final @Nullable Output<String> deploymentEnvironment;
 
-    public Output<String> getDeploymentEnvironment() {
+    public Output<String> deploymentEnvironment() {
         return this.deploymentEnvironment == null ? Codegen.empty() : this.deploymentEnvironment;
     }
 
@@ -60,7 +60,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="enableCalling")
       private final @Nullable Output<Boolean> enableCalling;
 
-    public Output<Boolean> getEnableCalling() {
+    public Output<Boolean> enableCalling() {
         return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
     }
 
@@ -71,7 +71,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="incomingCallRoute")
       private final @Nullable Output<String> incomingCallRoute;
 
-    public Output<String> getIncomingCallRoute() {
+    public Output<String> incomingCallRoute() {
         return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
     }
 
@@ -82,7 +82,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 

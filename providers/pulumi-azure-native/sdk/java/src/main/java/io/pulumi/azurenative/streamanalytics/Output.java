@@ -55,7 +55,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public io.pulumi.core.Output</* @Nullable */ Object> getDatasource() {
+    public io.pulumi.core.Output</* @Nullable */ Object> datasource() {
         return this.datasource;
     }
     /**
@@ -69,7 +69,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
      */
-    public io.pulumi.core.Output<DiagnosticsResponse> getDiagnostics() {
+    public io.pulumi.core.Output<DiagnosticsResponse> diagnostics() {
         return this.diagnostics;
     }
     /**
@@ -83,7 +83,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    public io.pulumi.core.Output<String> getEtag() {
+    public io.pulumi.core.Output<String> etag() {
         return this.etag;
     }
     /**
@@ -97,7 +97,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public io.pulumi.core.Output</* @Nullable */ String> getName() {
+    public io.pulumi.core.Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -111,7 +111,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public io.pulumi.core.Output</* @Nullable */ Object> getSerialization() {
+    public io.pulumi.core.Output</* @Nullable */ Object> serialization() {
         return this.serialization;
     }
     /**
@@ -125,7 +125,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public io.pulumi.core.Output<String> getType() {
+    public io.pulumi.core.Output<String> type() {
         return this.type;
     }
 

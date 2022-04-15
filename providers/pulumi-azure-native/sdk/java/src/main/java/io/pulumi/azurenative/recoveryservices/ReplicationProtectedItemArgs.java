@@ -23,7 +23,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
 
-    public Output<EnableProtectionInputPropertiesArgs> getProperties() {
+    public Output<EnableProtectionInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
-    public Output<String> getProtectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="replicatedProtectedItemName")
       private final @Nullable Output<String> replicatedProtectedItemName;
 
-    public Output<String> getReplicatedProtectedItemName() {
+    public Output<String> replicatedProtectedItemName() {
         return this.replicatedProtectedItemName == null ? Codegen.empty() : this.replicatedProtectedItemName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

@@ -51,7 +51,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Determines if the connection monitor will start automatically once created.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoStart() {
+    public Output</* @Nullable */ Boolean> autoStart() {
         return this.autoStart;
     }
     /**
@@ -65,7 +65,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Type of connection monitor.
      * 
      */
-    public Output<String> getConnectionMonitorType() {
+    public Output<String> connectionMonitorType() {
         return this.connectionMonitorType;
     }
     /**
@@ -79,7 +79,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Describes the destination of connection monitor.
      * 
      */
-    public Output</* @Nullable */ ConnectionMonitorDestinationResponse> getDestination() {
+    public Output</* @Nullable */ ConnectionMonitorDestinationResponse> destination() {
         return this.destination;
     }
     /**
@@ -93,7 +93,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return List of connection monitor endpoints.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> getEndpoints() {
+    public Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -107,7 +107,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -121,7 +121,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Connection monitor location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -135,7 +135,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Monitoring interval in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getMonitoringIntervalInSeconds() {
+    public Output</* @Nullable */ Integer> monitoringIntervalInSeconds() {
         return this.monitoringIntervalInSeconds;
     }
     /**
@@ -149,7 +149,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return The monitoring status of the connection monitor.
      * 
      */
-    public Output<String> getMonitoringStatus() {
+    public Output<String> monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
@@ -163,7 +163,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Name of the connection monitor.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +177,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Optional notes to be associated with the connection monitor.
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -191,7 +191,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return List of connection monitor outputs.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> getOutputs() {
+    public Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> outputs() {
         return this.outputs;
     }
     /**
@@ -205,7 +205,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the connection monitor.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -219,7 +219,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Describes the source of connection monitor.
      * 
      */
-    public Output</* @Nullable */ ConnectionMonitorSourceResponse> getSource() {
+    public Output</* @Nullable */ ConnectionMonitorSourceResponse> source() {
         return this.source;
     }
     /**
@@ -233,7 +233,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return The date and time when the connection monitor was started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -247,7 +247,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Connection monitor tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -261,7 +261,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return List of connection monitor test configurations.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> getTestConfigurations() {
+    public Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> testConfigurations() {
         return this.testConfigurations;
     }
     /**
@@ -275,7 +275,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return List of connection monitor test groups.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> getTestGroups() {
+    public Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> testGroups() {
         return this.testGroups;
     }
     /**
@@ -289,7 +289,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * @return Connection monitor type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

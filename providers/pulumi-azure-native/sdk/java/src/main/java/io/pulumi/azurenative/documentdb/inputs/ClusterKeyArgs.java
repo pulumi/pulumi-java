@@ -26,7 +26,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orderBy")
       private final @Nullable Output<String> orderBy;
 
-    public Output<String> getOrderBy() {
+    public Output<String> orderBy() {
         return this.orderBy == null ? Codegen.empty() : this.orderBy;
     }
 

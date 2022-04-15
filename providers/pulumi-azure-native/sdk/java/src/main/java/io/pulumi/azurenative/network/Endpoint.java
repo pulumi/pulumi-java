@@ -45,7 +45,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return List of custom headers.
      * 
      */
-    public Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> getCustomHeaders() {
+    public Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> customHeaders() {
         return this.customHeaders;
     }
     /**
@@ -59,7 +59,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
      * 
      */
-    public Output</* @Nullable */ String> getEndpointLocation() {
+    public Output</* @Nullable */ String> endpointLocation() {
         return this.endpointLocation;
     }
     /**
@@ -73,7 +73,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The monitoring status of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getEndpointMonitorStatus() {
+    public Output</* @Nullable */ String> endpointMonitorStatus() {
         return this.endpointMonitorStatus;
     }
     /**
@@ -87,7 +87,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
      */
-    public Output</* @Nullable */ String> getEndpointStatus() {
+    public Output</* @Nullable */ String> endpointStatus() {
         return this.endpointStatus;
     }
     /**
@@ -101,7 +101,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGeoMapping() {
+    public Output</* @Nullable */ List<String>> geoMapping() {
         return this.geoMapping;
     }
     /**
@@ -115,7 +115,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    public Output</* @Nullable */ Double> getMinChildEndpoints() {
+    public Output</* @Nullable */ Double> minChildEndpoints() {
         return this.minChildEndpoints;
     }
     /**
@@ -129,7 +129,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    public Output</* @Nullable */ Double> getMinChildEndpointsIPv4() {
+    public Output</* @Nullable */ Double> minChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4;
     }
     /**
@@ -143,7 +143,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    public Output</* @Nullable */ Double> getMinChildEndpointsIPv6() {
+    public Output</* @Nullable */ Double> minChildEndpointsIPv6() {
         return this.minChildEndpointsIPv6;
     }
     /**
@@ -157,7 +157,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -171,7 +171,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
-    public Output</* @Nullable */ Double> getPriority() {
+    public Output</* @Nullable */ Double> priority() {
         return this.priority;
     }
     /**
@@ -185,7 +185,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
-    public Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> getSubnets() {
+    public Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets() {
         return this.subnets;
     }
     /**
@@ -199,7 +199,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getTarget() {
+    public Output</* @Nullable */ String> target() {
         return this.target;
     }
     /**
@@ -213,7 +213,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
      * 
      */
-    public Output</* @Nullable */ String> getTargetResourceId() {
+    public Output</* @Nullable */ String> targetResourceId() {
         return this.targetResourceId;
     }
     /**
@@ -227,7 +227,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -241,7 +241,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
      * 
      */
-    public Output</* @Nullable */ Double> getWeight() {
+    public Output</* @Nullable */ Double> weight() {
         return this.weight;
     }
 

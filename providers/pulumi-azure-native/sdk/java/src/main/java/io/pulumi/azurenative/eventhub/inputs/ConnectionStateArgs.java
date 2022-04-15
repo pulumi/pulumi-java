@@ -28,7 +28,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
 
-    public Output<Either<String,PrivateLinkConnectionStatus>> getStatus() {
+    public Output<Either<String,PrivateLinkConnectionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -42,7 +42,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return The managed network ID with scope will be assigned to.
      * 
      */
-    public Output</* @Nullable */ String> getAssignedManagedNetwork() {
+    public Output</* @Nullable */ String> assignedManagedNetwork() {
         return this.assignedManagedNetwork;
     }
     /**
@@ -56,7 +56,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -70,7 +70,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -84,7 +84,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the ManagedNetwork resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +112,7 @@ public class ScopeAssignment extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

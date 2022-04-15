@@ -22,7 +22,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     @Import(name="rmplName")
       private final @Nullable Output<String> rmplName;
 
-    public Output<String> getRmplName() {
+    public Output<String> rmplName() {
         return this.rmplName == null ? Codegen.empty() : this.rmplName;
     }
 

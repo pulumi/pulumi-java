@@ -60,7 +60,7 @@ public final class AzureActiveDirectoryResponse {
      * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -69,28 +69,28 @@ public final class AzureActiveDirectoryResponse {
      * read or write to this property.
      * 
     */
-    public Optional<Boolean> getIsAutoProvisioned() {
+    public Optional<Boolean> isAutoProvisioned() {
         return Optional.ofNullable(this.isAutoProvisioned);
     }
     /**
      * The configuration settings of the Azure Active Directory login flow.
      * 
     */
-    public Optional<AzureActiveDirectoryLoginResponse> getLogin() {
+    public Optional<AzureActiveDirectoryLoginResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the Azure Active Directory app registration.
      * 
     */
-    public Optional<AzureActiveDirectoryRegistrationResponse> getRegistration() {
+    public Optional<AzureActiveDirectoryRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
     /**
      * The configuration settings of the Azure Active Directory token validation flow.
      * 
     */
-    public Optional<AzureActiveDirectoryValidationResponse> getValidation() {
+    public Optional<AzureActiveDirectoryValidationResponse> validation() {
         return Optional.ofNullable(this.validation);
     }
 

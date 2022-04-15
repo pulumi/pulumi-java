@@ -42,7 +42,7 @@ public final class ScriptStringExecutionParameterResponse {
      * The parameter name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -50,14 +50,14 @@ public final class ScriptStringExecutionParameterResponse {
      * Expected value is 'Value'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value for the passed parameter
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

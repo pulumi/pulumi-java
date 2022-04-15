@@ -28,7 +28,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
 
-    public Optional<SubResourceResponse> getBackendAddressPool() {
+    public Optional<SubResourceResponse> backendAddressPool() {
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
@@ -39,7 +39,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="backendPort")
       private final @Nullable Integer backendPort;
 
-    public Optional<Integer> getBackendPort() {
+    public Optional<Integer> backendPort() {
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
     }
 
@@ -50,7 +50,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="disableOutboundSnat")
       private final @Nullable Boolean disableOutboundSnat;
 
-    public Optional<Boolean> getDisableOutboundSnat() {
+    public Optional<Boolean> disableOutboundSnat() {
         return this.disableOutboundSnat == null ? Optional.empty() : Optional.ofNullable(this.disableOutboundSnat);
     }
 
@@ -61,7 +61,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="enableFloatingIP")
       private final @Nullable Boolean enableFloatingIP;
 
-    public Optional<Boolean> getEnableFloatingIP() {
+    public Optional<Boolean> enableFloatingIP() {
         return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
     }
 
@@ -72,7 +72,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="enableTcpReset")
       private final @Nullable Boolean enableTcpReset;
 
-    public Optional<Boolean> getEnableTcpReset() {
+    public Optional<Boolean> enableTcpReset() {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
     }
 
@@ -83,7 +83,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -94,7 +94,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="frontendIPConfiguration")
       private final @Nullable SubResourceResponse frontendIPConfiguration;
 
-    public Optional<SubResourceResponse> getFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
     }
 
@@ -105,7 +105,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="frontendPort", required=true)
       private final Integer frontendPort;
 
-    public Integer getFrontendPort() {
+    public Integer frontendPort() {
         return this.frontendPort;
     }
 
@@ -116,7 +116,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -127,7 +127,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
@@ -138,7 +138,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="loadDistribution")
       private final @Nullable String loadDistribution;
 
-    public Optional<String> getLoadDistribution() {
+    public Optional<String> loadDistribution() {
         return this.loadDistribution == null ? Optional.empty() : Optional.ofNullable(this.loadDistribution);
     }
 
@@ -149,7 +149,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -160,7 +160,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="probe")
       private final @Nullable SubResourceResponse probe;
 
-    public Optional<SubResourceResponse> getProbe() {
+    public Optional<SubResourceResponse> probe() {
         return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
     }
 
@@ -171,7 +171,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -182,7 +182,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -193,7 +193,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

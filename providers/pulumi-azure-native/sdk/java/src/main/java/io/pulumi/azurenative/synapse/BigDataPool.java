@@ -50,7 +50,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Auto-pausing properties
      * 
      */
-    public Output</* @Nullable */ AutoPausePropertiesResponse> getAutoPause() {
+    public Output</* @Nullable */ AutoPausePropertiesResponse> autoPause() {
         return this.autoPause;
     }
     /**
@@ -64,7 +64,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Auto-scaling properties
      * 
      */
-    public Output</* @Nullable */ AutoScalePropertiesResponse> getAutoScale() {
+    public Output</* @Nullable */ AutoScalePropertiesResponse> autoScale() {
         return this.autoScale;
     }
     /**
@@ -78,7 +78,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The cache size
      * 
      */
-    public Output</* @Nullable */ Integer> getCacheSize() {
+    public Output</* @Nullable */ Integer> cacheSize() {
         return this.cacheSize;
     }
     /**
@@ -92,7 +92,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The time when the Big Data pool was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreationDate() {
+    public Output</* @Nullable */ String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -106,7 +106,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return List of custom libraries/packages associated with the spark pool.
      * 
      */
-    public Output</* @Nullable */ List<LibraryInfoResponse>> getCustomLibraries() {
+    public Output</* @Nullable */ List<LibraryInfoResponse>> customLibraries() {
         return this.customLibraries;
     }
     /**
@@ -120,7 +120,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The default folder where Spark logs will be written.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultSparkLogFolder() {
+    public Output</* @Nullable */ String> defaultSparkLogFolder() {
         return this.defaultSparkLogFolder;
     }
     /**
@@ -134,7 +134,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Dynamic Executor Allocation
      * 
      */
-    public Output</* @Nullable */ DynamicExecutorAllocationResponse> getDynamicExecutorAllocation() {
+    public Output</* @Nullable */ DynamicExecutorAllocationResponse> dynamicExecutorAllocation() {
         return this.dynamicExecutorAllocation;
     }
     /**
@@ -148,7 +148,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Whether compute isolation is required or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsComputeIsolationEnabled() {
+    public Output</* @Nullable */ Boolean> isComputeIsolationEnabled() {
         return this.isComputeIsolationEnabled;
     }
     /**
@@ -162,7 +162,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The time when the Big Data pool was updated successfully.
      * 
      */
-    public Output<String> getLastSucceededTimestamp() {
+    public Output<String> lastSucceededTimestamp() {
         return this.lastSucceededTimestamp;
     }
     /**
@@ -176,7 +176,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Library version requirements
      * 
      */
-    public Output</* @Nullable */ LibraryRequirementsResponse> getLibraryRequirements() {
+    public Output</* @Nullable */ LibraryRequirementsResponse> libraryRequirements() {
         return this.libraryRequirements;
     }
     /**
@@ -190,7 +190,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -204,7 +204,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -218,7 +218,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The number of nodes in the Big Data pool.
      * 
      */
-    public Output</* @Nullable */ Integer> getNodeCount() {
+    public Output</* @Nullable */ Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -232,7 +232,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The level of compute power that each node in the Big Data pool has.
      * 
      */
-    public Output</* @Nullable */ String> getNodeSize() {
+    public Output</* @Nullable */ String> nodeSize() {
         return this.nodeSize;
     }
     /**
@@ -246,7 +246,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The kind of nodes that the Big Data pool provides.
      * 
      */
-    public Output</* @Nullable */ String> getNodeSizeFamily() {
+    public Output</* @Nullable */ String> nodeSizeFamily() {
         return this.nodeSizeFamily;
     }
     /**
@@ -260,7 +260,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The state of the Big Data pool.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -274,7 +274,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Whether session level packages enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSessionLevelPackagesEnabled() {
+    public Output</* @Nullable */ Boolean> sessionLevelPackagesEnabled() {
         return this.sessionLevelPackagesEnabled;
     }
     /**
@@ -288,7 +288,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Spark configuration file to specify additional properties
      * 
      */
-    public Output</* @Nullable */ LibraryRequirementsResponse> getSparkConfigProperties() {
+    public Output</* @Nullable */ LibraryRequirementsResponse> sparkConfigProperties() {
         return this.sparkConfigProperties;
     }
     /**
@@ -302,7 +302,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The Spark events folder
      * 
      */
-    public Output</* @Nullable */ String> getSparkEventsFolder() {
+    public Output</* @Nullable */ String> sparkEventsFolder() {
         return this.sparkEventsFolder;
     }
     /**
@@ -316,7 +316,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The Apache Spark version.
      * 
      */
-    public Output</* @Nullable */ String> getSparkVersion() {
+    public Output</* @Nullable */ String> sparkVersion() {
         return this.sparkVersion;
     }
     /**
@@ -330,7 +330,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -344,7 +344,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

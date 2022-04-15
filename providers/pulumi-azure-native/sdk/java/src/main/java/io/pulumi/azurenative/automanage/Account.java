@@ -44,7 +44,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The identity of the Automanage account.
      * 
      */
-    public Output</* @Nullable */ AccountIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ AccountIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -58,7 +58,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpProperties")
       private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
 
-    public Output<VpnLinkBgpSettingsArgs> getBgpProperties() {
+    public Output<VpnLinkBgpSettingsArgs> bgpProperties() {
         return this.bgpProperties == null ? Codegen.empty() : this.bgpProperties;
     }
 
@@ -39,7 +39,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -50,7 +50,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -61,7 +61,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -72,7 +72,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkProperties")
       private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
 
-    public Output<VpnLinkProviderPropertiesArgs> getLinkProperties() {
+    public Output<VpnLinkProviderPropertiesArgs> linkProperties() {
         return this.linkProperties == null ? Codegen.empty() : this.linkProperties;
     }
 
@@ -83,7 +83,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

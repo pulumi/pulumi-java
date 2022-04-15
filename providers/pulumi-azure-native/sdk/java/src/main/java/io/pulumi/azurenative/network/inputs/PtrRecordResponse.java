@@ -25,7 +25,7 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ptrdname")
       private final @Nullable String ptrdname;
 
-    public Optional<String> getPtrdname() {
+    public Optional<String> ptrdname() {
         return this.ptrdname == null ? Optional.empty() : Optional.ofNullable(this.ptrdname);
     }
 

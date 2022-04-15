@@ -27,7 +27,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="actions", required=true)
       private final Output<ManagementPolicyActionArgs> actions;
 
-    public Output<ManagementPolicyActionArgs> getActions() {
+    public Output<ManagementPolicyActionArgs> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="filters")
       private final @Nullable Output<ManagementPolicyFilterArgs> filters;
 
-    public Output<ManagementPolicyFilterArgs> getFilters() {
+    public Output<ManagementPolicyFilterArgs> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 

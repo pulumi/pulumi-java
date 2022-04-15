@@ -46,28 +46,28 @@ public final class GetArtifactResult {
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the kind of blueprint artifact.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

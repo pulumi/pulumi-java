@@ -23,7 +23,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     @Import(name="eventDescription", required=true)
       private final String eventDescription;
 
-    public String getEventDescription() {
+    public String eventDescription() {
         return this.eventDescription;
     }
 
@@ -34,7 +34,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     @Import(name="eventLevel", required=true)
       private final String eventLevel;
 
-    public String getEventLevel() {
+    public String eventLevel() {
         return this.eventLevel;
     }
 
@@ -45,7 +45,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     @Import(name="eventSummary", required=true)
       private final String eventSummary;
 
-    public String getEventSummary() {
+    public String eventSummary() {
         return this.eventSummary;
     }
 
@@ -56,7 +56,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     @Import(name="eventTimestamp", required=true)
       private final String eventTimestamp;
 
-    public String getEventTimestamp() {
+    public String eventTimestamp() {
         return this.eventTimestamp;
     }
 
@@ -67,7 +67,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     @Import(name="eventType", required=true)
       private final String eventType;
 
-    public String getEventType() {
+    public String eventType() {
         return this.eventType;
     }
 

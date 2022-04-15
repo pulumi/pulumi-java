@@ -25,7 +25,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="configName")
       private final @Nullable Output<String> configName;
 
-    public Output<String> getConfigName() {
+    public Output<String> configName() {
         return this.configName == null ? Codegen.empty() : this.configName;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="notAllowedTime")
       private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
-    public Output<List<TimeSpanArgs>> getNotAllowedTime() {
+    public Output<List<TimeSpanArgs>> notAllowedTime() {
         return this.notAllowedTime == null ? Codegen.empty() : this.notAllowedTime;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -69,7 +69,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="timeInWeek")
       private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
-    public Output<List<TimeInWeekArgs>> getTimeInWeek() {
+    public Output<List<TimeInWeekArgs>> timeInWeek() {
         return this.timeInWeek == null ? Codegen.empty() : this.timeInWeek;
     }
 

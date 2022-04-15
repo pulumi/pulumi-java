@@ -25,7 +25,7 @@ public final class MarkdownPartMetadataResponseSettings extends io.pulumi.resour
     @Import(name="content")
       private final @Nullable MarkdownPartMetadataResponseContent content;
 
-    public Optional<MarkdownPartMetadataResponseContent> getContent() {
+    public Optional<MarkdownPartMetadataResponseContent> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 

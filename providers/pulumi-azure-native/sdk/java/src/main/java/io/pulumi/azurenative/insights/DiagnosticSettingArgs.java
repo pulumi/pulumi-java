@@ -25,7 +25,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventHubAuthorizationRuleId")
       private final @Nullable Output<String> eventHubAuthorizationRuleId;
 
-    public Output<String> getEventHubAuthorizationRuleId() {
+    public Output<String> eventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId == null ? Codegen.empty() : this.eventHubAuthorizationRuleId;
     }
 
@@ -36,7 +36,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -47,7 +47,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logAnalyticsDestinationType")
       private final @Nullable Output<String> logAnalyticsDestinationType;
 
-    public Output<String> getLogAnalyticsDestinationType() {
+    public Output<String> logAnalyticsDestinationType() {
         return this.logAnalyticsDestinationType == null ? Codegen.empty() : this.logAnalyticsDestinationType;
     }
 
@@ -58,7 +58,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logs")
       private final @Nullable Output<List<LogSettingsArgs>> logs;
 
-    public Output<List<LogSettingsArgs>> getLogs() {
+    public Output<List<LogSettingsArgs>> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -69,7 +69,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metrics")
       private final @Nullable Output<List<MetricSettingsArgs>> metrics;
 
-    public Output<List<MetricSettingsArgs>> getMetrics() {
+    public Output<List<MetricSettingsArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -80,7 +80,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -102,7 +102,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> getServiceBusRuleId() {
+    public Output<String> serviceBusRuleId() {
         return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
     }
 
@@ -113,7 +113,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -124,7 +124,7 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

@@ -29,7 +29,7 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="accountDetails", required=true)
       private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
-    public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
+    public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
 
@@ -40,7 +40,7 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="logCollectionLevel")
       private final @Nullable String logCollectionLevel;
 
-    public Optional<String> getLogCollectionLevel() {
+    public Optional<String> logCollectionLevel() {
         return this.logCollectionLevel == null ? Optional.empty() : Optional.ofNullable(this.logCollectionLevel);
     }
 
@@ -51,7 +51,7 @@ public final class DataExportDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="transferConfiguration", required=true)
       private final TransferConfigurationResponse transferConfiguration;
 
-    public TransferConfigurationResponse getTransferConfiguration() {
+    public TransferConfigurationResponse transferConfiguration() {
         return this.transferConfiguration;
     }
 

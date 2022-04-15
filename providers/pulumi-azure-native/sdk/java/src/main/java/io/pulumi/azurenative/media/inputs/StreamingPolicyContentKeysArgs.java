@@ -28,7 +28,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
     @Import(name="defaultKey")
       private final @Nullable Output<DefaultKeyArgs> defaultKey;
 
-    public Output<DefaultKeyArgs> getDefaultKey() {
+    public Output<DefaultKeyArgs> defaultKey() {
         return this.defaultKey == null ? Codegen.empty() : this.defaultKey;
     }
 
@@ -39,7 +39,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
     @Import(name="keyToTrackMappings")
       private final @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
-    public Output<List<StreamingPolicyContentKeyArgs>> getKeyToTrackMappings() {
+    public Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings() {
         return this.keyToTrackMappings == null ? Codegen.empty() : this.keyToTrackMappings;
     }
 

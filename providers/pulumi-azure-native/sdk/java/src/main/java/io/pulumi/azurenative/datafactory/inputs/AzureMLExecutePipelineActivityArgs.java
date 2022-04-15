@@ -32,7 +32,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="continueOnStepFailure")
       private final @Nullable Output<Object> continueOnStepFailure;
 
-    public Output<Object> getContinueOnStepFailure() {
+    public Output<Object> continueOnStepFailure() {
         return this.continueOnStepFailure == null ? Codegen.empty() : this.continueOnStepFailure;
     }
 
@@ -43,7 +43,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="dataPathAssignments")
       private final @Nullable Output<Object> dataPathAssignments;
 
-    public Output<Object> getDataPathAssignments() {
+    public Output<Object> dataPathAssignments() {
         return this.dataPathAssignments == null ? Codegen.empty() : this.dataPathAssignments;
     }
 
@@ -54,7 +54,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -65,7 +65,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="experimentName")
       private final @Nullable Output<Object> experimentName;
 
-    public Output<Object> getExperimentName() {
+    public Output<Object> experimentName() {
         return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
@@ -87,7 +87,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -98,7 +98,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="mlParentRunId")
       private final @Nullable Output<Object> mlParentRunId;
 
-    public Output<Object> getMlParentRunId() {
+    public Output<Object> mlParentRunId() {
         return this.mlParentRunId == null ? Codegen.empty() : this.mlParentRunId;
     }
 
@@ -109,7 +109,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="mlPipelineEndpointId")
       private final @Nullable Output<Object> mlPipelineEndpointId;
 
-    public Output<Object> getMlPipelineEndpointId() {
+    public Output<Object> mlPipelineEndpointId() {
         return this.mlPipelineEndpointId == null ? Codegen.empty() : this.mlPipelineEndpointId;
     }
 
@@ -120,7 +120,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="mlPipelineId")
       private final @Nullable Output<Object> mlPipelineId;
 
-    public Output<Object> getMlPipelineId() {
+    public Output<Object> mlPipelineId() {
         return this.mlPipelineId == null ? Codegen.empty() : this.mlPipelineId;
     }
 
@@ -131,7 +131,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="mlPipelineParameters")
       private final @Nullable Output<Object> mlPipelineParameters;
 
-    public Output<Object> getMlPipelineParameters() {
+    public Output<Object> mlPipelineParameters() {
         return this.mlPipelineParameters == null ? Codegen.empty() : this.mlPipelineParameters;
     }
 
@@ -142,7 +142,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -153,7 +153,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -165,7 +165,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -176,7 +176,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
@@ -187,7 +187,7 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     @Import(name="version")
       private final @Nullable Output<Object> version;
 
-    public Output<Object> getVersion() {
+    public Output<Object> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

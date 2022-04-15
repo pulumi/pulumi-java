@@ -27,7 +27,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataStringComparisonBehavior")
       private final @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
-    public Output<Either<String,DataStringComparisonBehavior>> getDataStringComparisonBehavior() {
+    public Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior() {
         return this.dataStringComparisonBehavior == null ? Codegen.empty() : this.dataStringComparisonBehavior;
     }
 
@@ -38,7 +38,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -49,7 +49,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyProperties", required=true)
       private final Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
-    public Output<List<ReferenceDataSetKeyPropertyArgs>> getKeyProperties() {
+    public Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties() {
         return this.keyProperties;
     }
 
@@ -60,7 +60,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -71,7 +71,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="referenceDataSetName")
       private final @Nullable Output<String> referenceDataSetName;
 
-    public Output<String> getReferenceDataSetName() {
+    public Output<String> referenceDataSetName() {
         return this.referenceDataSetName == null ? Codegen.empty() : this.referenceDataSetName;
     }
 
@@ -82,7 +82,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 

@@ -26,7 +26,7 @@ public final class FhirServiceExportConfigurationArgs extends io.pulumi.resource
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 

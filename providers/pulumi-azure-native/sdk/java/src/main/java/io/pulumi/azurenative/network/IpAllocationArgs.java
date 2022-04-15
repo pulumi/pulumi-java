@@ -27,7 +27,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocationTags")
       private final @Nullable Output<Map<String,String>> allocationTags;
 
-    public Output<Map<String,String>> getAllocationTags() {
+    public Output<Map<String,String>> allocationTags() {
         return this.allocationTags == null ? Codegen.empty() : this.allocationTags;
     }
 
@@ -38,7 +38,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocationName")
       private final @Nullable Output<String> ipAllocationName;
 
-    public Output<String> getIpAllocationName() {
+    public Output<String> ipAllocationName() {
         return this.ipAllocationName == null ? Codegen.empty() : this.ipAllocationName;
     }
 
@@ -60,7 +60,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamAllocationId")
       private final @Nullable Output<String> ipamAllocationId;
 
-    public Output<String> getIpamAllocationId() {
+    public Output<String> ipamAllocationId() {
         return this.ipamAllocationId == null ? Codegen.empty() : this.ipamAllocationId;
     }
 
@@ -71,7 +71,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -93,7 +93,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> getPrefixLength() {
+    public Output<Integer> prefixLength() {
         return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
     }
 
@@ -104,7 +104,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefixType")
       private final @Nullable Output<Either<String,IPVersion>> prefixType;
 
-    public Output<Either<String,IPVersion>> getPrefixType() {
+    public Output<Either<String,IPVersion>> prefixType() {
         return this.prefixType == null ? Codegen.empty() : this.prefixType;
     }
 
@@ -115,7 +115,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,7 +126,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,IpAllocationType>> type;
 
-    public Output<Either<String,IpAllocationType>> getType() {
+    public Output<Either<String,IpAllocationType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

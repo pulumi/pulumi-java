@@ -46,28 +46,28 @@ public final class GetOutboundFirewallRuleResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the outbound rule.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

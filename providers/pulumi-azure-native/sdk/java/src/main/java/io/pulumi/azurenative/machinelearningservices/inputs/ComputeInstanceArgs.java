@@ -27,7 +27,7 @@ public final class ComputeInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="computeLocation")
       private final @Nullable Output<String> computeLocation;
 
-    public Output<String> getComputeLocation() {
+    public Output<String> computeLocation() {
         return this.computeLocation == null ? Codegen.empty() : this.computeLocation;
     }
 
@@ -39,7 +39,7 @@ public final class ComputeInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -50,7 +50,7 @@ public final class ComputeInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class ComputeInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<ComputeInstancePropertiesArgs> properties;
 
-    public Output<ComputeInstancePropertiesArgs> getProperties() {
+    public Output<ComputeInstancePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -72,7 +72,7 @@ public final class ComputeInstanceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

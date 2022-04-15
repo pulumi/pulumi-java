@@ -17,21 +17,21 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     @Import(name="crossResourceGroupMoveEnabled")
       private final @Nullable Boolean crossResourceGroupMoveEnabled;
 
-    public Optional<Boolean> getCrossResourceGroupMoveEnabled() {
+    public Optional<Boolean> crossResourceGroupMoveEnabled() {
         return this.crossResourceGroupMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
 
     @Import(name="crossSubscriptionMoveEnabled")
       private final @Nullable Boolean crossSubscriptionMoveEnabled;
 
-    public Optional<Boolean> getCrossSubscriptionMoveEnabled() {
+    public Optional<Boolean> crossSubscriptionMoveEnabled() {
         return this.crossSubscriptionMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
 
     @Import(name="validationRequired")
       private final @Nullable Boolean validationRequired;
 
-    public Optional<Boolean> getValidationRequired() {
+    public Optional<Boolean> validationRequired() {
         return this.validationRequired == null ? Optional.empty() : Optional.ofNullable(this.validationRequired);
     }
 

@@ -26,7 +26,7 @@ public final class ExpressRouteCircuitPeeringIdResponse {
      * The ID of the ExpressRoute circuit peering.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

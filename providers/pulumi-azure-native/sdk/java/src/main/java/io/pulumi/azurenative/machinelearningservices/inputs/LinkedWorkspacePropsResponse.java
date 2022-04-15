@@ -25,7 +25,7 @@ public final class LinkedWorkspacePropsResponse extends io.pulumi.resources.Invo
     @Import(name="linkedWorkspaceResourceId")
       private final @Nullable String linkedWorkspaceResourceId;
 
-    public Optional<String> getLinkedWorkspaceResourceId() {
+    public Optional<String> linkedWorkspaceResourceId() {
         return this.linkedWorkspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
 
@@ -36,7 +36,7 @@ public final class LinkedWorkspacePropsResponse extends io.pulumi.resources.Invo
     @Import(name="userAssignedIdentityResourceId")
       private final @Nullable String userAssignedIdentityResourceId;
 
-    public Optional<String> getUserAssignedIdentityResourceId() {
+    public Optional<String> userAssignedIdentityResourceId() {
         return this.userAssignedIdentityResourceId == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
 

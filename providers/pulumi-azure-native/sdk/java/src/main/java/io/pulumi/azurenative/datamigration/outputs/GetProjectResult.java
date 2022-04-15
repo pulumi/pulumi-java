@@ -112,84 +112,84 @@ public final class GetProjectResult {
      * UTC Date and time when project was created
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * List of DatabaseInfo
      * 
     */
-    public List<DatabaseInfoResponse> getDatabasesInfo() {
+    public List<DatabaseInfoResponse> databasesInfo() {
         return this.databasesInfo == null ? List.of() : this.databasesInfo;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The project's provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Information for connecting to source
      * 
     */
-    public Optional<Object> getSourceConnectionInfo() {
+    public Optional<Object> sourceConnectionInfo() {
         return Optional.ofNullable(this.sourceConnectionInfo);
     }
     /**
      * Source platform for the project
      * 
     */
-    public String getSourcePlatform() {
+    public String sourcePlatform() {
         return this.sourcePlatform;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Information for connecting to target
      * 
     */
-    public Optional<Object> getTargetConnectionInfo() {
+    public Optional<Object> targetConnectionInfo() {
         return Optional.ofNullable(this.targetConnectionInfo);
     }
     /**
      * Target platform for the project
      * 
     */
-    public String getTargetPlatform() {
+    public String targetPlatform() {
         return this.targetPlatform;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class ResourceIdResponse {
      * The ID of the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

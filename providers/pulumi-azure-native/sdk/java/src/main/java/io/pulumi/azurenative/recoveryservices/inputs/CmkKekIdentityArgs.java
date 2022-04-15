@@ -27,7 +27,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useSystemAssignedIdentity")
       private final @Nullable Output<Boolean> useSystemAssignedIdentity;
 
-    public Output<Boolean> getUseSystemAssignedIdentity() {
+    public Output<Boolean> useSystemAssignedIdentity() {
         return this.useSystemAssignedIdentity == null ? Codegen.empty() : this.useSystemAssignedIdentity;
     }
 
@@ -38,7 +38,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 

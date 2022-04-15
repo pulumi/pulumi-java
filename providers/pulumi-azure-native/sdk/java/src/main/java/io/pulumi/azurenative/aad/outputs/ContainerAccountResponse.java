@@ -41,21 +41,21 @@ public final class ContainerAccountResponse {
      * The account name
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The account password
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The account spn
      * 
     */
-    public Optional<String> getSpn() {
+    public Optional<String> spn() {
         return Optional.ofNullable(this.spn);
     }
 

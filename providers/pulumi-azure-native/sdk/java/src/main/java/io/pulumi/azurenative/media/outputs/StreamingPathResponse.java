@@ -41,21 +41,21 @@ public final class StreamingPathResponse {
      * Encryption scheme
      * 
     */
-    public String getEncryptionScheme() {
+    public String encryptionScheme() {
         return this.encryptionScheme;
     }
     /**
      * Streaming paths for each protocol and encryptionScheme pair
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
      * Streaming protocol
      * 
     */
-    public String getStreamingProtocol() {
+    public String streamingProtocol() {
         return this.streamingProtocol;
     }
 

@@ -24,7 +24,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -46,7 +46,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

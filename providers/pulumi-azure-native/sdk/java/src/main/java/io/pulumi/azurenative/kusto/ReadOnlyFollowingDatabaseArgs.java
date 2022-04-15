@@ -22,7 +22,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,7 +33,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -44,7 +44,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
 
-    public Output<String> getHotCachePeriod() {
+    public Output<String> hotCachePeriod() {
         return this.hotCachePeriod == null ? Codegen.empty() : this.hotCachePeriod;
     }
 
@@ -56,7 +56,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -78,7 +78,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

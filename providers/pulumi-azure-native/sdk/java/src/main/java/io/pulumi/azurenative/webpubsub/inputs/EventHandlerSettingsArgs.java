@@ -29,7 +29,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="items")
       private final @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
-    public Output<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
+    public Output<Map<String,List<EventHandlerTemplateArgs>>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

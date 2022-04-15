@@ -25,7 +25,7 @@ public final class PngFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filenamePattern", required=true)
       private final Output<String> filenamePattern;
 
-    public Output<String> getFilenamePattern() {
+    public Output<String> filenamePattern() {
         return this.filenamePattern;
     }
 
@@ -37,7 +37,7 @@ public final class PngFormatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

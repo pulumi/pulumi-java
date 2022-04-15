@@ -23,7 +23,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
     @Import(name="appKey", required=true)
       private final String appKey;
 
-    public String getAppKey() {
+    public String appKey() {
         return this.appKey;
     }
 
@@ -34,7 +34,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
     @Import(name="applicationId", required=true)
       private final String applicationId;
 
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
 
@@ -45,7 +45,7 @@ public final class AzureActiveDirectoryAppResponse extends io.pulumi.resources.I
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

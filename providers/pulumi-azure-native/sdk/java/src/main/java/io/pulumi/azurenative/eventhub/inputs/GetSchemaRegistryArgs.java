@@ -19,7 +19,7 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="schemaGroupName", required=true)
       private final String schemaGroupName;
 
-    public String getSchemaGroupName() {
+    public String schemaGroupName() {
         return this.schemaGroupName;
     }
 

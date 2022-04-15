@@ -144,119 +144,119 @@ public final class GetEnvironmentResult {
      * The name or email address of the user who has claimed the environment
      * 
     */
-    public String getClaimedByUserName() {
+    public String claimedByUserName() {
         return this.claimedByUserName;
     }
     /**
      * The AAD object Id of the user who has claimed the environment
      * 
     */
-    public String getClaimedByUserObjectId() {
+    public String claimedByUserObjectId() {
         return this.claimedByUserObjectId;
     }
     /**
      * The user principal Id of the user who has claimed the environment
      * 
     */
-    public String getClaimedByUserPrincipalId() {
+    public String claimedByUserPrincipalId() {
         return this.claimedByUserPrincipalId;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Is the environment claimed or not
      * 
     */
-    public Boolean getIsClaimed() {
+    public Boolean isClaimed() {
         return this.isClaimed;
     }
     /**
      * Last known power state of the environment
      * 
     */
-    public String getLastKnownPowerState() {
+    public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
     */
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network details of the environment
      * 
     */
-    public NetworkInterfaceResponse getNetworkInterface() {
+    public NetworkInterfaceResponse networkInterface() {
         return this.networkInterface;
     }
     /**
      * When the password was last reset on the environment.
      * 
     */
-    public String getPasswordLastReset() {
+    public String passwordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The set of a VM and the setting id it was created for
      * 
     */
-    public Optional<ResourceSetResponse> getResourceSets() {
+    public Optional<ResourceSetResponse> resourceSets() {
         return Optional.ofNullable(this.resourceSets);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * How long the environment has been used by a lab user
      * 
     */
-    public String getTotalUsage() {
+    public String totalUsage() {
         return this.totalUsage;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public Optional<String> getUniqueIdentifier() {
+    public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
 

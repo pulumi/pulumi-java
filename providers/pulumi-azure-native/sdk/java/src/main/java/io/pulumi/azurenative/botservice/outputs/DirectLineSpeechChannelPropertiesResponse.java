@@ -63,42 +63,42 @@ public final class DirectLineSpeechChannelPropertiesResponse {
      * The cognitive service region with this channel registration.
      * 
     */
-    public String getCognitiveServiceRegion() {
+    public String cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
     /**
      * The cognitive service subscription key to use with this channel registration.
      * 
     */
-    public String getCognitiveServiceSubscriptionKey() {
+    public String cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
     /**
      * Custom voice deployment id (optional).
      * 
     */
-    public Optional<String> getCustomSpeechModelId() {
+    public Optional<String> customSpeechModelId() {
         return Optional.ofNullable(this.customSpeechModelId);
     }
     /**
      * Custom speech model id (optional).
      * 
     */
-    public Optional<String> getCustomVoiceDeploymentId() {
+    public Optional<String> customVoiceDeploymentId() {
         return Optional.ofNullable(this.customVoiceDeploymentId);
     }
     /**
      * Make this a default bot for chosen cognitive service account.
      * 
     */
-    public Optional<Boolean> getIsDefaultBotForCogSvcAccount() {
+    public Optional<Boolean> isDefaultBotForCogSvcAccount() {
         return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
     /**
      * Whether this channel is enabled or not.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
 

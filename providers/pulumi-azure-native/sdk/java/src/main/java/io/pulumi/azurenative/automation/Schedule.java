@@ -46,7 +46,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the advanced schedule.
      * 
      */
-    public Output</* @Nullable */ AdvancedScheduleResponse> getAdvancedSchedule() {
+    public Output</* @Nullable */ AdvancedScheduleResponse> advancedSchedule() {
         return this.advancedSchedule;
     }
     /**
@@ -60,7 +60,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -74,7 +74,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the end time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> getExpiryTime() {
+    public Output</* @Nullable */ String> expiryTime() {
         return this.expiryTime;
     }
     /**
@@ -102,7 +102,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the expiry time's offset in minutes.
      * 
      */
-    public Output</* @Nullable */ Double> getExpiryTimeOffsetMinutes() {
+    public Output</* @Nullable */ Double> expiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes;
     }
     /**
@@ -116,7 +116,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the frequency of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> getFrequency() {
+    public Output</* @Nullable */ String> frequency() {
         return this.frequency;
     }
     /**
@@ -130,7 +130,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the interval of the schedule.
      * 
      */
-    public Output</* @Nullable */ Object> getInterval() {
+    public Output</* @Nullable */ Object> interval() {
         return this.interval;
     }
     /**
@@ -144,7 +144,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a value indicating whether this schedule is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -158,7 +158,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -172,7 +172,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -186,7 +186,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the next run time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> getNextRun() {
+    public Output</* @Nullable */ String> nextRun() {
         return this.nextRun;
     }
     /**
@@ -200,7 +200,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the next run time's offset in minutes.
      * 
      */
-    public Output</* @Nullable */ Double> getNextRunOffsetMinutes() {
+    public Output</* @Nullable */ Double> nextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes;
     }
     /**
@@ -214,7 +214,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the start time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -228,7 +228,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets the start time's offset in minutes.
      * 
      */
-    public Output<Double> getStartTimeOffsetMinutes() {
+    public Output<Double> startTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
     /**
@@ -242,7 +242,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the time zone of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> getTimeZone() {
+    public Output</* @Nullable */ String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -256,7 +256,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

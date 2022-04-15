@@ -49,28 +49,28 @@ public final class AddRemoveReplicaScalingMechanismResponse {
      * Expected value is 'AddRemoveReplica'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Maximum number of containers (scale up won't be performed above this number).
      * 
     */
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
     /**
      * Minimum number of containers (scale down won't be performed below this number).
      * 
     */
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
     /**
      * Each time auto scaling is performed, this number of containers will be added or removed.
      * 
     */
-    public Integer getScaleIncrement() {
+    public Integer scaleIncrement() {
         return this.scaleIncrement;
     }
 

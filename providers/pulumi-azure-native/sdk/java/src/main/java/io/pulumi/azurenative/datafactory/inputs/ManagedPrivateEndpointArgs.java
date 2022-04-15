@@ -27,7 +27,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> getFqdns() {
+    public Output<List<String>> fqdns() {
         return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 

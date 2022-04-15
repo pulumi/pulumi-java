@@ -24,7 +24,7 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -35,7 +35,7 @@ public final class LinkedTemplateArtifactResponse extends io.pulumi.resources.In
     @Import(name="template", required=true)
       private final Object template;
 
-    public Object getTemplate() {
+    public Object template() {
         return this.template;
     }
 

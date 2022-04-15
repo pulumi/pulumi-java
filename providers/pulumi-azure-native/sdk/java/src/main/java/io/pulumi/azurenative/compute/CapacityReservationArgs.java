@@ -25,7 +25,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacityReservationGroupName", required=true)
       private final Output<String> capacityReservationGroupName;
 
-    public Output<String> getCapacityReservationGroupName() {
+    public Output<String> capacityReservationGroupName() {
         return this.capacityReservationGroupName;
     }
 
@@ -36,7 +36,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacityReservationName")
       private final @Nullable Output<String> capacityReservationName;
 
-    public Output<String> getCapacityReservationName() {
+    public Output<String> capacityReservationName() {
         return this.capacityReservationName == null ? Codegen.empty() : this.capacityReservationName;
     }
 
@@ -47,7 +47,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,7 +58,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -80,7 +80,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

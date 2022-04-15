@@ -27,7 +27,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -38,7 +38,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="keyVaultId", required=true)
       private final Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -49,7 +49,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -60,7 +60,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final Output<String> serviceBusConnectionStringSecretName;
 
-    public Output<String> getServiceBusConnectionStringSecretName() {
+    public Output<String> serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
 
@@ -71,7 +71,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
@@ -82,7 +82,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="storageAccountSasSecretName", required=true)
       private final Output<String> storageAccountSasSecretName;
 
-    public Output<String> getStorageAccountSasSecretName() {
+    public Output<String> storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
 
@@ -93,7 +93,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     @Import(name="targetLocation", required=true)
       private final Output<String> targetLocation;
 
-    public Output<String> getTargetLocation() {
+    public Output<String> targetLocation() {
         return this.targetLocation;
     }
 

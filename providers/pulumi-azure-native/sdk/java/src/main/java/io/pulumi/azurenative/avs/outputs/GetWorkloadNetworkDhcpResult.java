@@ -78,56 +78,56 @@ public final class GetWorkloadNetworkDhcpResult {
      * Type of DHCP: SERVER or RELAY.
      * 
     */
-    public String getDhcpType() {
+    public String dhcpType() {
         return this.dhcpType;
     }
     /**
      * Display name of the DHCP entity.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
     */
-    public Optional<Double> getRevision() {
+    public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * NSX Segments consuming DHCP.
      * 
     */
-    public List<String> getSegments() {
+    public List<String> segments() {
         return this.segments;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

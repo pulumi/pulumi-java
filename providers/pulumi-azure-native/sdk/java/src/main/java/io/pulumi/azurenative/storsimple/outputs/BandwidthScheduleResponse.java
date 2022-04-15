@@ -49,28 +49,28 @@ public final class BandwidthScheduleResponse {
      * The days of the week when this schedule is applicable.
      * 
     */
-    public List<String> getDays() {
+    public List<String> days() {
         return this.days;
     }
     /**
      * The rate in Mbps.
      * 
     */
-    public Integer getRateInMbps() {
+    public Integer rateInMbps() {
         return this.rateInMbps;
     }
     /**
      * The start time of the schedule.
      * 
     */
-    public TimeResponse getStart() {
+    public TimeResponse start() {
         return this.start;
     }
     /**
      * The stop time of the schedule.
      * 
     */
-    public TimeResponse getStop() {
+    public TimeResponse stop() {
         return this.stop;
     }
 

@@ -37,7 +37,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -51,7 +51,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getEnabledState() {
+    public Output</* @Nullable */ String> enabledState() {
         return this.enabledState;
     }
     /**
@@ -65,7 +65,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -79,7 +79,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -93,7 +93,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -107,7 +107,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
      */
-    public Output</* @Nullable */ Integer> getOriginResponseTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> originResponseTimeoutSeconds() {
         return this.originResponseTimeoutSeconds;
     }
     /**
@@ -121,7 +121,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -135,7 +135,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -149,7 +149,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -163,7 +163,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesArgs extends io.pul
     @Import(name="input")
       private final @Nullable Output<ConnectToSourceSqlServerTaskInputArgs> input;
 
-    public Output<ConnectToSourceSqlServerTaskInputArgs> getInput() {
+    public Output<ConnectToSourceSqlServerTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesArgs extends io.pul
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

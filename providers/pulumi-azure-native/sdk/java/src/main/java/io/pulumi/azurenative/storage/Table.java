@@ -42,7 +42,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Table name under the specified account
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
     /**
@@ -70,7 +70,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

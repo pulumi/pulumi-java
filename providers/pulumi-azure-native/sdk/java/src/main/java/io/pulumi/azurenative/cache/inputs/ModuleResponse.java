@@ -25,7 +25,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="args")
       private final @Nullable String args;
 
-    public Optional<String> getArgs() {
+    public Optional<String> args() {
         return this.args == null ? Optional.empty() : Optional.ofNullable(this.args);
     }
 
@@ -36,7 +36,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

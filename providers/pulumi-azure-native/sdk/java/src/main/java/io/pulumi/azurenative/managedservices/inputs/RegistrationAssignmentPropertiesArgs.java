@@ -25,7 +25,7 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
     @Import(name="registrationDefinitionId", required=true)
       private final Output<String> registrationDefinitionId;
 
-    public Output<String> getRegistrationDefinitionId() {
+    public Output<String> registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
 

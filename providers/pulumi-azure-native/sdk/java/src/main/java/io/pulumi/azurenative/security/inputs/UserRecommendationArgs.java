@@ -26,7 +26,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="recommendationAction")
       private final @Nullable Output<String> recommendationAction;
 
-    public Output<String> getRecommendationAction() {
+    public Output<String> recommendationAction() {
         return this.recommendationAction == null ? Codegen.empty() : this.recommendationAction;
     }
 
@@ -37,7 +37,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

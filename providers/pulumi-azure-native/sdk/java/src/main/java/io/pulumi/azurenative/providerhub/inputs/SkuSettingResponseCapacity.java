@@ -18,28 +18,28 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
     @Import(name="default")
       private final @Nullable Integer default_;
 
-    public Optional<Integer> getDefault_() {
+    public Optional<Integer> default_() {
         return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
     @Import(name="maximum")
       private final @Nullable Integer maximum;
 
-    public Optional<Integer> getMaximum() {
+    public Optional<Integer> maximum() {
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
     }
 
     @Import(name="minimum", required=true)
       private final Integer minimum;
 
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
 
     @Import(name="scaleType")
       private final @Nullable String scaleType;
 
-    public Optional<String> getScaleType() {
+    public Optional<String> scaleType() {
         return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
     }
 

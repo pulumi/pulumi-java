@@ -28,7 +28,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="author")
       private final @Nullable Output<String> author;
 
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author == null ? Codegen.empty() : this.author;
     }
 
@@ -39,7 +39,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="galleries", required=true)
       private final Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
+    public Output<List<WorkbookTemplateGalleryArgs>> galleries() {
         return this.galleries;
     }
 
@@ -50,7 +50,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="localized")
       private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
-    public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
+    public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized() {
         return this.localized == null ? Codegen.empty() : this.localized;
     }
 
@@ -61,7 +61,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -83,7 +83,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -105,7 +105,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -116,7 +116,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="templateData", required=true)
       private final Output<Object> templateData;
 
-    public Output<Object> getTemplateData() {
+    public Output<Object> templateData() {
         return this.templateData;
     }
 

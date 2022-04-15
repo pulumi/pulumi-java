@@ -55,14 +55,14 @@ public final class EventChannelFilterResponse {
      * An array of advanced filters that are used for filtering event channels.
      * 
     */
-    public List<Object> getAdvancedFilters() {
+    public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
     /**
      * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
      * 
     */
-    public Optional<Boolean> getEnableAdvancedFilteringOnArrays() {
+    public Optional<Boolean> enableAdvancedFilteringOnArrays() {
         return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
 

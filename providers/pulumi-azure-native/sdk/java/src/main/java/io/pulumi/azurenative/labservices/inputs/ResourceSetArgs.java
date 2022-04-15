@@ -26,7 +26,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettingId")
       private final @Nullable Output<String> resourceSettingId;
 
-    public Output<String> getResourceSettingId() {
+    public Output<String> resourceSettingId() {
         return this.resourceSettingId == null ? Codegen.empty() : this.resourceSettingId;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmResourceId")
       private final @Nullable Output<String> vmResourceId;
 
-    public Output<String> getVmResourceId() {
+    public Output<String> vmResourceId() {
         return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
     }
 

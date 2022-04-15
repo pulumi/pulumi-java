@@ -29,7 +29,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inquiryDetails")
       private final @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
-    public Output<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
+    public Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails() {
         return this.inquiryDetails == null ? Codegen.empty() : this.inquiryDetails;
     }
 
@@ -41,7 +41,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

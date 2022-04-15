@@ -29,7 +29,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,SecretObjectType>> type;
 
-    public Output<Either<String,SecretObjectType>> getType() {
+    public Output<Either<String,SecretObjectType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -42,7 +42,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

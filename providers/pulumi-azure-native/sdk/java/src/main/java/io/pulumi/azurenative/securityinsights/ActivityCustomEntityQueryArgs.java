@@ -28,7 +28,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -39,7 +39,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -61,7 +61,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="entitiesFilter")
       private final @Nullable Output<Map<String,List<String>>> entitiesFilter;
 
-    public Output<Map<String,List<String>>> getEntitiesFilter() {
+    public Output<Map<String,List<String>>> entitiesFilter() {
         return this.entitiesFilter == null ? Codegen.empty() : this.entitiesFilter;
     }
 
@@ -72,7 +72,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="entityQueryId")
       private final @Nullable Output<String> entityQueryId;
 
-    public Output<String> getEntityQueryId() {
+    public Output<String> entityQueryId() {
         return this.entityQueryId == null ? Codegen.empty() : this.entityQueryId;
     }
 
@@ -83,7 +83,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="inputEntityType")
       private final @Nullable Output<Either<String,EntityType>> inputEntityType;
 
-    public Output<Either<String,EntityType>> getInputEntityType() {
+    public Output<Either<String,EntityType>> inputEntityType() {
         return this.inputEntityType == null ? Codegen.empty() : this.inputEntityType;
     }
 
@@ -95,7 +95,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -106,7 +106,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -117,7 +117,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="queryDefinitions")
       private final @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
-    public Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> getQueryDefinitions() {
+    public Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions() {
         return this.queryDefinitions == null ? Codegen.empty() : this.queryDefinitions;
     }
 
@@ -128,7 +128,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="requiredInputFieldsSets")
       private final @Nullable Output<List<List<String>>> requiredInputFieldsSets;
 
-    public Output<List<List<String>>> getRequiredInputFieldsSets() {
+    public Output<List<List<String>>> requiredInputFieldsSets() {
         return this.requiredInputFieldsSets == null ? Codegen.empty() : this.requiredInputFieldsSets;
     }
 
@@ -139,7 +139,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,7 +150,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName == null ? Codegen.empty() : this.templateName;
     }
 
@@ -161,7 +161,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -172,7 +172,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

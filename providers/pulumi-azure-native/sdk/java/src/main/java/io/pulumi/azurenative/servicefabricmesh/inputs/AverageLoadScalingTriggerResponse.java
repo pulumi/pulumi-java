@@ -27,7 +27,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -38,7 +38,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
     @Import(name="lowerLoadThreshold", required=true)
       private final Double lowerLoadThreshold;
 
-    public Double getLowerLoadThreshold() {
+    public Double lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
 
@@ -49,7 +49,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
     @Import(name="metric", required=true)
       private final AutoScalingResourceMetricResponse metric;
 
-    public AutoScalingResourceMetricResponse getMetric() {
+    public AutoScalingResourceMetricResponse metric() {
         return this.metric;
     }
 
@@ -60,7 +60,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
     @Import(name="scaleIntervalInSeconds", required=true)
       private final Integer scaleIntervalInSeconds;
 
-    public Integer getScaleIntervalInSeconds() {
+    public Integer scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
 
@@ -71,7 +71,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
     @Import(name="upperLoadThreshold", required=true)
       private final Double upperLoadThreshold;
 
-    public Double getUpperLoadThreshold() {
+    public Double upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 

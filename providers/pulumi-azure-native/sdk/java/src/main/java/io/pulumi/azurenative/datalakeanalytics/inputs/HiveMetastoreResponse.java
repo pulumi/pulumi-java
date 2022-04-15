@@ -19,7 +19,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -41,7 +41,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="nestedResourceProvisioningState", required=true)
       private final String nestedResourceProvisioningState;
 
-    public String getNestedResourceProvisioningState() {
+    public String nestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
     }
 
@@ -63,7 +63,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -74,7 +74,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
-    public String getRuntimeVersion() {
+    public String runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -85,7 +85,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="serverUri", required=true)
       private final String serverUri;
 
-    public String getServerUri() {
+    public String serverUri() {
         return this.serverUri;
     }
 
@@ -96,7 +96,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -107,7 +107,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

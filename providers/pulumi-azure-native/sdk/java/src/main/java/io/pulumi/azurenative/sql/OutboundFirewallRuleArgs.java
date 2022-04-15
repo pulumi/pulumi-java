@@ -18,7 +18,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="outboundRuleFqdn")
       private final @Nullable Output<String> outboundRuleFqdn;
 
-    public Output<String> getOutboundRuleFqdn() {
+    public Output<String> outboundRuleFqdn() {
         return this.outboundRuleFqdn == null ? Codegen.empty() : this.outboundRuleFqdn;
     }
 
@@ -29,7 +29,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -40,7 +40,7 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

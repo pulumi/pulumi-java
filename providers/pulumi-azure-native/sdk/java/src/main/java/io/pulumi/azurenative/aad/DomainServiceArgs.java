@@ -31,7 +31,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainConfigurationType")
       private final @Nullable Output<String> domainConfigurationType;
 
-    public Output<String> getDomainConfigurationType() {
+    public Output<String> domainConfigurationType() {
         return this.domainConfigurationType == null ? Codegen.empty() : this.domainConfigurationType;
     }
 
@@ -42,7 +42,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -53,7 +53,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainSecuritySettings")
       private final @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
 
-    public Output<DomainSecuritySettingsArgs> getDomainSecuritySettings() {
+    public Output<DomainSecuritySettingsArgs> domainSecuritySettings() {
         return this.domainSecuritySettings == null ? Codegen.empty() : this.domainSecuritySettings;
     }
 
@@ -64,7 +64,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainServiceName")
       private final @Nullable Output<String> domainServiceName;
 
-    public Output<String> getDomainServiceName() {
+    public Output<String> domainServiceName() {
         return this.domainServiceName == null ? Codegen.empty() : this.domainServiceName;
     }
 
@@ -75,7 +75,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filteredSync")
       private final @Nullable Output<Either<String,FilteredSync>> filteredSync;
 
-    public Output<Either<String,FilteredSync>> getFilteredSync() {
+    public Output<Either<String,FilteredSync>> filteredSync() {
         return this.filteredSync == null ? Codegen.empty() : this.filteredSync;
     }
 
@@ -86,7 +86,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ldapsSettings")
       private final @Nullable Output<LdapsSettingsArgs> ldapsSettings;
 
-    public Output<LdapsSettingsArgs> getLdapsSettings() {
+    public Output<LdapsSettingsArgs> ldapsSettings() {
         return this.ldapsSettings == null ? Codegen.empty() : this.ldapsSettings;
     }
 
@@ -97,7 +97,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -108,7 +108,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> getNotificationSettings() {
+    public Output<NotificationSettingsArgs> notificationSettings() {
         return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
     }
 
@@ -119,7 +119,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicaSets")
       private final @Nullable Output<List<ReplicaSetArgs>> replicaSets;
 
-    public Output<List<ReplicaSetArgs>> getReplicaSets() {
+    public Output<List<ReplicaSetArgs>> replicaSets() {
         return this.replicaSets == null ? Codegen.empty() : this.replicaSets;
     }
 
@@ -130,7 +130,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceForestSettings")
       private final @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
 
-    public Output<ResourceForestSettingsArgs> getResourceForestSettings() {
+    public Output<ResourceForestSettingsArgs> resourceForestSettings() {
         return this.resourceForestSettings == null ? Codegen.empty() : this.resourceForestSettings;
     }
 
@@ -141,7 +141,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -152,7 +152,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -163,7 +163,7 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

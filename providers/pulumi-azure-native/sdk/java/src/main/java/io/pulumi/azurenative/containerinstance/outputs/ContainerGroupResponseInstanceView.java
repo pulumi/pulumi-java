@@ -34,14 +34,14 @@ public final class ContainerGroupResponseInstanceView {
      * The events of this container group.
      * 
     */
-    public List<EventResponse> getEvents() {
+    public List<EventResponse> events() {
         return this.events;
     }
     /**
      * The state of the container group. Only valid in response.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

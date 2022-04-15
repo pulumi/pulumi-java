@@ -49,7 +49,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The total amount of cost to track with the budget
      * 
      */
-    public Output<Double> getAmount() {
+    public Output<Double> amount() {
         return this.amount;
     }
     /**
@@ -63,7 +63,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The category of the budget, whether the budget tracks cost or usage.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -77,7 +77,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The current amount of cost which is being tracked for a budget.
      * 
      */
-    public Output<CurrentSpendResponse> getCurrentSpend() {
+    public Output<CurrentSpendResponse> currentSpend() {
         return this.currentSpend;
     }
     /**
@@ -91,7 +91,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -105,7 +105,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return May be used to filter budgets by user-specified dimensions and/or tags.
      * 
      */
-    public Output</* @Nullable */ BudgetFilterResponse> getFilter() {
+    public Output</* @Nullable */ BudgetFilterResponse> filter() {
         return this.filter;
     }
     /**
@@ -119,7 +119,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The forecasted cost which is being tracked for a budget.
      * 
      */
-    public Output<ForecastSpendResponse> getForecastSpend() {
+    public Output<ForecastSpendResponse> forecastSpend() {
         return this.forecastSpend;
     }
     /**
@@ -133,7 +133,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
      */
-    public Output</* @Nullable */ Map<String,NotificationResponse>> getNotifications() {
+    public Output</* @Nullable */ Map<String,NotificationResponse>> notifications() {
         return this.notifications;
     }
     /**
@@ -161,7 +161,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
      */
-    public Output<String> getTimeGrain() {
+    public Output<String> timeGrain() {
         return this.timeGrain;
     }
     /**
@@ -175,7 +175,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
      */
-    public Output<BudgetTimePeriodResponse> getTimePeriod() {
+    public Output<BudgetTimePeriodResponse> timePeriod() {
         return this.timePeriod;
     }
     /**
@@ -189,7 +189,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

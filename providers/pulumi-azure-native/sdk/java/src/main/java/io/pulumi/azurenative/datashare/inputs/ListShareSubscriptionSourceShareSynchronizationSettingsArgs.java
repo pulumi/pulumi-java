@@ -21,7 +21,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -32,7 +32,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
-    public String getShareSubscriptionName() {
+    public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -54,7 +54,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

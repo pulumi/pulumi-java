@@ -41,21 +41,21 @@ public final class ResourceReferenceResponse {
      * The resource id.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

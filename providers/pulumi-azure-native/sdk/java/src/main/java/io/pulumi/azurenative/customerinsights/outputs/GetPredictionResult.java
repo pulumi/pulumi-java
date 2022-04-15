@@ -166,140 +166,140 @@ public final class GetPredictionResult {
      * Whether do auto analyze.
      * 
     */
-    public Boolean getAutoAnalyze() {
+    public Boolean autoAnalyze() {
         return this.autoAnalyze;
     }
     /**
      * Description of the prediction.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Display name of the prediction.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The prediction grades.
      * 
     */
-    public List<PredictionResponseGrades> getGrades() {
+    public List<PredictionResponseGrades> grades() {
         return this.grades == null ? List.of() : this.grades;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Interaction types involved in the prediction.
      * 
     */
-    public List<String> getInvolvedInteractionTypes() {
+    public List<String> involvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? List.of() : this.involvedInteractionTypes;
     }
     /**
      * KPI types involved in the prediction.
      * 
     */
-    public List<String> getInvolvedKpiTypes() {
+    public List<String> involvedKpiTypes() {
         return this.involvedKpiTypes == null ? List.of() : this.involvedKpiTypes;
     }
     /**
      * Relationships involved in the prediction.
      * 
     */
-    public List<String> getInvolvedRelationships() {
+    public List<String> involvedRelationships() {
         return this.involvedRelationships == null ? List.of() : this.involvedRelationships;
     }
     /**
      * Definition of the link mapping of prediction.
      * 
     */
-    public PredictionResponseMappings getMappings() {
+    public PredictionResponseMappings mappings() {
         return this.mappings;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Negative outcome expression.
      * 
     */
-    public String getNegativeOutcomeExpression() {
+    public String negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
     /**
      * Positive outcome expression.
      * 
     */
-    public String getPositiveOutcomeExpression() {
+    public String positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
     /**
      * Name of the prediction.
      * 
     */
-    public Optional<String> getPredictionName() {
+    public Optional<String> predictionName() {
         return Optional.ofNullable(this.predictionName);
     }
     /**
      * Primary profile type.
      * 
     */
-    public String getPrimaryProfileType() {
+    public String primaryProfileType() {
         return this.primaryProfileType;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Scope expression.
      * 
     */
-    public String getScopeExpression() {
+    public String scopeExpression() {
         return this.scopeExpression;
     }
     /**
      * Score label.
      * 
     */
-    public String getScoreLabel() {
+    public String scoreLabel() {
         return this.scoreLabel;
     }
     /**
      * System generated entities.
      * 
     */
-    public PredictionResponseSystemGeneratedEntities getSystemGeneratedEntities() {
+    public PredictionResponseSystemGeneratedEntities systemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

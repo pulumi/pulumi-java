@@ -119,42 +119,42 @@ public final class UntilActivityResponse {
      * List of activities to execute.
      * 
     */
-    public List<Object> getActivities() {
+    public List<Object> activities() {
         return this.activities;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
      * 
     */
-    public ExpressionResponse getExpression() {
+    public ExpressionResponse expression() {
         return this.expression;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getTimeout() {
+    public Optional<Object> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -162,14 +162,14 @@ public final class UntilActivityResponse {
      * Expected value is 'Until'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

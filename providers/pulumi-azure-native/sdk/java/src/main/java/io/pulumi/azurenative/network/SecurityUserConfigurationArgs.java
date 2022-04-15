@@ -25,7 +25,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="deleteExistingNSGs")
       private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
-    public Output<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
+    public Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs() {
         return this.deleteExistingNSGs == null ? Codegen.empty() : this.deleteExistingNSGs;
     }
 
@@ -47,7 +47,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -80,7 +80,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="securityType")
       private final @Nullable Output<Either<String,SecurityType>> securityType;
 
-    public Output<Either<String,SecurityType>> getSecurityType() {
+    public Output<Either<String,SecurityType>> securityType() {
         return this.securityType == null ? Codegen.empty() : this.securityType;
     }
 

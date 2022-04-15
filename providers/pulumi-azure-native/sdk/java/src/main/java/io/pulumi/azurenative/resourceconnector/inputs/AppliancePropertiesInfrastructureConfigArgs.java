@@ -28,7 +28,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     @Import(name="provider")
       private final @Nullable Output<Either<String,Provider>> provider;
 
-    public Output<Either<String,Provider>> getProvider() {
+    public Output<Either<String,Provider>> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

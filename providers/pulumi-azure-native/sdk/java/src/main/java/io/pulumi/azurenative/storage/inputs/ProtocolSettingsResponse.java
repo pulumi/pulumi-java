@@ -25,7 +25,7 @@ public final class ProtocolSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="smb")
       private final @Nullable SmbSettingResponse smb;
 
-    public Optional<SmbSettingResponse> getSmb() {
+    public Optional<SmbSettingResponse> smb() {
         return this.smb == null ? Optional.empty() : Optional.ofNullable(this.smb);
     }
 

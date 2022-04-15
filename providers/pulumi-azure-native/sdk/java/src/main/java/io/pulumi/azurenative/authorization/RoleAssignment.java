@@ -42,7 +42,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
      * 
      */
-    public Output</* @Nullable */ String> getCondition() {
+    public Output</* @Nullable */ String> condition() {
         return this.condition;
     }
     /**
@@ -56,7 +56,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Version of the condition. Currently accepted value is '2.0'
      * 
      */
-    public Output</* @Nullable */ String> getConditionVersion() {
+    public Output</* @Nullable */ String> conditionVersion() {
         return this.conditionVersion;
     }
     /**
@@ -70,7 +70,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Id of the user who created the assignment
      * 
      */
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -84,7 +84,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Time it was created
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -98,7 +98,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Id of the delegated managed identity resource
      * 
      */
-    public Output</* @Nullable */ String> getDelegatedManagedIdentityResourceId() {
+    public Output</* @Nullable */ String> delegatedManagedIdentityResourceId() {
         return this.delegatedManagedIdentityResourceId;
     }
     /**
@@ -112,7 +112,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Description of role assignment
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -126,7 +126,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The role assignment name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +140,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The principal ID.
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -154,7 +154,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The principal type of the assigned principal ID.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalType() {
+    public Output</* @Nullable */ String> principalType() {
         return this.principalType;
     }
     /**
@@ -168,7 +168,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The role definition ID.
      * 
      */
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -182,7 +182,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The role assignment scope.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -196,7 +196,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return The role assignment type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -210,7 +210,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Id of the user who updated the assignment
      * 
      */
-    public Output<String> getUpdatedBy() {
+    public Output<String> updatedBy() {
         return this.updatedBy;
     }
     /**
@@ -224,7 +224,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * @return Time it was updated
      * 
      */
-    public Output<String> getUpdatedOn() {
+    public Output<String> updatedOn() {
         return this.updatedOn;
     }
 

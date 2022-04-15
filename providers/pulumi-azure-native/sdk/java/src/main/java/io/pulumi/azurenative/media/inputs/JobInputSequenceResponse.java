@@ -27,7 +27,7 @@ public final class JobInputSequenceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="inputs")
       private final @Nullable List<JobInputClipResponse> inputs;
 
-    public List<JobInputClipResponse> getInputs() {
+    public List<JobInputClipResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
 
@@ -39,7 +39,7 @@ public final class JobInputSequenceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

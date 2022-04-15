@@ -27,7 +27,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="disablePasswordAuthentication")
       private final @Nullable Boolean disablePasswordAuthentication;
 
-    public Optional<Boolean> getDisablePasswordAuthentication() {
+    public Optional<Boolean> disablePasswordAuthentication() {
         return this.disablePasswordAuthentication == null ? Optional.empty() : Optional.ofNullable(this.disablePasswordAuthentication);
     }
 
@@ -38,7 +38,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="patchSettings")
       private final @Nullable LinuxPatchSettingsResponse patchSettings;
 
-    public Optional<LinuxPatchSettingsResponse> getPatchSettings() {
+    public Optional<LinuxPatchSettingsResponse> patchSettings() {
         return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
     }
 
@@ -49,7 +49,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="provisionVMAgent")
       private final @Nullable Boolean provisionVMAgent;
 
-    public Optional<Boolean> getProvisionVMAgent() {
+    public Optional<Boolean> provisionVMAgent() {
         return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
     }
 
@@ -60,7 +60,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
     @Import(name="ssh")
       private final @Nullable SshConfigurationResponse ssh;
 
-    public Optional<SshConfigurationResponse> getSsh() {
+    public Optional<SshConfigurationResponse> ssh() {
         return this.ssh == null ? Optional.empty() : Optional.ofNullable(this.ssh);
     }
 

@@ -26,7 +26,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -37,7 +37,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 

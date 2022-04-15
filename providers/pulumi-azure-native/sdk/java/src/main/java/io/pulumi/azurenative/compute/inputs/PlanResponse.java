@@ -25,7 +25,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="product")
       private final @Nullable String product;
 
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
     }
 
@@ -47,7 +47,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
 
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
@@ -58,7 +58,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publisher")
       private final @Nullable String publisher;
 
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 

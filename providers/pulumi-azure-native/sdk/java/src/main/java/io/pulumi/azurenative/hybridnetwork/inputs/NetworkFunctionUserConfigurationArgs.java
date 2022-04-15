@@ -30,7 +30,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     @Import(name="osProfile")
       private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
-    public Output<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
+    public Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -63,7 +63,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;
 
-    public Output<Object> getUserDataParameters() {
+    public Output<Object> userDataParameters() {
         return this.userDataParameters == null ? Codegen.empty() : this.userDataParameters;
     }
 

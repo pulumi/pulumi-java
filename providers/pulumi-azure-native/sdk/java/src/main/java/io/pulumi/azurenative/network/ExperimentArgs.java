@@ -26,7 +26,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
 
-    public Output<Either<String,State>> getEnabledState() {
+    public Output<Either<String,State>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -48,7 +48,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointA")
       private final @Nullable Output<ExperimentEndpointArgs> endpointA;
 
-    public Output<ExperimentEndpointArgs> getEndpointA() {
+    public Output<ExperimentEndpointArgs> endpointA() {
         return this.endpointA == null ? Codegen.empty() : this.endpointA;
     }
 
@@ -59,7 +59,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointB")
       private final @Nullable Output<ExperimentEndpointArgs> endpointB;
 
-    public Output<ExperimentEndpointArgs> getEndpointB() {
+    public Output<ExperimentEndpointArgs> endpointB() {
         return this.endpointB == null ? Codegen.empty() : this.endpointB;
     }
 
@@ -70,7 +70,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
+    public Output<String> experimentName() {
         return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
@@ -81,7 +81,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -103,7 +103,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

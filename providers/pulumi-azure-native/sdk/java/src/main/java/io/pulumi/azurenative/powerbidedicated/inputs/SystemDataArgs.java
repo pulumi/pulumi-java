@@ -28,7 +28,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -39,7 +39,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
@@ -50,7 +50,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,IdentityType>> createdByType;
 
-    public Output<Either<String,IdentityType>> getCreatedByType() {
+    public Output<Either<String,IdentityType>> createdByType() {
         return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
@@ -61,7 +61,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
@@ -72,7 +72,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
@@ -83,7 +83,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,IdentityType>> lastModifiedByType;
 
-    public Output<Either<String,IdentityType>> getLastModifiedByType() {
+    public Output<Either<String,IdentityType>> lastModifiedByType() {
         return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 

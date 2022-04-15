@@ -64,35 +64,35 @@ public final class ServiceBusTopicOutputDataSourceResponse {
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
      * 
     */
-    public List<String> getPropertyColumns() {
+    public List<String> propertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
     }
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getServiceBusNamespace() {
+    public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyKey() {
+    public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyName() {
+    public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
      * The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getTopicName() {
+    public Optional<String> topicName() {
         return Optional.ofNullable(this.topicName);
     }
     /**
@@ -100,7 +100,7 @@ public final class ServiceBusTopicOutputDataSourceResponse {
      * Expected value is 'Microsoft.ServiceBus/Topic'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     @Import(name="daysAfterLastAccessTimeGreaterThan")
       private final @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
-    public Output<Double> getDaysAfterLastAccessTimeGreaterThan() {
+    public Output<Double> daysAfterLastAccessTimeGreaterThan() {
         return this.daysAfterLastAccessTimeGreaterThan == null ? Codegen.empty() : this.daysAfterLastAccessTimeGreaterThan;
     }
 
@@ -37,7 +37,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     @Import(name="daysAfterModificationGreaterThan")
       private final @Nullable Output<Double> daysAfterModificationGreaterThan;
 
-    public Output<Double> getDaysAfterModificationGreaterThan() {
+    public Output<Double> daysAfterModificationGreaterThan() {
         return this.daysAfterModificationGreaterThan == null ? Codegen.empty() : this.daysAfterModificationGreaterThan;
     }
 

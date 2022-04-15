@@ -28,7 +28,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conflictLoggingRetentionInDays")
       private final @Nullable Output<Integer> conflictLoggingRetentionInDays;
 
-    public Output<Integer> getConflictLoggingRetentionInDays() {
+    public Output<Integer> conflictLoggingRetentionInDays() {
         return this.conflictLoggingRetentionInDays == null ? Codegen.empty() : this.conflictLoggingRetentionInDays;
     }
 
@@ -39,7 +39,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
 
-    public Output<Either<String,SyncConflictResolutionPolicy>> getConflictResolutionPolicy() {
+    public Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Codegen.empty() : this.conflictResolutionPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -61,7 +61,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableConflictLogging")
       private final @Nullable Output<Boolean> enableConflictLogging;
 
-    public Output<Boolean> getEnableConflictLogging() {
+    public Output<Boolean> enableConflictLogging() {
         return this.enableConflictLogging == null ? Codegen.empty() : this.enableConflictLogging;
     }
 
@@ -72,7 +72,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubDatabasePassword")
       private final @Nullable Output<String> hubDatabasePassword;
 
-    public Output<String> getHubDatabasePassword() {
+    public Output<String> hubDatabasePassword() {
         return this.hubDatabasePassword == null ? Codegen.empty() : this.hubDatabasePassword;
     }
 
@@ -83,7 +83,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubDatabaseUserName")
       private final @Nullable Output<String> hubDatabaseUserName;
 
-    public Output<String> getHubDatabaseUserName() {
+    public Output<String> hubDatabaseUserName() {
         return this.hubDatabaseUserName == null ? Codegen.empty() : this.hubDatabaseUserName;
     }
 
@@ -94,7 +94,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -105,7 +105,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,7 +116,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<SyncGroupSchemaArgs> schema;
 
-    public Output<SyncGroupSchemaArgs> getSchema() {
+    public Output<SyncGroupSchemaArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -127,7 +127,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -138,7 +138,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -149,7 +149,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncDatabaseId")
       private final @Nullable Output<String> syncDatabaseId;
 
-    public Output<String> getSyncDatabaseId() {
+    public Output<String> syncDatabaseId() {
         return this.syncDatabaseId == null ? Codegen.empty() : this.syncDatabaseId;
     }
 
@@ -160,7 +160,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName")
       private final @Nullable Output<String> syncGroupName;
 
-    public Output<String> getSyncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName == null ? Codegen.empty() : this.syncGroupName;
     }
 
@@ -171,7 +171,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usePrivateLinkConnection")
       private final @Nullable Output<Boolean> usePrivateLinkConnection;
 
-    public Output<Boolean> getUsePrivateLinkConnection() {
+    public Output<Boolean> usePrivateLinkConnection() {
         return this.usePrivateLinkConnection == null ? Codegen.empty() : this.usePrivateLinkConnection;
     }
 

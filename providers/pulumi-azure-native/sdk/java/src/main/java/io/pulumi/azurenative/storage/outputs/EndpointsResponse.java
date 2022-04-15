@@ -78,56 +78,56 @@ public final class EndpointsResponse {
      * Gets the blob endpoint.
      * 
     */
-    public String getBlob() {
+    public String blob() {
         return this.blob;
     }
     /**
      * Gets the dfs endpoint.
      * 
     */
-    public String getDfs() {
+    public String dfs() {
         return this.dfs;
     }
     /**
      * Gets the file endpoint.
      * 
     */
-    public String getFile() {
+    public String file() {
         return this.file;
     }
     /**
      * Gets the internet routing storage endpoints
      * 
     */
-    public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
+    public Optional<StorageAccountInternetEndpointsResponse> internetEndpoints() {
         return Optional.ofNullable(this.internetEndpoints);
     }
     /**
      * Gets the microsoft routing storage endpoints.
      * 
     */
-    public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
+    public Optional<StorageAccountMicrosoftEndpointsResponse> microsoftEndpoints() {
         return Optional.ofNullable(this.microsoftEndpoints);
     }
     /**
      * Gets the queue endpoint.
      * 
     */
-    public String getQueue() {
+    public String queue() {
         return this.queue;
     }
     /**
      * Gets the table endpoint.
      * 
     */
-    public String getTable() {
+    public String table() {
         return this.table;
     }
     /**
      * Gets the web endpoint.
      * 
     */
-    public String getWeb() {
+    public String web() {
         return this.web;
     }
 

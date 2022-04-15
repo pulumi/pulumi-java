@@ -28,7 +28,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -39,7 +39,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -50,7 +50,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
@@ -61,7 +61,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
-    public Output<String> getEntityPath() {
+    public Output<String> entityPath() {
         return this.entityPath == null ? Codegen.empty() : this.entityPath;
     }
 
@@ -72,7 +72,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -83,7 +83,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -94,7 +94,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -105,7 +105,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 

@@ -27,7 +27,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
+    public Output<String> backupPolicyName() {
         return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
@@ -49,7 +49,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dailyBackupsToKeep")
       private final @Nullable Output<Integer> dailyBackupsToKeep;
 
-    public Output<Integer> getDailyBackupsToKeep() {
+    public Output<Integer> dailyBackupsToKeep() {
         return this.dailyBackupsToKeep == null ? Codegen.empty() : this.dailyBackupsToKeep;
     }
 
@@ -60,7 +60,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -71,7 +71,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monthlyBackupsToKeep")
       private final @Nullable Output<Integer> monthlyBackupsToKeep;
 
-    public Output<Integer> getMonthlyBackupsToKeep() {
+    public Output<Integer> monthlyBackupsToKeep() {
         return this.monthlyBackupsToKeep == null ? Codegen.empty() : this.monthlyBackupsToKeep;
     }
 
@@ -93,7 +93,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeBackups")
       private final @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
 
-    public Output<List<VolumeBackupsArgs>> getVolumeBackups() {
+    public Output<List<VolumeBackupsArgs>> volumeBackups() {
         return this.volumeBackups == null ? Codegen.empty() : this.volumeBackups;
     }
 
@@ -126,7 +126,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumesAssigned")
       private final @Nullable Output<Integer> volumesAssigned;
 
-    public Output<Integer> getVolumesAssigned() {
+    public Output<Integer> volumesAssigned() {
         return this.volumesAssigned == null ? Codegen.empty() : this.volumesAssigned;
     }
 
@@ -137,7 +137,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weeklyBackupsToKeep")
       private final @Nullable Output<Integer> weeklyBackupsToKeep;
 
-    public Output<Integer> getWeeklyBackupsToKeep() {
+    public Output<Integer> weeklyBackupsToKeep() {
         return this.weeklyBackupsToKeep == null ? Codegen.empty() : this.weeklyBackupsToKeep;
     }
 
@@ -148,7 +148,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="yearlyBackupsToKeep")
       private final @Nullable Output<Integer> yearlyBackupsToKeep;
 
-    public Output<Integer> getYearlyBackupsToKeep() {
+    public Output<Integer> yearlyBackupsToKeep() {
         return this.yearlyBackupsToKeep == null ? Codegen.empty() : this.yearlyBackupsToKeep;
     }
 

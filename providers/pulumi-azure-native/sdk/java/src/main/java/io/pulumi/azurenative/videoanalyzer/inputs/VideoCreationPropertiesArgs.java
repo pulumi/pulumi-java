@@ -26,7 +26,7 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="retentionPeriod")
       private final @Nullable Output<String> retentionPeriod;
 
-    public Output<String> getRetentionPeriod() {
+    public Output<String> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
@@ -48,7 +48,7 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="segmentLength")
       private final @Nullable Output<String> segmentLength;
 
-    public Output<String> getSegmentLength() {
+    public Output<String> segmentLength() {
         return this.segmentLength == null ? Codegen.empty() : this.segmentLength;
     }
 
@@ -59,7 +59,7 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

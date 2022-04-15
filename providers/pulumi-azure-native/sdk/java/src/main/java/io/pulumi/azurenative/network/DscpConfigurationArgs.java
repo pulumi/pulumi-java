@@ -29,7 +29,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="destinationIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges;
 
-    public Output<List<QosIpRangeArgs>> getDestinationIpRanges() {
+    public Output<List<QosIpRangeArgs>> destinationIpRanges() {
         return this.destinationIpRanges == null ? Codegen.empty() : this.destinationIpRanges;
     }
 
@@ -40,7 +40,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="destinationPortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges;
 
-    public Output<List<QosPortRangeArgs>> getDestinationPortRanges() {
+    public Output<List<QosPortRangeArgs>> destinationPortRanges() {
         return this.destinationPortRanges == null ? Codegen.empty() : this.destinationPortRanges;
     }
 
@@ -51,7 +51,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dscpConfigurationName")
       private final @Nullable Output<String> dscpConfigurationName;
 
-    public Output<String> getDscpConfigurationName() {
+    public Output<String> dscpConfigurationName() {
         return this.dscpConfigurationName == null ? Codegen.empty() : this.dscpConfigurationName;
     }
 
@@ -62,7 +62,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -73,7 +73,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="markings")
       private final @Nullable Output<List<Integer>> markings;
 
-    public Output<List<Integer>> getMarkings() {
+    public Output<List<Integer>> markings() {
         return this.markings == null ? Codegen.empty() : this.markings;
     }
 
@@ -95,7 +95,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
-    public Output<Either<String,ProtocolType>> getProtocol() {
+    public Output<Either<String,ProtocolType>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -106,7 +106,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges;
 
-    public Output<List<QosIpRangeArgs>> getSourceIpRanges() {
+    public Output<List<QosIpRangeArgs>> sourceIpRanges() {
         return this.sourceIpRanges == null ? Codegen.empty() : this.sourceIpRanges;
     }
 
@@ -128,7 +128,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourcePortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges;
 
-    public Output<List<QosPortRangeArgs>> getSourcePortRanges() {
+    public Output<List<QosPortRangeArgs>> sourcePortRanges() {
         return this.sourcePortRanges == null ? Codegen.empty() : this.sourcePortRanges;
     }
 
@@ -139,7 +139,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -19,7 +19,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
     @Import(name="localNetworkGatewayName", required=true)
       private final String localNetworkGatewayName;
 
-    public String getLocalNetworkGatewayName() {
+    public String localNetworkGatewayName() {
         return this.localNetworkGatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

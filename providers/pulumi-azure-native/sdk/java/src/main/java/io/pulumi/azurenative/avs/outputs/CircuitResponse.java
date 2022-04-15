@@ -46,28 +46,28 @@ public final class CircuitResponse {
      * Identifier of the ExpressRoute Circuit (Microsoft Colo only)
      * 
     */
-    public String getExpressRouteID() {
+    public String expressRouteID() {
         return this.expressRouteID;
     }
     /**
      * ExpressRoute Circuit private peering identifier
      * 
     */
-    public String getExpressRoutePrivatePeeringID() {
+    public String expressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
     }
     /**
      * CIDR of primary subnet
      * 
     */
-    public String getPrimarySubnet() {
+    public String primarySubnet() {
         return this.primarySubnet;
     }
     /**
      * CIDR of secondary subnet
      * 
     */
-    public String getSecondarySubnet() {
+    public String secondarySubnet() {
         return this.secondarySubnet;
     }
 

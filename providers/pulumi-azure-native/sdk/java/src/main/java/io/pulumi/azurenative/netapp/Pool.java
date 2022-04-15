@@ -44,7 +44,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return UUID v4 used to identify the Pool
      * 
      */
-    public Output<String> getPoolId() {
+    public Output<String> poolId() {
         return this.poolId;
     }
     /**
@@ -86,7 +86,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Azure lifecycle management
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return The qos type of the pool
      * 
      */
-    public Output</* @Nullable */ String> getQosType() {
+    public Output</* @Nullable */ String> qosType() {
         return this.qosType;
     }
     /**
@@ -114,7 +114,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return The service level of the file system
      * 
      */
-    public Output<String> getServiceLevel() {
+    public Output<String> serviceLevel() {
         return this.serviceLevel;
     }
     /**
@@ -128,7 +128,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
      * 
      */
-    public Output<Double> getSize() {
+    public Output<Double> size() {
         return this.size;
     }
     /**
@@ -142,7 +142,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +156,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Total throughput of pool in Mibps
      * 
      */
-    public Output<Double> getTotalThroughputMibps() {
+    public Output<Double> totalThroughputMibps() {
         return this.totalThroughputMibps;
     }
     /**
@@ -170,7 +170,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +184,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * @return Utilized throughput of pool in Mibps
      * 
      */
-    public Output<Double> getUtilizedThroughputMibps() {
+    public Output<Double> utilizedThroughputMibps() {
         return this.utilizedThroughputMibps;
     }
 

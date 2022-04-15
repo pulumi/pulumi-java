@@ -30,7 +30,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="additionalRecipients")
       private final @Nullable Output<List<String>> additionalRecipients;
 
-    public Output<List<String>> getAdditionalRecipients() {
+    public Output<List<String>> additionalRecipients() {
         return this.additionalRecipients == null ? Codegen.empty() : this.additionalRecipients;
     }
 
@@ -41,7 +41,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="notifyDcAdmins")
       private final @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
-    public Output<Either<String,NotifyDcAdmins>> getNotifyDcAdmins() {
+    public Output<Either<String,NotifyDcAdmins>> notifyDcAdmins() {
         return this.notifyDcAdmins == null ? Codegen.empty() : this.notifyDcAdmins;
     }
 
@@ -52,7 +52,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="notifyGlobalAdmins")
       private final @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
-    public Output<Either<String,NotifyGlobalAdmins>> getNotifyGlobalAdmins() {
+    public Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins() {
         return this.notifyGlobalAdmins == null ? Codegen.empty() : this.notifyGlobalAdmins;
     }
 

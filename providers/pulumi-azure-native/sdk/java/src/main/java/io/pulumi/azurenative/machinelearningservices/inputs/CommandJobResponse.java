@@ -39,7 +39,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="codeId")
       private final @Nullable String codeId;
 
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
@@ -50,7 +50,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="command", required=true)
       private final String command;
 
-    public String getCommand() {
+    public String command() {
         return this.command;
     }
 
@@ -61,7 +61,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="compute", required=true)
       private final ComputeConfigurationResponse compute;
 
-    public ComputeConfigurationResponse getCompute() {
+    public ComputeConfigurationResponse compute() {
         return this.compute;
     }
 
@@ -72,7 +72,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -83,7 +83,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="distribution")
       private final @Nullable Object distribution;
 
-    public Object getDistribution() {
+    public Object distribution() {
         return this.distribution == null ? null : this.distribution;
     }
 
@@ -94,7 +94,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentId")
       private final @Nullable String environmentId;
 
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
@@ -105,7 +105,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
@@ -116,7 +116,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
       private final @Nullable String experimentName;
 
-    public Optional<String> getExperimentName() {
+    public Optional<String> experimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
     }
 
@@ -128,7 +128,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="identity")
       private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
-    public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
+    public Either<AmlTokenResponse,ManagedIdentityResponse> identity() {
         return this.identity == null ? null : this.identity;
     }
 
@@ -139,7 +139,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputDataBindings")
       private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
-    public Map<String,InputDataBindingResponse> getInputDataBindings() {
+    public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
 
@@ -151,7 +151,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interactionEndpoints", required=true)
       private final Map<String,JobEndpointResponse> interactionEndpoints;
 
-    public Map<String,JobEndpointResponse> getInteractionEndpoints() {
+    public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
 
@@ -163,7 +163,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobType", required=true)
       private final String jobType;
 
-    public String getJobType() {
+    public String jobType() {
         return this.jobType;
     }
 
@@ -174,7 +174,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
       private final JobOutputResponse output;
 
-    public JobOutputResponse getOutput() {
+    public JobOutputResponse output() {
         return this.output;
     }
 
@@ -185,7 +185,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputDataBindings")
       private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
-    public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
+    public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
 
@@ -196,7 +196,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters", required=true)
       private final Object parameters;
 
-    public Object getParameters() {
+    public Object parameters() {
         return this.parameters;
     }
 
@@ -208,7 +208,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -219,7 +219,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -230,7 +230,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -241,7 +241,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -252,7 +252,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -263,7 +263,7 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

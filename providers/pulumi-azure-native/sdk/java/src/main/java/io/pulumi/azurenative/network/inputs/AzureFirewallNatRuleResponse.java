@@ -26,7 +26,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
@@ -48,7 +48,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
 
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
@@ -59,7 +59,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="protocols")
       private final @Nullable List<String> protocols;
 
-    public List<String> getProtocols() {
+    public List<String> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
@@ -81,7 +81,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
@@ -92,7 +92,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
@@ -103,7 +103,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="translatedAddress")
       private final @Nullable String translatedAddress;
 
-    public Optional<String> getTranslatedAddress() {
+    public Optional<String> translatedAddress() {
         return this.translatedAddress == null ? Optional.empty() : Optional.ofNullable(this.translatedAddress);
     }
 
@@ -114,7 +114,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="translatedFqdn")
       private final @Nullable String translatedFqdn;
 
-    public Optional<String> getTranslatedFqdn() {
+    public Optional<String> translatedFqdn() {
         return this.translatedFqdn == null ? Optional.empty() : Optional.ofNullable(this.translatedFqdn);
     }
 
@@ -125,7 +125,7 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     @Import(name="translatedPort")
       private final @Nullable String translatedPort;
 
-    public Optional<String> getTranslatedPort() {
+    public Optional<String> translatedPort() {
         return this.translatedPort == null ? Optional.empty() : Optional.ofNullable(this.translatedPort);
     }
 

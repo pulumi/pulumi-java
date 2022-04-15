@@ -42,21 +42,21 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
      * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
      * 
     */
-    public Optional<String> getBaseDockerfile() {
+    public Optional<String> baseDockerfile() {
         return Optional.ofNullable(this.baseDockerfile);
     }
     /**
      * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
      * 
     */
-    public Optional<String> getBaseImage() {
+    public Optional<String> baseImage() {
         return Optional.ofNullable(this.baseImage);
     }
     /**
      * Image registry that contains the base image.
      * 
     */
-    public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> getBaseImageRegistry() {
+    public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> baseImageRegistry() {
         return Optional.ofNullable(this.baseImageRegistry);
     }
 

@@ -22,7 +22,7 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;
 
-    public Output<Integer> getMaxThroughput() {
+    public Output<Integer> maxThroughput() {
         return this.maxThroughput == null ? Codegen.empty() : this.maxThroughput;
     }
 

@@ -43,14 +43,14 @@ public final class ParquetWriteSettingsResponse {
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileNamePrefix() {
+    public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxRowsPerFile() {
+    public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
     /**
@@ -58,7 +58,7 @@ public final class ParquetWriteSettingsResponse {
      * Expected value is 'ParquetWriteSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

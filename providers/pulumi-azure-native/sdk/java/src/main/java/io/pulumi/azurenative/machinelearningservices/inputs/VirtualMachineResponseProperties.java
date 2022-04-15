@@ -23,7 +23,7 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
@@ -34,7 +34,7 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
     @Import(name="administratorAccount")
       private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
-    public Optional<VirtualMachineSshCredentialsResponse> getAdministratorAccount() {
+    public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return this.administratorAccount == null ? Optional.empty() : Optional.ofNullable(this.administratorAccount);
     }
 
@@ -45,7 +45,7 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
     @Import(name="sshPort")
       private final @Nullable Integer sshPort;
 
-    public Optional<Integer> getSshPort() {
+    public Optional<Integer> sshPort() {
         return this.sshPort == null ? Optional.empty() : Optional.ofNullable(this.sshPort);
     }
 
@@ -56,7 +56,7 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
     @Import(name="virtualMachineSize")
       private final @Nullable String virtualMachineSize;
 
-    public Optional<String> getVirtualMachineSize() {
+    public Optional<String> virtualMachineSize() {
         return this.virtualMachineSize == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineSize);
     }
 

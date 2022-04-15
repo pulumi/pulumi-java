@@ -27,7 +27,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="filePathList")
       private final @Nullable Output<List<String>> filePathList;
 
-    public Output<List<String>> getFilePathList() {
+    public Output<List<String>> filePathList() {
         return this.filePathList == null ? Codegen.empty() : this.filePathList;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="filePrefixList")
       private final @Nullable Output<List<String>> filePrefixList;
 
-    public Output<List<String>> getFilePrefixList() {
+    public Output<List<String>> filePrefixList() {
         return this.filePrefixList == null ? Codegen.empty() : this.filePrefixList;
     }
 
@@ -49,7 +49,7 @@ public final class AzureFileFilterDetailsArgs extends io.pulumi.resources.Resour
     @Import(name="fileShareList")
       private final @Nullable Output<List<String>> fileShareList;
 
-    public Output<List<String>> getFileShareList() {
+    public Output<List<String>> fileShareList() {
         return this.fileShareList == null ? Codegen.empty() : this.fileShareList;
     }
 

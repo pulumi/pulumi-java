@@ -26,7 +26,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     @Import(name="drainTimeoutInSec", required=true)
       private final Output<Integer> drainTimeoutInSec;
 
-    public Output<Integer> getDrainTimeoutInSec() {
+    public Output<Integer> drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

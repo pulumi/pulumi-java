@@ -24,7 +24,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputs", required=true)
       private final Output<List<TransformOutputArgs>> outputs;
 
-    public Output<List<TransformOutputArgs>> getOutputs() {
+    public Output<List<TransformOutputArgs>> outputs() {
         return this.outputs;
     }
 
@@ -57,7 +57,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transformName")
       private final @Nullable Output<String> transformName;
 
-    public Output<String> getTransformName() {
+    public Output<String> transformName() {
         return this.transformName == null ? Codegen.empty() : this.transformName;
     }
 

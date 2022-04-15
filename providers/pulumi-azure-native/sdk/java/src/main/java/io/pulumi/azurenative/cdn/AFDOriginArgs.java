@@ -27,7 +27,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureOrigin")
       private final @Nullable Output<ResourceReferenceArgs> azureOrigin;
 
-    public Output<ResourceReferenceArgs> getAzureOrigin() {
+    public Output<ResourceReferenceArgs> azureOrigin() {
         return this.azureOrigin == null ? Codegen.empty() : this.azureOrigin;
     }
 
@@ -38,7 +38,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Output<Either<String,EnabledState>> getEnabledState() {
+    public Output<Either<String,EnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -49,7 +49,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -60,7 +60,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
+    public Output<Integer> httpPort() {
         return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
@@ -71,7 +71,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
+    public Output<Integer> httpsPort() {
         return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
@@ -82,7 +82,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originGroupName", required=true)
       private final Output<String> originGroupName;
 
-    public Output<String> getOriginGroupName() {
+    public Output<String> originGroupName() {
         return this.originGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
-    public Output<String> getOriginHostHeader() {
+    public Output<String> originHostHeader() {
         return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
@@ -104,7 +104,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originName")
       private final @Nullable Output<String> originName;
 
-    public Output<String> getOriginName() {
+    public Output<String> originName() {
         return this.originName == null ? Codegen.empty() : this.originName;
     }
 
@@ -115,7 +115,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -126,7 +126,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -137,7 +137,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -148,7 +148,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedPrivateLinkResource")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
 
-    public Output<SharedPrivateLinkResourcePropertiesArgs> getSharedPrivateLinkResource() {
+    public Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource() {
         return this.sharedPrivateLinkResource == null ? Codegen.empty() : this.sharedPrivateLinkResource;
     }
 
@@ -159,7 +159,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

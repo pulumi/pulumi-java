@@ -17,7 +17,7 @@ public final class FrontEndConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 

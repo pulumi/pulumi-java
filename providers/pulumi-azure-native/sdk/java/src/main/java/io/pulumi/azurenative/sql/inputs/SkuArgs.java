@@ -27,7 +27,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -38,7 +38,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -49,7 +49,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -71,7 +71,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

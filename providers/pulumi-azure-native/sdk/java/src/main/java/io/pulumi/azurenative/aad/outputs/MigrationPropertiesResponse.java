@@ -40,21 +40,21 @@ public final class MigrationPropertiesResponse {
      * Migration Progress
      * 
     */
-    public MigrationProgressResponse getMigrationProgress() {
+    public MigrationProgressResponse migrationProgress() {
         return this.migrationProgress;
     }
     /**
      * Old Subnet Id
      * 
     */
-    public String getOldSubnetId() {
+    public String oldSubnetId() {
         return this.oldSubnetId;
     }
     /**
      * Old Vnet Site Id
      * 
     */
-    public String getOldVnetSiteId() {
+    public String oldVnetSiteId() {
         return this.oldVnetSiteId;
     }
 

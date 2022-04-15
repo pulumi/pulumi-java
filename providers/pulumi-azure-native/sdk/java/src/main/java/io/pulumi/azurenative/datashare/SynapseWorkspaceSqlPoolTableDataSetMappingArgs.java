@@ -22,7 +22,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -44,7 +44,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
+    public Output<String> dataSetMappingName() {
         return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
@@ -56,7 +56,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -67,7 +67,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -89,7 +89,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="synapseWorkspaceSqlPoolTableResourceId", required=true)
       private final Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
-    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
 

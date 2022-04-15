@@ -74,49 +74,49 @@ public final class AKSResponseProperties {
      * Number of agents
      * 
     */
-    public Optional<Integer> getAgentCount() {
+    public Optional<Integer> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * Agent virtual machine size
      * 
     */
-    public Optional<String> getAgentVmSize() {
+    public Optional<String> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
      * AKS networking configuration for vnet
      * 
     */
-    public Optional<AksNetworkingConfigurationResponse> getAksNetworkingConfiguration() {
+    public Optional<AksNetworkingConfigurationResponse> aksNetworkingConfiguration() {
         return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
     /**
      * Cluster full qualified domain name
      * 
     */
-    public Optional<String> getClusterFqdn() {
+    public Optional<String> clusterFqdn() {
         return Optional.ofNullable(this.clusterFqdn);
     }
     /**
      * Intended usage of the cluster
      * 
     */
-    public Optional<String> getClusterPurpose() {
+    public Optional<String> clusterPurpose() {
         return Optional.ofNullable(this.clusterPurpose);
     }
     /**
      * SSL configuration
      * 
     */
-    public Optional<SslConfigurationResponse> getSslConfiguration() {
+    public Optional<SslConfigurationResponse> sslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
      * System services
      * 
     */
-    public List<SystemServiceResponse> getSystemServices() {
+    public List<SystemServiceResponse> systemServices() {
         return this.systemServices;
     }
 

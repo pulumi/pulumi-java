@@ -48,28 +48,28 @@ public final class DataBoxDiskCopyLogDetailsResponse {
      * Expected value is 'DataBoxDisk'.
      * 
     */
-    public String getCopyLogDetailsType() {
+    public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Disk Serial Number.
      * 
     */
-    public String getDiskSerialNumber() {
+    public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
     /**
      * Link for copy error logs.
      * 
     */
-    public String getErrorLogLink() {
+    public String errorLogLink() {
         return this.errorLogLink;
     }
     /**
      * Link for copy verbose logs.
      * 
     */
-    public String getVerboseLogLink() {
+    public String verboseLogLink() {
         return this.verboseLogLink;
     }
 

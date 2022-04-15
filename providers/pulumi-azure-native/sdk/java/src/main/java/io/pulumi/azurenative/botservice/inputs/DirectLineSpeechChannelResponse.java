@@ -27,7 +27,7 @@ public final class DirectLineSpeechChannelResponse extends io.pulumi.resources.I
     @Import(name="channelName", required=true)
       private final String channelName;
 
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
 
@@ -38,7 +38,7 @@ public final class DirectLineSpeechChannelResponse extends io.pulumi.resources.I
     @Import(name="etag")
       private final @Nullable String etag;
 
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
@@ -49,7 +49,7 @@ public final class DirectLineSpeechChannelResponse extends io.pulumi.resources.I
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -60,7 +60,7 @@ public final class DirectLineSpeechChannelResponse extends io.pulumi.resources.I
     @Import(name="properties")
       private final @Nullable DirectLineSpeechChannelPropertiesResponse properties;
 
-    public Optional<DirectLineSpeechChannelPropertiesResponse> getProperties() {
+    public Optional<DirectLineSpeechChannelPropertiesResponse> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
@@ -71,7 +71,7 @@ public final class DirectLineSpeechChannelResponse extends io.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

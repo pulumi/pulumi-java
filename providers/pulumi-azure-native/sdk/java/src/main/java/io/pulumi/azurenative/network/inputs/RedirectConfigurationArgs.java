@@ -29,7 +29,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="customFragment")
       private final @Nullable Output<String> customFragment;
 
-    public Output<String> getCustomFragment() {
+    public Output<String> customFragment() {
         return this.customFragment == null ? Codegen.empty() : this.customFragment;
     }
 
@@ -40,7 +40,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="customHost")
       private final @Nullable Output<String> customHost;
 
-    public Output<String> getCustomHost() {
+    public Output<String> customHost() {
         return this.customHost == null ? Codegen.empty() : this.customHost;
     }
 
@@ -51,7 +51,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="customPath")
       private final @Nullable Output<String> customPath;
 
-    public Output<String> getCustomPath() {
+    public Output<String> customPath() {
         return this.customPath == null ? Codegen.empty() : this.customPath;
     }
 
@@ -62,7 +62,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="customQueryString")
       private final @Nullable Output<String> customQueryString;
 
-    public Output<String> getCustomQueryString() {
+    public Output<String> customQueryString() {
         return this.customQueryString == null ? Codegen.empty() : this.customQueryString;
     }
 
@@ -73,7 +73,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -84,7 +84,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="redirectProtocol")
       private final @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
 
-    public Output<Either<String,FrontDoorRedirectProtocol>> getRedirectProtocol() {
+    public Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol() {
         return this.redirectProtocol == null ? Codegen.empty() : this.redirectProtocol;
     }
 
@@ -95,7 +95,7 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="redirectType")
       private final @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
 
-    public Output<Either<String,FrontDoorRedirectType>> getRedirectType() {
+    public Output<Either<String,FrontDoorRedirectType>> redirectType() {
         return this.redirectType == null ? Codegen.empty() : this.redirectType;
     }
 

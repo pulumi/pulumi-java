@@ -26,7 +26,7 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
     @Import(name="sourceRepository")
       private final @Nullable CodeRepositoryResponse sourceRepository;
 
-    public Optional<CodeRepositoryResponse> getSourceRepository() {
+    public Optional<CodeRepositoryResponse> sourceRepository() {
         return this.sourceRepository == null ? Optional.empty() : Optional.ofNullable(this.sourceRepository);
     }
 
@@ -37,7 +37,7 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
     @Import(name="template", required=true)
       private final PipelineTemplateResponse template;
 
-    public PipelineTemplateResponse getTemplate() {
+    public PipelineTemplateResponse template() {
         return this.template;
     }
 

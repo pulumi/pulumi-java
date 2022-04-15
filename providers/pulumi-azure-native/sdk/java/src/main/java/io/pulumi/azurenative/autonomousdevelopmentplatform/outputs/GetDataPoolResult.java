@@ -70,49 +70,49 @@ public final class GetDataPoolResult {
      * The Data Pool's data-plane ID
      * 
     */
-    public String getDataPoolId() {
+    public String dataPoolId() {
         return this.dataPoolId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the collection of locations where Data Pool resources should be created
      * 
     */
-    public List<DataPoolLocationResponse> getLocations() {
+    public List<DataPoolLocationResponse> locations() {
         return this.locations;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the status of the data pool at the time the operation was called
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

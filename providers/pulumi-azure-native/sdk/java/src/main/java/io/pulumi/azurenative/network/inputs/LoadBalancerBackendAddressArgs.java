@@ -27,7 +27,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -38,7 +38,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
-    public Output<SubResourceArgs> getLoadBalancerFrontendIPConfiguration() {
+    public Output<SubResourceArgs> loadBalancerFrontendIPConfiguration() {
         return this.loadBalancerFrontendIPConfiguration == null ? Codegen.empty() : this.loadBalancerFrontendIPConfiguration;
     }
 
@@ -49,7 +49,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
+    public Output<SubResourceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -71,7 +71,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
 
-    public Output<SubResourceArgs> getVirtualNetwork() {
+    public Output<SubResourceArgs> virtualNetwork() {
         return this.virtualNetwork == null ? Codegen.empty() : this.virtualNetwork;
     }
 

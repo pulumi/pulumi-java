@@ -102,77 +102,77 @@ public final class GetOrderResult {
      * The contact details.
      * 
     */
-    public ContactDetailsResponse getContactInformation() {
+    public ContactDetailsResponse contactInformation() {
         return this.contactInformation;
     }
     /**
      * Current status of the order.
      * 
     */
-    public OrderStatusResponse getCurrentStatus() {
+    public OrderStatusResponse currentStatus() {
         return this.currentStatus;
     }
     /**
      * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
     */
-    public List<TrackingInfoResponse> getDeliveryTrackingInfo() {
+    public List<TrackingInfoResponse> deliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of status changes in the order.
      * 
     */
-    public List<OrderStatusResponse> getOrderHistory() {
+    public List<OrderStatusResponse> orderHistory() {
         return this.orderHistory;
     }
     /**
      * Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
     */
-    public List<TrackingInfoResponse> getReturnTrackingInfo() {
+    public List<TrackingInfoResponse> returnTrackingInfo() {
         return this.returnTrackingInfo;
     }
     /**
      * Serial number of the device.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * ShipmentType of the order
      * 
     */
-    public Optional<String> getShipmentType() {
+    public Optional<String> shipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
     /**
      * The shipping address.
      * 
     */
-    public Optional<AddressResponse> getShippingAddress() {
+    public Optional<AddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

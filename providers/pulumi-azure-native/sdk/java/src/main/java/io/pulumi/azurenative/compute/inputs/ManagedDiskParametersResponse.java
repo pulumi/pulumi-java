@@ -26,7 +26,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
     @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
-    public Optional<DiskEncryptionSetParametersResponse> getDiskEncryptionSet() {
+    public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
     }
 
@@ -37,7 +37,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class ManagedDiskParametersResponse extends io.pulumi.resources.Inv
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 

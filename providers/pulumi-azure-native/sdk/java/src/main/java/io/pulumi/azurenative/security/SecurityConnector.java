@@ -49,7 +49,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return The multi cloud resource's cloud name.
      * 
      */
-    public Output</* @Nullable */ String> getCloudName() {
+    public Output</* @Nullable */ String> cloudName() {
         return this.cloudName;
     }
     /**
@@ -63,7 +63,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -77,7 +77,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return The multi cloud resource identifier (account id in case of AWS connector).
      * 
      */
-    public Output</* @Nullable */ String> getHierarchyIdentifier() {
+    public Output</* @Nullable */ String> hierarchyIdentifier() {
         return this.hierarchyIdentifier;
     }
     /**
@@ -91,7 +91,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -105,7 +105,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -119,7 +119,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return A collection of offerings for the security connector.
      * 
      */
-    public Output</* @Nullable */ List<Object>> getOfferings() {
+    public Output</* @Nullable */ List<Object>> offerings() {
         return this.offerings;
     }
     /**
@@ -147,7 +147,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return The multi cloud account's organizational data
      * 
      */
-    public Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> getOrganizationalData() {
+    public Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData() {
         return this.organizationalData;
     }
     /**
@@ -161,7 +161,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -175,7 +175,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -189,7 +189,7 @@ public class SecurityConnector extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

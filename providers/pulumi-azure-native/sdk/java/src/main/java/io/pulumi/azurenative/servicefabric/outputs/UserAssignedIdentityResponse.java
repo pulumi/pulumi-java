@@ -32,14 +32,14 @@ public final class UserAssignedIdentityResponse {
      * The client id of user assigned identity.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

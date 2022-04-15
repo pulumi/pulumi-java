@@ -34,14 +34,14 @@ public final class ExtendedLocationResponse {
      * The name of the extended location.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the extended location.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

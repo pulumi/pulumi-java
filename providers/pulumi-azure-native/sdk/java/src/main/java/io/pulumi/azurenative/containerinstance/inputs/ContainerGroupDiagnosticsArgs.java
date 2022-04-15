@@ -26,7 +26,7 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
     @Import(name="logAnalytics")
       private final @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
-    public Output<LogAnalyticsArgs> getLogAnalytics() {
+    public Output<LogAnalyticsArgs> logAnalytics() {
         return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
     }
 

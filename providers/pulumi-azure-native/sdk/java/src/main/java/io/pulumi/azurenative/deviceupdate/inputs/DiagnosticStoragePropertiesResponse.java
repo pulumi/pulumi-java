@@ -25,7 +25,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
 
@@ -36,7 +36,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
     @Import(name="connectionString")
       private final @Nullable String connectionString;
 
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -47,7 +47,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

@@ -28,7 +28,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="aS2")
       private final @Nullable Output<AS2AgreementContentArgs> aS2;
 
-    public Output<AS2AgreementContentArgs> getAS2() {
+    public Output<AS2AgreementContentArgs> aS2() {
         return this.aS2 == null ? Codegen.empty() : this.aS2;
     }
 
@@ -39,7 +39,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="edifact")
       private final @Nullable Output<EdifactAgreementContentArgs> edifact;
 
-    public Output<EdifactAgreementContentArgs> getEdifact() {
+    public Output<EdifactAgreementContentArgs> edifact() {
         return this.edifact == null ? Codegen.empty() : this.edifact;
     }
 
@@ -50,7 +50,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="x12")
       private final @Nullable Output<X12AgreementContentArgs> x12;
 
-    public Output<X12AgreementContentArgs> getX12() {
+    public Output<X12AgreementContentArgs> x12() {
         return this.x12 == null ? Codegen.empty() : this.x12;
     }
 

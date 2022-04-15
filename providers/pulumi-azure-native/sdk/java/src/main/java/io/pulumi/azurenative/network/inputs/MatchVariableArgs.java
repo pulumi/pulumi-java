@@ -28,7 +28,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -39,7 +39,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="variableName", required=true)
       private final Output<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 
-    public Output<Either<String,WebApplicationFirewallMatchVariable>> getVariableName() {
+    public Output<Either<String,WebApplicationFirewallMatchVariable>> variableName() {
         return this.variableName;
     }
 

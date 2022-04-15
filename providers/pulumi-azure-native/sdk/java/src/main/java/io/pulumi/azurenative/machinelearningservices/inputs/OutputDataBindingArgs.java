@@ -24,7 +24,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
-    public Output<String> getDatastoreId() {
+    public Output<String> datastoreId() {
         return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
@@ -35,7 +35,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
-    public Output<Either<String,DataBindingMode>> getMode() {
+    public Output<Either<String,DataBindingMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -46,7 +46,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;
 
-    public Output<String> getPathOnCompute() {
+    public Output<String> pathOnCompute() {
         return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
     }
 
@@ -57,7 +57,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pathOnDatastore")
       private final @Nullable Output<String> pathOnDatastore;
 
-    public Output<String> getPathOnDatastore() {
+    public Output<String> pathOnDatastore() {
         return this.pathOnDatastore == null ? Codegen.empty() : this.pathOnDatastore;
     }
 

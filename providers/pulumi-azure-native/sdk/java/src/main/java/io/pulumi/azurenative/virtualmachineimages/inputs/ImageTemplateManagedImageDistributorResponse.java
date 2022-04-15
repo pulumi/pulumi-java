@@ -26,7 +26,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> getArtifactTags() {
+    public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     @Import(name="imageId", required=true)
       private final String imageId;
 
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
 
@@ -48,7 +48,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -59,7 +59,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     @Import(name="runOutputName", required=true)
       private final String runOutputName;
 
-    public String getRunOutputName() {
+    public String runOutputName() {
         return this.runOutputName;
     }
 
@@ -71,7 +71,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

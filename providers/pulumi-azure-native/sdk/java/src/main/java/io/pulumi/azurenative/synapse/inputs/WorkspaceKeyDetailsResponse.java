@@ -25,7 +25,7 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="keyVaultUrl")
       private final @Nullable String keyVaultUrl;
 
-    public Optional<String> getKeyVaultUrl() {
+    public Optional<String> keyVaultUrl() {
         return this.keyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUrl);
     }
 
@@ -36,7 +36,7 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

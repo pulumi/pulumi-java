@@ -86,35 +86,35 @@ public final class BookmarkTimelineItemResponse {
      * The bookmark azure resource id.
      * 
     */
-    public String getAzureResourceId() {
+    public String azureResourceId() {
         return this.azureResourceId;
     }
     /**
      * Describes a user that created the bookmark
      * 
     */
-    public Optional<UserInfoResponse> getCreatedBy() {
+    public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The bookmark display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The bookmark end time.
      * 
     */
-    public Optional<String> getEndTimeUtc() {
+    public Optional<String> endTimeUtc() {
         return Optional.ofNullable(this.endTimeUtc);
     }
     /**
      * The bookmark event time.
      * 
     */
-    public Optional<String> getEventTime() {
+    public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
@@ -122,28 +122,28 @@ public final class BookmarkTimelineItemResponse {
      * Expected value is 'Bookmark'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * List of labels relevant to this bookmark
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The notes of the bookmark
      * 
     */
-    public Optional<String> getNotes() {
+    public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The bookmark start time.
      * 
     */
-    public Optional<String> getStartTimeUtc() {
+    public Optional<String> startTimeUtc() {
         return Optional.ofNullable(this.startTimeUtc);
     }
 

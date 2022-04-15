@@ -138,112 +138,112 @@ public final class GetServerDetailsResult {
      * A collection of AS server administrators
      * 
     */
-    public Optional<ServerAdministratorsResponse> getAsAdministrators() {
+    public Optional<ServerAdministratorsResponse> asAdministrators() {
         return Optional.ofNullable(this.asAdministrators);
     }
     /**
      * The SAS container URI to the backup container.
      * 
     */
-    public Optional<String> getBackupBlobContainerUri() {
+    public Optional<String> backupBlobContainerUri() {
         return Optional.ofNullable(this.backupBlobContainerUri);
     }
     /**
      * The gateway details configured for the AS server.
      * 
     */
-    public Optional<GatewayDetailsResponse> getGatewayDetails() {
+    public Optional<GatewayDetailsResponse> gatewayDetails() {
         return Optional.ofNullable(this.gatewayDetails);
     }
     /**
      * An identifier that represents the Analysis Services resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The firewall settings for the AS server.
      * 
     */
-    public Optional<IPv4FirewallSettingsResponse> getIpV4FirewallSettings() {
+    public Optional<IPv4FirewallSettingsResponse> ipV4FirewallSettings() {
         return Optional.ofNullable(this.ipV4FirewallSettings);
     }
     /**
      * Location of the Analysis Services resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The managed mode of the server (0 = not managed, 1 = managed).
      * 
     */
-    public Optional<Integer> getManagedMode() {
+    public Optional<Integer> managedMode() {
         return Optional.ofNullable(this.managedMode);
     }
     /**
      * The name of the Analysis Services resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
      * 
     */
-    public Optional<String> getQuerypoolConnectionMode() {
+    public Optional<String> querypoolConnectionMode() {
         return Optional.ofNullable(this.querypoolConnectionMode);
     }
     /**
      * The full name of the Analysis Services resource.
      * 
     */
-    public String getServerFullName() {
+    public String serverFullName() {
         return this.serverFullName;
     }
     /**
      * The server monitor mode for AS server
      * 
     */
-    public Optional<Integer> getServerMonitorMode() {
+    public Optional<Integer> serverMonitorMode() {
         return Optional.ofNullable(this.serverMonitorMode);
     }
     /**
      * The SKU of the Analysis Services resource.
      * 
     */
-    public ResourceSkuResponse getSku() {
+    public ResourceSkuResponse sku() {
         return this.sku;
     }
     /**
      * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the Analysis Services resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

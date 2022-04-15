@@ -29,7 +29,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -40,7 +40,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
     @Import(name="pipelineReference")
       private final @Nullable Output<PipelineReferenceArgs> pipelineReference;
 
-    public Output<PipelineReferenceArgs> getPipelineReference() {
+    public Output<PipelineReferenceArgs> pipelineReference() {
         return this.pipelineReference == null ? Codegen.empty() : this.pipelineReference;
     }
 

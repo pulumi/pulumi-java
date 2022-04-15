@@ -125,101 +125,101 @@ public final class GetAFDOriginResult {
      * Resource reference to the Azure origin resource.
      * 
     */
-    public Optional<ResourceReferenceResponse> getAzureOrigin() {
+    public Optional<ResourceReferenceResponse> azureOrigin() {
         return Optional.ofNullable(this.azureOrigin);
     }
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
     */
-    public Optional<Integer> getHttpPort() {
+    public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
     */
-    public Optional<Integer> getHttpsPort() {
+    public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
     */
-    public Optional<String> getOriginHostHeader() {
+    public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The properties of the private link resource for private origin.
      * 
     */
-    public Optional<SharedPrivateLinkResourcePropertiesResponse> getSharedPrivateLinkResource() {
+    public Optional<SharedPrivateLinkResourcePropertiesResponse> sharedPrivateLinkResource() {
         return Optional.ofNullable(this.sharedPrivateLinkResource);
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

@@ -45,7 +45,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Time when DigitalTwinsInstance was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -59,7 +59,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Api endpoint to work with DigitalTwinsInstance.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -73,7 +73,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The managed identity for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ DigitalTwinsIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ DigitalTwinsIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -87,7 +87,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Time when DigitalTwinsInstance was updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -101,7 +101,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,13 +115,13 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -135,7 +135,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -149,7 +149,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Public network access for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -163,7 +163,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -177,7 +177,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

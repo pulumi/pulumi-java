@@ -25,7 +25,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -36,7 +36,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="upn")
       private final @Nullable String upn;
 
-    public Optional<String> getUpn() {
+    public Optional<String> upn() {
         return this.upn == null ? Optional.empty() : Optional.ofNullable(this.upn);
     }
 

@@ -26,7 +26,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
     @Import(name="carrierName", required=true)
       private final String carrierName;
 
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
 
@@ -37,7 +37,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
     @Import(name="driveCount")
       private final @Nullable Double driveCount;
 
-    public Optional<Double> getDriveCount() {
+    public Optional<Double> driveCount() {
         return this.driveCount == null ? Optional.empty() : Optional.ofNullable(this.driveCount);
     }
 
@@ -48,7 +48,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
     @Import(name="shipDate")
       private final @Nullable String shipDate;
 
-    public Optional<String> getShipDate() {
+    public Optional<String> shipDate() {
         return this.shipDate == null ? Optional.empty() : Optional.ofNullable(this.shipDate);
     }
 
@@ -59,7 +59,7 @@ public final class DeliveryPackageInformationResponse extends io.pulumi.resource
     @Import(name="trackingNumber", required=true)
       private final String trackingNumber;
 
-    public String getTrackingNumber() {
+    public String trackingNumber() {
         return this.trackingNumber;
     }
 

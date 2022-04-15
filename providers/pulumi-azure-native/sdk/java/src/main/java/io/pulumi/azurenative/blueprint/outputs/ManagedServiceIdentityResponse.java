@@ -50,28 +50,28 @@ public final class ManagedServiceIdentityResponse {
      * Azure Active Directory principal ID associated with this Identity.
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * ID of the Azure Active Directory.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of the managed identity.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
      * 
     */
-    public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

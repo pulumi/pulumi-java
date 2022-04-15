@@ -86,63 +86,63 @@ public final class CreationDataResponse {
      * This enumerates the possible sources of a disk's creation.
      * 
     */
-    public String getCreateOption() {
+    public String createOption() {
         return this.createOption;
     }
     /**
      * Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
      * 
     */
-    public Optional<ImageDiskReferenceResponse> getGalleryImageReference() {
+    public Optional<ImageDiskReferenceResponse> galleryImageReference() {
         return Optional.ofNullable(this.galleryImageReference);
     }
     /**
      * Disk source information.
      * 
     */
-    public Optional<ImageDiskReferenceResponse> getImageReference() {
+    public Optional<ImageDiskReferenceResponse> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
     /**
      * Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
      * 
     */
-    public Optional<Integer> getLogicalSectorSize() {
+    public Optional<Integer> logicalSectorSize() {
         return Optional.ofNullable(this.logicalSectorSize);
     }
     /**
      * If createOption is Copy, this is the ARM id of the source snapshot or disk.
      * 
     */
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * If this field is set, this is the unique id identifying the source of this resource.
      * 
     */
-    public String getSourceUniqueId() {
+    public String sourceUniqueId() {
         return this.sourceUniqueId;
     }
     /**
      * If createOption is Import, this is the URI of a blob to be imported into a managed disk.
      * 
     */
-    public Optional<String> getSourceUri() {
+    public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
     /**
      * Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
      * 
     */
-    public Optional<String> getStorageAccountId() {
+    public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
      * 
     */
-    public Optional<Double> getUploadSizeBytes() {
+    public Optional<Double> uploadSizeBytes() {
         return Optional.ofNullable(this.uploadSizeBytes);
     }
 

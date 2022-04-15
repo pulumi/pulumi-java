@@ -43,14 +43,14 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
      * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getDateFormat() {
+    public Optional<Object> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
      * Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getTimestampFormat() {
+    public Optional<Object> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
     /**
@@ -58,7 +58,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
      * Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -46,28 +46,28 @@ public final class EndPointResponse {
      * Name of an end point.
      * 
     */
-    public String getEndPointName() {
+    public String endPointName() {
         return this.endPointName;
     }
     /**
      * IP Address.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * TCP port to listen on to receive data.
      * 
     */
-    public String getPort() {
+    public String port() {
         return this.port;
     }
     /**
      * Protocol either UDP or TCP.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

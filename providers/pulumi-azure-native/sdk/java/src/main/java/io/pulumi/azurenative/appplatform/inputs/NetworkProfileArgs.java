@@ -26,7 +26,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkResourceGroup")
       private final @Nullable Output<String> appNetworkResourceGroup;
 
-    public Output<String> getAppNetworkResourceGroup() {
+    public Output<String> appNetworkResourceGroup() {
         return this.appNetworkResourceGroup == null ? Codegen.empty() : this.appNetworkResourceGroup;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appSubnetId")
       private final @Nullable Output<String> appSubnetId;
 
-    public Output<String> getAppSubnetId() {
+    public Output<String> appSubnetId() {
         return this.appSubnetId == null ? Codegen.empty() : this.appSubnetId;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
-    public Output<String> getServiceCidr() {
+    public Output<String> serviceCidr() {
         return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
     }
 
@@ -59,7 +59,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRuntimeNetworkResourceGroup")
       private final @Nullable Output<String> serviceRuntimeNetworkResourceGroup;
 
-    public Output<String> getServiceRuntimeNetworkResourceGroup() {
+    public Output<String> serviceRuntimeNetworkResourceGroup() {
         return this.serviceRuntimeNetworkResourceGroup == null ? Codegen.empty() : this.serviceRuntimeNetworkResourceGroup;
     }
 
@@ -70,7 +70,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRuntimeSubnetId")
       private final @Nullable Output<String> serviceRuntimeSubnetId;
 
-    public Output<String> getServiceRuntimeSubnetId() {
+    public Output<String> serviceRuntimeSubnetId() {
         return this.serviceRuntimeSubnetId == null ? Codegen.empty() : this.serviceRuntimeSubnetId;
     }
 

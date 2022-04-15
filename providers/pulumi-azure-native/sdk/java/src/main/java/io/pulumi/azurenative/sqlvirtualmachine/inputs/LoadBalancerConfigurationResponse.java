@@ -28,7 +28,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
     @Import(name="loadBalancerResourceId")
       private final @Nullable String loadBalancerResourceId;
 
-    public Optional<String> getLoadBalancerResourceId() {
+    public Optional<String> loadBalancerResourceId() {
         return this.loadBalancerResourceId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerResourceId);
     }
 
@@ -39,7 +39,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
     @Import(name="privateIpAddress")
       private final @Nullable PrivateIPAddressResponse privateIpAddress;
 
-    public Optional<PrivateIPAddressResponse> getPrivateIpAddress() {
+    public Optional<PrivateIPAddressResponse> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -50,7 +50,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
     @Import(name="probePort")
       private final @Nullable Integer probePort;
 
-    public Optional<Integer> getProbePort() {
+    public Optional<Integer> probePort() {
         return this.probePort == null ? Optional.empty() : Optional.ofNullable(this.probePort);
     }
 
@@ -61,7 +61,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
     @Import(name="publicIpAddressResourceId")
       private final @Nullable String publicIpAddressResourceId;
 
-    public Optional<String> getPublicIpAddressResourceId() {
+    public Optional<String> publicIpAddressResourceId() {
         return this.publicIpAddressResourceId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressResourceId);
     }
 
@@ -72,7 +72,7 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
     @Import(name="sqlVirtualMachineInstances")
       private final @Nullable List<String> sqlVirtualMachineInstances;
 
-    public List<String> getSqlVirtualMachineInstances() {
+    public List<String> sqlVirtualMachineInstances() {
         return this.sqlVirtualMachineInstances == null ? List.of() : this.sqlVirtualMachineInstances;
     }
 

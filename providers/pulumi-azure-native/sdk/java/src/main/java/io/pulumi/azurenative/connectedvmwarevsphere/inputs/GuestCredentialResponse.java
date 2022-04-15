@@ -25,7 +25,7 @@ public final class GuestCredentialResponse extends io.pulumi.resources.InvokeArg
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

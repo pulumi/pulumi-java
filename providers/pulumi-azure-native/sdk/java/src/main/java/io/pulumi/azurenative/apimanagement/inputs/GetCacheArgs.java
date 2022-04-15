@@ -19,7 +19,7 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cacheId", required=true)
       private final String cacheId;
 
-    public String getCacheId() {
+    public String cacheId() {
         return this.cacheId;
     }
 
@@ -30,7 +30,7 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

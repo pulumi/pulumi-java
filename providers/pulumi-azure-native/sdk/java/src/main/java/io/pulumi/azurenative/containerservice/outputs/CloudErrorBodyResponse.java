@@ -49,28 +49,28 @@ public final class CloudErrorBodyResponse {
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * A list of additional details about the error.
      * 
     */
-    public List<CloudErrorBodyResponse> getDetails() {
+    public List<CloudErrorBodyResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The target of the particular error. For example, the name of the property in error.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

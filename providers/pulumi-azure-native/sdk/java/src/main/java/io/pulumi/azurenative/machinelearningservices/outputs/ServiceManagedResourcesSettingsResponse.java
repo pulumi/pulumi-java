@@ -26,7 +26,7 @@ public final class ServiceManagedResourcesSettingsResponse {
      * The settings for the service managed cosmosdb account.
      * 
     */
-    public Optional<CosmosDbSettingsResponse> getCosmosDb() {
+    public Optional<CosmosDbSettingsResponse> cosmosDb() {
         return Optional.ofNullable(this.cosmosDb);
     }
 

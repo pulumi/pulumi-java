@@ -28,7 +28,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

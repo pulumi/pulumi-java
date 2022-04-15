@@ -43,7 +43,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return Display name of the VM group.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -57,7 +57,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return Virtual machine members of this group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMembers() {
+    public Output</* @Nullable */ List<String>> members() {
         return this.members;
     }
     /**
@@ -71,7 +71,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +99,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> getRevision() {
+    public Output</* @Nullable */ Double> revision() {
         return this.revision;
     }
     /**
@@ -113,7 +113,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return VM Group status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -127,7 +127,7 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

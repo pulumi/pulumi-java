@@ -92,77 +92,77 @@ public final class GetAFDEndpointResult {
         this.type = type;
     }
 
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
     */
-    public Optional<Integer> getOriginResponseTimeoutSeconds() {
+    public Optional<Integer> originResponseTimeoutSeconds() {
         return Optional.ofNullable(this.originResponseTimeoutSeconds);
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

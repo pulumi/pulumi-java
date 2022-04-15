@@ -84,63 +84,63 @@ public final class AS2MdnSettingsResponse {
      * The disposition notification to header value.
      * 
     */
-    public Optional<String> getDispositionNotificationTo() {
+    public Optional<String> dispositionNotificationTo() {
         return Optional.ofNullable(this.dispositionNotificationTo);
     }
     /**
      * The MDN text.
      * 
     */
-    public Optional<String> getMdnText() {
+    public Optional<String> mdnText() {
         return Optional.ofNullable(this.mdnText);
     }
     /**
      * The signing or hashing algorithm.
      * 
     */
-    public String getMicHashingAlgorithm() {
+    public String micHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
     /**
      * The value indicating whether to send or request a MDN.
      * 
     */
-    public Boolean getNeedMDN() {
+    public Boolean needMDN() {
         return this.needMDN;
     }
     /**
      * The receipt delivery URL.
      * 
     */
-    public Optional<String> getReceiptDeliveryUrl() {
+    public Optional<String> receiptDeliveryUrl() {
         return Optional.ofNullable(this.receiptDeliveryUrl);
     }
     /**
      * The value indicating whether to send inbound MDN to message box.
      * 
     */
-    public Boolean getSendInboundMDNToMessageBox() {
+    public Boolean sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
     /**
      * The value indicating whether to send the asynchronous MDN.
      * 
     */
-    public Boolean getSendMDNAsynchronously() {
+    public Boolean sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
     /**
      * The value indicating whether the MDN needs to be signed or not.
      * 
     */
-    public Boolean getSignMDN() {
+    public Boolean signMDN() {
         return this.signMDN;
     }
     /**
      * The value indicating whether to sign the outbound MDN if optional.
      * 
     */
-    public Boolean getSignOutboundMDNIfOptional() {
+    public Boolean signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
 

@@ -49,28 +49,28 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
      * The password of the administrator user account of the catalog database.
      * 
     */
-    public Optional<SecureStringResponse> getCatalogAdminPassword() {
+    public Optional<SecureStringResponse> catalogAdminPassword() {
         return Optional.ofNullable(this.catalogAdminPassword);
     }
     /**
      * The administrator user name of catalog database.
      * 
     */
-    public Optional<String> getCatalogAdminUserName() {
+    public Optional<String> catalogAdminUserName() {
         return Optional.ofNullable(this.catalogAdminUserName);
     }
     /**
      * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
      * 
     */
-    public Optional<String> getCatalogPricingTier() {
+    public Optional<String> catalogPricingTier() {
         return Optional.ofNullable(this.catalogPricingTier);
     }
     /**
      * The catalog database server URL.
      * 
     */
-    public Optional<String> getCatalogServerEndpoint() {
+    public Optional<String> catalogServerEndpoint() {
         return Optional.ofNullable(this.catalogServerEndpoint);
     }
 

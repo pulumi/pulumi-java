@@ -43,7 +43,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Gateway description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Gateway location.
      * 
      */
-    public Output</* @Nullable */ ResourceLocationDataContractResponse> getLocationData() {
+    public Output</* @Nullable */ ResourceLocationDataContractResponse> locationData() {
         return this.locationData;
     }
     /**
@@ -71,7 +71,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

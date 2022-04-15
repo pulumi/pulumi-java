@@ -44,7 +44,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Resource Etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Properties of Cognitive Services account commitment plan.
      * 
      */
-    public Output<CommitmentPlanPropertiesResponse> getProperties() {
+    public Output<CommitmentPlanPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -100,7 +100,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

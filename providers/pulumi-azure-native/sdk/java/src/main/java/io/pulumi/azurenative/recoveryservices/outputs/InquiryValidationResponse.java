@@ -42,21 +42,21 @@ public final class InquiryValidationResponse {
      * Error Additional Detail in case the status is non-success.
      * 
     */
-    public String getAdditionalDetail() {
+    public String additionalDetail() {
         return this.additionalDetail;
     }
     /**
      * Error Detail in case the status is non-success.
      * 
     */
-    public Optional<ErrorDetailResponse> getErrorDetail() {
+    public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
     /**
      * Status for the Inquiry Validation.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

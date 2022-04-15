@@ -29,7 +29,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
     @Import(name="schemaDifferences", required=true)
       private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
-    public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
+    public SchemaComparisonValidationResultTypeResponse schemaDifferences() {
         return this.schemaDifferences;
     }
 
@@ -40,7 +40,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
     @Import(name="sourceDatabaseObjectCount")
       private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
-    public Map<String,Double> getSourceDatabaseObjectCount() {
+    public Map<String,Double> sourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
 
@@ -51,7 +51,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
     @Import(name="targetDatabaseObjectCount")
       private final @Nullable Map<String,Double> targetDatabaseObjectCount;
 
-    public Map<String,Double> getTargetDatabaseObjectCount() {
+    public Map<String,Double> targetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
 
@@ -62,7 +62,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
     @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;
 
-    public ValidationErrorResponse getValidationErrors() {
+    public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 

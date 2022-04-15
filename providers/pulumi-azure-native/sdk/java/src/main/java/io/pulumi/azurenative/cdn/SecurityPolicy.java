@@ -36,7 +36,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -50,7 +50,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -64,7 +64,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return object which contains security policy parameters
      * 
      */
-    public Output</* @Nullable */ SecurityPolicyWebApplicationFirewallParametersResponse> getParameters() {
+    public Output</* @Nullable */ SecurityPolicyWebApplicationFirewallParametersResponse> parameters() {
         return this.parameters;
     }
     /**
@@ -78,7 +78,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -92,7 +92,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -106,7 +106,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

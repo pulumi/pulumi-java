@@ -65,42 +65,42 @@ public final class GetMaintenanceConfigurationResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Time slots on which upgrade is not allowed.
      * 
     */
-    public List<TimeSpanResponse> getNotAllowedTime() {
+    public List<TimeSpanResponse> notAllowedTime() {
         return this.notAllowedTime == null ? List.of() : this.notAllowedTime;
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Weekday time slots allowed to upgrade.
      * 
     */
-    public List<TimeInWeekResponse> getTimeInWeek() {
+    public List<TimeInWeekResponse> timeInWeek() {
         return this.timeInWeek == null ? List.of() : this.timeInWeek;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

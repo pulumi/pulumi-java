@@ -43,7 +43,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @return The guest diagnostic settings name.
      * 
      */
-    public Output<String> getGuestDiagnosticSettingsName() {
+    public Output<String> guestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
     }
     /**
@@ -57,7 +57,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -34,7 +34,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basePolicy")
       private final @Nullable Output<SubResourceArgs> basePolicy;
 
-    public Output<SubResourceArgs> getBasePolicy() {
+    public Output<SubResourceArgs> basePolicy() {
         return this.basePolicy == null ? Codegen.empty() : this.basePolicy;
     }
 
@@ -45,7 +45,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsSettings")
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Output<DnsSettingsArgs> getDnsSettings() {
+    public Output<DnsSettingsArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
@@ -56,7 +56,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallPolicyName")
       private final @Nullable Output<String> firewallPolicyName;
 
-    public Output<String> getFirewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName == null ? Codegen.empty() : this.firewallPolicyName;
     }
 
@@ -67,7 +67,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -78,7 +78,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -89,7 +89,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insights")
       private final @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
-    public Output<FirewallPolicyInsightsArgs> getInsights() {
+    public Output<FirewallPolicyInsightsArgs> insights() {
         return this.insights == null ? Codegen.empty() : this.insights;
     }
 
@@ -100,7 +100,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intrusionDetection")
       private final @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
-    public Output<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
+    public Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection() {
         return this.intrusionDetection == null ? Codegen.empty() : this.intrusionDetection;
     }
 
@@ -111,7 +111,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -122,7 +122,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -133,7 +133,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<FirewallPolicySkuArgs> sku;
 
-    public Output<FirewallPolicySkuArgs> getSku() {
+    public Output<FirewallPolicySkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -144,7 +144,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snat")
       private final @Nullable Output<FirewallPolicySNATArgs> snat;
 
-    public Output<FirewallPolicySNATArgs> getSnat() {
+    public Output<FirewallPolicySNATArgs> snat() {
         return this.snat == null ? Codegen.empty() : this.snat;
     }
 
@@ -155,7 +155,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -166,7 +166,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threatIntelMode")
       private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
-    public Output<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
+    public Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode() {
         return this.threatIntelMode == null ? Codegen.empty() : this.threatIntelMode;
     }
 
@@ -177,7 +177,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threatIntelWhitelist")
       private final @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
-    public Output<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
+    public Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist() {
         return this.threatIntelWhitelist == null ? Codegen.empty() : this.threatIntelWhitelist;
     }
 
@@ -188,7 +188,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transportSecurity")
       private final @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
-    public Output<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {
+    public Output<FirewallPolicyTransportSecurityArgs> transportSecurity() {
         return this.transportSecurity == null ? Codegen.empty() : this.transportSecurity;
     }
 

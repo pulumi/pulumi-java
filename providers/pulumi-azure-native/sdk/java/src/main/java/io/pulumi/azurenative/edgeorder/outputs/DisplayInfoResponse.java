@@ -32,14 +32,14 @@ public final class DisplayInfoResponse {
      * Configuration display name
      * 
     */
-    public String getConfigurationDisplayName() {
+    public String configurationDisplayName() {
         return this.configurationDisplayName;
     }
     /**
      * Product family display name
      * 
     */
-    public String getProductFamilyDisplayName() {
+    public String productFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }
 

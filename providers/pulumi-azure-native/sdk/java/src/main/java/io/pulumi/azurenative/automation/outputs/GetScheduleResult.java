@@ -143,119 +143,119 @@ public final class GetScheduleResult {
      * Gets or sets the advanced schedule.
      * 
     */
-    public Optional<AdvancedScheduleResponse> getAdvancedSchedule() {
+    public Optional<AdvancedScheduleResponse> advancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
     /**
      * Gets or sets the creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the end time of the schedule.
      * 
     */
-    public Optional<String> getExpiryTime() {
+    public Optional<String> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
      * Gets or sets the expiry time's offset in minutes.
      * 
     */
-    public Optional<Double> getExpiryTimeOffsetMinutes() {
+    public Optional<Double> expiryTimeOffsetMinutes() {
         return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
     /**
      * Gets or sets the frequency of the schedule.
      * 
     */
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the interval of the schedule.
      * 
     */
-    public Optional<Object> getInterval() {
+    public Optional<Object> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Gets or sets a value indicating whether this schedule is enabled.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the next run time of the schedule.
      * 
     */
-    public Optional<String> getNextRun() {
+    public Optional<String> nextRun() {
         return Optional.ofNullable(this.nextRun);
     }
     /**
      * Gets or sets the next run time's offset in minutes.
      * 
     */
-    public Optional<Double> getNextRunOffsetMinutes() {
+    public Optional<Double> nextRunOffsetMinutes() {
         return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
     /**
      * Gets or sets the start time of the schedule.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Gets the start time's offset in minutes.
      * 
     */
-    public Double getStartTimeOffsetMinutes() {
+    public Double startTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
     /**
      * Gets or sets the time zone of the schedule.
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

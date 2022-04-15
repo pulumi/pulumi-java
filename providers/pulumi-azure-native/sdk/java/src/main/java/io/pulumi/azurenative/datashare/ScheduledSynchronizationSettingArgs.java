@@ -24,7 +24,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
-    public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
+    public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
     }
 
@@ -58,7 +58,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -80,7 +80,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="synchronizationSettingName")
       private final @Nullable Output<String> synchronizationSettingName;
 
-    public Output<String> getSynchronizationSettingName() {
+    public Output<String> synchronizationSettingName() {
         return this.synchronizationSettingName == null ? Codegen.empty() : this.synchronizationSettingName;
     }
 
@@ -91,7 +91,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;
 
-    public Output<String> getSynchronizationTime() {
+    public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
 

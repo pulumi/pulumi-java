@@ -34,7 +34,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="authenticationMethod")
       private final @Nullable Output<Either<String,AuthenticationMethod>> authenticationMethod;
 
-    public Output<Either<String,AuthenticationMethod>> getAuthenticationMethod() {
+    public Output<Either<String,AuthenticationMethod>> authenticationMethod() {
         return this.authenticationMethod == null ? Codegen.empty() : this.authenticationMethod;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="cassandraVersion")
       private final @Nullable Output<String> cassandraVersion;
 
-    public Output<String> getCassandraVersion() {
+    public Output<String> cassandraVersion() {
         return this.cassandraVersion == null ? Codegen.empty() : this.cassandraVersion;
     }
 
@@ -56,7 +56,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="clientCertificates")
       private final @Nullable Output<List<CertificateArgs>> clientCertificates;
 
-    public Output<List<CertificateArgs>> getClientCertificates() {
+    public Output<List<CertificateArgs>> clientCertificates() {
         return this.clientCertificates == null ? Codegen.empty() : this.clientCertificates;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="clusterNameOverride")
       private final @Nullable Output<String> clusterNameOverride;
 
-    public Output<String> getClusterNameOverride() {
+    public Output<String> clusterNameOverride() {
         return this.clusterNameOverride == null ? Codegen.empty() : this.clusterNameOverride;
     }
 
@@ -78,7 +78,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="delegatedManagementSubnetId")
       private final @Nullable Output<String> delegatedManagementSubnetId;
 
-    public Output<String> getDelegatedManagementSubnetId() {
+    public Output<String> delegatedManagementSubnetId() {
         return this.delegatedManagementSubnetId == null ? Codegen.empty() : this.delegatedManagementSubnetId;
     }
 
@@ -89,7 +89,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="externalGossipCertificates")
       private final @Nullable Output<List<CertificateArgs>> externalGossipCertificates;
 
-    public Output<List<CertificateArgs>> getExternalGossipCertificates() {
+    public Output<List<CertificateArgs>> externalGossipCertificates() {
         return this.externalGossipCertificates == null ? Codegen.empty() : this.externalGossipCertificates;
     }
 
@@ -100,7 +100,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="externalSeedNodes")
       private final @Nullable Output<List<SeedNodeArgs>> externalSeedNodes;
 
-    public Output<List<SeedNodeArgs>> getExternalSeedNodes() {
+    public Output<List<SeedNodeArgs>> externalSeedNodes() {
         return this.externalSeedNodes == null ? Codegen.empty() : this.externalSeedNodes;
     }
 
@@ -111,7 +111,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="hoursBetweenBackups")
       private final @Nullable Output<Integer> hoursBetweenBackups;
 
-    public Output<Integer> getHoursBetweenBackups() {
+    public Output<Integer> hoursBetweenBackups() {
         return this.hoursBetweenBackups == null ? Codegen.empty() : this.hoursBetweenBackups;
     }
 
@@ -122,7 +122,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="initialCassandraAdminPassword")
       private final @Nullable Output<String> initialCassandraAdminPassword;
 
-    public Output<String> getInitialCassandraAdminPassword() {
+    public Output<String> initialCassandraAdminPassword() {
         return this.initialCassandraAdminPassword == null ? Codegen.empty() : this.initialCassandraAdminPassword;
     }
 
@@ -133,7 +133,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="prometheusEndpoint")
       private final @Nullable Output<SeedNodeArgs> prometheusEndpoint;
 
-    public Output<SeedNodeArgs> getPrometheusEndpoint() {
+    public Output<SeedNodeArgs> prometheusEndpoint() {
         return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
     }
 
@@ -144,7 +144,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
-    public Output<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ManagedCassandraProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -155,7 +155,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="repairEnabled")
       private final @Nullable Output<Boolean> repairEnabled;
 
-    public Output<Boolean> getRepairEnabled() {
+    public Output<Boolean> repairEnabled() {
         return this.repairEnabled == null ? Codegen.empty() : this.repairEnabled;
     }
 
@@ -166,7 +166,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="restoreFromBackupId")
       private final @Nullable Output<String> restoreFromBackupId;
 
-    public Output<String> getRestoreFromBackupId() {
+    public Output<String> restoreFromBackupId() {
         return this.restoreFromBackupId == null ? Codegen.empty() : this.restoreFromBackupId;
     }
 

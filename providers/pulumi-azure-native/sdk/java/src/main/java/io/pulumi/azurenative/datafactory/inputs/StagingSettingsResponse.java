@@ -26,7 +26,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="enableCompression")
       private final @Nullable Object enableCompression;
 
-    public Optional<Object> getEnableCompression() {
+    public Optional<Object> enableCompression() {
         return this.enableCompression == null ? Optional.empty() : Optional.ofNullable(this.enableCompression);
     }
 
@@ -37,7 +37,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -48,7 +48,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="path")
       private final @Nullable Object path;
 
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

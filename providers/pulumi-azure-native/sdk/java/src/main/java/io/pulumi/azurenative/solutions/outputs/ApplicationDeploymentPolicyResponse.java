@@ -24,7 +24,7 @@ public final class ApplicationDeploymentPolicyResponse {
      * The managed application deployment mode.
      * 
     */
-    public String getDeploymentMode() {
+    public String deploymentMode() {
         return this.deploymentMode;
     }
 

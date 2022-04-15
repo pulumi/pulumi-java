@@ -36,14 +36,14 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
      * The default workspace Id for Firewall Policy Insights.
      * 
     */
-    public Optional<SubResourceResponse> getDefaultWorkspaceId() {
+    public Optional<SubResourceResponse> defaultWorkspaceId() {
         return Optional.ofNullable(this.defaultWorkspaceId);
     }
     /**
      * List of workspaces for Firewall Policy Insights.
      * 
     */
-    public List<FirewallPolicyLogAnalyticsWorkspaceResponse> getWorkspaces() {
+    public List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces() {
         return this.workspaces == null ? List.of() : this.workspaces;
     }
 

@@ -19,7 +19,7 @@ public final class GetOrderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetOrderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

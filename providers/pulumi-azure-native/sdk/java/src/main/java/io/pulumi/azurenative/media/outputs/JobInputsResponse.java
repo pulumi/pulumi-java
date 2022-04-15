@@ -40,7 +40,7 @@ public final class JobInputsResponse {
      * List of inputs to a Job.
      * 
     */
-    public List<Object> getInputs() {
+    public List<Object> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
@@ -48,7 +48,7 @@ public final class JobInputsResponse {
      * Expected value is '#Microsoft.Media.JobInputs'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -19,7 +19,7 @@ public final class GetFluidRelayServerKeysArgs extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetFluidRelayServerKeysArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

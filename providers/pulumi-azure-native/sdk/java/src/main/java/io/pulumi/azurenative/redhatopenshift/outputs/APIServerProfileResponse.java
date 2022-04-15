@@ -41,21 +41,21 @@ public final class APIServerProfileResponse {
      * The IP of the cluster API server (immutable).
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The URL to access the cluster API server (immutable).
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
      * API server visibility (immutable).
      * 
     */
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
 

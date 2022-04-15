@@ -64,42 +64,42 @@ public final class ResourceSettingsResponse {
      * The translated compute cores of the virtual machine
      * 
     */
-    public Integer getCores() {
+    public Integer cores() {
         return this.cores;
     }
     /**
      * The resource id of the gallery image used for creating the virtual machine
      * 
     */
-    public Optional<String> getGalleryImageResourceId() {
+    public Optional<String> galleryImageResourceId() {
         return Optional.ofNullable(this.galleryImageResourceId);
     }
     /**
      * The unique id of the resource setting
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the image used to created the environment setting
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * Details specific to Reference Vm
      * 
     */
-    public ReferenceVmResponse getReferenceVm() {
+    public ReferenceVmResponse referenceVm() {
         return this.referenceVm;
     }
     /**
      * The size of the virtual machine
      * 
     */
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
 

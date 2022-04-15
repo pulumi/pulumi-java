@@ -26,7 +26,7 @@ public final class AddressSpaceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
 
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
 

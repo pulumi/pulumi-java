@@ -24,10 +24,10 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
         this.preflightSupported = preflightSupported;
     }
 
-    public List<String> getPreflightOptions() {
+    public List<String> preflightOptions() {
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
-    public Optional<Boolean> getPreflightSupported() {
+    public Optional<Boolean> preflightSupported() {
         return Optional.ofNullable(this.preflightSupported);
     }
 

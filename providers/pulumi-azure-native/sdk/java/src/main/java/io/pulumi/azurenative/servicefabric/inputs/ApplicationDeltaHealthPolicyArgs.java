@@ -28,7 +28,7 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
       private final @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
 
-    public Output<ServiceTypeDeltaHealthPolicyArgs> getDefaultServiceTypeDeltaHealthPolicy() {
+    public Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy() {
         return this.defaultServiceTypeDeltaHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeDeltaHealthPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
     @Import(name="serviceTypeDeltaHealthPolicies")
       private final @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 
-    public Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> getServiceTypeDeltaHealthPolicies() {
+    public Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Codegen.empty() : this.serviceTypeDeltaHealthPolicies;
     }
 

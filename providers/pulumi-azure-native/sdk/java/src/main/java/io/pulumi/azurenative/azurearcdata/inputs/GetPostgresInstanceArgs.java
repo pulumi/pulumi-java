@@ -19,7 +19,7 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
     @Import(name="postgresInstanceName", required=true)
       private final String postgresInstanceName;
 
-    public String getPostgresInstanceName() {
+    public String postgresInstanceName() {
         return this.postgresInstanceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

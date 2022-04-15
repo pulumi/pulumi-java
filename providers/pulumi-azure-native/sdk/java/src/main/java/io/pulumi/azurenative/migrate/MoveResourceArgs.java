@@ -23,7 +23,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moveCollectionName", required=true)
       private final Output<String> moveCollectionName;
 
-    public Output<String> getMoveCollectionName() {
+    public Output<String> moveCollectionName() {
         return this.moveCollectionName;
     }
 
@@ -34,7 +34,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moveResourceName")
       private final @Nullable Output<String> moveResourceName;
 
-    public Output<String> getMoveResourceName() {
+    public Output<String> moveResourceName() {
         return this.moveResourceName == null ? Codegen.empty() : this.moveResourceName;
     }
 
@@ -45,7 +45,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MoveResourcePropertiesArgs> properties;
 
-    public Output<MoveResourcePropertiesArgs> getProperties() {
+    public Output<MoveResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

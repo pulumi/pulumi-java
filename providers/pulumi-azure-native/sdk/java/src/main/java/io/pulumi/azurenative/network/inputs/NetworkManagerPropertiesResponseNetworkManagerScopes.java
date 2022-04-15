@@ -26,7 +26,7 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
     @Import(name="managementGroups")
       private final @Nullable List<String> managementGroups;
 
-    public List<String> getManagementGroups() {
+    public List<String> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
     @Import(name="subscriptions")
       private final @Nullable List<String> subscriptions;
 
-    public List<String> getSubscriptions() {
+    public List<String> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
 

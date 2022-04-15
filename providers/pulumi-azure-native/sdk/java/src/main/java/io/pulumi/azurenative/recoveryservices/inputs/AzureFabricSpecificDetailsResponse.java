@@ -26,7 +26,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
     @Import(name="containerIds")
       private final @Nullable List<String> containerIds;
 
-    public List<String> getContainerIds() {
+    public List<String> containerIds() {
         return this.containerIds == null ? List.of() : this.containerIds;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -49,7 +49,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 

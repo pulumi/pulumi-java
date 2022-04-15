@@ -25,7 +25,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userAltSecId")
       private final @Nullable String userAltSecId;
 
-    public Optional<String> getUserAltSecId() {
+    public Optional<String> userAltSecId() {
         return this.userAltSecId == null ? Optional.empty() : Optional.ofNullable(this.userAltSecId);
     }
 
@@ -36,7 +36,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userIdp")
       private final @Nullable String userIdp;
 
-    public Optional<String> getUserIdp() {
+    public Optional<String> userIdp() {
         return this.userIdp == null ? Optional.empty() : Optional.ofNullable(this.userIdp);
     }
 
@@ -47,7 +47,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userIss")
       private final @Nullable String userIss;
 
-    public Optional<String> getUserIss() {
+    public Optional<String> userIss() {
         return this.userIss == null ? Optional.empty() : Optional.ofNullable(this.userIss);
     }
 
@@ -58,7 +58,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 
@@ -69,7 +69,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userObjectId")
       private final @Nullable String userObjectId;
 
-    public Optional<String> getUserObjectId() {
+    public Optional<String> userObjectId() {
         return this.userObjectId == null ? Optional.empty() : Optional.ofNullable(this.userObjectId);
     }
 
@@ -80,7 +80,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userPuId")
       private final @Nullable String userPuId;
 
-    public Optional<String> getUserPuId() {
+    public Optional<String> userPuId() {
         return this.userPuId == null ? Optional.empty() : Optional.ofNullable(this.userPuId);
     }
 
@@ -91,7 +91,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userTenantId")
       private final @Nullable String userTenantId;
 
-    public Optional<String> getUserTenantId() {
+    public Optional<String> userTenantId() {
         return this.userTenantId == null ? Optional.empty() : Optional.ofNullable(this.userTenantId);
     }
 

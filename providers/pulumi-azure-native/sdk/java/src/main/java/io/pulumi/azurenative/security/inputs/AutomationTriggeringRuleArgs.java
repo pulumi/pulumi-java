@@ -29,7 +29,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     @Import(name="expectedValue")
       private final @Nullable Output<String> expectedValue;
 
-    public Output<String> getExpectedValue() {
+    public Output<String> expectedValue() {
         return this.expectedValue == null ? Codegen.empty() : this.expectedValue;
     }
 
@@ -40,7 +40,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -51,7 +51,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     @Import(name="propertyJPath")
       private final @Nullable Output<String> propertyJPath;
 
-    public Output<String> getPropertyJPath() {
+    public Output<String> propertyJPath() {
         return this.propertyJPath == null ? Codegen.empty() : this.propertyJPath;
     }
 
@@ -62,7 +62,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     @Import(name="propertyType")
       private final @Nullable Output<Either<String,PropertyType>> propertyType;
 
-    public Output<Either<String,PropertyType>> getPropertyType() {
+    public Output<Either<String,PropertyType>> propertyType() {
         return this.propertyType == null ? Codegen.empty() : this.propertyType;
     }
 

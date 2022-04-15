@@ -34,7 +34,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
+    public Output<Object> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -45,7 +45,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -56,7 +56,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="functionName", required=true)
       private final Output<Object> functionName;
 
-    public Output<Object> getFunctionName() {
+    public Output<Object> functionName() {
         return this.functionName;
     }
 
@@ -78,7 +78,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="headers")
       private final @Nullable Output<Object> headers;
 
-    public Output<Object> getHeaders() {
+    public Output<Object> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -89,7 +89,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -100,7 +100,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="method", required=true)
       private final Output<Either<String,AzureFunctionActivityMethod>> method;
 
-    public Output<Either<String,AzureFunctionActivityMethod>> getMethod() {
+    public Output<Either<String,AzureFunctionActivityMethod>> method() {
         return this.method;
     }
 
@@ -111,7 +111,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +122,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -134,7 +134,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,7 +145,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

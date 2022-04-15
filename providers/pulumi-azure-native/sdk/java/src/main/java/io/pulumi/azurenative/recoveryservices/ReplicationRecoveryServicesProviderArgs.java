@@ -23,7 +23,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     @Import(name="properties", required=true)
       private final Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
-    public Output<AddRecoveryServicesProviderInputPropertiesArgs> getProperties() {
+    public Output<AddRecoveryServicesProviderInputPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

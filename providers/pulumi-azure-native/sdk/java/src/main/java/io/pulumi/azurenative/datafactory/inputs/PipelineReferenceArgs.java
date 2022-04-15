@@ -26,7 +26,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName;
     }
 
@@ -48,7 +48,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

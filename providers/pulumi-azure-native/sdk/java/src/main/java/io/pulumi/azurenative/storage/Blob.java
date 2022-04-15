@@ -39,7 +39,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The access tier of the storage blob.
      * 
      */
-    public Output<BlobAccessTier> getAccessTier() {
+    public Output<BlobAccessTier> accessTier() {
         return this.accessTier;
     }
     /**
@@ -53,7 +53,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The MD5 sum of the blob contents.
      * 
      */
-    public Output</* @Nullable */ String> getContentMd5() {
+    public Output</* @Nullable */ String> contentMd5() {
         return this.contentMd5;
     }
     /**
@@ -67,7 +67,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The content type of the storage blob.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -81,7 +81,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return A map of custom blob metadata.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -95,7 +95,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The name of the storage blob.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +109,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The type of the storage blob to be created.
      * 
      */
-    public Output<BlobType> getType() {
+    public Output<BlobType> type() {
         return this.type;
     }
     /**
@@ -123,7 +123,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * @return The URL of the blob.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

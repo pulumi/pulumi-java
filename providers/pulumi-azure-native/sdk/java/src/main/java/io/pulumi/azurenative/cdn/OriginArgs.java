@@ -24,7 +24,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -46,7 +46,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -57,7 +57,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
+    public Output<Integer> httpPort() {
         return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
@@ -68,7 +68,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
+    public Output<Integer> httpsPort() {
         return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
@@ -79,7 +79,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
-    public Output<String> getOriginHostHeader() {
+    public Output<String> originHostHeader() {
         return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
@@ -90,7 +90,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originName")
       private final @Nullable Output<String> originName;
 
-    public Output<String> getOriginName() {
+    public Output<String> originName() {
         return this.originName == null ? Codegen.empty() : this.originName;
     }
 
@@ -101,7 +101,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -112,7 +112,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
 
-    public Output<String> getPrivateLinkAlias() {
+    public Output<String> privateLinkAlias() {
         return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
     }
 
@@ -123,7 +123,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Output<String> getPrivateLinkApprovalMessage() {
+    public Output<String> privateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
     }
 
@@ -134,7 +134,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> getPrivateLinkLocation() {
+    public Output<String> privateLinkLocation() {
         return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
     }
 
@@ -145,7 +145,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
@@ -156,7 +156,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -167,7 +167,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,7 +178,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

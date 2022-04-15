@@ -26,7 +26,7 @@ public final class PropertiesResponseNetworkInjection {
      * Network injection configuration
      * 
     */
-    public Optional<VirtualNetworkPropertiesListResponse> getVirtualNetworks() {
+    public Optional<VirtualNetworkPropertiesListResponse> virtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }
 

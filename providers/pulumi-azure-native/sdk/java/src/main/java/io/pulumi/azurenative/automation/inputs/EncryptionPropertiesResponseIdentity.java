@@ -25,7 +25,7 @@ public final class EncryptionPropertiesResponseIdentity extends io.pulumi.resour
     @Import(name="userAssignedIdentity")
       private final @Nullable Object userAssignedIdentity;
 
-    public Optional<Object> getUserAssignedIdentity() {
+    public Optional<Object> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
     }
 

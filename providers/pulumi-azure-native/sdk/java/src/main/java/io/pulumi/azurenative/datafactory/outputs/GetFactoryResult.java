@@ -125,98 +125,98 @@ public final class GetFactoryResult {
      * Time the factory was created in ISO8601 format.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Etag identifies change in the resource.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * Properties to enable Customer Managed Key for the factory.
      * 
     */
-    public Optional<EncryptionConfigurationResponse> getEncryption() {
+    public Optional<EncryptionConfigurationResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * List of parameters for factory.
      * 
     */
-    public Map<String,GlobalParameterSpecificationResponse> getGlobalParameters() {
+    public Map<String,GlobalParameterSpecificationResponse> globalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Managed service identity of the factory.
      * 
     */
-    public Optional<FactoryIdentityResponse> getIdentity() {
+    public Optional<FactoryIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Factory provisioning state, example Succeeded.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public network access is allowed for the data factory.
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Git repo information of the factory.
      * 
     */
-    public Optional<Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> getRepoConfiguration() {
+    public Optional<Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration() {
         return Optional.ofNullable(this.repoConfiguration);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version of the factory.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

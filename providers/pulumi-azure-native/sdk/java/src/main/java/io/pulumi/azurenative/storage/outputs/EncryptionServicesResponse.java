@@ -48,28 +48,28 @@ public final class EncryptionServicesResponse {
      * The encryption function of the blob storage service.
      * 
     */
-    public Optional<EncryptionServiceResponse> getBlob() {
+    public Optional<EncryptionServiceResponse> blob() {
         return Optional.ofNullable(this.blob);
     }
     /**
      * The encryption function of the file storage service.
      * 
     */
-    public Optional<EncryptionServiceResponse> getFile() {
+    public Optional<EncryptionServiceResponse> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The encryption function of the queue storage service.
      * 
     */
-    public Optional<EncryptionServiceResponse> getQueue() {
+    public Optional<EncryptionServiceResponse> queue() {
         return Optional.ofNullable(this.queue);
     }
     /**
      * The encryption function of the table storage service.
      * 
     */
-    public Optional<EncryptionServiceResponse> getTable() {
+    public Optional<EncryptionServiceResponse> table() {
         return Optional.ofNullable(this.table);
     }
 

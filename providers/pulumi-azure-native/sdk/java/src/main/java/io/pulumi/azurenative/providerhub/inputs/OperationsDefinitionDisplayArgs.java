@@ -21,28 +21,28 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
     @Import(name="operation", required=true)
       private final Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
 
     @Import(name="provider", required=true)
       private final Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
 
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

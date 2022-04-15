@@ -32,7 +32,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentCount")
       private final @Nullable String agentCount;
 
-    public Optional<String> getAgentCount() {
+    public Optional<String> agentCount() {
         return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
     }
 
@@ -43,7 +43,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
-    public Optional<String> getAgentExpiryDate() {
+    public Optional<String> agentExpiryDate() {
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
@@ -54,7 +54,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
@@ -65,7 +65,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
 
-    public Optional<VersionDetailsResponse> getAgentVersionDetails() {
+    public Optional<VersionDetailsResponse> agentVersionDetails() {
         return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
     }
 
@@ -76,7 +76,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="availableMemoryInBytes")
       private final @Nullable Double availableMemoryInBytes;
 
-    public Optional<Double> getAvailableMemoryInBytes() {
+    public Optional<Double> availableMemoryInBytes() {
         return this.availableMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableMemoryInBytes);
     }
 
@@ -87,7 +87,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="availableSpaceInBytes")
       private final @Nullable Double availableSpaceInBytes;
 
-    public Optional<Double> getAvailableSpaceInBytes() {
+    public Optional<Double> availableSpaceInBytes() {
         return this.availableSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableSpaceInBytes);
     }
 
@@ -98,7 +98,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="cpuLoad")
       private final @Nullable String cpuLoad;
 
-    public Optional<String> getCpuLoad() {
+    public Optional<String> cpuLoad() {
         return this.cpuLoad == null ? Optional.empty() : Optional.ofNullable(this.cpuLoad);
     }
 
@@ -109,7 +109,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="cpuLoadStatus")
       private final @Nullable String cpuLoadStatus;
 
-    public Optional<String> getCpuLoadStatus() {
+    public Optional<String> cpuLoadStatus() {
         return this.cpuLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.cpuLoadStatus);
     }
 
@@ -120,7 +120,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="csServiceStatus")
       private final @Nullable String csServiceStatus;
 
-    public Optional<String> getCsServiceStatus() {
+    public Optional<String> csServiceStatus() {
         return this.csServiceStatus == null ? Optional.empty() : Optional.ofNullable(this.csServiceStatus);
     }
 
@@ -131,7 +131,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="databaseServerLoad")
       private final @Nullable String databaseServerLoad;
 
-    public Optional<String> getDatabaseServerLoad() {
+    public Optional<String> databaseServerLoad() {
         return this.databaseServerLoad == null ? Optional.empty() : Optional.ofNullable(this.databaseServerLoad);
     }
 
@@ -142,7 +142,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="databaseServerLoadStatus")
       private final @Nullable String databaseServerLoadStatus;
 
-    public Optional<String> getDatabaseServerLoadStatus() {
+    public Optional<String> databaseServerLoadStatus() {
         return this.databaseServerLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.databaseServerLoadStatus);
     }
 
@@ -153,7 +153,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -165,7 +165,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -176,7 +176,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -187,7 +187,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
@@ -198,7 +198,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="masterTargetServers")
       private final @Nullable List<MasterTargetServerResponse> masterTargetServers;
 
-    public List<MasterTargetServerResponse> getMasterTargetServers() {
+    public List<MasterTargetServerResponse> masterTargetServers() {
         return this.masterTargetServers == null ? List.of() : this.masterTargetServers;
     }
 
@@ -209,7 +209,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="memoryUsageStatus")
       private final @Nullable String memoryUsageStatus;
 
-    public Optional<String> getMemoryUsageStatus() {
+    public Optional<String> memoryUsageStatus() {
         return this.memoryUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.memoryUsageStatus);
     }
 
@@ -220,7 +220,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="processServerCount")
       private final @Nullable String processServerCount;
 
-    public Optional<String> getProcessServerCount() {
+    public Optional<String> processServerCount() {
         return this.processServerCount == null ? Optional.empty() : Optional.ofNullable(this.processServerCount);
     }
 
@@ -231,7 +231,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="processServers")
       private final @Nullable List<ProcessServerResponse> processServers;
 
-    public List<ProcessServerResponse> getProcessServers() {
+    public List<ProcessServerResponse> processServers() {
         return this.processServers == null ? List.of() : this.processServers;
     }
 
@@ -242,7 +242,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="protectedServers")
       private final @Nullable String protectedServers;
 
-    public Optional<String> getProtectedServers() {
+    public Optional<String> protectedServers() {
         return this.protectedServers == null ? Optional.empty() : Optional.ofNullable(this.protectedServers);
     }
 
@@ -253,7 +253,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="psTemplateVersion")
       private final @Nullable String psTemplateVersion;
 
-    public Optional<String> getPsTemplateVersion() {
+    public Optional<String> psTemplateVersion() {
         return this.psTemplateVersion == null ? Optional.empty() : Optional.ofNullable(this.psTemplateVersion);
     }
 
@@ -264,7 +264,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="replicationPairCount")
       private final @Nullable String replicationPairCount;
 
-    public Optional<String> getReplicationPairCount() {
+    public Optional<String> replicationPairCount() {
         return this.replicationPairCount == null ? Optional.empty() : Optional.ofNullable(this.replicationPairCount);
     }
 
@@ -275,7 +275,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="runAsAccounts")
       private final @Nullable List<RunAsAccountResponse> runAsAccounts;
 
-    public List<RunAsAccountResponse> getRunAsAccounts() {
+    public List<RunAsAccountResponse> runAsAccounts() {
         return this.runAsAccounts == null ? List.of() : this.runAsAccounts;
     }
 
@@ -286,7 +286,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="spaceUsageStatus")
       private final @Nullable String spaceUsageStatus;
 
-    public Optional<String> getSpaceUsageStatus() {
+    public Optional<String> spaceUsageStatus() {
         return this.spaceUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.spaceUsageStatus);
     }
 
@@ -297,7 +297,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sslCertExpiryDate")
       private final @Nullable String sslCertExpiryDate;
 
-    public Optional<String> getSslCertExpiryDate() {
+    public Optional<String> sslCertExpiryDate() {
         return this.sslCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryDate);
     }
 
@@ -308,7 +308,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sslCertExpiryRemainingDays")
       private final @Nullable Integer sslCertExpiryRemainingDays;
 
-    public Optional<Integer> getSslCertExpiryRemainingDays() {
+    public Optional<Integer> sslCertExpiryRemainingDays() {
         return this.sslCertExpiryRemainingDays == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
 
@@ -319,7 +319,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="systemLoad")
       private final @Nullable String systemLoad;
 
-    public Optional<String> getSystemLoad() {
+    public Optional<String> systemLoad() {
         return this.systemLoad == null ? Optional.empty() : Optional.ofNullable(this.systemLoad);
     }
 
@@ -330,7 +330,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="systemLoadStatus")
       private final @Nullable String systemLoadStatus;
 
-    public Optional<String> getSystemLoadStatus() {
+    public Optional<String> systemLoadStatus() {
         return this.systemLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.systemLoadStatus);
     }
 
@@ -341,7 +341,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="totalMemoryInBytes")
       private final @Nullable Double totalMemoryInBytes;
 
-    public Optional<Double> getTotalMemoryInBytes() {
+    public Optional<Double> totalMemoryInBytes() {
         return this.totalMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalMemoryInBytes);
     }
 
@@ -352,7 +352,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="totalSpaceInBytes")
       private final @Nullable Double totalSpaceInBytes;
 
-    public Optional<Double> getTotalSpaceInBytes() {
+    public Optional<Double> totalSpaceInBytes() {
         return this.totalSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalSpaceInBytes);
     }
 
@@ -363,7 +363,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="versionStatus")
       private final @Nullable String versionStatus;
 
-    public Optional<String> getVersionStatus() {
+    public Optional<String> versionStatus() {
         return this.versionStatus == null ? Optional.empty() : Optional.ofNullable(this.versionStatus);
     }
 
@@ -374,7 +374,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="webLoad")
       private final @Nullable String webLoad;
 
-    public Optional<String> getWebLoad() {
+    public Optional<String> webLoad() {
         return this.webLoad == null ? Optional.empty() : Optional.ofNullable(this.webLoad);
     }
 
@@ -385,7 +385,7 @@ public final class VMwareDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="webLoadStatus")
       private final @Nullable String webLoadStatus;
 
-    public Optional<String> getWebLoadStatus() {
+    public Optional<String> webLoadStatus() {
         return this.webLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.webLoadStatus);
     }
 

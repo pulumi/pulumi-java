@@ -25,7 +25,7 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
     @Import(name="codeId")
       private final @Nullable String codeId;
 
-    public Optional<String> getCodeId() {
+    public Optional<String> codeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
@@ -36,7 +36,7 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
     @Import(name="scoringScript", required=true)
       private final String scoringScript;
 
-    public String getScoringScript() {
+    public String scoringScript() {
         return this.scoringScript;
     }
 

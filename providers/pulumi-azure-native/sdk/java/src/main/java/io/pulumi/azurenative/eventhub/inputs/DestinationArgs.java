@@ -26,7 +26,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveNameFormat")
       private final @Nullable Output<String> archiveNameFormat;
 
-    public Output<String> getArchiveNameFormat() {
+    public Output<String> archiveNameFormat() {
         return this.archiveNameFormat == null ? Codegen.empty() : this.archiveNameFormat;
     }
 
@@ -37,7 +37,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobContainer")
       private final @Nullable Output<String> blobContainer;
 
-    public Output<String> getBlobContainer() {
+    public Output<String> blobContainer() {
         return this.blobContainer == null ? Codegen.empty() : this.blobContainer;
     }
 
@@ -48,7 +48,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> getStorageAccountResourceId() {
+    public Output<String> storageAccountResourceId() {
         return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
     }
 

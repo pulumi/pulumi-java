@@ -25,7 +25,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
     @Import(name="encoding")
       private final @Nullable String encoding;
 
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
@@ -36,7 +36,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fieldDelimiter")
       private final @Nullable String fieldDelimiter;
 
-    public Optional<String> getFieldDelimiter() {
+    public Optional<String> fieldDelimiter() {
         return this.fieldDelimiter == null ? Optional.empty() : Optional.ofNullable(this.fieldDelimiter);
     }
 
@@ -48,7 +48,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

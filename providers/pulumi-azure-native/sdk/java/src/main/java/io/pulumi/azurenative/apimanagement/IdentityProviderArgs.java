@@ -25,7 +25,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="allowedTenants")
       private final @Nullable Output<List<String>> allowedTenants;
 
-    public Output<List<String>> getAllowedTenants() {
+    public Output<List<String>> allowedTenants() {
         return this.allowedTenants == null ? Codegen.empty() : this.allowedTenants;
     }
 
@@ -36,7 +36,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
+    public Output<String> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -47,7 +47,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -58,7 +58,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -69,7 +69,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identityProviderName")
       private final @Nullable Output<String> identityProviderName;
 
-    public Output<String> getIdentityProviderName() {
+    public Output<String> identityProviderName() {
         return this.identityProviderName == null ? Codegen.empty() : this.identityProviderName;
     }
 
@@ -80,7 +80,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="passwordResetPolicyName")
       private final @Nullable Output<String> passwordResetPolicyName;
 
-    public Output<String> getPasswordResetPolicyName() {
+    public Output<String> passwordResetPolicyName() {
         return this.passwordResetPolicyName == null ? Codegen.empty() : this.passwordResetPolicyName;
     }
 
@@ -91,7 +91,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="profileEditingPolicyName")
       private final @Nullable Output<String> profileEditingPolicyName;
 
-    public Output<String> getProfileEditingPolicyName() {
+    public Output<String> profileEditingPolicyName() {
         return this.profileEditingPolicyName == null ? Codegen.empty() : this.profileEditingPolicyName;
     }
 
@@ -102,7 +102,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -124,7 +124,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="signinPolicyName")
       private final @Nullable Output<String> signinPolicyName;
 
-    public Output<String> getSigninPolicyName() {
+    public Output<String> signinPolicyName() {
         return this.signinPolicyName == null ? Codegen.empty() : this.signinPolicyName;
     }
 
@@ -135,7 +135,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="signinTenant")
       private final @Nullable Output<String> signinTenant;
 
-    public Output<String> getSigninTenant() {
+    public Output<String> signinTenant() {
         return this.signinTenant == null ? Codegen.empty() : this.signinTenant;
     }
 
@@ -146,7 +146,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="signupPolicyName")
       private final @Nullable Output<String> signupPolicyName;
 
-    public Output<String> getSignupPolicyName() {
+    public Output<String> signupPolicyName() {
         return this.signupPolicyName == null ? Codegen.empty() : this.signupPolicyName;
     }
 
@@ -157,7 +157,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<Either<String,IdentityProviderType>> type;
 
-    public Output<Either<String,IdentityProviderType>> getType() {
+    public Output<Either<String,IdentityProviderType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

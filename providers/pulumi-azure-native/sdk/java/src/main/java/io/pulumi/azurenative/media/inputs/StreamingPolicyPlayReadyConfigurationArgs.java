@@ -26,7 +26,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
+    public Output<String> customLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
     }
 
@@ -37,7 +37,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
     @Import(name="playReadyCustomAttributes")
       private final @Nullable Output<String> playReadyCustomAttributes;
 
-    public Output<String> getPlayReadyCustomAttributes() {
+    public Output<String> playReadyCustomAttributes() {
         return this.playReadyCustomAttributes == null ? Codegen.empty() : this.playReadyCustomAttributes;
     }
 

@@ -26,7 +26,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<CacheIdentityType> type;
 
-    public Output<CacheIdentityType> getType() {
+    public Output<CacheIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

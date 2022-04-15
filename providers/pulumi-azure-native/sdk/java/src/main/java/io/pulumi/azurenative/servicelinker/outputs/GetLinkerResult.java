@@ -83,56 +83,56 @@ public final class GetLinkerResult {
      * The authentication type.
      * 
     */
-    public Optional<Object> getAuthInfo() {
+    public Optional<Object> authInfo() {
         return Optional.ofNullable(this.authInfo);
     }
     /**
      * The application client type
      * 
     */
-    public Optional<String> getClientType() {
+    public Optional<String> clientType() {
         return Optional.ofNullable(this.clientType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system data.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The resource Id of target service.
      * 
     */
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

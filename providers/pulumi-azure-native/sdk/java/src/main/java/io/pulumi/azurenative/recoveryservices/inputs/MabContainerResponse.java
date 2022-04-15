@@ -30,7 +30,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
@@ -41,7 +41,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -52,7 +52,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="canReRegister")
       private final @Nullable Boolean canReRegister;
 
-    public Optional<Boolean> getCanReRegister() {
+    public Optional<Boolean> canReRegister() {
         return this.canReRegister == null ? Optional.empty() : Optional.ofNullable(this.canReRegister);
     }
 
@@ -63,7 +63,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerHealthState")
       private final @Nullable String containerHealthState;
 
-    public Optional<String> getContainerHealthState() {
+    public Optional<String> containerHealthState() {
         return this.containerHealthState == null ? Optional.empty() : Optional.ofNullable(this.containerHealthState);
     }
 
@@ -74,7 +74,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerId")
       private final @Nullable Double containerId;
 
-    public Optional<Double> getContainerId() {
+    public Optional<Double> containerId() {
         return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
     }
 
@@ -89,7 +89,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -100,7 +100,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="extendedInfo")
       private final @Nullable MabContainerExtendedInfoResponse extendedInfo;
 
-    public Optional<MabContainerExtendedInfoResponse> getExtendedInfo() {
+    public Optional<MabContainerExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -111,7 +111,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -122,7 +122,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -133,7 +133,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mabContainerHealthDetails")
       private final @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
 
-    public List<MABContainerHealthDetailsResponse> getMabContainerHealthDetails() {
+    public List<MABContainerHealthDetailsResponse> mabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
     }
 
@@ -144,7 +144,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
 
-    public Optional<Double> getProtectedItemCount() {
+    public Optional<Double> protectedItemCount() {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
     }
 
@@ -155,7 +155,7 @@ public final class MabContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 

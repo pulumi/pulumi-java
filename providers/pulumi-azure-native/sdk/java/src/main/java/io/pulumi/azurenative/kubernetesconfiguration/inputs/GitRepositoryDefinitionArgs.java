@@ -28,7 +28,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="httpsCAFile")
       private final @Nullable Output<String> httpsCAFile;
 
-    public Output<String> getHttpsCAFile() {
+    public Output<String> httpsCAFile() {
         return this.httpsCAFile == null ? Codegen.empty() : this.httpsCAFile;
     }
 
@@ -39,7 +39,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="httpsUser")
       private final @Nullable Output<String> httpsUser;
 
-    public Output<String> getHttpsUser() {
+    public Output<String> httpsUser() {
         return this.httpsUser == null ? Codegen.empty() : this.httpsUser;
     }
 
@@ -50,7 +50,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="localAuthRef")
       private final @Nullable Output<String> localAuthRef;
 
-    public Output<String> getLocalAuthRef() {
+    public Output<String> localAuthRef() {
         return this.localAuthRef == null ? Codegen.empty() : this.localAuthRef;
     }
 
@@ -61,7 +61,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="repositoryRef")
       private final @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
 
-    public Output<RepositoryRefDefinitionArgs> getRepositoryRef() {
+    public Output<RepositoryRefDefinitionArgs> repositoryRef() {
         return this.repositoryRef == null ? Codegen.empty() : this.repositoryRef;
     }
 
@@ -72,7 +72,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="sshKnownHosts")
       private final @Nullable Output<String> sshKnownHosts;
 
-    public Output<String> getSshKnownHosts() {
+    public Output<String> sshKnownHosts() {
         return this.sshKnownHosts == null ? Codegen.empty() : this.sshKnownHosts;
     }
 
@@ -83,7 +83,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="syncIntervalInSeconds")
       private final @Nullable Output<Double> syncIntervalInSeconds;
 
-    public Output<Double> getSyncIntervalInSeconds() {
+    public Output<Double> syncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Codegen.empty() : this.syncIntervalInSeconds;
     }
 
@@ -94,7 +94,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Double> timeoutInSeconds;
 
-    public Output<Double> getTimeoutInSeconds() {
+    public Output<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
@@ -105,7 +105,7 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

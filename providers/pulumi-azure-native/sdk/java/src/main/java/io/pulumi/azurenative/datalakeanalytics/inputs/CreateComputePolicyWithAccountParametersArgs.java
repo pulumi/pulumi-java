@@ -29,7 +29,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+    public Output<Integer> maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
@@ -40,7 +40,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Output<Integer> getMinPriorityPerJob() {
+    public Output<Integer> minPriorityPerJob() {
         return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
     }
 
@@ -51,7 +51,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -62,7 +62,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -73,7 +73,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;
 
-    public Output<Either<String,AADObjectType>> getObjectType() {
+    public Output<Either<String,AADObjectType>> objectType() {
         return this.objectType;
     }
 

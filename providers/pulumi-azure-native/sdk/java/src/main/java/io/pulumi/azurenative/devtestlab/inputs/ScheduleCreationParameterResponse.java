@@ -30,7 +30,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="dailyRecurrence")
       private final @Nullable DayDetailsResponse dailyRecurrence;
 
-    public Optional<DayDetailsResponse> getDailyRecurrence() {
+    public Optional<DayDetailsResponse> dailyRecurrence() {
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
     }
 
@@ -41,7 +41,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="hourlyRecurrence")
       private final @Nullable HourDetailsResponse hourlyRecurrence;
 
-    public Optional<HourDetailsResponse> getHourlyRecurrence() {
+    public Optional<HourDetailsResponse> hourlyRecurrence() {
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
     }
 
@@ -52,7 +52,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -63,7 +63,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -74,7 +74,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="notificationSettings")
       private final @Nullable NotificationSettingsResponse notificationSettings;
 
-    public Optional<NotificationSettingsResponse> getNotificationSettings() {
+    public Optional<NotificationSettingsResponse> notificationSettings() {
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
     }
 
@@ -85,7 +85,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -96,7 +96,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -107,7 +107,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
 
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
     }
 
@@ -118,7 +118,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="taskType")
       private final @Nullable String taskType;
 
-    public Optional<String> getTaskType() {
+    public Optional<String> taskType() {
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
     }
 
@@ -129,7 +129,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="timeZoneId")
       private final @Nullable String timeZoneId;
 
-    public Optional<String> getTimeZoneId() {
+    public Optional<String> timeZoneId() {
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
     }
 
@@ -140,7 +140,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     @Import(name="weeklyRecurrence")
       private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
+    public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return this.weeklyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.weeklyRecurrence);
     }
 

@@ -25,7 +25,7 @@ public final class DeliveryRulePostArgsConditionResponse extends io.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRulePostArgsConditionResponse extends io.pulumi.resou
     @Import(name="parameters", required=true)
       private final PostArgsMatchConditionParametersResponse parameters;
 
-    public PostArgsMatchConditionParametersResponse getParameters() {
+    public PostArgsMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

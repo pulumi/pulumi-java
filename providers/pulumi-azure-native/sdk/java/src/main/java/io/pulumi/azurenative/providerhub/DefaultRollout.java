@@ -43,7 +43,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * @return Properties of the rollout.
      * 
      */
-    public Output<DefaultRolloutResponseProperties> getProperties() {
+    public Output<DefaultRolloutResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class DefaultRollout extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

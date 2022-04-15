@@ -30,7 +30,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inputs", required=true)
       private final Output<List<NodeInputArgs>> inputs;
 
-    public Output<List<NodeInputArgs>> getInputs() {
+    public Output<List<NodeInputArgs>> inputs() {
         return this.inputs;
     }
 
@@ -41,7 +41,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="preset", required=true)
       private final Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset;
 
-    public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> getPreset() {
+    public Output<Either<EncoderCustomPresetArgs,EncoderSystemPresetArgs>> preset() {
         return this.preset;
     }
 
@@ -64,7 +64,7 @@ public final class EncoderProcessorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

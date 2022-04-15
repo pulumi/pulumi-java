@@ -27,7 +27,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
     @Import(name="sku")
       private final @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
-    public Output<CloudServiceRoleSkuArgs> getSku() {
+    public Output<CloudServiceRoleSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

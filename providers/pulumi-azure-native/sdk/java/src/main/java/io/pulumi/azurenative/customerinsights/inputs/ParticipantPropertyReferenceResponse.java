@@ -23,7 +23,7 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
     @Import(name="sourcePropertyName", required=true)
       private final String sourcePropertyName;
 
-    public String getSourcePropertyName() {
+    public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -34,7 +34,7 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
     @Import(name="targetPropertyName", required=true)
       private final String targetPropertyName;
 
-    public String getTargetPropertyName() {
+    public String targetPropertyName() {
         return this.targetPropertyName;
     }
 

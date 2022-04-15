@@ -27,7 +27,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -38,7 +38,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subclasses")
       private final @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
-    public Output<Map<String,LabelClassArgs>> getSubclasses() {
+    public Output<Map<String,LabelClassArgs>> subclasses() {
         return this.subclasses == null ? Codegen.empty() : this.subclasses;
     }
 

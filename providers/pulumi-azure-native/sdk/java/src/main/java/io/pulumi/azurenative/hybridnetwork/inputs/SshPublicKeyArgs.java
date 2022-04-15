@@ -26,7 +26,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyData")
       private final @Nullable Output<String> keyData;
 
-    public Output<String> getKeyData() {
+    public Output<String> keyData() {
         return this.keyData == null ? Codegen.empty() : this.keyData;
     }
 
@@ -37,7 +37,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

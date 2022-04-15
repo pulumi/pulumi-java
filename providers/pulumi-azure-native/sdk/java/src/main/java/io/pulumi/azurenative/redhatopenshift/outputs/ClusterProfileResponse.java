@@ -48,28 +48,28 @@ public final class ClusterProfileResponse {
      * The domain for the cluster (immutable).
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The pull secret for the cluster (immutable).
      * 
     */
-    public Optional<String> getPullSecret() {
+    public Optional<String> pullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
     /**
      * The ID of the cluster resource group (immutable).
      * 
     */
-    public Optional<String> getResourceGroupId() {
+    public Optional<String> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
     /**
      * The version of the cluster (immutable).
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

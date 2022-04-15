@@ -19,7 +19,7 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
-    public String getPrivateEndpointConnectionName() {
+    public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

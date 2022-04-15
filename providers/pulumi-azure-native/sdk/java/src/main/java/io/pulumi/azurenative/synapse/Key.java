@@ -43,7 +43,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Used to activate the workspace after a customer managed key is provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsActiveCMK() {
+    public Output</* @Nullable */ Boolean> isActiveCMK() {
         return this.isActiveCMK;
     }
     /**
@@ -57,7 +57,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The Key Vault Url of the workspace key.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultUrl() {
+    public Output</* @Nullable */ String> keyVaultUrl() {
         return this.keyVaultUrl;
     }
     /**
@@ -71,7 +71,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

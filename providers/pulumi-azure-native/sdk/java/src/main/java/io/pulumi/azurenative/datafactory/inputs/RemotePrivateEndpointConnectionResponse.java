@@ -27,7 +27,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
     @Import(name="privateEndpoint")
       private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
-    public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -38,14 +38,14 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
-    public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

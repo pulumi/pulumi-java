@@ -41,21 +41,21 @@ public final class ConnStringInfoResponse {
      * Connection string value.
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Name of connection string.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of database.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

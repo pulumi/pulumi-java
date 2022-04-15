@@ -33,7 +33,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="backupBlobShare", required=true)
       private final Output<BlobShareArgs> backupBlobShare;
 
-    public Output<BlobShareArgs> getBackupBlobShare() {
+    public Output<BlobShareArgs> backupBlobShare() {
         return this.backupBlobShare;
     }
 
@@ -44,7 +44,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
@@ -55,7 +55,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="backupMode")
       private final @Nullable Output<Either<String,BackupMode>> backupMode;
 
-    public Output<Either<String,BackupMode>> getBackupMode() {
+    public Output<Either<String,BackupMode>> backupMode() {
         return this.backupMode == null ? Codegen.empty() : this.backupMode;
     }
 
@@ -66,7 +66,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -77,7 +77,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="selectedLogins")
       private final @Nullable Output<List<String>> selectedLogins;
 
-    public Output<List<String>> getSelectedLogins() {
+    public Output<List<String>> selectedLogins() {
         return this.selectedLogins == null ? Codegen.empty() : this.selectedLogins;
     }
 
@@ -88,7 +88,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -99,7 +99,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

@@ -29,7 +29,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="loadBalancerResourceId")
       private final @Nullable Output<String> loadBalancerResourceId;
 
-    public Output<String> getLoadBalancerResourceId() {
+    public Output<String> loadBalancerResourceId() {
         return this.loadBalancerResourceId == null ? Codegen.empty() : this.loadBalancerResourceId;
     }
 
@@ -40,7 +40,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="privateIpAddress")
       private final @Nullable Output<PrivateIPAddressArgs> privateIpAddress;
 
-    public Output<PrivateIPAddressArgs> getPrivateIpAddress() {
+    public Output<PrivateIPAddressArgs> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -51,7 +51,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="probePort")
       private final @Nullable Output<Integer> probePort;
 
-    public Output<Integer> getProbePort() {
+    public Output<Integer> probePort() {
         return this.probePort == null ? Codegen.empty() : this.probePort;
     }
 
@@ -62,7 +62,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="publicIpAddressResourceId")
       private final @Nullable Output<String> publicIpAddressResourceId;
 
-    public Output<String> getPublicIpAddressResourceId() {
+    public Output<String> publicIpAddressResourceId() {
         return this.publicIpAddressResourceId == null ? Codegen.empty() : this.publicIpAddressResourceId;
     }
 
@@ -73,7 +73,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="sqlVirtualMachineInstances")
       private final @Nullable Output<List<String>> sqlVirtualMachineInstances;
 
-    public Output<List<String>> getSqlVirtualMachineInstances() {
+    public Output<List<String>> sqlVirtualMachineInstances() {
         return this.sqlVirtualMachineInstances == null ? Codegen.empty() : this.sqlVirtualMachineInstances;
     }
 

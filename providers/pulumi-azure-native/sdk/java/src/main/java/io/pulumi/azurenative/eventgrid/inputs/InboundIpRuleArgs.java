@@ -24,7 +24,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Either<String,IpActionType>> action;
 
-    public Output<Either<String,IpActionType>> getAction() {
+    public Output<Either<String,IpActionType>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -35,7 +35,7 @@ public final class InboundIpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
-    public Output<String> getIpMask() {
+    public Output<String> ipMask() {
         return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 

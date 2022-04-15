@@ -25,7 +25,7 @@ public final class FailoverGroupReadOnlyEndpointResponse extends io.pulumi.resou
     @Import(name="failoverPolicy")
       private final @Nullable String failoverPolicy;
 
-    public Optional<String> getFailoverPolicy() {
+    public Optional<String> failoverPolicy() {
         return this.failoverPolicy == null ? Optional.empty() : Optional.ofNullable(this.failoverPolicy);
     }
 

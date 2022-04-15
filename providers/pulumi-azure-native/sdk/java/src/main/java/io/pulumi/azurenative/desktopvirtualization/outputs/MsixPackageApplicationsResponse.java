@@ -69,49 +69,49 @@ public final class MsixPackageApplicationsResponse {
      * Package Application Id, found in appxmanifest.xml.
      * 
     */
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
      * 
     */
-    public Optional<String> getAppUserModelID() {
+    public Optional<String> appUserModelID() {
         return Optional.ofNullable(this.appUserModelID);
     }
     /**
      * Description of Package Application.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * User friendly name.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * User friendly name.
      * 
     */
-    public Optional<String> getIconImageName() {
+    public Optional<String> iconImageName() {
         return Optional.ofNullable(this.iconImageName);
     }
     /**
      * the icon a 64 bit string as a byte array.
      * 
     */
-    public Optional<String> getRawIcon() {
+    public Optional<String> rawIcon() {
         return Optional.ofNullable(this.rawIcon);
     }
     /**
      * the icon a 64 bit string as a byte array.
      * 
     */
-    public Optional<String> getRawPng() {
+    public Optional<String> rawPng() {
         return Optional.ofNullable(this.rawPng);
     }
 

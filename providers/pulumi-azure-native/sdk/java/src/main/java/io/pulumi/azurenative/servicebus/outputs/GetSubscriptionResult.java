@@ -164,140 +164,140 @@ public final class GetSubscriptionResult {
      * Last time there was a receive request to this subscription.
      * 
     */
-    public String getAccessedAt() {
+    public String accessedAt() {
         return this.accessedAt;
     }
     /**
      * ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
     */
-    public Optional<String> getAutoDeleteOnIdle() {
+    public Optional<String> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
      * Message count details
      * 
     */
-    public MessageCountDetailsResponse getCountDetails() {
+    public MessageCountDetailsResponse countDetails() {
         return this.countDetails;
     }
     /**
      * Exact time the message was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
      * 
     */
-    public Optional<Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
+    public Optional<Boolean> deadLetteringOnFilterEvaluationExceptions() {
         return Optional.ofNullable(this.deadLetteringOnFilterEvaluationExceptions);
     }
     /**
      * Value that indicates whether a subscription has dead letter support when a message expires.
      * 
     */
-    public Optional<Boolean> getDeadLetteringOnMessageExpiration() {
+    public Optional<Boolean> deadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
     */
-    public Optional<String> getDefaultMessageTimeToLive() {
+    public Optional<String> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
     */
-    public Optional<String> getDuplicateDetectionHistoryTimeWindow() {
+    public Optional<String> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
      * 
     */
-    public Optional<Boolean> getEnableBatchedOperations() {
+    public Optional<Boolean> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
      * 
     */
-    public Optional<String> getForwardDeadLetteredMessagesTo() {
+    public Optional<String> forwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
      * 
     */
-    public Optional<String> getForwardTo() {
+    public Optional<String> forwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
      * 
     */
-    public Optional<String> getLockDuration() {
+    public Optional<String> lockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
     /**
      * Number of maximum deliveries.
      * 
     */
-    public Optional<Integer> getMaxDeliveryCount() {
+    public Optional<Integer> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
      * Number of messages.
      * 
     */
-    public Double getMessageCount() {
+    public Double messageCount() {
         return this.messageCount;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Value indicating if a subscription supports the concept of sessions.
      * 
     */
-    public Optional<Boolean> getRequiresSession() {
+    public Optional<Boolean> requiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

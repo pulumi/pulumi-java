@@ -22,7 +22,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
     @Import(name="expandRegistrationDefinition")
       private final @Nullable Boolean expandRegistrationDefinition;
 
-    public Optional<Boolean> getExpandRegistrationDefinition() {
+    public Optional<Boolean> expandRegistrationDefinition() {
         return this.expandRegistrationDefinition == null ? Optional.empty() : Optional.ofNullable(this.expandRegistrationDefinition);
     }
 
@@ -33,7 +33,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
     @Import(name="registrationAssignmentId", required=true)
       private final String registrationAssignmentId;
 
-    public String getRegistrationAssignmentId() {
+    public String registrationAssignmentId() {
         return this.registrationAssignmentId;
     }
 
@@ -44,7 +44,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

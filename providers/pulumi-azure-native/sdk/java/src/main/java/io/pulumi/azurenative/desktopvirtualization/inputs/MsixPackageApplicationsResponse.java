@@ -25,7 +25,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -36,7 +36,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="appUserModelID")
       private final @Nullable String appUserModelID;
 
-    public Optional<String> getAppUserModelID() {
+    public Optional<String> appUserModelID() {
         return this.appUserModelID == null ? Optional.empty() : Optional.ofNullable(this.appUserModelID);
     }
 
@@ -47,7 +47,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -58,7 +58,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -69,7 +69,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="iconImageName")
       private final @Nullable String iconImageName;
 
-    public Optional<String> getIconImageName() {
+    public Optional<String> iconImageName() {
         return this.iconImageName == null ? Optional.empty() : Optional.ofNullable(this.iconImageName);
     }
 
@@ -80,7 +80,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="rawIcon")
       private final @Nullable String rawIcon;
 
-    public Optional<String> getRawIcon() {
+    public Optional<String> rawIcon() {
         return this.rawIcon == null ? Optional.empty() : Optional.ofNullable(this.rawIcon);
     }
 
@@ -91,7 +91,7 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     @Import(name="rawPng")
       private final @Nullable String rawPng;
 
-    public Optional<String> getRawPng() {
+    public Optional<String> rawPng() {
         return this.rawPng == null ? Optional.empty() : Optional.ofNullable(this.rawPng);
     }
 

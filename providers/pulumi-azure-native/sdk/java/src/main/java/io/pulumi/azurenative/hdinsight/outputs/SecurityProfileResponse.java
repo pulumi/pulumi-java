@@ -84,63 +84,63 @@ public final class SecurityProfileResponse {
      * The resource ID of the user's Azure Active Directory Domain Service.
      * 
     */
-    public Optional<String> getAaddsResourceId() {
+    public Optional<String> aaddsResourceId() {
         return Optional.ofNullable(this.aaddsResourceId);
     }
     /**
      * Optional. The Distinguished Names for cluster user groups
      * 
     */
-    public List<String> getClusterUsersGroupDNs() {
+    public List<String> clusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
     }
     /**
      * The directory type.
      * 
     */
-    public Optional<String> getDirectoryType() {
+    public Optional<String> directoryType() {
         return Optional.ofNullable(this.directoryType);
     }
     /**
      * The organization's active directory domain.
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The domain admin password.
      * 
     */
-    public Optional<String> getDomainUserPassword() {
+    public Optional<String> domainUserPassword() {
         return Optional.ofNullable(this.domainUserPassword);
     }
     /**
      * The domain user account that will have admin privileges on the cluster.
      * 
     */
-    public Optional<String> getDomainUsername() {
+    public Optional<String> domainUsername() {
         return Optional.ofNullable(this.domainUsername);
     }
     /**
      * The LDAPS protocol URLs to communicate with the Active Directory.
      * 
     */
-    public List<String> getLdapsUrls() {
+    public List<String> ldapsUrls() {
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
     }
     /**
      * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
      * 
     */
-    public Optional<String> getMsiResourceId() {
+    public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
      * The organizational unit within the Active Directory to place the cluster and service accounts.
      * 
     */
-    public Optional<String> getOrganizationalUnitDN() {
+    public Optional<String> organizationalUnitDN() {
         return Optional.ofNullable(this.organizationalUnitDN);
     }
 

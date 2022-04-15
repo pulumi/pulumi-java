@@ -47,7 +47,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Management information availability state for the app.
      * 
      */
-    public Output<String> getAvailabilityState() {
+    public Output<String> availabilityState() {
         return this.availabilityState;
     }
     /**
@@ -61,7 +61,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getClientAffinityEnabled() {
+    public Output</* @Nullable */ Boolean> clientAffinityEnabled() {
         return this.clientAffinityEnabled;
     }
     /**
@@ -75,7 +75,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getClientCertEnabled() {
+    public Output</* @Nullable */ Boolean> clientCertEnabled() {
         return this.clientCertEnabled;
     }
     /**
@@ -89,7 +89,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return client certificate authentication comma-separated exclusion paths
      * 
      */
-    public Output</* @Nullable */ String> getClientCertExclusionPaths() {
+    public Output</* @Nullable */ String> clientCertExclusionPaths() {
         return this.clientCertExclusionPaths;
     }
     /**
@@ -109,7 +109,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
      */
-    public Output</* @Nullable */ String> getClientCertMode() {
+    public Output</* @Nullable */ String> clientCertMode() {
         return this.clientCertMode;
     }
     /**
@@ -123,7 +123,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Size of the function container.
      * 
      */
-    public Output</* @Nullable */ Integer> getContainerSize() {
+    public Output</* @Nullable */ Integer> containerSize() {
         return this.containerSize;
     }
     /**
@@ -137,7 +137,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
      */
-    public Output</* @Nullable */ String> getCustomDomainVerificationId() {
+    public Output</* @Nullable */ String> customDomainVerificationId() {
         return this.customDomainVerificationId;
     }
     /**
@@ -151,7 +151,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
      */
-    public Output</* @Nullable */ Integer> getDailyMemoryTimeQuota() {
+    public Output</* @Nullable */ Integer> dailyMemoryTimeQuota() {
         return this.dailyMemoryTimeQuota;
     }
     /**
@@ -165,7 +165,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Default hostname of the app. Read-only.
      * 
      */
-    public Output<String> getDefaultHostName() {
+    public Output<String> defaultHostName() {
         return this.defaultHostName;
     }
     /**
@@ -179,7 +179,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -195,7 +195,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * the app is not served on those hostnames.
      * 
      */
-    public Output<List<String>> getEnabledHostNames() {
+    public Output<List<String>> enabledHostNames() {
         return this.enabledHostNames;
     }
     /**
@@ -209,7 +209,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Hostname SSL states are used to manage the SSL bindings for app's hostnames.
      * 
      */
-    public Output</* @Nullable */ List<HostNameSslStateResponse>> getHostNameSslStates() {
+    public Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates() {
         return this.hostNameSslStates;
     }
     /**
@@ -223,7 +223,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Hostnames associated with the app.
      * 
      */
-    public Output<List<String>> getHostNames() {
+    public Output<List<String>> hostNames() {
         return this.hostNames;
     }
     /**
@@ -239,7 +239,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      *  If <code>true</code>, the app is only accessible via API management process.
      * 
      */
-    public Output</* @Nullable */ Boolean> getHostNamesDisabled() {
+    public Output</* @Nullable */ Boolean> hostNamesDisabled() {
         return this.hostNamesDisabled;
     }
     /**
@@ -253,7 +253,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return App Service Environment to use for the app.
      * 
      */
-    public Output</* @Nullable */ HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
+    public Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
     }
     /**
@@ -269,7 +269,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * http requests
      * 
      */
-    public Output</* @Nullable */ Boolean> getHttpsOnly() {
+    public Output</* @Nullable */ Boolean> httpsOnly() {
         return this.httpsOnly;
     }
     /**
@@ -283,7 +283,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Hyper-V sandbox.
      * 
      */
-    public Output</* @Nullable */ Boolean> getHyperV() {
+    public Output</* @Nullable */ Boolean> hyperV() {
         return this.hyperV;
     }
     /**
@@ -297,7 +297,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Managed service identity.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -311,7 +311,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Specifies an operation id if this site has a pending operation.
      * 
      */
-    public Output<String> getInProgressOperationId() {
+    public Output<String> inProgressOperationId() {
         return this.inProgressOperationId;
     }
     /**
@@ -325,7 +325,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> if the app is a default container; otherwise, <code>false</code>.
      * 
      */
-    public Output<Boolean> getIsDefaultContainer() {
+    public Output<Boolean> isDefaultContainer() {
         return this.isDefaultContainer;
     }
     /**
@@ -339,7 +339,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Obsolete: Hyper-V sandbox.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsXenon() {
+    public Output</* @Nullable */ Boolean> isXenon() {
         return this.isXenon;
     }
     /**
@@ -353,7 +353,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Identity to use for Key Vault Reference authentication.
      * 
      */
-    public Output</* @Nullable */ String> getKeyVaultReferenceIdentity() {
+    public Output</* @Nullable */ String> keyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity;
     }
     /**
@@ -367,7 +367,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -381,7 +381,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Last time the app was modified, in UTC. Read-only.
      * 
      */
-    public Output<String> getLastModifiedTimeUtc() {
+    public Output<String> lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
@@ -395,7 +395,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -411,7 +411,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * This only applies to Functions container.
      * 
      */
-    public Output<Integer> getMaxNumberOfWorkers() {
+    public Output<Integer> maxNumberOfWorkers() {
         return this.maxNumberOfWorkers;
     }
     /**
@@ -425,7 +425,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -439,7 +439,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
      * 
      */
-    public Output<String> getOutboundIpAddresses() {
+    public Output<String> outboundIpAddresses() {
         return this.outboundIpAddresses;
     }
     /**
@@ -453,7 +453,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
      * 
      */
-    public Output<String> getPossibleOutboundIpAddresses() {
+    public Output<String> possibleOutboundIpAddresses() {
         return this.possibleOutboundIpAddresses;
     }
     /**
@@ -467,7 +467,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Site redundancy mode
      * 
      */
-    public Output</* @Nullable */ String> getRedundancyMode() {
+    public Output</* @Nullable */ String> redundancyMode() {
         return this.redundancyMode;
     }
     /**
@@ -481,7 +481,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Name of the repository site.
      * 
      */
-    public Output<String> getRepositorySiteName() {
+    public Output<String> repositorySiteName() {
         return this.repositorySiteName;
     }
     /**
@@ -495,7 +495,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> if reserved; otherwise, <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReserved() {
+    public Output</* @Nullable */ Boolean> reserved() {
         return this.reserved;
     }
     /**
@@ -509,7 +509,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Name of the resource group the app belongs to. Read-only.
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -523,7 +523,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getScmSiteAlsoStopped() {
+    public Output</* @Nullable */ Boolean> scmSiteAlsoStopped() {
         return this.scmSiteAlsoStopped;
     }
     /**
@@ -537,7 +537,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    public Output</* @Nullable */ String> getServerFarmId() {
+    public Output</* @Nullable */ String> serverFarmId() {
         return this.serverFarmId;
     }
     /**
@@ -551,7 +551,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Configuration of the app.
      * 
      */
-    public Output</* @Nullable */ SiteConfigResponse> getSiteConfig() {
+    public Output</* @Nullable */ SiteConfigResponse> siteConfig() {
         return this.siteConfig;
     }
     /**
@@ -565,7 +565,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Status of the last deployment slot swap operation.
      * 
      */
-    public Output<SlotSwapStatusResponse> getSlotSwapStatus() {
+    public Output<SlotSwapStatusResponse> slotSwapStatus() {
         return this.slotSwapStatus;
     }
     /**
@@ -579,7 +579,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Current state of the app.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -593,7 +593,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Checks if Customer provided storage account is required
      * 
      */
-    public Output</* @Nullable */ Boolean> getStorageAccountRequired() {
+    public Output</* @Nullable */ Boolean> storageAccountRequired() {
         return this.storageAccountRequired;
     }
     /**
@@ -607,7 +607,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return App suspended till in case memory-time quota is exceeded.
      * 
      */
-    public Output<String> getSuspendedTill() {
+    public Output<String> suspendedTill() {
         return this.suspendedTill;
     }
     /**
@@ -621,7 +621,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -635,7 +635,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Specifies which deployment slot this app will swap into. Read-only.
      * 
      */
-    public Output<String> getTargetSwapSlot() {
+    public Output<String> targetSwapSlot() {
         return this.targetSwapSlot;
     }
     /**
@@ -649,7 +649,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Azure Traffic Manager hostnames associated with the app. Read-only.
      * 
      */
-    public Output<List<String>> getTrafficManagerHostNames() {
+    public Output<List<String>> trafficManagerHostNames() {
         return this.trafficManagerHostNames;
     }
     /**
@@ -663,7 +663,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -677,7 +677,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * @return State indicating whether the app has exceeded its quota usage. Read-only.
      * 
      */
-    public Output<String> getUsageState() {
+    public Output<String> usageState() {
         return this.usageState;
     }
     /**
@@ -693,7 +693,7 @@ public class WebAppSlot extends io.pulumi.resources.CustomResource {
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
      */
-    public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
+    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

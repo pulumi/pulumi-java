@@ -26,7 +26,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -37,7 +37,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -48,7 +48,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -59,7 +59,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalName")
       private final @Nullable Output<String> principalName;
 
-    public Output<String> getPrincipalName() {
+    public Output<String> principalName() {
         return this.principalName == null ? Codegen.empty() : this.principalName;
     }
 
@@ -70,7 +70,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

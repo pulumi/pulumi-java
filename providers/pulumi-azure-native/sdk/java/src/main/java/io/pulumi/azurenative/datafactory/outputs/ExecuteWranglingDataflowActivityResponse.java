@@ -138,91 +138,91 @@ public final class ExecuteWranglingDataflowActivityResponse {
      * Compute properties for data flow activity.
      * 
     */
-    public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
+    public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
         return Optional.ofNullable(this.compute);
     }
     /**
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
     */
-    public Optional<Object> getContinueOnError() {
+    public Optional<Object> continueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
     /**
      * Data flow reference.
      * 
     */
-    public DataFlowReferenceResponse getDataFlow() {
+    public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
+    public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * List of mapping for Power Query mashup query to sink dataset(s).
      * 
     */
-    public List<PowerQuerySinkMappingResponse> getQueries() {
+    public List<PowerQuerySinkMappingResponse> queries() {
         return this.queries == null ? List.of() : this.queries;
     }
     /**
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
     */
-    public Optional<Object> getRunConcurrently() {
+    public Optional<Object> runConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
     /**
      * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
     */
-    public Map<String,PowerQuerySinkResponse> getSinks() {
+    public Map<String,PowerQuerySinkResponse> sinks() {
         return this.sinks == null ? Map.of() : this.sinks;
     }
     /**
      * Staging info for execute data flow activity.
      * 
     */
-    public Optional<DataFlowStagingInfoResponse> getStaging() {
+    public Optional<DataFlowStagingInfoResponse> staging() {
         return Optional.ofNullable(this.staging);
     }
     /**
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getTraceLevel() {
+    public Optional<Object> traceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
     /**
@@ -230,14 +230,14 @@ public final class ExecuteWranglingDataflowActivityResponse {
      * Expected value is 'ExecuteWranglingDataflow'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

@@ -22,7 +22,7 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     @Import(name="siteExtensionId")
       private final @Nullable Output<String> siteExtensionId;
 
-    public Output<String> getSiteExtensionId() {
+    public Output<String> siteExtensionId() {
         return this.siteExtensionId == null ? Codegen.empty() : this.siteExtensionId;
     }
 

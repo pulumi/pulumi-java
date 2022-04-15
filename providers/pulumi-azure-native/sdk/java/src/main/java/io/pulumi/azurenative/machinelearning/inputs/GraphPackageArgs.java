@@ -31,7 +31,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="edges")
       private final @Nullable Output<List<GraphEdgeArgs>> edges;
 
-    public Output<List<GraphEdgeArgs>> getEdges() {
+    public Output<List<GraphEdgeArgs>> edges() {
         return this.edges == null ? Codegen.empty() : this.edges;
     }
 
@@ -42,7 +42,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="graphParameters")
       private final @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
-    public Output<Map<String,GraphParameterArgs>> getGraphParameters() {
+    public Output<Map<String,GraphParameterArgs>> graphParameters() {
         return this.graphParameters == null ? Codegen.empty() : this.graphParameters;
     }
 
@@ -53,7 +53,7 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodes")
       private final @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
-    public Output<Map<String,GraphNodeArgs>> getNodes() {
+    public Output<Map<String,GraphNodeArgs>> nodes() {
         return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 

@@ -29,7 +29,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureQueue")
       private final @Nullable Output<QueueScaleRuleArgs> azureQueue;
 
-    public Output<QueueScaleRuleArgs> getAzureQueue() {
+    public Output<QueueScaleRuleArgs> azureQueue() {
         return this.azureQueue == null ? Codegen.empty() : this.azureQueue;
     }
 
@@ -40,7 +40,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<CustomScaleRuleArgs> custom;
 
-    public Output<CustomScaleRuleArgs> getCustom() {
+    public Output<CustomScaleRuleArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -51,7 +51,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http")
       private final @Nullable Output<HttpScaleRuleArgs> http;
 
-    public Output<HttpScaleRuleArgs> getHttp() {
+    public Output<HttpScaleRuleArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -62,7 +62,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

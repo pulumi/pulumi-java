@@ -25,7 +25,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     @Import(name="expiry", required=true)
       private final Output<String> expiry;
 
-    public Output<String> getExpiry() {
+    public Output<String> expiry() {
         return this.expiry;
     }
 
@@ -36,7 +36,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     @Import(name="subject", required=true)
       private final Output<String> subject;
 
-    public Output<String> getSubject() {
+    public Output<String> subject() {
         return this.subject;
     }
 
@@ -47,7 +47,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     @Import(name="thumbprint", required=true)
       private final Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
 

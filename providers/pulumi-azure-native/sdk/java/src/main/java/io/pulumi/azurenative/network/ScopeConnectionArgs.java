@@ -22,7 +22,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -44,7 +44,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -66,7 +66,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scopeConnectionName")
       private final @Nullable Output<String> scopeConnectionName;
 
-    public Output<String> getScopeConnectionName() {
+    public Output<String> scopeConnectionName() {
         return this.scopeConnectionName == null ? Codegen.empty() : this.scopeConnectionName;
     }
 
@@ -77,7 +77,7 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

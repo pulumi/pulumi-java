@@ -43,7 +43,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * @return The metrics configuration details
      * 
      */
-    public Output<List<MetricConfigurationResponse>> getMetricConfigurations() {
+    public Output<List<MetricConfigurationResponse>> metricConfigurations() {
         return this.metricConfigurations;
     }
     /**
@@ -57,7 +57,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

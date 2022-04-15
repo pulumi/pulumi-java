@@ -27,7 +27,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName == null ? Codegen.empty() : this.poolName;
     }
 
@@ -60,7 +60,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qosType")
       private final @Nullable Output<Either<String,QosType>> qosType;
 
-    public Output<Either<String,QosType>> getQosType() {
+    public Output<Either<String,QosType>> qosType() {
         return this.qosType == null ? Codegen.empty() : this.qosType;
     }
 
@@ -71,7 +71,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLevel", required=true)
       private final Output<Either<String,ServiceLevel>> serviceLevel;
 
-    public Output<Either<String,ServiceLevel>> getServiceLevel() {
+    public Output<Either<String,ServiceLevel>> serviceLevel() {
         return this.serviceLevel;
     }
 
@@ -93,7 +93,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size", required=true)
       private final Output<Double> size;
 
-    public Output<Double> getSize() {
+    public Output<Double> size() {
         return this.size;
     }
 
@@ -104,7 +104,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -27,7 +27,7 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticRoutes")
       private final @Nullable Output<List<StaticRouteArgs>> staticRoutes;
 
-    public Output<List<StaticRouteArgs>> getStaticRoutes() {
+    public Output<List<StaticRouteArgs>> staticRoutes() {
         return this.staticRoutes == null ? Codegen.empty() : this.staticRoutes;
     }
 

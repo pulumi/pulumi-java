@@ -79,56 +79,56 @@ public final class GetInstanceDetailsResult {
      * A collection of DFP instance administrators
      * 
     */
-    public Optional<DFPInstanceAdministratorsResponse> getAdministration() {
+    public Optional<DFPInstanceAdministratorsResponse> administration() {
         return Optional.ofNullable(this.administration);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the DFP resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

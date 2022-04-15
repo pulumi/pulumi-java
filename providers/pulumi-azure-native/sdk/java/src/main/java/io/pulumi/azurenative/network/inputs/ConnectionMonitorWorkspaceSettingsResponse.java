@@ -25,7 +25,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

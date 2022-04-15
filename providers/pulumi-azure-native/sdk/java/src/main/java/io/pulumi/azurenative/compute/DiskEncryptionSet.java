@@ -46,7 +46,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return The key vault key which is currently used by this disk encryption set.
      * 
      */
-    public Output</* @Nullable */ KeyForDiskEncryptionSetResponse> getActiveKey() {
+    public Output</* @Nullable */ KeyForDiskEncryptionSetResponse> activeKey() {
         return this.activeKey;
     }
     /**
@@ -60,7 +60,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return The type of key used to encrypt the data of the disk.
      * 
      */
-    public Output</* @Nullable */ String> getEncryptionType() {
+    public Output</* @Nullable */ String> encryptionType() {
         return this.encryptionType;
     }
     /**
@@ -74,7 +74,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
      * 
      */
-    public Output</* @Nullable */ EncryptionSetIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ EncryptionSetIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -88,7 +88,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return The time when the active key of this disk encryption set was updated.
      * 
      */
-    public Output<String> getLastKeyRotationTimestamp() {
+    public Output<String> lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
     /**
@@ -102,7 +102,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
      * 
      */
-    public Output<List<KeyForDiskEncryptionSetResponse>> getPreviousKeys() {
+    public Output<List<KeyForDiskEncryptionSetResponse>> previousKeys() {
         return this.previousKeys;
     }
     /**
@@ -144,7 +144,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return The disk encryption set provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -158,7 +158,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRotationToLatestKeyVersionEnabled() {
+    public Output</* @Nullable */ Boolean> rotationToLatestKeyVersionEnabled() {
         return this.rotationToLatestKeyVersionEnabled;
     }
     /**
@@ -172,7 +172,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

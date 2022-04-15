@@ -26,7 +26,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -48,7 +48,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable ScalarFunctionPropertiesResponse properties;
 
-    public Optional<ScalarFunctionPropertiesResponse> getProperties() {
+    public Optional<ScalarFunctionPropertiesResponse> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
@@ -59,7 +59,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

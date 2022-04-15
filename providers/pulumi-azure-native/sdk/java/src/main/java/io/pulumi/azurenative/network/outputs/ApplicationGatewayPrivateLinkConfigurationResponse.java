@@ -64,42 +64,42 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of application gateway private link ip configurations.
      * 
     */
-    public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> getIpConfigurations() {
+    public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * Name of the private link configuration that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the application gateway private link configuration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

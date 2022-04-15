@@ -54,35 +54,35 @@ public final class TunnelConnectionHealthResponse {
      * Virtual Network Gateway connection status.
      * 
     */
-    public String getConnectionStatus() {
+    public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
      * The Egress Bytes Transferred in this connection.
      * 
     */
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * The Ingress Bytes Transferred in this connection.
      * 
     */
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The time at which connection was established in Utc format.
      * 
     */
-    public String getLastConnectionEstablishedUtcTime() {
+    public String lastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
     /**
      * Tunnel name.
      * 
     */
-    public String getTunnel() {
+    public String tunnel() {
         return this.tunnel;
     }
 

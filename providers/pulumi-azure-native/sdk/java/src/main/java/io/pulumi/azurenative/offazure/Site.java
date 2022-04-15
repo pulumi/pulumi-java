@@ -44,7 +44,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return eTag for concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -58,7 +58,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Azure location in which Sites is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Name of the VMware site.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -86,13 +86,13 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Nested properties of VMWare site.
      * 
      */
-    public Output<SitePropertiesResponse> getProperties() {
+    public Output<SitePropertiesResponse> properties() {
         return this.properties;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -106,7 +106,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * @return Type of resource. Type = Microsoft.OffAzure/VMWareSites.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

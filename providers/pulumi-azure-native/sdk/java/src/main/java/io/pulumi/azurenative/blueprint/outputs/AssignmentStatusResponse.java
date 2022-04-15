@@ -40,21 +40,21 @@ public final class AssignmentStatusResponse {
      * Last modified time of this blueprint definition.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * List of resources that were created by the blueprint assignment.
      * 
     */
-    public List<String> getManagedResources() {
+    public List<String> managedResources() {
         return this.managedResources;
     }
     /**
      * Creation time of this blueprint definition.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
 

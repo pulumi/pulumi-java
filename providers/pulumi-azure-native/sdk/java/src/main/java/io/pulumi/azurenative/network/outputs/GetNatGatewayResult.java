@@ -123,98 +123,98 @@ public final class GetNatGatewayResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The idle timeout of the nat gateway.
      * 
     */
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the NAT gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * An array of public ip addresses associated with the nat gateway resource.
      * 
     */
-    public List<SubResourceResponse> getPublicIpAddresses() {
+    public List<SubResourceResponse> publicIpAddresses() {
         return this.publicIpAddresses == null ? List.of() : this.publicIpAddresses;
     }
     /**
      * An array of public ip prefixes associated with the nat gateway resource.
      * 
     */
-    public List<SubResourceResponse> getPublicIpPrefixes() {
+    public List<SubResourceResponse> publicIpPrefixes() {
         return this.publicIpPrefixes == null ? List.of() : this.publicIpPrefixes;
     }
     /**
      * The resource GUID property of the NAT gateway resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The nat gateway SKU.
      * 
     */
-    public Optional<NatGatewaySkuResponse> getSku() {
+    public Optional<NatGatewaySkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * An array of references to the subnets using this nat gateway resource.
      * 
     */
-    public List<SubResourceResponse> getSubnets() {
+    public List<SubResourceResponse> subnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

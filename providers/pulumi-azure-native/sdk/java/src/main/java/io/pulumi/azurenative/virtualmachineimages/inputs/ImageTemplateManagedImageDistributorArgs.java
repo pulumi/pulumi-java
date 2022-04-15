@@ -27,7 +27,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Output<Map<String,String>> getArtifactTags() {
+    public Output<Map<String,String>> artifactTags() {
         return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -49,7 +49,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -60,7 +60,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
-    public Output<String> getRunOutputName() {
+    public Output<String> runOutputName() {
         return this.runOutputName;
     }
 
@@ -72,7 +72,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

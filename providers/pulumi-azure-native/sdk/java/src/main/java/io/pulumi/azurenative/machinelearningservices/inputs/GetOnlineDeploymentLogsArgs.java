@@ -24,7 +24,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="containerType")
       private final @Nullable Either<String,ContainerType> containerType;
 
-    public Either<String,ContainerType> getContainerType() {
+    public Either<String,ContainerType> containerType() {
         return this.containerType == null ? null : this.containerType;
     }
 
@@ -35,7 +35,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 
@@ -46,7 +46,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 
@@ -57,7 +57,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="tail")
       private final @Nullable Integer tail;
 
-    public Optional<Integer> getTail() {
+    public Optional<Integer> tail() {
         return this.tail == null ? Optional.empty() : Optional.ofNullable(this.tail);
     }
 
@@ -79,7 +79,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

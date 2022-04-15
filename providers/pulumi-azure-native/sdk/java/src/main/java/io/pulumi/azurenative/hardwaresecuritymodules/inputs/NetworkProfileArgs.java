@@ -24,7 +24,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnet")
       private final @Nullable Output<ApiEntityReferenceArgs> subnet;
 
-    public Output<ApiEntityReferenceArgs> getSubnet() {
+    public Output<ApiEntityReferenceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

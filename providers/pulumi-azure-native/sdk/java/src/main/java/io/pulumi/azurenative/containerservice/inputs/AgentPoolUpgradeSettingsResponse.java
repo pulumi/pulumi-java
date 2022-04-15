@@ -25,7 +25,7 @@ public final class AgentPoolUpgradeSettingsResponse extends io.pulumi.resources.
     @Import(name="maxSurge")
       private final @Nullable String maxSurge;
 
-    public Optional<String> getMaxSurge() {
+    public Optional<String> maxSurge() {
         return this.maxSurge == null ? Optional.empty() : Optional.ofNullable(this.maxSurge);
     }
 

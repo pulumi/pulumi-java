@@ -29,7 +29,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="blobPathBeginsWith")
       private final @Nullable String blobPathBeginsWith;
 
-    public Optional<String> getBlobPathBeginsWith() {
+    public Optional<String> blobPathBeginsWith() {
         return this.blobPathBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.blobPathBeginsWith);
     }
 
@@ -51,7 +51,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="blobPathEndsWith")
       private final @Nullable String blobPathEndsWith;
 
-    public Optional<String> getBlobPathEndsWith() {
+    public Optional<String> blobPathEndsWith() {
         return this.blobPathEndsWith == null ? Optional.empty() : Optional.ofNullable(this.blobPathEndsWith);
     }
 
@@ -62,7 +62,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -73,7 +73,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="events", required=true)
       private final List<String> events;
 
-    public List<String> getEvents() {
+    public List<String> events() {
         return this.events;
     }
 
@@ -84,7 +84,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="ignoreEmptyBlobs")
       private final @Nullable Boolean ignoreEmptyBlobs;
 
-    public Optional<Boolean> getIgnoreEmptyBlobs() {
+    public Optional<Boolean> ignoreEmptyBlobs() {
         return this.ignoreEmptyBlobs == null ? Optional.empty() : Optional.ofNullable(this.ignoreEmptyBlobs);
     }
 
@@ -95,7 +95,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> getPipelines() {
+    public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
@@ -106,7 +106,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -117,7 +117,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -129,7 +129,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

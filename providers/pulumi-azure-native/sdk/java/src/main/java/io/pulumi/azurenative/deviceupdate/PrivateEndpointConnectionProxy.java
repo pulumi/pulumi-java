@@ -44,7 +44,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return ETag from NRP.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The provisioning state of the private endpoint connection proxy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Remote private endpoint details.
      * 
      */
-    public Output</* @Nullable */ RemotePrivateEndpointResponse> getRemotePrivateEndpoint() {
+    public Output</* @Nullable */ RemotePrivateEndpointResponse> remotePrivateEndpoint() {
         return this.remotePrivateEndpoint;
     }
     /**
@@ -100,7 +100,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Operation status.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -114,7 +114,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +128,7 @@ public class PrivateEndpointConnectionProxy extends io.pulumi.resources.CustomRe
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

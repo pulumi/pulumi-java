@@ -17,7 +17,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication {
         this.allowedAudiences = allowedAudiences;
     }
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 

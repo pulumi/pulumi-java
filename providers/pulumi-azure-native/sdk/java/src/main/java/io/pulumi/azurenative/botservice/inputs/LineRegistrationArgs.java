@@ -26,7 +26,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="channelAccessToken")
       private final @Nullable Output<String> channelAccessToken;
 
-    public Output<String> getChannelAccessToken() {
+    public Output<String> channelAccessToken() {
         return this.channelAccessToken == null ? Codegen.empty() : this.channelAccessToken;
     }
 
@@ -37,7 +37,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="channelSecret")
       private final @Nullable Output<String> channelSecret;
 
-    public Output<String> getChannelSecret() {
+    public Output<String> channelSecret() {
         return this.channelSecret == null ? Codegen.empty() : this.channelSecret;
     }
 

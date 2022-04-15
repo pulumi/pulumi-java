@@ -36,7 +36,7 @@ public final class TarGZipReadSettingsResponse {
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getPreserveCompressionFileNameAsFolder() {
+    public Optional<Object> preserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
     /**
@@ -44,7 +44,7 @@ public final class TarGZipReadSettingsResponse {
      * Expected value is 'TarGZipReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

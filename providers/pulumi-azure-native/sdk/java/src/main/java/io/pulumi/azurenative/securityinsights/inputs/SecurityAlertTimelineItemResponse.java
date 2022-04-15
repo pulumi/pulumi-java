@@ -25,7 +25,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="alertType", required=true)
       private final String alertType;
 
-    public String getAlertType() {
+    public String alertType() {
         return this.alertType;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="azureResourceId", required=true)
       private final String azureResourceId;
 
-    public String getAzureResourceId() {
+    public String azureResourceId() {
         return this.azureResourceId;
     }
 
@@ -47,7 +47,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -58,7 +58,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -69,7 +69,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
 
-    public String getEndTimeUtc() {
+    public String endTimeUtc() {
         return this.endTimeUtc;
     }
 
@@ -81,7 +81,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -92,7 +92,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="productName")
       private final @Nullable String productName;
 
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
     }
 
@@ -103,7 +103,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -114,7 +114,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
 
-    public String getStartTimeUtc() {
+    public String startTimeUtc() {
         return this.startTimeUtc;
     }
 
@@ -125,7 +125,7 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     @Import(name="timeGenerated", required=true)
       private final String timeGenerated;
 
-    public String getTimeGenerated() {
+    public String timeGenerated() {
         return this.timeGenerated;
     }
 

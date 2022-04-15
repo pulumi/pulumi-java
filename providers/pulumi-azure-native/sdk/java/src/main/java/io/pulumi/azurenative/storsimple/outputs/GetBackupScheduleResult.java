@@ -92,70 +92,70 @@ public final class GetBackupScheduleResult {
      * The type of backup which needs to be taken.
      * 
     */
-    public String getBackupType() {
+    public String backupType() {
         return this.backupType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The last successful backup run which was triggered for the schedule.
      * 
     */
-    public String getLastSuccessfulRun() {
+    public String lastSuccessfulRun() {
         return this.lastSuccessfulRun;
     }
     /**
      * The name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The number of backups to be retained.
      * 
     */
-    public Double getRetentionCount() {
+    public Double retentionCount() {
         return this.retentionCount;
     }
     /**
      * The schedule recurrence.
      * 
     */
-    public ScheduleRecurrenceResponse getScheduleRecurrence() {
+    public ScheduleRecurrenceResponse scheduleRecurrence() {
         return this.scheduleRecurrence;
     }
     /**
      * The schedule status.
      * 
     */
-    public String getScheduleStatus() {
+    public String scheduleStatus() {
         return this.scheduleStatus;
     }
     /**
      * The start time of the schedule.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

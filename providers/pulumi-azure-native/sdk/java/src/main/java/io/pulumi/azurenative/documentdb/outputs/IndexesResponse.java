@@ -42,21 +42,21 @@ public final class IndexesResponse {
      * The datatype for which the indexing behavior is applied to.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Indicates the type of index.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The precision of the index. -1 is maximum precision.
      * 
     */
-    public Optional<Integer> getPrecision() {
+    public Optional<Integer> precision() {
         return Optional.ofNullable(this.precision);
     }
 

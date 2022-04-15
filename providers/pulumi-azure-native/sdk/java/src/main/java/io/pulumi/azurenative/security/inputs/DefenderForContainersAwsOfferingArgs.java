@@ -30,7 +30,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     @Import(name="cloudWatchToKinesis")
       private final @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
 
-    public Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> getCloudWatchToKinesis() {
+    public Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis() {
         return this.cloudWatchToKinesis == null ? Codegen.empty() : this.cloudWatchToKinesis;
     }
 
@@ -41,7 +41,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     @Import(name="kinesisToS3")
       private final @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
 
-    public Output<DefenderForContainersAwsOfferingKinesisToS3Args> getKinesisToS3() {
+    public Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3() {
         return this.kinesisToS3 == null ? Codegen.empty() : this.kinesisToS3;
     }
 
@@ -52,7 +52,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     @Import(name="kubernetesScubaReader")
       private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
 
-    public Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> getKubernetesScubaReader() {
+    public Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader() {
         return this.kubernetesScubaReader == null ? Codegen.empty() : this.kubernetesScubaReader;
     }
 
@@ -63,7 +63,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     @Import(name="kubernetesService")
       private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
 
-    public Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> getKubernetesService() {
+    public Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService() {
         return this.kubernetesService == null ? Codegen.empty() : this.kubernetesService;
     }
 
@@ -75,7 +75,7 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     @Import(name="offeringType", required=true)
       private final Output<String> offeringType;
 
-    public Output<String> getOfferingType() {
+    public Output<String> offeringType() {
         return this.offeringType;
     }
 

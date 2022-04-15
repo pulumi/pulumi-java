@@ -167,35 +167,35 @@ public final class GetPartnerRegistrationResult {
      * for creating the partner registration.
      * 
     */
-    public List<String> getAuthorizedAzureSubscriptionIds() {
+    public List<String> authorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds == null ? List.of() : this.authorizedAzureSubscriptionIds;
     }
     /**
      * The extension of the customer service URI of the publisher.
      * 
     */
-    public Optional<String> getCustomerServiceUri() {
+    public Optional<String> customerServiceUri() {
         return Optional.ofNullable(this.customerServiceUri);
     }
     /**
      * Fully qualified identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * URI of the logo.
      * 
     */
-    public Optional<String> getLogoUri() {
+    public Optional<String> logoUri() {
         return Optional.ofNullable(this.logoUri);
     }
     /**
@@ -203,21 +203,21 @@ public final class GetPartnerRegistrationResult {
      * Length of this description should not exceed 2048 characters.
      * 
     */
-    public Optional<String> getLongDescription() {
+    public Optional<String> longDescription() {
         return Optional.ofNullable(this.longDescription);
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
      * 
     */
-    public Optional<String> getPartnerCustomerServiceExtension() {
+    public Optional<String> partnerCustomerServiceExtension() {
         return Optional.ofNullable(this.partnerCustomerServiceExtension);
     }
     /**
@@ -227,42 +227,42 @@ public final class GetPartnerRegistrationResult {
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
      * 
     */
-    public Optional<String> getPartnerCustomerServiceNumber() {
+    public Optional<String> partnerCustomerServiceNumber() {
         return Optional.ofNullable(this.partnerCustomerServiceNumber);
     }
     /**
      * Official name of the partner name. For example: "Contoso".
      * 
     */
-    public Optional<String> getPartnerName() {
+    public Optional<String> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
     /**
      * Short description of the partner resource type. The length of this description should not exceed 256 characters.
      * 
     */
-    public Optional<String> getPartnerResourceTypeDescription() {
+    public Optional<String> partnerResourceTypeDescription() {
         return Optional.ofNullable(this.partnerResourceTypeDescription);
     }
     /**
      * Display name of the partner resource type.
      * 
     */
-    public Optional<String> getPartnerResourceTypeDisplayName() {
+    public Optional<String> partnerResourceTypeDisplayName() {
         return Optional.ofNullable(this.partnerResourceTypeDisplayName);
     }
     /**
      * Name of the partner resource type.
      * 
     */
-    public Optional<String> getPartnerResourceTypeName() {
+    public Optional<String> partnerResourceTypeName() {
         return Optional.ofNullable(this.partnerResourceTypeName);
     }
     /**
      * Provisioning state of the partner registration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -270,35 +270,35 @@ public final class GetPartnerRegistrationResult {
      * integration on an event source.
      * 
     */
-    public Optional<String> getSetupUri() {
+    public Optional<String> setupUri() {
         return Optional.ofNullable(this.setupUri);
     }
     /**
      * The system metadata relating to Partner Registration resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Visibility state of the partner registration.
      * 
     */
-    public Optional<String> getVisibilityState() {
+    public Optional<String> visibilityState() {
         return Optional.ofNullable(this.visibilityState);
     }
 

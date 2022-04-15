@@ -23,7 +23,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -34,14 +34,14 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -52,7 +52,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -63,14 +63,14 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

@@ -46,7 +46,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +60,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return Priority of the Firewall Policy Rule Collection Group resource.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -88,7 +88,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return The provisioning state of the firewall policy rule collection group resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -102,7 +102,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return Group of Firewall Policy rule collections.
      * 
      */
-    public Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>>> getRuleCollections() {
+    public Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>>> ruleCollections() {
         return this.ruleCollections;
     }
     /**
@@ -116,7 +116,7 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
      * @return Rule Group type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

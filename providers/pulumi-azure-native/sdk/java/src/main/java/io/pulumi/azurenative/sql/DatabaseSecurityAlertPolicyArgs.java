@@ -26,7 +26,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -37,7 +37,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="disabledAlerts")
       private final @Nullable Output<List<String>> disabledAlerts;
 
-    public Output<List<String>> getDisabledAlerts() {
+    public Output<List<String>> disabledAlerts() {
         return this.disabledAlerts == null ? Codegen.empty() : this.disabledAlerts;
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="emailAccountAdmins")
       private final @Nullable Output<Boolean> emailAccountAdmins;
 
-    public Output<Boolean> getEmailAccountAdmins() {
+    public Output<Boolean> emailAccountAdmins() {
         return this.emailAccountAdmins == null ? Codegen.empty() : this.emailAccountAdmins;
     }
 
@@ -59,7 +59,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> getEmailAddresses() {
+    public Output<List<String>> emailAddresses() {
         return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
     }
 
@@ -70,7 +70,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
@@ -92,7 +92,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="securityAlertPolicyName")
       private final @Nullable Output<String> securityAlertPolicyName;
 
-    public Output<String> getSecurityAlertPolicyName() {
+    public Output<String> securityAlertPolicyName() {
         return this.securityAlertPolicyName == null ? Codegen.empty() : this.securityAlertPolicyName;
     }
 
@@ -103,7 +103,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -114,7 +114,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="state", required=true)
       private final Output<SecurityAlertsPolicyState> state;
 
-    public Output<SecurityAlertsPolicyState> getState() {
+    public Output<SecurityAlertsPolicyState> state() {
         return this.state;
     }
 
@@ -125,7 +125,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
 
-    public Output<String> getStorageAccountAccessKey() {
+    public Output<String> storageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Codegen.empty() : this.storageAccountAccessKey;
     }
 
@@ -136,7 +136,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;
 
-    public Output<String> getStorageEndpoint() {
+    public Output<String> storageEndpoint() {
         return this.storageEndpoint == null ? Codegen.empty() : this.storageEndpoint;
     }
 

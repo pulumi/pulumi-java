@@ -27,7 +27,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<Either<String,WebhookAction>>> actions;
 
-    public Output<List<Either<String,WebhookAction>>> getActions() {
+    public Output<List<Either<String,WebhookAction>>> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customHeaders")
       private final @Nullable Output<Map<String,String>> customHeaders;
 
-    public Output<Map<String,String>> getCustomHeaders() {
+    public Output<Map<String,String>> customHeaders() {
         return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
@@ -49,7 +49,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -71,7 +71,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -93,7 +93,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
 
-    public Output<String> getServiceUri() {
+    public Output<String> serviceUri() {
         return this.serviceUri;
     }
 
@@ -104,7 +104,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,WebhookStatus>> status;
 
-    public Output<Either<String,WebhookStatus>> getStatus() {
+    public Output<Either<String,WebhookStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -115,7 +115,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -126,7 +126,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;
 
-    public Output<String> getWebhookName() {
+    public Output<String> webhookName() {
         return this.webhookName == null ? Codegen.empty() : this.webhookName;
     }
 

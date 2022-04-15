@@ -26,7 +26,7 @@ public final class CloudServiceExtensionProfileResponse extends io.pulumi.resour
     @Import(name="extensions")
       private final @Nullable List<ExtensionResponse> extensions;
 
-    public List<ExtensionResponse> getExtensions() {
+    public List<ExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 

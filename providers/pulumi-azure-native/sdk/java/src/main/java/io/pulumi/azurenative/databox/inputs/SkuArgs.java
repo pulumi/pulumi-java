@@ -28,7 +28,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -39,7 +39,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -50,7 +50,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 

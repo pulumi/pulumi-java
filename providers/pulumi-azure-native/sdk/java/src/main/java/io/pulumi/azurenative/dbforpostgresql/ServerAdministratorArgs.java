@@ -23,7 +23,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType;
     }
 
@@ -34,7 +34,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="login", required=true)
       private final Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
 
@@ -45,7 +45,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -67,7 +67,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="sid", required=true)
       private final Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
 
@@ -78,7 +78,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 

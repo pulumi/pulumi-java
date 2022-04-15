@@ -25,7 +25,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
     @Import(name="imageName")
       private final @Nullable String imageName;
 
-    public Optional<String> getImageName() {
+    public Optional<String> imageName() {
         return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
     }
 
@@ -36,7 +36,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -47,7 +47,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
     @Import(name="serverUrl")
       private final @Nullable String serverUrl;
 
-    public Optional<String> getServerUrl() {
+    public Optional<String> serverUrl() {
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
     }
 
@@ -58,7 +58,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

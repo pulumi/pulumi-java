@@ -29,7 +29,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -44,7 +44,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -55,7 +55,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="extendedInformation")
       private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
 
-    public Output<GenericContainerExtendedInfoArgs> getExtendedInformation() {
+    public Output<GenericContainerExtendedInfoArgs> extendedInformation() {
         return this.extendedInformation == null ? Codegen.empty() : this.extendedInformation;
     }
 
@@ -66,7 +66,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
@@ -77,7 +77,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -88,7 +88,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
+    public Output<String> healthStatus() {
         return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
@@ -99,7 +99,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 

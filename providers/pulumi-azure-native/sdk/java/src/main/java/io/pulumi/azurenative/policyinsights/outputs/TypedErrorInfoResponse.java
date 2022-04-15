@@ -33,14 +33,14 @@ public final class TypedErrorInfoResponse {
      * The scenario specific error details.
      * 
     */
-    public Object getInfo() {
+    public Object info() {
         return this.info;
     }
     /**
      * The type of included error details.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

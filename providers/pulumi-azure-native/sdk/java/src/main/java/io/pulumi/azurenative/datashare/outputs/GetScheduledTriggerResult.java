@@ -106,14 +106,14 @@ public final class GetScheduledTriggerResult {
      * Time at which the trigger was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -121,70 +121,70 @@ public final class GetScheduledTriggerResult {
      * Expected value is 'ScheduleBased'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Recurrence Interval
      * 
     */
-    public String getRecurrenceInterval() {
+    public String recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
      * Synchronization mode
      * 
     */
-    public Optional<String> getSynchronizationMode() {
+    public Optional<String> synchronizationMode() {
         return Optional.ofNullable(this.synchronizationMode);
     }
     /**
      * Synchronization time
      * 
     */
-    public String getSynchronizationTime() {
+    public String synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Gets the trigger state
      * 
     */
-    public String getTriggerStatus() {
+    public String triggerStatus() {
         return this.triggerStatus;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Name of the user who created the trigger.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

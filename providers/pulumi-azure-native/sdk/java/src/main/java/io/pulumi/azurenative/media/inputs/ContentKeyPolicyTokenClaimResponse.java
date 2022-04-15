@@ -25,7 +25,7 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
     @Import(name="claimType")
       private final @Nullable String claimType;
 
-    public Optional<String> getClaimType() {
+    public Optional<String> claimType() {
         return this.claimType == null ? Optional.empty() : Optional.ofNullable(this.claimType);
     }
 
@@ -36,7 +36,7 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
     @Import(name="claimValue")
       private final @Nullable String claimValue;
 
-    public Optional<String> getClaimValue() {
+    public Optional<String> claimValue() {
         return this.claimValue == null ? Optional.empty() : Optional.ofNullable(this.claimValue);
     }
 

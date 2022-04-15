@@ -120,77 +120,77 @@ public final class AzureMLLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The API key for accessing the Azure ML model endpoint.
      * 
     */
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getApiKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey() {
         return this.apiKey;
     }
     /**
      * Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAuthentication() {
+    public Optional<Object> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getMlEndpoint() {
+    public Object mlEndpoint() {
         return this.mlEndpoint;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
@@ -198,14 +198,14 @@ public final class AzureMLLinkedServiceResponse {
      * Expected value is 'AzureML'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUpdateResourceEndpoint() {
+    public Optional<Object> updateResourceEndpoint() {
         return Optional.ofNullable(this.updateResourceEndpoint);
     }
 

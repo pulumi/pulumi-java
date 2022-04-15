@@ -23,7 +23,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
     @Import(name="accessPermission", required=true)
       private final String accessPermission;
 
-    public String getAccessPermission() {
+    public String accessPermission() {
         return this.accessPermission;
     }
 
@@ -34,7 +34,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
     @Import(name="client", required=true)
       private final String client;
 
-    public String getClient() {
+    public String client() {
         return this.client;
     }
 

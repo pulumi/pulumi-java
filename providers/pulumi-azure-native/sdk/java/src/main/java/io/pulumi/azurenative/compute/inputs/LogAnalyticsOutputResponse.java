@@ -23,7 +23,7 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
     @Import(name="output", required=true)
       private final String output;
 
-    public String getOutput() {
+    public String output() {
         return this.output;
     }
 

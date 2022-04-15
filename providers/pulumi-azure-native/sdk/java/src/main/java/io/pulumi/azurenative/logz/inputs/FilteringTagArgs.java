@@ -28,7 +28,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Either<String,TagAction>> action;
 
-    public Output<Either<String,TagAction>> getAction() {
+    public Output<Either<String,TagAction>> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -39,7 +39,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

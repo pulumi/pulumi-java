@@ -27,7 +27,7 @@ public final class AlertRuleLeafConditionResponse extends io.pulumi.resources.In
     @Import(name="containsAny")
       private final @Nullable List<String> containsAny;
 
-    public List<String> getContainsAny() {
+    public List<String> containsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
 
@@ -38,7 +38,7 @@ public final class AlertRuleLeafConditionResponse extends io.pulumi.resources.In
     @Import(name="equals")
       private final @Nullable String equals;
 
-    public Optional<String> getEquals() {
+    public Optional<String> equals_() {
         return this.equals == null ? Optional.empty() : Optional.ofNullable(this.equals);
     }
 
@@ -50,7 +50,7 @@ public final class AlertRuleLeafConditionResponse extends io.pulumi.resources.In
     @Import(name="field")
       private final @Nullable String field;
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
@@ -100,7 +100,7 @@ public final class AlertRuleLeafConditionResponse extends io.pulumi.resources.In
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable String equals) {
+        public Builder equals_(@Nullable String equals) {
             this.equals = equals;
             return this;
         }

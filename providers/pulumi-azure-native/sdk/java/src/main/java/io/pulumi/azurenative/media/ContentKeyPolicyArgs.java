@@ -24,7 +24,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="contentKeyPolicyName")
       private final @Nullable Output<String> contentKeyPolicyName;
 
-    public Output<String> getContentKeyPolicyName() {
+    public Output<String> contentKeyPolicyName() {
         return this.contentKeyPolicyName == null ? Codegen.empty() : this.contentKeyPolicyName;
     }
 
@@ -46,7 +46,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="options", required=true)
       private final Output<List<ContentKeyPolicyOptionArgs>> options;
 
-    public Output<List<ContentKeyPolicyOptionArgs>> getOptions() {
+    public Output<List<ContentKeyPolicyOptionArgs>> options() {
         return this.options;
     }
 
@@ -68,7 +68,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

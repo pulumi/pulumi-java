@@ -27,7 +27,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorProperties", required=true)
       private final Output<Map<String,Object>> connectorProperties;
 
-    public Output<Map<String,Object>> getConnectorProperties() {
+    public Output<Map<String,Object>> connectorProperties() {
         return this.connectorProperties;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorType", required=true)
       private final Output<Either<String,ConnectorTypes>> connectorType;
 
-    public Output<Either<String,ConnectorTypes>> getConnectorType() {
+    public Output<Either<String,ConnectorTypes>> connectorType() {
         return this.connectorType;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -82,7 +82,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -93,7 +93,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isInternal")
       private final @Nullable Output<Boolean> isInternal;
 
-    public Output<Boolean> getIsInternal() {
+    public Output<Boolean> isInternal() {
         return this.isInternal == null ? Codegen.empty() : this.isInternal;
     }
 
@@ -104,7 +104,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyVault")
       private final @Nullable ResourceReferenceResponse keyVault;
 
-    public Optional<ResourceReferenceResponse> getKeyVault() {
+    public Optional<ResourceReferenceResponse> keyVault() {
         return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 

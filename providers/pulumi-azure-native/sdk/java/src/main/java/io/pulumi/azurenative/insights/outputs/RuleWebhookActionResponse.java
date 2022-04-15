@@ -44,21 +44,21 @@ public final class RuleWebhookActionResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * the service uri to Post the notification when the alert activates or resolves.
      * 
     */
-    public Optional<String> getServiceUri() {
+    public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
 

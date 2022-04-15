@@ -29,7 +29,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="events", required=true)
       private final Output<List<Object>> events;
 
-    public Output<List<Object>> getEvents() {
+    public Output<List<Object>> events() {
         return this.events;
     }
 
@@ -62,7 +62,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
         return this.pipelines == null ? Codegen.empty() : this.pipelines;
     }
 
@@ -73,7 +73,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -84,7 +84,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="subjectBeginsWith")
       private final @Nullable Output<String> subjectBeginsWith;
 
-    public Output<String> getSubjectBeginsWith() {
+    public Output<String> subjectBeginsWith() {
         return this.subjectBeginsWith == null ? Codegen.empty() : this.subjectBeginsWith;
     }
 
@@ -95,7 +95,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="subjectEndsWith")
       private final @Nullable Output<String> subjectEndsWith;
 
-    public Output<String> getSubjectEndsWith() {
+    public Output<String> subjectEndsWith() {
         return this.subjectEndsWith == null ? Codegen.empty() : this.subjectEndsWith;
     }
 
@@ -107,7 +107,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

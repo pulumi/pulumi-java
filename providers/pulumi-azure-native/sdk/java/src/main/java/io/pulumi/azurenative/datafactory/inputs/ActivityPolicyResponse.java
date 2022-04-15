@@ -27,7 +27,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="retry")
       private final @Nullable Object retry;
 
-    public Optional<Object> getRetry() {
+    public Optional<Object> retry() {
         return this.retry == null ? Optional.empty() : Optional.ofNullable(this.retry);
     }
 
@@ -38,7 +38,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="retryIntervalInSeconds")
       private final @Nullable Integer retryIntervalInSeconds;
 
-    public Optional<Integer> getRetryIntervalInSeconds() {
+    public Optional<Integer> retryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
     }
 
@@ -49,7 +49,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="secureInput")
       private final @Nullable Boolean secureInput;
 
-    public Optional<Boolean> getSecureInput() {
+    public Optional<Boolean> secureInput() {
         return this.secureInput == null ? Optional.empty() : Optional.ofNullable(this.secureInput);
     }
 
@@ -60,7 +60,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="secureOutput")
       private final @Nullable Boolean secureOutput;
 
-    public Optional<Boolean> getSecureOutput() {
+    public Optional<Boolean> secureOutput() {
         return this.secureOutput == null ? Optional.empty() : Optional.ofNullable(this.secureOutput);
     }
 
@@ -71,7 +71,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="timeout")
       private final @Nullable Object timeout;
 
-    public Optional<Object> getTimeout() {
+    public Optional<Object> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

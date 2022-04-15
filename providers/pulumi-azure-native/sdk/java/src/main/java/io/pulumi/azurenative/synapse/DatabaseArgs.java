@@ -24,7 +24,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -57,7 +57,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -68,7 +68,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

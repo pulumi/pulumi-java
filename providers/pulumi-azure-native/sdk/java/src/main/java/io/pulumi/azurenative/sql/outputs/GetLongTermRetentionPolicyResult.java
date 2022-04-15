@@ -70,49 +70,49 @@ public final class GetLongTermRetentionPolicyResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The monthly retention policy for an LTR backup in an ISO 8601 format.
      * 
     */
-    public Optional<String> getMonthlyRetention() {
+    public Optional<String> monthlyRetention() {
         return Optional.ofNullable(this.monthlyRetention);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The week of year to take the yearly backup in an ISO 8601 format.
      * 
     */
-    public Optional<Integer> getWeekOfYear() {
+    public Optional<Integer> weekOfYear() {
         return Optional.ofNullable(this.weekOfYear);
     }
     /**
      * The weekly retention policy for an LTR backup in an ISO 8601 format.
      * 
     */
-    public Optional<String> getWeeklyRetention() {
+    public Optional<String> weeklyRetention() {
         return Optional.ofNullable(this.weeklyRetention);
     }
     /**
      * The yearly retention policy for an LTR backup in an ISO 8601 format.
      * 
     */
-    public Optional<String> getYearlyRetention() {
+    public Optional<String> yearlyRetention() {
         return Optional.ofNullable(this.yearlyRetention);
     }
 

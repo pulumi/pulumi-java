@@ -56,35 +56,35 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
      * Body of the User Defined Function
      * 
     */
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB SQL userDefinedFunction
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

@@ -27,7 +27,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="disksToInclude")
       private final @Nullable Output<List<String>> disksToInclude;
 
-    public Output<List<String>> getDisksToInclude() {
+    public Output<List<String>> disksToInclude() {
         return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
     }
 
@@ -38,7 +38,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="enableRdpOnTargetOption")
       private final @Nullable Output<String> enableRdpOnTargetOption;
 
-    public Output<String> getEnableRdpOnTargetOption() {
+    public Output<String> enableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Codegen.empty() : this.enableRdpOnTargetOption;
     }
 
@@ -49,7 +49,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="hvHostVmId")
       private final @Nullable Output<String> hvHostVmId;
 
-    public Output<String> getHvHostVmId() {
+    public Output<String> hvHostVmId() {
         return this.hvHostVmId == null ? Codegen.empty() : this.hvHostVmId;
     }
 
@@ -61,7 +61,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -72,7 +72,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> getLogStorageAccountId() {
+    public Output<String> logStorageAccountId() {
         return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
     }
 
@@ -83,7 +83,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="osType")
       private final @Nullable Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -94,7 +94,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> getTargetAvailabilitySetId() {
+    public Output<String> targetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
     }
 
@@ -105,7 +105,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<String> targetAvailabilityZone;
 
-    public Output<String> getTargetAvailabilityZone() {
+    public Output<String> targetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
     }
 
@@ -116,7 +116,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAzureNetworkId")
       private final @Nullable Output<String> targetAzureNetworkId;
 
-    public Output<String> getTargetAzureNetworkId() {
+    public Output<String> targetAzureNetworkId() {
         return this.targetAzureNetworkId == null ? Codegen.empty() : this.targetAzureNetworkId;
     }
 
@@ -127,7 +127,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAzureSubnetId")
       private final @Nullable Output<String> targetAzureSubnetId;
 
-    public Output<String> getTargetAzureSubnetId() {
+    public Output<String> targetAzureSubnetId() {
         return this.targetAzureSubnetId == null ? Codegen.empty() : this.targetAzureSubnetId;
     }
 
@@ -138,7 +138,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAzureV1ResourceGroupId")
       private final @Nullable Output<String> targetAzureV1ResourceGroupId;
 
-    public Output<String> getTargetAzureV1ResourceGroupId() {
+    public Output<String> targetAzureV1ResourceGroupId() {
         return this.targetAzureV1ResourceGroupId == null ? Codegen.empty() : this.targetAzureV1ResourceGroupId;
     }
 
@@ -149,7 +149,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAzureV2ResourceGroupId")
       private final @Nullable Output<String> targetAzureV2ResourceGroupId;
 
-    public Output<String> getTargetAzureV2ResourceGroupId() {
+    public Output<String> targetAzureV2ResourceGroupId() {
         return this.targetAzureV2ResourceGroupId == null ? Codegen.empty() : this.targetAzureV2ResourceGroupId;
     }
 
@@ -160,7 +160,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetAzureVmName")
       private final @Nullable Output<String> targetAzureVmName;
 
-    public Output<String> getTargetAzureVmName() {
+    public Output<String> targetAzureVmName() {
         return this.targetAzureVmName == null ? Codegen.empty() : this.targetAzureVmName;
     }
 
@@ -171,7 +171,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Output<String> getTargetProximityPlacementGroupId() {
+    public Output<String> targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Codegen.empty() : this.targetProximityPlacementGroupId;
     }
 
@@ -182,7 +182,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetStorageAccountId")
       private final @Nullable Output<String> targetStorageAccountId;
 
-    public Output<String> getTargetStorageAccountId() {
+    public Output<String> targetStorageAccountId() {
         return this.targetStorageAccountId == null ? Codegen.empty() : this.targetStorageAccountId;
     }
 
@@ -193,7 +193,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
-    public Output<String> getTargetVmSize() {
+    public Output<String> targetVmSize() {
         return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
     }
 
@@ -204,7 +204,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="useManagedDisks")
       private final @Nullable Output<String> useManagedDisks;
 
-    public Output<String> getUseManagedDisks() {
+    public Output<String> useManagedDisks() {
         return this.useManagedDisks == null ? Codegen.empty() : this.useManagedDisks;
     }
 
@@ -215,7 +215,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="vhdId")
       private final @Nullable Output<String> vhdId;
 
-    public Output<String> getVhdId() {
+    public Output<String> vhdId() {
         return this.vhdId == null ? Codegen.empty() : this.vhdId;
     }
 
@@ -226,7 +226,7 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     @Import(name="vmName")
       private final @Nullable Output<String> vmName;
 
-    public Output<String> getVmName() {
+    public Output<String> vmName() {
         return this.vmName == null ? Codegen.empty() : this.vmName;
     }
 

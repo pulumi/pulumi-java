@@ -19,7 +19,7 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends i
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -30,7 +30,7 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends i
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

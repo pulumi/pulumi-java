@@ -25,7 +25,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="containerImageNames")
       private final @Nullable Output<List<String>> containerImageNames;
 
-    public Output<List<String>> getContainerImageNames() {
+    public Output<List<String>> containerImageNames() {
         return this.containerImageNames == null ? Codegen.empty() : this.containerImageNames;
     }
 
@@ -36,14 +36,14 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="containerRegistries")
       private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
-    public Output<List<ContainerRegistryArgs>> getContainerRegistries() {
+    public Output<List<ContainerRegistryArgs>> containerRegistries() {
         return this.containerRegistries == null ? Codegen.empty() : this.containerRegistries;
     }
 
     @Import(name="type", required=true)
       private final Output<ContainerType> type;
 
-    public Output<ContainerType> getType() {
+    public Output<ContainerType> type() {
         return this.type;
     }
 

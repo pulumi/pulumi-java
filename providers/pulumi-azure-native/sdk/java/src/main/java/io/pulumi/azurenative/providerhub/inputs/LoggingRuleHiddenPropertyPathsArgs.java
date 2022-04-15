@@ -19,14 +19,14 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     @Import(name="hiddenPathsOnRequest")
       private final @Nullable Output<List<String>> hiddenPathsOnRequest;
 
-    public Output<List<String>> getHiddenPathsOnRequest() {
+    public Output<List<String>> hiddenPathsOnRequest() {
         return this.hiddenPathsOnRequest == null ? Codegen.empty() : this.hiddenPathsOnRequest;
     }
 
     @Import(name="hiddenPathsOnResponse")
       private final @Nullable Output<List<String>> hiddenPathsOnResponse;
 
-    public Output<List<String>> getHiddenPathsOnResponse() {
+    public Output<List<String>> hiddenPathsOnResponse() {
         return this.hiddenPathsOnResponse == null ? Codegen.empty() : this.hiddenPathsOnResponse;
     }
 

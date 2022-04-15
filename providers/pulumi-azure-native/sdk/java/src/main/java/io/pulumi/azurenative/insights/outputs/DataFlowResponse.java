@@ -34,14 +34,14 @@ public final class DataFlowResponse {
      * List of destinations for this data flow.
      * 
     */
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * List of streams for this data flow.
      * 
     */
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

@@ -30,7 +30,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="autoApplyDecisionsEnabled")
       private final @Nullable Output<Boolean> autoApplyDecisionsEnabled;
 
-    public Output<Boolean> getAutoApplyDecisionsEnabled() {
+    public Output<Boolean> autoApplyDecisionsEnabled() {
         return this.autoApplyDecisionsEnabled == null ? Codegen.empty() : this.autoApplyDecisionsEnabled;
     }
 
@@ -41,7 +41,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="backupReviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
 
-    public Output<List<AccessReviewReviewerArgs>> getBackupReviewers() {
+    public Output<List<AccessReviewReviewerArgs>> backupReviewers() {
         return this.backupReviewers == null ? Codegen.empty() : this.backupReviewers;
     }
 
@@ -52,7 +52,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="defaultDecision")
       private final @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
 
-    public Output<Either<String,DefaultDecisionType>> getDefaultDecision() {
+    public Output<Either<String,DefaultDecisionType>> defaultDecision() {
         return this.defaultDecision == null ? Codegen.empty() : this.defaultDecision;
     }
 
@@ -63,7 +63,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="defaultDecisionEnabled")
       private final @Nullable Output<Boolean> defaultDecisionEnabled;
 
-    public Output<Boolean> getDefaultDecisionEnabled() {
+    public Output<Boolean> defaultDecisionEnabled() {
         return this.defaultDecisionEnabled == null ? Codegen.empty() : this.defaultDecisionEnabled;
     }
 
@@ -74,7 +74,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="descriptionForAdmins")
       private final @Nullable Output<String> descriptionForAdmins;
 
-    public Output<String> getDescriptionForAdmins() {
+    public Output<String> descriptionForAdmins() {
         return this.descriptionForAdmins == null ? Codegen.empty() : this.descriptionForAdmins;
     }
 
@@ -85,7 +85,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="descriptionForReviewers")
       private final @Nullable Output<String> descriptionForReviewers;
 
-    public Output<String> getDescriptionForReviewers() {
+    public Output<String> descriptionForReviewers() {
         return this.descriptionForReviewers == null ? Codegen.empty() : this.descriptionForReviewers;
     }
 
@@ -96,7 +96,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -107,7 +107,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -118,7 +118,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;
 
-    public Output<String> getInactiveDuration() {
+    public Output<String> inactiveDuration() {
         return this.inactiveDuration == null ? Codegen.empty() : this.inactiveDuration;
     }
 
@@ -129,7 +129,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="instanceDurationInDays")
       private final @Nullable Output<Integer> instanceDurationInDays;
 
-    public Output<Integer> getInstanceDurationInDays() {
+    public Output<Integer> instanceDurationInDays() {
         return this.instanceDurationInDays == null ? Codegen.empty() : this.instanceDurationInDays;
     }
 
@@ -140,7 +140,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="instances")
       private final @Nullable Output<List<AccessReviewInstanceArgs>> instances;
 
-    public Output<List<AccessReviewInstanceArgs>> getInstances() {
+    public Output<List<AccessReviewInstanceArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -151,7 +151,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -162,7 +162,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="justificationRequiredOnApproval")
       private final @Nullable Output<Boolean> justificationRequiredOnApproval;
 
-    public Output<Boolean> getJustificationRequiredOnApproval() {
+    public Output<Boolean> justificationRequiredOnApproval() {
         return this.justificationRequiredOnApproval == null ? Codegen.empty() : this.justificationRequiredOnApproval;
     }
 
@@ -173,7 +173,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="mailNotificationsEnabled")
       private final @Nullable Output<Boolean> mailNotificationsEnabled;
 
-    public Output<Boolean> getMailNotificationsEnabled() {
+    public Output<Boolean> mailNotificationsEnabled() {
         return this.mailNotificationsEnabled == null ? Codegen.empty() : this.mailNotificationsEnabled;
     }
 
@@ -184,7 +184,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="numberOfOccurrences")
       private final @Nullable Output<Integer> numberOfOccurrences;
 
-    public Output<Integer> getNumberOfOccurrences() {
+    public Output<Integer> numberOfOccurrences() {
         return this.numberOfOccurrences == null ? Codegen.empty() : this.numberOfOccurrences;
     }
 
@@ -195,7 +195,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="recommendationsEnabled")
       private final @Nullable Output<Boolean> recommendationsEnabled;
 
-    public Output<Boolean> getRecommendationsEnabled() {
+    public Output<Boolean> recommendationsEnabled() {
         return this.recommendationsEnabled == null ? Codegen.empty() : this.recommendationsEnabled;
     }
 
@@ -206,7 +206,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="reminderNotificationsEnabled")
       private final @Nullable Output<Boolean> reminderNotificationsEnabled;
 
-    public Output<Boolean> getReminderNotificationsEnabled() {
+    public Output<Boolean> reminderNotificationsEnabled() {
         return this.reminderNotificationsEnabled == null ? Codegen.empty() : this.reminderNotificationsEnabled;
     }
 
@@ -217,7 +217,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="reviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
 
-    public Output<List<AccessReviewReviewerArgs>> getReviewers() {
+    public Output<List<AccessReviewReviewerArgs>> reviewers() {
         return this.reviewers == null ? Codegen.empty() : this.reviewers;
     }
 
@@ -228,7 +228,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="scheduleDefinitionId")
       private final @Nullable Output<String> scheduleDefinitionId;
 
-    public Output<String> getScheduleDefinitionId() {
+    public Output<String> scheduleDefinitionId() {
         return this.scheduleDefinitionId == null ? Codegen.empty() : this.scheduleDefinitionId;
     }
 
@@ -239,7 +239,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
@@ -250,7 +250,7 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
+    public Output<Either<String,AccessReviewRecurrenceRangeType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -25,7 +25,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
 
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
 
@@ -36,7 +36,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="diskId", required=true)
       private final String diskId;
 
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
 
@@ -47,7 +47,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 
@@ -58,7 +58,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
 
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
 
@@ -69,7 +69,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="lunId", required=true)
       private final Integer lunId;
 
-    public Integer getLunId() {
+    public Integer lunId() {
         return this.lunId;
     }
 

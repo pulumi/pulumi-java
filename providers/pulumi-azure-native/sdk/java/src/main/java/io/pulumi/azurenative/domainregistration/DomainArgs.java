@@ -23,7 +23,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authCode")
       private final @Nullable Output<String> authCode;
 
-    public Output<String> getAuthCode() {
+    public Output<String> authCode() {
         return this.authCode == null ? Codegen.empty() : this.authCode;
     }
 
@@ -34,7 +34,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
@@ -45,7 +45,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consent", required=true)
       private final Output<DomainPurchaseConsentArgs> consent;
 
-    public Output<DomainPurchaseConsentArgs> getConsent() {
+    public Output<DomainPurchaseConsentArgs> consent() {
         return this.consent;
     }
 
@@ -56,7 +56,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactAdmin", required=true)
       private final Output<ContactArgs> contactAdmin;
 
-    public Output<ContactArgs> getContactAdmin() {
+    public Output<ContactArgs> contactAdmin() {
         return this.contactAdmin;
     }
 
@@ -67,7 +67,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactBilling", required=true)
       private final Output<ContactArgs> contactBilling;
 
-    public Output<ContactArgs> getContactBilling() {
+    public Output<ContactArgs> contactBilling() {
         return this.contactBilling;
     }
 
@@ -78,7 +78,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactRegistrant", required=true)
       private final Output<ContactArgs> contactRegistrant;
 
-    public Output<ContactArgs> getContactRegistrant() {
+    public Output<ContactArgs> contactRegistrant() {
         return this.contactRegistrant;
     }
 
@@ -89,7 +89,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactTech", required=true)
       private final Output<ContactArgs> contactTech;
 
-    public Output<ContactArgs> getContactTech() {
+    public Output<ContactArgs> contactTech() {
         return this.contactTech;
     }
 
@@ -100,7 +100,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsType")
       private final @Nullable Output<DnsType> dnsType;
 
-    public Output<DnsType> getDnsType() {
+    public Output<DnsType> dnsType() {
         return this.dnsType == null ? Codegen.empty() : this.dnsType;
     }
 
@@ -111,7 +111,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
 
-    public Output<String> getDnsZoneId() {
+    public Output<String> dnsZoneId() {
         return this.dnsZoneId == null ? Codegen.empty() : this.dnsZoneId;
     }
 
@@ -122,7 +122,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -133,7 +133,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -144,7 +144,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -155,7 +155,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privacy")
       private final @Nullable Output<Boolean> privacy;
 
-    public Output<Boolean> getPrivacy() {
+    public Output<Boolean> privacy() {
         return this.privacy == null ? Codegen.empty() : this.privacy;
     }
 
@@ -166,7 +166,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,7 +177,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -188,7 +188,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetDnsType")
       private final @Nullable Output<DnsType> targetDnsType;
 
-    public Output<DnsType> getTargetDnsType() {
+    public Output<DnsType> targetDnsType() {
         return this.targetDnsType == null ? Codegen.empty() : this.targetDnsType;
     }
 

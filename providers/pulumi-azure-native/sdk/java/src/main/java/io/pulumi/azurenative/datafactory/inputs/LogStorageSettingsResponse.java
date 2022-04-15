@@ -26,7 +26,7 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="enableReliableLogging")
       private final @Nullable Object enableReliableLogging;
 
-    public Optional<Object> getEnableReliableLogging() {
+    public Optional<Object> enableReliableLogging() {
         return this.enableReliableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableReliableLogging);
     }
 
@@ -37,7 +37,7 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -48,7 +48,7 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="logLevel")
       private final @Nullable Object logLevel;
 
-    public Optional<Object> getLogLevel() {
+    public Optional<Object> logLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
     }
 
@@ -59,7 +59,7 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="path")
       private final @Nullable Object path;
 
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

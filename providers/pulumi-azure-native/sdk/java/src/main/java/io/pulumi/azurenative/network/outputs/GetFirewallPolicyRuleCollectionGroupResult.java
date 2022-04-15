@@ -74,49 +74,49 @@ public final class GetFirewallPolicyRuleCollectionGroupResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule Collection Group resource.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The provisioning state of the firewall policy rule collection group resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Group of Firewall Policy rule collections.
      * 
     */
-    public List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> getRuleCollections() {
+    public List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections() {
         return this.ruleCollections == null ? List.of() : this.ruleCollections;
     }
     /**
      * Rule Group type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

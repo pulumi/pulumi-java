@@ -30,7 +30,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="dailySchedule")
       private final @Nullable Output<DailyRetentionScheduleArgs> dailySchedule;
 
-    public Output<DailyRetentionScheduleArgs> getDailySchedule() {
+    public Output<DailyRetentionScheduleArgs> dailySchedule() {
         return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
@@ -41,7 +41,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="monthlySchedule")
       private final @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule;
 
-    public Output<MonthlyRetentionScheduleArgs> getMonthlySchedule() {
+    public Output<MonthlyRetentionScheduleArgs> monthlySchedule() {
         return this.monthlySchedule == null ? Codegen.empty() : this.monthlySchedule;
     }
 
@@ -53,7 +53,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="retentionPolicyType", required=true)
       private final Output<String> retentionPolicyType;
 
-    public Output<String> getRetentionPolicyType() {
+    public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
     }
 
@@ -64,7 +64,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="weeklySchedule")
       private final @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule;
 
-    public Output<WeeklyRetentionScheduleArgs> getWeeklySchedule() {
+    public Output<WeeklyRetentionScheduleArgs> weeklySchedule() {
         return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 
@@ -75,7 +75,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="yearlySchedule")
       private final @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule;
 
-    public Output<YearlyRetentionScheduleArgs> getYearlySchedule() {
+    public Output<YearlyRetentionScheduleArgs> yearlySchedule() {
         return this.yearlySchedule == null ? Codegen.empty() : this.yearlySchedule;
     }
 

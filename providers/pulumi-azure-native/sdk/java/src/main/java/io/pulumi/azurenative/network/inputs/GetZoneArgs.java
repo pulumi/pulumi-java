@@ -19,7 +19,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="zoneName", required=true)
       private final String zoneName;
 
-    public String getZoneName() {
+    public String zoneName() {
         return this.zoneName;
     }
 

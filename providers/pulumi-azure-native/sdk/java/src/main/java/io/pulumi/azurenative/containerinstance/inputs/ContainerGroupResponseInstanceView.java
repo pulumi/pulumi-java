@@ -25,7 +25,7 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
     @Import(name="events", required=true)
       private final List<EventResponse> events;
 
-    public List<EventResponse> getEvents() {
+    public List<EventResponse> events() {
         return this.events;
     }
 
@@ -36,7 +36,7 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

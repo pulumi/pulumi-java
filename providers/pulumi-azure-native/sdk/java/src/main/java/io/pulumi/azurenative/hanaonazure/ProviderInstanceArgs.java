@@ -22,7 +22,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -33,7 +33,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -44,7 +44,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="providerInstanceName")
       private final @Nullable Output<String> providerInstanceName;
 
-    public Output<String> getProviderInstanceName() {
+    public Output<String> providerInstanceName() {
         return this.providerInstanceName == null ? Codegen.empty() : this.providerInstanceName;
     }
 
@@ -55,7 +55,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sapMonitorName", required=true)
       private final Output<String> sapMonitorName;
 
-    public Output<String> getSapMonitorName() {
+    public Output<String> sapMonitorName() {
         return this.sapMonitorName;
     }
 
@@ -77,7 +77,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -35,14 +35,14 @@ public final class DeliveryRulePostArgsConditionResponse {
      * Expected value is 'PostArgs'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public PostArgsMatchConditionParametersResponse getParameters() {
+    public PostArgsMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

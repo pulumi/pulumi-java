@@ -43,7 +43,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * @return Members of the target group.
      * 
      */
-    public Output<List<JobTargetResponse>> getMembers() {
+    public Output<List<JobTargetResponse>> members() {
         return this.members;
     }
     /**
@@ -57,7 +57,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

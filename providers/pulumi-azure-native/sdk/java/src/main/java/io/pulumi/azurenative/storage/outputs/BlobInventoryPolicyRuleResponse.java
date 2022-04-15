@@ -41,21 +41,21 @@ public final class BlobInventoryPolicyRuleResponse {
      * An object that defines the blob inventory policy rule.
      * 
     */
-    public BlobInventoryPolicyDefinitionResponse getDefinition() {
+    public BlobInventoryPolicyDefinitionResponse definition() {
         return this.definition;
     }
     /**
      * Rule is enabled when set to true.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

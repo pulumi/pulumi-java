@@ -34,14 +34,14 @@ public final class LabelingJobImagePropertiesResponse {
      * Annotation type of image labeling tasks.
      * 
     */
-    public Optional<String> getAnnotationType() {
+    public Optional<String> annotationType() {
         return Optional.ofNullable(this.annotationType);
     }
     /**
      * Media type of data asset.
      * 
     */
-    public String getMediaType() {
+    public String mediaType() {
         return this.mediaType;
     }
 

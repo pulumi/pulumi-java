@@ -35,7 +35,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="customProfile")
       private final @Nullable Output<CustomProfileArgs> customProfile;
 
-    public Output<CustomProfileArgs> getCustomProfile() {
+    public Output<CustomProfileArgs> customProfile() {
         return this.customProfile == null ? Codegen.empty() : this.customProfile;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Output<OsProfileArgs> getOsProfile() {
+    public Output<OsProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -79,7 +79,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="roleType")
       private final @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
 
-    public Output<Either<String,NetworkFunctionRoleConfigurationType>> getRoleType() {
+    public Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType() {
         return this.roleType == null ? Codegen.empty() : this.roleType;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -101,7 +101,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;
 
-    public Output<Object> getUserDataParameters() {
+    public Output<Object> userDataParameters() {
         return this.userDataParameters == null ? Codegen.empty() : this.userDataParameters;
     }
 
@@ -112,7 +112,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="userDataTemplate")
       private final @Nullable Output<Object> userDataTemplate;
 
-    public Output<Object> getUserDataTemplate() {
+    public Output<Object> userDataTemplate() {
         return this.userDataTemplate == null ? Codegen.empty() : this.userDataTemplate;
     }
 
@@ -123,7 +123,7 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     @Import(name="virtualMachineSize")
       private final @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 
-    public Output<Either<String,VirtualMachineSizeTypes>> getVirtualMachineSize() {
+    public Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize() {
         return this.virtualMachineSize == null ? Codegen.empty() : this.virtualMachineSize;
     }
 

@@ -26,7 +26,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="armTemplateFolderPath")
       private final @Nullable Output<String> armTemplateFolderPath;
 
-    public Output<String> getArmTemplateFolderPath() {
+    public Output<String> armTemplateFolderPath() {
         return this.armTemplateFolderPath == null ? Codegen.empty() : this.armTemplateFolderPath;
     }
 
@@ -37,7 +37,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchRef")
       private final @Nullable Output<String> branchRef;
 
-    public Output<String> getBranchRef() {
+    public Output<String> branchRef() {
         return this.branchRef == null ? Codegen.empty() : this.branchRef;
     }
 
@@ -48,7 +48,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -70,7 +70,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -81,7 +81,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -92,7 +92,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityToken")
       private final @Nullable Output<String> securityToken;
 
-    public Output<String> getSecurityToken() {
+    public Output<String> securityToken() {
         return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
@@ -125,7 +125,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceControlType>> sourceType;
 
-    public Output<Either<String,SourceControlType>> getSourceType() {
+    public Output<Either<String,SourceControlType>> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
@@ -136,7 +136,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
+    public Output<Either<String,EnableStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -147,7 +147,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -158,7 +158,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

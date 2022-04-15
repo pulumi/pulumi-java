@@ -24,7 +24,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lun", required=true)
       private final Integer lun;
 
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
 
@@ -35,7 +35,7 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sourceBlobSasUri", required=true)
       private final String sourceBlobSasUri;
 
-    public String getSourceBlobSasUri() {
+    public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
 

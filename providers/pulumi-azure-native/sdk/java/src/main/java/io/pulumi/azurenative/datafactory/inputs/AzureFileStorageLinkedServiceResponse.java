@@ -33,7 +33,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="accountKey")
       private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -44,7 +44,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -55,7 +55,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -77,7 +77,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -88,7 +88,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -99,7 +99,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="fileShare")
       private final @Nullable Object fileShare;
 
-    public Optional<Object> getFileShare() {
+    public Optional<Object> fileShare() {
         return this.fileShare == null ? Optional.empty() : Optional.ofNullable(this.fileShare);
     }
 
@@ -110,7 +110,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="host")
       private final @Nullable Object host;
 
-    public Optional<Object> getHost() {
+    public Optional<Object> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -121,7 +121,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -132,7 +132,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -143,7 +143,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="sasToken")
       private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
@@ -154,7 +154,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="sasUri")
       private final @Nullable Object sasUri;
 
-    public Optional<Object> getSasUri() {
+    public Optional<Object> sasUri() {
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
@@ -165,7 +165,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="snapshot")
       private final @Nullable Object snapshot;
 
-    public Optional<Object> getSnapshot() {
+    public Optional<Object> snapshot() {
         return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
     }
 
@@ -177,7 +177,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -188,7 +188,7 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
     @Import(name="userId")
       private final @Nullable Object userId;
 
-    public Optional<Object> getUserId() {
+    public Optional<Object> userId() {
         return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
     }
 

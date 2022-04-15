@@ -57,7 +57,7 @@ public final class EventHandlerTemplateResponse {
      * Gets or sets the auth settings for an event handler. If not set, no auth is used.
      * 
     */
-    public Optional<UpstreamAuthSettingsResponse> getAuth() {
+    public Optional<UpstreamAuthSettingsResponse> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
@@ -67,7 +67,7 @@ public final class EventHandlerTemplateResponse {
      *     2. Combine multiple events with ",", for example "connect,disconnected", it matches event "connect" and "disconnected"
      * 
     */
-    public Optional<String> getSystemEventPattern() {
+    public Optional<String> systemEventPattern() {
         return Optional.ofNullable(this.systemEventPattern);
     }
     /**
@@ -75,7 +75,7 @@ public final class EventHandlerTemplateResponse {
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
      * 
     */
-    public String getUrlTemplate() {
+    public String urlTemplate() {
         return this.urlTemplate;
     }
     /**
@@ -86,7 +86,7 @@ public final class EventHandlerTemplateResponse {
      *     3. The single event name, for example, "event1", it matches "event1"
      * 
     */
-    public Optional<String> getUserEventPattern() {
+    public Optional<String> userEventPattern() {
         return Optional.ofNullable(this.userEventPattern);
     }
 

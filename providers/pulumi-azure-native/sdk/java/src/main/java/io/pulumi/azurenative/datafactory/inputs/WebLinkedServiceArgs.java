@@ -34,7 +34,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -56,7 +56,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -79,7 +79,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -90,7 +90,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="typeProperties", required=true)
       private final Output<Object> typeProperties;
 
-    public Output<Object> getTypeProperties() {
+    public Output<Object> typeProperties() {
         return this.typeProperties;
     }
 

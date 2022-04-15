@@ -27,7 +27,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="diskEncryptionKeyInfo")
       private final @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
-    public Output<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
+    public Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo() {
         return this.diskEncryptionKeyInfo == null ? Codegen.empty() : this.diskEncryptionKeyInfo;
     }
 
@@ -38,7 +38,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyEncryptionKeyInfo")
       private final @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
-    public Output<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {
+    public Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo() {
         return this.keyEncryptionKeyInfo == null ? Codegen.empty() : this.keyEncryptionKeyInfo;
     }
 

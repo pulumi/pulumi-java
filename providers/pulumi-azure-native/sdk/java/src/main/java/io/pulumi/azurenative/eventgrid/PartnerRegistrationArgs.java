@@ -29,7 +29,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="authorizedAzureSubscriptionIds")
       private final @Nullable Output<List<String>> authorizedAzureSubscriptionIds;
 
-    public Output<List<String>> getAuthorizedAzureSubscriptionIds() {
+    public Output<List<String>> authorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds == null ? Codegen.empty() : this.authorizedAzureSubscriptionIds;
     }
 
@@ -40,7 +40,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="customerServiceUri")
       private final @Nullable Output<String> customerServiceUri;
 
-    public Output<String> getCustomerServiceUri() {
+    public Output<String> customerServiceUri() {
         return this.customerServiceUri == null ? Codegen.empty() : this.customerServiceUri;
     }
 
@@ -51,7 +51,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="logoUri")
       private final @Nullable Output<String> logoUri;
 
-    public Output<String> getLogoUri() {
+    public Output<String> logoUri() {
         return this.logoUri == null ? Codegen.empty() : this.logoUri;
     }
 
@@ -74,7 +74,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
-    public Output<String> getLongDescription() {
+    public Output<String> longDescription() {
         return this.longDescription == null ? Codegen.empty() : this.longDescription;
     }
 
@@ -85,7 +85,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerCustomerServiceExtension")
       private final @Nullable Output<String> partnerCustomerServiceExtension;
 
-    public Output<String> getPartnerCustomerServiceExtension() {
+    public Output<String> partnerCustomerServiceExtension() {
         return this.partnerCustomerServiceExtension == null ? Codegen.empty() : this.partnerCustomerServiceExtension;
     }
 
@@ -99,7 +99,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerCustomerServiceNumber")
       private final @Nullable Output<String> partnerCustomerServiceNumber;
 
-    public Output<String> getPartnerCustomerServiceNumber() {
+    public Output<String> partnerCustomerServiceNumber() {
         return this.partnerCustomerServiceNumber == null ? Codegen.empty() : this.partnerCustomerServiceNumber;
     }
 
@@ -110,7 +110,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
@@ -121,7 +121,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerRegistrationName")
       private final @Nullable Output<String> partnerRegistrationName;
 
-    public Output<String> getPartnerRegistrationName() {
+    public Output<String> partnerRegistrationName() {
         return this.partnerRegistrationName == null ? Codegen.empty() : this.partnerRegistrationName;
     }
 
@@ -132,7 +132,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerResourceTypeDescription")
       private final @Nullable Output<String> partnerResourceTypeDescription;
 
-    public Output<String> getPartnerResourceTypeDescription() {
+    public Output<String> partnerResourceTypeDescription() {
         return this.partnerResourceTypeDescription == null ? Codegen.empty() : this.partnerResourceTypeDescription;
     }
 
@@ -143,7 +143,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerResourceTypeDisplayName")
       private final @Nullable Output<String> partnerResourceTypeDisplayName;
 
-    public Output<String> getPartnerResourceTypeDisplayName() {
+    public Output<String> partnerResourceTypeDisplayName() {
         return this.partnerResourceTypeDisplayName == null ? Codegen.empty() : this.partnerResourceTypeDisplayName;
     }
 
@@ -154,7 +154,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="partnerResourceTypeName")
       private final @Nullable Output<String> partnerResourceTypeName;
 
-    public Output<String> getPartnerResourceTypeName() {
+    public Output<String> partnerResourceTypeName() {
         return this.partnerResourceTypeName == null ? Codegen.empty() : this.partnerResourceTypeName;
     }
 
@@ -165,7 +165,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,7 +177,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="setupUri")
       private final @Nullable Output<String> setupUri;
 
-    public Output<String> getSetupUri() {
+    public Output<String> setupUri() {
         return this.setupUri == null ? Codegen.empty() : this.setupUri;
     }
 
@@ -188,7 +188,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -199,7 +199,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="visibilityState")
       private final @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
-    public Output<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {
+    public Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState() {
         return this.visibilityState == null ? Codegen.empty() : this.visibilityState;
     }
 

@@ -25,7 +25,7 @@ public final class SymmetricKeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="connectionString")
       private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
 
-    public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
+    public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 

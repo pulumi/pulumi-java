@@ -19,7 +19,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     @Import(name="storageClassificationMappingName", required=true)
       private final String storageClassificationMappingName;
 
-    public String getStorageClassificationMappingName() {
+    public String storageClassificationMappingName() {
         return this.storageClassificationMappingName;
     }
 
@@ -63,7 +63,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     @Import(name="storageClassificationName", required=true)
       private final String storageClassificationName;
 
-    public String getStorageClassificationName() {
+    public String storageClassificationName() {
         return this.storageClassificationName;
     }
 

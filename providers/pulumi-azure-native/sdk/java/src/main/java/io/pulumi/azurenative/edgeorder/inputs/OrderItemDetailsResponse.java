@@ -33,7 +33,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cancellationReason", required=true)
       private final String cancellationReason;
 
-    public String getCancellationReason() {
+    public String cancellationReason() {
         return this.cancellationReason;
     }
 
@@ -44,7 +44,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cancellationStatus", required=true)
       private final String cancellationStatus;
 
-    public String getCancellationStatus() {
+    public String cancellationStatus() {
         return this.cancellationStatus;
     }
 
@@ -55,7 +55,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="currentStage", required=true)
       private final StageDetailsResponse currentStage;
 
-    public StageDetailsResponse getCurrentStage() {
+    public StageDetailsResponse currentStage() {
         return this.currentStage;
     }
 
@@ -66,7 +66,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="deletionStatus", required=true)
       private final String deletionStatus;
 
-    public String getDeletionStatus() {
+    public String deletionStatus() {
         return this.deletionStatus;
     }
 
@@ -77,7 +77,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="error", required=true)
       private final ErrorDetailResponse error;
 
-    public ErrorDetailResponse getError() {
+    public ErrorDetailResponse error() {
         return this.error;
     }
 
@@ -88,7 +88,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="forwardShippingDetails", required=true)
       private final ForwardShippingDetailsResponse forwardShippingDetails;
 
-    public ForwardShippingDetailsResponse getForwardShippingDetails() {
+    public ForwardShippingDetailsResponse forwardShippingDetails() {
         return this.forwardShippingDetails;
     }
 
@@ -99,7 +99,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="managementRpDetails", required=true)
       private final ResourceProviderDetailsResponse managementRpDetails;
 
-    public ResourceProviderDetailsResponse getManagementRpDetails() {
+    public ResourceProviderDetailsResponse managementRpDetails() {
         return this.managementRpDetails;
     }
 
@@ -110,7 +110,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="managementRpDetailsList", required=true)
       private final List<ResourceProviderDetailsResponse> managementRpDetailsList;
 
-    public List<ResourceProviderDetailsResponse> getManagementRpDetailsList() {
+    public List<ResourceProviderDetailsResponse> managementRpDetailsList() {
         return this.managementRpDetailsList;
     }
 
@@ -121,7 +121,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="notificationEmailList")
       private final @Nullable List<String> notificationEmailList;
 
-    public List<String> getNotificationEmailList() {
+    public List<String> notificationEmailList() {
         return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
     }
 
@@ -132,7 +132,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="orderItemStageHistory", required=true)
       private final List<StageDetailsResponse> orderItemStageHistory;
 
-    public List<StageDetailsResponse> getOrderItemStageHistory() {
+    public List<StageDetailsResponse> orderItemStageHistory() {
         return this.orderItemStageHistory;
     }
 
@@ -143,7 +143,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="orderItemType", required=true)
       private final String orderItemType;
 
-    public String getOrderItemType() {
+    public String orderItemType() {
         return this.orderItemType;
     }
 
@@ -154,7 +154,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="preferences")
       private final @Nullable PreferencesResponse preferences;
 
-    public Optional<PreferencesResponse> getPreferences() {
+    public Optional<PreferencesResponse> preferences() {
         return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
     }
 
@@ -165,7 +165,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="productDetails", required=true)
       private final ProductDetailsResponse productDetails;
 
-    public ProductDetailsResponse getProductDetails() {
+    public ProductDetailsResponse productDetails() {
         return this.productDetails;
     }
 
@@ -176,7 +176,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="returnReason", required=true)
       private final String returnReason;
 
-    public String getReturnReason() {
+    public String returnReason() {
         return this.returnReason;
     }
 
@@ -187,7 +187,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="returnStatus", required=true)
       private final String returnStatus;
 
-    public String getReturnStatus() {
+    public String returnStatus() {
         return this.returnStatus;
     }
 
@@ -198,7 +198,7 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="reverseShippingDetails", required=true)
       private final ReverseShippingDetailsResponse reverseShippingDetails;
 
-    public ReverseShippingDetailsResponse getReverseShippingDetails() {
+    public ReverseShippingDetailsResponse reverseShippingDetails() {
         return this.reverseShippingDetails;
     }
 

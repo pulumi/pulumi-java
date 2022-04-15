@@ -26,7 +26,7 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
     @Import(name="elements")
       private final @Nullable List<String> elements;
 
-    public List<String> getElements() {
+    public List<String> elements() {
         return this.elements == null ? List.of() : this.elements;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
     @Import(name="exceptions")
       private final @Nullable List<String> exceptions;
 
-    public List<String> getExceptions() {
+    public List<String> exceptions() {
         return this.exceptions == null ? List.of() : this.exceptions;
     }
 

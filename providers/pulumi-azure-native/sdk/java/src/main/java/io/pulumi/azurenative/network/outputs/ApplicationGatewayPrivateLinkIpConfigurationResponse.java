@@ -85,63 +85,63 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of application gateway private link ip configuration.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether the ip configuration is primary or not.
      * 
     */
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * The private IP address of the IP configuration.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
     */
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * The provisioning state of the application gateway private link IP configuration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the subnet resource.
      * 
     */
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

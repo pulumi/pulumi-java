@@ -106,77 +106,77 @@ public final class RoleResponse {
      * The autoscale configurations.
      * 
     */
-    public Optional<AutoscaleResponse> getAutoscaleConfiguration() {
+    public Optional<AutoscaleResponse> autoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
     /**
      * The data disks groups for the role.
      * 
     */
-    public List<DataDisksGroupsResponse> getDataDisksGroups() {
+    public List<DataDisksGroupsResponse> dataDisksGroups() {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
     }
     /**
      * Indicates whether encrypt the data disks.
      * 
     */
-    public Optional<Boolean> getEncryptDataDisks() {
+    public Optional<Boolean> encryptDataDisks() {
         return Optional.ofNullable(this.encryptDataDisks);
     }
     /**
      * The hardware profile.
      * 
     */
-    public Optional<HardwareProfileResponse> getHardwareProfile() {
+    public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * The minimum instance count of the cluster.
      * 
     */
-    public Optional<Integer> getMinInstanceCount() {
+    public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
     /**
      * The name of the role.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The operating system profile.
      * 
     */
-    public Optional<OsProfileResponse> getOsProfile() {
+    public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * The list of script actions on the role.
      * 
     */
-    public List<ScriptActionResponse> getScriptActions() {
+    public List<ScriptActionResponse> scriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
     /**
      * The instance count of the cluster.
      * 
     */
-    public Optional<Integer> getTargetInstanceCount() {
+    public Optional<Integer> targetInstanceCount() {
         return Optional.ofNullable(this.targetInstanceCount);
     }
     /**
      * The name of the virtual machine group.
      * 
     */
-    public Optional<String> getVMGroupName() {
+    public Optional<String> vMGroupName() {
         return Optional.ofNullable(this.vMGroupName);
     }
     /**
      * The virtual network profile.
      * 
     */
-    public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
+    public Optional<VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
 

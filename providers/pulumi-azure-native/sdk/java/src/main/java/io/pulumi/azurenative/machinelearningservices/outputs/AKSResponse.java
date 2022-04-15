@@ -81,7 +81,7 @@ public final class AKSResponse {
      * Location for the underlying compute
      * 
     */
-    public Optional<String> getComputeLocation() {
+    public Optional<String> computeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
     /**
@@ -89,49 +89,49 @@ public final class AKSResponse {
      * Expected value is 'AKS'.
      * 
     */
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
     /**
      * The description of the Machine Learning compute.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
      * 
     */
-    public Boolean getIsAttachedCompute() {
+    public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
     }
     /**
      * AKS properties
      * 
     */
-    public Optional<AKSResponseProperties> getProperties() {
+    public Optional<AKSResponseProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Errors during provisioning
      * 
     */
-    public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
+    public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * ARM resource id of the underlying compute
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

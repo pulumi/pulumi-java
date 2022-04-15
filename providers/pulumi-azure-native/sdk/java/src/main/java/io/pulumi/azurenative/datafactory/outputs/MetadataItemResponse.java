@@ -34,14 +34,14 @@ public final class MetadataItemResponse {
      * Metadata item key name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getName() {
+    public Optional<Object> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Metadata item value. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
 

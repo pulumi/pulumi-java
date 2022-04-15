@@ -27,7 +27,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
     @Import(name="items")
       private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
 
-    public List<ConnectionMonitorEndpointFilterItemResponse> getItems() {
+    public List<ConnectionMonitorEndpointFilterItemResponse> items() {
         return this.items == null ? List.of() : this.items;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorEndpointFilterResponse extends io.pulumi.res
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

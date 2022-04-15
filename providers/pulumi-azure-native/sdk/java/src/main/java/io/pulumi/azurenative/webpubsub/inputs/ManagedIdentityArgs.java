@@ -30,7 +30,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
-    public Output<Either<String,ManagedIdentityType>> getType() {
+    public Output<Either<String,ManagedIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

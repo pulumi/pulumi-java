@@ -26,7 +26,7 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
-    public Output<Integer> getMinute() {
+    public Output<Integer> minute() {
         return this.minute == null ? Codegen.empty() : this.minute;
     }
 

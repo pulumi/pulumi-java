@@ -23,7 +23,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -34,7 +34,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 

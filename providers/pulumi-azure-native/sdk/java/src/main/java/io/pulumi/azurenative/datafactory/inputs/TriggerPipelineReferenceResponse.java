@@ -28,7 +28,7 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -39,7 +39,7 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
     @Import(name="pipelineReference")
       private final @Nullable PipelineReferenceResponse pipelineReference;
 
-    public Optional<PipelineReferenceResponse> getPipelineReference() {
+    public Optional<PipelineReferenceResponse> pipelineReference() {
         return this.pipelineReference == null ? Optional.empty() : Optional.ofNullable(this.pipelineReference);
     }
 

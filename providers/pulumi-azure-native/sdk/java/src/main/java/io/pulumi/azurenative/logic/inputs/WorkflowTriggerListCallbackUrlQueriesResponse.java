@@ -25,7 +25,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     @Import(name="apiVersion")
       private final @Nullable String apiVersion;
 
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
     }
 
@@ -36,7 +36,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     @Import(name="se")
       private final @Nullable String se;
 
-    public Optional<String> getSe() {
+    public Optional<String> se() {
         return this.se == null ? Optional.empty() : Optional.ofNullable(this.se);
     }
 
@@ -47,7 +47,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     @Import(name="sig")
       private final @Nullable String sig;
 
-    public Optional<String> getSig() {
+    public Optional<String> sig() {
         return this.sig == null ? Optional.empty() : Optional.ofNullable(this.sig);
     }
 
@@ -58,7 +58,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     @Import(name="sp")
       private final @Nullable String sp;
 
-    public Optional<String> getSp() {
+    public Optional<String> sp() {
         return this.sp == null ? Optional.empty() : Optional.ofNullable(this.sp);
     }
 
@@ -69,7 +69,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     @Import(name="sv")
       private final @Nullable String sv;
 
-    public Optional<String> getSv() {
+    public Optional<String> sv() {
         return this.sv == null ? Optional.empty() : Optional.ofNullable(this.sv);
     }
 

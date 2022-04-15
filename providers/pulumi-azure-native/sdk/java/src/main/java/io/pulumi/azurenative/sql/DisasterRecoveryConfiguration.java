@@ -42,7 +42,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Whether or not failover can be done automatically.
      * 
      */
-    public Output<String> getAutoFailover() {
+    public Output<String> autoFailover() {
         return this.autoFailover;
     }
     /**
@@ -56,7 +56,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return How aggressive the automatic failover should be.
      * 
      */
-    public Output<String> getFailoverPolicy() {
+    public Output<String> failoverPolicy() {
         return this.failoverPolicy;
     }
     /**
@@ -70,7 +70,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Location of the server that contains this disaster recovery configuration.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -84,7 +84,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Logical name of the server.
      * 
      */
-    public Output<String> getLogicalServerName() {
+    public Output<String> logicalServerName() {
         return this.logicalServerName;
     }
     /**
@@ -98,7 +98,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Logical name of the partner server.
      * 
      */
-    public Output<String> getPartnerLogicalServerName() {
+    public Output<String> partnerLogicalServerName() {
         return this.partnerLogicalServerName;
     }
     /**
@@ -126,7 +126,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Id of the partner server.
      * 
      */
-    public Output<String> getPartnerServerId() {
+    public Output<String> partnerServerId() {
         return this.partnerServerId;
     }
     /**
@@ -140,7 +140,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return The role of the current server in the disaster recovery configuration.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -154,7 +154,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return The status of the disaster recovery configuration.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -168,7 +168,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

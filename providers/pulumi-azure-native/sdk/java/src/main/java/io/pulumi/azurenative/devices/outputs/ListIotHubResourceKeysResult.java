@@ -35,14 +35,14 @@ public final class ListIotHubResourceKeysResult {
      * The next link.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * The list of shared access policies.
      * 
     */
-    public List<SharedAccessSignatureAuthorizationRuleResponse> getValue() {
+    public List<SharedAccessSignatureAuthorizationRuleResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

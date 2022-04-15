@@ -26,7 +26,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="arguments")
       private final @Nullable String arguments;
 
-    public Optional<String> getArguments() {
+    public Optional<String> arguments() {
         return this.arguments == null ? Optional.empty() : Optional.ofNullable(this.arguments);
     }
 
@@ -37,7 +37,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="extension")
       private final @Nullable String extension;
 
-    public Optional<String> getExtension() {
+    public Optional<String> extension() {
         return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
     }
 
@@ -48,7 +48,7 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="scriptProcessor")
       private final @Nullable String scriptProcessor;
 
-    public Optional<String> getScriptProcessor() {
+    public Optional<String> scriptProcessor() {
         return this.scriptProcessor == null ? Optional.empty() : Optional.ofNullable(this.scriptProcessor);
     }
 

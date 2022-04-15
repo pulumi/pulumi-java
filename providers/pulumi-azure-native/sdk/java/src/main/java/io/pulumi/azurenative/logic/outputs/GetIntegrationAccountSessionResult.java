@@ -78,56 +78,56 @@ public final class GetIntegrationAccountSessionResult {
      * The changed time.
      * 
     */
-    public String getChangedTime() {
+    public String changedTime() {
         return this.changedTime;
     }
     /**
      * The session content.
      * 
     */
-    public Optional<Object> getContent() {
+    public Optional<Object> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The created time.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -32,7 +32,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobUri")
       private final @Nullable Output<String> blobUri;
 
-    public Output<String> getBlobUri() {
+    public Output<String> blobUri() {
         return this.blobUri == null ? Codegen.empty() : this.blobUri;
     }
 
@@ -43,7 +43,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> getCaching() {
+    public Output<CachingTypes> caching() {
         return this.caching == null ? Codegen.empty() : this.caching;
     }
 
@@ -54,7 +54,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
+    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
         return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
@@ -65,7 +65,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -76,7 +76,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -87,7 +87,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedDisk")
       private final @Nullable Output<SubResourceArgs> managedDisk;
 
-    public Output<SubResourceArgs> getManagedDisk() {
+    public Output<SubResourceArgs> managedDisk() {
         return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
@@ -98,7 +98,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshot")
       private final @Nullable Output<SubResourceArgs> snapshot;
 
-    public Output<SubResourceArgs> getSnapshot() {
+    public Output<SubResourceArgs> snapshot() {
         return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
@@ -109,7 +109,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 

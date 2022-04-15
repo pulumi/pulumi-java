@@ -33,7 +33,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<KeyAttributesArgs> attributes;
 
-    public Output<KeyAttributesArgs> getAttributes() {
+    public Output<KeyAttributesArgs> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -44,14 +44,14 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="curveName")
       private final @Nullable Output<Either<String,JsonWebKeyCurveName>> curveName;
 
-    public Output<Either<String,JsonWebKeyCurveName>> getCurveName() {
+    public Output<Either<String,JsonWebKeyCurveName>> curveName() {
         return this.curveName == null ? Codegen.empty() : this.curveName;
     }
 
     @Import(name="keyOps")
       private final @Nullable Output<List<Either<String,JsonWebKeyOperation>>> keyOps;
 
-    public Output<List<Either<String,JsonWebKeyOperation>>> getKeyOps() {
+    public Output<List<Either<String,JsonWebKeyOperation>>> keyOps() {
         return this.keyOps == null ? Codegen.empty() : this.keyOps;
     }
 
@@ -62,7 +62,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
 
-    public Output<Integer> getKeySize() {
+    public Output<Integer> keySize() {
         return this.keySize == null ? Codegen.empty() : this.keySize;
     }
 
@@ -73,7 +73,7 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kty")
       private final @Nullable Output<Either<String,JsonWebKeyType>> kty;
 
-    public Output<Either<String,JsonWebKeyType>> getKty() {
+    public Output<Either<String,JsonWebKeyType>> kty() {
         return this.kty == null ? Codegen.empty() : this.kty;
     }
 

@@ -31,7 +31,7 @@ public final class TransformOutputResponse extends io.pulumi.resources.InvokeArg
     @Import(name="onError")
       private final @Nullable String onError;
 
-    public Optional<String> getOnError() {
+    public Optional<String> onError() {
         return this.onError == null ? Optional.empty() : Optional.ofNullable(this.onError);
     }
 
@@ -42,7 +42,7 @@ public final class TransformOutputResponse extends io.pulumi.resources.InvokeArg
     @Import(name="preset", required=true)
       private final Object preset;
 
-    public Object getPreset() {
+    public Object preset() {
         return this.preset;
     }
 
@@ -53,7 +53,7 @@ public final class TransformOutputResponse extends io.pulumi.resources.InvokeArg
     @Import(name="relativePriority")
       private final @Nullable String relativePriority;
 
-    public Optional<String> getRelativePriority() {
+    public Optional<String> relativePriority() {
         return this.relativePriority == null ? Optional.empty() : Optional.ofNullable(this.relativePriority);
     }
 

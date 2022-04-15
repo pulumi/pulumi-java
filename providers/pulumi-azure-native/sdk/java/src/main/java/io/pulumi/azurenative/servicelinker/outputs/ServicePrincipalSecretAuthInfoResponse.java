@@ -48,28 +48,28 @@ public final class ServicePrincipalSecretAuthInfoResponse {
      * Expected value is 'servicePrincipalSecret'.
      * 
     */
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
     /**
      * ServicePrincipal application clientId for servicePrincipal auth.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Principal Id for servicePrincipal auth.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * Secret for servicePrincipal auth.
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

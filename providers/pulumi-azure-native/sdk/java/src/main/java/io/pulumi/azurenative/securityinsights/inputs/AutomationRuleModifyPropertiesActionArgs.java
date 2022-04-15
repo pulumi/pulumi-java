@@ -27,7 +27,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     @Import(name="actionConfiguration", required=true)
       private final Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
-    public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> getActionConfiguration() {
+    public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration() {
         return this.actionConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -50,7 +50,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
