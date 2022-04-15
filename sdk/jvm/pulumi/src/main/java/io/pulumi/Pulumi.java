@@ -1,7 +1,5 @@
 package io.pulumi;
 
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.internal.PulumiInternal;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,7 +16,7 @@ public interface Pulumi {
      * @return exit code from Pulumi runtime after running the stack
      * @see #runAsync(Function)
      */
-    static Integer run(Function<StackContext, ExportContext> stack) {
+    static Integer run(Function<Context, Exports> stack) {
         return runAsync(stack).join();
     }
 
@@ -28,7 +26,7 @@ public interface Pulumi {
      * @return a future exit code from Pulumi runtime after running the stack
      * @see #run(Function)
      */
-    static CompletableFuture<Integer> runAsync(Function<StackContext, ExportContext> stack) {
+    static CompletableFuture<Integer> runAsync(Function<Context, Exports> stack) {
         var pulumi = PulumiInternal.fromEnvironment();
         return pulumi.runAsync(stack);
     }
