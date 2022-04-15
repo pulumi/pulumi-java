@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
+@InternalUse
 public abstract class DeploymentInstanceHolder {
 
     // TODO: maybe using a state machine for the uninitialized and initialized deployment would make sense

@@ -178,6 +178,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.state.isDryRun;
     }
 
+    @Override
     @InternalUse
     public Runner getRunner() {
         return this.state.runner;
@@ -185,6 +186,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     public Log getLog() {
         return this.log;
+    }
+
+    @Override
+    @InternalUse
+    public Config getConfig() {
+        return this.state.config;
     }
 
     public Optional<String> getConfig(String fullKey) {
@@ -244,8 +251,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     @InternalUse
-    @VisibleForTesting
-    static class Config {
+    public static class Config {
 
         /**
          * The environment variable key that the language plugin uses to set configuration values.

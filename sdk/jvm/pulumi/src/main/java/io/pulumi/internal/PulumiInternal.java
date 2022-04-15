@@ -41,7 +41,7 @@ public class PulumiInternal implements Pulumi {
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
         var log = deployment.getLog();
-        Function<String, Config> configFactory = (name) -> new Config(instance, name);
+        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
         var config = new ConfigContextInternal(projectName, configFactory);
         var logging = new LoggingContextInternal(log);
         var outputFactory = new OutputFactory(runner);
