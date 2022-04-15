@@ -45,7 +45,7 @@ public class App {
                     .accountName(actualAccountName)
                     .build(), InvokeOptions.Empty);
             return Output.of(invokeResult)
-                    .applyValue(r -> r.getKeys().get(0).getValue())
+                    .applyValue(r -> r.keys().get(0).value())
                     .asSecret();
         });
     }
