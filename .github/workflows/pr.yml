@@ -356,7 +356,7 @@ jobs:
           path: |
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
+          key: go-cache-examples-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Download versions.txt
@@ -426,6 +426,19 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.17.x
+      - name: Configure Go cache
+        id: go-cache-paths
+        run: |
+          echo "::set-output name=go-build::$(go env GOCACHE)"
+          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+      - name: Set up Go cache
+        uses: actions/cache@v2
+        id: go-cache
+        with:
+          path: |
+              ${{ steps.go-cache-paths.outputs.go-build }}
+              ${{ steps.go-cache-paths.outputs.go-mod }}
+          key: go-cache-templates-${{ hashFiles('**/go.sum') }}
       - name: Download versions.txt
         uses: actions/download-artifact@v2
         with:
