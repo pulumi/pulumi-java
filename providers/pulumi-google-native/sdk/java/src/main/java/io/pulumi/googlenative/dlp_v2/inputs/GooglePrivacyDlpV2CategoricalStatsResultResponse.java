@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
     @Import(name="valueFrequencyHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
-    public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
+    public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
     }
 

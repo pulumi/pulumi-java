@@ -26,7 +26,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 

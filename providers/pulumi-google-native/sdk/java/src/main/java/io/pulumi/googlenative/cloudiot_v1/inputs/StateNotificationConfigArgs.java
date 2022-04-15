@@ -26,7 +26,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="pubsubTopicName")
       private final @Nullable Output<String> pubsubTopicName;
 
-    public Output<String> getPubsubTopicName() {
+    public Output<String> pubsubTopicName() {
         return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
     }
 

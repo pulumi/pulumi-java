@@ -33,14 +33,14 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
      * Properties of the SKU instances being reserved.
      * 
     */
-    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
+    public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
     /**
      * Total number of instances for which capacity assurance is requested at a future time period.
      * 
     */
-    public String getTotalCount() {
+    public String totalCount() {
         return this.totalCount;
     }
 

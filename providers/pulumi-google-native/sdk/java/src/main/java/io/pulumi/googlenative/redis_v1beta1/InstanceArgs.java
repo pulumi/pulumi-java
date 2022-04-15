@@ -31,7 +31,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternativeLocationId")
       private final @Nullable Output<String> alternativeLocationId;
 
-    public Output<String> getAlternativeLocationId() {
+    public Output<String> alternativeLocationId() {
         return this.alternativeLocationId == null ? Codegen.empty() : this.alternativeLocationId;
     }
 
@@ -42,7 +42,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
-    public Output<Boolean> getAuthEnabled() {
+    public Output<Boolean> authEnabled() {
         return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
@@ -53,7 +53,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
@@ -64,7 +64,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectMode")
       private final @Nullable Output<InstanceConnectMode> connectMode;
 
-    public Output<InstanceConnectMode> getConnectMode() {
+    public Output<InstanceConnectMode> connectMode() {
         return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
@@ -75,14 +75,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -115,7 +115,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
       private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
-    public Output<MaintenancePolicyArgs> getMaintenancePolicy() {
+    public Output<MaintenancePolicyArgs> maintenancePolicy() {
         return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
@@ -126,7 +126,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memorySizeGb", required=true)
       private final Output<Integer> memorySizeGb;
 
-    public Output<Integer> getMemorySizeGb() {
+    public Output<Integer> memorySizeGb() {
         return this.memorySizeGb;
     }
 
@@ -137,7 +137,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -148,14 +148,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="persistenceConfig")
       private final @Nullable Output<PersistenceConfigArgs> persistenceConfig;
 
-    public Output<PersistenceConfigArgs> getPersistenceConfig() {
+    public Output<PersistenceConfigArgs> persistenceConfig() {
         return this.persistenceConfig == null ? Codegen.empty() : this.persistenceConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -166,7 +166,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readReplicasMode")
       private final @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
 
-    public Output<InstanceReadReplicasMode> getReadReplicasMode() {
+    public Output<InstanceReadReplicasMode> readReplicasMode() {
         return this.readReplicasMode == null ? Codegen.empty() : this.readReplicasMode;
     }
 
@@ -177,7 +177,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redisConfigs")
       private final @Nullable Output<Map<String,String>> redisConfigs;
 
-    public Output<Map<String,String>> getRedisConfigs() {
+    public Output<Map<String,String>> redisConfigs() {
         return this.redisConfigs == null ? Codegen.empty() : this.redisConfigs;
     }
 
@@ -188,7 +188,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redisVersion")
       private final @Nullable Output<String> redisVersion;
 
-    public Output<String> getRedisVersion() {
+    public Output<String> redisVersion() {
         return this.redisVersion == null ? Codegen.empty() : this.redisVersion;
     }
 
@@ -199,7 +199,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
@@ -210,7 +210,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 
@@ -221,7 +221,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryIpRange")
       private final @Nullable Output<String> secondaryIpRange;
 
-    public Output<String> getSecondaryIpRange() {
+    public Output<String> secondaryIpRange() {
         return this.secondaryIpRange == null ? Codegen.empty() : this.secondaryIpRange;
     }
 
@@ -232,7 +232,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
       private final Output<InstanceTier> tier;
 
-    public Output<InstanceTier> getTier() {
+    public Output<InstanceTier> tier() {
         return this.tier;
     }
 
@@ -243,7 +243,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitEncryptionMode")
       private final @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
-    public Output<InstanceTransitEncryptionMode> getTransitEncryptionMode() {
+    public Output<InstanceTransitEncryptionMode> transitEncryptionMode() {
         return this.transitEncryptionMode == null ? Codegen.empty() : this.transitEncryptionMode;
     }
 

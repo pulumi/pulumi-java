@@ -16,7 +16,7 @@ public final class AttestationResponse {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
-    public PgpSignedAttestationResponse getPgpSignedAttestation() {
+    public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
 

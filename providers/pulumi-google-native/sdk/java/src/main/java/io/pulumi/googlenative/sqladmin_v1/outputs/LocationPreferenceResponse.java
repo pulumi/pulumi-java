@@ -46,28 +46,28 @@ public final class LocationPreferenceResponse {
      * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
      * 
     */
-    public String getFollowGaeApplication() {
+    public String followGaeApplication() {
         return this.followGaeApplication;
     }
     /**
      * This is always `sql#locationPreference`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
      * 
     */
-    public String getSecondaryZone() {
+    public String secondaryZone() {
         return this.secondaryZone;
     }
     /**
      * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

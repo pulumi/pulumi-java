@@ -25,7 +25,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
     @Import(name="backendService", required=true)
       private final String backendService;
 
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
 
@@ -36,7 +36,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
     @Import(name="headerAction", required=true)
       private final HttpHeaderActionResponse headerAction;
 
-    public HttpHeaderActionResponse getHeaderAction() {
+    public HttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
 
@@ -47,7 +47,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
     @Import(name="weight", required=true)
       private final Integer weight;
 
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

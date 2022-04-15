@@ -34,14 +34,14 @@ public final class AuthenticationResponse {
      * Defines a set of authentication providers that a service supports.
      * 
     */
-    public List<AuthProviderResponse> getProviders() {
+    public List<AuthProviderResponse> providers() {
         return this.providers;
     }
     /**
      * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
     */
-    public List<AuthenticationRuleResponse> getRules() {
+    public List<AuthenticationRuleResponse> rules() {
         return this.rules;
     }
 

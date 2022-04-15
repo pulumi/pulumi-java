@@ -27,7 +27,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -38,7 +38,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="names")
       private final @Nullable Output<List<String>> names;
 
-    public Output<List<String>> getNames() {
+    public Output<List<String>> names() {
         return this.names == null ? Codegen.empty() : this.names;
     }
 

@@ -19,7 +19,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
     @Import(name="badRecords", required=true)
       private final String badRecords;
 
-    public String getBadRecords() {
+    public String badRecords() {
         return this.badRecords;
     }
 
@@ -30,7 +30,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
     @Import(name="inputFileBytes", required=true)
       private final String inputFileBytes;
 
-    public String getInputFileBytes() {
+    public String inputFileBytes() {
         return this.inputFileBytes;
     }
 
@@ -41,7 +41,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
     @Import(name="inputFiles", required=true)
       private final String inputFiles;
 
-    public String getInputFiles() {
+    public String inputFiles() {
         return this.inputFiles;
     }
 
@@ -52,7 +52,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
     @Import(name="outputBytes", required=true)
       private final String outputBytes;
 
-    public String getOutputBytes() {
+    public String outputBytes() {
         return this.outputBytes;
     }
 
@@ -63,7 +63,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
     @Import(name="outputRows", required=true)
       private final String outputRows;
 
-    public String getOutputRows() {
+    public String outputRows() {
         return this.outputRows;
     }
 

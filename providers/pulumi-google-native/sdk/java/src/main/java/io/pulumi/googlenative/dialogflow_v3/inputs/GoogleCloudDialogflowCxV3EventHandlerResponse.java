@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
     @Import(name="event", required=true)
       private final String event;
 
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
     @Import(name="targetFlow", required=true)
       private final String targetFlow;
 
-    public String getTargetFlow() {
+    public String targetFlow() {
         return this.targetFlow;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
     @Import(name="targetPage", required=true)
       private final String targetPage;
 
-    public String getTargetPage() {
+    public String targetPage() {
         return this.targetPage;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
     @Import(name="triggerFulfillment", required=true)
       private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
-    public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {
+    public GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }
 

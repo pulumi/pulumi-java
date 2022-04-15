@@ -27,7 +27,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="additionalExperiments", required=true)
       private final List<String> additionalExperiments;
 
-    public List<String> getAdditionalExperiments() {
+    public List<String> additionalExperiments() {
         return this.additionalExperiments;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="additionalUserLabels", required=true)
       private final Map<String,String> additionalUserLabels;
 
-    public Map<String,String> getAdditionalUserLabels() {
+    public Map<String,String> additionalUserLabels() {
         return this.additionalUserLabels;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="bypassTempDirValidation", required=true)
       private final Boolean bypassTempDirValidation;
 
-    public Boolean getBypassTempDirValidation() {
+    public Boolean bypassTempDirValidation() {
         return this.bypassTempDirValidation;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="enableStreamingEngine", required=true)
       private final Boolean enableStreamingEngine;
 
-    public Boolean getEnableStreamingEngine() {
+    public Boolean enableStreamingEngine() {
         return this.enableStreamingEngine;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="ipConfiguration", required=true)
       private final String ipConfiguration;
 
-    public String getIpConfiguration() {
+    public String ipConfiguration() {
         return this.ipConfiguration;
     }
 
@@ -82,7 +82,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -93,7 +93,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -104,7 +104,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="maxWorkers", required=true)
       private final Integer maxWorkers;
 
-    public Integer getMaxWorkers() {
+    public Integer maxWorkers() {
         return this.maxWorkers;
     }
 
@@ -115,7 +115,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -126,7 +126,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="numWorkers", required=true)
       private final Integer numWorkers;
 
-    public Integer getNumWorkers() {
+    public Integer numWorkers() {
         return this.numWorkers;
     }
 
@@ -137,7 +137,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -148,7 +148,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
@@ -159,7 +159,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="tempLocation", required=true)
       private final String tempLocation;
 
-    public String getTempLocation() {
+    public String tempLocation() {
         return this.tempLocation;
     }
 
@@ -170,7 +170,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="workerRegion", required=true)
       private final String workerRegion;
 
-    public String getWorkerRegion() {
+    public String workerRegion() {
         return this.workerRegion;
     }
 
@@ -181,7 +181,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="workerZone", required=true)
       private final String workerZone;
 
-    public String getWorkerZone() {
+    public String workerZone() {
         return this.workerZone;
     }
 
@@ -192,7 +192,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

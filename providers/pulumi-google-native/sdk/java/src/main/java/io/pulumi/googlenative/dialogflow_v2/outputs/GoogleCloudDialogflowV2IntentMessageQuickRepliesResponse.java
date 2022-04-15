@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse {
      * Optional. The collection of quick replies.
      * 
     */
-    public List<String> getQuickReplies() {
+    public List<String> quickReplies() {
         return this.quickReplies;
     }
     /**
      * Optional. The title of the collection of quick replies.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

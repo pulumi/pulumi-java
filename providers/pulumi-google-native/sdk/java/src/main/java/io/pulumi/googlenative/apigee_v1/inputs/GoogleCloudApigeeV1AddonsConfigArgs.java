@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     @Import(name="advancedApiOpsConfig")
       private final @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
 
-    public Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> getAdvancedApiOpsConfig() {
+    public Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig() {
         return this.advancedApiOpsConfig == null ? Codegen.empty() : this.advancedApiOpsConfig;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     @Import(name="connectorsPlatformConfig")
       private final @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
 
-    public Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> getConnectorsPlatformConfig() {
+    public Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig() {
         return this.connectorsPlatformConfig == null ? Codegen.empty() : this.connectorsPlatformConfig;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     @Import(name="integrationConfig")
       private final @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
 
-    public Output<GoogleCloudApigeeV1IntegrationConfigArgs> getIntegrationConfig() {
+    public Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig() {
         return this.integrationConfig == null ? Codegen.empty() : this.integrationConfig;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     @Import(name="monetizationConfig")
       private final @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 
-    public Output<GoogleCloudApigeeV1MonetizationConfigArgs> getMonetizationConfig() {
+    public Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig() {
         return this.monetizationConfig == null ? Codegen.empty() : this.monetizationConfig;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
      * The query that defines the table view.
      * 
     */
-    public String getViewQuery() {
+    public String viewQuery() {
         return this.viewQuery;
     }
 

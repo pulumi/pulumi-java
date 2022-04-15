@@ -33,14 +33,14 @@ public final class MaterialResponse {
      * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
      * 
     */
-    public Map<String,String> getDigest() {
+    public Map<String,String> digest() {
         return this.digest;
     }
     /**
      * uri is the uri of the material
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

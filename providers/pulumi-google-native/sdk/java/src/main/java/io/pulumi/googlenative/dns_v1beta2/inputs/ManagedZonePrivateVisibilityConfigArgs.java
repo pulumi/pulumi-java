@@ -25,14 +25,14 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     @Import(name="gkeClusters")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> getGkeClusters() {
+    public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters() {
         return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -43,7 +43,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
     @Import(name="networks")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> getNetworks() {
+    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks() {
         return this.networks == null ? Codegen.empty() : this.networks;
     }
 

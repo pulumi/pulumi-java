@@ -29,7 +29,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
     @Import(name="datasetUri")
       private final @Nullable Output<String> datasetUri;
 
-    public Output<String> getDatasetUri() {
+    public Output<String> datasetUri() {
         return this.datasetUri == null ? Codegen.empty() : this.datasetUri;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
     @Import(name="schemaConfig")
       private final @Nullable Output<SchemaConfigArgs> schemaConfig;
 
-    public Output<SchemaConfigArgs> getSchemaConfig() {
+    public Output<SchemaConfigArgs> schemaConfig() {
         return this.schemaConfig == null ? Codegen.empty() : this.schemaConfig;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
     @Import(name="writeDisposition")
       private final @Nullable Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationWriteDisposition> writeDisposition;
 
-    public Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationWriteDisposition> getWriteDisposition() {
+    public Output<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationWriteDisposition> writeDisposition() {
         return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 

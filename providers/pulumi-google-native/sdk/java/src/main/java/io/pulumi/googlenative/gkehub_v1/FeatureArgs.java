@@ -20,7 +20,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureId")
       private final @Nullable Output<String> featureId;
 
-    public Output<String> getFeatureId() {
+    public Output<String> featureId() {
         return this.featureId == null ? Codegen.empty() : this.featureId;
     }
 
@@ -31,14 +31,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,21 +49,21 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membershipSpecs")
       private final @Nullable Output<Map<String,String>> membershipSpecs;
 
-    public Output<Map<String,String>> getMembershipSpecs() {
+    public Output<Map<String,String>> membershipSpecs() {
         return this.membershipSpecs == null ? Codegen.empty() : this.membershipSpecs;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -74,7 +74,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<CommonFeatureSpecArgs> spec;
 
-    public Output<CommonFeatureSpecArgs> getSpec() {
+    public Output<CommonFeatureSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

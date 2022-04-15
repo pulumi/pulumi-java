@@ -28,7 +28,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<String> activeDeadlineSeconds;
 
-    public Output<String> getActiveDeadlineSeconds() {
+    public Output<String> activeDeadlineSeconds() {
         return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
@@ -39,7 +39,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backoffLimit")
       private final @Nullable Output<Integer> backoffLimit;
 
-    public Output<Integer> getBackoffLimit() {
+    public Output<Integer> backoffLimit() {
         return this.backoffLimit == null ? Codegen.empty() : this.backoffLimit;
     }
 
@@ -50,7 +50,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completions")
       private final @Nullable Output<Integer> completions;
 
-    public Output<Integer> getCompletions() {
+    public Output<Integer> completions() {
         return this.completions == null ? Codegen.empty() : this.completions;
     }
 
@@ -61,7 +61,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> getParallelism() {
+    public Output<Integer> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
@@ -72,7 +72,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<InstanceTemplateSpecArgs> template;
 
-    public Output<InstanceTemplateSpecArgs> getTemplate() {
+    public Output<InstanceTemplateSpecArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 
@@ -83,7 +83,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttlSecondsAfterFinished")
       private final @Nullable Output<Integer> ttlSecondsAfterFinished;
 
-    public Output<Integer> getTtlSecondsAfterFinished() {
+    public Output<Integer> ttlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished == null ? Codegen.empty() : this.ttlSecondsAfterFinished;
     }
 

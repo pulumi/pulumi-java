@@ -26,7 +26,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="connectionProfileId", required=true)
       private final Output<String> connectionProfileId;
 
-    public Output<String> getConnectionProfileId() {
+    public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="forwardSshConnectivity")
       private final @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
 
-    public Output<ForwardSshTunnelConnectivityArgs> getForwardSshConnectivity() {
+    public Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity() {
         return this.forwardSshConnectivity == null ? Codegen.empty() : this.forwardSshConnectivity;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gcsProfile")
       private final @Nullable Output<GcsProfileArgs> gcsProfile;
 
-    public Output<GcsProfileArgs> getGcsProfile() {
+    public Output<GcsProfileArgs> gcsProfile() {
         return this.gcsProfile == null ? Codegen.empty() : this.gcsProfile;
     }
 
@@ -70,14 +70,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -88,7 +88,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mysqlProfile")
       private final @Nullable Output<MysqlProfileArgs> mysqlProfile;
 
-    public Output<MysqlProfileArgs> getMysqlProfile() {
+    public Output<MysqlProfileArgs> mysqlProfile() {
         return this.mysqlProfile == null ? Codegen.empty() : this.mysqlProfile;
     }
 
@@ -99,7 +99,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="noConnectivity")
       private final @Nullable Output<NoConnectivitySettingsArgs> noConnectivity;
 
-    public Output<NoConnectivitySettingsArgs> getNoConnectivity() {
+    public Output<NoConnectivitySettingsArgs> noConnectivity() {
         return this.noConnectivity == null ? Codegen.empty() : this.noConnectivity;
     }
 
@@ -110,7 +110,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oracleProfile")
       private final @Nullable Output<OracleProfileArgs> oracleProfile;
 
-    public Output<OracleProfileArgs> getOracleProfile() {
+    public Output<OracleProfileArgs> oracleProfile() {
         return this.oracleProfile == null ? Codegen.empty() : this.oracleProfile;
     }
 
@@ -121,21 +121,21 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateConnectivity")
       private final @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
 
-    public Output<PrivateConnectivityArgs> getPrivateConnectivity() {
+    public Output<PrivateConnectivityArgs> privateConnectivity() {
         return this.privateConnectivity == null ? Codegen.empty() : this.privateConnectivity;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -146,7 +146,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="staticServiceIpConnectivity")
       private final @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
-    public Output<StaticServiceIpConnectivityArgs> getStaticServiceIpConnectivity() {
+    public Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity == null ? Codegen.empty() : this.staticServiceIpConnectivity;
     }
 

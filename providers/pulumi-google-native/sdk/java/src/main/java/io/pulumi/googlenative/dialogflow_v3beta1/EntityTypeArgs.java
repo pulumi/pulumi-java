@@ -24,7 +24,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -35,7 +35,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoExpansionMode")
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
 
-    public Output<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
+    public Output<EntityTypeAutoExpansionMode> autoExpansionMode() {
         return this.autoExpansionMode == null ? Codegen.empty() : this.autoExpansionMode;
     }
 
@@ -46,7 +46,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
@@ -68,7 +68,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entities")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities() {
         return this.entities == null ? Codegen.empty() : this.entities;
     }
 
@@ -79,7 +79,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludedPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> excludedPhrases;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> getExcludedPhrases() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> excludedPhrases() {
         return this.excludedPhrases == null ? Codegen.empty() : this.excludedPhrases;
     }
 
@@ -90,21 +90,21 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<EntityTypeKind> kind;
 
-    public Output<EntityTypeKind> getKind() {
+    public Output<EntityTypeKind> kind() {
         return this.kind;
     }
 
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -115,14 +115,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -133,7 +133,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact == null ? Codegen.empty() : this.redact;
     }
 

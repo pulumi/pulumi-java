@@ -23,7 +23,7 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -34,7 +34,7 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="serviceId", required=true)
       private final String serviceId;
 
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
 

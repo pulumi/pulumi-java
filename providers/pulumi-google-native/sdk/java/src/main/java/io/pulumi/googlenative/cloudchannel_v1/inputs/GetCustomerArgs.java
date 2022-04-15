@@ -15,21 +15,21 @@ public final class GetCustomerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
       private final String channelPartnerLinkId;
 
-    public String getChannelPartnerLinkId() {
+    public String channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="customerId", required=true)
       private final String customerId;
 
-    public String getCustomerId() {
+    public String customerId() {
         return this.customerId;
     }
 

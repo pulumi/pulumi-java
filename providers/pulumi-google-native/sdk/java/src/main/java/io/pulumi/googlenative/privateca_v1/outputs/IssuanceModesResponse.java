@@ -32,14 +32,14 @@ public final class IssuanceModesResponse {
      * Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.
      * 
     */
-    public Boolean getAllowConfigBasedIssuance() {
+    public Boolean allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
     /**
      * Optional. When true, allows callers to create Certificates by specifying a CSR.
      * 
     */
-    public Boolean getAllowCsrBasedIssuance() {
+    public Boolean allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 

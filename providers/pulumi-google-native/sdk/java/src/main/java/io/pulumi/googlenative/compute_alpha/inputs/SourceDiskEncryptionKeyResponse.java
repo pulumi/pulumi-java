@@ -20,7 +20,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
     @Import(name="diskEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
-    public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
+    public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
 
@@ -31,7 +31,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
     @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
 
-    public String getSourceDisk() {
+    public String sourceDisk() {
         return this.sourceDisk;
     }
 

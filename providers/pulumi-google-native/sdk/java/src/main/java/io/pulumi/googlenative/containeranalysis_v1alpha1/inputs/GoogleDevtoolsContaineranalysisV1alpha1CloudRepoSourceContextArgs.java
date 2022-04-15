@@ -28,7 +28,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="aliasContext")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext() {
         return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="repoId")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> getRepoId() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId() {
         return this.repoId == null ? Codegen.empty() : this.repoId;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 

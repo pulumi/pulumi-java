@@ -27,7 +27,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="executionConfig")
       private final @Nullable Output<ExecutionConfigArgs> executionConfig;
 
-    public Output<ExecutionConfigArgs> getExecutionConfig() {
+    public Output<ExecutionConfigArgs> executionConfig() {
         return this.executionConfig == null ? Codegen.empty() : this.executionConfig;
     }
 
@@ -38,7 +38,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="peripheralsConfig")
       private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
-    public Output<PeripheralsConfigArgs> getPeripheralsConfig() {
+    public Output<PeripheralsConfigArgs> peripheralsConfig() {
         return this.peripheralsConfig == null ? Codegen.empty() : this.peripheralsConfig;
     }
 

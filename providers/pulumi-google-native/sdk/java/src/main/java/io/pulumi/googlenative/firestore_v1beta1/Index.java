@@ -31,7 +31,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The collection ID to which this index applies. Required.
      * 
      */
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
     /**
@@ -45,7 +45,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The fields to index.
      * 
      */
-    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> getFields() {
+    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> fields() {
         return this.fields;
     }
     /**
@@ -59,7 +59,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The resource name of the index. Output only.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The state of the index. Output only.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

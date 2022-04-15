@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
      * The configuration used for this job.
      * 
     */
-    public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
+    public GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
     /**
      * A summary of the outcome of this inspection job.
      * 
     */
-    public GooglePrivacyDlpV2ResultResponse getResult() {
+    public GooglePrivacyDlpV2ResultResponse result() {
         return this.result;
     }
 

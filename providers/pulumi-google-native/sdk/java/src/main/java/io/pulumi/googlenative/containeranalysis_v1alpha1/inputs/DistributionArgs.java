@@ -28,7 +28,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
       private final @Nullable Output<DistributionArchitecture> architecture;
 
-    public Output<DistributionArchitecture> getArchitecture() {
+    public Output<DistributionArchitecture> architecture() {
         return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
@@ -39,7 +39,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
@@ -50,7 +50,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestVersion")
       private final @Nullable Output<VersionArgs> latestVersion;
 
-    public Output<VersionArgs> getLatestVersion() {
+    public Output<VersionArgs> latestVersion() {
         return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
     }
 
@@ -72,7 +72,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintainer")
       private final @Nullable Output<String> maintainer;
 
-    public Output<String> getMaintainer() {
+    public Output<String> maintainer() {
         return this.maintainer == null ? Codegen.empty() : this.maintainer;
     }
 
@@ -83,7 +83,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -23,7 +23,7 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 

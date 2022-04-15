@@ -33,14 +33,14 @@ public final class FirewallLogConfigResponse {
      * This field denotes whether to enable logging for a particular firewall rule.
      * 
     */
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
     /**
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
      * 
     */
-    public String getMetadata() {
+    public String metadata() {
         return this.metadata;
     }
 

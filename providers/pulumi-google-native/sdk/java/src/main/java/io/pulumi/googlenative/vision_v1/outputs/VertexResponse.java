@@ -32,14 +32,14 @@ public final class VertexResponse {
      * X coordinate.
      * 
     */
-    public Integer getX() {
+    public Integer x() {
         return this.x;
     }
     /**
      * Y coordinate.
      * 
     */
-    public Integer getY() {
+    public Integer y() {
         return this.y;
     }
 

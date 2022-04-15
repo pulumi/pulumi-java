@@ -25,13 +25,13 @@ public final class RRSetRoutingPolicyResponse {
         this.wrr = wrr;
     }
 
-    public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
+    public RRSetRoutingPolicyGeoPolicyResponse geo() {
         return this.geo;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
-    public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
+    public RRSetRoutingPolicyWrrPolicyResponse wrr() {
         return this.wrr;
     }
 

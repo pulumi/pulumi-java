@@ -28,7 +28,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="accessSelector", required=true)
       private final AccessSelectorResponse accessSelector;
 
-    public AccessSelectorResponse getAccessSelector() {
+    public AccessSelectorResponse accessSelector() {
         return this.accessSelector;
     }
 
@@ -39,7 +39,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="conditionContext", required=true)
       private final ConditionContextResponse conditionContext;
 
-    public ConditionContextResponse getConditionContext() {
+    public ConditionContextResponse conditionContext() {
         return this.conditionContext;
     }
 
@@ -50,7 +50,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="identitySelector", required=true)
       private final IdentitySelectorResponse identitySelector;
 
-    public IdentitySelectorResponse getIdentitySelector() {
+    public IdentitySelectorResponse identitySelector() {
         return this.identitySelector;
     }
 
@@ -61,7 +61,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="options", required=true)
       private final OptionsResponse options;
 
-    public OptionsResponse getOptions() {
+    public OptionsResponse options() {
         return this.options;
     }
 
@@ -72,7 +72,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="resourceSelector", required=true)
       private final ResourceSelectorResponse resourceSelector;
 
-    public ResourceSelectorResponse getResourceSelector() {
+    public ResourceSelectorResponse resourceSelector() {
         return this.resourceSelector;
     }
 
@@ -83,7 +83,7 @@ public final class IamPolicyAnalysisQueryResponse extends io.pulumi.resources.In
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

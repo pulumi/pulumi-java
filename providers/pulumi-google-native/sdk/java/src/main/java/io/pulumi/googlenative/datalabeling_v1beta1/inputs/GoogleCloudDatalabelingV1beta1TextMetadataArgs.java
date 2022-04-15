@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 

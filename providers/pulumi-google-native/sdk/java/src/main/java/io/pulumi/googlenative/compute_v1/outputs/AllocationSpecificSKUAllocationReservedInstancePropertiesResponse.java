@@ -56,35 +56,35 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * Specifies accelerator type and count.
      * 
     */
-    public List<AcceleratorConfigResponse> getGuestAccelerators() {
+    public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
      * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
      * 
     */
-    public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> getLocalSsds() {
+    public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds() {
         return this.localSsds;
     }
     /**
      * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
      * 
     */
-    public String getLocationHint() {
+    public String locationHint() {
         return this.locationHint;
     }
     /**
      * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * Minimum cpu platform the reservation.
      * 
     */
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 

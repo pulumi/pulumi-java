@@ -27,7 +27,7 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deadLetterTopic")
       private final @Nullable Output<String> deadLetterTopic;
 
-    public Output<String> getDeadLetterTopic() {
+    public Output<String> deadLetterTopic() {
         return this.deadLetterTopic == null ? Codegen.empty() : this.deadLetterTopic;
     }
 
@@ -38,7 +38,7 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxDeliveryAttempts")
       private final @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Output<Integer> getMaxDeliveryAttempts() {
+    public Output<Integer> maxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Codegen.empty() : this.maxDeliveryAttempts;
     }
 

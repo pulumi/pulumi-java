@@ -17,21 +17,21 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends io.pulumi.reso
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
       private final String regionId;
 
-    public String getRegionId() {
+    public String regionId() {
         return this.regionId;
     }
 
     @Import(name="workflowTemplateId", required=true)
       private final String workflowTemplateId;
 
-    public String getWorkflowTemplateId() {
+    public String workflowTemplateId() {
         return this.workflowTemplateId;
     }
 

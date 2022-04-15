@@ -23,7 +23,7 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="publishCaCert", required=true)
       private final Boolean publishCaCert;
 
-    public Boolean getPublishCaCert() {
+    public Boolean publishCaCert() {
         return this.publishCaCert;
     }
 
@@ -34,7 +34,7 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="publishCrl", required=true)
       private final Boolean publishCrl;
 
-    public Boolean getPublishCrl() {
+    public Boolean publishCrl() {
         return this.publishCrl;
     }
 

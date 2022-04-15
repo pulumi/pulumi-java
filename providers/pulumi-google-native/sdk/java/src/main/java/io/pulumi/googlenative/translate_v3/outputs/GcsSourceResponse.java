@@ -24,7 +24,7 @@ public final class GcsSourceResponse {
      * Source data URI. For example, `gs://my_bucket/my_object`.
      * 
     */
-    public String getInputUri() {
+    public String inputUri() {
         return this.inputUri;
     }
 

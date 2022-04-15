@@ -27,7 +27,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -38,7 +38,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="window")
       private final @Nullable Output<MaintenanceWindowArgs> window;
 
-    public Output<MaintenanceWindowArgs> getWindow() {
+    public Output<MaintenanceWindowArgs> window() {
         return this.window == null ? Codegen.empty() : this.window;
     }
 

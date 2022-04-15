@@ -24,7 +24,7 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
     @Import(name="abort", required=true)
       private final HttpFaultAbortResponse abort;
 
-    public HttpFaultAbortResponse getAbort() {
+    public HttpFaultAbortResponse abort() {
         return this.abort;
     }
 
@@ -35,7 +35,7 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
     @Import(name="delay", required=true)
       private final HttpFaultDelayResponse delay;
 
-    public HttpFaultDelayResponse getDelay() {
+    public HttpFaultDelayResponse delay() {
         return this.delay;
     }
 

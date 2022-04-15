@@ -27,7 +27,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -38,7 +38,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     @Import(name="clientSecret")
       private final @Nullable Output<SecretArgs> clientSecret;
 
-    public Output<SecretArgs> getClientSecret() {
+    public Output<SecretArgs> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 

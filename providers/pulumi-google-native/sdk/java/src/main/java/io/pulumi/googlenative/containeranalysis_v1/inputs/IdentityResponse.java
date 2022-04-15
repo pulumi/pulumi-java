@@ -24,7 +24,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="revision", required=true)
       private final Integer revision;
 
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
 
@@ -35,7 +35,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateId", required=true)
       private final String updateId;
 
-    public String getUpdateId() {
+    public String updateId() {
         return this.updateId;
     }
 

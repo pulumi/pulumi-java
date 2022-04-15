@@ -21,10 +21,10 @@ public final class ResourceStatusResponse {
         this.upcomingMaintenance = upcomingMaintenance;
     }
 
-    public ResourceStatusSchedulingResponse getScheduling() {
+    public ResourceStatusSchedulingResponse scheduling() {
         return this.scheduling;
     }
-    public ResourceStatusUpcomingMaintenanceResponse getUpcomingMaintenance() {
+    public ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance() {
         return this.upcomingMaintenance;
     }
 

@@ -102,80 +102,80 @@ public final class GetFutureReservationResult {
      * The creation timestamp for this future reservation in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the future reservation.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
      * 
     */
-    public String getNamePrefix() {
+    public String namePrefix() {
         return this.namePrefix;
     }
     /**
      * Server-defined fully-qualified URL for this resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
     */
-    public String getSelfLinkWithId() {
+    public String selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * List of Projects/Folders to share with.
      * 
     */
-    public ShareSettingsResponse getShareSettings() {
+    public ShareSettingsResponse shareSettings() {
         return this.shareSettings;
     }
     /**
      * Future Reservation configuration to indicate instance properties and total count.
      * 
     */
-    public FutureReservationSpecificSKUPropertiesResponse getSpecificSkuProperties() {
+    public FutureReservationSpecificSKUPropertiesResponse specificSkuProperties() {
         return this.specificSkuProperties;
     }
     /**
      * [Output only] Status of the Future Reservation
      * 
     */
-    public FutureReservationStatusResponse getStatus() {
+    public FutureReservationStatusResponse status() {
         return this.status;
     }
     /**
      * Time window for this Future Reservation.
      * 
     */
-    public FutureReservationTimeWindowResponse getTimeWindow() {
+    public FutureReservationTimeWindowResponse timeWindow() {
         return this.timeWindow;
     }
     /**
      * URL of the Zone where this future reservation resides.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

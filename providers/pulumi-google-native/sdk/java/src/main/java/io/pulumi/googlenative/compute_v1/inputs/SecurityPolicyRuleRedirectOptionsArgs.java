@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
-    public Output<SecurityPolicyRuleRedirectOptionsType> getType() {
+    public Output<SecurityPolicyRuleRedirectOptionsType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

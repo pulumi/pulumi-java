@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
     @Import(name="audioUri", required=true)
       private final Output<String> audioUri;
 
-    public Output<String> getAudioUri() {
+    public Output<String> audioUri() {
         return this.audioUri;
     }
 

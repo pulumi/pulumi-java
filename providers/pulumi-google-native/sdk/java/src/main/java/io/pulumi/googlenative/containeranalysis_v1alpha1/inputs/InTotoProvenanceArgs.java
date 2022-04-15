@@ -26,7 +26,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="builderConfig")
       private final @Nullable Output<BuilderConfigArgs> builderConfig;
 
-    public Output<BuilderConfigArgs> getBuilderConfig() {
+    public Output<BuilderConfigArgs> builderConfig() {
         return this.builderConfig == null ? Codegen.empty() : this.builderConfig;
     }
 
@@ -37,14 +37,14 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="materials")
       private final @Nullable Output<List<String>> materials;
 
-    public Output<List<String>> getMaterials() {
+    public Output<List<String>> materials() {
         return this.materials == null ? Codegen.empty() : this.materials;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
-    public Output<MetadataArgs> getMetadata() {
+    public Output<MetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -55,7 +55,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recipe")
       private final @Nullable Output<RecipeArgs> recipe;
 
-    public Output<RecipeArgs> getRecipe() {
+    public Output<RecipeArgs> recipe() {
         return this.recipe == null ? Codegen.empty() : this.recipe;
     }
 

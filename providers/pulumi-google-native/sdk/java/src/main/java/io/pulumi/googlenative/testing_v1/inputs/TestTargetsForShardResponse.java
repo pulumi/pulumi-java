@@ -24,7 +24,7 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
     @Import(name="testTargets", required=true)
       private final List<String> testTargets;
 
-    public List<String> getTestTargets() {
+    public List<String> testTargets() {
         return this.testTargets;
     }
 

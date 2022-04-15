@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
      * 
     */
-    public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> getTransformations() {
+    public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations() {
         return this.transformations;
     }
 

@@ -20,7 +20,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -31,21 +31,21 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,14 +56,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -74,7 +74,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Output<List<AttributeArgs>> getResourceAttributes() {
+    public Output<List<AttributeArgs>> resourceAttributes() {
         return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
@@ -85,7 +85,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

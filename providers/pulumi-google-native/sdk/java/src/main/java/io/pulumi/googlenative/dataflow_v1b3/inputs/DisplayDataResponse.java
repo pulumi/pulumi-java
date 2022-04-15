@@ -25,7 +25,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="boolValue", required=true)
       private final Boolean boolValue;
 
-    public Boolean getBoolValue() {
+    public Boolean boolValue() {
         return this.boolValue;
     }
 
@@ -36,7 +36,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="durationValue", required=true)
       private final String durationValue;
 
-    public String getDurationValue() {
+    public String durationValue() {
         return this.durationValue;
     }
 
@@ -47,7 +47,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="floatValue", required=true)
       private final Double floatValue;
 
-    public Double getFloatValue() {
+    public Double floatValue() {
         return this.floatValue;
     }
 
@@ -58,7 +58,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="int64Value", required=true)
       private final String int64Value;
 
-    public String getInt64Value() {
+    public String int64Value() {
         return this.int64Value;
     }
 
@@ -69,7 +69,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="javaClassValue", required=true)
       private final String javaClassValue;
 
-    public String getJavaClassValue() {
+    public String javaClassValue() {
         return this.javaClassValue;
     }
 
@@ -80,7 +80,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -91,7 +91,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -102,7 +102,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -113,7 +113,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shortStrValue", required=true)
       private final String shortStrValue;
 
-    public String getShortStrValue() {
+    public String shortStrValue() {
         return this.shortStrValue;
     }
 
@@ -124,7 +124,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="strValue", required=true)
       private final String strValue;
 
-    public String getStrValue() {
+    public String strValue() {
         return this.strValue;
     }
 
@@ -135,7 +135,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timestampValue", required=true)
       private final String timestampValue;
 
-    public String getTimestampValue() {
+    public String timestampValue() {
         return this.timestampValue;
     }
 
@@ -146,7 +146,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

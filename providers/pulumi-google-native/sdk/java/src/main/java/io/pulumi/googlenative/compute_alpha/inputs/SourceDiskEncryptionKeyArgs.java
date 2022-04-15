@@ -23,7 +23,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
@@ -34,7 +34,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 

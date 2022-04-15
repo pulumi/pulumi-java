@@ -27,7 +27,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumerDestinations")
       private final @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
-    public Output<List<BillingDestinationArgs>> getConsumerDestinations() {
+    public Output<List<BillingDestinationArgs>> consumerDestinations() {
         return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
     }
 

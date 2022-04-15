@@ -49,7 +49,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<ApiConfigHandlerResponse> getApiConfig() {
+    public Output<ApiConfigHandlerResponse> apiConfig() {
         return this.apiConfig;
     }
     /**
@@ -63,7 +63,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return app_engine_apis allows second generation runtimes to access the App Engine APIs.
      * 
      */
-    public Output<Boolean> getAppEngineApis() {
+    public Output<Boolean> appEngineApis() {
         return this.appEngineApis;
     }
     /**
@@ -77,7 +77,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
      * 
      */
-    public Output<AutomaticScalingResponse> getAutomaticScaling() {
+    public Output<AutomaticScalingResponse> automaticScaling() {
         return this.automaticScaling;
     }
     /**
@@ -91,7 +91,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
      * 
      */
-    public Output<BasicScalingResponse> getBasicScaling() {
+    public Output<BasicScalingResponse> basicScaling() {
         return this.basicScaling;
     }
     /**
@@ -105,7 +105,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
-    public Output<Map<String,String>> getBetaSettings() {
+    public Output<Map<String,String>> betaSettings() {
         return this.betaSettings;
     }
     /**
@@ -119,7 +119,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<Map<String,String>> getBuildEnvVariables() {
+    public Output<Map<String,String>> buildEnvVariables() {
         return this.buildEnvVariables;
     }
     /**
@@ -133,7 +133,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Time that this version was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -147,7 +147,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Email address of the user who created this version.
      * 
      */
-    public Output<String> getCreatedBy() {
+    public Output<String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -161,7 +161,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<String> getDefaultExpiration() {
+    public Output<String> defaultExpiration() {
         return this.defaultExpiration;
     }
     /**
@@ -175,7 +175,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<DeploymentResponse> getDeployment() {
+    public Output<DeploymentResponse> deployment() {
         return this.deployment;
     }
     /**
@@ -189,7 +189,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
      * 
      */
-    public Output<String> getDiskUsageBytes() {
+    public Output<String> diskUsageBytes() {
         return this.diskUsageBytes;
     }
     /**
@@ -203,7 +203,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
      * 
      */
-    public Output<EndpointsApiServiceResponse> getEndpointsApiService() {
+    public Output<EndpointsApiServiceResponse> endpointsApiService() {
         return this.endpointsApiService;
     }
     /**
@@ -217,7 +217,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The entrypoint for the application.
      * 
      */
-    public Output<EntrypointResponse> getEntrypoint() {
+    public Output<EntrypointResponse> entrypoint() {
         return this.entrypoint;
     }
     /**
@@ -231,7 +231,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return App Engine execution environment for this version.Defaults to standard.
      * 
      */
-    public Output<String> getEnv() {
+    public Output<String> env() {
         return this.env;
     }
     /**
@@ -245,7 +245,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Environment variables available to the application.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<Map<String,String>> getEnvVariables() {
+    public Output<Map<String,String>> envVariables() {
         return this.envVariables;
     }
     /**
@@ -259,7 +259,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<List<ErrorHandlerResponse>> getErrorHandlers() {
+    public Output<List<ErrorHandlerResponse>> errorHandlers() {
         return this.errorHandlers;
     }
     /**
@@ -273,7 +273,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<List<UrlMapResponse>> getHandlers() {
+    public Output<List<UrlMapResponse>> handlers() {
         return this.handlers;
     }
     /**
@@ -287,7 +287,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<HealthCheckResponse> getHealthCheck() {
+    public Output<HealthCheckResponse> healthCheck() {
         return this.healthCheck;
     }
     /**
@@ -301,7 +301,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Before an application can receive email or XMPP messages, the application must be configured to enable the service.
      * 
      */
-    public Output<List<String>> getInboundServices() {
+    public Output<List<String>> inboundServices() {
         return this.inboundServices;
     }
     /**
@@ -315,7 +315,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
      * 
      */
-    public Output<String> getInstanceClass() {
+    public Output<String> instanceClass() {
         return this.instanceClass;
     }
     /**
@@ -329,7 +329,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<List<LibraryResponse>> getLibraries() {
+    public Output<List<LibraryResponse>> libraries() {
         return this.libraries;
     }
     /**
@@ -343,7 +343,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<LivenessCheckResponse> getLivenessCheck() {
+    public Output<LivenessCheckResponse> livenessCheck() {
         return this.livenessCheck;
     }
     /**
@@ -357,7 +357,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
      * 
      */
-    public Output<ManualScalingResponse> getManualScaling() {
+    public Output<ManualScalingResponse> manualScaling() {
         return this.manualScaling;
     }
     /**
@@ -371,7 +371,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -385,7 +385,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Extra network settings. Only applicable in the App Engine flexible environment.
      * 
      */
-    public Output<NetworkResponse> getNetwork() {
+    public Output<NetworkResponse> network() {
         return this.network;
     }
     /**
@@ -399,7 +399,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<String> getNobuildFilesRegex() {
+    public Output<String> nobuildFilesRegex() {
         return this.nobuildFilesRegex;
     }
     /**
@@ -413,7 +413,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
      * 
      */
-    public Output<ReadinessCheckResponse> getReadinessCheck() {
+    public Output<ReadinessCheckResponse> readinessCheck() {
         return this.readinessCheck;
     }
     /**
@@ -427,7 +427,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Machine resources for this version. Only applicable in the App Engine flexible environment.
      * 
      */
-    public Output<ResourcesResponse> getResources() {
+    public Output<ResourcesResponse> resources() {
         return this.resources;
     }
     /**
@@ -441,7 +441,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Desired runtime. Example: python27.
      * 
      */
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
     /**
@@ -455,7 +455,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
      * 
      */
-    public Output<String> getRuntimeApiVersion() {
+    public Output<String> runtimeApiVersion() {
         return this.runtimeApiVersion;
     }
     /**
@@ -469,7 +469,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
      * 
      */
-    public Output<String> getRuntimeChannel() {
+    public Output<String> runtimeChannel() {
         return this.runtimeChannel;
     }
     /**
@@ -483,7 +483,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The path or name of the app's main executable.
      * 
      */
-    public Output<String> getRuntimeMainExecutablePath() {
+    public Output<String> runtimeMainExecutablePath() {
         return this.runtimeMainExecutablePath;
     }
     /**
@@ -497,7 +497,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -511,7 +511,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
      * 
      */
-    public Output<String> getServingStatus() {
+    public Output<String> servingStatus() {
         return this.servingStatus;
     }
     /**
@@ -525,7 +525,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Whether multiple requests can be dispatched to this version at once.
      * 
      */
-    public Output<Boolean> getThreadsafe() {
+    public Output<Boolean> threadsafe() {
         return this.threadsafe;
     }
     /**
@@ -539,7 +539,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
      * 
      */
-    public Output<String> getVersionUrl() {
+    public Output<String> versionUrl() {
         return this.versionUrl;
     }
     /**
@@ -553,7 +553,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Whether to deploy this version in a container on a virtual machine.
      * 
      */
-    public Output<Boolean> getVm() {
+    public Output<Boolean> vm() {
         return this.vm;
     }
     /**
@@ -567,7 +567,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * @return Enables VPC connectivity for standard apps.
      * 
      */
-    public Output<VpcAccessConnectorResponse> getVpcAccessConnector() {
+    public Output<VpcAccessConnectorResponse> vpcAccessConnector() {
         return this.vpcAccessConnector;
     }
 

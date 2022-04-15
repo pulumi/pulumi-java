@@ -41,21 +41,21 @@ public final class CloudRepoSourceContextResponse {
      * An alias, which may be a branch or tag.
      * 
     */
-    public AliasContextResponse getAliasContext() {
+    public AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
     /**
      * The ID of the repo.
      * 
     */
-    public RepoIdResponse getRepoId() {
+    public RepoIdResponse repoId() {
         return this.repoId;
     }
     /**
      * A revision ID.
      * 
     */
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

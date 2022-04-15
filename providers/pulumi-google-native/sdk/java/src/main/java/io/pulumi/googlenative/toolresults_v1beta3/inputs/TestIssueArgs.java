@@ -30,7 +30,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<TestIssueCategory> category;
 
-    public Output<TestIssueCategory> getCategory() {
+    public Output<TestIssueCategory> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -41,7 +41,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
 
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage == null ? Codegen.empty() : this.errorMessage;
     }
 
@@ -52,7 +52,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity")
       private final @Nullable Output<TestIssueSeverity> severity;
 
-    public Output<TestIssueSeverity> getSeverity() {
+    public Output<TestIssueSeverity> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -63,7 +63,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<TestIssueType> type;
 
-    public Output<TestIssueType> getType() {
+    public Output<TestIssueType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -74,7 +74,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="warning")
       private final @Nullable Output<AnyArgs> warning;
 
-    public Output<AnyArgs> getWarning() {
+    public Output<AnyArgs> warning() {
         return this.warning == null ? Codegen.empty() : this.warning;
     }
 

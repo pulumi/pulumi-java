@@ -28,7 +28,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> getAndroidSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings() {
         return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
     }
 
@@ -39,7 +39,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -50,7 +50,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> getIosSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings() {
         return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
     }
 
@@ -72,7 +72,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -83,14 +83,14 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -101,7 +101,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testingOptions")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> getTestingOptions() {
+    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions() {
         return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
     }
 
@@ -112,7 +112,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="wafSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> getWafSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings() {
         return this.wafSettings == null ? Codegen.empty() : this.wafSettings;
     }
 
@@ -123,7 +123,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> getWebSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings() {
         return this.webSettings == null ? Codegen.empty() : this.webSettings;
     }
 

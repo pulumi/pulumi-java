@@ -28,7 +28,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -39,7 +39,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
-    public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
+    public Output<LocalObjectReferenceArgs> localObjectReference() {
         return this.localObjectReference == null ? Codegen.empty() : this.localObjectReference;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
+    public Output<Boolean> optional() {
         return this.optional == null ? Codegen.empty() : this.optional;
     }
 

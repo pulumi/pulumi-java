@@ -23,7 +23,7 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="membership", required=true)
       private final String membership;
 
-    public String getMembership() {
+    public String membership() {
         return this.membership;
     }
 

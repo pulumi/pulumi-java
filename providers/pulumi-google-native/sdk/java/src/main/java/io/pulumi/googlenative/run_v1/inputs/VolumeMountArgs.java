@@ -27,7 +27,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
+    public Output<String> mountPath() {
         return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -60,7 +60,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subPath")
       private final @Nullable Output<String> subPath;
 
-    public Output<String> getSubPath() {
+    public Output<String> subPath() {
         return this.subPath == null ? Codegen.empty() : this.subPath;
     }
 

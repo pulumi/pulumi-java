@@ -98,77 +98,77 @@ public final class GetSpokeResult {
      * The time when the Spoke was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Short description of the spoke resource
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The resource URL of the hub resource that the spoke is attached to
      * 
     */
-    public String getHub() {
+    public String hub() {
         return this.hub;
     }
     /**
      * User-defined labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The URIs of linked interconnect attachment resources
      * 
     */
-    public List<String> getLinkedInterconnectAttachments() {
+    public List<String> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
      * The URIs of linked Router appliance resources
      * 
     */
-    public List<RouterApplianceInstanceResponse> getLinkedRouterApplianceInstances() {
+    public List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
      * The URIs of linked VPN tunnel resources
      * 
     */
-    public List<String> getLinkedVpnTunnels() {
+    public List<String> linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
      * Immutable. The name of a Spoke resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current lifecycle state of this Hub.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
     /**
      * The time when the Spoke was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

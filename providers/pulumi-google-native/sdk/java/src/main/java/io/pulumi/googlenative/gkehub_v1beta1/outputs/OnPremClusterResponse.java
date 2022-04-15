@@ -40,21 +40,21 @@ public final class OnPremClusterResponse {
      * Immutable. Whether the cluster is an admin cluster.
      * 
     */
-    public Boolean getAdminCluster() {
+    public Boolean adminCluster() {
         return this.adminCluster;
     }
     /**
      * If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
      * 
     */
-    public Boolean getClusterMissing() {
+    public Boolean clusterMissing() {
         return this.clusterMissing;
     }
     /**
      * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
      * 
     */
-    public String getResourceLink() {
+    public String resourceLink() {
         return this.resourceLink;
     }
 

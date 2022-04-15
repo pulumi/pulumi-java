@@ -23,7 +23,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="x", required=true)
       private final Integer x;
 
-    public Integer getX() {
+    public Integer x() {
         return this.x;
     }
 
@@ -34,7 +34,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="y", required=true)
       private final Integer y;
 
-    public Integer getY() {
+    public Integer y() {
         return this.y;
     }
 

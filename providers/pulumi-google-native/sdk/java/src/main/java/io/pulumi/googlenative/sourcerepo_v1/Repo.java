@@ -31,7 +31,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * @return How this repository mirrors a repository managed by another service. Read-only field.
      * 
      */
-    public Output<MirrorConfigResponse> getMirrorConfig() {
+    public Output<MirrorConfigResponse> mirrorConfig() {
         return this.mirrorConfig;
     }
     /**
@@ -45,7 +45,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
      */
-    public Output<Map<String,String>> getPubsubConfigs() {
+    public Output<Map<String,String>> pubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
@@ -73,7 +73,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
      */
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size;
     }
     /**
@@ -87,7 +87,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

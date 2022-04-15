@@ -24,7 +24,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="strength", required=true)
       private final Double strength;
 
-    public Double getStrength() {
+    public Double strength() {
         return this.strength;
     }
 
@@ -35,7 +35,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tune", required=true)
       private final String tune;
 
-    public String getTune() {
+    public String tune() {
         return this.tune;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="smartReplyAllowlistCovered", required=true)
       private final Boolean smartReplyAllowlistCovered;
 
-    public Boolean getSmartReplyAllowlistCovered() {
+    public Boolean smartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }
 

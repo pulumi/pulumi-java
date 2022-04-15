@@ -23,7 +23,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="cert", required=true)
       private final String cert;
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
 
@@ -34,7 +34,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -45,7 +45,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="expireTime", required=true)
       private final String expireTime;
 
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 
@@ -56,7 +56,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -67,7 +67,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

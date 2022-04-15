@@ -25,13 +25,13 @@ public final class EnvelopeResponse {
         this.signatures = signatures;
     }
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
-    public String getPayloadType() {
+    public String payloadType() {
         return this.payloadType;
     }
-    public List<EnvelopeSignatureResponse> getSignatures() {
+    public List<EnvelopeSignatureResponse> signatures() {
         return this.signatures;
     }
 

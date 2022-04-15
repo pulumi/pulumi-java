@@ -23,7 +23,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="cloudKmsKeyVersion", required=true)
       private final String cloudKmsKeyVersion;
 
-    public String getCloudKmsKeyVersion() {
+    public String cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
     }
 

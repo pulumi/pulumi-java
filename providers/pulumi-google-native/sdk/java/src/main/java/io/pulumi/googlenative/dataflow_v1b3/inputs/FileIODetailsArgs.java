@@ -26,7 +26,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePattern")
       private final @Nullable Output<String> filePattern;
 
-    public Output<String> getFilePattern() {
+    public Output<String> filePattern() {
         return this.filePattern == null ? Codegen.empty() : this.filePattern;
     }
 

@@ -23,7 +23,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

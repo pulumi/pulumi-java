@@ -28,7 +28,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="continueOnFailure", required=true)
       private final Boolean continueOnFailure;
 
-    public Boolean getContinueOnFailure() {
+    public Boolean continueOnFailure() {
         return this.continueOnFailure;
     }
 
@@ -39,7 +39,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
 
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
 
@@ -50,7 +50,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="loggingConfig", required=true)
       private final LoggingConfigResponse loggingConfig;
 
-    public LoggingConfigResponse getLoggingConfig() {
+    public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
 
@@ -61,7 +61,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties;
     }
 
@@ -72,7 +72,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryFileUri", required=true)
       private final String queryFileUri;
 
-    public String getQueryFileUri() {
+    public String queryFileUri() {
         return this.queryFileUri;
     }
 
@@ -83,7 +83,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryList", required=true)
       private final QueryListResponse queryList;
 
-    public QueryListResponse getQueryList() {
+    public QueryListResponse queryList() {
         return this.queryList;
     }
 
@@ -94,7 +94,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scriptVariables", required=true)
       private final Map<String,String> scriptVariables;
 
-    public Map<String,String> getScriptVariables() {
+    public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
 

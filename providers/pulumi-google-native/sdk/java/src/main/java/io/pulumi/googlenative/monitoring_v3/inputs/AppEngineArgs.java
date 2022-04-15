@@ -26,7 +26,7 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moduleId")
       private final @Nullable Output<String> moduleId;
 
-    public Output<String> getModuleId() {
+    public Output<String> moduleId() {
         return this.moduleId == null ? Codegen.empty() : this.moduleId;
     }
 

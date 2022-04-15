@@ -32,14 +32,14 @@ public final class ScanConfigErrorResponse {
      * Indicates the reason code for a configuration failure.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
     */
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
 

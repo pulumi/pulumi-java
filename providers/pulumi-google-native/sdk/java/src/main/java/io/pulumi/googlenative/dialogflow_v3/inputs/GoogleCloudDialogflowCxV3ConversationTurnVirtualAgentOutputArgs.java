@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="currentPage")
       private final @Nullable Output<GoogleCloudDialogflowCxV3PageArgs> currentPage;
 
-    public Output<GoogleCloudDialogflowCxV3PageArgs> getCurrentPage() {
+    public Output<GoogleCloudDialogflowCxV3PageArgs> currentPage() {
         return this.currentPage == null ? Codegen.empty() : this.currentPage;
     }
 
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="diagnosticInfo", required=true)
       private final Output<Map<String,String>> diagnosticInfo;
 
-    public Output<Map<String,String>> getDiagnosticInfo() {
+    public Output<Map<String,String>> diagnosticInfo() {
         return this.diagnosticInfo;
     }
 
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="sessionParameters")
       private final @Nullable Output<Map<String,String>> sessionParameters;
 
-    public Output<Map<String,String>> getSessionParameters() {
+    public Output<Map<String,String>> sessionParameters() {
         return this.sessionParameters == null ? Codegen.empty() : this.sessionParameters;
     }
 
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Output<GoogleRpcStatusArgs> getStatus() {
+    public Output<GoogleRpcStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="textResponses")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses;
 
-    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> getTextResponses() {
+    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses() {
         return this.textResponses == null ? Codegen.empty() : this.textResponses;
     }
 
@@ -87,7 +87,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="triggeredIntent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent;
 
-    public Output<GoogleCloudDialogflowCxV3IntentArgs> getTriggeredIntent() {
+    public Output<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent() {
         return this.triggeredIntent == null ? Codegen.empty() : this.triggeredIntent;
     }
 

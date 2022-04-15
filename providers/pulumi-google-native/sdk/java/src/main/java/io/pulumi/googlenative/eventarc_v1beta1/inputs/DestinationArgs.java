@@ -26,7 +26,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudRunService")
       private final @Nullable Output<CloudRunServiceArgs> cloudRunService;
 
-    public Output<CloudRunServiceArgs> getCloudRunService() {
+    public Output<CloudRunServiceArgs> cloudRunService() {
         return this.cloudRunService == null ? Codegen.empty() : this.cloudRunService;
     }
 

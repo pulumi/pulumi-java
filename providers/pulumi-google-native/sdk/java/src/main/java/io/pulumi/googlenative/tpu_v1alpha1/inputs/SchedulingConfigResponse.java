@@ -23,7 +23,7 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 
@@ -34,7 +34,7 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="reserved", required=true)
       private final Boolean reserved;
 
-    public Boolean getReserved() {
+    public Boolean reserved() {
         return this.reserved;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="firstName", required=true)
       private final String firstName;
 
-    public String getFirstName() {
+    public String firstName() {
         return this.firstName;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="lastName", required=true)
       private final String lastName;
 
-    public String getLastName() {
+    public String lastName() {
         return this.lastName;
     }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 
@@ -78,7 +78,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

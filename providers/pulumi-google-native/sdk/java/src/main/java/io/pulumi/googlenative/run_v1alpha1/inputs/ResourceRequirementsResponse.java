@@ -24,7 +24,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
     @Import(name="limits", required=true)
       private final Map<String,String> limits;
 
-    public Map<String,String> getLimits() {
+    public Map<String,String> limits() {
         return this.limits;
     }
 
@@ -35,7 +35,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
     @Import(name="requests", required=true)
       private final Map<String,String> requests;
 
-    public Map<String,String> getRequests() {
+    public Map<String,String> requests() {
         return this.requests;
     }
 

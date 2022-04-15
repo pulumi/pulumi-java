@@ -24,7 +24,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="concurrentDispatchesCount", required=true)
       private final String concurrentDispatchesCount;
 
-    public String getConcurrentDispatchesCount() {
+    public String concurrentDispatchesCount() {
         return this.concurrentDispatchesCount;
     }
 
@@ -35,7 +35,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="effectiveExecutionRate", required=true)
       private final Double effectiveExecutionRate;
 
-    public Double getEffectiveExecutionRate() {
+    public Double effectiveExecutionRate() {
         return this.effectiveExecutionRate;
     }
 
@@ -46,7 +46,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="executedLastMinuteCount", required=true)
       private final String executedLastMinuteCount;
 
-    public String getExecutedLastMinuteCount() {
+    public String executedLastMinuteCount() {
         return this.executedLastMinuteCount;
     }
 
@@ -57,7 +57,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oldestEstimatedArrivalTime", required=true)
       private final String oldestEstimatedArrivalTime;
 
-    public String getOldestEstimatedArrivalTime() {
+    public String oldestEstimatedArrivalTime() {
         return this.oldestEstimatedArrivalTime;
     }
 
@@ -68,7 +68,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tasksCount", required=true)
       private final String tasksCount;
 
-    public String getTasksCount() {
+    public String tasksCount() {
         return this.tasksCount;
     }
 

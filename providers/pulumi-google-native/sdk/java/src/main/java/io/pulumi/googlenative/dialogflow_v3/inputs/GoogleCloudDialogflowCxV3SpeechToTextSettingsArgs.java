@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
     @Import(name="enableSpeechAdaptation")
       private final @Nullable Output<Boolean> enableSpeechAdaptation;
 
-    public Output<Boolean> getEnableSpeechAdaptation() {
+    public Output<Boolean> enableSpeechAdaptation() {
         return this.enableSpeechAdaptation == null ? Codegen.empty() : this.enableSpeechAdaptation;
     }
 

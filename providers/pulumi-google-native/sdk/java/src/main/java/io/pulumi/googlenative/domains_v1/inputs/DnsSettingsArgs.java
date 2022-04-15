@@ -29,7 +29,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDns")
       private final @Nullable Output<CustomDnsArgs> customDns;
 
-    public Output<CustomDnsArgs> getCustomDns() {
+    public Output<CustomDnsArgs> customDns() {
         return this.customDns == null ? Codegen.empty() : this.customDns;
     }
 
@@ -40,7 +40,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="glueRecords")
       private final @Nullable Output<List<GlueRecordArgs>> glueRecords;
 
-    public Output<List<GlueRecordArgs>> getGlueRecords() {
+    public Output<List<GlueRecordArgs>> glueRecords() {
         return this.glueRecords == null ? Codegen.empty() : this.glueRecords;
     }
 
@@ -51,7 +51,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="googleDomainsDns")
       private final @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
-    public Output<GoogleDomainsDnsArgs> getGoogleDomainsDns() {
+    public Output<GoogleDomainsDnsArgs> googleDomainsDns() {
         return this.googleDomainsDns == null ? Codegen.empty() : this.googleDomainsDns;
     }
 

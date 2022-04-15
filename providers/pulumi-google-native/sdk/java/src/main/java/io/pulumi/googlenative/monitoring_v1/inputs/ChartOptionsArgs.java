@@ -26,7 +26,7 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<ChartOptionsMode> mode;
 
-    public Output<ChartOptionsMode> getMode() {
+    public Output<ChartOptionsMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

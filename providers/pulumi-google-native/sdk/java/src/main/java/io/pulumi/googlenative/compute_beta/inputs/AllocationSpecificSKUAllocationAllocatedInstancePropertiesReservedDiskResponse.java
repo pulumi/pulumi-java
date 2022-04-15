@@ -19,7 +19,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -30,7 +30,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 

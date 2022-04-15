@@ -24,14 +24,14 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     @Import(name="signatures")
       private final @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
-    public Output<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
+    public Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures() {
         return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 
     @Import(name="signed")
       private final @Nullable Output<LinkArgs> signed;
 
-    public Output<LinkArgs> getSigned() {
+    public Output<LinkArgs> signed() {
         return this.signed == null ? Codegen.empty() : this.signed;
     }
 

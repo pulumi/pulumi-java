@@ -15,14 +15,14 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="rolloutId", required=true)
       private final String rolloutId;
 
-    public String getRolloutId() {
+    public String rolloutId() {
         return this.rolloutId;
     }
 
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

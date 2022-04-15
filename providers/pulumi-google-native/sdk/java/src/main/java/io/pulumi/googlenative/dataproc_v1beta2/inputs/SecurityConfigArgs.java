@@ -26,7 +26,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Output<KerberosConfigArgs> getKerberosConfig() {
+    public Output<KerberosConfigArgs> kerberosConfig() {
         return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 

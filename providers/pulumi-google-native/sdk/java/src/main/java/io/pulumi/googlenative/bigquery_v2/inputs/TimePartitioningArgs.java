@@ -23,7 +23,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expirationMs")
       private final @Nullable Output<String> expirationMs;
 
-    public Output<String> getExpirationMs() {
+    public Output<String> expirationMs() {
         return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
     }
 
@@ -34,14 +34,14 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
     @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Output<Boolean> getRequirePartitionFilter() {
+    public Output<Boolean> requirePartitionFilter() {
         return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
@@ -52,7 +52,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

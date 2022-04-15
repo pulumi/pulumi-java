@@ -25,7 +25,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureSpecResponse appdevexperience;
 
-    public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
+    public AppDevExperienceFeatureSpecResponse appdevexperience() {
         return this.appdevexperience;
     }
 
@@ -36,7 +36,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="cloudauditlogging", required=true)
       private final CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
 
-    public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
+    public CloudAuditLoggingFeatureSpecResponse cloudauditlogging() {
         return this.cloudauditlogging;
     }
 
@@ -47,7 +47,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
     @Import(name="multiclusteringress", required=true)
       private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
-    public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
+    public MultiClusterIngressFeatureSpecResponse multiclusteringress() {
         return this.multiclusteringress;
     }
 

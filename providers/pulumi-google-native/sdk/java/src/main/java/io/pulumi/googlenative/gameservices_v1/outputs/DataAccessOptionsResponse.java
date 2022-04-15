@@ -16,7 +16,7 @@ public final class DataAccessOptionsResponse {
         this.logMode = logMode;
     }
 
-    public String getLogMode() {
+    public String logMode() {
         return this.logMode;
     }
 

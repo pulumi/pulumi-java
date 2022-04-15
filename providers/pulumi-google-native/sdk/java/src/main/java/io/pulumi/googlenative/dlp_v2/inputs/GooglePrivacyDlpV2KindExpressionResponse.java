@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KindExpressionResponse extends io.pulumi.re
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -32,14 +32,14 @@ public final class ManagedCertificateResponse {
      * Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
      * 
     */
-    public String getLastRenewalTime() {
+    public String lastRenewalTime() {
         return this.lastRenewalTime;
     }
     /**
      * Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

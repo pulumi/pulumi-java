@@ -25,14 +25,14 @@ public final class AttestationResponse {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
-    public GenericSignedAttestationResponse getGenericSignedAttestation() {
+    public GenericSignedAttestationResponse genericSignedAttestation() {
         return this.genericSignedAttestation;
     }
     /**
      * A PGP signed attestation.
      * 
     */
-    public PgpSignedAttestationResponse getPgpSignedAttestation() {
+    public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
 

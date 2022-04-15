@@ -35,7 +35,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -49,7 +49,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Optional. Etag of the currently stored Secret.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -63,7 +63,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -77,7 +77,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -91,7 +91,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
      * 
      */
-    public Output<ReplicationResponse> getReplication() {
+    public Output<ReplicationResponse> replication() {
         return this.replication;
     }
     /**
@@ -119,7 +119,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
      * 
      */
-    public Output<RotationResponse> getRotation() {
+    public Output<RotationResponse> rotation() {
         return this.rotation;
     }
     /**
@@ -133,7 +133,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * 
      */
-    public Output<List<TopicResponse>> getTopics() {
+    public Output<List<TopicResponse>> topics() {
         return this.topics;
     }
     /**
@@ -147,7 +147,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return Input only. The TTL for the Secret.
      * 
      */
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl;
     }
 

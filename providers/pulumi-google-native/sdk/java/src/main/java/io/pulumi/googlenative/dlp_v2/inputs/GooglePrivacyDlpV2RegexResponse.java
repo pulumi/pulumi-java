@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
     @Import(name="groupIndexes", required=true)
       private final List<Integer> groupIndexes;
 
-    public List<Integer> getGroupIndexes() {
+    public List<Integer> groupIndexes() {
         return this.groupIndexes;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
     @Import(name="pattern", required=true)
       private final String pattern;
 
-    public String getPattern() {
+    public String pattern() {
         return this.pattern;
     }
 

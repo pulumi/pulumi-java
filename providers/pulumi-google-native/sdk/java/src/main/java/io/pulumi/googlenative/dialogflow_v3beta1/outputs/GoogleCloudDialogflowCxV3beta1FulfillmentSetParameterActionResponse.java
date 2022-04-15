@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
      * Display name of the parameter.
      * 
     */
-    public String getParameter() {
+    public String parameter() {
         return this.parameter;
     }
     /**
      * The new value of the parameter. A null value clears the parameter.
      * 
     */
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

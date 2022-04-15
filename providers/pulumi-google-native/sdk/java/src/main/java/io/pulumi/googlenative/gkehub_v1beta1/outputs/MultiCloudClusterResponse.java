@@ -33,14 +33,14 @@ public final class MultiCloudClusterResponse {
      * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
      * 
     */
-    public Boolean getClusterMissing() {
+    public Boolean clusterMissing() {
         return this.clusterMissing;
     }
     /**
      * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
      * 
     */
-    public String getResourceLink() {
+    public String resourceLink() {
         return this.resourceLink;
     }
 

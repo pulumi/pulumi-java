@@ -25,7 +25,7 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
     @Import(name="auditLogConfigs", required=true)
       private final List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
 
-    public List<GoogleIamV1__AuditLogConfigResponse> getAuditLogConfigs() {
+    public List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

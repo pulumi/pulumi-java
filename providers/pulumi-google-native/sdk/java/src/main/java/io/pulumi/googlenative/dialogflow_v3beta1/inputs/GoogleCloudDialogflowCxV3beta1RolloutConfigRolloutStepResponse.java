@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="minDuration", required=true)
       private final String minDuration;
 
-    public String getMinDuration() {
+    public String minDuration() {
         return this.minDuration;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="trafficPercent", required=true)
       private final Integer trafficPercent;
 
-    public Integer getTrafficPercent() {
+    public Integer trafficPercent() {
         return this.trafficPercent;
     }
 

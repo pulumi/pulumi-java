@@ -24,7 +24,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
       private final String fileName;
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 
@@ -35,7 +35,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="muxStreams", required=true)
       private final List<String> muxStreams;
 
-    public List<String> getMuxStreams() {
+    public List<String> muxStreams() {
         return this.muxStreams;
     }
 
@@ -46,7 +46,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

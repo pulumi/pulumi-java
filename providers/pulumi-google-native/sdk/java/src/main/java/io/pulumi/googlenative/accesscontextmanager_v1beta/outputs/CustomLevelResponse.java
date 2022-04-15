@@ -24,7 +24,7 @@ public final class CustomLevelResponse {
      * A Cloud CEL expression evaluating to a boolean.
      * 
     */
-    public ExprResponse getExpr() {
+    public ExprResponse expr() {
         return this.expr;
     }
 

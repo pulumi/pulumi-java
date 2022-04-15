@@ -16,7 +16,7 @@ public final class AttestationAuthorityResponse {
         this.hint = hint;
     }
 
-    public AttestationAuthorityHintResponse getHint() {
+    public AttestationAuthorityHintResponse hint() {
         return this.hint;
     }
 

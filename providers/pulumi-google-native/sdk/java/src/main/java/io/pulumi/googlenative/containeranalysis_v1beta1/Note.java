@@ -44,7 +44,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing an attestation role.
      * 
      */
-    public Output<AuthorityResponse> getAttestationAuthority() {
+    public Output<AuthorityResponse> attestationAuthority() {
         return this.attestationAuthority;
     }
     /**
@@ -58,7 +58,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing a base image.
      * 
      */
-    public Output<BasisResponse> getBaseImage() {
+    public Output<BasisResponse> baseImage() {
         return this.baseImage;
     }
     /**
@@ -72,7 +72,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing build provenance for a verifiable build.
      * 
      */
-    public Output<BuildResponse> getBuild() {
+    public Output<BuildResponse> build() {
         return this.build;
     }
     /**
@@ -86,7 +86,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The time this note was created. This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -100,7 +100,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing something that can be deployed.
      * 
      */
-    public Output<DeployableResponse> getDeployable() {
+    public Output<DeployableResponse> deployable() {
         return this.deployable;
     }
     /**
@@ -114,7 +114,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing the initial analysis of a resource.
      * 
      */
-    public Output<DiscoveryResponse> getDiscovery() {
+    public Output<DiscoveryResponse> discovery() {
         return this.discovery;
     }
     /**
@@ -128,7 +128,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return Time of expiration for this note. Empty if note does not expire.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -142,7 +142,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing an in-toto link.
      * 
      */
-    public Output<InTotoResponse> getIntoto() {
+    public Output<InTotoResponse> intoto() {
         return this.intoto;
     }
     /**
@@ -156,7 +156,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The type of analysis. This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -170,7 +170,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A detailed description of this note.
      * 
      */
-    public Output<String> getLongDescription() {
+    public Output<String> longDescription() {
         return this.longDescription;
     }
     /**
@@ -184,7 +184,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -198,7 +198,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing a package hosted by various package managers.
      * 
      */
-    public Output<PackageResponse> getPackage_() {
+    public Output<PackageResponse> package_() {
         return this.package_;
     }
     /**
@@ -212,7 +212,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return Other notes related to this note.
      * 
      */
-    public Output<List<String>> getRelatedNoteNames() {
+    public Output<List<String>> relatedNoteNames() {
         return this.relatedNoteNames;
     }
     /**
@@ -226,7 +226,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return URLs associated with this note.
      * 
      */
-    public Output<List<RelatedUrlResponse>> getRelatedUrl() {
+    public Output<List<RelatedUrlResponse>> relatedUrl() {
         return this.relatedUrl;
     }
     /**
@@ -240,7 +240,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing a software bill of materials.
      * 
      */
-    public Output<DocumentNoteResponse> getSbom() {
+    public Output<DocumentNoteResponse> sbom() {
         return this.sbom;
     }
     /**
@@ -254,7 +254,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A one sentence description of this note.
      * 
      */
-    public Output<String> getShortDescription() {
+    public Output<String> shortDescription() {
         return this.shortDescription;
     }
     /**
@@ -268,7 +268,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing an SPDX File.
      * 
      */
-    public Output<FileNoteResponse> getSpdxFile() {
+    public Output<FileNoteResponse> spdxFile() {
         return this.spdxFile;
     }
     /**
@@ -282,7 +282,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing an SPDX Package.
      * 
      */
-    public Output<PackageInfoNoteResponse> getSpdxPackage() {
+    public Output<PackageInfoNoteResponse> spdxPackage() {
         return this.spdxPackage;
     }
     /**
@@ -296,7 +296,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing an SPDX File.
      * 
      */
-    public Output<RelationshipNoteResponse> getSpdxRelationship() {
+    public Output<RelationshipNoteResponse> spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
@@ -310,7 +310,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The time this note was last updated. This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -324,7 +324,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A note describing a package vulnerability.
      * 
      */
-    public Output<VulnerabilityResponse> getVulnerability() {
+    public Output<VulnerabilityResponse> vulnerability() {
         return this.vulnerability;
     }
 

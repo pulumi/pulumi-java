@@ -15,7 +15,7 @@ public final class GetAccessPolicyIamPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="accessPolicyId", required=true)
       private final String accessPolicyId;
 
-    public String getAccessPolicyId() {
+    public String accessPolicyId() {
         return this.accessPolicyId;
     }
 

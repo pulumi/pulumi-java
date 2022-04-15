@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="ciphers", required=true)
       private final List<String> ciphers;
 
-    public List<String> getCiphers() {
+    public List<String> ciphers() {
         return this.ciphers;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="clientAuthEnabled", required=true)
       private final Boolean clientAuthEnabled;
 
-    public Boolean getClientAuthEnabled() {
+    public Boolean clientAuthEnabled() {
         return this.clientAuthEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="commonName", required=true)
       private final GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
 
-    public GoogleCloudApigeeV1TlsInfoCommonNameResponse getCommonName() {
+    public GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName() {
         return this.commonName;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="ignoreValidationErrors", required=true)
       private final Boolean ignoreValidationErrors;
 
-    public Boolean getIgnoreValidationErrors() {
+    public Boolean ignoreValidationErrors() {
         return this.ignoreValidationErrors;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="keyAlias", required=true)
       private final String keyAlias;
 
-    public String getKeyAlias() {
+    public String keyAlias() {
         return this.keyAlias;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="keyStore", required=true)
       private final String keyStore;
 
-    public String getKeyStore() {
+    public String keyStore() {
         return this.keyStore;
     }
 
@@ -103,7 +103,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="protocols", required=true)
       private final List<String> protocols;
 
-    public List<String> getProtocols() {
+    public List<String> protocols() {
         return this.protocols;
     }
 
@@ -114,7 +114,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends io.pulumi.resource
     @Import(name="trustStore", required=true)
       private final String trustStore;
 
-    public String getTrustStore() {
+    public String trustStore() {
         return this.trustStore;
     }
 

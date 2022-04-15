@@ -24,7 +24,7 @@ public final class GkeClusterConfigResponse {
      * Optional. A target for the deployment.
      * 
     */
-    public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {
+    public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }
 

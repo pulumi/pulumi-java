@@ -24,7 +24,7 @@ public final class GlueRecordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -35,7 +35,7 @@ public final class GlueRecordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv4Addresses", required=true)
       private final List<String> ipv4Addresses;
 
-    public List<String> getIpv4Addresses() {
+    public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
 
@@ -46,7 +46,7 @@ public final class GlueRecordResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipv6Addresses", required=true)
       private final List<String> ipv6Addresses;
 
-    public List<String> getIpv6Addresses() {
+    public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
 

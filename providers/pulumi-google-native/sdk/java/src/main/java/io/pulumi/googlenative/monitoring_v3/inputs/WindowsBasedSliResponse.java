@@ -25,7 +25,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="goodBadMetricFilter", required=true)
       private final String goodBadMetricFilter;
 
-    public String getGoodBadMetricFilter() {
+    public String goodBadMetricFilter() {
         return this.goodBadMetricFilter;
     }
 
@@ -36,7 +36,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="goodTotalRatioThreshold", required=true)
       private final PerformanceThresholdResponse goodTotalRatioThreshold;
 
-    public PerformanceThresholdResponse getGoodTotalRatioThreshold() {
+    public PerformanceThresholdResponse goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold;
     }
 
@@ -47,7 +47,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="metricMeanInRange", required=true)
       private final MetricRangeResponse metricMeanInRange;
 
-    public MetricRangeResponse getMetricMeanInRange() {
+    public MetricRangeResponse metricMeanInRange() {
         return this.metricMeanInRange;
     }
 
@@ -58,7 +58,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="metricSumInRange", required=true)
       private final MetricRangeResponse metricSumInRange;
 
-    public MetricRangeResponse getMetricSumInRange() {
+    public MetricRangeResponse metricSumInRange() {
         return this.metricSumInRange;
     }
 
@@ -69,7 +69,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="windowPeriod", required=true)
       private final String windowPeriod;
 
-    public String getWindowPeriod() {
+    public String windowPeriod() {
         return this.windowPeriod;
     }
 

@@ -26,7 +26,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactManifest", required=true)
       private final String artifactManifest;
 
-    public String getArtifactManifest() {
+    public String artifactManifest() {
         return this.artifactManifest;
     }
 
@@ -37,7 +37,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactTiming", required=true)
       private final TimeSpanResponse artifactTiming;
 
-    public TimeSpanResponse getArtifactTiming() {
+    public TimeSpanResponse artifactTiming() {
         return this.artifactTiming;
     }
 
@@ -48,7 +48,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildStepImages", required=true)
       private final List<String> buildStepImages;
 
-    public List<String> getBuildStepImages() {
+    public List<String> buildStepImages() {
         return this.buildStepImages;
     }
 
@@ -59,7 +59,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildStepOutputs", required=true)
       private final List<String> buildStepOutputs;
 
-    public List<String> getBuildStepOutputs() {
+    public List<String> buildStepOutputs() {
         return this.buildStepOutputs;
     }
 
@@ -70,7 +70,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="images", required=true)
       private final List<BuiltImageResponse> images;
 
-    public List<BuiltImageResponse> getImages() {
+    public List<BuiltImageResponse> images() {
         return this.images;
     }
 
@@ -81,7 +81,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="numArtifacts", required=true)
       private final String numArtifacts;
 
-    public String getNumArtifacts() {
+    public String numArtifacts() {
         return this.numArtifacts;
     }
 

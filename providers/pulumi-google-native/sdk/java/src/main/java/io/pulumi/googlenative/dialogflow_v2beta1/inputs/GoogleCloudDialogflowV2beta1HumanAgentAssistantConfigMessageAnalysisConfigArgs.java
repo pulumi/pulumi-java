@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     @Import(name="enableEntityExtraction")
       private final @Nullable Output<Boolean> enableEntityExtraction;
 
-    public Output<Boolean> getEnableEntityExtraction() {
+    public Output<Boolean> enableEntityExtraction() {
         return this.enableEntityExtraction == null ? Codegen.empty() : this.enableEntityExtraction;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     @Import(name="enableSentimentAnalysis")
       private final @Nullable Output<Boolean> enableSentimentAnalysis;
 
-    public Output<Boolean> getEnableSentimentAnalysis() {
+    public Output<Boolean> enableSentimentAnalysis() {
         return this.enableSentimentAnalysis == null ? Codegen.empty() : this.enableSentimentAnalysis;
     }
 

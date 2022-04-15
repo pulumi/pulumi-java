@@ -27,7 +27,7 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
     @Import(name="authorizationLoggingOptions")
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
-    public Output<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
+    public Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions() {
         return this.authorizationLoggingOptions == null ? Codegen.empty() : this.authorizationLoggingOptions;
     }
 
@@ -38,7 +38,7 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
     @Import(name="logName")
       private final @Nullable Output<LogConfigCloudAuditOptionsLogName> logName;
 
-    public Output<LogConfigCloudAuditOptionsLogName> getLogName() {
+    public Output<LogConfigCloudAuditOptionsLogName> logName() {
         return this.logName == null ? Codegen.empty() : this.logName;
     }
 

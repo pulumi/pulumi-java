@@ -46,7 +46,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes an attestation of an artifact.
      * 
      */
-    public Output<AttestationResponse> getAttestation() {
+    public Output<AttestationResponse> attestation() {
         return this.attestation;
     }
     /**
@@ -60,7 +60,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Build details for a verifiable build.
      * 
      */
-    public Output<BuildDetailsResponse> getBuildDetails() {
+    public Output<BuildDetailsResponse> buildDetails() {
         return this.buildDetails;
     }
     /**
@@ -74,7 +74,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes whether or not a resource passes compliance checks.
      * 
      */
-    public Output<ComplianceOccurrenceResponse> getCompliance() {
+    public Output<ComplianceOccurrenceResponse> compliance() {
         return this.compliance;
     }
     /**
@@ -88,7 +88,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return The time this `Occurrence` was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -102,7 +102,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes the deployment of an artifact on a runtime.
      * 
      */
-    public Output<DeploymentResponse> getDeployment() {
+    public Output<DeploymentResponse> deployment() {
         return this.deployment;
     }
     /**
@@ -116,7 +116,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes how this resource derives from the basis in the associated note.
      * 
      */
-    public Output<DerivedResponse> getDerivedImage() {
+    public Output<DerivedResponse> derivedImage() {
         return this.derivedImage;
     }
     /**
@@ -130,7 +130,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes the initial scan status for this resource.
      * 
      */
-    public Output<DiscoveredResponse> getDiscovered() {
+    public Output<DiscoveredResponse> discovered() {
         return this.discovered;
     }
     /**
@@ -144,7 +144,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return This represents a DSSE attestation occurrence
      * 
      */
-    public Output<DSSEAttestationOccurrenceResponse> getDsseAttestation() {
+    public Output<DSSEAttestationOccurrenceResponse> dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
@@ -158,7 +158,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return https://github.com/secure-systems-lab/dsse
      * 
      */
-    public Output<EnvelopeResponse> getEnvelope() {
+    public Output<EnvelopeResponse> envelope() {
         return this.envelope;
     }
     /**
@@ -172,7 +172,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes the installation of a package on the linked resource.
      * 
      */
-    public Output<InstallationResponse> getInstallation() {
+    public Output<InstallationResponse> installation() {
         return this.installation;
     }
     /**
@@ -186,7 +186,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -200,7 +200,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -214,7 +214,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getNoteName() {
+    public Output<String> noteName() {
         return this.noteName;
     }
     /**
@@ -228,7 +228,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return A description of actions that can be taken to remedy the `Note`
      * 
      */
-    public Output<String> getRemediation() {
+    public Output<String> remediation() {
         return this.remediation;
     }
     /**
@@ -242,7 +242,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return  The resource for which the `Occurrence` applies.
      * 
      */
-    public Output<ResourceResponse> getResource() {
+    public Output<ResourceResponse> resource() {
         return this.resource;
     }
     /**
@@ -256,7 +256,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
      * 
      */
-    public Output<String> getResourceUrl() {
+    public Output<String> resourceUrl() {
         return this.resourceUrl;
     }
     /**
@@ -270,7 +270,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes a specific software bill of materials document.
      * 
      */
-    public Output<DocumentOccurrenceResponse> getSbom() {
+    public Output<DocumentOccurrenceResponse> sbom() {
         return this.sbom;
     }
     /**
@@ -284,7 +284,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes a specific SPDX File.
      * 
      */
-    public Output<FileOccurrenceResponse> getSpdxFile() {
+    public Output<FileOccurrenceResponse> spdxFile() {
         return this.spdxFile;
     }
     /**
@@ -298,7 +298,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes a specific SPDX Package.
      * 
      */
-    public Output<PackageInfoOccurrenceResponse> getSpdxPackage() {
+    public Output<PackageInfoOccurrenceResponse> spdxPackage() {
         return this.spdxPackage;
     }
     /**
@@ -312,7 +312,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes a specific relationship between SPDX elements.
      * 
      */
-    public Output<RelationshipOccurrenceResponse> getSpdxRelationship() {
+    public Output<RelationshipOccurrenceResponse> spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
@@ -326,7 +326,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return The time this `Occurrence` was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -340,7 +340,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Describes an upgrade.
      * 
      */
-    public Output<UpgradeOccurrenceResponse> getUpgrade() {
+    public Output<UpgradeOccurrenceResponse> upgrade() {
         return this.upgrade;
     }
     /**
@@ -354,7 +354,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @return Details of a security vulnerability note.
      * 
      */
-    public Output<VulnerabilityDetailsResponse> getVulnerabilityDetails() {
+    public Output<VulnerabilityDetailsResponse> vulnerabilityDetails() {
         return this.vulnerabilityDetails;
     }
 

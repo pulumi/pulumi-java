@@ -61,42 +61,42 @@ public final class GetDebugSessionResult {
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * A unique ID for this DebugSession.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
      * 
     */
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
     /**
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
      * 
     */
-    public Integer getTracesize() {
+    public Integer tracesize() {
         return this.tracesize;
     }
     /**
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
     */
-    public Integer getValidity() {
+    public Integer validity() {
         return this.validity;
     }
 

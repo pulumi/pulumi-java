@@ -27,7 +27,7 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sqlMinRecommendedIncreaseSizeGb")
       private final @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb;
 
-    public Output<Integer> getSqlMinRecommendedIncreaseSizeGb() {
+    public Output<Integer> sqlMinRecommendedIncreaseSizeGb() {
         return this.sqlMinRecommendedIncreaseSizeGb == null ? Codegen.empty() : this.sqlMinRecommendedIncreaseSizeGb;
     }
 
@@ -38,7 +38,7 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sqlOutOfDiskState")
       private final @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState;
 
-    public Output<SqlOutOfDiskReportSqlOutOfDiskState> getSqlOutOfDiskState() {
+    public Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState() {
         return this.sqlOutOfDiskState == null ? Codegen.empty() : this.sqlOutOfDiskState;
     }
 

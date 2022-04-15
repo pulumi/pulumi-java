@@ -26,7 +26,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     @Import(name="guestAccelerators", required=true)
       private final List<AcceleratorConfigResponse> guestAccelerators;
 
-    public List<AcceleratorConfigResponse> getGuestAccelerators() {
+    public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
 
@@ -37,7 +37,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     @Import(name="localSsds", required=true)
       private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
 
-    public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> getLocalSsds() {
+    public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds() {
         return this.localSsds;
     }
 
@@ -48,7 +48,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     @Import(name="locationHint", required=true)
       private final String locationHint;
 
-    public String getLocationHint() {
+    public String locationHint() {
         return this.locationHint;
     }
 
@@ -59,7 +59,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -70,7 +70,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 

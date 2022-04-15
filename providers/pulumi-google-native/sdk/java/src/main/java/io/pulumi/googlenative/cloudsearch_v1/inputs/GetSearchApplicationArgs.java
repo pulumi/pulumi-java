@@ -17,14 +17,14 @@ public final class GetSearchApplicationArgs extends io.pulumi.resources.InvokeAr
     @Import(name="debugOptionsEnableDebugging")
       private final @Nullable String debugOptionsEnableDebugging;
 
-    public Optional<String> getDebugOptionsEnableDebugging() {
+    public Optional<String> debugOptionsEnableDebugging() {
         return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
     @Import(name="searchapplicationId", required=true)
       private final String searchapplicationId;
 
-    public String getSearchapplicationId() {
+    public String searchapplicationId() {
         return this.searchapplicationId;
     }
 

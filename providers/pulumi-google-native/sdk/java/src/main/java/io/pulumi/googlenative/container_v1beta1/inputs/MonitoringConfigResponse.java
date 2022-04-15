@@ -24,7 +24,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="componentConfig", required=true)
       private final MonitoringComponentConfigResponse componentConfig;
 
-    public MonitoringComponentConfigResponse getComponentConfig() {
+    public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="managedPrometheusConfig", required=true)
       private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
-    public ManagedPrometheusConfigResponse getManagedPrometheusConfig() {
+    public ManagedPrometheusConfigResponse managedPrometheusConfig() {
         return this.managedPrometheusConfig;
     }
 

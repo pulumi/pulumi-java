@@ -71,52 +71,52 @@ public final class GetDatabaseResult {
      * The Cloud SQL charset value.
      * 
     */
-    public String getCharset() {
+    public String charset() {
         return this.charset;
     }
     /**
      * The Cloud SQL collation value.
      * 
     */
-    public String getCollation() {
+    public String collation() {
         return this.collation;
     }
     /**
      * The name of the Cloud SQL instance. This does not include the project ID.
      * 
     */
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
     /**
      * This is always `sql#database`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The URI of this resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public SqlServerDatabaseDetailsResponse getSqlserverDatabaseDetails() {
+    public SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails() {
         return this.sqlserverDatabaseDetails;
     }
 

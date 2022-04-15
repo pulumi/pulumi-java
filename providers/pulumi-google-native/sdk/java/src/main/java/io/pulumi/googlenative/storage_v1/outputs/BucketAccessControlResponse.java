@@ -100,21 +100,21 @@ public final class BucketAccessControlResponse {
      * The name of the bucket.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The domain associated with the entity, if any.
      * 
     */
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
     /**
      * The email address associated with the entity, if any.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
@@ -132,49 +132,49 @@ public final class BucketAccessControlResponse {
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
     */
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
     /**
      * The ID for the entity, if any.
      * 
     */
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
     /**
      * HTTP 1.1 Entity tag for the access-control entry.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The project team associated with the entity, if any.
      * 
     */
-    public BucketAccessControlProjectTeamResponse getProjectTeam() {
+    public BucketAccessControlProjectTeamResponse projectTeam() {
         return this.projectTeam;
     }
     /**
      * The access permission for the entity.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The link to this access-control entry.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

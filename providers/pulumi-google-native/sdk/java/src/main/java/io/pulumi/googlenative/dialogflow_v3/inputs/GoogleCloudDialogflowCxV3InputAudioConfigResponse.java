@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="audioEncoding", required=true)
       private final String audioEncoding;
 
-    public String getAudioEncoding() {
+    public String audioEncoding() {
         return this.audioEncoding;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="enableWordInfo", required=true)
       private final Boolean enableWordInfo;
 
-    public Boolean getEnableWordInfo() {
+    public Boolean enableWordInfo() {
         return this.enableWordInfo;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="model", required=true)
       private final String model;
 
-    public String getModel() {
+    public String model() {
         return this.model;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="modelVariant", required=true)
       private final String modelVariant;
 
-    public String getModelVariant() {
+    public String modelVariant() {
         return this.modelVariant;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="phraseHints", required=true)
       private final List<String> phraseHints;
 
-    public List<String> getPhraseHints() {
+    public List<String> phraseHints() {
         return this.phraseHints;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;
 
-    public Integer getSampleRateHertz() {
+    public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
     @Import(name="singleUtterance", required=true)
       private final Boolean singleUtterance;
 
-    public Boolean getSingleUtterance() {
+    public Boolean singleUtterance() {
         return this.singleUtterance;
     }
 

@@ -31,7 +31,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="aggregations")
       private final @Nullable Output<List<AggregationArgs>> aggregations;
 
-    public Output<List<AggregationArgs>> getAggregations() {
+    public Output<List<AggregationArgs>> aggregations() {
         return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
@@ -42,7 +42,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="comparison")
       private final @Nullable Output<MetricThresholdComparison> comparison;
 
-    public Output<MetricThresholdComparison> getComparison() {
+    public Output<MetricThresholdComparison> comparison() {
         return this.comparison == null ? Codegen.empty() : this.comparison;
     }
 
@@ -53,7 +53,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="denominatorAggregations")
       private final @Nullable Output<List<AggregationArgs>> denominatorAggregations;
 
-    public Output<List<AggregationArgs>> getDenominatorAggregations() {
+    public Output<List<AggregationArgs>> denominatorAggregations() {
         return this.denominatorAggregations == null ? Codegen.empty() : this.denominatorAggregations;
     }
 
@@ -64,7 +64,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="denominatorFilter")
       private final @Nullable Output<String> denominatorFilter;
 
-    public Output<String> getDenominatorFilter() {
+    public Output<String> denominatorFilter() {
         return this.denominatorFilter == null ? Codegen.empty() : this.denominatorFilter;
     }
 
@@ -75,7 +75,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -86,7 +86,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -97,7 +97,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="thresholdValue")
       private final @Nullable Output<Double> thresholdValue;
 
-    public Output<Double> getThresholdValue() {
+    public Output<Double> thresholdValue() {
         return this.thresholdValue == null ? Codegen.empty() : this.thresholdValue;
     }
 
@@ -108,7 +108,7 @@ public final class MetricThresholdArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="trigger")
       private final @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> getTrigger() {
+    public Output<TriggerArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

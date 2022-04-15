@@ -19,7 +19,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -30,14 +30,14 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -48,7 +48,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -59,21 +59,21 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -84,7 +84,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -95,7 +95,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracesize")
       private final @Nullable Output<Integer> tracesize;
 
-    public Output<Integer> getTracesize() {
+    public Output<Integer> tracesize() {
         return this.tracesize == null ? Codegen.empty() : this.tracesize;
     }
 
@@ -106,7 +106,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validity")
       private final @Nullable Output<Integer> validity;
 
-    public Output<Integer> getValidity() {
+    public Output<Integer> validity() {
         return this.validity == null ? Codegen.empty() : this.validity;
     }
 

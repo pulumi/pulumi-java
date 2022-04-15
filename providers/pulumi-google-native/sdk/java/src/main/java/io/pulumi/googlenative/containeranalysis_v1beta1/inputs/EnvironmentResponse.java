@@ -20,7 +20,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customValues", required=true)
       private final Map<String,String> customValues;
 
-    public Map<String,String> getCustomValues() {
+    public Map<String,String> customValues() {
         return this.customValues;
     }
 

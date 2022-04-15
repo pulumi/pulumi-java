@@ -27,7 +27,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isErrorType")
       private final @Nullable Output<Boolean> isErrorType;
 
-    public Output<Boolean> getIsErrorType() {
+    public Output<Boolean> isErrorType() {
         return this.isErrorType == null ? Codegen.empty() : this.isErrorType;
     }
 
@@ -38,7 +38,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

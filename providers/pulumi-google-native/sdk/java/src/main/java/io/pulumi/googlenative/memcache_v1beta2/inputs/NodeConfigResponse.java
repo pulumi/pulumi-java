@@ -23,7 +23,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpuCount", required=true)
       private final Integer cpuCount;
 
-    public Integer getCpuCount() {
+    public Integer cpuCount() {
         return this.cpuCount;
     }
 
@@ -34,7 +34,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="memorySizeMb", required=true)
       private final Integer memorySizeMb;
 
-    public Integer getMemorySizeMb() {
+    public Integer memorySizeMb() {
         return this.memorySizeMb;
     }
 

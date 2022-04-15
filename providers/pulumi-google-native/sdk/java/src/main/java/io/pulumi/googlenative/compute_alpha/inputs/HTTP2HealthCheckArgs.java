@@ -26,7 +26,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -37,7 +37,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -48,7 +48,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName == null ? Codegen.empty() : this.portName;
     }
 
@@ -59,7 +59,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="portSpecification")
       private final @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
 
-    public Output<HTTP2HealthCheckPortSpecification> getPortSpecification() {
+    public Output<HTTP2HealthCheckPortSpecification> portSpecification() {
         return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 
@@ -70,7 +70,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="proxyHeader")
       private final @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
 
-    public Output<HTTP2HealthCheckProxyHeader> getProxyHeader() {
+    public Output<HTTP2HealthCheckProxyHeader> proxyHeader() {
         return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
@@ -81,7 +81,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
-    public Output<String> getRequestPath() {
+    public Output<String> requestPath() {
         return this.requestPath == null ? Codegen.empty() : this.requestPath;
     }
 
@@ -92,7 +92,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="response")
       private final @Nullable Output<String> response;
 
-    public Output<String> getResponse() {
+    public Output<String> response() {
         return this.response == null ? Codegen.empty() : this.response;
     }
 
@@ -103,7 +103,7 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="weightReportMode")
       private final @Nullable Output<HTTP2HealthCheckWeightReportMode> weightReportMode;
 
-    public Output<HTTP2HealthCheckWeightReportMode> getWeightReportMode() {
+    public Output<HTTP2HealthCheckWeightReportMode> weightReportMode() {
         return this.weightReportMode == null ? Codegen.empty() : this.weightReportMode;
     }
 

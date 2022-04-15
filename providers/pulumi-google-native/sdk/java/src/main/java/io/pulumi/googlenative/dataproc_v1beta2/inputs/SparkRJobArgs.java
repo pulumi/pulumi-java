@@ -29,7 +29,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
+    public Output<List<String>> archiveUris() {
         return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
@@ -40,7 +40,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -51,7 +51,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
+    public Output<List<String>> fileUris() {
         return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
@@ -62,7 +62,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> getLoggingConfig() {
+    public Output<LoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -73,7 +73,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
-    public Output<String> getMainRFileUri() {
+    public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
 
@@ -84,7 +84,7 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

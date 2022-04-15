@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="conversationSuccess")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> conversationSuccess;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> getConversationSuccess() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> conversationSuccess() {
         return this.conversationSuccess == null ? Codegen.empty() : this.conversationSuccess;
     }
 
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="liveAgentHandoff")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> getLiveAgentHandoff() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff() {
         return this.liveAgentHandoff == null ? Codegen.empty() : this.liveAgentHandoff;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="outputAudioText")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> outputAudioText;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> getOutputAudioText() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> outputAudioText() {
         return this.outputAudioText == null ? Codegen.empty() : this.outputAudioText;
     }
 
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="payload")
       private final @Nullable Output<Map<String,String>> payload;
 
-    public Output<Map<String,String>> getPayload() {
+    public Output<Map<String,String>> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -77,7 +77,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="playAudio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> playAudio;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> getPlayAudio() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> playAudio() {
         return this.playAudio == null ? Codegen.empty() : this.playAudio;
     }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="telephonyTransferCall")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall() {
         return this.telephonyTransferCall == null ? Codegen.empty() : this.telephonyTransferCall;
     }
 
@@ -99,7 +99,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
     @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> text;
 
-    public Output<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> getText() {
+    public Output<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

@@ -26,7 +26,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType")
       private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
-    public Output<AcceleratorAcceleratorType> getAcceleratorType() {
+    public Output<AcceleratorAcceleratorType> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 

@@ -24,7 +24,7 @@ public final class ClientCertificateConfigResponse {
      * Issue a client certificate.
      * 
     */
-    public Boolean getIssueClientCertificate() {
+    public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
 

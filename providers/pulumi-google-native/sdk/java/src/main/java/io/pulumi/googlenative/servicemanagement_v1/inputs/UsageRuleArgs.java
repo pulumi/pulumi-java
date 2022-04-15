@@ -27,7 +27,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowUnregisteredCalls")
       private final @Nullable Output<Boolean> allowUnregisteredCalls;
 
-    public Output<Boolean> getAllowUnregisteredCalls() {
+    public Output<Boolean> allowUnregisteredCalls() {
         return this.allowUnregisteredCalls == null ? Codegen.empty() : this.allowUnregisteredCalls;
     }
 
@@ -38,7 +38,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -49,7 +49,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipServiceControl")
       private final @Nullable Output<Boolean> skipServiceControl;
 
-    public Output<Boolean> getSkipServiceControl() {
+    public Output<Boolean> skipServiceControl() {
         return this.skipServiceControl == null ? Codegen.empty() : this.skipServiceControl;
     }
 

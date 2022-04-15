@@ -61,42 +61,42 @@ public final class GetSnapshotResult {
      * The time when the snapshot was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The amount of bytes needed to allocate a full copy of the snapshot content
      * 
     */
-    public String getFilesystemUsedBytes() {
+    public String filesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
     /**
      * Resource labels to represent user provided metadata.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The snapshot state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

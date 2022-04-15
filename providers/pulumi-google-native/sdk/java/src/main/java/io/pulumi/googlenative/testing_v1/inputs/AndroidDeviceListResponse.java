@@ -24,7 +24,7 @@ public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeA
     @Import(name="androidDevices", required=true)
       private final List<AndroidDeviceResponse> androidDevices;
 
-    public List<AndroidDeviceResponse> getAndroidDevices() {
+    public List<AndroidDeviceResponse> androidDevices() {
         return this.androidDevices;
     }
 

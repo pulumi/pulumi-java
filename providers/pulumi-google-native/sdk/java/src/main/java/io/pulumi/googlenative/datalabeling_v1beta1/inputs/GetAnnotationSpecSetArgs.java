@@ -17,14 +17,14 @@ public final class GetAnnotationSpecSetArgs extends io.pulumi.resources.InvokeAr
     @Import(name="annotationSpecSetId", required=true)
       private final String annotationSpecSetId;
 
-    public String getAnnotationSpecSetId() {
+    public String annotationSpecSetId() {
         return this.annotationSpecSetId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

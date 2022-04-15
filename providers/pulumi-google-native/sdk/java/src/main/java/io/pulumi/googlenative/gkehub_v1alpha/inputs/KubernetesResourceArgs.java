@@ -27,7 +27,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="membershipCrManifest")
       private final @Nullable Output<String> membershipCrManifest;
 
-    public Output<String> getMembershipCrManifest() {
+    public Output<String> membershipCrManifest() {
         return this.membershipCrManifest == null ? Codegen.empty() : this.membershipCrManifest;
     }
 
@@ -38,7 +38,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceOptions")
       private final @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
-    public Output<ResourceOptionsArgs> getResourceOptions() {
+    public Output<ResourceOptionsArgs> resourceOptions() {
         return this.resourceOptions == null ? Codegen.empty() : this.resourceOptions;
     }
 

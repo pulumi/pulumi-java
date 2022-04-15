@@ -28,14 +28,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cloudsql")
       private final @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
 
-    public Output<CloudSqlConnectionProfileArgs> getCloudsql() {
+    public Output<CloudSqlConnectionProfileArgs> cloudsql() {
         return this.cloudsql == null ? Codegen.empty() : this.cloudsql;
     }
 
     @Import(name="connectionProfileId", required=true)
       private final Output<String> connectionProfileId;
 
-    public Output<String> getConnectionProfileId() {
+    public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
 
@@ -46,7 +46,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -57,14 +57,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -75,7 +75,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mysql")
       private final @Nullable Output<MySqlConnectionProfileArgs> mysql;
 
-    public Output<MySqlConnectionProfileArgs> getMysql() {
+    public Output<MySqlConnectionProfileArgs> mysql() {
         return this.mysql == null ? Codegen.empty() : this.mysql;
     }
 
@@ -86,7 +86,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -97,14 +97,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="postgresql")
       private final @Nullable Output<PostgreSqlConnectionProfileArgs> postgresql;
 
-    public Output<PostgreSqlConnectionProfileArgs> getPostgresql() {
+    public Output<PostgreSqlConnectionProfileArgs> postgresql() {
         return this.postgresql == null ? Codegen.empty() : this.postgresql;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -115,14 +115,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="provider")
       private final @Nullable Output<ConnectionProfileProvider> provider;
 
-    public Output<ConnectionProfileProvider> getProvider() {
+    public Output<ConnectionProfileProvider> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -133,7 +133,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<ConnectionProfileState> state;
 
-    public Output<ConnectionProfileState> getState() {
+    public Output<ConnectionProfileState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="buttonId", required=true)
       private final Output<String> buttonId;
 
-    public Output<String> getButtonId() {
+    public Output<String> buttonId() {
         return this.buttonId;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="deploymentId", required=true)
       private final Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="endpointDomain", required=true)
       private final Output<String> endpointDomain;
 
-    public Output<String> getEndpointDomain() {
+    public Output<String> endpointDomain() {
         return this.endpointDomain;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

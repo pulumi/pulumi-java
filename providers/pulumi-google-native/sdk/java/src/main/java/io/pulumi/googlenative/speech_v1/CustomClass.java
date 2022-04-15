@@ -31,7 +31,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
      * 
      */
-    public Output<String> getCustomClassId() {
+    public Output<String> customClassId() {
         return this.customClassId;
     }
     /**
@@ -45,7 +45,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return A collection of class items.
      * 
      */
-    public Output<List<ClassItemResponse>> getItems() {
+    public Output<List<ClassItemResponse>> items() {
         return this.items;
     }
     /**
@@ -59,7 +59,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * @return The resource name of the custom class.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

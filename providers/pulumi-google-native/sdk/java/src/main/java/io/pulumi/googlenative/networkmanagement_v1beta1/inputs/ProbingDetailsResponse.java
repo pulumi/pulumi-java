@@ -27,7 +27,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="abortCause", required=true)
       private final String abortCause;
 
-    public String getAbortCause() {
+    public String abortCause() {
         return this.abortCause;
     }
 
@@ -38,7 +38,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="endpointInfo", required=true)
       private final EndpointInfoResponse endpointInfo;
 
-    public EndpointInfoResponse getEndpointInfo() {
+    public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
     }
 
@@ -49,7 +49,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="error", required=true)
       private final StatusResponse error;
 
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
 
@@ -60,7 +60,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="probingLatency", required=true)
       private final LatencyDistributionResponse probingLatency;
 
-    public LatencyDistributionResponse getProbingLatency() {
+    public LatencyDistributionResponse probingLatency() {
         return this.probingLatency;
     }
 
@@ -71,7 +71,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="result", required=true)
       private final String result;
 
-    public String getResult() {
+    public String result() {
         return this.result;
     }
 
@@ -82,7 +82,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sentProbeCount", required=true)
       private final Integer sentProbeCount;
 
-    public Integer getSentProbeCount() {
+    public Integer sentProbeCount() {
         return this.sentProbeCount;
     }
 
@@ -93,7 +93,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="successfulProbeCount", required=true)
       private final Integer successfulProbeCount;
 
-    public Integer getSuccessfulProbeCount() {
+    public Integer successfulProbeCount() {
         return this.successfulProbeCount;
     }
 
@@ -104,7 +104,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="verifyTime", required=true)
       private final String verifyTime;
 
-    public String getVerifyTime() {
+    public String verifyTime() {
         return this.verifyTime;
     }
 

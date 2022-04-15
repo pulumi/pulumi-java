@@ -23,7 +23,7 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

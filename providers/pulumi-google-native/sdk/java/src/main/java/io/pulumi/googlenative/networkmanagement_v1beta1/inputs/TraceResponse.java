@@ -25,7 +25,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpointInfo", required=true)
       private final EndpointInfoResponse endpointInfo;
 
-    public EndpointInfoResponse getEndpointInfo() {
+    public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
     }
 
@@ -36,7 +36,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="steps", required=true)
       private final List<StepResponse> steps;
 
-    public List<StepResponse> getSteps() {
+    public List<StepResponse> steps() {
         return this.steps;
     }
 

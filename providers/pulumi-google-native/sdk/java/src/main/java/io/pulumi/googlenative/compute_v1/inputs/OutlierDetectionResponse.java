@@ -24,7 +24,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="baseEjectionTime", required=true)
       private final DurationResponse baseEjectionTime;
 
-    public DurationResponse getBaseEjectionTime() {
+    public DurationResponse baseEjectionTime() {
         return this.baseEjectionTime;
     }
 
@@ -35,7 +35,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="consecutiveErrors", required=true)
       private final Integer consecutiveErrors;
 
-    public Integer getConsecutiveErrors() {
+    public Integer consecutiveErrors() {
         return this.consecutiveErrors;
     }
 
@@ -46,7 +46,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="consecutiveGatewayFailure", required=true)
       private final Integer consecutiveGatewayFailure;
 
-    public Integer getConsecutiveGatewayFailure() {
+    public Integer consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
     }
 
@@ -57,7 +57,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enforcingConsecutiveErrors", required=true)
       private final Integer enforcingConsecutiveErrors;
 
-    public Integer getEnforcingConsecutiveErrors() {
+    public Integer enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
     }
 
@@ -68,7 +68,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enforcingConsecutiveGatewayFailure", required=true)
       private final Integer enforcingConsecutiveGatewayFailure;
 
-    public Integer getEnforcingConsecutiveGatewayFailure() {
+    public Integer enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
     }
 
@@ -79,7 +79,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enforcingSuccessRate", required=true)
       private final Integer enforcingSuccessRate;
 
-    public Integer getEnforcingSuccessRate() {
+    public Integer enforcingSuccessRate() {
         return this.enforcingSuccessRate;
     }
 
@@ -90,7 +90,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="interval", required=true)
       private final DurationResponse interval;
 
-    public DurationResponse getInterval() {
+    public DurationResponse interval() {
         return this.interval;
     }
 
@@ -101,7 +101,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="maxEjectionPercent", required=true)
       private final Integer maxEjectionPercent;
 
-    public Integer getMaxEjectionPercent() {
+    public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
@@ -112,7 +112,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="successRateMinimumHosts", required=true)
       private final Integer successRateMinimumHosts;
 
-    public Integer getSuccessRateMinimumHosts() {
+    public Integer successRateMinimumHosts() {
         return this.successRateMinimumHosts;
     }
 
@@ -123,7 +123,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="successRateRequestVolume", required=true)
       private final Integer successRateRequestVolume;
 
-    public Integer getSuccessRateRequestVolume() {
+    public Integer successRateRequestVolume() {
         return this.successRateRequestVolume;
     }
 
@@ -134,7 +134,7 @@ public final class OutlierDetectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="successRateStdevFactor", required=true)
       private final Integer successRateStdevFactor;
 
-    public Integer getSuccessRateStdevFactor() {
+    public Integer successRateStdevFactor() {
         return this.successRateStdevFactor;
     }
 

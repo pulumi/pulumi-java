@@ -23,7 +23,7 @@ public final class MetastoreConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="dataprocMetastoreService", required=true)
       private final String dataprocMetastoreService;
 
-    public String getDataprocMetastoreService() {
+    public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 

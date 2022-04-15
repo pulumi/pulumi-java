@@ -17,35 +17,35 @@ public final class GetCertificateAuthorityCertificateRevocationListIamPolicyArgs
     @Import(name="certificateAuthorityId", required=true)
       private final String certificateAuthorityId;
 
-    public String getCertificateAuthorityId() {
+    public String certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="certificateRevocationListId", required=true)
       private final String certificateRevocationListId;
 
-    public String getCertificateRevocationListId() {
+    public String certificateRevocationListId() {
         return this.certificateRevocationListId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

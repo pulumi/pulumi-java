@@ -33,7 +33,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the entity type can be automatically expanded.
      * 
      */
-    public Output<String> getAutoExpansionMode() {
+    public Output<String> autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
@@ -47,7 +47,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the entity type, unique within the agent.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +61,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
@@ -75,7 +75,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The collection of entity entries associated with the entity type.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> entities() {
         return this.entities;
     }
     /**
@@ -89,7 +89,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse>> getExcludedPhrases() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse>> excludedPhrases() {
         return this.excludedPhrases;
     }
     /**
@@ -103,7 +103,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates the kind of entity type.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -117,7 +117,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
      * 
      */
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact;
     }
 

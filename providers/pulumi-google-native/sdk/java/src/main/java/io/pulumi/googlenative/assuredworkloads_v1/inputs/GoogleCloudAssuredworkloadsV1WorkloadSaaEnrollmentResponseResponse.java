@@ -24,7 +24,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     @Import(name="setupErrors", required=true)
       private final List<String> setupErrors;
 
-    public List<String> getSetupErrors() {
+    public List<String> setupErrors() {
         return this.setupErrors;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     @Import(name="setupStatus", required=true)
       private final String setupStatus;
 
-    public String getSetupStatus() {
+    public String setupStatus() {
         return this.setupStatus;
     }
 

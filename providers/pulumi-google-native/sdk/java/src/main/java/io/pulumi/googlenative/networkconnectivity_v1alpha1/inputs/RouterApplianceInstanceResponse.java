@@ -23,14 +23,14 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
     @Import(name="networkInterface", required=true)
       private final String networkInterface;
 
-    public String getNetworkInterface() {
+    public String networkInterface() {
         return this.networkInterface;
     }
 
@@ -41,7 +41,7 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
     @Import(name="virtualMachine", required=true)
       private final String virtualMachine;
 
-    public String getVirtualMachine() {
+    public String virtualMachine() {
         return this.virtualMachine;
     }
 

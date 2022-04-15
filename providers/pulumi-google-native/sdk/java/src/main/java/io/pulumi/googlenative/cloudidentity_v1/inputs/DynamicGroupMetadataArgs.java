@@ -27,7 +27,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
     @Import(name="queries")
       private final @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
-    public Output<List<DynamicGroupQueryArgs>> getQueries() {
+    public Output<List<DynamicGroupQueryArgs>> queries() {
         return this.queries == null ? Codegen.empty() : this.queries;
     }
 

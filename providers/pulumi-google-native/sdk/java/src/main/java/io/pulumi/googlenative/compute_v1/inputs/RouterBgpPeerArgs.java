@@ -30,7 +30,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertiseMode")
       private final @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode;
 
-    public Output<RouterBgpPeerAdvertiseMode> getAdvertiseMode() {
+    public Output<RouterBgpPeerAdvertiseMode> advertiseMode() {
         return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
     }
 
@@ -41,7 +41,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertisedGroups")
       private final @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
 
-    public Output<List<RouterBgpPeerAdvertisedGroupsItem>> getAdvertisedGroups() {
+    public Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups() {
         return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
     }
 
@@ -52,7 +52,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertisedIpRanges")
       private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
+    public Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges() {
         return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
     }
 
@@ -63,7 +63,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advertisedRoutePriority")
       private final @Nullable Output<Integer> advertisedRoutePriority;
 
-    public Output<Integer> getAdvertisedRoutePriority() {
+    public Output<Integer> advertisedRoutePriority() {
         return this.advertisedRoutePriority == null ? Codegen.empty() : this.advertisedRoutePriority;
     }
 
@@ -74,7 +74,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bfd")
       private final @Nullable Output<RouterBgpPeerBfdArgs> bfd;
 
-    public Output<RouterBgpPeerBfdArgs> getBfd() {
+    public Output<RouterBgpPeerBfdArgs> bfd() {
         return this.bfd == null ? Codegen.empty() : this.bfd;
     }
 
@@ -85,7 +85,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enable")
       private final @Nullable Output<RouterBgpPeerEnable> enable;
 
-    public Output<RouterBgpPeerEnable> getEnable() {
+    public Output<RouterBgpPeerEnable> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -96,7 +96,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableIpv6")
       private final @Nullable Output<Boolean> enableIpv6;
 
-    public Output<Boolean> getEnableIpv6() {
+    public Output<Boolean> enableIpv6() {
         return this.enableIpv6 == null ? Codegen.empty() : this.enableIpv6;
     }
 
@@ -107,7 +107,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interfaceName")
       private final @Nullable Output<String> interfaceName;
 
-    public Output<String> getInterfaceName() {
+    public Output<String> interfaceName() {
         return this.interfaceName == null ? Codegen.empty() : this.interfaceName;
     }
 
@@ -118,7 +118,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -129,7 +129,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6NexthopAddress")
       private final @Nullable Output<String> ipv6NexthopAddress;
 
-    public Output<String> getIpv6NexthopAddress() {
+    public Output<String> ipv6NexthopAddress() {
         return this.ipv6NexthopAddress == null ? Codegen.empty() : this.ipv6NexthopAddress;
     }
 
@@ -140,7 +140,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -151,7 +151,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
 
-    public Output<Integer> getPeerAsn() {
+    public Output<Integer> peerAsn() {
         return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
@@ -162,7 +162,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerIpAddress")
       private final @Nullable Output<String> peerIpAddress;
 
-    public Output<String> getPeerIpAddress() {
+    public Output<String> peerIpAddress() {
         return this.peerIpAddress == null ? Codegen.empty() : this.peerIpAddress;
     }
 
@@ -173,7 +173,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerIpv6NexthopAddress")
       private final @Nullable Output<String> peerIpv6NexthopAddress;
 
-    public Output<String> getPeerIpv6NexthopAddress() {
+    public Output<String> peerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress == null ? Codegen.empty() : this.peerIpv6NexthopAddress;
     }
 
@@ -184,7 +184,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routerApplianceInstance")
       private final @Nullable Output<String> routerApplianceInstance;
 
-    public Output<String> getRouterApplianceInstance() {
+    public Output<String> routerApplianceInstance() {
         return this.routerApplianceInstance == null ? Codegen.empty() : this.routerApplianceInstance;
     }
 

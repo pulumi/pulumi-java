@@ -41,21 +41,21 @@ public final class SourceConfigResponse {
      * The crowding configuration for the source.
      * 
     */
-    public SourceCrowdingConfigResponse getCrowdingConfig() {
+    public SourceCrowdingConfigResponse crowdingConfig() {
         return this.crowdingConfig;
     }
     /**
      * The scoring configuration for the source.
      * 
     */
-    public SourceScoringConfigResponse getScoringConfig() {
+    public SourceScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
     /**
      * The source for which this configuration is to be used.
      * 
     */
-    public SourceResponse getSource() {
+    public SourceResponse source() {
         return this.source;
     }
 

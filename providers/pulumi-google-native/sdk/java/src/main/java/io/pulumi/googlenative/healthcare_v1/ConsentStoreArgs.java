@@ -20,14 +20,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -38,7 +38,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultConsentTtl")
       private final @Nullable Output<String> defaultConsentTtl;
 
-    public Output<String> getDefaultConsentTtl() {
+    public Output<String> defaultConsentTtl() {
         return this.defaultConsentTtl == null ? Codegen.empty() : this.defaultConsentTtl;
     }
 
@@ -49,7 +49,7 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableConsentCreateOnUpdate")
       private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
-    public Output<Boolean> getEnableConsentCreateOnUpdate() {
+    public Output<Boolean> enableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate == null ? Codegen.empty() : this.enableConsentCreateOnUpdate;
     }
 
@@ -60,14 +60,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -78,14 +78,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

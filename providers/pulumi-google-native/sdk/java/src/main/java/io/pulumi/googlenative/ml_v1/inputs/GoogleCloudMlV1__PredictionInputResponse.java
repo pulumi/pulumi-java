@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="batchSize", required=true)
       private final String batchSize;
 
-    public String getBatchSize() {
+    public String batchSize() {
         return this.batchSize;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="dataFormat", required=true)
       private final String dataFormat;
 
-    public String getDataFormat() {
+    public String dataFormat() {
         return this.dataFormat;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="inputPaths", required=true)
       private final List<String> inputPaths;
 
-    public List<String> getInputPaths() {
+    public List<String> inputPaths() {
         return this.inputPaths;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="maxWorkerCount", required=true)
       private final String maxWorkerCount;
 
-    public String getMaxWorkerCount() {
+    public String maxWorkerCount() {
         return this.maxWorkerCount;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="modelName", required=true)
       private final String modelName;
 
-    public String getModelName() {
+    public String modelName() {
         return this.modelName;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="outputDataFormat", required=true)
       private final String outputDataFormat;
 
-    public String getOutputDataFormat() {
+    public String outputDataFormat() {
         return this.outputDataFormat;
     }
 
@@ -90,7 +90,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="outputPath", required=true)
       private final String outputPath;
 
-    public String getOutputPath() {
+    public String outputPath() {
         return this.outputPath;
     }
 
@@ -101,7 +101,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -112,7 +112,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
-    public String getRuntimeVersion() {
+    public String runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -123,7 +123,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="signatureName", required=true)
       private final String signatureName;
 
-    public String getSignatureName() {
+    public String signatureName() {
         return this.signatureName;
     }
 
@@ -134,7 +134,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -145,7 +145,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
     @Import(name="versionName", required=true)
       private final String versionName;
 
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

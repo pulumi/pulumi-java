@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1PropertiesResponse extends io.pulumi.resou
     @Import(name="property", required=true)
       private final List<GoogleCloudApigeeV1PropertyResponse> property;
 
-    public List<GoogleCloudApigeeV1PropertyResponse> getProperty() {
+    public List<GoogleCloudApigeeV1PropertyResponse> property() {
         return this.property;
     }
 

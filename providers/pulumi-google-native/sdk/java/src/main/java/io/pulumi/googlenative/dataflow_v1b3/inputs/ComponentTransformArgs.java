@@ -26,7 +26,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
     @Import(name="originalTransform")
       private final @Nullable Output<String> originalTransform;
 
-    public Output<String> getOriginalTransform() {
+    public Output<String> originalTransform() {
         return this.originalTransform == null ? Codegen.empty() : this.originalTransform;
     }
 
@@ -48,7 +48,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

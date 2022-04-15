@@ -28,7 +28,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="day")
       private final @Nullable Output<Integer> day;
 
-    public Output<Integer> getDay() {
+    public Output<Integer> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -39,7 +39,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hour")
       private final @Nullable Output<Integer> hour;
 
-    public Output<Integer> getHour() {
+    public Output<Integer> hour() {
         return this.hour == null ? Codegen.empty() : this.hour;
     }
 
@@ -50,7 +50,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -61,7 +61,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updateTrack")
       private final @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
-    public Output<MaintenanceWindowUpdateTrack> getUpdateTrack() {
+    public Output<MaintenanceWindowUpdateTrack> updateTrack() {
         return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
     }
 

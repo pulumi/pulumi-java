@@ -26,7 +26,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="allowlist")
       private final @Nullable Output<OracleRdbmsArgs> allowlist;
 
-    public Output<OracleRdbmsArgs> getAllowlist() {
+    public Output<OracleRdbmsArgs> allowlist() {
         return this.allowlist == null ? Codegen.empty() : this.allowlist;
     }
 
@@ -37,7 +37,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rejectlist")
       private final @Nullable Output<OracleRdbmsArgs> rejectlist;
 
-    public Output<OracleRdbmsArgs> getRejectlist() {
+    public Output<OracleRdbmsArgs> rejectlist() {
         return this.rejectlist == null ? Codegen.empty() : this.rejectlist;
     }
 

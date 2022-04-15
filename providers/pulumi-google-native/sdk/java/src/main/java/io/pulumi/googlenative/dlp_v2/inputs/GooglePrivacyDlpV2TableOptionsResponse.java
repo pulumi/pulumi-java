@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
     @Import(name="identifyingFields", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
-    public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
+    public List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields() {
         return this.identifyingFields;
     }
 

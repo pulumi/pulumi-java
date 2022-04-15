@@ -24,7 +24,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
@@ -35,14 +35,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -53,21 +53,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fulfillment")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment;
 
-    public Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> getFulfillment() {
+    public Output<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment() {
         return this.fulfillment == null ? Codegen.empty() : this.fulfillment;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -78,7 +78,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="textToSpeechSettings")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings;
 
-    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> getTextToSpeechSettings() {
+    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings() {
         return this.textToSpeechSettings == null ? Codegen.empty() : this.textToSpeechSettings;
     }
 

@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
     @Import(name="allowedExitCodes", required=true)
       private final List<Integer> allowedExitCodes;
 
-    public List<Integer> getAllowedExitCodes() {
+    public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
     @Import(name="artifactId", required=true)
       private final String artifactId;
 
-    public String getArtifactId() {
+    public String artifactId() {
         return this.artifactId;
     }
 
@@ -58,7 +58,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
     @Import(name="localPath", required=true)
       private final String localPath;
 
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
 

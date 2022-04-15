@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     @Import(name="allowedCaCerts", required=true)
       private final List<String> allowedCaCerts;
 
-    public List<String> getAllowedCaCerts() {
+    public List<String> allowedCaCerts() {
         return this.allowedCaCerts;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     @Import(name="requestHeaders", required=true)
       private final Map<String,String> requestHeaders;
 
-    public Map<String,String> getRequestHeaders() {
+    public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

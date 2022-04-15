@@ -28,7 +28,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providers")
       private final @Nullable Output<List<AuthProviderArgs>> providers;
 
-    public Output<List<AuthProviderArgs>> getProviders() {
+    public Output<List<AuthProviderArgs>> providers() {
         return this.providers == null ? Codegen.empty() : this.providers;
     }
 
@@ -39,7 +39,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
-    public Output<List<AuthenticationRuleArgs>> getRules() {
+    public Output<List<AuthenticationRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

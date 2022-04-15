@@ -17,14 +17,14 @@ public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="repoId", required=true)
       private final String repoId;
 
-    public String getRepoId() {
+    public String repoId() {
         return this.repoId;
     }
 

@@ -23,7 +23,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
     @Import(name="abortedByUser", required=true)
       private final Boolean abortedByUser;
 
-    public Boolean getAbortedByUser() {
+    public Boolean abortedByUser() {
         return this.abortedByUser;
     }
 
@@ -34,7 +34,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
     @Import(name="hasErrorLogs", required=true)
       private final Boolean hasErrorLogs;
 
-    public Boolean getHasErrorLogs() {
+    public Boolean hasErrorLogs() {
         return this.hasErrorLogs;
     }
 
@@ -45,7 +45,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
     @Import(name="infrastructureFailure", required=true)
       private final Boolean infrastructureFailure;
 
-    public Boolean getInfrastructureFailure() {
+    public Boolean infrastructureFailure() {
         return this.infrastructureFailure;
     }
 

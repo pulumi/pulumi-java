@@ -29,7 +29,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -40,7 +40,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -51,7 +51,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDisks")
       private final @Nullable Output<List<AttachedDiskArgs>> dataDisks;
 
-    public Output<List<AttachedDiskArgs>> getDataDisks() {
+    public Output<List<AttachedDiskArgs>> dataDisks() {
         return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
@@ -62,7 +62,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="health")
       private final @Nullable Output<NodeHealth> health;
 
-    public Output<NodeHealth> getHealth() {
+    public Output<NodeHealth> health() {
         return this.health == null ? Codegen.empty() : this.health;
     }
 
@@ -84,14 +84,14 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -102,7 +102,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -113,21 +113,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> getNetworkConfig() {
+    public Output<NetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
-    public Output<String> getNodeId() {
+    public Output<String> nodeId() {
         return this.nodeId == null ? Codegen.empty() : this.nodeId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -138,7 +138,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -149,7 +149,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingConfig")
       private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
-    public Output<SchedulingConfigArgs> getSchedulingConfig() {
+    public Output<SchedulingConfigArgs> schedulingConfig() {
         return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
     }
 
@@ -160,7 +160,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Output<ServiceAccountArgs> getServiceAccount() {
+    public Output<ServiceAccountArgs> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -171,7 +171,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
-    public Output<String> getOperatorName() {
+    public Output<String> operatorName() {
         return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
@@ -34,7 +34,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
       private final @Nullable Output<SortOptionsSortOrder> sortOrder;
 
-    public Output<SortOptionsSortOrder> getSortOrder() {
+    public Output<SortOptionsSortOrder> sortOrder() {
         return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
     }
 

@@ -16,7 +16,7 @@ public final class ServerBindingResponse {
         this.type = type;
     }
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

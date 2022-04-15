@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
     @Import(name="caseContent", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
 
-    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
+    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent() {
         return this.caseContent;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
     @Import(name="condition", required=true)
       private final String condition;
 
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
     @Import(name="imageDisplayOptions", required=true)
       private final String imageDisplayOptions;
 
-    public String getImageDisplayOptions() {
+    public String imageDisplayOptions() {
         return this.imageDisplayOptions;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
     @Import(name="items", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
-    public List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> getItems() {
+    public List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items() {
         return this.items;
     }
 

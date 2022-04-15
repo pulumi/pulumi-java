@@ -24,7 +24,7 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="authorizationLoggingOptions", required=true)
       private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
-    public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
+    public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
 
@@ -35,7 +35,7 @@ public final class CloudAuditOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="logName", required=true)
       private final String logName;
 
-    public String getLogName() {
+    public String logName() {
         return this.logName;
     }
 

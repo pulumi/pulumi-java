@@ -24,7 +24,7 @@ public final class WeeklyScheduleResponse {
      * Day of the week.
      * 
     */
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
 

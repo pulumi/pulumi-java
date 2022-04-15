@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * The audio channel that contains the agent.
      * 
     */
-    public Integer getAgentChannel() {
+    public Integer agentChannel() {
         return this.agentChannel;
     }
     /**
      * The audio channel that contains the customer.
      * 
     */
-    public Integer getCustomerChannel() {
+    public Integer customerChannel() {
         return this.customerChannel;
     }
 

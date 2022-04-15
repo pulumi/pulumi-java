@@ -29,7 +29,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
-    public Output<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
+    public Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
     }
 
@@ -40,7 +40,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maintenanceExclusions")
       private final @Nullable Output<Map<String,String>> maintenanceExclusions;
 
-    public Output<Map<String,String>> getMaintenanceExclusions() {
+    public Output<Map<String,String>> maintenanceExclusions() {
         return this.maintenanceExclusions == null ? Codegen.empty() : this.maintenanceExclusions;
     }
 
@@ -51,7 +51,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recurringWindow")
       private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
-    public Output<RecurringTimeWindowArgs> getRecurringWindow() {
+    public Output<RecurringTimeWindowArgs> recurringWindow() {
         return this.recurringWindow == null ? Codegen.empty() : this.recurringWindow;
     }
 

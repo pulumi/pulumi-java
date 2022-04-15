@@ -30,7 +30,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedDeviceManagementLevels")
       private final @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
 
-    public Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> getAllowedDeviceManagementLevels() {
+    public Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? Codegen.empty() : this.allowedDeviceManagementLevels;
     }
 
@@ -41,7 +41,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedEncryptionStatuses")
       private final @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
 
-    public Output<List<DevicePolicyAllowedEncryptionStatusesItem>> getAllowedEncryptionStatuses() {
+    public Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? Codegen.empty() : this.allowedEncryptionStatuses;
     }
 
@@ -52,7 +52,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osConstraints")
       private final @Nullable Output<List<OsConstraintArgs>> osConstraints;
 
-    public Output<List<OsConstraintArgs>> getOsConstraints() {
+    public Output<List<OsConstraintArgs>> osConstraints() {
         return this.osConstraints == null ? Codegen.empty() : this.osConstraints;
     }
 
@@ -63,7 +63,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireAdminApproval")
       private final @Nullable Output<Boolean> requireAdminApproval;
 
-    public Output<Boolean> getRequireAdminApproval() {
+    public Output<Boolean> requireAdminApproval() {
         return this.requireAdminApproval == null ? Codegen.empty() : this.requireAdminApproval;
     }
 
@@ -74,7 +74,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireCorpOwned")
       private final @Nullable Output<Boolean> requireCorpOwned;
 
-    public Output<Boolean> getRequireCorpOwned() {
+    public Output<Boolean> requireCorpOwned() {
         return this.requireCorpOwned == null ? Codegen.empty() : this.requireCorpOwned;
     }
 
@@ -85,7 +85,7 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireScreenlock")
       private final @Nullable Output<Boolean> requireScreenlock;
 
-    public Output<Boolean> getRequireScreenlock() {
+    public Output<Boolean> requireScreenlock() {
         return this.requireScreenlock == null ? Codegen.empty() : this.requireScreenlock;
     }
 

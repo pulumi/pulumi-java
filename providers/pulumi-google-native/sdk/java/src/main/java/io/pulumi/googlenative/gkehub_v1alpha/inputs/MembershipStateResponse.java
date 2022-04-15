@@ -23,7 +23,7 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 

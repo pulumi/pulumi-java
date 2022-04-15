@@ -23,7 +23,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="argument")
       private final @Nullable Output<String> argument;
 
-    public Output<String> getArgument() {
+    public Output<String> argument() {
         return this.argument == null ? Codegen.empty() : this.argument;
     }
 
@@ -34,28 +34,28 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callLogLevel")
       private final @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
-    public Output<ExecutionCallLogLevel> getCallLogLevel() {
+    public Output<ExecutionCallLogLevel> callLogLevel() {
         return this.callLogLevel == null ? Codegen.empty() : this.callLogLevel;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="workflowId", required=true)
       private final Output<String> workflowId;
 
-    public Output<String> getWorkflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 

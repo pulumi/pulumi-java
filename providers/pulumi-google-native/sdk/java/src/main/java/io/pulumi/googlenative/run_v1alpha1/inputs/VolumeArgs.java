@@ -24,7 +24,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Output<ConfigMapVolumeSourceArgs> getConfigMap() {
+    public Output<ConfigMapVolumeSourceArgs> configMap() {
         return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 
@@ -35,14 +35,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="secret")
       private final @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Output<SecretVolumeSourceArgs> getSecret() {
+    public Output<SecretVolumeSourceArgs> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

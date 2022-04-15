@@ -15,14 +15,14 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
-    public String getBillingAccountId() {
+    public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="exclusionId", required=true)
       private final String exclusionId;
 
-    public String getExclusionId() {
+    public String exclusionId() {
         return this.exclusionId;
     }
 

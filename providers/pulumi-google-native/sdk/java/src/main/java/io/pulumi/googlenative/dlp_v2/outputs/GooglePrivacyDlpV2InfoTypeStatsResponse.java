@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
      * Number of findings for this infoType.
      * 
     */
-    public String getCount() {
+    public String count() {
         return this.count;
     }
     /**
      * The type of finding this stat is for.
      * 
     */
-    public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
+    public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
 

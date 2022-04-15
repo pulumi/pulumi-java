@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="auxiliaryTables")
       private final @Nullable Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> auxiliaryTables;
 
-    public Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> getAuxiliaryTables() {
+    public Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> auxiliaryTables() {
         return this.auxiliaryTables == null ? Codegen.empty() : this.auxiliaryTables;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="quasiIds", required=true)
       private final Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> quasiIds() {
         return this.quasiIds;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="regionCode")
       private final @Nullable Output<String> regionCode;
 
-    public Output<String> getRegionCode() {
+    public Output<String> regionCode() {
         return this.regionCode == null ? Codegen.empty() : this.regionCode;
     }
 

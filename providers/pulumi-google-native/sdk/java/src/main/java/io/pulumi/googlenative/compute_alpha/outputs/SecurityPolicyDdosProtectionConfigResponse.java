@@ -16,7 +16,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
         this.ddosProtection = ddosProtection;
     }
 
-    public String getDdosProtection() {
+    public String ddosProtection() {
         return this.ddosProtection;
     }
 

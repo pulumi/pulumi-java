@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="noSmalltalk")
       private final @Nullable Output<Boolean> noSmalltalk;
 
-    public Output<Boolean> getNoSmalltalk() {
+    public Output<Boolean> noSmalltalk() {
         return this.noSmalltalk == null ? Codegen.empty() : this.noSmalltalk;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     @Import(name="onlyEndUser")
       private final @Nullable Output<Boolean> onlyEndUser;
 
-    public Output<Boolean> getOnlyEndUser() {
+    public Output<Boolean> onlyEndUser() {
         return this.onlyEndUser == null ? Codegen.empty() : this.onlyEndUser;
     }
 

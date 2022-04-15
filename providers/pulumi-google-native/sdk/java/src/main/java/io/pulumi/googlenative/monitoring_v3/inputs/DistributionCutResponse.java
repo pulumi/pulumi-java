@@ -24,7 +24,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
     @Import(name="distributionFilter", required=true)
       private final String distributionFilter;
 
-    public String getDistributionFilter() {
+    public String distributionFilter() {
         return this.distributionFilter;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
     @Import(name="range", required=true)
       private final GoogleMonitoringV3RangeResponse range;
 
-    public GoogleMonitoringV3RangeResponse getRange() {
+    public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
 

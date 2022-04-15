@@ -25,7 +25,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -36,7 +36,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="httpHeaders", required=true)
       private final List<HTTPHeaderResponse> httpHeaders;
 
-    public List<HTTPHeaderResponse> getHttpHeaders() {
+    public List<HTTPHeaderResponse> httpHeaders() {
         return this.httpHeaders;
     }
 
@@ -47,7 +47,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -58,7 +58,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="scheme", required=true)
       private final String scheme;
 
-    public String getScheme() {
+    public String scheme() {
         return this.scheme;
     }
 

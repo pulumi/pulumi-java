@@ -26,7 +26,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     @Import(name="humanReadableName")
       private final @Nullable Output<String> humanReadableName;
 
-    public Output<String> getHumanReadableName() {
+    public Output<String> humanReadableName() {
         return this.humanReadableName == null ? Codegen.empty() : this.humanReadableName;
     }
 

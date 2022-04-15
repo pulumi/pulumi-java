@@ -29,7 +29,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayData")
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Output<List<DisplayDataArgs>> getDisplayData() {
+    public Output<List<DisplayDataArgs>> displayData() {
         return this.displayData == null ? Codegen.empty() : this.displayData;
     }
 
@@ -40,7 +40,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="executionPipelineStage")
       private final @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
-    public Output<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
+    public Output<List<ExecutionStageSummaryArgs>> executionPipelineStage() {
         return this.executionPipelineStage == null ? Codegen.empty() : this.executionPipelineStage;
     }
 
@@ -51,7 +51,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="originalPipelineTransform")
       private final @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
-    public Output<List<TransformSummaryArgs>> getOriginalPipelineTransform() {
+    public Output<List<TransformSummaryArgs>> originalPipelineTransform() {
         return this.originalPipelineTransform == null ? Codegen.empty() : this.originalPipelineTransform;
     }
 

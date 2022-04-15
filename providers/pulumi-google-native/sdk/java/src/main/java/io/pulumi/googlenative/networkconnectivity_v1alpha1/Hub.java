@@ -30,7 +30,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Time when the Hub was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +44,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Short description of the hub resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return User-defined labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -72,7 +72,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of a Hub resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return The current lifecycle state of this Hub.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -100,7 +100,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Google-generated UUID for this resource. This is unique across all Hub resources. If a Hub resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -114,7 +114,7 @@ public class Hub extends io.pulumi.resources.CustomResource {
      * @return Time when the Hub was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

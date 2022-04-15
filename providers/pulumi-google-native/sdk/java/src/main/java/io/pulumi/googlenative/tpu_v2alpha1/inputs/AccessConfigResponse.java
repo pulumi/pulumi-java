@@ -23,7 +23,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="externalIp", required=true)
       private final String externalIp;
 
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 

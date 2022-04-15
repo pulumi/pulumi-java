@@ -25,14 +25,14 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
         this.maintenanceWindow = maintenanceWindow;
     }
 
-    public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {
+    public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup() {
         return this.concurrencyControlGroup;
     }
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
      * 
     */
-    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
+    public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 

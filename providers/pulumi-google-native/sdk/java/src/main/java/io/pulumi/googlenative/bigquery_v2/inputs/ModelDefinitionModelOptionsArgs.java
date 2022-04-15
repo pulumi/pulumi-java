@@ -23,21 +23,21 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="lossType")
       private final @Nullable Output<String> lossType;
 
-    public Output<String> getLossType() {
+    public Output<String> lossType() {
         return this.lossType == null ? Codegen.empty() : this.lossType;
     }
 
     @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
-    public Output<String> getModelType() {
+    public Output<String> modelType() {
         return this.modelType == null ? Codegen.empty() : this.modelType;
     }
 

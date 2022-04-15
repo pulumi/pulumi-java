@@ -40,21 +40,21 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
      * Indicates whether an answer or item was clicked by the human agent.
      * 
     */
-    public Boolean getClicked() {
+    public Boolean clicked() {
         return this.clicked;
     }
     /**
      * The correctness level of an answer.
      * 
     */
-    public String getCorrectnessLevel() {
+    public String correctnessLevel() {
         return this.correctnessLevel;
     }
     /**
      * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
      * 
     */
-    public Boolean getDisplayed() {
+    public Boolean displayed() {
         return this.displayed;
     }
 

@@ -26,7 +26,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudBuildId")
       private final @Nullable Output<String> cloudBuildId;
 
-    public Output<String> getCloudBuildId() {
+    public Output<String> cloudBuildId() {
         return this.cloudBuildId == null ? Codegen.empty() : this.cloudBuildId;
     }
 

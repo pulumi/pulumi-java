@@ -33,14 +33,14 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
      * Metric name.
      * 
     */
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
     /**
      * The value for this metric.
      * 
     */
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

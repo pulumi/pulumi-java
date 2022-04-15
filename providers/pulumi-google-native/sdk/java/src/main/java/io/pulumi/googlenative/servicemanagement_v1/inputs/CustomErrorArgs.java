@@ -28,7 +28,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<CustomErrorRuleArgs>> rules;
 
-    public Output<List<CustomErrorRuleArgs>> getRules() {
+    public Output<List<CustomErrorRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -39,7 +39,7 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="types")
       private final @Nullable Output<List<String>> types;
 
-    public Output<List<String>> getTypes() {
+    public Output<List<String>> types() {
         return this.types == null ? Codegen.empty() : this.types;
     }
 

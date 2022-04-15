@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="conversationSuccess", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse getConversationSuccess() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess() {
         return this.conversationSuccess;
     }
 
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="endInteraction", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse getEndInteraction() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction() {
         return this.endInteraction;
     }
 
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="liveAgentHandoff", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse getLiveAgentHandoff() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff() {
         return this.liveAgentHandoff;
     }
 
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="mixedAudio", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse getMixedAudio() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio() {
         return this.mixedAudio;
     }
 
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="outputAudioText", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse getOutputAudioText() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText() {
         return this.outputAudioText;
     }
 
@@ -87,7 +87,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="payload", required=true)
       private final Map<String,String> payload;
 
-    public Map<String,String> getPayload() {
+    public Map<String,String> payload() {
         return this.payload;
     }
 
@@ -98,7 +98,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="playAudio", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse getPlayAudio() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio() {
         return this.playAudio;
     }
 
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="telephonyTransferCall", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse getTelephonyTransferCall() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall() {
         return this.telephonyTransferCall;
     }
 
@@ -120,7 +120,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
     @Import(name="text", required=true)
       private final GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text;
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse getText() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text() {
         return this.text;
     }
 

@@ -29,7 +29,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The create time timestamp.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +43,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return User-provided description of the group.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Display name is a user defined name for this group which can be updated.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +71,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The Group name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The update time timestamp.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

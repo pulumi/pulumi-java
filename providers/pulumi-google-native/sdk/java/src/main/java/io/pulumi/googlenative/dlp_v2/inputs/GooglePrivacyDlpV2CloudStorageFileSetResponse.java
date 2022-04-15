@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulu
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

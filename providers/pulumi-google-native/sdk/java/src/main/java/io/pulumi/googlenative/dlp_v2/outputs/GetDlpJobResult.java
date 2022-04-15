@@ -92,70 +92,70 @@ public final class GetDlpJobResult {
      * Time when the job was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Time when the job finished.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * A stream of errors encountered running the job.
      * 
     */
-    public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
+    public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Results from inspecting a data source.
      * 
     */
-    public GooglePrivacyDlpV2InspectDataSourceDetailsResponse getInspectDetails() {
+    public GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails() {
         return this.inspectDetails;
     }
     /**
      * If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
     */
-    public String getJobTriggerName() {
+    public String jobTriggerName() {
         return this.jobTriggerName;
     }
     /**
      * The server-assigned name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Results from analyzing risk of a data source.
      * 
     */
-    public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse getRiskDetails() {
+    public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails() {
         return this.riskDetails;
     }
     /**
      * Time when the job started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * State of a job.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The type of job.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

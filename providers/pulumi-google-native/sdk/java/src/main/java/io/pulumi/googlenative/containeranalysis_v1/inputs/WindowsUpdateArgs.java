@@ -29,7 +29,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categories")
       private final @Nullable Output<List<CategoryArgs>> categories;
 
-    public Output<List<CategoryArgs>> getCategories() {
+    public Output<List<CategoryArgs>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -40,7 +40,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -62,7 +62,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kbArticleIds")
       private final @Nullable Output<List<String>> kbArticleIds;
 
-    public Output<List<String>> getKbArticleIds() {
+    public Output<List<String>> kbArticleIds() {
         return this.kbArticleIds == null ? Codegen.empty() : this.kbArticleIds;
     }
 
@@ -73,7 +73,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastPublishedTimestamp")
       private final @Nullable Output<String> lastPublishedTimestamp;
 
-    public Output<String> getLastPublishedTimestamp() {
+    public Output<String> lastPublishedTimestamp() {
         return this.lastPublishedTimestamp == null ? Codegen.empty() : this.lastPublishedTimestamp;
     }
 
@@ -84,7 +84,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
-    public Output<String> getSupportUrl() {
+    public Output<String> supportUrl() {
         return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
@@ -95,7 +95,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

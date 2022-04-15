@@ -30,7 +30,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudBuildOptions")
       private final @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
 
-    public Output<CloudBuildOptionsArgs> getCloudBuildOptions() {
+    public Output<CloudBuildOptionsArgs> cloudBuildOptions() {
         return this.cloudBuildOptions == null ? Codegen.empty() : this.cloudBuildOptions;
     }
 
@@ -41,7 +41,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<ContainerInfoArgs> container;
 
-    public Output<ContainerInfoArgs> getContainer() {
+    public Output<ContainerInfoArgs> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -52,7 +52,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> getFiles() {
+    public Output<Map<String,String>> files() {
         return this.files == null ? Codegen.empty() : this.files;
     }
 
@@ -63,7 +63,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zip")
       private final @Nullable Output<ZipInfoArgs> zip;
 
-    public Output<ZipInfoArgs> getZip() {
+    public Output<ZipInfoArgs> zip() {
         return this.zip == null ? Codegen.empty() : this.zip;
     }
 

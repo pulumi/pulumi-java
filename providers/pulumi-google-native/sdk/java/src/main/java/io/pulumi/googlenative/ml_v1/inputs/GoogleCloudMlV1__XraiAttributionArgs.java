@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__XraiAttributionArgs extends io.pulumi.resour
     @Import(name="numIntegralSteps")
       private final @Nullable Output<Integer> numIntegralSteps;
 
-    public Output<Integer> getNumIntegralSteps() {
+    public Output<Integer> numIntegralSteps() {
         return this.numIntegralSteps == null ? Codegen.empty() : this.numIntegralSteps;
     }
 

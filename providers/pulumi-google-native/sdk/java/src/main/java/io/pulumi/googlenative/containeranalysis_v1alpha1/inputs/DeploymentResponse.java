@@ -24,7 +24,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
       private final String config;
 
-    public String getConfig() {
+    public String config() {
         return this.config;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deployTime", required=true)
       private final String deployTime;
 
-    public String getDeployTime() {
+    public String deployTime() {
         return this.deployTime;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="platform", required=true)
       private final String platform;
 
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final List<String> resourceUri;
 
-    public List<String> getResourceUri() {
+    public List<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -79,7 +79,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="undeployTime", required=true)
       private final String undeployTime;
 
-    public String getUndeployTime() {
+    public String undeployTime() {
         return this.undeployTime;
     }
 
@@ -90,7 +90,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userEmail", required=true)
       private final String userEmail;
 
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
 

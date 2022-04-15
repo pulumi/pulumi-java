@@ -31,7 +31,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Cloud SQL properties.
      * 
      */
-    public Output<CloudSqlPropertiesResponse> getCloudSql() {
+    public Output<CloudSqlPropertiesResponse> cloudSql() {
         return this.cloudSql;
     }
     /**
@@ -45,7 +45,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp of the connection.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -59,7 +59,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return User provided description.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return User provided display name for the connection.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -87,7 +87,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return True, if credential is configured for this connection.
      * 
      */
-    public Output<Boolean> getHasCredential() {
+    public Output<Boolean> hasCredential() {
         return this.hasCredential;
     }
     /**
@@ -101,7 +101,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The last update timestamp of the connection.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -115,7 +115,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

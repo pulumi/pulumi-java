@@ -26,7 +26,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -37,7 +37,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
 
-    public List<ConditionResponse> getConditions() {
+    public List<ConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -48,7 +48,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -59,7 +59,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="in", required=true)
       private final List<String> in;
 
-    public List<String> getIn() {
+    public List<String> in() {
         return this.in;
     }
 
@@ -70,7 +70,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logConfig", required=true)
       private final List<LogConfigResponse> logConfig;
 
-    public List<LogConfigResponse> getLogConfig() {
+    public List<LogConfigResponse> logConfig() {
         return this.logConfig;
     }
 
@@ -81,7 +81,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="notIn", required=true)
       private final List<String> notIn;
 
-    public List<String> getNotIn() {
+    public List<String> notIn() {
         return this.notIn;
     }
 
@@ -92,7 +92,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
       private final List<String> permissions;
 
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
 

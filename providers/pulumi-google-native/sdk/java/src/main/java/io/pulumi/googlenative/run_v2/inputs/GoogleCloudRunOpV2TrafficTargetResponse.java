@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
     @Import(name="percent", required=true)
       private final Integer percent;
 
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
     @Import(name="revision", required=true)
       private final String revision;
 
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

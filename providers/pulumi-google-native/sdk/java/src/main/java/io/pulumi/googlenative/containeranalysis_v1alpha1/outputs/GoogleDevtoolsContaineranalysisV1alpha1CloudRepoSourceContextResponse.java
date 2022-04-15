@@ -41,21 +41,21 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * An alias, which may be a branch or tag.
      * 
     */
-    public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse getAliasContext() {
+    public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
     /**
      * The ID of the repo.
      * 
     */
-    public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse getRepoId() {
+    public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId() {
         return this.repoId;
     }
     /**
      * A revision ID.
      * 
     */
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

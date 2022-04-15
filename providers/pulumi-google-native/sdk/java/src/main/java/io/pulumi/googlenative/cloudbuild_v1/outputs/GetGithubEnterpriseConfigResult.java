@@ -82,63 +82,63 @@ public final class GetGithubEnterpriseConfigResult {
      * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
      * 
     */
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
     /**
      * Time when the installation was associated with the project.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Name to display for this config.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The URL of the github enterprise host the configuration is for.
      * 
     */
-    public String getHostUrl() {
+    public String hostUrl() {
         return this.hostUrl;
     }
     /**
      * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
     */
-    public String getPeeredNetwork() {
+    public String peeredNetwork() {
         return this.peeredNetwork;
     }
     /**
      * Names of secrets in Secret Manager.
      * 
     */
-    public GitHubEnterpriseSecretsResponse getSecrets() {
+    public GitHubEnterpriseSecretsResponse secrets() {
         return this.secrets;
     }
     /**
      * Optional. SSL certificate to use for requests to GitHub Enterprise.
      * 
     */
-    public String getSslCa() {
+    public String sslCa() {
         return this.sslCa;
     }
     /**
      * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
      * 
     */
-    public String getWebhookKey() {
+    public String webhookKey() {
         return this.webhookKey;
     }
 

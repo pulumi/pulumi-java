@@ -27,7 +27,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -38,7 +38,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="creatorComment")
       private final @Nullable Output<String> creatorComment;
 
-    public Output<String> getCreatorComment() {
+    public Output<String> creatorComment() {
         return this.creatorComment == null ? Codegen.empty() : this.creatorComment;
     }
 
@@ -49,7 +49,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="creators")
       private final @Nullable Output<List<String>> creators;
 
-    public Output<List<String>> getCreators() {
+    public Output<List<String>> creators() {
         return this.creators == null ? Codegen.empty() : this.creators;
     }
 
@@ -60,7 +60,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="documentComment")
       private final @Nullable Output<String> documentComment;
 
-    public Output<String> getDocumentComment() {
+    public Output<String> documentComment() {
         return this.documentComment == null ? Codegen.empty() : this.documentComment;
     }
 
@@ -71,7 +71,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="externalDocumentRefs")
       private final @Nullable Output<List<String>> externalDocumentRefs;
 
-    public Output<List<String>> getExternalDocumentRefs() {
+    public Output<List<String>> externalDocumentRefs() {
         return this.externalDocumentRefs == null ? Codegen.empty() : this.externalDocumentRefs;
     }
 
@@ -82,7 +82,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -93,7 +93,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="licenseListVersion")
       private final @Nullable Output<String> licenseListVersion;
 
-    public Output<String> getLicenseListVersion() {
+    public Output<String> licenseListVersion() {
         return this.licenseListVersion == null ? Codegen.empty() : this.licenseListVersion;
     }
 
@@ -104,7 +104,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -115,7 +115,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

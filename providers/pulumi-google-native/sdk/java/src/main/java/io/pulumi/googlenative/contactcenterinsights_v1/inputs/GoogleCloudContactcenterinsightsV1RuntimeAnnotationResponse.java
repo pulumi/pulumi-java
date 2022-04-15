@@ -30,7 +30,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="annotationId", required=true)
       private final String annotationId;
 
-    public String getAnnotationId() {
+    public String annotationId() {
         return this.annotationId;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="answerFeedback", required=true)
       private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
 
-    public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse getAnswerFeedback() {
+    public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback() {
         return this.answerFeedback;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="articleSuggestion", required=true)
       private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
 
-    public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse getArticleSuggestion() {
+    public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion() {
         return this.articleSuggestion;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="dialogflowInteraction", required=true)
       private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
 
-    public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse getDialogflowInteraction() {
+    public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction() {
         return this.dialogflowInteraction;
     }
 
@@ -85,7 +85,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="endBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
 
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getEndBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary() {
         return this.endBoundary;
     }
 
@@ -96,7 +96,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="faqAnswer", required=true)
       private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
 
-    public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse getFaqAnswer() {
+    public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer() {
         return this.faqAnswer;
     }
 
@@ -107,7 +107,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="smartComposeSuggestion", required=true)
       private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
 
-    public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse getSmartComposeSuggestion() {
+    public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion() {
         return this.smartComposeSuggestion;
     }
 
@@ -118,7 +118,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="smartReply", required=true)
       private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
 
-    public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse getSmartReply() {
+    public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply() {
         return this.smartReply;
     }
 
@@ -129,7 +129,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="startBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getStartBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary() {
         return this.startBoundary;
     }
 

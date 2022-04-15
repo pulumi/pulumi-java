@@ -32,14 +32,14 @@ public final class SchedulingConfigResponse {
      * Defines whether the node is preemptible.
      * 
     */
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
     /**
      * Whether the node is created under a reservation.
      * 
     */
-    public Boolean getReserved() {
+    public Boolean reserved() {
         return this.reserved;
     }
 

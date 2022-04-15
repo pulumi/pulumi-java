@@ -23,7 +23,7 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
     @Import(name="majorVersion", required=true)
       private final Integer majorVersion;
 
-    public Integer getMajorVersion() {
+    public Integer majorVersion() {
         return this.majorVersion;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
     @Import(name="minorVersion", required=true)
       private final Integer minorVersion;
 
-    public Integer getMinorVersion() {
+    public Integer minorVersion() {
         return this.minorVersion;
     }
 

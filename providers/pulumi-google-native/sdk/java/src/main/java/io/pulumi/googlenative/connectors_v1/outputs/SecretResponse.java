@@ -24,7 +24,7 @@ public final class SecretResponse {
      * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      * 
     */
-    public String getSecretVersion() {
+    public String secretVersion() {
         return this.secretVersion;
     }
 

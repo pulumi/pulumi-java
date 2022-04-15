@@ -24,7 +24,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -35,7 +35,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -46,7 +46,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final NetworkResponse network;
 
-    public NetworkResponse getNetwork() {
+    public NetworkResponse network() {
         return this.network;
     }
 
@@ -57,7 +57,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 

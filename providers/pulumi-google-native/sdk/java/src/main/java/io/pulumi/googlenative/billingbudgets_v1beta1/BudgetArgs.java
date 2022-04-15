@@ -27,7 +27,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allUpdatesRule")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> getAllUpdatesRule() {
+    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule() {
         return this.allUpdatesRule == null ? Codegen.empty() : this.allUpdatesRule;
     }
 
@@ -38,14 +38,14 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
       private final Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> getAmount() {
+    public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount() {
         return this.amount;
     }
 
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -56,7 +56,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="budgetFilter")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> getBudgetFilter() {
+    public Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter() {
         return this.budgetFilter == null ? Codegen.empty() : this.budgetFilter;
     }
 
@@ -67,7 +67,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -78,7 +78,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -89,7 +89,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholdRules")
       private final @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
-    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> getThresholdRules() {
+    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules() {
         return this.thresholdRules == null ? Codegen.empty() : this.thresholdRules;
     }
 

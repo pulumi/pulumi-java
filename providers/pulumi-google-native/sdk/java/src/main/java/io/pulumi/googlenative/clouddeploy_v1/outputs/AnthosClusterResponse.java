@@ -24,7 +24,7 @@ public final class AnthosClusterResponse {
      * Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
      * 
     */
-    public String getMembership() {
+    public String membership() {
         return this.membership;
     }
 

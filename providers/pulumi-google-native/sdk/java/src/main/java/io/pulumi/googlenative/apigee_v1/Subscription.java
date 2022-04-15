@@ -32,7 +32,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Name of the API product for which the developer is purchasing a subscription.
      * 
      */
-    public Output<String> getApiproduct() {
+    public Output<String> apiproduct() {
         return this.apiproduct;
     }
     /**
@@ -46,7 +46,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Time when the API product subscription was created in milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -60,7 +60,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Time when the API product subscription ends in milliseconds since epoch.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -74,7 +74,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Time when the API product subscription was last modified in milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -88,7 +88,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Name of the API product subscription.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Time when the API product subscription starts in milliseconds since epoch.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

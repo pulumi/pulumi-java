@@ -23,7 +23,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -34,7 +34,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeToRetire", required=true)
       private final String timeToRetire;
 
-    public String getTimeToRetire() {
+    public String timeToRetire() {
         return this.timeToRetire;
     }
 
@@ -45,7 +45,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
     @Import(name="testIssues", required=true)
       private final List<TestIssueResponse> testIssues;
 
-    public List<TestIssueResponse> getTestIssues() {
+    public List<TestIssueResponse> testIssues() {
         return this.testIssues;
     }
 
@@ -38,7 +38,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
     @Import(name="testSuiteOverviews", required=true)
       private final List<TestSuiteOverviewResponse> testSuiteOverviews;
 
-    public List<TestSuiteOverviewResponse> getTestSuiteOverviews() {
+    public List<TestSuiteOverviewResponse> testSuiteOverviews() {
         return this.testSuiteOverviews;
     }
 
@@ -49,7 +49,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
     @Import(name="testTiming", required=true)
       private final TestTimingResponse testTiming;
 
-    public TestTimingResponse getTestTiming() {
+    public TestTimingResponse testTiming() {
         return this.testTiming;
     }
 
@@ -60,7 +60,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
     @Import(name="toolExecution", required=true)
       private final ToolExecutionResponse toolExecution;
 
-    public ToolExecutionResponse getToolExecution() {
+    public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
 

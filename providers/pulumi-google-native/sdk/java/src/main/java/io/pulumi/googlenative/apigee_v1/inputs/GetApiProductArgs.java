@@ -15,14 +15,14 @@ public final class GetApiProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiproductId", required=true)
       private final String apiproductId;
 
-    public String getApiproductId() {
+    public String apiproductId() {
         return this.apiproductId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

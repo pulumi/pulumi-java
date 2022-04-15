@@ -27,7 +27,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -38,7 +38,7 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType")
       private final @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
 
-    public Output<CloudRunConfigLoadBalancerType> getLoadBalancerType() {
+    public Output<CloudRunConfigLoadBalancerType> loadBalancerType() {
         return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
     }
 

@@ -19,7 +19,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     @Import(name="maxValue", required=true)
       private final String maxValue;
 
-    public String getMaxValue() {
+    public String maxValue() {
         return this.maxValue;
     }
 
@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     @Import(name="minValue", required=true)
       private final String minValue;
 
-    public String getMinValue() {
+    public String minValue() {
         return this.minValue;
     }
 

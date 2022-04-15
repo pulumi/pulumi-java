@@ -25,7 +25,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -36,7 +36,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
     @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
 
-    public LocalObjectReferenceResponse getLocalObjectReference() {
+    public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
     }
 
@@ -47,7 +47,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
     @Import(name="optional", required=true)
       private final Boolean optional;
 
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 

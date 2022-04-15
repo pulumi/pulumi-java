@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="fileUri", required=true)
       private final String fileUri;
 
-    public String getFileUri() {
+    public String fileUri() {
         return this.fileUri;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="height", required=true)
       private final String height;
 
-    public String getHeight() {
+    public String height() {
         return this.height;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     @Import(name="thumbnailUri", required=true)
       private final String thumbnailUri;
 
-    public String getThumbnailUri() {
+    public String thumbnailUri() {
         return this.thumbnailUri;
     }
 

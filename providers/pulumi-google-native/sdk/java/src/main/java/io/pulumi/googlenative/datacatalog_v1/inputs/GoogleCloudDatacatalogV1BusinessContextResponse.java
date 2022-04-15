@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
     @Import(name="contacts", required=true)
       private final GoogleCloudDatacatalogV1ContactsResponse contacts;
 
-    public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
+    public GoogleCloudDatacatalogV1ContactsResponse contacts() {
         return this.contacts;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
     @Import(name="entryOverview", required=true)
       private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
-    public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {
+    public GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview() {
         return this.entryOverview;
     }
 

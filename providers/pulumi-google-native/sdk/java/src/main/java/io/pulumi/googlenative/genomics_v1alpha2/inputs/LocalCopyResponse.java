@@ -23,7 +23,7 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disk", required=true)
       private final String disk;
 
-    public String getDisk() {
+    public String disk() {
         return this.disk;
     }
 
@@ -34,7 +34,7 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

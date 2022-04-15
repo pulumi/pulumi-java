@@ -17,14 +17,14 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="license", required=true)
       private final String license;
 
-    public String getLicense() {
+    public String license() {
         return this.license;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

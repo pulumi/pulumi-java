@@ -27,7 +27,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -38,7 +38,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -49,7 +49,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<SoftwareRecipeStepExtractArchiveType> type;
 
-    public Output<SoftwareRecipeStepExtractArchiveType> getType() {
+    public Output<SoftwareRecipeStepExtractArchiveType> type() {
         return this.type;
     }
 

@@ -25,14 +25,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
+    public Output<String> collectionId() {
         return this.collectionId == null ? Codegen.empty() : this.collectionId;
     }
 
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -43,7 +43,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
-    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
+    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -54,14 +54,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,7 +72,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<IndexState> state;
 
-    public Output<IndexState> getState() {
+    public Output<IndexState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

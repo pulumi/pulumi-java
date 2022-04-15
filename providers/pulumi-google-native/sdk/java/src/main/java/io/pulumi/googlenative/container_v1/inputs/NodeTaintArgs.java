@@ -27,7 +27,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effect")
       private final @Nullable Output<NodeTaintEffect> effect;
 
-    public Output<NodeTaintEffect> getEffect() {
+    public Output<NodeTaintEffect> effect() {
         return this.effect == null ? Codegen.empty() : this.effect;
     }
 
@@ -38,7 +38,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -49,7 +49,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

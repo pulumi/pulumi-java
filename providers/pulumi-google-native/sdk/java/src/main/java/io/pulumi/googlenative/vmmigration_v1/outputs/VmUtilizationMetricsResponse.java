@@ -75,56 +75,56 @@ public final class VmUtilizationMetricsResponse {
      * Average CPU usage, percent.
      * 
     */
-    public Integer getCpuAveragePercent() {
+    public Integer cpuAveragePercent() {
         return this.cpuAveragePercent;
     }
     /**
      * Max CPU usage, percent.
      * 
     */
-    public Integer getCpuMaxPercent() {
+    public Integer cpuMaxPercent() {
         return this.cpuMaxPercent;
     }
     /**
      * Average disk IO rate, in kilobytes per second.
      * 
     */
-    public String getDiskIoRateAverageKbps() {
+    public String diskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
     }
     /**
      * Max disk IO rate, in kilobytes per second.
      * 
     */
-    public String getDiskIoRateMaxKbps() {
+    public String diskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
     }
     /**
      * Average memory usage, percent.
      * 
     */
-    public Integer getMemoryAveragePercent() {
+    public Integer memoryAveragePercent() {
         return this.memoryAveragePercent;
     }
     /**
      * Max memory usage, percent.
      * 
     */
-    public Integer getMemoryMaxPercent() {
+    public Integer memoryMaxPercent() {
         return this.memoryMaxPercent;
     }
     /**
      * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
     */
-    public String getNetworkThroughputAverageKbps() {
+    public String networkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
     }
     /**
      * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
      * 
     */
-    public String getNetworkThroughputMaxKbps() {
+    public String networkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
     }
 

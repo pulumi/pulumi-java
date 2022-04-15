@@ -28,7 +28,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     @Import(name="collection")
       private final @Nullable Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection == null ? Codegen.empty() : this.collection;
     }
 
@@ -39,7 +39,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     @Import(name="methodMap")
       private final @Nullable Output<MethodMapArgs> methodMap;
 
-    public Output<MethodMapArgs> getMethodMap() {
+    public Output<MethodMapArgs> methodMap() {
         return this.methodMap == null ? Codegen.empty() : this.methodMap;
     }
 
@@ -50,7 +50,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> getOptions() {
+    public Output<OptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 

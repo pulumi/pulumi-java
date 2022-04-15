@@ -28,7 +28,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="phraseMatchRules")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
-    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules() {
         return this.phraseMatchRules == null ? Codegen.empty() : this.phraseMatchRules;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="type", required=true)
       private final Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
-    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {
+    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type() {
         return this.type;
     }
 

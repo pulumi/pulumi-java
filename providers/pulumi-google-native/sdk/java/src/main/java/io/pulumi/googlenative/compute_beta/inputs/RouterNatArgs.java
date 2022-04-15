@@ -34,7 +34,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drainNatIps")
       private final @Nullable Output<List<String>> drainNatIps;
 
-    public Output<List<String>> getDrainNatIps() {
+    public Output<List<String>> drainNatIps() {
         return this.drainNatIps == null ? Codegen.empty() : this.drainNatIps;
     }
 
@@ -45,14 +45,14 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDynamicPortAllocation")
       private final @Nullable Output<Boolean> enableDynamicPortAllocation;
 
-    public Output<Boolean> getEnableDynamicPortAllocation() {
+    public Output<Boolean> enableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation == null ? Codegen.empty() : this.enableDynamicPortAllocation;
     }
 
     @Import(name="enableEndpointIndependentMapping")
       private final @Nullable Output<Boolean> enableEndpointIndependentMapping;
 
-    public Output<Boolean> getEnableEndpointIndependentMapping() {
+    public Output<Boolean> enableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping == null ? Codegen.empty() : this.enableEndpointIndependentMapping;
     }
 
@@ -63,7 +63,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="icmpIdleTimeoutSec")
       private final @Nullable Output<Integer> icmpIdleTimeoutSec;
 
-    public Output<Integer> getIcmpIdleTimeoutSec() {
+    public Output<Integer> icmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec == null ? Codegen.empty() : this.icmpIdleTimeoutSec;
     }
 
@@ -74,7 +74,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
-    public Output<RouterNatLogConfigArgs> getLogConfig() {
+    public Output<RouterNatLogConfigArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -85,7 +85,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPortsPerVm")
       private final @Nullable Output<Integer> maxPortsPerVm;
 
-    public Output<Integer> getMaxPortsPerVm() {
+    public Output<Integer> maxPortsPerVm() {
         return this.maxPortsPerVm == null ? Codegen.empty() : this.maxPortsPerVm;
     }
 
@@ -96,7 +96,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minPortsPerVm")
       private final @Nullable Output<Integer> minPortsPerVm;
 
-    public Output<Integer> getMinPortsPerVm() {
+    public Output<Integer> minPortsPerVm() {
         return this.minPortsPerVm == null ? Codegen.empty() : this.minPortsPerVm;
     }
 
@@ -107,7 +107,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -118,7 +118,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natIpAllocateOption")
       private final @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption;
 
-    public Output<RouterNatNatIpAllocateOption> getNatIpAllocateOption() {
+    public Output<RouterNatNatIpAllocateOption> natIpAllocateOption() {
         return this.natIpAllocateOption == null ? Codegen.empty() : this.natIpAllocateOption;
     }
 
@@ -129,7 +129,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natIps")
       private final @Nullable Output<List<String>> natIps;
 
-    public Output<List<String>> getNatIps() {
+    public Output<List<String>> natIps() {
         return this.natIps == null ? Codegen.empty() : this.natIps;
     }
 
@@ -140,7 +140,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<RouterNatRuleArgs>> rules;
 
-    public Output<List<RouterNatRuleArgs>> getRules() {
+    public Output<List<RouterNatRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -151,7 +151,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSubnetworkIpRangesToNat")
       private final @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
 
-    public Output<RouterNatSourceSubnetworkIpRangesToNat> getSourceSubnetworkIpRangesToNat() {
+    public Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat == null ? Codegen.empty() : this.sourceSubnetworkIpRangesToNat;
     }
 
@@ -162,7 +162,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetworks")
       private final @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks;
 
-    public Output<List<RouterNatSubnetworkToNatArgs>> getSubnetworks() {
+    public Output<List<RouterNatSubnetworkToNatArgs>> subnetworks() {
         return this.subnetworks == null ? Codegen.empty() : this.subnetworks;
     }
 
@@ -173,7 +173,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpEstablishedIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
 
-    public Output<Integer> getTcpEstablishedIdleTimeoutSec() {
+    public Output<Integer> tcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec == null ? Codegen.empty() : this.tcpEstablishedIdleTimeoutSec;
     }
 
@@ -184,7 +184,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpTimeWaitTimeoutSec")
       private final @Nullable Output<Integer> tcpTimeWaitTimeoutSec;
 
-    public Output<Integer> getTcpTimeWaitTimeoutSec() {
+    public Output<Integer> tcpTimeWaitTimeoutSec() {
         return this.tcpTimeWaitTimeoutSec == null ? Codegen.empty() : this.tcpTimeWaitTimeoutSec;
     }
 
@@ -195,7 +195,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpTransitoryIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
 
-    public Output<Integer> getTcpTransitoryIdleTimeoutSec() {
+    public Output<Integer> tcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec == null ? Codegen.empty() : this.tcpTransitoryIdleTimeoutSec;
     }
 
@@ -206,7 +206,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="udpIdleTimeoutSec")
       private final @Nullable Output<Integer> udpIdleTimeoutSec;
 
-    public Output<Integer> getUdpIdleTimeoutSec() {
+    public Output<Integer> udpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec == null ? Codegen.empty() : this.udpIdleTimeoutSec;
     }
 

@@ -30,7 +30,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -52,7 +52,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -63,7 +63,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionGracePeriodSeconds")
       private final @Nullable Output<Integer> deletionGracePeriodSeconds;
 
-    public Output<Integer> getDeletionGracePeriodSeconds() {
+    public Output<Integer> deletionGracePeriodSeconds() {
         return this.deletionGracePeriodSeconds == null ? Codegen.empty() : this.deletionGracePeriodSeconds;
     }
 
@@ -74,7 +74,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionTimestamp")
       private final @Nullable Output<String> deletionTimestamp;
 
-    public Output<String> getDeletionTimestamp() {
+    public Output<String> deletionTimestamp() {
         return this.deletionTimestamp == null ? Codegen.empty() : this.deletionTimestamp;
     }
 
@@ -85,7 +85,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="finalizers")
       private final @Nullable Output<List<String>> finalizers;
 
-    public Output<List<String>> getFinalizers() {
+    public Output<List<String>> finalizers() {
         return this.finalizers == null ? Codegen.empty() : this.finalizers;
     }
 
@@ -96,7 +96,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generateName")
       private final @Nullable Output<String> generateName;
 
-    public Output<String> getGenerateName() {
+    public Output<String> generateName() {
         return this.generateName == null ? Codegen.empty() : this.generateName;
     }
 
@@ -107,7 +107,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -118,7 +118,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -129,7 +129,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -140,7 +140,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -151,7 +151,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerReferences")
       private final @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
 
-    public Output<List<OwnerReferenceArgs>> getOwnerReferences() {
+    public Output<List<OwnerReferenceArgs>> ownerReferences() {
         return this.ownerReferences == null ? Codegen.empty() : this.ownerReferences;
     }
 
@@ -162,7 +162,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -173,7 +173,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -184,7 +184,7 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

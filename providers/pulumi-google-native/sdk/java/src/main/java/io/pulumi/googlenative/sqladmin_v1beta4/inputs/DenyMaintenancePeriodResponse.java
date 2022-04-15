@@ -23,7 +23,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
     @Import(name="endDate", required=true)
       private final String endDate;
 
-    public String getEndDate() {
+    public String endDate() {
         return this.endDate;
     }
 
@@ -34,7 +34,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
     @Import(name="startDate", required=true)
       private final String startDate;
 
-    public String getStartDate() {
+    public String startDate() {
         return this.startDate;
     }
 
@@ -45,7 +45,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
     @Import(name="time", required=true)
       private final String time;
 
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

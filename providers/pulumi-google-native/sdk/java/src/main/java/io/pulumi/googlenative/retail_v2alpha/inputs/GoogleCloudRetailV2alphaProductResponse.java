@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="attributes", required=true)
       private final Map<String,String> attributes;
 
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes;
     }
 
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="audience", required=true)
       private final GoogleCloudRetailV2alphaAudienceResponse audience;
 
-    public GoogleCloudRetailV2alphaAudienceResponse getAudience() {
+    public GoogleCloudRetailV2alphaAudienceResponse audience() {
         return this.audience;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="availability", required=true)
       private final String availability;
 
-    public String getAvailability() {
+    public String availability() {
         return this.availability;
     }
 
@@ -66,7 +66,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="availableQuantity", required=true)
       private final Integer availableQuantity;
 
-    public Integer getAvailableQuantity() {
+    public Integer availableQuantity() {
         return this.availableQuantity;
     }
 
@@ -77,7 +77,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="availableTime", required=true)
       private final String availableTime;
 
-    public String getAvailableTime() {
+    public String availableTime() {
         return this.availableTime;
     }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="brands", required=true)
       private final List<String> brands;
 
-    public List<String> getBrands() {
+    public List<String> brands() {
         return this.brands;
     }
 
@@ -99,7 +99,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="categories", required=true)
       private final List<String> categories;
 
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
 
@@ -110,7 +110,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="collectionMemberIds", required=true)
       private final List<String> collectionMemberIds;
 
-    public List<String> getCollectionMemberIds() {
+    public List<String> collectionMemberIds() {
         return this.collectionMemberIds;
     }
 
@@ -121,7 +121,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="colorInfo", required=true)
       private final GoogleCloudRetailV2alphaColorInfoResponse colorInfo;
 
-    public GoogleCloudRetailV2alphaColorInfoResponse getColorInfo() {
+    public GoogleCloudRetailV2alphaColorInfoResponse colorInfo() {
         return this.colorInfo;
     }
 
@@ -132,7 +132,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="conditions", required=true)
       private final List<String> conditions;
 
-    public List<String> getConditions() {
+    public List<String> conditions() {
         return this.conditions;
     }
 
@@ -143,7 +143,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -154,7 +154,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="expireTime", required=true)
       private final String expireTime;
 
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 
@@ -165,7 +165,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="fulfillmentInfo", required=true)
       private final List<GoogleCloudRetailV2alphaFulfillmentInfoResponse> fulfillmentInfo;
 
-    public List<GoogleCloudRetailV2alphaFulfillmentInfoResponse> getFulfillmentInfo() {
+    public List<GoogleCloudRetailV2alphaFulfillmentInfoResponse> fulfillmentInfo() {
         return this.fulfillmentInfo;
     }
 
@@ -176,7 +176,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="gtin", required=true)
       private final String gtin;
 
-    public String getGtin() {
+    public String gtin() {
         return this.gtin;
     }
 
@@ -187,7 +187,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="images", required=true)
       private final List<GoogleCloudRetailV2alphaImageResponse> images;
 
-    public List<GoogleCloudRetailV2alphaImageResponse> getImages() {
+    public List<GoogleCloudRetailV2alphaImageResponse> images() {
         return this.images;
     }
 
@@ -198,7 +198,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -209,7 +209,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="materials", required=true)
       private final List<String> materials;
 
-    public List<String> getMaterials() {
+    public List<String> materials() {
         return this.materials;
     }
 
@@ -220,7 +220,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -231,7 +231,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="patterns", required=true)
       private final List<String> patterns;
 
-    public List<String> getPatterns() {
+    public List<String> patterns() {
         return this.patterns;
     }
 
@@ -242,7 +242,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="priceInfo", required=true)
       private final GoogleCloudRetailV2alphaPriceInfoResponse priceInfo;
 
-    public GoogleCloudRetailV2alphaPriceInfoResponse getPriceInfo() {
+    public GoogleCloudRetailV2alphaPriceInfoResponse priceInfo() {
         return this.priceInfo;
     }
 
@@ -253,7 +253,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="primaryProductId", required=true)
       private final String primaryProductId;
 
-    public String getPrimaryProductId() {
+    public String primaryProductId() {
         return this.primaryProductId;
     }
 
@@ -264,7 +264,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="promotions", required=true)
       private final List<GoogleCloudRetailV2alphaPromotionResponse> promotions;
 
-    public List<GoogleCloudRetailV2alphaPromotionResponse> getPromotions() {
+    public List<GoogleCloudRetailV2alphaPromotionResponse> promotions() {
         return this.promotions;
     }
 
@@ -275,7 +275,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="publishTime", required=true)
       private final String publishTime;
 
-    public String getPublishTime() {
+    public String publishTime() {
         return this.publishTime;
     }
 
@@ -286,7 +286,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="rating", required=true)
       private final GoogleCloudRetailV2alphaRatingResponse rating;
 
-    public GoogleCloudRetailV2alphaRatingResponse getRating() {
+    public GoogleCloudRetailV2alphaRatingResponse rating() {
         return this.rating;
     }
 
@@ -297,7 +297,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="retrievableFields", required=true)
       private final String retrievableFields;
 
-    public String getRetrievableFields() {
+    public String retrievableFields() {
         return this.retrievableFields;
     }
 
@@ -308,7 +308,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="sizes", required=true)
       private final List<String> sizes;
 
-    public List<String> getSizes() {
+    public List<String> sizes() {
         return this.sizes;
     }
 
@@ -319,7 +319,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
@@ -330,7 +330,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -341,7 +341,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="ttl", required=true)
       private final String ttl;
 
-    public String getTtl() {
+    public String ttl() {
         return this.ttl;
     }
 
@@ -352,7 +352,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -363,7 +363,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -374,7 +374,7 @@ public final class GoogleCloudRetailV2alphaProductResponse extends io.pulumi.res
     @Import(name="variants", required=true)
       private final List<GoogleCloudRetailV2alphaProductResponse> variants;
 
-    public List<GoogleCloudRetailV2alphaProductResponse> getVariants() {
+    public List<GoogleCloudRetailV2alphaProductResponse> variants() {
         return this.variants;
     }
 

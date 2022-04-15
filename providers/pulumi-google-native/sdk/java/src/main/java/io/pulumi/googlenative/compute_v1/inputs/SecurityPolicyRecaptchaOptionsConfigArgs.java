@@ -22,7 +22,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
     @Import(name="redirectSiteKey")
       private final @Nullable Output<String> redirectSiteKey;
 
-    public Output<String> getRedirectSiteKey() {
+    public Output<String> redirectSiteKey() {
         return this.redirectSiteKey == null ? Codegen.empty() : this.redirectSiteKey;
     }
 

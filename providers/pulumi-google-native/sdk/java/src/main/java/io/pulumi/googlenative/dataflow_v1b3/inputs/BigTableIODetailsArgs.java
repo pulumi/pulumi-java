@@ -26,7 +26,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -37,7 +37,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -48,7 +48,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 

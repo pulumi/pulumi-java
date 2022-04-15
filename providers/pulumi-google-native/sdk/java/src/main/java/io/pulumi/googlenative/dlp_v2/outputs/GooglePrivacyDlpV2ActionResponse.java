@@ -65,42 +65,42 @@ public final class GooglePrivacyDlpV2ActionResponse {
      * Enable email notification for project owners and editors on job's completion/failure.
      * 
     */
-    public GooglePrivacyDlpV2JobNotificationEmailsResponse getJobNotificationEmails() {
+    public GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails() {
         return this.jobNotificationEmails;
     }
     /**
      * Publish a notification to a pubsub topic.
      * 
     */
-    public GooglePrivacyDlpV2PublishToPubSubResponse getPubSub() {
+    public GooglePrivacyDlpV2PublishToPubSubResponse pubSub() {
         return this.pubSub;
     }
     /**
      * Publish findings to Cloud Datahub.
      * 
     */
-    public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse getPublishFindingsToCloudDataCatalog() {
+    public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
     }
     /**
      * Publish summary to Cloud Security Command Center (Alpha).
      * 
     */
-    public GooglePrivacyDlpV2PublishSummaryToCsccResponse getPublishSummaryToCscc() {
+    public GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc() {
         return this.publishSummaryToCscc;
     }
     /**
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
      * 
     */
-    public GooglePrivacyDlpV2PublishToStackdriverResponse getPublishToStackdriver() {
+    public GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver() {
         return this.publishToStackdriver;
     }
     /**
      * Save resulting findings in a provided location.
      * 
     */
-    public GooglePrivacyDlpV2SaveFindingsResponse getSaveFindings() {
+    public GooglePrivacyDlpV2SaveFindingsResponse saveFindings() {
         return this.saveFindings;
     }
 

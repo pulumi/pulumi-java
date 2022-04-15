@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     @Import(name="sampler")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
 
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> getSampler() {
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler() {
         return this.sampler == null ? Codegen.empty() : this.sampler;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     @Import(name="samplingRate")
       private final @Nullable Output<Double> samplingRate;
 
-    public Output<Double> getSamplingRate() {
+    public Output<Double> samplingRate() {
         return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 

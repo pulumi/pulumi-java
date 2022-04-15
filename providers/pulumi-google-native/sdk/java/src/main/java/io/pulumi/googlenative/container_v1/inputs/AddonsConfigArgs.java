@@ -34,7 +34,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudRunConfig")
       private final @Nullable Output<CloudRunConfigArgs> cloudRunConfig;
 
-    public Output<CloudRunConfigArgs> getCloudRunConfig() {
+    public Output<CloudRunConfigArgs> cloudRunConfig() {
         return this.cloudRunConfig == null ? Codegen.empty() : this.cloudRunConfig;
     }
 
@@ -45,7 +45,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configConnectorConfig")
       private final @Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig;
 
-    public Output<ConfigConnectorConfigArgs> getConfigConnectorConfig() {
+    public Output<ConfigConnectorConfigArgs> configConnectorConfig() {
         return this.configConnectorConfig == null ? Codegen.empty() : this.configConnectorConfig;
     }
 
@@ -56,7 +56,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsCacheConfig")
       private final @Nullable Output<DnsCacheConfigArgs> dnsCacheConfig;
 
-    public Output<DnsCacheConfigArgs> getDnsCacheConfig() {
+    public Output<DnsCacheConfigArgs> dnsCacheConfig() {
         return this.dnsCacheConfig == null ? Codegen.empty() : this.dnsCacheConfig;
     }
 
@@ -67,7 +67,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcePersistentDiskCsiDriverConfig")
       private final @Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
-    public Output<GcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
+    public Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig == null ? Codegen.empty() : this.gcePersistentDiskCsiDriverConfig;
     }
 
@@ -78,7 +78,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcpFilestoreCsiDriverConfig")
       private final @Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
-    public Output<GcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
+    public Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig == null ? Codegen.empty() : this.gcpFilestoreCsiDriverConfig;
     }
 
@@ -89,7 +89,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="horizontalPodAutoscaling")
       private final @Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
-    public Output<HorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
+    public Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling == null ? Codegen.empty() : this.horizontalPodAutoscaling;
     }
 
@@ -100,7 +100,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpLoadBalancing")
       private final @Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing;
 
-    public Output<HttpLoadBalancingArgs> getHttpLoadBalancing() {
+    public Output<HttpLoadBalancingArgs> httpLoadBalancing() {
         return this.httpLoadBalancing == null ? Codegen.empty() : this.httpLoadBalancing;
     }
 
@@ -111,7 +111,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubernetesDashboard")
       private final @Nullable Output<KubernetesDashboardArgs> kubernetesDashboard;
 
-    public Output<KubernetesDashboardArgs> getKubernetesDashboard() {
+    public Output<KubernetesDashboardArgs> kubernetesDashboard() {
         return this.kubernetesDashboard == null ? Codegen.empty() : this.kubernetesDashboard;
     }
 
@@ -122,7 +122,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkPolicyConfig")
       private final @Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig;
 
-    public Output<NetworkPolicyConfigArgs> getNetworkPolicyConfig() {
+    public Output<NetworkPolicyConfigArgs> networkPolicyConfig() {
         return this.networkPolicyConfig == null ? Codegen.empty() : this.networkPolicyConfig;
     }
 

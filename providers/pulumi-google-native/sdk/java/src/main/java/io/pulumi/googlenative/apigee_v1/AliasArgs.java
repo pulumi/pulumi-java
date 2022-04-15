@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -42,14 +42,14 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -60,42 +60,42 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Output<List<Map<String,String>>> getExtensions() {
+    public Output<List<Map<String,String>>> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
     @Import(name="ignoreExpiryValidation")
       private final @Nullable Output<String> ignoreExpiryValidation;
 
-    public Output<String> getIgnoreExpiryValidation() {
+    public Output<String> ignoreExpiryValidation() {
         return this.ignoreExpiryValidation == null ? Codegen.empty() : this.ignoreExpiryValidation;
     }
 
     @Import(name="ignoreNewlineValidation")
       private final @Nullable Output<String> ignoreNewlineValidation;
 
-    public Output<String> getIgnoreNewlineValidation() {
+    public Output<String> ignoreNewlineValidation() {
         return this.ignoreNewlineValidation == null ? Codegen.empty() : this.ignoreNewlineValidation;
     }
 
     @Import(name="keystoreId", required=true)
       private final Output<String> keystoreId;
 
-    public Output<String> getKeystoreId() {
+    public Output<String> keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

@@ -27,7 +27,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<SecretArgs> password;
 
-    public Output<SecretArgs> getPassword() {
+    public Output<SecretArgs> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -38,7 +38,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

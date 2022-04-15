@@ -27,7 +27,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -38,7 +38,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPoint")
       private final @Nullable Output<String> mountPoint;
 
-    public Output<String> getMountPoint() {
+    public Output<String> mountPoint() {
         return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
     }
 
@@ -49,7 +49,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
       private final @Nullable Output<Integer> sizeGb;
 
-    public Output<Integer> getSizeGb() {
+    public Output<Integer> sizeGb() {
         return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 

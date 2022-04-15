@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     @Import(name="context")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     @Import(name="cryptoKey")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
         return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     @Import(name="lowerBoundDays", required=true)
       private final Output<Integer> lowerBoundDays;
 
-    public Output<Integer> getLowerBoundDays() {
+    public Output<Integer> lowerBoundDays() {
         return this.lowerBoundDays;
     }
 
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     @Import(name="upperBoundDays", required=true)
       private final Output<Integer> upperBoundDays;
 
-    public Output<Integer> getUpperBoundDays() {
+    public Output<Integer> upperBoundDays() {
         return this.upperBoundDays;
     }
 

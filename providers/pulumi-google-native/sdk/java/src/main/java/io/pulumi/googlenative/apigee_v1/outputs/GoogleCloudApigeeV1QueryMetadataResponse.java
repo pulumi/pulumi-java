@@ -61,42 +61,42 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
      * Dimensions of the AsyncQuery.
      * 
     */
-    public List<String> getDimensions() {
+    public List<String> dimensions() {
         return this.dimensions;
     }
     /**
      * End timestamp of the query range.
      * 
     */
-    public String getEndTimestamp() {
+    public String endTimestamp() {
         return this.endTimestamp;
     }
     /**
      * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
      * 
     */
-    public List<String> getMetrics() {
+    public List<String> metrics() {
         return this.metrics;
     }
     /**
      * Output format.
      * 
     */
-    public String getOutputFormat() {
+    public String outputFormat() {
         return this.outputFormat;
     }
     /**
      * Start timestamp of the query range.
      * 
     */
-    public String getStartTimestamp() {
+    public String startTimestamp() {
         return this.startTimestamp;
     }
     /**
      * Query GroupBy time unit.
      * 
     */
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
 

@@ -34,14 +34,14 @@ public final class RuntimeMetadataResponse {
      * The parameters for the template.
      * 
     */
-    public List<ParameterMetadataResponse> getParameters() {
+    public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
     /**
      * SDK Info for the template.
      * 
     */
-    public SDKInfoResponse getSdkInfo() {
+    public SDKInfoResponse sdkInfo() {
         return this.sdkInfo;
     }
 

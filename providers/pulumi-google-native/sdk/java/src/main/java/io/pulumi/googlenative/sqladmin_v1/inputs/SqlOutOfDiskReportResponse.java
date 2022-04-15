@@ -24,7 +24,7 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
     @Import(name="sqlMinRecommendedIncreaseSizeGb", required=true)
       private final Integer sqlMinRecommendedIncreaseSizeGb;
 
-    public Integer getSqlMinRecommendedIncreaseSizeGb() {
+    public Integer sqlMinRecommendedIncreaseSizeGb() {
         return this.sqlMinRecommendedIncreaseSizeGb;
     }
 
@@ -35,7 +35,7 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
     @Import(name="sqlOutOfDiskState", required=true)
       private final String sqlOutOfDiskState;
 
-    public String getSqlOutOfDiskState() {
+    public String sqlOutOfDiskState() {
         return this.sqlOutOfDiskState;
     }
 

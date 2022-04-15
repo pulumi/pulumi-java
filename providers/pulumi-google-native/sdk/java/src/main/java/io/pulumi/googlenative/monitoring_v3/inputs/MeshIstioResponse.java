@@ -23,7 +23,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="meshUid", required=true)
       private final String meshUid;
 
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
 
@@ -34,7 +34,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -45,7 +45,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceNamespace", required=true)
       private final String serviceNamespace;
 
-    public String getServiceNamespace() {
+    public String serviceNamespace() {
         return this.serviceNamespace;
     }
 

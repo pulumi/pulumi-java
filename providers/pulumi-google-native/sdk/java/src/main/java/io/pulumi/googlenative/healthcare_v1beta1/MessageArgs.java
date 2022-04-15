@@ -26,21 +26,21 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
@@ -51,14 +51,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageType")
       private final @Nullable Output<String> messageType;
 
-    public Output<String> getMessageType() {
+    public Output<String> messageType() {
         return this.messageType == null ? Codegen.empty() : this.messageType;
     }
 
@@ -80,7 +80,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,14 +91,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="patientIds")
       private final @Nullable Output<List<PatientIdArgs>> patientIds;
 
-    public Output<List<PatientIdArgs>> getPatientIds() {
+    public Output<List<PatientIdArgs>> patientIds() {
         return this.patientIds == null ? Codegen.empty() : this.patientIds;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -109,7 +109,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schematizedData")
       private final @Nullable Output<SchematizedDataArgs> schematizedData;
 
-    public Output<SchematizedDataArgs> getSchematizedData() {
+    public Output<SchematizedDataArgs> schematizedData() {
         return this.schematizedData == null ? Codegen.empty() : this.schematizedData;
     }
 
@@ -120,7 +120,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendFacility")
       private final @Nullable Output<String> sendFacility;
 
-    public Output<String> getSendFacility() {
+    public Output<String> sendFacility() {
         return this.sendFacility == null ? Codegen.empty() : this.sendFacility;
     }
 
@@ -131,7 +131,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendTime")
       private final @Nullable Output<String> sendTime;
 
-    public Output<String> getSendTime() {
+    public Output<String> sendTime() {
         return this.sendTime == null ? Codegen.empty() : this.sendTime;
     }
 

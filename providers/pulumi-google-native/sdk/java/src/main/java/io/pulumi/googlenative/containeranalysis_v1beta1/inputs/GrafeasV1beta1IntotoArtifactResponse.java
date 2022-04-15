@@ -16,14 +16,14 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
     @Import(name="hashes", required=true)
       private final ArtifactHashesResponse hashes;
 
-    public ArtifactHashesResponse getHashes() {
+    public ArtifactHashesResponse hashes() {
         return this.hashes;
     }
 
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

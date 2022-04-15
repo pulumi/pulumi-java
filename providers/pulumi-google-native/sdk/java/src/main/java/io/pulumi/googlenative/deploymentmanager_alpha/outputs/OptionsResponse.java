@@ -50,28 +50,28 @@ public final class OptionsResponse {
      * Options regarding how to thread async requests.
      * 
     */
-    public List<AsyncOptionsResponse> getAsyncOptions() {
+    public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
     /**
      * The mappings that apply for requests.
      * 
     */
-    public List<InputMappingResponse> getInputMappings() {
+    public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
     /**
      * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
      * 
     */
-    public String getNameProperty() {
+    public String nameProperty() {
         return this.nameProperty;
     }
     /**
      * Options for how to validate and process properties on a resource.
      * 
     */
-    public ValidationOptionsResponse getValidationOptions() {
+    public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
 

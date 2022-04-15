@@ -19,14 +19,14 @@ public final class BasicAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
     @Import(name="user", required=true)
       private final String user;
 
-    public String getUser() {
+    public String user() {
         return this.user;
     }
 

@@ -22,7 +22,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="certificateTemplateId", required=true)
       private final Output<String> certificateTemplateId;
 
-    public Output<String> getCertificateTemplateId() {
+    public Output<String> certificateTemplateId() {
         return this.certificateTemplateId;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="identityConstraints")
       private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
-    public Output<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
+    public Output<CertificateIdentityConstraintsArgs> identityConstraints() {
         return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
     }
 
@@ -55,14 +55,14 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
-    public Output<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
+    public Output<CertificateExtensionConstraintsArgs> passthroughExtensions() {
         return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
     }
 
@@ -84,21 +84,21 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     @Import(name="predefinedValues")
       private final @Nullable Output<X509ParametersArgs> predefinedValues;
 
-    public Output<X509ParametersArgs> getPredefinedValues() {
+    public Output<X509ParametersArgs> predefinedValues() {
         return this.predefinedValues == null ? Codegen.empty() : this.predefinedValues;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

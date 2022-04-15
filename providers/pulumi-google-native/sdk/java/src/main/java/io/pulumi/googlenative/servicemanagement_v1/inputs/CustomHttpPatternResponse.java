@@ -23,7 +23,7 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

@@ -29,7 +29,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="backupRetentionSettings")
       private final @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings;
 
-    public Output<BackupRetentionSettingsArgs> getBackupRetentionSettings() {
+    public Output<BackupRetentionSettingsArgs> backupRetentionSettings() {
         return this.backupRetentionSettings == null ? Codegen.empty() : this.backupRetentionSettings;
     }
 
@@ -40,7 +40,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="binaryLogEnabled")
       private final @Nullable Output<Boolean> binaryLogEnabled;
 
-    public Output<Boolean> getBinaryLogEnabled() {
+    public Output<Boolean> binaryLogEnabled() {
         return this.binaryLogEnabled == null ? Codegen.empty() : this.binaryLogEnabled;
     }
 
@@ -51,7 +51,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -62,7 +62,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -73,7 +73,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 
@@ -95,7 +95,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="replicationLogArchivingEnabled")
       private final @Nullable Output<Boolean> replicationLogArchivingEnabled;
 
-    public Output<Boolean> getReplicationLogArchivingEnabled() {
+    public Output<Boolean> replicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled == null ? Codegen.empty() : this.replicationLogArchivingEnabled;
     }
 
@@ -106,7 +106,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -117,7 +117,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="transactionLogRetentionDays")
       private final @Nullable Output<Integer> transactionLogRetentionDays;
 
-    public Output<Integer> getTransactionLogRetentionDays() {
+    public Output<Integer> transactionLogRetentionDays() {
         return this.transactionLogRetentionDays == null ? Codegen.empty() : this.transactionLogRetentionDays;
     }
 

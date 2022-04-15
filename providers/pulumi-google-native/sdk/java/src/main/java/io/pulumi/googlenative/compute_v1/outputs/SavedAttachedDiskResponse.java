@@ -135,112 +135,112 @@ public final class SavedAttachedDiskResponse {
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
     */
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
      * Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
      * 
     */
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
     /**
      * Specifies the name of the disk attached to the source instance.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * The encryption key for the disk.
      * 
     */
-    public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
+    public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
     /**
      * The size of the disk in base-2 GB.
      * 
     */
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * URL of the disk type resource. For example: projects/project /zones/zone/diskTypes/pd-standard or pd-ssd
      * 
     */
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
     /**
      * A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
      * 
     */
-    public List<GuestOsFeatureResponse> getGuestOsFeatures() {
+    public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
     /**
      * Specifies zero-based index of the disk that is attached to the source instance.
      * 
     */
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
      * 
     */
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
     /**
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Any valid publicly visible licenses.
      * 
     */
-    public List<String> getLicenses() {
+    public List<String> licenses() {
         return this.licenses;
     }
     /**
      * The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
     /**
      * Specifies a URL of the disk attached to the source instance.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * A size of the storage used by the disk's snapshot by this machine image.
      * 
     */
-    public String getStorageBytes() {
+    public String storageBytes() {
         return this.storageBytes;
     }
     /**
      * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
      * 
     */
-    public String getStorageBytesStatus() {
+    public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
     /**
      * Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

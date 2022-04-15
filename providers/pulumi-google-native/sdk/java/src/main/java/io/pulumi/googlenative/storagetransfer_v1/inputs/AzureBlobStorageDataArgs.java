@@ -27,7 +27,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="azureCredentials", required=true)
       private final Output<AzureCredentialsArgs> azureCredentials;
 
-    public Output<AzureCredentialsArgs> getAzureCredentials() {
+    public Output<AzureCredentialsArgs> azureCredentials() {
         return this.azureCredentials;
     }
 
@@ -38,7 +38,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -49,7 +49,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -60,7 +60,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount;
     }
 

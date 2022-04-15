@@ -32,14 +32,14 @@ public final class RouterApplianceInstanceResponse {
      * The IP address on the VM to use for peering.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * The URI of the VM.
      * 
     */
-    public String getVirtualMachine() {
+    public String virtualMachine() {
         return this.virtualMachine;
     }
 

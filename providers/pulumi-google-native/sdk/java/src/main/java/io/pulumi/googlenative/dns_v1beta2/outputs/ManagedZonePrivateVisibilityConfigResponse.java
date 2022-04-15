@@ -38,17 +38,17 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      * The list of Google Kubernetes Engine clusters that can see this zone.
      * 
     */
-    public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> getGkeClusters() {
+    public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters() {
         return this.gkeClusters;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The list of VPC networks that can see this zone.
      * 
     */
-    public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
+    public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }
 

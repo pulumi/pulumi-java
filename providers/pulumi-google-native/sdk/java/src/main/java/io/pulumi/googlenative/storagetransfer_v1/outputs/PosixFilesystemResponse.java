@@ -24,7 +24,7 @@ public final class PosixFilesystemResponse {
      * Root directory path to the filesystem.
      * 
     */
-    public String getRootDirectory() {
+    public String rootDirectory() {
         return this.rootDirectory;
     }
 

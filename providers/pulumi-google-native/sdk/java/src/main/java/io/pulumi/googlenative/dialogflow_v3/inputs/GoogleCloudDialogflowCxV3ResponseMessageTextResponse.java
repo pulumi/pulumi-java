@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
     @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
 
-    public Boolean getAllowPlaybackInterruption() {
+    public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
     @Import(name="text", required=true)
       private final List<String> text;
 
-    public List<String> getText() {
+    public List<String> text() {
         return this.text;
     }
 

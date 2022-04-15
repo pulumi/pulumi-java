@@ -29,7 +29,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
+    public Output<List<AcceleratorConfigArgs>> guestAccelerators() {
         return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
@@ -40,7 +40,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="localSsds")
       private final @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
-    public Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> getLocalSsds() {
+    public Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds() {
         return this.localSsds == null ? Codegen.empty() : this.localSsds;
     }
 
@@ -51,7 +51,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
+    public Output<String> locationHint() {
         return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
@@ -62,7 +62,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -73,7 +73,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 

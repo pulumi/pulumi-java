@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse extends io.pulumi.r
     @Import(name="colorFamilies", required=true)
       private final List<String> colorFamilies;
 
-    public List<String> getColorFamilies() {
+    public List<String> colorFamilies() {
         return this.colorFamilies;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse extends io.pulumi.r
     @Import(name="colors", required=true)
       private final List<String> colors;
 
-    public List<String> getColors() {
+    public List<String> colors() {
         return this.colors;
     }
 

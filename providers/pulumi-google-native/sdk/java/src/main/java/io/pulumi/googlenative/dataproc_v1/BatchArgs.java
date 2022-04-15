@@ -25,7 +25,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="batchId")
       private final @Nullable Output<String> batchId;
 
-    public Output<String> getBatchId() {
+    public Output<String> batchId() {
         return this.batchId == null ? Codegen.empty() : this.batchId;
     }
 
@@ -36,7 +36,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentConfig")
       private final @Nullable Output<EnvironmentConfigArgs> environmentConfig;
 
-    public Output<EnvironmentConfigArgs> getEnvironmentConfig() {
+    public Output<EnvironmentConfigArgs> environmentConfig() {
         return this.environmentConfig == null ? Codegen.empty() : this.environmentConfig;
     }
 
@@ -47,21 +47,21 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,14 +72,14 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pysparkBatch")
       private final @Nullable Output<PySparkBatchArgs> pysparkBatch;
 
-    public Output<PySparkBatchArgs> getPysparkBatch() {
+    public Output<PySparkBatchArgs> pysparkBatch() {
         return this.pysparkBatch == null ? Codegen.empty() : this.pysparkBatch;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -90,7 +90,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeConfig")
       private final @Nullable Output<RuntimeConfigArgs> runtimeConfig;
 
-    public Output<RuntimeConfigArgs> getRuntimeConfig() {
+    public Output<RuntimeConfigArgs> runtimeConfig() {
         return this.runtimeConfig == null ? Codegen.empty() : this.runtimeConfig;
     }
 
@@ -101,7 +101,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkBatch")
       private final @Nullable Output<SparkBatchArgs> sparkBatch;
 
-    public Output<SparkBatchArgs> getSparkBatch() {
+    public Output<SparkBatchArgs> sparkBatch() {
         return this.sparkBatch == null ? Codegen.empty() : this.sparkBatch;
     }
 
@@ -112,7 +112,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkRBatch")
       private final @Nullable Output<SparkRBatchArgs> sparkRBatch;
 
-    public Output<SparkRBatchArgs> getSparkRBatch() {
+    public Output<SparkRBatchArgs> sparkRBatch() {
         return this.sparkRBatch == null ? Codegen.empty() : this.sparkRBatch;
     }
 
@@ -123,7 +123,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkSqlBatch")
       private final @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
 
-    public Output<SparkSqlBatchArgs> getSparkSqlBatch() {
+    public Output<SparkSqlBatchArgs> sparkSqlBatch() {
         return this.sparkSqlBatch == null ? Codegen.empty() : this.sparkSqlBatch;
     }
 

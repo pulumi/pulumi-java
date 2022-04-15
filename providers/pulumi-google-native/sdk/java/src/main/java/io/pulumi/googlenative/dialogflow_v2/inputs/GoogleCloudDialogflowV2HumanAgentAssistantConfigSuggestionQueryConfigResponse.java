@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="confidenceThreshold", required=true)
       private final Double confidenceThreshold;
 
-    public Double getConfidenceThreshold() {
+    public Double confidenceThreshold() {
         return this.confidenceThreshold;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="contextFilterSettings", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse getContextFilterSettings() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings() {
         return this.contextFilterSettings;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="dialogflowQuerySource", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse getDialogflowQuerySource() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource() {
         return this.dialogflowQuerySource;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="documentQuerySource", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse getDocumentQuerySource() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource() {
         return this.documentQuerySource;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="knowledgeBaseQuerySource", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource;
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse getKnowledgeBaseQuerySource() {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource() {
         return this.knowledgeBaseQuerySource;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="maxResults", required=true)
       private final Integer maxResults;
 
-    public Integer getMaxResults() {
+    public Integer maxResults() {
         return this.maxResults;
     }
 

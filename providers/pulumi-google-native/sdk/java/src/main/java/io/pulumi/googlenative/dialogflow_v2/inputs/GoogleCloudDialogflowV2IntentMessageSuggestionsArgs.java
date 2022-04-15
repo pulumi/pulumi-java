@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends i
     @Import(name="suggestions", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> getSuggestions() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions() {
         return this.suggestions;
     }
 

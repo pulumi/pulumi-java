@@ -40,21 +40,21 @@ public final class VirtualMachineResponse {
      * The unique identifier of the Managed Compute Engine instance.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Managed Compute Engine instance.
      * 
     */
-    public String getInstanceName() {
+    public String instanceName() {
         return this.instanceName;
     }
     /**
      * Virtual Machine configuration settings.
      * 
     */
-    public VirtualMachineConfigResponse getVirtualMachineConfig() {
+    public VirtualMachineConfigResponse virtualMachineConfig() {
         return this.virtualMachineConfig;
     }
 

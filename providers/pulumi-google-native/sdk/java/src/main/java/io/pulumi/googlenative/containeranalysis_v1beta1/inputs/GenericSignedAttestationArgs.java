@@ -29,7 +29,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="contentType")
       private final @Nullable Output<GenericSignedAttestationContentType> contentType;
 
-    public Output<GenericSignedAttestationContentType> getContentType() {
+    public Output<GenericSignedAttestationContentType> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -40,7 +40,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="serializedPayload")
       private final @Nullable Output<String> serializedPayload;
 
-    public Output<String> getSerializedPayload() {
+    public Output<String> serializedPayload() {
         return this.serializedPayload == null ? Codegen.empty() : this.serializedPayload;
     }
 
@@ -51,7 +51,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Output<List<SignatureArgs>> getSignatures() {
+    public Output<List<SignatureArgs>> signatures() {
         return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 

@@ -24,7 +24,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
 
@@ -35,7 +35,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

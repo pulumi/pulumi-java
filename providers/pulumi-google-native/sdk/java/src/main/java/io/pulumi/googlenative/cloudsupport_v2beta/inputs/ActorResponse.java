@@ -24,7 +24,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -46,7 +46,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="googleSupport", required=true)
       private final Boolean googleSupport;
 
-    public Boolean getGoogleSupport() {
+    public Boolean googleSupport() {
         return this.googleSupport;
     }
 
@@ -57,7 +57,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

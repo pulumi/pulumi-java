@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

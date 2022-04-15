@@ -110,84 +110,84 @@ public final class GetConnectionProfileResult {
      * The create time of the resource.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Forward SSH tunnel connectivity.
      * 
     */
-    public ForwardSshTunnelConnectivityResponse getForwardSshConnectivity() {
+    public ForwardSshTunnelConnectivityResponse forwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
     /**
      * Cloud Storage ConnectionProfile configuration.
      * 
     */
-    public GcsProfileResponse getGcsProfile() {
+    public GcsProfileResponse gcsProfile() {
         return this.gcsProfile;
     }
     /**
      * Labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * MySQL ConnectionProfile configuration.
      * 
     */
-    public MysqlProfileResponse getMysqlProfile() {
+    public MysqlProfileResponse mysqlProfile() {
         return this.mysqlProfile;
     }
     /**
      * The resource's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * No connectivity option chosen.
      * 
     */
-    public NoConnectivitySettingsResponse getNoConnectivity() {
+    public NoConnectivitySettingsResponse noConnectivity() {
         return this.noConnectivity;
     }
     /**
      * Oracle ConnectionProfile configuration.
      * 
     */
-    public OracleProfileResponse getOracleProfile() {
+    public OracleProfileResponse oracleProfile() {
         return this.oracleProfile;
     }
     /**
      * Private connectivity.
      * 
     */
-    public PrivateConnectivityResponse getPrivateConnectivity() {
+    public PrivateConnectivityResponse privateConnectivity() {
         return this.privateConnectivity;
     }
     /**
      * Static Service IP connectivity.
      * 
     */
-    public StaticServiceIpConnectivityResponse getStaticServiceIpConnectivity() {
+    public StaticServiceIpConnectivityResponse staticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
     /**
      * The update time of the resource.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

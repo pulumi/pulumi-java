@@ -41,21 +41,21 @@ public final class GetCustomClassResult {
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
      * 
     */
-    public String getCustomClassId() {
+    public String customClassId() {
         return this.customClassId;
     }
     /**
      * A collection of class items.
      * 
     */
-    public List<ClassItemResponse> getItems() {
+    public List<ClassItemResponse> items() {
         return this.items;
     }
     /**
      * The resource name of the custom class.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

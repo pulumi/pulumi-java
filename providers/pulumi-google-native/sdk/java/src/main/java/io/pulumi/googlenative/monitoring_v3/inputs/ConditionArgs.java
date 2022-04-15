@@ -30,7 +30,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionAbsent")
       private final @Nullable Output<MetricAbsenceArgs> conditionAbsent;
 
-    public Output<MetricAbsenceArgs> getConditionAbsent() {
+    public Output<MetricAbsenceArgs> conditionAbsent() {
         return this.conditionAbsent == null ? Codegen.empty() : this.conditionAbsent;
     }
 
@@ -41,7 +41,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionMatchedLog")
       private final @Nullable Output<LogMatchArgs> conditionMatchedLog;
 
-    public Output<LogMatchArgs> getConditionMatchedLog() {
+    public Output<LogMatchArgs> conditionMatchedLog() {
         return this.conditionMatchedLog == null ? Codegen.empty() : this.conditionMatchedLog;
     }
 
@@ -52,7 +52,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionMonitoringQueryLanguage")
       private final @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
 
-    public Output<MonitoringQueryLanguageConditionArgs> getConditionMonitoringQueryLanguage() {
+    public Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage == null ? Codegen.empty() : this.conditionMonitoringQueryLanguage;
     }
 
@@ -63,7 +63,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionThreshold")
       private final @Nullable Output<MetricThresholdArgs> conditionThreshold;
 
-    public Output<MetricThresholdArgs> getConditionThreshold() {
+    public Output<MetricThresholdArgs> conditionThreshold() {
         return this.conditionThreshold == null ? Codegen.empty() : this.conditionThreshold;
     }
 
@@ -74,7 +74,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -85,7 +85,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

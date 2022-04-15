@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="commonAlphabet")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet;
 
-    public Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> getCommonAlphabet() {
+    public Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet() {
         return this.commonAlphabet == null ? Codegen.empty() : this.commonAlphabet;
     }
 
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="context")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="cryptoKey", required=true)
       private final Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="customAlphabet")
       private final @Nullable Output<String> customAlphabet;
 
-    public Output<String> getCustomAlphabet() {
+    public Output<String> customAlphabet() {
         return this.customAlphabet == null ? Codegen.empty() : this.customAlphabet;
     }
 
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="radix")
       private final @Nullable Output<Integer> radix;
 
-    public Output<Integer> getRadix() {
+    public Output<Integer> radix() {
         return this.radix == null ? Codegen.empty() : this.radix;
     }
 
@@ -86,7 +86,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     @Import(name="surrogateInfoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType() {
         return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 

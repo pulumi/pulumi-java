@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * 
     */
-    public GooglePrivacyDlpV2CloudStoragePathResponse getCloudStoragePath() {
+    public GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath() {
         return this.cloudStoragePath;
     }
     /**
      * List of words or phrases to search for.
      * 
     */
-    public GooglePrivacyDlpV2WordListResponse getWordList() {
+    public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
 

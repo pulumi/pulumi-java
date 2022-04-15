@@ -27,7 +27,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
@@ -38,7 +38,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<FileReferenceArgs> content;
 
-    public Output<FileReferenceArgs> getContent() {
+    public Output<FileReferenceArgs> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -49,7 +49,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="devicePath")
       private final @Nullable Output<String> devicePath;
 
-    public Output<String> getDevicePath() {
+    public Output<String> devicePath() {
         return this.devicePath == null ? Codegen.empty() : this.devicePath;
     }
 

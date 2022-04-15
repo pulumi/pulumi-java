@@ -23,7 +23,7 @@ public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="className", required=true)
       private final String className;
 
-    public String getClassName() {
+    public String className() {
         return this.className;
     }
 
@@ -34,7 +34,7 @@ public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="testSuiteName", required=true)
       private final String testSuiteName;
 
-    public String getTestSuiteName() {
+    public String testSuiteName() {
         return this.testSuiteName;
     }
 

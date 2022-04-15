@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
     @Import(name="charactersToIgnore", required=true)
       private final List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
 
-    public List<GooglePrivacyDlpV2CharsToIgnoreResponse> getCharactersToIgnore() {
+    public List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore() {
         return this.charactersToIgnore;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
     @Import(name="maskingCharacter", required=true)
       private final String maskingCharacter;
 
-    public String getMaskingCharacter() {
+    public String maskingCharacter() {
         return this.maskingCharacter;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
     @Import(name="numberToMask", required=true)
       private final Integer numberToMask;
 
-    public Integer getNumberToMask() {
+    public Integer numberToMask() {
         return this.numberToMask;
     }
 
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
     @Import(name="reverseOrder", required=true)
       private final Boolean reverseOrder;
 
-    public Boolean getReverseOrder() {
+    public Boolean reverseOrder() {
         return this.reverseOrder;
     }
 

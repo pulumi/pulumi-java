@@ -36,7 +36,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
      * 
      */
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
     /**
@@ -50,7 +50,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Immutable. Compliance Regime associated with this workload.
      * 
      */
-    public Output<String> getComplianceRegime() {
+    public Output<String> complianceRegime() {
         return this.complianceRegime;
     }
     /**
@@ -64,7 +64,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Immutable. The Workload creation timestamp.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -78,7 +78,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -92,7 +92,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
      * 
      */
-    public Output<Boolean> getEnableSovereignControls() {
+    public Output<Boolean> enableSovereignControls() {
         return this.enableSovereignControls;
     }
     /**
@@ -106,7 +106,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -120,7 +120,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Represents the KAJ enrollment state of the given workload.
      * 
      */
-    public Output<String> getKajEnrollmentState() {
+    public Output<String> kajEnrollmentState() {
         return this.kajEnrollmentState;
     }
     /**
@@ -134,7 +134,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse> getKmsSettings() {
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse> kmsSettings() {
         return this.kmsSettings;
     }
     /**
@@ -148,7 +148,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels applied to the workload.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -162,7 +162,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -176,7 +176,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
      * 
      */
-    public Output<String> getProvisionedResourcesParent() {
+    public Output<String> provisionedResourcesParent() {
         return this.provisionedResourcesParent;
     }
     /**
@@ -190,7 +190,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse>> getResourceSettings() {
+    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse>> resourceSettings() {
         return this.resourceSettings;
     }
     /**
@@ -204,7 +204,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.
      * 
      */
-    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse>> getResources() {
+    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse>> resources() {
         return this.resources;
     }
     /**
@@ -218,7 +218,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Represents the SAA enrollment response of the given workload. SAA enrollment response is queried during GetWorkload call. In failure cases, user friendly error message is shown in SAA details page.
      * 
      */
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse> getSaaEnrollmentResponse() {
+    public Output<GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse> saaEnrollmentResponse() {
         return this.saaEnrollmentResponse;
     }
 

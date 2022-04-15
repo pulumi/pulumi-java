@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
     @Import(name="features", required=true)
       private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
 
-    public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> getFeatures() {
+    public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features() {
         return this.features;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
     @Import(name="genericWebService", required=true)
       private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
 
-    public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse getGenericWebService() {
+    public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

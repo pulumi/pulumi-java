@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="entityTypeDisplayName")
       private final @Nullable Output<String> entityTypeDisplayName;
 
-    public Output<String> getEntityTypeDisplayName() {
+    public Output<String> entityTypeDisplayName() {
         return this.entityTypeDisplayName == null ? Codegen.empty() : this.entityTypeDisplayName;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
+    public Output<Boolean> isList() {
         return this.isList == null ? Codegen.empty() : this.isList;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="mandatory")
       private final @Nullable Output<Boolean> mandatory;
 
-    public Output<Boolean> getMandatory() {
+    public Output<Boolean> mandatory() {
         return this.mandatory == null ? Codegen.empty() : this.mandatory;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="prompts")
       private final @Nullable Output<List<String>> prompts;
 
-    public Output<List<String>> getPrompts() {
+    public Output<List<String>> prompts() {
         return this.prompts == null ? Codegen.empty() : this.prompts;
     }
 
@@ -105,7 +105,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

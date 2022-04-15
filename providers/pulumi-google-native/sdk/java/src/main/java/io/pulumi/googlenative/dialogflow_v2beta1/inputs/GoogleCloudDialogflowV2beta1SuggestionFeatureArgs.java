@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
 
-    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> getType() {
+    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -114,91 +114,91 @@ public final class GetInstanceResult {
      * The time when the instance was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The description of the instance (2048 characters or less).
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * File system shares on the instance. For this version, only a single file share is supported.
      * 
     */
-    public List<FileShareConfigResponse> getFileShares() {
+    public List<FileShareConfigResponse> fileShares() {
         return this.fileShares;
     }
     /**
      * KMS key name used for data encryption.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Resource labels to represent user provided metadata.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name of the instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * VPC networks to which the instance is connected. For this version, only a single network is supported.
      * 
     */
-    public List<NetworkConfigResponse> getNetworks() {
+    public List<NetworkConfigResponse> networks() {
         return this.networks;
     }
     /**
      * Reserved for future use.
      * 
     */
-    public Boolean getSatisfiesPzs() {
+    public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
      * The instance state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Additional information about the instance state, if available.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * field indicates all the reasons the instance is in "SUSPENDED" state.
      * 
     */
-    public List<String> getSuspensionReasons() {
+    public List<String> suspensionReasons() {
         return this.suspensionReasons;
     }
     /**
      * The service tier of the instance.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

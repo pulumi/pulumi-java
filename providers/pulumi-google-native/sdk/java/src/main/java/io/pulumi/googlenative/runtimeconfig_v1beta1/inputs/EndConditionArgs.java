@@ -26,7 +26,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
       private final @Nullable Output<CardinalityArgs> cardinality;
 
-    public Output<CardinalityArgs> getCardinality() {
+    public Output<CardinalityArgs> cardinality() {
         return this.cardinality == null ? Codegen.empty() : this.cardinality;
     }
 

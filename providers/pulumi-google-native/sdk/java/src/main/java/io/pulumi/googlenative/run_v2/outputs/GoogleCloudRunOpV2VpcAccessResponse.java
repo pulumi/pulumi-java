@@ -32,14 +32,14 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
      * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
      * 
     */
-    public String getConnector() {
+    public String connector() {
         return this.connector;
     }
     /**
      * Traffic VPC egress settings.
      * 
     */
-    public String getEgress() {
+    public String egress() {
         return this.egress;
     }
 

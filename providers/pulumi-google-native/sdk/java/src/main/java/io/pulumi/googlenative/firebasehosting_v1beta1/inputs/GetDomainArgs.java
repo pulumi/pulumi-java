@@ -17,21 +17,21 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="domainId", required=true)
       private final String domainId;
 
-    public String getDomainId() {
+    public String domainId() {
         return this.domainId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 

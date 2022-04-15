@@ -23,7 +23,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pul
     @Import(name="layer7DdosDefenseConfig", required=true)
       private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
-    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse getLayer7DdosDefenseConfig() {
+    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }
 

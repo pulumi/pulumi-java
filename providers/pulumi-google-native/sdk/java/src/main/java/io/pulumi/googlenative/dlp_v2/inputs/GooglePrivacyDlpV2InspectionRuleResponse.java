@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
     @Import(name="exclusionRule", required=true)
       private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
 
-    public GooglePrivacyDlpV2ExclusionRuleResponse getExclusionRule() {
+    public GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule() {
         return this.exclusionRule;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
     @Import(name="hotwordRule", required=true)
       private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
+    public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }
 

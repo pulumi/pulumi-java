@@ -25,7 +25,7 @@ public final class CounterOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="customFields", required=true)
       private final List<CustomFieldResponse> customFields;
 
-    public List<CustomFieldResponse> getCustomFields() {
+    public List<CustomFieldResponse> customFields() {
         return this.customFields;
     }
 
@@ -36,7 +36,7 @@ public final class CounterOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
@@ -47,7 +47,7 @@ public final class CounterOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 

@@ -23,7 +23,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -34,7 +34,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
     @Import(name="nodeMetadata", required=true)
       private final String nodeMetadata;
 
-    public String getNodeMetadata() {
+    public String nodeMetadata() {
         return this.nodeMetadata;
     }
 

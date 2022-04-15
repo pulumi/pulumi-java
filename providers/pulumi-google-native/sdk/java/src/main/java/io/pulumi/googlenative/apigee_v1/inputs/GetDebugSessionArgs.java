@@ -15,35 +15,35 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiId", required=true)
       private final String apiId;
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
 
     @Import(name="debugsessionId", required=true)
       private final String debugsessionId;
 
-    public String getDebugsessionId() {
+    public String debugsessionId() {
         return this.debugsessionId;
     }
 
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
       private final String revisionId;
 
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

@@ -23,7 +23,7 @@ public final class NodeGroupAffinityResponse extends io.pulumi.resources.InvokeA
     @Import(name="nodeGroupUri", required=true)
       private final String nodeGroupUri;
 
-    public String getNodeGroupUri() {
+    public String nodeGroupUri() {
         return this.nodeGroupUri;
     }
 

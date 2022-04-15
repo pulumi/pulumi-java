@@ -26,7 +26,7 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iapTestServiceAccountInfo")
       private final @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
-    public Output<IapTestServiceAccountInfoArgs> getIapTestServiceAccountInfo() {
+    public Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo == null ? Codegen.empty() : this.iapTestServiceAccountInfo;
     }
 

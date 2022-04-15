@@ -28,7 +28,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<RevisionTemplateArgs> template;
 
-    public Output<RevisionTemplateArgs> getTemplate() {
+    public Output<RevisionTemplateArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Output<List<TrafficTargetArgs>> getTraffic() {
+    public Output<List<TrafficTargetArgs>> traffic() {
         return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 

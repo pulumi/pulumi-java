@@ -32,7 +32,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return Optional. A human-readable description of this TargetServer.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -46,7 +46,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -60,7 +60,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
      */
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -74,7 +74,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return The resource id of this target server. Values must match the regular expression
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -102,7 +102,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return Immutable. The protocol used by this TargetServer.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -116,7 +116,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * @return Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
      */
-    public Output<GoogleCloudApigeeV1TlsInfoResponse> getSSLInfo() {
+    public Output<GoogleCloudApigeeV1TlsInfoResponse> sSLInfo() {
         return this.sSLInfo;
     }
 

@@ -49,28 +49,28 @@ public final class ElementaryStreamResponse {
      * Encoding of an audio stream.
      * 
     */
-    public AudioStreamResponse getAudioStream() {
+    public AudioStreamResponse audioStream() {
         return this.audioStream;
     }
     /**
      * A unique key for this elementary stream.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Encoding of a text stream. For example, closed captions or subtitles.
      * 
     */
-    public TextStreamResponse getTextStream() {
+    public TextStreamResponse textStream() {
         return this.textStream;
     }
     /**
      * Encoding of a video stream.
      * 
     */
-    public VideoStreamResponse getVideoStream() {
+    public VideoStreamResponse videoStream() {
         return this.videoStream;
     }
 

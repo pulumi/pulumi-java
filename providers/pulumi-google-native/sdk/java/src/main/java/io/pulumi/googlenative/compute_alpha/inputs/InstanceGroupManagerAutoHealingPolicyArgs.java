@@ -26,7 +26,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="autoHealingTriggers")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> getAutoHealingTriggers() {
+    public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers() {
         return this.autoHealingTriggers == null ? Codegen.empty() : this.autoHealingTriggers;
     }
 
@@ -37,7 +37,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="healthCheck")
       private final @Nullable Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
+    public Output<String> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="initialDelaySec")
       private final @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
+    public Output<Integer> initialDelaySec() {
         return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
     }
 
@@ -59,14 +59,14 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     @Import(name="maxUnavailable")
       private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
-    public Output<FixedOrPercentArgs> getMaxUnavailable() {
+    public Output<FixedOrPercentArgs> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     @Import(name="updateInstances")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
 
-    public Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> getUpdateInstances() {
+    public Output<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances() {
         return this.updateInstances == null ? Codegen.empty() : this.updateInstances;
     }
 

@@ -39,21 +39,21 @@ public final class IstioCanonicalServiceResponse {
      * The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
     */
-    public String getCanonicalService() {
+    public String canonicalService() {
         return this.canonicalService;
     }
     /**
      * The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
     */
-    public String getCanonicalServiceNamespace() {
+    public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
     /**
      * Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
     */
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
 

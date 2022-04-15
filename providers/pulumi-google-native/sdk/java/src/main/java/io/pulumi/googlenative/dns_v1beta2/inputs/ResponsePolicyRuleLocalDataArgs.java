@@ -23,7 +23,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
     @Import(name="localDatas")
       private final @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
-    public Output<List<ResourceRecordSetArgs>> getLocalDatas() {
+    public Output<List<ResourceRecordSetArgs>> localDatas() {
         return this.localDatas == null ? Codegen.empty() : this.localDatas;
     }
 

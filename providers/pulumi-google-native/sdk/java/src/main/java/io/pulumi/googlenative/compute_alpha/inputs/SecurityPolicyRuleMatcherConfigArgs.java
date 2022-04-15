@@ -25,7 +25,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> getDestIpRanges() {
+    public Output<List<String>> destIpRanges() {
         return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     @Import(name="destPorts")
       private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
 
-    public Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> getDestPorts() {
+    public Output<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts() {
         return this.destPorts == null ? Codegen.empty() : this.destPorts;
     }
 
@@ -47,7 +47,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     @Import(name="layer4Configs")
       private final @Nullable Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
 
-    public Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> getLayer4Configs() {
+    public Output<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs() {
         return this.layer4Configs == null ? Codegen.empty() : this.layer4Configs;
     }
 
@@ -58,7 +58,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
+    public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 

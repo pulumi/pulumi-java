@@ -26,7 +26,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="appYamlPath")
       private final @Nullable Output<String> appYamlPath;
 
-    public Output<String> getAppYamlPath() {
+    public Output<String> appYamlPath() {
         return this.appYamlPath == null ? Codegen.empty() : this.appYamlPath;
     }
 
@@ -37,7 +37,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cloudBuildTimeout")
       private final @Nullable Output<String> cloudBuildTimeout;
 
-    public Output<String> getCloudBuildTimeout() {
+    public Output<String> cloudBuildTimeout() {
         return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
     }
 

@@ -26,7 +26,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeUrl")
       private final @Nullable Output<String> typeUrl;
 
-    public Output<String> getTypeUrl() {
+    public Output<String> typeUrl() {
         return this.typeUrl == null ? Codegen.empty() : this.typeUrl;
     }
 
@@ -37,7 +37,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

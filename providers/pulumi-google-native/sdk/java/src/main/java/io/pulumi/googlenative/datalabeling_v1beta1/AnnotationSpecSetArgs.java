@@ -24,7 +24,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="annotationSpecs", required=true)
       private final Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
 
-    public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> getAnnotationSpecs() {
+    public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs() {
         return this.annotationSpecs;
     }
 
@@ -35,7 +35,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,14 +46,14 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

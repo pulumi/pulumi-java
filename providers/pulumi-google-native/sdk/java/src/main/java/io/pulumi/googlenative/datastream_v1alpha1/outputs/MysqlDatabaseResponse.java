@@ -34,14 +34,14 @@ public final class MysqlDatabaseResponse {
      * Database name.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Tables in the database.
      * 
     */
-    public List<MysqlTableResponse> getMysqlTables() {
+    public List<MysqlTableResponse> mysqlTables() {
         return this.mysqlTables;
     }
 

@@ -24,7 +24,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="defaultValue", required=true)
       private final String defaultValue;
 
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
 
@@ -35,7 +35,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="localCopy", required=true)
       private final LocalCopyResponse localCopy;
 
-    public LocalCopyResponse getLocalCopy() {
+    public LocalCopyResponse localCopy() {
         return this.localCopy;
     }
 
@@ -57,7 +57,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

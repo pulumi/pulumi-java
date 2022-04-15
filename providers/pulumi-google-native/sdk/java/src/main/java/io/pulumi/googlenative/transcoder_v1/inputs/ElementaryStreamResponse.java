@@ -26,7 +26,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
     @Import(name="audioStream", required=true)
       private final AudioStreamResponse audioStream;
 
-    public AudioStreamResponse getAudioStream() {
+    public AudioStreamResponse audioStream() {
         return this.audioStream;
     }
 
@@ -37,7 +37,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -48,7 +48,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
     @Import(name="textStream", required=true)
       private final TextStreamResponse textStream;
 
-    public TextStreamResponse getTextStream() {
+    public TextStreamResponse textStream() {
         return this.textStream;
     }
 
@@ -59,7 +59,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
     @Import(name="videoStream", required=true)
       private final VideoStreamResponse videoStream;
 
-    public VideoStreamResponse getVideoStream() {
+    public VideoStreamResponse videoStream() {
         return this.videoStream;
     }
 

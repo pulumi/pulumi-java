@@ -28,7 +28,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -39,7 +39,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="commentControl")
       private final @Nullable Output<PullRequestFilterCommentControl> commentControl;
 
-    public Output<PullRequestFilterCommentControl> getCommentControl() {
+    public Output<PullRequestFilterCommentControl> commentControl() {
         return this.commentControl == null ? Codegen.empty() : this.commentControl;
     }
 
@@ -50,7 +50,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
+    public Output<Boolean> invertRegex() {
         return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 

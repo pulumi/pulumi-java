@@ -32,14 +32,14 @@ public final class CapacityResponse {
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
     */
-    public Integer getPublishMibPerSec() {
+    public Integer publishMibPerSec() {
         return this.publishMibPerSec;
     }
     /**
      * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
      * 
     */
-    public Integer getSubscribeMibPerSec() {
+    public Integer subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 

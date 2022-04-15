@@ -28,7 +28,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -39,7 +39,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcToken")
       private final @Nullable Output<OidcTokenArgs> oidcToken;
 
-    public Output<OidcTokenArgs> getOidcToken() {
+    public Output<OidcTokenArgs> oidcToken() {
         return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
@@ -50,7 +50,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pushEndpoint")
       private final @Nullable Output<String> pushEndpoint;
 
-    public Output<String> getPushEndpoint() {
+    public Output<String> pushEndpoint() {
         return this.pushEndpoint == null ? Codegen.empty() : this.pushEndpoint;
     }
 

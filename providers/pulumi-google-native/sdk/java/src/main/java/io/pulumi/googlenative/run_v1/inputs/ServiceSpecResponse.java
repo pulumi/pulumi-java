@@ -25,7 +25,7 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="template", required=true)
       private final RevisionTemplateResponse template;
 
-    public RevisionTemplateResponse getTemplate() {
+    public RevisionTemplateResponse template() {
         return this.template;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="traffic", required=true)
       private final List<TrafficTargetResponse> traffic;
 
-    public List<TrafficTargetResponse> getTraffic() {
+    public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
 

@@ -33,14 +33,14 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
      * Whether this is supposed to be a full or partial match.
      * 
     */
-    public Boolean getFullMatch() {
+    public Boolean fullMatch() {
         return this.fullMatch;
     }
     /**
      * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

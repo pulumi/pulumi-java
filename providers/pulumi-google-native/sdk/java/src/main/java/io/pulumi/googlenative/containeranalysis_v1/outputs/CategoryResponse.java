@@ -32,14 +32,14 @@ public final class CategoryResponse {
      * The identifier of the category.
      * 
     */
-    public String getCategoryId() {
+    public String categoryId() {
         return this.categoryId;
     }
     /**
      * The localized name of the category.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

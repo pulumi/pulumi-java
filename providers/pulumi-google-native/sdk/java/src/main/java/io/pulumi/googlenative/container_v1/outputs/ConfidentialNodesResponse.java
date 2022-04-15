@@ -24,7 +24,7 @@ public final class ConfidentialNodesResponse {
      * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

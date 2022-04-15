@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="instructionMessage")
       private final @Nullable Output<String> instructionMessage;
 
-    public Output<String> getInstructionMessage() {
+    public Output<String> instructionMessage() {
         return this.instructionMessage == null ? Codegen.empty() : this.instructionMessage;
     }
 

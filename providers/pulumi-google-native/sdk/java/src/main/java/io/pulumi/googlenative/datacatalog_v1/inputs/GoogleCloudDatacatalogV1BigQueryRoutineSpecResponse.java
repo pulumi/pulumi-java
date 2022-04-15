@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends i
     @Import(name="importedLibraries", required=true)
       private final List<String> importedLibraries;
 
-    public List<String> getImportedLibraries() {
+    public List<String> importedLibraries() {
         return this.importedLibraries;
     }
 

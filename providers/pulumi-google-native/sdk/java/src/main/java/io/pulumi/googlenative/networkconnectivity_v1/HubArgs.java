@@ -25,14 +25,14 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="hubId", required=true)
       private final Output<String> hubId;
 
-    public Output<String> getHubId() {
+    public Output<String> hubId() {
         return this.hubId;
     }
 
@@ -43,7 +43,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -54,21 +54,21 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -79,7 +79,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingVpcs")
       private final @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
-    public Output<List<RoutingVPCArgs>> getRoutingVpcs() {
+    public Output<List<RoutingVPCArgs>> routingVpcs() {
         return this.routingVpcs == null ? Codegen.empty() : this.routingVpcs;
     }
 

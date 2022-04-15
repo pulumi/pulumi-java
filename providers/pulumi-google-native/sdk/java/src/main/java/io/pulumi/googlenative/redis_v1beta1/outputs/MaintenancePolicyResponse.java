@@ -48,28 +48,28 @@ public final class MaintenancePolicyResponse {
      * The time when the policy was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The time when the policy was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
      * 
     */
-    public List<WeeklyMaintenanceWindowResponse> getWeeklyMaintenanceWindow() {
+    public List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow;
     }
 

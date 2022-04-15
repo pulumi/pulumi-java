@@ -30,7 +30,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * @return The configuration for this template.
      * 
      */
-    public Output<JobConfigResponse> getConfig() {
+    public Output<JobConfigResponse> config() {
         return this.config;
     }
     /**
@@ -44,7 +44,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

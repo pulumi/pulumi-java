@@ -20,7 +20,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -31,7 +31,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> getCustomAttributes() {
+    public Output<Map<String,String>> customAttributes() {
         return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
     }
 
@@ -42,7 +42,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -53,7 +53,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> getEventTypes() {
+    public Output<List<String>> eventTypes() {
         return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
@@ -64,7 +64,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -75,7 +75,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -86,7 +86,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> getObjectNamePrefix() {
+    public Output<String> objectNamePrefix() {
         return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
     }
 
@@ -97,14 +97,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat")
       private final @Nullable Output<String> payloadFormat;
 
-    public Output<String> getPayloadFormat() {
+    public Output<String> payloadFormat() {
         return this.payloadFormat == null ? Codegen.empty() : this.payloadFormat;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> getProvisionalUserProject() {
+    public Output<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
@@ -115,7 +115,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -126,14 +126,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
+    public Output<String> userProject() {
         return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 

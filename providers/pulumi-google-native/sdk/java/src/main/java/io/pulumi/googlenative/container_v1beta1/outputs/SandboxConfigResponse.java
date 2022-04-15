@@ -32,14 +32,14 @@ public final class SandboxConfigResponse {
      * Type of the sandbox to use for the node (e.g. 'gvisor')
      * 
     */
-    public String getSandboxType() {
+    public String sandboxType() {
         return this.sandboxType;
     }
     /**
      * Type of the sandbox to use for the node.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

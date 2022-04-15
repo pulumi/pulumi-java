@@ -32,14 +32,14 @@ public final class ManagedGroupConfigResponse {
      * The name of the Instance Group Manager for this group.
      * 
     */
-    public String getInstanceGroupManagerName() {
+    public String instanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
     /**
      * The name of the Instance Template used for the Managed Instance Group.
      * 
     */
-    public String getInstanceTemplateName() {
+    public String instanceTemplateName() {
         return this.instanceTemplateName;
     }
 

@@ -32,7 +32,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Current version of the stored info type.
      * 
      */
-    public Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> getCurrentVersion() {
+    public Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> currentVersion() {
         return this.currentVersion;
     }
     /**
@@ -46,7 +46,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +60,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @return Pending versions of the stored info type. Empty if no versions are pending.
      * 
      */
-    public Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> getPendingVersions() {
+    public Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> pendingVersions() {
         return this.pendingVersions;
     }
 

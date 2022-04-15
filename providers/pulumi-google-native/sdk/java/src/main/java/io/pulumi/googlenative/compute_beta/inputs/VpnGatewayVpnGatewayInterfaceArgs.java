@@ -26,7 +26,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
     @Import(name="interconnectAttachment")
       private final @Nullable Output<String> interconnectAttachment;
 
-    public Output<String> getInterconnectAttachment() {
+    public Output<String> interconnectAttachment() {
         return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
     }
 

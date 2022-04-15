@@ -24,7 +24,7 @@ public final class ResourcePolicyWeeklyCycleResponse extends io.pulumi.resources
     @Import(name="dayOfWeeks", required=true)
       private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
-    public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> getDayOfWeeks() {
+    public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

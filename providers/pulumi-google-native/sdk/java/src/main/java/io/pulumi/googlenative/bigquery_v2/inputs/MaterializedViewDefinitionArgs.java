@@ -23,7 +23,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="enableRefresh")
       private final @Nullable Output<Boolean> enableRefresh;
 
-    public Output<Boolean> getEnableRefresh() {
+    public Output<Boolean> enableRefresh() {
         return this.enableRefresh == null ? Codegen.empty() : this.enableRefresh;
     }
 
@@ -34,7 +34,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -45,7 +45,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     @Import(name="refreshIntervalMs")
       private final @Nullable Output<String> refreshIntervalMs;
 
-    public Output<String> getRefreshIntervalMs() {
+    public Output<String> refreshIntervalMs() {
         return this.refreshIntervalMs == null ? Codegen.empty() : this.refreshIntervalMs;
     }
 

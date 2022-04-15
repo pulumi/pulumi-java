@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> getButtons() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons() {
         return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="columnProperties")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> getColumnProperties() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties() {
         return this.columnProperties == null ? Codegen.empty() : this.columnProperties;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="rows")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> getRows() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows() {
         return this.rows == null ? Codegen.empty() : this.rows;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

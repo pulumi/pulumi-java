@@ -55,35 +55,35 @@ public final class VersionResponse {
      * Used to correct mistakes in the version numbering scheme.
      * 
     */
-    public Integer getEpoch() {
+    public Integer epoch() {
         return this.epoch;
     }
     /**
      * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
      * 
     */
-    public Boolean getInclusive() {
+    public Boolean inclusive() {
         return this.inclusive;
     }
     /**
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The main part of the version name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The iteration of the package build from the above version.
      * 
     */
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
 

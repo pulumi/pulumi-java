@@ -34,14 +34,14 @@ public final class GoogleCloudRetailV2betaConditionResponse {
      * Range of time(s) specifying when Condition is active. Condition true if any time range matches.
      * 
     */
-    public List<GoogleCloudRetailV2betaConditionTimeRangeResponse> getActiveTimeRange() {
+    public List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange() {
         return this.activeTimeRange;
     }
     /**
      * A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
      * 
     */
-    public List<GoogleCloudRetailV2betaConditionQueryTermResponse> getQueryTerms() {
+    public List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms() {
         return this.queryTerms;
     }
 

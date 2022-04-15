@@ -126,105 +126,105 @@ public final class GetBackupRunResult {
      * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
     */
-    public String getBackupKind() {
+    public String backupKind() {
         return this.backupKind;
     }
     /**
      * The description of this run, only applicable to on-demand backups.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Encryption configuration specific to a backup.
      * 
     */
-    public DiskEncryptionConfigurationResponse getDiskEncryptionConfiguration() {
+    public DiskEncryptionConfigurationResponse diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
      * Encryption status specific to a backup.
      * 
     */
-    public DiskEncryptionStatusResponse getDiskEncryptionStatus() {
+    public DiskEncryptionStatusResponse diskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
      * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
     */
-    public String getEnqueuedTime() {
+    public String enqueuedTime() {
         return this.enqueuedTime;
     }
     /**
      * Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
     */
-    public OperationErrorResponse getError() {
+    public OperationErrorResponse error() {
         return this.error;
     }
     /**
      * Name of the database instance.
      * 
     */
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
     /**
      * This is always `sql#backupRun`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Location of the backups.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The URI of this resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The status of this run.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
     */
-    public String getWindowStartTime() {
+    public String windowStartTime() {
         return this.windowStartTime;
     }
 

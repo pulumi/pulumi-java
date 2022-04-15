@@ -26,7 +26,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="associations")
       private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
-    public Output<List<FirewallPolicyAssociationArgs>> getAssociations() {
+    public Output<List<FirewallPolicyAssociationArgs>> associations() {
         return this.associations == null ? Codegen.empty() : this.associations;
     }
 
@@ -37,21 +37,21 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="rules")
       private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
-    public Output<List<FirewallPolicyRuleArgs>> getRules() {
+    public Output<List<FirewallPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -73,7 +73,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -84,7 +84,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="vpcNetworkScope")
       private final @Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
-    public Output<NetworkFirewallPolicyVpcNetworkScope> getVpcNetworkScope() {
+    public Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope() {
         return this.vpcNetworkScope == null ? Codegen.empty() : this.vpcNetworkScope;
     }
 

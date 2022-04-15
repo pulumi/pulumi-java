@@ -30,7 +30,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureDetail")
       private final @Nullable Output<FailureDetailArgs> failureDetail;
 
-    public Output<FailureDetailArgs> getFailureDetail() {
+    public Output<FailureDetailArgs> failureDetail() {
         return this.failureDetail == null ? Codegen.empty() : this.failureDetail;
     }
 
@@ -41,7 +41,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inconclusiveDetail")
       private final @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
 
-    public Output<InconclusiveDetailArgs> getInconclusiveDetail() {
+    public Output<InconclusiveDetailArgs> inconclusiveDetail() {
         return this.inconclusiveDetail == null ? Codegen.empty() : this.inconclusiveDetail;
     }
 
@@ -52,7 +52,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skippedDetail")
       private final @Nullable Output<SkippedDetailArgs> skippedDetail;
 
-    public Output<SkippedDetailArgs> getSkippedDetail() {
+    public Output<SkippedDetailArgs> skippedDetail() {
         return this.skippedDetail == null ? Codegen.empty() : this.skippedDetail;
     }
 
@@ -63,7 +63,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successDetail")
       private final @Nullable Output<SuccessDetailArgs> successDetail;
 
-    public Output<SuccessDetailArgs> getSuccessDetail() {
+    public Output<SuccessDetailArgs> successDetail() {
         return this.successDetail == null ? Codegen.empty() : this.successDetail;
     }
 
@@ -74,7 +74,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="summary")
       private final @Nullable Output<OutcomeSummary> summary;
 
-    public Output<OutcomeSummary> getSummary() {
+    public Output<OutcomeSummary> summary() {
         return this.summary == null ? Codegen.empty() : this.summary;
     }
 

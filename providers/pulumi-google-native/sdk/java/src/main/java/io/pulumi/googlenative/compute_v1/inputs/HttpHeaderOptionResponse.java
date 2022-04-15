@@ -24,7 +24,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
@@ -35,7 +35,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="headerValue", required=true)
       private final String headerValue;
 
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
 
@@ -46,7 +46,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="replace", required=true)
       private final Boolean replace;
 
-    public Boolean getReplace() {
+    public Boolean replace() {
         return this.replace;
     }
 

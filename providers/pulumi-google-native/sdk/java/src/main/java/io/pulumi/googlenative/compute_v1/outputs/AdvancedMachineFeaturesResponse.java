@@ -40,21 +40,21 @@ public final class AdvancedMachineFeaturesResponse {
      * Whether to enable nested virtualization or not (default is false).
      * 
     */
-    public Boolean getEnableNestedVirtualization() {
+    public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
     /**
      * Whether to enable UEFI networking for instance creation.
      * 
     */
-    public Boolean getEnableUefiNetworking() {
+    public Boolean enableUefiNetworking() {
         return this.enableUefiNetworking;
     }
     /**
      * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
     */
-    public Integer getThreadsPerCore() {
+    public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
 

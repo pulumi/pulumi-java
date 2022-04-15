@@ -23,7 +23,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudSecret", required=true)
       private final String cloudSecret;
 
-    public String getCloudSecret() {
+    public String cloudSecret() {
         return this.cloudSecret;
     }
 

@@ -22,7 +22,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="auditConfigs")
       private final @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs;
 
-    public Output<List<ApigatewayAuditConfigArgs>> getAuditConfigs() {
+    public Output<List<ApigatewayAuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -44,14 +44,14 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bindings")
       private final @Nullable Output<List<ApigatewayBindingArgs>> bindings;
 
-    public Output<List<ApigatewayBindingArgs>> getBindings() {
+    public Output<List<ApigatewayBindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -62,21 +62,21 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -87,7 +87,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -98,7 +98,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

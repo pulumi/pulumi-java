@@ -24,7 +24,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="excludePrefixes", required=true)
       private final List<String> excludePrefixes;
 
-    public List<String> getExcludePrefixes() {
+    public List<String> excludePrefixes() {
         return this.excludePrefixes;
     }
 
@@ -35,7 +35,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="includePrefixes", required=true)
       private final List<String> includePrefixes;
 
-    public List<String> getIncludePrefixes() {
+    public List<String> includePrefixes() {
         return this.includePrefixes;
     }
 
@@ -46,7 +46,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="lastModifiedBefore", required=true)
       private final String lastModifiedBefore;
 
-    public String getLastModifiedBefore() {
+    public String lastModifiedBefore() {
         return this.lastModifiedBefore;
     }
 
@@ -57,7 +57,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="lastModifiedSince", required=true)
       private final String lastModifiedSince;
 
-    public String getLastModifiedSince() {
+    public String lastModifiedSince() {
         return this.lastModifiedSince;
     }
 
@@ -68,7 +68,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="maxTimeElapsedSinceLastModification", required=true)
       private final String maxTimeElapsedSinceLastModification;
 
-    public String getMaxTimeElapsedSinceLastModification() {
+    public String maxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification;
     }
 
@@ -79,7 +79,7 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="minTimeElapsedSinceLastModification", required=true)
       private final String minTimeElapsedSinceLastModification;
 
-    public String getMinTimeElapsedSinceLastModification() {
+    public String minTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification;
     }
 

@@ -23,7 +23,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse ext
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 

@@ -23,7 +23,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="persistenceMode", required=true)
       private final String persistenceMode;
 
-    public String getPersistenceMode() {
+    public String persistenceMode() {
         return this.persistenceMode;
     }
 
@@ -34,7 +34,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="rdbNextSnapshotTime", required=true)
       private final String rdbNextSnapshotTime;
 
-    public String getRdbNextSnapshotTime() {
+    public String rdbNextSnapshotTime() {
         return this.rdbNextSnapshotTime;
     }
 
@@ -45,7 +45,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="rdbSnapshotPeriod", required=true)
       private final String rdbSnapshotPeriod;
 
-    public String getRdbSnapshotPeriod() {
+    public String rdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod;
     }
 
@@ -56,7 +56,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="rdbSnapshotStartTime", required=true)
       private final String rdbSnapshotStartTime;
 
-    public String getRdbSnapshotStartTime() {
+    public String rdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime;
     }
 

@@ -20,7 +20,7 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="genericSignedAttestation", required=true)
       private final GenericSignedAttestationResponse genericSignedAttestation;
 
-    public GenericSignedAttestationResponse getGenericSignedAttestation() {
+    public GenericSignedAttestationResponse genericSignedAttestation() {
         return this.genericSignedAttestation;
     }
 
@@ -31,7 +31,7 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pgpSignedAttestation", required=true)
       private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    public PgpSignedAttestationResponse getPgpSignedAttestation() {
+    public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
 

@@ -24,7 +24,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="appInitialActivity", required=true)
       private final String appInitialActivity;
 
-    public String getAppInitialActivity() {
+    public String appInitialActivity() {
         return this.appInitialActivity;
     }
 
@@ -35,7 +35,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="bootstrapPackageId", required=true)
       private final String bootstrapPackageId;
 
-    public String getBootstrapPackageId() {
+    public String bootstrapPackageId() {
         return this.bootstrapPackageId;
     }
 
@@ -46,7 +46,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="bootstrapRunnerClass", required=true)
       private final String bootstrapRunnerClass;
 
-    public String getBootstrapRunnerClass() {
+    public String bootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
     }
 
@@ -57,7 +57,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxDepth", required=true)
       private final Integer maxDepth;
 
-    public Integer getMaxDepth() {
+    public Integer maxDepth() {
         return this.maxDepth;
     }
 
@@ -68,7 +68,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxSteps", required=true)
       private final Integer maxSteps;
 
-    public Integer getMaxSteps() {
+    public Integer maxSteps() {
         return this.maxSteps;
     }
 

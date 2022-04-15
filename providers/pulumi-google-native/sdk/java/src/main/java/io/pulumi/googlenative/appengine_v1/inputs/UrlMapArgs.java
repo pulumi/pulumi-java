@@ -33,7 +33,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiEndpoint")
       private final @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
 
-    public Output<ApiEndpointHandlerArgs> getApiEndpoint() {
+    public Output<ApiEndpointHandlerArgs> apiEndpoint() {
         return this.apiEndpoint == null ? Codegen.empty() : this.apiEndpoint;
     }
 
@@ -44,7 +44,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authFailAction")
       private final @Nullable Output<UrlMapAuthFailAction> authFailAction;
 
-    public Output<UrlMapAuthFailAction> getAuthFailAction() {
+    public Output<UrlMapAuthFailAction> authFailAction() {
         return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
@@ -55,7 +55,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="login")
       private final @Nullable Output<UrlMapLogin> login;
 
-    public Output<UrlMapLogin> getLogin() {
+    public Output<UrlMapLogin> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -66,7 +66,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
-    public Output<UrlMapRedirectHttpResponseCode> getRedirectHttpResponseCode() {
+    public Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode() {
         return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
     }
 
@@ -77,7 +77,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="script")
       private final @Nullable Output<ScriptHandlerArgs> script;
 
-    public Output<ScriptHandlerArgs> getScript() {
+    public Output<ScriptHandlerArgs> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -88,7 +88,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityLevel")
       private final @Nullable Output<UrlMapSecurityLevel> securityLevel;
 
-    public Output<UrlMapSecurityLevel> getSecurityLevel() {
+    public Output<UrlMapSecurityLevel> securityLevel() {
         return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
@@ -99,7 +99,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticFiles")
       private final @Nullable Output<StaticFilesHandlerArgs> staticFiles;
 
-    public Output<StaticFilesHandlerArgs> getStaticFiles() {
+    public Output<StaticFilesHandlerArgs> staticFiles() {
         return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
     }
 
@@ -110,7 +110,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;
 
-    public Output<String> getUrlRegex() {
+    public Output<String> urlRegex() {
         return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
     }
 

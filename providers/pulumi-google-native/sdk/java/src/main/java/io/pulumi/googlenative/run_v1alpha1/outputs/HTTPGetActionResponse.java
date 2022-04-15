@@ -48,28 +48,28 @@ public final class HTTPGetActionResponse {
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
      * 
     */
-    public List<HTTPHeaderResponse> getHttpHeaders() {
+    public List<HTTPHeaderResponse> httpHeaders() {
         return this.httpHeaders;
     }
     /**
      * (Optional) Path to access on the HTTP server.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
      * 
     */
-    public String getScheme() {
+    public String scheme() {
         return this.scheme;
     }
 

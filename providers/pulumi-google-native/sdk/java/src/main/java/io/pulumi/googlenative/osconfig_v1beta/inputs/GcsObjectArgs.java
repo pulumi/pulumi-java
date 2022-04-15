@@ -25,7 +25,7 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="generationNumber", required=true)
       private final Output<String> generationNumber;
 
-    public Output<String> getGenerationNumber() {
+    public Output<String> generationNumber() {
         return this.generationNumber;
     }
 
@@ -47,7 +47,7 @@ public final class GcsObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="object", required=true)
       private final Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
 

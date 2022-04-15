@@ -24,7 +24,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="certificateTemplate", required=true)
       private final CertificateTemplateResponse certificateTemplate;
 
-    public CertificateTemplateResponse getCertificateTemplate() {
+    public CertificateTemplateResponse certificateTemplate() {
         return this.certificateTemplate;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
 
@@ -46,7 +46,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -57,7 +57,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -68,7 +68,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -79,7 +79,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 
@@ -90,7 +90,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="validationState", required=true)
       private final String validationState;
 
-    public String getValidationState() {
+    public String validationState() {
         return this.validationState;
     }
 
@@ -101,7 +101,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="validityExpirationTime", required=true)
       private final String validityExpirationTime;
 
-    public String getValidityExpirationTime() {
+    public String validityExpirationTime() {
         return this.validityExpirationTime;
     }
 
@@ -112,7 +112,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
     @Import(name="validityStartTime", required=true)
       private final String validityStartTime;
 
-    public String getValidityStartTime() {
+    public String validityStartTime() {
         return this.validityStartTime;
     }
 

@@ -27,7 +27,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseUrl")
       private final @Nullable Output<String> baseUrl;
 
-    public Output<String> getBaseUrl() {
+    public Output<String> baseUrl() {
         return this.baseUrl == null ? Codegen.empty() : this.baseUrl;
     }
 
@@ -38,7 +38,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingEnabled")
       private final @Nullable Output<Boolean> reportingEnabled;
 
-    public Output<Boolean> getReportingEnabled() {
+    public Output<Boolean> reportingEnabled() {
         return this.reportingEnabled == null ? Codegen.empty() : this.reportingEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePath")
       private final @Nullable Output<String> servicePath;
 
-    public Output<String> getServicePath() {
+    public Output<String> servicePath() {
         return this.servicePath == null ? Codegen.empty() : this.servicePath;
     }
 
@@ -60,7 +60,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shuffleServicePath")
       private final @Nullable Output<String> shuffleServicePath;
 
-    public Output<String> getShuffleServicePath() {
+    public Output<String> shuffleServicePath() {
         return this.shuffleServicePath == null ? Codegen.empty() : this.shuffleServicePath;
     }
 
@@ -71,7 +71,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tempStoragePrefix")
       private final @Nullable Output<String> tempStoragePrefix;
 
-    public Output<String> getTempStoragePrefix() {
+    public Output<String> tempStoragePrefix() {
         return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
     }
 
@@ -82,7 +82,7 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerId")
       private final @Nullable Output<String> workerId;
 
-    public Output<String> getWorkerId() {
+    public Output<String> workerId() {
         return this.workerId == null ? Codegen.empty() : this.workerId;
     }
 

@@ -24,7 +24,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="kubernetesApiServerVersion", required=true)
       private final String kubernetesApiServerVersion;
 
-    public String getKubernetesApiServerVersion() {
+    public String kubernetesApiServerVersion() {
         return this.kubernetesApiServerVersion;
     }
 
@@ -35,7 +35,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="memoryMb", required=true)
       private final Integer memoryMb;
 
-    public Integer getMemoryMb() {
+    public Integer memoryMb() {
         return this.memoryMb;
     }
 
@@ -46,7 +46,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
-    public Integer getNodeCount() {
+    public Integer nodeCount() {
         return this.nodeCount;
     }
 
@@ -57,7 +57,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="nodeProviderId", required=true)
       private final String nodeProviderId;
 
-    public String getNodeProviderId() {
+    public String nodeProviderId() {
         return this.nodeProviderId;
     }
 
@@ -68,7 +68,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 
@@ -79,7 +79,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
     @Import(name="vcpuCount", required=true)
       private final Integer vcpuCount;
 
-    public Integer getVcpuCount() {
+    public Integer vcpuCount() {
         return this.vcpuCount;
     }
 

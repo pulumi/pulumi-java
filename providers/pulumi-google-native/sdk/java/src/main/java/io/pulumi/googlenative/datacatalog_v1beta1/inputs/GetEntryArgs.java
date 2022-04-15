@@ -17,28 +17,28 @@ public final class GetEntryArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="entryGroupId", required=true)
       private final String entryGroupId;
 
-    public String getEntryGroupId() {
+    public String entryGroupId() {
         return this.entryGroupId;
     }
 
     @Import(name="entryId", required=true)
       private final String entryId;
 
-    public String getEntryId() {
+    public String entryId() {
         return this.entryId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

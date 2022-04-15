@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs exten
     @Import(name="livePersonConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs> getLivePersonConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig() {
         return this.livePersonConfig == null ? Codegen.empty() : this.livePersonConfig;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs exten
     @Import(name="salesforceLiveAgentConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> getSalesforceLiveAgentConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig == null ? Codegen.empty() : this.salesforceLiveAgentConfig;
     }
 

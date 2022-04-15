@@ -26,7 +26,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="certSign")
       private final @Nullable Output<Boolean> certSign;
 
-    public Output<Boolean> getCertSign() {
+    public Output<Boolean> certSign() {
         return this.certSign == null ? Codegen.empty() : this.certSign;
     }
 
@@ -37,7 +37,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contentCommitment")
       private final @Nullable Output<Boolean> contentCommitment;
 
-    public Output<Boolean> getContentCommitment() {
+    public Output<Boolean> contentCommitment() {
         return this.contentCommitment == null ? Codegen.empty() : this.contentCommitment;
     }
 
@@ -48,7 +48,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="crlSign")
       private final @Nullable Output<Boolean> crlSign;
 
-    public Output<Boolean> getCrlSign() {
+    public Output<Boolean> crlSign() {
         return this.crlSign == null ? Codegen.empty() : this.crlSign;
     }
 
@@ -59,7 +59,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
 
-    public Output<Boolean> getDataEncipherment() {
+    public Output<Boolean> dataEncipherment() {
         return this.dataEncipherment == null ? Codegen.empty() : this.dataEncipherment;
     }
 
@@ -70,7 +70,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
 
-    public Output<Boolean> getDecipherOnly() {
+    public Output<Boolean> decipherOnly() {
         return this.decipherOnly == null ? Codegen.empty() : this.decipherOnly;
     }
 
@@ -81,7 +81,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
 
-    public Output<Boolean> getDigitalSignature() {
+    public Output<Boolean> digitalSignature() {
         return this.digitalSignature == null ? Codegen.empty() : this.digitalSignature;
     }
 
@@ -92,7 +92,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
 
-    public Output<Boolean> getEncipherOnly() {
+    public Output<Boolean> encipherOnly() {
         return this.encipherOnly == null ? Codegen.empty() : this.encipherOnly;
     }
 
@@ -103,7 +103,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
 
-    public Output<Boolean> getKeyAgreement() {
+    public Output<Boolean> keyAgreement() {
         return this.keyAgreement == null ? Codegen.empty() : this.keyAgreement;
     }
 
@@ -114,7 +114,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;
 
-    public Output<Boolean> getKeyEncipherment() {
+    public Output<Boolean> keyEncipherment() {
         return this.keyEncipherment == null ? Codegen.empty() : this.keyEncipherment;
     }
 

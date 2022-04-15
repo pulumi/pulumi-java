@@ -23,7 +23,7 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="splitHealthChecks", required=true)
       private final Boolean splitHealthChecks;
 
-    public Boolean getSplitHealthChecks() {
+    public Boolean splitHealthChecks() {
         return this.splitHealthChecks;
     }
 
@@ -34,7 +34,7 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="useContainerOptimizedOs", required=true)
       private final Boolean useContainerOptimizedOs;
 
-    public Boolean getUseContainerOptimizedOs() {
+    public Boolean useContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
     }
 

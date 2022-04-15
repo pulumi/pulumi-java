@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 

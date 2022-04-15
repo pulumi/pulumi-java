@@ -24,7 +24,7 @@ public final class NodeInfoResponse {
      * Location of the node.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

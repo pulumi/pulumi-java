@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 

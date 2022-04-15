@@ -26,7 +26,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
     @Import(name="contents")
       private final @Nullable Output<String> contents;
 
-    public Output<String> getContents() {
+    public Output<String> contents() {
         return this.contents == null ? Codegen.empty() : this.contents;
     }
 
@@ -37,7 +37,7 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

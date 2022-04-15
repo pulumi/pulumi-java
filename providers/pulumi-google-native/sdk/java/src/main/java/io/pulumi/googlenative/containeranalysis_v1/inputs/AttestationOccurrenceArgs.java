@@ -29,7 +29,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="jwts")
       private final @Nullable Output<List<JwtArgs>> jwts;
 
-    public Output<List<JwtArgs>> getJwts() {
+    public Output<List<JwtArgs>> jwts() {
         return this.jwts == null ? Codegen.empty() : this.jwts;
     }
 
@@ -40,7 +40,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="serializedPayload", required=true)
       private final Output<String> serializedPayload;
 
-    public Output<String> getSerializedPayload() {
+    public Output<String> serializedPayload() {
         return this.serializedPayload;
     }
 
@@ -51,7 +51,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Output<List<SignatureArgs>> getSignatures() {
+    public Output<List<SignatureArgs>> signatures() {
         return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 

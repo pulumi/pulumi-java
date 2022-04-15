@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
      * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
      * 
     */
-    public Double getMagnitude() {
+    public Double magnitude() {
         return this.magnitude;
     }
     /**
      * The sentiment score between -1.0 (negative) and 1.0 (positive).
      * 
     */
-    public Double getScore() {
+    public Double score() {
         return this.score;
     }
 

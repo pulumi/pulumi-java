@@ -26,7 +26,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnFamilies")
       private final @Nullable Output<Map<String,String>> columnFamilies;
 
-    public Output<Map<String,String>> getColumnFamilies() {
+    public Output<Map<String,String>> columnFamilies() {
         return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
@@ -37,7 +37,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="granularity")
       private final @Nullable Output<TableGranularity> granularity;
 
-    public Output<TableGranularity> getGranularity() {
+    public Output<TableGranularity> granularity() {
         return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
@@ -48,14 +48,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialSplits")
       private final @Nullable Output<List<SplitArgs>> initialSplits;
 
-    public Output<List<SplitArgs>> getInitialSplits() {
+    public Output<List<SplitArgs>> initialSplits() {
         return this.initialSplits == null ? Codegen.empty() : this.initialSplits;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -66,14 +66,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -84,7 +84,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 

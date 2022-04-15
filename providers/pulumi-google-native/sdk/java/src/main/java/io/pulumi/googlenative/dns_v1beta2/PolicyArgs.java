@@ -26,14 +26,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternativeNameServerConfig")
       private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
-    public Output<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
+    public Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig() {
         return this.alternativeNameServerConfig == null ? Codegen.empty() : this.alternativeNameServerConfig;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
+    public Output<String> clientOperationId() {
         return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
@@ -44,7 +44,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableInboundForwarding")
       private final @Nullable Output<Boolean> enableInboundForwarding;
 
-    public Output<Boolean> getEnableInboundForwarding() {
+    public Output<Boolean> enableInboundForwarding() {
         return this.enableInboundForwarding == null ? Codegen.empty() : this.enableInboundForwarding;
     }
 
@@ -66,7 +66,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -77,14 +77,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -95,7 +95,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -106,14 +106,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networks")
       private final @Nullable Output<List<PolicyNetworkArgs>> networks;
 
-    public Output<List<PolicyNetworkArgs>> getNetworks() {
+    public Output<List<PolicyNetworkArgs>> networks() {
         return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

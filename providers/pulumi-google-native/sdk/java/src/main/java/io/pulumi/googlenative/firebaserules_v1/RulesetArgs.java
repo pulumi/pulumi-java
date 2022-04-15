@@ -19,7 +19,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -30,7 +30,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source;
     }
 

@@ -27,7 +27,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAccount")
       private final @Nullable Output<CustomAccountArgs> customAccount;
 
-    public Output<CustomAccountArgs> getCustomAccount() {
+    public Output<CustomAccountArgs> customAccount() {
         return this.customAccount == null ? Codegen.empty() : this.customAccount;
     }
 
@@ -38,7 +38,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="googleAccount")
       private final @Nullable Output<GoogleAccountArgs> googleAccount;
 
-    public Output<GoogleAccountArgs> getGoogleAccount() {
+    public Output<GoogleAccountArgs> googleAccount() {
         return this.googleAccount == null ? Codegen.empty() : this.googleAccount;
     }
 

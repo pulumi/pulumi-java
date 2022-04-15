@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends io.pul
     @Import(name="groupedEntry", required=true)
       private final String groupedEntry;
 
-    public String getGroupedEntry() {
+    public String groupedEntry() {
         return this.groupedEntry;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     @Import(name="agentChannel", required=true)
       private final Integer agentChannel;
 
-    public Integer getAgentChannel() {
+    public Integer agentChannel() {
         return this.agentChannel;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     @Import(name="customerChannel", required=true)
       private final Integer customerChannel;
 
-    public Integer getCustomerChannel() {
+    public Integer customerChannel() {
         return this.customerChannel;
     }
 

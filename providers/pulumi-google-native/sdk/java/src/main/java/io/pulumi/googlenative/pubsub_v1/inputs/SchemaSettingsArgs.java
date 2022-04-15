@@ -27,7 +27,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<SchemaSettingsEncoding> encoding;
 
-    public Output<SchemaSettingsEncoding> getEncoding() {
+    public Output<SchemaSettingsEncoding> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -38,7 +38,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema", required=true)
       private final Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
 

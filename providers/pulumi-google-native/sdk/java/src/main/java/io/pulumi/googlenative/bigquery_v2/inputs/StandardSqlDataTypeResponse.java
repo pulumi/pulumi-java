@@ -24,7 +24,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
     @Import(name="arrayElementType", required=true)
       private final StandardSqlDataTypeResponse arrayElementType;
 
-    public StandardSqlDataTypeResponse getArrayElementType() {
+    public StandardSqlDataTypeResponse arrayElementType() {
         return this.arrayElementType;
     }
 
@@ -35,7 +35,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
     @Import(name="structType", required=true)
       private final StandardSqlStructTypeResponse structType;
 
-    public StandardSqlStructTypeResponse getStructType() {
+    public StandardSqlStructTypeResponse structType() {
         return this.structType;
     }
 
@@ -46,7 +46,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
     @Import(name="typeKind", required=true)
       private final String typeKind;
 
-    public String getTypeKind() {
+    public String typeKind() {
         return this.typeKind;
     }
 

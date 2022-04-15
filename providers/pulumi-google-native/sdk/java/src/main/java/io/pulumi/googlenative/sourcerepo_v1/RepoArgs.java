@@ -24,7 +24,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mirrorConfig")
       private final @Nullable Output<MirrorConfigArgs> mirrorConfig;
 
-    public Output<MirrorConfigArgs> getMirrorConfig() {
+    public Output<MirrorConfigArgs> mirrorConfig() {
         return this.mirrorConfig == null ? Codegen.empty() : this.mirrorConfig;
     }
 
@@ -35,14 +35,14 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -53,7 +53,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfigs")
       private final @Nullable Output<Map<String,String>> pubsubConfigs;
 
-    public Output<Map<String,String>> getPubsubConfigs() {
+    public Output<Map<String,String>> pubsubConfigs() {
         return this.pubsubConfigs == null ? Codegen.empty() : this.pubsubConfigs;
     }
 
@@ -64,7 +64,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -75,7 +75,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -18,14 +18,14 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keyid")
       private final @Nullable Output<String> keyid;
 
-    public Output<String> getKeyid() {
+    public Output<String> keyid() {
         return this.keyid == null ? Codegen.empty() : this.keyid;
     }
 
     @Import(name="sig")
       private final @Nullable Output<String> sig;
 
-    public Output<String> getSig() {
+    public Output<String> sig() {
         return this.sig == null ? Codegen.empty() : this.sig;
     }
 

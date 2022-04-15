@@ -26,14 +26,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="finalMeasurement")
       private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
-    public Output<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
+    public Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement() {
         return this.finalMeasurement == null ? Codegen.empty() : this.finalMeasurement;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -44,7 +44,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="measurements")
       private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
-    public Output<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
+    public Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements() {
         return this.measurements == null ? Codegen.empty() : this.measurements;
     }
 
@@ -55,14 +55,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
+    public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,14 +73,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<TrialState> state;
 
-    public Output<TrialState> getState() {
+    public Output<TrialState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="studyId", required=true)
       private final Output<String> studyId;
 
-    public Output<String> getStudyId() {
+    public Output<String> studyId() {
         return this.studyId;
     }
 

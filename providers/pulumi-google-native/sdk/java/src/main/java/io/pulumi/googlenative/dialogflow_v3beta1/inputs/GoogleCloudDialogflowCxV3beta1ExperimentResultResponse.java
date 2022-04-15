@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse extend
     @Import(name="lastUpdateTime", required=true)
       private final String lastUpdateTime;
 
-    public String getLastUpdateTime() {
+    public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse extend
     @Import(name="versionMetrics", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
 
-    public List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> getVersionMetrics() {
+    public List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics() {
         return this.versionMetrics;
     }
 

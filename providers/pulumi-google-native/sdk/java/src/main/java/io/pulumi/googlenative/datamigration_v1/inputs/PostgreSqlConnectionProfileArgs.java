@@ -28,7 +28,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="cloudSqlId")
       private final @Nullable Output<String> cloudSqlId;
 
-    public Output<String> getCloudSqlId() {
+    public Output<String> cloudSqlId() {
         return this.cloudSqlId == null ? Codegen.empty() : this.cloudSqlId;
     }
 
@@ -39,7 +39,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -50,7 +50,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -61,7 +61,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -72,7 +72,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="ssl")
       private final @Nullable Output<SslConfigArgs> ssl;
 
-    public Output<SslConfigArgs> getSsl() {
+    public Output<SslConfigArgs> ssl() {
         return this.ssl == null ? Codegen.empty() : this.ssl;
     }
 
@@ -83,7 +83,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

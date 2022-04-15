@@ -26,7 +26,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="labels", required=true)
       private final List<LabelDescriptorResponse> labels;
 
-    public List<LabelDescriptorResponse> getLabels() {
+    public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
 
@@ -59,7 +59,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="launchStage", required=true)
       private final String launchStage;
 
-    public String getLaunchStage() {
+    public String launchStage() {
         return this.launchStage;
     }
 
@@ -70,7 +70,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="metadata", required=true)
       private final MetricDescriptorMetadataResponse metadata;
 
-    public MetricDescriptorMetadataResponse getMetadata() {
+    public MetricDescriptorMetadataResponse metadata() {
         return this.metadata;
     }
 
@@ -81,7 +81,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="metricKind", required=true)
       private final String metricKind;
 
-    public String getMetricKind() {
+    public String metricKind() {
         return this.metricKind;
     }
 
@@ -92,7 +92,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="monitoredResourceTypes", required=true)
       private final List<String> monitoredResourceTypes;
 
-    public List<String> getMonitoredResourceTypes() {
+    public List<String> monitoredResourceTypes() {
         return this.monitoredResourceTypes;
     }
 
@@ -103,7 +103,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -114,7 +114,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -125,7 +125,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 
@@ -136,7 +136,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="valueType", required=true)
       private final String valueType;
 
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

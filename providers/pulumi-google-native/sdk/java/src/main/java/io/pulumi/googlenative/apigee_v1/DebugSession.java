@@ -32,7 +32,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
      * 
      */
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
     /**
@@ -46,7 +46,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -60,7 +60,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return A unique ID for this DebugSession.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
      * 
      */
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
     /**
@@ -88,7 +88,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
      * 
      */
-    public Output<Integer> getTracesize() {
+    public Output<Integer> tracesize() {
         return this.tracesize;
     }
     /**
@@ -102,7 +102,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * @return Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
-    public Output<Integer> getValidity() {
+    public Output<Integer> validity() {
         return this.validity;
     }
 

@@ -29,7 +29,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -40,7 +40,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadline")
       private final @Nullable Output<Double> deadline;
 
-    public Output<Double> getDeadline() {
+    public Output<Double> deadline() {
         return this.deadline == null ? Codegen.empty() : this.deadline;
     }
 
@@ -51,7 +51,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableAuth")
       private final @Nullable Output<Boolean> disableAuth;
 
-    public Output<Boolean> getDisableAuth() {
+    public Output<Boolean> disableAuth() {
         return this.disableAuth == null ? Codegen.empty() : this.disableAuth;
     }
 
@@ -62,7 +62,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jwtAudience")
       private final @Nullable Output<String> jwtAudience;
 
-    public Output<String> getJwtAudience() {
+    public Output<String> jwtAudience() {
         return this.jwtAudience == null ? Codegen.empty() : this.jwtAudience;
     }
 
@@ -73,14 +73,14 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationDeadline")
       private final @Nullable Output<Double> operationDeadline;
 
-    public Output<Double> getOperationDeadline() {
+    public Output<Double> operationDeadline() {
         return this.operationDeadline == null ? Codegen.empty() : this.operationDeadline;
     }
 
     @Import(name="pathTranslation")
       private final @Nullable Output<BackendRulePathTranslation> pathTranslation;
 
-    public Output<BackendRulePathTranslation> getPathTranslation() {
+    public Output<BackendRulePathTranslation> pathTranslation() {
         return this.pathTranslation == null ? Codegen.empty() : this.pathTranslation;
     }
 
@@ -91,7 +91,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -102,7 +102,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

@@ -28,7 +28,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -39,7 +39,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
+    public Output<List<String>> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -50,7 +50,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Output<List<String>> getExclusivePatches() {
+    public Output<List<String>> exclusivePatches() {
         return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
     }
 
@@ -61,7 +61,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severities")
       private final @Nullable Output<List<String>> severities;
 
-    public Output<List<String>> getSeverities() {
+    public Output<List<String>> severities() {
         return this.severities == null ? Codegen.empty() : this.severities;
     }
 
@@ -72,7 +72,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="withOptional")
       private final @Nullable Output<Boolean> withOptional;
 
-    public Output<Boolean> getWithOptional() {
+    public Output<Boolean> withOptional() {
         return this.withOptional == null ? Codegen.empty() : this.withOptional;
     }
 
@@ -83,7 +83,7 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="withUpdate")
       private final @Nullable Output<Boolean> withUpdate;
 
-    public Output<Boolean> getWithUpdate() {
+    public Output<Boolean> withUpdate() {
         return this.withUpdate == null ? Codegen.empty() : this.withUpdate;
     }
 

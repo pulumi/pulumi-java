@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
      * 
     */
-    public List<String> getKnowledgeBases() {
+    public List<String> knowledgeBases() {
         return this.knowledgeBases;
     }
 

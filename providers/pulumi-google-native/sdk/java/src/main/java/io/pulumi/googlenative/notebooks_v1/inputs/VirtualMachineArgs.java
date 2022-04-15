@@ -26,7 +26,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineConfig")
       private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
-    public Output<VirtualMachineConfigArgs> getVirtualMachineConfig() {
+    public Output<VirtualMachineConfigArgs> virtualMachineConfig() {
         return this.virtualMachineConfig == null ? Codegen.empty() : this.virtualMachineConfig;
     }
 

@@ -27,7 +27,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schemaValidation")
       private final @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
 
-    public Output<ValidationOptionsSchemaValidation> getSchemaValidation() {
+    public Output<ValidationOptionsSchemaValidation> schemaValidation() {
         return this.schemaValidation == null ? Codegen.empty() : this.schemaValidation;
     }
 
@@ -38,7 +38,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="undeclaredProperties")
       private final @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
-    public Output<ValidationOptionsUndeclaredProperties> getUndeclaredProperties() {
+    public Output<ValidationOptionsUndeclaredProperties> undeclaredProperties() {
         return this.undeclaredProperties == null ? Codegen.empty() : this.undeclaredProperties;
     }
 

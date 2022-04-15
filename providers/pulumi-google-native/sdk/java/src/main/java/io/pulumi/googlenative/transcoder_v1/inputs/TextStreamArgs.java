@@ -28,7 +28,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codec")
       private final @Nullable Output<String> codec;
 
-    public Output<String> getCodec() {
+    public Output<String> codec() {
         return this.codec == null ? Codegen.empty() : this.codec;
     }
 
@@ -39,7 +39,7 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mapping")
       private final @Nullable Output<List<TextMappingArgs>> mapping;
 
-    public Output<List<TextMappingArgs>> getMapping() {
+    public Output<List<TextMappingArgs>> mapping() {
         return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 

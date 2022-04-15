@@ -50,28 +50,28 @@ public final class UpgradeNoteResponse {
      * Metadata about the upgrade for each specific operating system.
      * 
     */
-    public List<UpgradeDistributionResponse> getDistributions() {
+    public List<UpgradeDistributionResponse> distributions() {
         return this.distributions;
     }
     /**
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
     */
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
     /**
      * Required for non-Windows OS. The version of the package in machine + human readable form.
      * 
     */
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
     /**
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
     */
-    public WindowsUpdateResponse getWindowsUpdate() {
+    public WindowsUpdateResponse windowsUpdate() {
         return this.windowsUpdate;
     }
 

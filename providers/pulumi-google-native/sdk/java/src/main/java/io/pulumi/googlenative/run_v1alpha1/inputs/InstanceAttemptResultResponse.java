@@ -24,7 +24,7 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
     @Import(name="exitCode", required=true)
       private final Integer exitCode;
 
-    public Integer getExitCode() {
+    public Integer exitCode() {
         return this.exitCode;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
 
-    public GoogleRpcStatusResponse getStatus() {
+    public GoogleRpcStatusResponse status() {
         return this.status;
     }
 

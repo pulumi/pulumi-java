@@ -23,7 +23,7 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="retry", required=true)
       private final RetryResponse retry;
 
-    public RetryResponse getRetry() {
+    public RetryResponse retry() {
         return this.retry;
     }
 

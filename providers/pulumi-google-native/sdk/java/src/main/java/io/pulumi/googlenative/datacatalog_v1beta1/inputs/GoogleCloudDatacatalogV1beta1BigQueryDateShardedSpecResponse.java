@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="dataset", required=true)
       private final String dataset;
 
-    public String getDataset() {
+    public String dataset() {
         return this.dataset;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="shardCount", required=true)
       private final String shardCount;
 
-    public String getShardCount() {
+    public String shardCount() {
         return this.shardCount;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     @Import(name="tablePrefix", required=true)
       private final String tablePrefix;
 
-    public String getTablePrefix() {
+    public String tablePrefix() {
         return this.tablePrefix;
     }
 

@@ -25,7 +25,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destinations", required=true)
       private final List<DestinationResponse> destinations;
 
-    public List<DestinationResponse> getDestinations() {
+    public List<DestinationResponse> destinations() {
         return this.destinations;
     }
 
@@ -36,7 +36,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sources", required=true)
       private final List<SourceResponse> sources;
 
-    public List<SourceResponse> getSources() {
+    public List<SourceResponse> sources() {
         return this.sources;
     }
 

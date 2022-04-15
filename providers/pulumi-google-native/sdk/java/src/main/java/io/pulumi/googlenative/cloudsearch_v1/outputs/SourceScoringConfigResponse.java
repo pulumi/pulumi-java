@@ -24,7 +24,7 @@ public final class SourceScoringConfigResponse {
      * Importance of the source.
      * 
     */
-    public String getSourceImportance() {
+    public String sourceImportance() {
         return this.sourceImportance;
     }
 

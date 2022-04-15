@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
-    public Output<String> getParameter() {
+    public Output<String> parameter() {
         return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

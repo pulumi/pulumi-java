@@ -32,14 +32,14 @@ public final class CertHttpChallengeResponse {
      * The URL path on which to serve the specified token to satisfy the certificate challenge.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The token to serve at the specified URL path to satisfy the certificate challenge.
      * 
     */
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

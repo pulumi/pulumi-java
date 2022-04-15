@@ -15,7 +15,7 @@ public final class GetV1beta1IamPolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="v1beta1Id", required=true)
       private final String v1beta1Id;
 
-    public String getV1beta1Id() {
+    public String v1beta1Id() {
         return this.v1beta1Id;
     }
 

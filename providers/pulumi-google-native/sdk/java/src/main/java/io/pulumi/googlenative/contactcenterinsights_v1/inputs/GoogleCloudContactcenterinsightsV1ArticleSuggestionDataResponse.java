@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
-    public Double getConfidenceScore() {
+    public Double confidenceScore() {
         return this.confidenceScore;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
-    public String getQueryRecord() {
+    public String queryRecord() {
         return this.queryRecord;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

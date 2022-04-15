@@ -78,56 +78,56 @@ public final class GetConsentArtifactResult {
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
      * 
     */
-    public List<ImageResponse> getConsentContentScreenshots() {
+    public List<ImageResponse> consentContentScreenshots() {
         return this.consentContentScreenshots;
     }
     /**
      * Optional. An string indicating the version of the consent information shown to the user.
      * 
     */
-    public String getConsentContentVersion() {
+    public String consentContentVersion() {
         return this.consentContentVersion;
     }
     /**
      * Optional. A signature from a guardian.
      * 
     */
-    public SignatureResponse getGuardianSignature() {
+    public SignatureResponse guardianSignature() {
         return this.guardianSignature;
     }
     /**
      * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * User's UUID provided by the client.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
     /**
      * Optional. User's signature.
      * 
     */
-    public SignatureResponse getUserSignature() {
+    public SignatureResponse userSignature() {
         return this.userSignature;
     }
     /**
      * Optional. A signature from a witness.
      * 
     */
-    public SignatureResponse getWitnessSignature() {
+    public SignatureResponse witnessSignature() {
         return this.witnessSignature;
     }
 

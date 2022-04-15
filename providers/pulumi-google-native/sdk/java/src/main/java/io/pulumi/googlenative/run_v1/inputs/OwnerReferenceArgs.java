@@ -27,7 +27,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -38,7 +38,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blockOwnerDeletion")
       private final @Nullable Output<Boolean> blockOwnerDeletion;
 
-    public Output<Boolean> getBlockOwnerDeletion() {
+    public Output<Boolean> blockOwnerDeletion() {
         return this.blockOwnerDeletion == null ? Codegen.empty() : this.blockOwnerDeletion;
     }
 
@@ -49,7 +49,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="controller")
       private final @Nullable Output<Boolean> controller;
 
-    public Output<Boolean> getController() {
+    public Output<Boolean> controller() {
         return this.controller == null ? Codegen.empty() : this.controller;
     }
 
@@ -60,7 +60,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -71,7 +71,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

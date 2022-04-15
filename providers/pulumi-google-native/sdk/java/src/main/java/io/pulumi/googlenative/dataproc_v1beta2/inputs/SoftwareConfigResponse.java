@@ -25,7 +25,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="imageVersion", required=true)
       private final String imageVersion;
 
-    public String getImageVersion() {
+    public String imageVersion() {
         return this.imageVersion;
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="optionalComponents", required=true)
       private final List<String> optionalComponents;
 
-    public List<String> getOptionalComponents() {
+    public List<String> optionalComponents() {
         return this.optionalComponents;
     }
 
@@ -47,7 +47,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties;
     }
 

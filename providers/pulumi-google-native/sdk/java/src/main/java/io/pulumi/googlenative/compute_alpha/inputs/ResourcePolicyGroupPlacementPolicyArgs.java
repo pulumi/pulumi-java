@@ -30,7 +30,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="availabilityDomainCount")
       private final @Nullable Output<Integer> availabilityDomainCount;
 
-    public Output<Integer> getAvailabilityDomainCount() {
+    public Output<Integer> availabilityDomainCount() {
         return this.availabilityDomainCount == null ? Codegen.empty() : this.availabilityDomainCount;
     }
 
@@ -41,7 +41,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="collocation")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
-    public Output<ResourcePolicyGroupPlacementPolicyCollocation> getCollocation() {
+    public Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation() {
         return this.collocation == null ? Codegen.empty() : this.collocation;
     }
 
@@ -52,7 +52,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="locality")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
 
-    public Output<ResourcePolicyGroupPlacementPolicyLocality> getLocality() {
+    public Output<ResourcePolicyGroupPlacementPolicyLocality> locality() {
         return this.locality == null ? Codegen.empty() : this.locality;
     }
 
@@ -63,7 +63,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="scope")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
 
-    public Output<ResourcePolicyGroupPlacementPolicyScope> getScope() {
+    public Output<ResourcePolicyGroupPlacementPolicyScope> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -74,7 +74,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="style")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
 
-    public Output<ResourcePolicyGroupPlacementPolicyStyle> getStyle() {
+    public Output<ResourcePolicyGroupPlacementPolicyStyle> style() {
         return this.style == null ? Codegen.empty() : this.style;
     }
 
@@ -85,7 +85,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
     @Import(name="vmCount")
       private final @Nullable Output<Integer> vmCount;
 
-    public Output<Integer> getVmCount() {
+    public Output<Integer> vmCount() {
         return this.vmCount == null ? Codegen.empty() : this.vmCount;
     }
 

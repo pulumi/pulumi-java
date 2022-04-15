@@ -25,14 +25,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
     @Import(name="multistepNumber", required=true)
       private final Integer multistepNumber;
 
-    public Integer getMultistepNumber() {
+    public Integer multistepNumber() {
         return this.multistepNumber;
     }
 
     @Import(name="outcomeSummary", required=true)
       private final String outcomeSummary;
 
-    public String getOutcomeSummary() {
+    public String outcomeSummary() {
         return this.outcomeSummary;
     }
 
@@ -43,14 +43,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
     @Import(name="runDuration", required=true)
       private final DurationResponse runDuration;
 
-    public DurationResponse getRunDuration() {
+    public DurationResponse runDuration() {
         return this.runDuration;
     }
 
     @Import(name="stepId", required=true)
       private final String stepId;
 
-    public String getStepId() {
+    public String stepId() {
         return this.stepId;
     }
 

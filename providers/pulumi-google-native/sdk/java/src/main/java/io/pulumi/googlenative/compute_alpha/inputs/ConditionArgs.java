@@ -30,7 +30,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
 
-    public Output<ConditionIam> getIam() {
+    public Output<ConditionIam> iam() {
         return this.iam == null ? Codegen.empty() : this.iam;
     }
 
@@ -41,7 +41,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
 
-    public Output<ConditionOp> getOp() {
+    public Output<ConditionOp> op() {
         return this.op == null ? Codegen.empty() : this.op;
     }
 
@@ -52,7 +52,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="svc")
       private final @Nullable Output<String> svc;
 
-    public Output<String> getSvc() {
+    public Output<String> svc() {
         return this.svc == null ? Codegen.empty() : this.svc;
     }
 
@@ -63,7 +63,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
 
-    public Output<ConditionSys> getSys() {
+    public Output<ConditionSys> sys() {
         return this.sys == null ? Codegen.empty() : this.sys;
     }
 
@@ -74,7 +74,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

@@ -40,21 +40,21 @@ public final class QueryParameterTypeStructTypesItemResponse {
      * [Optional] Human-oriented description of the field.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * [Optional] The name of this field.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * [Required] The type of this field.
      * 
     */
-    public QueryParameterTypeResponse getType() {
+    public QueryParameterTypeResponse type() {
         return this.type;
     }
 

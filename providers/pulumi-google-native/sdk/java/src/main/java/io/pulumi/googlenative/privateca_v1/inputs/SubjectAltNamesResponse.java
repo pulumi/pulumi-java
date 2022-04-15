@@ -25,7 +25,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="customSans", required=true)
       private final List<X509ExtensionResponse> customSans;
 
-    public List<X509ExtensionResponse> getCustomSans() {
+    public List<X509ExtensionResponse> customSans() {
         return this.customSans;
     }
 
@@ -36,7 +36,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="dnsNames", required=true)
       private final List<String> dnsNames;
 
-    public List<String> getDnsNames() {
+    public List<String> dnsNames() {
         return this.dnsNames;
     }
 
@@ -47,7 +47,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="emailAddresses", required=true)
       private final List<String> emailAddresses;
 
-    public List<String> getEmailAddresses() {
+    public List<String> emailAddresses() {
         return this.emailAddresses;
     }
 
@@ -58,7 +58,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
 
@@ -69,7 +69,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
     @Import(name="uris", required=true)
       private final List<String> uris;
 
-    public List<String> getUris() {
+    public List<String> uris() {
         return this.uris;
     }
 

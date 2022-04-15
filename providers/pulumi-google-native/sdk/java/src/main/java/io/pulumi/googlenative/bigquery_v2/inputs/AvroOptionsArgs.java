@@ -22,7 +22,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useAvroLogicalTypes")
       private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Output<Boolean> getUseAvroLogicalTypes() {
+    public Output<Boolean> useAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
     }
 

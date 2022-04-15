@@ -47,28 +47,28 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
      * 
     */
-    public Double getConfidence() {
+    public Double confidence() {
         return this.confidence;
     }
     /**
      * Time offset of the end of this word relative to the beginning of the total conversation.
      * 
     */
-    public String getEndOffset() {
+    public String endOffset() {
         return this.endOffset;
     }
     /**
      * Time offset of the start of this word relative to the beginning of the total conversation.
      * 
     */
-    public String getStartOffset() {
+    public String startOffset() {
         return this.startOffset;
     }
     /**
      * The word itself. Includes punctuation marks that surround the word.
      * 
     */
-    public String getWord() {
+    public String word() {
         return this.word;
     }
 

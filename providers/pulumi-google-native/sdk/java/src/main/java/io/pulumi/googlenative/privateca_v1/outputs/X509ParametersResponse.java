@@ -58,35 +58,35 @@ public final class X509ParametersResponse {
      * Optional. Describes custom X.509 extensions.
      * 
     */
-    public List<X509ExtensionResponse> getAdditionalExtensions() {
+    public List<X509ExtensionResponse> additionalExtensions() {
         return this.additionalExtensions;
     }
     /**
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
      * 
     */
-    public List<String> getAiaOcspServers() {
+    public List<String> aiaOcspServers() {
         return this.aiaOcspServers;
     }
     /**
      * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
      * 
     */
-    public CaOptionsResponse getCaOptions() {
+    public CaOptionsResponse caOptions() {
         return this.caOptions;
     }
     /**
      * Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
     */
-    public KeyUsageResponse getKeyUsage() {
+    public KeyUsageResponse keyUsage() {
         return this.keyUsage;
     }
     /**
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
     */
-    public List<ObjectIdResponse> getPolicyIds() {
+    public List<ObjectIdResponse> policyIds() {
         return this.policyIds;
     }
 

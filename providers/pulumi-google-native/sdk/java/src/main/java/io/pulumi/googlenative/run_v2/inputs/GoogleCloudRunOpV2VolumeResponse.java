@@ -25,7 +25,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
     @Import(name="cloudSqlInstance", required=true)
       private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
 
-    public GoogleCloudRunOpV2CloudSqlInstanceResponse getCloudSqlInstance() {
+    public GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends io.pulumi.resources.
     @Import(name="secret", required=true)
       private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
-    public GoogleCloudRunOpV2SecretVolumeSourceResponse getSecret() {
+    public GoogleCloudRunOpV2SecretVolumeSourceResponse secret() {
         return this.secret;
     }
 

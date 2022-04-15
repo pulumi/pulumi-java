@@ -31,7 +31,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return Optional. A user-specified, human-readable description of the service account. The maximum length is 256 UTF-8 bytes.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -45,7 +45,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return Whether the service account is disabled.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -59,7 +59,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return Optional. A user-specified, human-readable name for the service account. The maximum length is 100 UTF-8 bytes.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +73,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return The email address of the service account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -87,7 +87,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return The resource name of the service account. Use one of the following formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character, because it can cause response messages to contain misleading error codes. For example, if you try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return The OAuth 2.0 client ID for the service account.
      * 
      */
-    public Output<String> getOauth2ClientId() {
+    public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
@@ -115,7 +115,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return The ID of the project that owns the service account.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +129,7 @@ public class ServiceAccount extends io.pulumi.resources.CustomResource {
      * @return The unique, stable numeric ID for the service account. Each service account retains its unique ID even if you delete the service account. For example, if you delete a service account, then create a new service account with the same name, the new service account has a different unique ID than the deleted service account.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 

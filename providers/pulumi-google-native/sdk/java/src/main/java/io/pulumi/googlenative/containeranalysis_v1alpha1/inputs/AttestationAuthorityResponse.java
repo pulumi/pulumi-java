@@ -19,7 +19,7 @@ public final class AttestationAuthorityResponse extends io.pulumi.resources.Invo
     @Import(name="hint", required=true)
       private final AttestationAuthorityHintResponse hint;
 
-    public AttestationAuthorityHintResponse getHint() {
+    public AttestationAuthorityHintResponse hint() {
         return this.hint;
     }
 

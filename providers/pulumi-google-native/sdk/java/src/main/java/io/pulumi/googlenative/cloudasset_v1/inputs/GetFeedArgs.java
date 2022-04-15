@@ -15,21 +15,21 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="feedId", required=true)
       private final String feedId;
 
-    public String getFeedId() {
+    public String feedId() {
         return this.feedId;
     }
 
     @Import(name="v1Id", required=true)
       private final String v1Id;
 
-    public String getV1Id() {
+    public String v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
       private final String v1Id1;
 
-    public String getV1Id1() {
+    public String v1Id1() {
         return this.v1Id1;
     }
 

@@ -27,7 +27,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -38,7 +38,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -49,7 +49,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="deployTime", required=true)
       private final Output<String> deployTime;
 
-    public Output<String> getDeployTime() {
+    public Output<String> deployTime() {
         return this.deployTime;
     }
 
@@ -60,7 +60,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="platform")
       private final @Nullable Output<DeploymentOccurrencePlatform> platform;
 
-    public Output<DeploymentOccurrencePlatform> getPlatform() {
+    public Output<DeploymentOccurrencePlatform> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -71,7 +71,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="undeployTime")
       private final @Nullable Output<String> undeployTime;
 
-    public Output<String> getUndeployTime() {
+    public Output<String> undeployTime() {
         return this.undeployTime == null ? Codegen.empty() : this.undeployTime;
     }
 
@@ -82,7 +82,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     @Import(name="userEmail")
       private final @Nullable Output<String> userEmail;
 
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail == null ? Codegen.empty() : this.userEmail;
     }
 

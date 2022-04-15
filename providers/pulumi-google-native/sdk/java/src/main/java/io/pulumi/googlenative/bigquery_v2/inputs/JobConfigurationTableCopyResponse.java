@@ -23,7 +23,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="createDisposition", required=true)
       private final String createDisposition;
 
-    public String getCreateDisposition() {
+    public String createDisposition() {
         return this.createDisposition;
     }
 
@@ -34,7 +34,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="destinationEncryptionConfiguration", required=true)
       private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
-    public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
+    public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
     }
 
@@ -45,7 +45,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="destinationExpirationTime", required=true)
       private final Object destinationExpirationTime;
 
-    public Object getDestinationExpirationTime() {
+    public Object destinationExpirationTime() {
         return this.destinationExpirationTime;
     }
 
@@ -56,7 +56,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="destinationTable", required=true)
       private final TableReferenceResponse destinationTable;
 
-    public TableReferenceResponse getDestinationTable() {
+    public TableReferenceResponse destinationTable() {
         return this.destinationTable;
     }
 
@@ -67,7 +67,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="operationType", required=true)
       private final String operationType;
 
-    public String getOperationType() {
+    public String operationType() {
         return this.operationType;
     }
 
@@ -78,7 +78,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="sourceTable", required=true)
       private final TableReferenceResponse sourceTable;
 
-    public TableReferenceResponse getSourceTable() {
+    public TableReferenceResponse sourceTable() {
         return this.sourceTable;
     }
 
@@ -89,7 +89,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="sourceTables", required=true)
       private final List<TableReferenceResponse> sourceTables;
 
-    public List<TableReferenceResponse> getSourceTables() {
+    public List<TableReferenceResponse> sourceTables() {
         return this.sourceTables;
     }
 
@@ -100,7 +100,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
-    public String getWriteDisposition() {
+    public String writeDisposition() {
         return this.writeDisposition;
     }
 

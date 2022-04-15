@@ -24,7 +24,7 @@ public final class ApiEndpointHandlerResponse {
      * Path to the script from the application root directory.
      * 
     */
-    public String getScriptPath() {
+    public String scriptPath() {
         return this.scriptPath;
     }
 

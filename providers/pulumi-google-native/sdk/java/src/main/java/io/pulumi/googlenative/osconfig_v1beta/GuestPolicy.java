@@ -34,7 +34,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
      * 
      */
-    public Output<AssignmentResponse> getAssignment() {
+    public Output<AssignmentResponse> assignment() {
         return this.assignment;
     }
     /**
@@ -48,7 +48,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return Time this guest policy was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +62,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
      * 
      */
-    public Output<List<PackageRepositoryResponse>> getPackageRepositories() {
+    public Output<List<PackageRepositoryResponse>> packageRepositories() {
         return this.packageRepositories;
     }
     /**
@@ -118,7 +118,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return The software packages to be managed by this policy.
      * 
      */
-    public Output<List<PackageResponse>> getPackages() {
+    public Output<List<PackageResponse>> packages() {
         return this.packages;
     }
     /**
@@ -132,7 +132,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return A list of Recipes to install on the VM instance.
      * 
      */
-    public Output<List<SoftwareRecipeResponse>> getRecipes() {
+    public Output<List<SoftwareRecipeResponse>> recipes() {
         return this.recipes;
     }
     /**
@@ -146,7 +146,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * @return Last time this guest policy was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

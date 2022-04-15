@@ -32,14 +32,14 @@ public final class AutoscalingLimitsResponse {
      * Maximum number of nodes to scale up to.
      * 
     */
-    public Integer getMaxServeNodes() {
+    public Integer maxServeNodes() {
         return this.maxServeNodes;
     }
     /**
      * Minimum number of nodes to scale down to.
      * 
     */
-    public Integer getMinServeNodes() {
+    public Integer minServeNodes() {
         return this.minServeNodes;
     }
 

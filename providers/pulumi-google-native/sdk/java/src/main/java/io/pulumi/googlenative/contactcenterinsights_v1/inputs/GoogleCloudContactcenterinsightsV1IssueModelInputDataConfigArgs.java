@@ -27,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     @Import(name="medium")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
-    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> getMedium() {
+    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium() {
         return this.medium == null ? Codegen.empty() : this.medium;
     }
 

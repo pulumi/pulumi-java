@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="excludedFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getExcludedFields() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields() {
         return this.excludedFields == null ? Codegen.empty() : this.excludedFields;
     }
 
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="identifyingFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields() {
         return this.identifyingFields == null ? Codegen.empty() : this.identifyingFields;
     }
 
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="includedFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getIncludedFields() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields() {
         return this.includedFields == null ? Codegen.empty() : this.includedFields;
     }
 
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="rowsLimit")
       private final @Nullable Output<String> rowsLimit;
 
-    public Output<String> getRowsLimit() {
+    public Output<String> rowsLimit() {
         return this.rowsLimit == null ? Codegen.empty() : this.rowsLimit;
     }
 
@@ -75,14 +75,14 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="rowsLimitPercent")
       private final @Nullable Output<Integer> rowsLimitPercent;
 
-    public Output<Integer> getRowsLimitPercent() {
+    public Output<Integer> rowsLimitPercent() {
         return this.rowsLimitPercent == null ? Codegen.empty() : this.rowsLimitPercent;
     }
 
     @Import(name="sampleMethod")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod;
 
-    public Output<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> getSampleMethod() {
+    public Output<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod() {
         return this.sampleMethod == null ? Codegen.empty() : this.sampleMethod;
     }
 
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     @Import(name="tableReference")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> tableReference;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTableReference() {
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> tableReference() {
         return this.tableReference == null ? Codegen.empty() : this.tableReference;
     }
 

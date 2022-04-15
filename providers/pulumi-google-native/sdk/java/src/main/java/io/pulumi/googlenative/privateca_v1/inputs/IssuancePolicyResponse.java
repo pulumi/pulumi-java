@@ -29,7 +29,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="allowedIssuanceModes", required=true)
       private final IssuanceModesResponse allowedIssuanceModes;
 
-    public IssuanceModesResponse getAllowedIssuanceModes() {
+    public IssuanceModesResponse allowedIssuanceModes() {
         return this.allowedIssuanceModes;
     }
 
@@ -40,7 +40,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="allowedKeyTypes", required=true)
       private final List<AllowedKeyTypeResponse> allowedKeyTypes;
 
-    public List<AllowedKeyTypeResponse> getAllowedKeyTypes() {
+    public List<AllowedKeyTypeResponse> allowedKeyTypes() {
         return this.allowedKeyTypes;
     }
 
@@ -51,7 +51,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="baselineValues", required=true)
       private final X509ParametersResponse baselineValues;
 
-    public X509ParametersResponse getBaselineValues() {
+    public X509ParametersResponse baselineValues() {
         return this.baselineValues;
     }
 
@@ -62,7 +62,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="identityConstraints", required=true)
       private final CertificateIdentityConstraintsResponse identityConstraints;
 
-    public CertificateIdentityConstraintsResponse getIdentityConstraints() {
+    public CertificateIdentityConstraintsResponse identityConstraints() {
         return this.identityConstraints;
     }
 
@@ -73,7 +73,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="maximumLifetime", required=true)
       private final String maximumLifetime;
 
-    public String getMaximumLifetime() {
+    public String maximumLifetime() {
         return this.maximumLifetime;
     }
 
@@ -84,7 +84,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="passthroughExtensions", required=true)
       private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
-    public CertificateExtensionConstraintsResponse getPassthroughExtensions() {
+    public CertificateExtensionConstraintsResponse passthroughExtensions() {
         return this.passthroughExtensions;
     }
 

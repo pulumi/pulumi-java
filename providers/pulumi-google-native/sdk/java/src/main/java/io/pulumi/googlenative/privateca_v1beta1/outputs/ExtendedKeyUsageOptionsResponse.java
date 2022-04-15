@@ -60,42 +60,42 @@ public final class ExtendedKeyUsageOptionsResponse {
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
      * 
     */
-    public Boolean getClientAuth() {
+    public Boolean clientAuth() {
         return this.clientAuth;
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
      * 
     */
-    public Boolean getCodeSigning() {
+    public Boolean codeSigning() {
         return this.codeSigning;
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
      * 
     */
-    public Boolean getEmailProtection() {
+    public Boolean emailProtection() {
         return this.emailProtection;
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
      * 
     */
-    public Boolean getOcspSigning() {
+    public Boolean ocspSigning() {
         return this.ocspSigning;
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
      * 
     */
-    public Boolean getServerAuth() {
+    public Boolean serverAuth() {
         return this.serverAuth;
     }
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
      * 
     */
-    public Boolean getTimeStamping() {
+    public Boolean timeStamping() {
         return this.timeStamping;
     }
 

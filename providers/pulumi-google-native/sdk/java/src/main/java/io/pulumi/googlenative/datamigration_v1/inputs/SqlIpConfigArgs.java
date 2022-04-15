@@ -29,7 +29,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks;
 
-    public Output<List<SqlAclEntryArgs>> getAuthorizedNetworks() {
+    public Output<List<SqlAclEntryArgs>> authorizedNetworks() {
         return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
@@ -40,7 +40,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableIpv4")
       private final @Nullable Output<Boolean> enableIpv4;
 
-    public Output<Boolean> getEnableIpv4() {
+    public Output<Boolean> enableIpv4() {
         return this.enableIpv4 == null ? Codegen.empty() : this.enableIpv4;
     }
 
@@ -51,7 +51,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateNetwork")
       private final @Nullable Output<String> privateNetwork;
 
-    public Output<String> getPrivateNetwork() {
+    public Output<String> privateNetwork() {
         return this.privateNetwork == null ? Codegen.empty() : this.privateNetwork;
     }
 
@@ -62,7 +62,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireSsl")
       private final @Nullable Output<Boolean> requireSsl;
 
-    public Output<Boolean> getRequireSsl() {
+    public Output<Boolean> requireSsl() {
         return this.requireSsl == null ? Codegen.empty() : this.requireSsl;
     }
 

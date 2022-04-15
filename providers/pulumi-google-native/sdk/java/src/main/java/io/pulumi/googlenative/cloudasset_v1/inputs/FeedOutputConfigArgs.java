@@ -26,7 +26,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Output<PubsubDestinationArgs> getPubsubDestination() {
+    public Output<PubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination == null ? Codegen.empty() : this.pubsubDestination;
     }
 

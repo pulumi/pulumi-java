@@ -26,7 +26,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shell")
       private final @Nullable Output<String> shell;
 
-    public Output<String> getShell() {
+    public Output<String> shell() {
         return this.shell == null ? Codegen.empty() : this.shell;
     }
 

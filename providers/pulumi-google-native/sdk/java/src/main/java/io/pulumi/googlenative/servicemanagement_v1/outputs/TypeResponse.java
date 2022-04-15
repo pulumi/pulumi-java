@@ -64,42 +64,42 @@ public final class TypeResponse {
      * The list of fields.
      * 
     */
-    public List<FieldResponse> getFields() {
+    public List<FieldResponse> fields() {
         return this.fields;
     }
     /**
      * The fully qualified message name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of types appearing in `oneof` definitions in this type.
      * 
     */
-    public List<String> getOneofs() {
+    public List<String> oneofs() {
         return this.oneofs;
     }
     /**
      * The protocol buffer options.
      * 
     */
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
     /**
      * The source context.
      * 
     */
-    public SourceContextResponse getSourceContext() {
+    public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
     /**
      * The source syntax.
      * 
     */
-    public String getSyntax() {
+    public String syntax() {
         return this.syntax;
     }
 

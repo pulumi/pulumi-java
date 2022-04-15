@@ -25,7 +25,7 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;
 
-    public Output<String> getBuilderVersion() {
+    public Output<String> builderVersion() {
         return this.builderVersion;
     }
 

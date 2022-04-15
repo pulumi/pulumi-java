@@ -26,7 +26,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="baseKeyUsage", required=true)
       private final KeyUsageOptionsResponse baseKeyUsage;
 
-    public KeyUsageOptionsResponse getBaseKeyUsage() {
+    public KeyUsageOptionsResponse baseKeyUsage() {
         return this.baseKeyUsage;
     }
 
@@ -37,7 +37,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="extendedKeyUsage", required=true)
       private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
 
-    public ExtendedKeyUsageOptionsResponse getExtendedKeyUsage() {
+    public ExtendedKeyUsageOptionsResponse extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
 
@@ -48,7 +48,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="unknownExtendedKeyUsages", required=true)
       private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
-    public List<ObjectIdResponse> getUnknownExtendedKeyUsages() {
+    public List<ObjectIdResponse> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }
 

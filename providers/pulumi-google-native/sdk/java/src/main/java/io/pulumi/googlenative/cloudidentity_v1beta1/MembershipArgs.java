@@ -21,7 +21,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -32,7 +32,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memberKey")
       private final @Nullable Output<EntityKeyArgs> memberKey;
 
-    public Output<EntityKeyArgs> getMemberKey() {
+    public Output<EntityKeyArgs> memberKey() {
         return this.memberKey == null ? Codegen.empty() : this.memberKey;
     }
 
@@ -43,7 +43,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredMemberKey", required=true)
       private final Output<EntityKeyArgs> preferredMemberKey;
 
-    public Output<EntityKeyArgs> getPreferredMemberKey() {
+    public Output<EntityKeyArgs> preferredMemberKey() {
         return this.preferredMemberKey;
     }
 
@@ -54,7 +54,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<MembershipRoleArgs>> roles;
 
-    public Output<List<MembershipRoleArgs>> getRoles() {
+    public Output<List<MembershipRoleArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 

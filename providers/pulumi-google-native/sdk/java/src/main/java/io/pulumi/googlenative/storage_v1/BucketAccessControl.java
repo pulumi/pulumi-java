@@ -31,7 +31,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -45,7 +45,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The domain associated with the entity, if any.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -59,7 +59,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The email address associated with the entity, if any.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -95,7 +95,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
      */
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
     /**
@@ -109,7 +109,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The ID for the entity, if any.
      * 
      */
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
     /**
@@ -123,7 +123,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1 Entity tag for the access-control entry.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -137,7 +137,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -151,7 +151,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The project team associated with the entity, if any.
      * 
      */
-    public Output<BucketAccessControlProjectTeamResponse> getProjectTeam() {
+    public Output<BucketAccessControlProjectTeamResponse> projectTeam() {
         return this.projectTeam;
     }
     /**
@@ -165,7 +165,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The access permission for the entity.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -179,7 +179,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * @return The link to this access-control entry.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

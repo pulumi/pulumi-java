@@ -53,35 +53,35 @@ public final class GetViewResult {
      * The time at which this view was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The human-readable display name of the view.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The most recent time at which the view was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * String with specific view properties.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

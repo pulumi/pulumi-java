@@ -27,7 +27,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregationWindowLength")
       private final @Nullable Output<String> aggregationWindowLength;
 
-    public Output<String> getAggregationWindowLength() {
+    public Output<String> aggregationWindowLength() {
         return this.aggregationWindowLength == null ? Codegen.empty() : this.aggregationWindowLength;
     }
 
@@ -38,7 +38,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;
 
-    public Output<Double> getTargetUtilization() {
+    public Output<Double> targetUtilization() {
         return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 

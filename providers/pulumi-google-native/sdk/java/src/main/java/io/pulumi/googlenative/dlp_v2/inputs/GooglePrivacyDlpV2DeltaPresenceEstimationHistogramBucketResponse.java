@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
-    public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="maxProbability", required=true)
       private final Double maxProbability;
 
-    public Double getMaxProbability() {
+    public Double maxProbability() {
         return this.maxProbability;
     }
 
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     @Import(name="minProbability", required=true)
       private final Double minProbability;
 
-    public Double getMinProbability() {
+    public Double minProbability() {
         return this.minProbability;
     }
 

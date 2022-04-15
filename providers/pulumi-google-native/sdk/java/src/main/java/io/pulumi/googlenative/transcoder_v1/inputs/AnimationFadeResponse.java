@@ -24,7 +24,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="endTimeOffset", required=true)
       private final String endTimeOffset;
 
-    public String getEndTimeOffset() {
+    public String endTimeOffset() {
         return this.endTimeOffset;
     }
 
@@ -35,7 +35,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="fadeType", required=true)
       private final String fadeType;
 
-    public String getFadeType() {
+    public String fadeType() {
         return this.fadeType;
     }
 
@@ -46,7 +46,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="startTimeOffset", required=true)
       private final String startTimeOffset;
 
-    public String getStartTimeOffset() {
+    public String startTimeOffset() {
         return this.startTimeOffset;
     }
 
@@ -57,7 +57,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="xy", required=true)
       private final NormalizedCoordinateResponse xy;
 
-    public NormalizedCoordinateResponse getXy() {
+    public NormalizedCoordinateResponse xy() {
         return this.xy;
     }
 

@@ -41,21 +41,21 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
      * Provides additional information about the rule that specifies how to apply the rule.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse getConfig() {
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config() {
         return this.config;
     }
     /**
      * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
      * 
     */
-    public Boolean getNegated() {
+    public Boolean negated() {
         return this.negated;
     }
     /**
      * The phrase to be matched.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 

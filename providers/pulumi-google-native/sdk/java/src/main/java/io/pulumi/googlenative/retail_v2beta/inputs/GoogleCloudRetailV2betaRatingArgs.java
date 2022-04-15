@@ -28,7 +28,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
     @Import(name="averageRating")
       private final @Nullable Output<Double> averageRating;
 
-    public Output<Double> getAverageRating() {
+    public Output<Double> averageRating() {
         return this.averageRating == null ? Codegen.empty() : this.averageRating;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
     @Import(name="ratingCount")
       private final @Nullable Output<Integer> ratingCount;
 
-    public Output<Integer> getRatingCount() {
+    public Output<Integer> ratingCount() {
         return this.ratingCount == null ? Codegen.empty() : this.ratingCount;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2betaRatingArgs extends io.pulumi.resources
     @Import(name="ratingHistogram")
       private final @Nullable Output<List<Integer>> ratingHistogram;
 
-    public Output<List<Integer>> getRatingHistogram() {
+    public Output<List<Integer>> ratingHistogram() {
         return this.ratingHistogram == null ? Codegen.empty() : this.ratingHistogram;
     }
 

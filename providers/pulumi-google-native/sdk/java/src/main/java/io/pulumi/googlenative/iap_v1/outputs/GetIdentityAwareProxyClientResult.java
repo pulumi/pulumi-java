@@ -39,21 +39,21 @@ public final class GetIdentityAwareProxyClientResult {
      * Human-friendly name given to the OAuth client.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Unique identifier of the OAuth client.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Client secret of the OAuth client.
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

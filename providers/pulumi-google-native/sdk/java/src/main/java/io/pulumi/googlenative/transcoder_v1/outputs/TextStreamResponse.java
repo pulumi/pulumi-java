@@ -34,14 +34,14 @@ public final class TextStreamResponse {
      * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
      * 
     */
-    public String getCodec() {
+    public String codec() {
         return this.codec;
     }
     /**
      * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
      * 
     */
-    public List<TextMappingResponse> getMapping() {
+    public List<TextMappingResponse> mapping() {
         return this.mapping;
     }
 

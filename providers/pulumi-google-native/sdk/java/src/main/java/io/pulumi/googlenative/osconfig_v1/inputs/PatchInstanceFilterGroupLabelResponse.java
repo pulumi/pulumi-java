@@ -24,7 +24,7 @@ public final class PatchInstanceFilterGroupLabelResponse extends io.pulumi.resou
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

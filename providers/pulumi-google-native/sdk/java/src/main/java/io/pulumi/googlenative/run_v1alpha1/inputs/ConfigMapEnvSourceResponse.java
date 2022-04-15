@@ -25,7 +25,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
 
-    public LocalObjectReferenceResponse getLocalObjectReference() {
+    public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
     }
 
@@ -36,7 +36,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
     @Import(name="optional", required=true)
       private final Boolean optional;
 
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 

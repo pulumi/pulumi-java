@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
     @Import(name="boost", required=true)
       private final Double boost;
 
-    public Double getBoost() {
+    public Double boost() {
         return this.boost;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse extends io.pu
     @Import(name="productsFilter", required=true)
       private final String productsFilter;
 
-    public String getProductsFilter() {
+    public String productsFilter() {
         return this.productsFilter;
     }
 

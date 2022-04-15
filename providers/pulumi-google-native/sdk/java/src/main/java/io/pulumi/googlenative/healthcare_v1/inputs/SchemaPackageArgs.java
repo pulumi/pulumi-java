@@ -31,7 +31,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreMinOccurs")
       private final @Nullable Output<Boolean> ignoreMinOccurs;
 
-    public Output<Boolean> getIgnoreMinOccurs() {
+    public Output<Boolean> ignoreMinOccurs() {
         return this.ignoreMinOccurs == null ? Codegen.empty() : this.ignoreMinOccurs;
     }
 
@@ -42,7 +42,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemas")
       private final @Nullable Output<List<Hl7SchemaConfigArgs>> schemas;
 
-    public Output<List<Hl7SchemaConfigArgs>> getSchemas() {
+    public Output<List<Hl7SchemaConfigArgs>> schemas() {
         return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
@@ -53,7 +53,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schematizedParsingType")
       private final @Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
-    public Output<SchemaPackageSchematizedParsingType> getSchematizedParsingType() {
+    public Output<SchemaPackageSchematizedParsingType> schematizedParsingType() {
         return this.schematizedParsingType == null ? Codegen.empty() : this.schematizedParsingType;
     }
 
@@ -64,7 +64,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="types")
       private final @Nullable Output<List<Hl7TypesConfigArgs>> types;
 
-    public Output<List<Hl7TypesConfigArgs>> getTypes() {
+    public Output<List<Hl7TypesConfigArgs>> types() {
         return this.types == null ? Codegen.empty() : this.types;
     }
 
@@ -75,7 +75,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unexpectedSegmentHandling")
       private final @Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 
-    public Output<SchemaPackageUnexpectedSegmentHandling> getUnexpectedSegmentHandling() {
+    public Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling == null ? Codegen.empty() : this.unexpectedSegmentHandling;
     }
 

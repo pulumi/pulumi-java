@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 

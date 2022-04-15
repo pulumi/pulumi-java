@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     @Import(name="nodes")
       private final @Nullable Output<Integer> nodes;
 
-    public Output<Integer> getNodes() {
+    public Output<Integer> nodes() {
         return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 

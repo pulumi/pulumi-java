@@ -87,63 +87,63 @@ public final class GetKeyResult {
      * Settings for keys that can be used by Android apps.
      * 
     */
-    public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse getAndroidSettings() {
+    public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings() {
         return this.androidSettings;
     }
     /**
      * The timestamp corresponding to the creation of this Key.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Human-readable display name of this key. Modifiable by user.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Settings for keys that can be used by iOS apps.
      * 
     */
-    public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse getIosSettings() {
+    public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings() {
         return this.iosSettings;
     }
     /**
      * See Creating and managing labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Options for user acceptance testing.
      * 
     */
-    public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse getTestingOptions() {
+    public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions() {
         return this.testingOptions;
     }
     /**
      * Settings for WAF
      * 
     */
-    public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse getWafSettings() {
+    public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings() {
         return this.wafSettings;
     }
     /**
      * Settings for keys that can be used by websites.
      * 
     */
-    public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse getWebSettings() {
+    public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings() {
         return this.webSettings;
     }
 

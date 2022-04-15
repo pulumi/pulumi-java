@@ -23,7 +23,7 @@ public final class DockerExecutorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="cmd", required=true)
       private final String cmd;
 
-    public String getCmd() {
+    public String cmd() {
         return this.cmd;
     }
 
@@ -34,7 +34,7 @@ public final class DockerExecutorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="imageName", required=true)
       private final String imageName;
 
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
 

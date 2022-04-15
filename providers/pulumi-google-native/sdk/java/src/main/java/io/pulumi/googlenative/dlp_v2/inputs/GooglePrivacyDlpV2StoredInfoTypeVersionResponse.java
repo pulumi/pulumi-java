@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
     @Import(name="config", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
 
-    public GooglePrivacyDlpV2StoredInfoTypeConfigResponse getConfig() {
+    public GooglePrivacyDlpV2StoredInfoTypeConfigResponse config() {
         return this.config;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
     @Import(name="errors", required=true)
       private final List<GooglePrivacyDlpV2ErrorResponse> errors;
 
-    public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
+    public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
 
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
     @Import(name="stats", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
-    public GooglePrivacyDlpV2StoredInfoTypeStatsResponse getStats() {
+    public GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats() {
         return this.stats;
     }
 

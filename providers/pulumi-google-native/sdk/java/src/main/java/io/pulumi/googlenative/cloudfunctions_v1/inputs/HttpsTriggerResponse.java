@@ -23,7 +23,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="securityLevel", required=true)
       private final String securityLevel;
 
-    public String getSecurityLevel() {
+    public String securityLevel() {
         return this.securityLevel;
     }
 
@@ -34,7 +34,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

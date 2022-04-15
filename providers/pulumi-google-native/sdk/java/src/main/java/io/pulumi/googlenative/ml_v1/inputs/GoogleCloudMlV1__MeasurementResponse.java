@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
     @Import(name="elapsedTime", required=true)
       private final String elapsedTime;
 
-    public String getElapsedTime() {
+    public String elapsedTime() {
         return this.elapsedTime;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
     @Import(name="metrics", required=true)
       private final List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
 
-    public List<GoogleCloudMlV1_Measurement_MetricResponse> getMetrics() {
+    public List<GoogleCloudMlV1_Measurement_MetricResponse> metrics() {
         return this.metrics;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
     @Import(name="stepCount", required=true)
       private final String stepCount;
 
-    public String getStepCount() {
+    public String stepCount() {
         return this.stepCount;
     }
 

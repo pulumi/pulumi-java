@@ -32,14 +32,14 @@ public final class SqlServerAuditConfigResponse {
      * The name of the destination bucket (e.g., gs://mybucket).
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * This is always sql#sqlServerAuditConfig
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

@@ -32,14 +32,14 @@ public final class RelatedUrlResponse {
      * Label to describe usage of the URL.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * Specific URL associated with the resource.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

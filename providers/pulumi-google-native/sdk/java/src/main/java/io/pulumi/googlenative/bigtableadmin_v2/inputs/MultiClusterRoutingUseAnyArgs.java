@@ -27,7 +27,7 @@ public final class MultiClusterRoutingUseAnyArgs extends io.pulumi.resources.Res
     @Import(name="clusterIds")
       private final @Nullable Output<List<String>> clusterIds;
 
-    public Output<List<String>> getClusterIds() {
+    public Output<List<String>> clusterIds() {
         return this.clusterIds == null ? Codegen.empty() : this.clusterIds;
     }
 

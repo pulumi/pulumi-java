@@ -17,14 +17,14 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dashboardId", required=true)
       private final String dashboardId;
 
-    public String getDashboardId() {
+    public String dashboardId() {
         return this.dashboardId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

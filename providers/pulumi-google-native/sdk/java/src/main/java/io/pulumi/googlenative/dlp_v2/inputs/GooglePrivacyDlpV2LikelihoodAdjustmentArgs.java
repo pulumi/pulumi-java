@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
     @Import(name="fixedLikelihood")
       private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
 
-    public Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> getFixedLikelihood() {
+    public Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood() {
         return this.fixedLikelihood == null ? Codegen.empty() : this.fixedLikelihood;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
     @Import(name="relativeLikelihood")
       private final @Nullable Output<Integer> relativeLikelihood;
 
-    public Output<Integer> getRelativeLikelihood() {
+    public Output<Integer> relativeLikelihood() {
         return this.relativeLikelihood == null ? Codegen.empty() : this.relativeLikelihood;
     }
 

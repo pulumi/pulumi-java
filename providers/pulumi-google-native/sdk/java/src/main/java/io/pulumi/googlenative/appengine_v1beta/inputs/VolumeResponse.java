@@ -24,7 +24,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sizeGb", required=true)
       private final Double sizeGb;
 
-    public Double getSizeGb() {
+    public Double sizeGb() {
         return this.sizeGb;
     }
 
@@ -46,7 +46,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeType", required=true)
       private final String volumeType;
 
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

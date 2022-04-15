@@ -24,7 +24,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
     @Import(name="consumeReservationType", required=true)
       private final String consumeReservationType;
 
-    public String getConsumeReservationType() {
+    public String consumeReservationType() {
         return this.consumeReservationType;
     }
 
@@ -35,7 +35,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -46,7 +46,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

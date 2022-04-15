@@ -27,7 +27,7 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="toggleTime")
       private final @Nullable Output<String> toggleTime;
 
-    public Output<String> getToggleTime() {
+    public Output<String> toggleTime() {
         return this.toggleTime == null ? Codegen.empty() : this.toggleTime;
     }
 

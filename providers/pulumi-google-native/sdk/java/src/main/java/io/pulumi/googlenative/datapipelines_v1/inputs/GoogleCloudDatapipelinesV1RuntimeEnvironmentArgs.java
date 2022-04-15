@@ -31,7 +31,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
 
-    public Output<List<String>> getAdditionalExperiments() {
+    public Output<List<String>> additionalExperiments() {
         return this.additionalExperiments == null ? Codegen.empty() : this.additionalExperiments;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="additionalUserLabels")
       private final @Nullable Output<Map<String,String>> additionalUserLabels;
 
-    public Output<Map<String,String>> getAdditionalUserLabels() {
+    public Output<Map<String,String>> additionalUserLabels() {
         return this.additionalUserLabels == null ? Codegen.empty() : this.additionalUserLabels;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="bypassTempDirValidation")
       private final @Nullable Output<Boolean> bypassTempDirValidation;
 
-    public Output<Boolean> getBypassTempDirValidation() {
+    public Output<Boolean> bypassTempDirValidation() {
         return this.bypassTempDirValidation == null ? Codegen.empty() : this.bypassTempDirValidation;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
-    public Output<Boolean> getEnableStreamingEngine() {
+    public Output<Boolean> enableStreamingEngine() {
         return this.enableStreamingEngine == null ? Codegen.empty() : this.enableStreamingEngine;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="ipConfiguration")
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration;
 
-    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> getIpConfiguration() {
+    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration() {
         return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -108,7 +108,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> getMaxWorkers() {
+    public Output<Integer> maxWorkers() {
         return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
@@ -119,7 +119,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -130,7 +130,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="numWorkers")
       private final @Nullable Output<Integer> numWorkers;
 
-    public Output<Integer> getNumWorkers() {
+    public Output<Integer> numWorkers() {
         return this.numWorkers == null ? Codegen.empty() : this.numWorkers;
     }
 
@@ -141,7 +141,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -152,7 +152,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -163,7 +163,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="tempLocation")
       private final @Nullable Output<String> tempLocation;
 
-    public Output<String> getTempLocation() {
+    public Output<String> tempLocation() {
         return this.tempLocation == null ? Codegen.empty() : this.tempLocation;
     }
 
@@ -174,7 +174,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
 
-    public Output<String> getWorkerRegion() {
+    public Output<String> workerRegion() {
         return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
     }
 
@@ -185,7 +185,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
 
-    public Output<String> getWorkerZone() {
+    public Output<String> workerZone() {
         return this.workerZone == null ? Codegen.empty() : this.workerZone;
     }
 
@@ -196,7 +196,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

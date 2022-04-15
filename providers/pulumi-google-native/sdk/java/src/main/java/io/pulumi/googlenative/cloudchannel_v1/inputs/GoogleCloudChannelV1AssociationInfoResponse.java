@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
     @Import(name="baseEntitlement", required=true)
       private final String baseEntitlement;
 
-    public String getBaseEntitlement() {
+    public String baseEntitlement() {
         return this.baseEntitlement;
     }
 

@@ -23,7 +23,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpointUri", required=true)
       private final String endpointUri;
 
-    public String getEndpointUri() {
+    public String endpointUri() {
         return this.endpointUri;
     }
 
@@ -34,7 +34,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

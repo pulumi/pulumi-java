@@ -25,7 +25,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends io.p
     @Import(name="inputUri", required=true)
       private final Output<String> inputUri;
 
-    public Output<String> getInputUri() {
+    public Output<String> inputUri() {
         return this.inputUri;
     }
 

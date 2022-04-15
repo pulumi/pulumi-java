@@ -117,91 +117,91 @@ public final class TransferSpecResponse {
      * An AWS S3 data source.
      * 
     */
-    public AwsS3DataResponse getAwsS3DataSource() {
+    public AwsS3DataResponse awsS3DataSource() {
         return this.awsS3DataSource;
     }
     /**
      * An Azure Blob Storage data source.
      * 
     */
-    public AzureBlobStorageDataResponse getAzureBlobStorageDataSource() {
+    public AzureBlobStorageDataResponse azureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
     }
     /**
      * A Cloud Storage data sink.
      * 
     */
-    public GcsDataResponse getGcsDataSink() {
+    public GcsDataResponse gcsDataSink() {
         return this.gcsDataSink;
     }
     /**
      * A Cloud Storage data source.
      * 
     */
-    public GcsDataResponse getGcsDataSource() {
+    public GcsDataResponse gcsDataSource() {
         return this.gcsDataSource;
     }
     /**
      * Cloud Storage intermediate data location.
      * 
     */
-    public GcsDataResponse getGcsIntermediateDataLocation() {
+    public GcsDataResponse gcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
     }
     /**
      * An HTTP URL data source.
      * 
     */
-    public HttpDataResponse getHttpDataSource() {
+    public HttpDataResponse httpDataSource() {
         return this.httpDataSource;
     }
     /**
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
      * 
     */
-    public ObjectConditionsResponse getObjectConditions() {
+    public ObjectConditionsResponse objectConditions() {
         return this.objectConditions;
     }
     /**
      * A POSIX Filesystem data sink.
      * 
     */
-    public PosixFilesystemResponse getPosixDataSink() {
+    public PosixFilesystemResponse posixDataSink() {
         return this.posixDataSink;
     }
     /**
      * A POSIX Filesystem data source.
      * 
     */
-    public PosixFilesystemResponse getPosixDataSource() {
+    public PosixFilesystemResponse posixDataSource() {
         return this.posixDataSource;
     }
     /**
      * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
      * 
     */
-    public String getSinkAgentPoolName() {
+    public String sinkAgentPoolName() {
         return this.sinkAgentPoolName;
     }
     /**
      * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
      * 
     */
-    public String getSourceAgentPoolName() {
+    public String sourceAgentPoolName() {
         return this.sourceAgentPoolName;
     }
     /**
      * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
      * 
     */
-    public TransferManifestResponse getTransferManifest() {
+    public TransferManifestResponse transferManifest() {
         return this.transferManifest;
     }
     /**
      * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
      * 
     */
-    public TransferOptionsResponse getTransferOptions() {
+    public TransferOptionsResponse transferOptions() {
         return this.transferOptions;
     }
 

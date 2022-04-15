@@ -23,7 +23,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="approvalTime", required=true)
       private final String approvalTime;
 
-    public String getApprovalTime() {
+    public String approvalTime() {
         return this.approvalTime;
     }
 
@@ -34,7 +34,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="approverAccount", required=true)
       private final String approverAccount;
 
-    public String getApproverAccount() {
+    public String approverAccount() {
         return this.approverAccount;
     }
 
@@ -45,7 +45,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 
@@ -56,7 +56,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="decision", required=true)
       private final String decision;
 
-    public String getDecision() {
+    public String decision() {
         return this.decision;
     }
 
@@ -67,7 +67,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

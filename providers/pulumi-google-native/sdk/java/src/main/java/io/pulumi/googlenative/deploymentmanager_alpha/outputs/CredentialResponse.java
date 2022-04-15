@@ -41,21 +41,21 @@ public final class CredentialResponse {
      * Basic Auth Credential, only used by TypeProvider.
      * 
     */
-    public BasicAuthResponse getBasicAuth() {
+    public BasicAuthResponse basicAuth() {
         return this.basicAuth;
     }
     /**
      * Service Account Credential, only used by Deployment.
      * 
     */
-    public ServiceAccountResponse getServiceAccount() {
+    public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * Specify to use the project default credential, only supported by Deployment.
      * 
     */
-    public Boolean getUseProjectDefault() {
+    public Boolean useProjectDefault() {
         return this.useProjectDefault;
     }
 

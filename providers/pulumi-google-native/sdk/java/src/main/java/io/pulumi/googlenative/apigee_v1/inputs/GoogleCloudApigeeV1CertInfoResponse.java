@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="basicConstraints", required=true)
       private final String basicConstraints;
 
-    public String getBasicConstraints() {
+    public String basicConstraints() {
         return this.basicConstraints;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="expiryDate", required=true)
       private final String expiryDate;
 
-    public String getExpiryDate() {
+    public String expiryDate() {
         return this.expiryDate;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="isValid", required=true)
       private final String isValid;
 
-    public String getIsValid() {
+    public String isValid() {
         return this.isValid;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="publicKey", required=true)
       private final String publicKey;
 
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="sigAlgName", required=true)
       private final String sigAlgName;
 
-    public String getSigAlgName() {
+    public String sigAlgName() {
         return this.sigAlgName;
     }
 
@@ -102,7 +102,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="subject", required=true)
       private final String subject;
 
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
 
@@ -113,7 +113,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="subjectAlternativeNames", required=true)
       private final List<String> subjectAlternativeNames;
 
-    public List<String> getSubjectAlternativeNames() {
+    public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
 
@@ -124,7 +124,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="validFrom", required=true)
       private final String validFrom;
 
-    public String getValidFrom() {
+    public String validFrom() {
         return this.validFrom;
     }
 
@@ -135,7 +135,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     @Import(name="version", required=true)
       private final Integer version;
 
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

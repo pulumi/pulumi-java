@@ -55,35 +55,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * Optional. Description of the carousel item. Maximum of four lines of text.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
      * 
     */
-    public String getFooter() {
+    public String footer() {
         return this.footer;
     }
     /**
      * Optional. Hero image for the carousel item.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * Action to present to the user.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse getOpenUriAction() {
+    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction() {
         return this.openUriAction;
     }
     /**
      * Title of the carousel item. Maximum of two lines of text.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

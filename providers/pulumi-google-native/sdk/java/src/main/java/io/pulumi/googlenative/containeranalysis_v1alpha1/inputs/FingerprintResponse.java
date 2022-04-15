@@ -24,7 +24,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="v1Name", required=true)
       private final String v1Name;
 
-    public String getV1Name() {
+    public String v1Name() {
         return this.v1Name;
     }
 
@@ -35,7 +35,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="v2Blob", required=true)
       private final List<String> v2Blob;
 
-    public List<String> getV2Blob() {
+    public List<String> v2Blob() {
         return this.v2Blob;
     }
 
@@ -46,7 +46,7 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="v2Name", required=true)
       private final String v2Name;
 
-    public String getV2Name() {
+    public String v2Name() {
         return this.v2Name;
     }
 

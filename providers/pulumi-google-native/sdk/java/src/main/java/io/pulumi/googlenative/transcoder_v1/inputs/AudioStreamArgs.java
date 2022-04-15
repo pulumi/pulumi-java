@@ -29,7 +29,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitrateBps", required=true)
       private final Output<Integer> bitrateBps;
 
-    public Output<Integer> getBitrateBps() {
+    public Output<Integer> bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -40,7 +40,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelCount")
       private final @Nullable Output<Integer> channelCount;
 
-    public Output<Integer> getChannelCount() {
+    public Output<Integer> channelCount() {
         return this.channelCount == null ? Codegen.empty() : this.channelCount;
     }
 
@@ -51,7 +51,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelLayout")
       private final @Nullable Output<List<String>> channelLayout;
 
-    public Output<List<String>> getChannelLayout() {
+    public Output<List<String>> channelLayout() {
         return this.channelLayout == null ? Codegen.empty() : this.channelLayout;
     }
 
@@ -62,7 +62,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codec")
       private final @Nullable Output<String> codec;
 
-    public Output<String> getCodec() {
+    public Output<String> codec() {
         return this.codec == null ? Codegen.empty() : this.codec;
     }
 
@@ -73,7 +73,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mapping")
       private final @Nullable Output<List<AudioMappingArgs>> mapping;
 
-    public Output<List<AudioMappingArgs>> getMapping() {
+    public Output<List<AudioMappingArgs>> mapping() {
         return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
@@ -84,7 +84,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampleRateHertz")
       private final @Nullable Output<Integer> sampleRateHertz;
 
-    public Output<Integer> getSampleRateHertz() {
+    public Output<Integer> sampleRateHertz() {
         return this.sampleRateHertz == null ? Codegen.empty() : this.sampleRateHertz;
     }
 

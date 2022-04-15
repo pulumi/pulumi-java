@@ -21,7 +21,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
     @Import(name="durationMs", required=true)
       private final String durationMs;
 
-    public String getDurationMs() {
+    public String durationMs() {
         return this.durationMs;
     }
 
@@ -32,7 +32,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
     @Import(name="evalLoss", required=true)
       private final Double evalLoss;
 
-    public Double getEvalLoss() {
+    public Double evalLoss() {
         return this.evalLoss;
     }
 
@@ -43,7 +43,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
     @Import(name="index", required=true)
       private final Integer index;
 
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
 
@@ -54,7 +54,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
     @Import(name="learnRate", required=true)
       private final Double learnRate;
 
-    public Double getLearnRate() {
+    public Double learnRate() {
         return this.learnRate;
     }
 
@@ -65,7 +65,7 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
     @Import(name="trainingLoss", required=true)
       private final Double trainingLoss;
 
-    public Double getTrainingLoss() {
+    public Double trainingLoss() {
         return this.trainingLoss;
     }
 

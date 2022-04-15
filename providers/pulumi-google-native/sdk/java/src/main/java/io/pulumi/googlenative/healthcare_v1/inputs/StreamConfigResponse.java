@@ -25,7 +25,7 @@ public final class StreamConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bigqueryDestination", required=true)
       private final GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination;
 
-    public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse getBigqueryDestination() {
+    public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -36,7 +36,7 @@ public final class StreamConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceTypes", required=true)
       private final List<String> resourceTypes;
 
-    public List<String> getResourceTypes() {
+    public List<String> resourceTypes() {
         return this.resourceTypes;
     }
 

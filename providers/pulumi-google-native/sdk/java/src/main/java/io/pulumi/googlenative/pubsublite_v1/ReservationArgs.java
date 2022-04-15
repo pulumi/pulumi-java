@@ -18,7 +18,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -29,21 +29,21 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="reservationId", required=true)
       private final Output<String> reservationId;
 
-    public Output<String> getReservationId() {
+    public Output<String> reservationId() {
         return this.reservationId;
     }
 
@@ -54,7 +54,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="throughputCapacity")
       private final @Nullable Output<String> throughputCapacity;
 
-    public Output<String> getThroughputCapacity() {
+    public Output<String> throughputCapacity() {
         return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 

@@ -54,35 +54,35 @@ public final class InsightsConfigResponse {
      * Whether Query Insights feature is enabled.
      * 
     */
-    public Boolean getQueryInsightsEnabled() {
+    public Boolean queryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
     /**
      * Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
      * 
     */
-    public Integer getQueryPlansPerMinute() {
+    public Integer queryPlansPerMinute() {
         return this.queryPlansPerMinute;
     }
     /**
      * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
      * 
     */
-    public Integer getQueryStringLength() {
+    public Integer queryStringLength() {
         return this.queryStringLength;
     }
     /**
      * Whether Query Insights will record application tags from query when enabled.
      * 
     */
-    public Boolean getRecordApplicationTags() {
+    public Boolean recordApplicationTags() {
         return this.recordApplicationTags;
     }
     /**
      * Whether Query Insights will record client address when enabled.
      * 
     */
-    public Boolean getRecordClientAddress() {
+    public Boolean recordClientAddress() {
         return this.recordClientAddress;
     }
 

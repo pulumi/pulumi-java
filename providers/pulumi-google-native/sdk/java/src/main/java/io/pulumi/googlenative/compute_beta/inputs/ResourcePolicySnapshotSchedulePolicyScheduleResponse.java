@@ -21,21 +21,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
     @Import(name="dailySchedule", required=true)
       private final ResourcePolicyDailyCycleResponse dailySchedule;
 
-    public ResourcePolicyDailyCycleResponse getDailySchedule() {
+    public ResourcePolicyDailyCycleResponse dailySchedule() {
         return this.dailySchedule;
     }
 
     @Import(name="hourlySchedule", required=true)
       private final ResourcePolicyHourlyCycleResponse hourlySchedule;
 
-    public ResourcePolicyHourlyCycleResponse getHourlySchedule() {
+    public ResourcePolicyHourlyCycleResponse hourlySchedule() {
         return this.hourlySchedule;
     }
 
     @Import(name="weeklySchedule", required=true)
       private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
-    public ResourcePolicyWeeklyCycleResponse getWeeklySchedule() {
+    public ResourcePolicyWeeklyCycleResponse weeklySchedule() {
         return this.weeklySchedule;
     }
 

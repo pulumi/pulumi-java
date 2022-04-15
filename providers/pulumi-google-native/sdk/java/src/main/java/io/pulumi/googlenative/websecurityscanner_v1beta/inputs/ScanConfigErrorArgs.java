@@ -27,7 +27,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="code")
       private final @Nullable Output<ScanConfigErrorCode> code;
 
-    public Output<ScanConfigErrorCode> getCode() {
+    public Output<ScanConfigErrorCode> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -38,7 +38,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
 
-    public Output<String> getFieldName() {
+    public Output<String> fieldName() {
         return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 

@@ -138,119 +138,119 @@ public final class GetRolloutResult {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
     */
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
     /**
      * Approval state of the `Rollout`.
      * 
     */
-    public String getApprovalState() {
+    public String approvalState() {
         return this.approvalState;
     }
     /**
      * Time at which the `Rollout` was approved.
      * 
     */
-    public String getApproveTime() {
+    public String approveTime() {
         return this.approveTime;
     }
     /**
      * Time at which the `Rollout` was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Time at which the `Rollout` finished deploying.
      * 
     */
-    public String getDeployEndTime() {
+    public String deployEndTime() {
         return this.deployEndTime;
     }
     /**
      * The reason this deploy failed. This will always be unspecified while the deploy in progress.
      * 
     */
-    public String getDeployFailureCause() {
+    public String deployFailureCause() {
         return this.deployFailureCause;
     }
     /**
      * Time at which the `Rollout` started deploying.
      * 
     */
-    public String getDeployStartTime() {
+    public String deployStartTime() {
         return this.deployStartTime;
     }
     /**
      * The resource name of the Cloud Build `Build` object that is used to deploy the Rollout. Format is `projects/{project}/locations/{location}/builds/{build}`.
      * 
     */
-    public String getDeployingBuild() {
+    public String deployingBuild() {
         return this.deployingBuild;
     }
     /**
      * Description of the `Rollout` for user purposes. Max length is 255 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Time at which the `Rollout` was enqueued.
      * 
     */
-    public String getEnqueueTime() {
+    public String enqueueTime() {
         return this.enqueueTime;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Reason the build failed. Empty if the build succeeded.
      * 
     */
-    public String getFailureReason() {
+    public String failureReason() {
         return this.failureReason;
     }
     /**
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Current state of the `Rollout`.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The ID of Target to which this `Rollout` is deploying.
      * 
     */
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
     /**
      * Unique identifier of the `Rollout`.
      * 
     */
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

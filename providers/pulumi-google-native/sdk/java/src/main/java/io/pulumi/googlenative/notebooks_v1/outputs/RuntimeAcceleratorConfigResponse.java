@@ -32,14 +32,14 @@ public final class RuntimeAcceleratorConfigResponse {
      * Count of cores of this accelerator.
      * 
     */
-    public String getCoreCount() {
+    public String coreCount() {
         return this.coreCount;
     }
     /**
      * Accelerator model.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

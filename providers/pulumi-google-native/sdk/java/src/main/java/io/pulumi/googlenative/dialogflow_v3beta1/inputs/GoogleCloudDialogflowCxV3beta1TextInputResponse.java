@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends io.pu
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

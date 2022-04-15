@@ -23,7 +23,7 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -34,14 +34,14 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDataConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
 
-    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> getInputDataConfig() {
+    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig() {
         return this.inputDataConfig == null ? Codegen.empty() : this.inputDataConfig;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -52,14 +52,14 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

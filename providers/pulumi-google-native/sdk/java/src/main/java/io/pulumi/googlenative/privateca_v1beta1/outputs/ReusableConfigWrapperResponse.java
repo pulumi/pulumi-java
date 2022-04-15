@@ -33,14 +33,14 @@ public final class ReusableConfigWrapperResponse {
      * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
      * 
     */
-    public String getReusableConfig() {
+    public String reusableConfig() {
         return this.reusableConfig;
     }
     /**
      * A user-specified inline ReusableConfigValues.
      * 
     */
-    public ReusableConfigValuesResponse getReusableConfigValues() {
+    public ReusableConfigValuesResponse reusableConfigValues() {
         return this.reusableConfigValues;
     }
 

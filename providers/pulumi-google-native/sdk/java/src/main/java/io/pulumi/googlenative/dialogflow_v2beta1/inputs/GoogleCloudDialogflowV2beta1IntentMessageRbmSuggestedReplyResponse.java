@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     @Import(name="postbackData", required=true)
       private final String postbackData;
 
-    public String getPostbackData() {
+    public String postbackData() {
         return this.postbackData;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

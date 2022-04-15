@@ -17,21 +17,21 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeTemplate", required=true)
       private final String nodeTemplate;
 
-    public String getNodeTemplate() {
+    public String nodeTemplate() {
         return this.nodeTemplate;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

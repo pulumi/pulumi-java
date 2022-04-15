@@ -21,7 +21,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="evaluationKind", required=true)
       private final String evaluationKind;
 
-    public String getEvaluationKind() {
+    public String evaluationKind() {
         return this.evaluationKind;
     }
 
@@ -32,7 +32,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="stackFrames", required=true)
       private final List<ScriptStackFrameResponse> stackFrames;
 
-    public List<ScriptStackFrameResponse> getStackFrames() {
+    public List<ScriptStackFrameResponse> stackFrames() {
         return this.stackFrames;
     }
 

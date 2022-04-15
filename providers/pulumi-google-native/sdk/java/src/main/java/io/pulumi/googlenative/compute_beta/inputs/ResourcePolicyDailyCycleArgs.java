@@ -27,7 +27,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     @Import(name="daysInCycle")
       private final @Nullable Output<Integer> daysInCycle;
 
-    public Output<Integer> getDaysInCycle() {
+    public Output<Integer> daysInCycle() {
         return this.daysInCycle == null ? Codegen.empty() : this.daysInCycle;
     }
 
@@ -38,7 +38,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

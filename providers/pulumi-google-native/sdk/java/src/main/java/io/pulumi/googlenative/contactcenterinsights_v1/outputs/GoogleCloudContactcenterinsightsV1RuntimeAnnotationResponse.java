@@ -95,70 +95,70 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
      * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
      * 
     */
-    public String getAnnotationId() {
+    public String annotationId() {
         return this.annotationId;
     }
     /**
      * The feedback that the customer has about the answer in `data`.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse getAnswerFeedback() {
+    public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback() {
         return this.answerFeedback;
     }
     /**
      * Agent Assist Article Suggestion data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse getArticleSuggestion() {
+    public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion() {
         return this.articleSuggestion;
     }
     /**
      * The time at which this annotation was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Dialogflow interaction data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse getDialogflowInteraction() {
+    public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction() {
         return this.dialogflowInteraction;
     }
     /**
      * The boundary in the conversation where the annotation ends, inclusive.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getEndBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary() {
         return this.endBoundary;
     }
     /**
      * Agent Assist FAQ answer data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse getFaqAnswer() {
+    public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer() {
         return this.faqAnswer;
     }
     /**
      * Agent Assist Smart Compose suggestion data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse getSmartComposeSuggestion() {
+    public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion() {
         return this.smartComposeSuggestion;
     }
     /**
      * Agent Assist Smart Reply data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse getSmartReply() {
+    public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply() {
         return this.smartReply;
     }
     /**
      * The boundary in the conversation where the annotation starts, inclusive.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getStartBoundary() {
+    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary() {
         return this.startBoundary;
     }
 

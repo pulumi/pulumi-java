@@ -25,7 +25,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disk", required=true)
       private final Output<String> disk;
 
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
 
@@ -36,7 +36,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

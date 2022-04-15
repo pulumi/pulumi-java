@@ -40,21 +40,21 @@ public final class GetSubscriptionResult {
      * The settings for this subscription's message delivery.
      * 
     */
-    public DeliveryConfigResponse getDeliveryConfig() {
+    public DeliveryConfigResponse deliveryConfig() {
         return this.deliveryConfig;
     }
     /**
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

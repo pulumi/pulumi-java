@@ -90,70 +90,70 @@ public final class GetImportJobResult {
      * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
      * 
     */
-    public KeyOperationAttestationResponse getAttestation() {
+    public KeyOperationAttestationResponse attestation() {
         return this.attestation;
     }
     /**
      * The time at which this ImportJob was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The time this ImportJob expired. Only present if state is EXPIRED.
      * 
     */
-    public String getExpireEventTime() {
+    public String expireEventTime() {
         return this.expireEventTime;
     }
     /**
      * The time at which this ImportJob is scheduled for expiration and can no longer be used to import key material.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * The time this ImportJob's key material was generated.
      * 
     */
-    public String getGenerateTime() {
+    public String generateTime() {
         return this.generateTime;
     }
     /**
      * Immutable. The wrapping method to be used for incoming key material.
      * 
     */
-    public String getImportMethod() {
+    public String importMethod() {
         return this.importMethod;
     }
     /**
      * The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
      * 
     */
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
     /**
      * The public key with which to wrap key material prior to import. Only returned if state is ACTIVE.
      * 
     */
-    public WrappingPublicKeyResponse getPublicKey() {
+    public WrappingPublicKeyResponse publicKey() {
         return this.publicKey;
     }
     /**
      * The current state of the ImportJob, indicating if it can be used.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

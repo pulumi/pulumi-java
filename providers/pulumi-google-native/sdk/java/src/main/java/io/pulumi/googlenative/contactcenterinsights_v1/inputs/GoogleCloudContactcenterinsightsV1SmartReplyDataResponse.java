@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
-    public Double getConfidenceScore() {
+    public Double confidenceScore() {
         return this.confidenceScore;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
-    public String getQueryRecord() {
+    public String queryRecord() {
         return this.queryRecord;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="reply", required=true)
       private final String reply;
 
-    public String getReply() {
+    public String reply() {
         return this.reply;
     }
 

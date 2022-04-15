@@ -39,21 +39,21 @@ public final class GetSchemaResult {
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
     */
-    public String getDefinition() {
+    public String definition() {
         return this.definition;
     }
     /**
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the schema definition.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="categories", required=true)
       private final List<CategoryResponse> categories;
 
-    public List<CategoryResponse> getCategories() {
+    public List<CategoryResponse> categories() {
         return this.categories;
     }
 
@@ -37,7 +37,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="identity", required=true)
       private final IdentityResponse identity;
 
-    public IdentityResponse getIdentity() {
+    public IdentityResponse identity() {
         return this.identity;
     }
 
@@ -59,7 +59,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="kbArticleIds", required=true)
       private final List<String> kbArticleIds;
 
-    public List<String> getKbArticleIds() {
+    public List<String> kbArticleIds() {
         return this.kbArticleIds;
     }
 
@@ -70,7 +70,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lastPublishedTimestamp", required=true)
       private final String lastPublishedTimestamp;
 
-    public String getLastPublishedTimestamp() {
+    public String lastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
     }
 
@@ -81,7 +81,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="supportUrl", required=true)
       private final String supportUrl;
 
-    public String getSupportUrl() {
+    public String supportUrl() {
         return this.supportUrl;
     }
 
@@ -92,7 +92,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

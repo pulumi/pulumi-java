@@ -16,14 +16,14 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
       private final Map<String,String> digest;
 
-    public Map<String,String> getDigest() {
+    public Map<String,String> digest() {
         return this.digest;
     }
 
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -32,14 +32,14 @@ public final class AbortInfoResponse {
      * Causes that the analysis is aborted.
      * 
     */
-    public String getCause() {
+    public String cause() {
         return this.cause;
     }
     /**
      * URI of the resource that caused the abort.
      * 
     */
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

@@ -40,21 +40,21 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
      * A url pointing to the Service Mesh or Istio documentation for this specific error type.
      * 
     */
-    public String getDocumentationUrl() {
+    public String documentationUrl() {
         return this.documentationUrl;
     }
     /**
      * Represents how severe a message is.
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
     /**
      * Represents the specific type of a message.
      * 
     */
-    public ServiceMeshTypeResponse getType() {
+    public ServiceMeshTypeResponse type() {
         return this.type;
     }
 

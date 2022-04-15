@@ -56,35 +56,35 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * Suggested client side action: Dial a phone number
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse getDial() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial() {
         return this.dial;
     }
     /**
      * Suggested client side action: Open a URI on device
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse getOpenUrl() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl() {
         return this.openUrl;
     }
     /**
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
     */
-    public String getPostbackData() {
+    public String postbackData() {
         return this.postbackData;
     }
     /**
      * Suggested client side action: Share user location
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse getShareLocation() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation() {
         return this.shareLocation;
     }
     /**
      * Text to display alongside the action.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

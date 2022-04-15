@@ -39,21 +39,21 @@ public final class ExecutionStageStateResponse {
      * The time at which the stage transitioned to this state.
      * 
     */
-    public String getCurrentStateTime() {
+    public String currentStateTime() {
         return this.currentStateTime;
     }
     /**
      * The name of the execution stage.
      * 
     */
-    public String getExecutionStageName() {
+    public String executionStageName() {
         return this.executionStageName;
     }
     /**
      * Executions stage states allow the same set of values as JobState.
      * 
     */
-    public String getExecutionStageState() {
+    public String executionStageState() {
         return this.executionStageState;
     }
 

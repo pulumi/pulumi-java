@@ -30,7 +30,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
      * 
      */
-    public Output<String> getApiProxyType() {
+    public Output<String> apiProxyType() {
         return this.apiProxyType;
     }
     /**
@@ -44,7 +44,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Creation time of this environment as milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +58,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
      * 
      */
-    public Output<String> getDeploymentType() {
+    public Output<String> deploymentType() {
         return this.deploymentType;
     }
     /**
@@ -72,7 +72,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. Description of the environment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -86,7 +86,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. Display name for this environment.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -100,7 +100,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Last modification time of this environment as milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -114,7 +114,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. Key-value pairs that may be used for customizing the environment.
      * 
      */
-    public Output<GoogleCloudApigeeV1PropertiesResponse> getProperties() {
+    public Output<GoogleCloudApigeeV1PropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -142,7 +142,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return State of the environment. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

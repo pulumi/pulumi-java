@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
     @Import(name="intent", required=true)
       private final Output<String> intent;
 
-    public Output<String> getIntent() {
+    public Output<String> intent() {
         return this.intent;
     }
 

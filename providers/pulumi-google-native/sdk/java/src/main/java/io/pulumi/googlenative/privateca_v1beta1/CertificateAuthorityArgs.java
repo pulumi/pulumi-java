@@ -26,7 +26,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="certificateAuthorityId", required=true)
       private final Output<String> certificateAuthorityId;
 
-    public Output<String> getCertificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
@@ -37,7 +37,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="certificatePolicy")
       private final @Nullable Output<CertificateAuthorityPolicyArgs> certificatePolicy;
 
-    public Output<CertificateAuthorityPolicyArgs> getCertificatePolicy() {
+    public Output<CertificateAuthorityPolicyArgs> certificatePolicy() {
         return this.certificatePolicy == null ? Codegen.empty() : this.certificatePolicy;
     }
 
@@ -48,7 +48,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="config", required=true)
       private final Output<CertificateConfigArgs> config;
 
-    public Output<CertificateConfigArgs> getConfig() {
+    public Output<CertificateConfigArgs> config() {
         return this.config;
     }
 
@@ -59,7 +59,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
-    public Output<String> getGcsBucket() {
+    public Output<String> gcsBucket() {
         return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
     }
 
@@ -70,7 +70,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="issuingOptions")
       private final @Nullable Output<IssuingOptionsArgs> issuingOptions;
 
-    public Output<IssuingOptionsArgs> getIssuingOptions() {
+    public Output<IssuingOptionsArgs> issuingOptions() {
         return this.issuingOptions == null ? Codegen.empty() : this.issuingOptions;
     }
 
@@ -81,7 +81,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="keySpec", required=true)
       private final Output<KeyVersionSpecArgs> keySpec;
 
-    public Output<KeyVersionSpecArgs> getKeySpec() {
+    public Output<KeyVersionSpecArgs> keySpec() {
         return this.keySpec;
     }
 
@@ -92,7 +92,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -103,28 +103,28 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -135,7 +135,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="subordinateConfig")
       private final @Nullable Output<SubordinateConfigArgs> subordinateConfig;
 
-    public Output<SubordinateConfigArgs> getSubordinateConfig() {
+    public Output<SubordinateConfigArgs> subordinateConfig() {
         return this.subordinateConfig == null ? Codegen.empty() : this.subordinateConfig;
     }
 
@@ -146,7 +146,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="tier", required=true)
       private final Output<CertificateAuthorityTier> tier;
 
-    public Output<CertificateAuthorityTier> getTier() {
+    public Output<CertificateAuthorityTier> tier() {
         return this.tier;
     }
 
@@ -157,7 +157,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<CertificateAuthorityType> type;
 
-    public Output<CertificateAuthorityType> getType() {
+    public Output<CertificateAuthorityType> type() {
         return this.type;
     }
 

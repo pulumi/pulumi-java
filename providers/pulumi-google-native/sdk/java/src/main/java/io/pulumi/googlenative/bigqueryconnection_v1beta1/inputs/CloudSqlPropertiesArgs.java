@@ -28,7 +28,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="credential")
       private final @Nullable Output<CloudSqlCredentialArgs> credential;
 
-    public Output<CloudSqlCredentialArgs> getCredential() {
+    public Output<CloudSqlCredentialArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -39,7 +39,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -50,7 +50,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -61,7 +61,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<CloudSqlPropertiesType> type;
 
-    public Output<CloudSqlPropertiesType> getType() {
+    public Output<CloudSqlPropertiesType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

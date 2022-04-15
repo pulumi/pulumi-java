@@ -17,21 +17,21 @@ public final class GetCertificateTemplateArgs extends io.pulumi.resources.Invoke
     @Import(name="certificateTemplateId", required=true)
       private final String certificateTemplateId;
 
-    public String getCertificateTemplateId() {
+    public String certificateTemplateId() {
         return this.certificateTemplateId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

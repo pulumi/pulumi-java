@@ -20,7 +20,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
@@ -31,7 +31,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
     @Import(name="range", required=true)
       private final RangePartitioningRangeResponse range;
 
-    public RangePartitioningRangeResponse getRange() {
+    public RangePartitioningRangeResponse range() {
         return this.range;
     }
 

@@ -24,7 +24,7 @@ public final class GetTopicResult {
      * Name of the topic.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

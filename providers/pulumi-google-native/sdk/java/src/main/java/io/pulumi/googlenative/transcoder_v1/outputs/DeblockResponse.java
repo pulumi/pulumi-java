@@ -33,14 +33,14 @@ public final class DeblockResponse {
      * Enable deblocker. The default is `false`.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
      * 
     */
-    public Double getStrength() {
+    public Double strength() {
         return this.strength;
     }
 

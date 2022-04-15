@@ -25,14 +25,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="endpointId", required=true)
       private final Output<String> endpointId;
 
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId;
     }
 
@@ -43,14 +43,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,21 +61,21 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -86,7 +86,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<EndpointSeverity> severity;
 
-    public Output<EndpointSeverity> getSeverity() {
+    public Output<EndpointSeverity> severity() {
         return this.severity;
     }
 
@@ -97,7 +97,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficLogs")
       private final @Nullable Output<Boolean> trafficLogs;
 
-    public Output<Boolean> getTrafficLogs() {
+    public Output<Boolean> trafficLogs() {
         return this.trafficLogs == null ? Codegen.empty() : this.trafficLogs;
     }
 

@@ -36,24 +36,24 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
         this.weight = weight;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
     /**
      * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
      * 
     */
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
      * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
      * 
     */
-    public Double getWeight() {
+    public Double weight() {
         return this.weight;
     }
 

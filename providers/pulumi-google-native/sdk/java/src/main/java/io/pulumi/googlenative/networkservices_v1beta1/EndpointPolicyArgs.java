@@ -26,7 +26,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationPolicy")
       private final @Nullable Output<String> authorizationPolicy;
 
-    public Output<String> getAuthorizationPolicy() {
+    public Output<String> authorizationPolicy() {
         return this.authorizationPolicy == null ? Codegen.empty() : this.authorizationPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientTlsPolicy")
       private final @Nullable Output<String> clientTlsPolicy;
 
-    public Output<String> getClientTlsPolicy() {
+    public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy == null ? Codegen.empty() : this.clientTlsPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,14 +59,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointMatcher", required=true)
       private final Output<EndpointMatcherArgs> endpointMatcher;
 
-    public Output<EndpointMatcherArgs> getEndpointMatcher() {
+    public Output<EndpointMatcherArgs> endpointMatcher() {
         return this.endpointMatcher;
     }
 
     @Import(name="endpointPolicyId", required=true)
       private final Output<String> endpointPolicyId;
 
-    public Output<String> getEndpointPolicyId() {
+    public Output<String> endpointPolicyId() {
         return this.endpointPolicyId;
     }
 
@@ -77,14 +77,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -95,14 +95,14 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -113,7 +113,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverTlsPolicy")
       private final @Nullable Output<String> serverTlsPolicy;
 
-    public Output<String> getServerTlsPolicy() {
+    public Output<String> serverTlsPolicy() {
         return this.serverTlsPolicy == null ? Codegen.empty() : this.serverTlsPolicy;
     }
 
@@ -124,7 +124,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficPortSelector")
       private final @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
 
-    public Output<TrafficPortSelectorArgs> getTrafficPortSelector() {
+    public Output<TrafficPortSelectorArgs> trafficPortSelector() {
         return this.trafficPortSelector == null ? Codegen.empty() : this.trafficPortSelector;
     }
 
@@ -135,7 +135,7 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<EndpointPolicyType> type;
 
-    public Output<EndpointPolicyType> getType() {
+    public Output<EndpointPolicyType> type() {
         return this.type;
     }
 

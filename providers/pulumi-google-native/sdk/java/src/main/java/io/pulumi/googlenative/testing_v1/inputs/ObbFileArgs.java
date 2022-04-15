@@ -26,7 +26,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obb", required=true)
       private final Output<FileReferenceArgs> obb;
 
-    public Output<FileReferenceArgs> getObb() {
+    public Output<FileReferenceArgs> obb() {
         return this.obb;
     }
 
@@ -37,7 +37,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obbFileName", required=true)
       private final Output<String> obbFileName;
 
-    public Output<String> getObbFileName() {
+    public Output<String> obbFileName() {
         return this.obbFileName;
     }
 

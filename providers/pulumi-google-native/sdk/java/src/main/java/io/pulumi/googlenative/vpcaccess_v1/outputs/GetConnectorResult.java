@@ -98,77 +98,77 @@ public final class GetConnectorResult {
      * List of projects using the connector.
      * 
     */
-    public List<String> getConnectedProjects() {
+    public List<String> connectedProjects() {
         return this.connectedProjects;
     }
     /**
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * Machine type of VM Instance underlying connector. Default is e2-micro
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * Maximum value of instances in autoscaling group underlying the connector.
      * 
     */
-    public Integer getMaxInstances() {
+    public Integer maxInstances() {
         return this.maxInstances;
     }
     /**
      * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
      * 
     */
-    public Integer getMaxThroughput() {
+    public Integer maxThroughput() {
         return this.maxThroughput;
     }
     /**
      * Minimum value of instances in autoscaling group underlying the connector.
      * 
     */
-    public Integer getMinInstances() {
+    public Integer minInstances() {
         return this.minInstances;
     }
     /**
      * Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
     */
-    public Integer getMinThroughput() {
+    public Integer minThroughput() {
         return this.minThroughput;
     }
     /**
      * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name of a VPC network.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * State of the VPC access connector.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The subnet in which to house the VPC Access Connector.
      * 
     */
-    public SubnetResponse getSubnet() {
+    public SubnetResponse subnet() {
         return this.subnet;
     }
 

@@ -25,7 +25,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="columns", required=true)
       private final Integer columns;
 
-    public Integer getColumns() {
+    public Integer columns() {
         return this.columns;
     }
 
@@ -36,7 +36,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tiles", required=true)
       private final List<TileResponse> tiles;
 
-    public List<TileResponse> getTiles() {
+    public List<TileResponse> tiles() {
         return this.tiles;
     }
 

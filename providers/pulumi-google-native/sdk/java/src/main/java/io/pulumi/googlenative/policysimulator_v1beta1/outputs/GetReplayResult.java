@@ -48,28 +48,28 @@ public final class GetReplayResult {
      * The configuration used for the `Replay`.
      * 
     */
-    public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse getConfig() {
+    public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config() {
         return this.config;
     }
     /**
      * The resource name of the `Replay`, which has the following format: `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where `{resource-id}` is the ID of the project, folder, or organization that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Summary statistics about the replayed log entries.
      * 
     */
-    public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse getResultsSummary() {
+    public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary() {
         return this.resultsSummary;
     }
     /**
      * The current state of the `Replay`.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

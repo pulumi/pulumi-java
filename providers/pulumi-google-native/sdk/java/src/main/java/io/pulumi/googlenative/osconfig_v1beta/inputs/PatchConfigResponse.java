@@ -30,7 +30,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="apt", required=true)
       private final AptSettingsResponse apt;
 
-    public AptSettingsResponse getApt() {
+    public AptSettingsResponse apt() {
         return this.apt;
     }
 
@@ -41,7 +41,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="goo", required=true)
       private final GooSettingsResponse goo;
 
-    public GooSettingsResponse getGoo() {
+    public GooSettingsResponse goo() {
         return this.goo;
     }
 
@@ -52,7 +52,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="migInstancesAllowed", required=true)
       private final Boolean migInstancesAllowed;
 
-    public Boolean getMigInstancesAllowed() {
+    public Boolean migInstancesAllowed() {
         return this.migInstancesAllowed;
     }
 
@@ -63,7 +63,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="postStep", required=true)
       private final ExecStepResponse postStep;
 
-    public ExecStepResponse getPostStep() {
+    public ExecStepResponse postStep() {
         return this.postStep;
     }
 
@@ -74,7 +74,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preStep", required=true)
       private final ExecStepResponse preStep;
 
-    public ExecStepResponse getPreStep() {
+    public ExecStepResponse preStep() {
         return this.preStep;
     }
 
@@ -85,7 +85,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rebootConfig", required=true)
       private final String rebootConfig;
 
-    public String getRebootConfig() {
+    public String rebootConfig() {
         return this.rebootConfig;
     }
 
@@ -96,7 +96,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="windowsUpdate", required=true)
       private final WindowsUpdateSettingsResponse windowsUpdate;
 
-    public WindowsUpdateSettingsResponse getWindowsUpdate() {
+    public WindowsUpdateSettingsResponse windowsUpdate() {
         return this.windowsUpdate;
     }
 
@@ -107,7 +107,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="yum", required=true)
       private final YumSettingsResponse yum;
 
-    public YumSettingsResponse getYum() {
+    public YumSettingsResponse yum() {
         return this.yum;
     }
 
@@ -118,7 +118,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zypper", required=true)
       private final ZypperSettingsResponse zypper;
 
-    public ZypperSettingsResponse getZypper() {
+    public ZypperSettingsResponse zypper() {
         return this.zypper;
     }
 

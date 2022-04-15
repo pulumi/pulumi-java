@@ -23,14 +23,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiProxy")
       private final @Nullable Output<String> apiProxy;
 
-    public Output<String> getApiProxy() {
+    public Output<String> apiProxy() {
         return this.apiProxy == null ? Codegen.empty() : this.apiProxy;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -41,14 +41,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,7 +59,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="samplingConfig")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> getSamplingConfig() {
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig() {
         return this.samplingConfig == null ? Codegen.empty() : this.samplingConfig;
     }
 

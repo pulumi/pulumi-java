@@ -25,7 +25,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="cloudSql", required=true)
       private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
-    public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse getCloudSql() {
+    public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql() {
         return this.cloudSql;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="connectionType", required=true)
       private final String connectionType;
 
-    public String getConnectionType() {
+    public String connectionType() {
         return this.connectionType;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     @Import(name="hasCredential", required=true)
       private final Boolean hasCredential;
 
-    public Boolean getHasCredential() {
+    public Boolean hasCredential() {
         return this.hasCredential;
     }
 

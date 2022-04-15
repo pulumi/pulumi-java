@@ -15,14 +15,14 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 
     @Import(name="domainMappingId", required=true)
       private final String domainMappingId;
 
-    public String getDomainMappingId() {
+    public String domainMappingId() {
         return this.domainMappingId;
     }
 

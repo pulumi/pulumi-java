@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
     @Import(name="onewayTerms")
       private final @Nullable Output<List<String>> onewayTerms;
 
-    public Output<List<String>> getOnewayTerms() {
+    public Output<List<String>> onewayTerms() {
         return this.onewayTerms == null ? Codegen.empty() : this.onewayTerms;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
     @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> getQueryTerms() {
+    public Output<List<String>> queryTerms() {
         return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 

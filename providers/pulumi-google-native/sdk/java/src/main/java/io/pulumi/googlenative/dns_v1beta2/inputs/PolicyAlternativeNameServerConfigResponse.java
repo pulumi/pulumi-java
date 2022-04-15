@@ -17,7 +17,7 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -28,7 +28,7 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
     @Import(name="targetNameServers", required=true)
       private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
-    public List<PolicyAlternativeNameServerConfigTargetNameServerResponse> getTargetNameServers() {
+    public List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers() {
         return this.targetNameServers;
     }
 

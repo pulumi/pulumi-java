@@ -99,77 +99,77 @@ public final class GetUtilizationReportResult {
      * The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The report display name, as assigned by the user.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Provides details on the state of the report in case of an error.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
     */
-    public String getFrameEndTime() {
+    public String frameEndTime() {
         return this.frameEndTime;
     }
     /**
      * The report unique name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Current state of the report.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The time the state was last set.
      * 
     */
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
     /**
      * Time frame of the report.
      * 
     */
-    public String getTimeFrame() {
+    public String timeFrame() {
         return this.timeFrame;
     }
     /**
      * Total number of VMs included in the report.
      * 
     */
-    public Integer getVmCount() {
+    public Integer vmCount() {
         return this.vmCount;
     }
     /**
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
     */
-    public List<VmUtilizationInfoResponse> getVms() {
+    public List<VmUtilizationInfoResponse> vms() {
         return this.vms;
     }
     /**
      * Total number of VMs included in the report.
      * 
     */
-    public Integer getVmsCount() {
+    public Integer vmsCount() {
         return this.vmsCount;
     }
 

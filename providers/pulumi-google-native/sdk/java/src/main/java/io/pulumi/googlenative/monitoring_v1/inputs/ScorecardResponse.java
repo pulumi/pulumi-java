@@ -27,7 +27,7 @@ public final class ScorecardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gaugeView", required=true)
       private final GaugeViewResponse gaugeView;
 
-    public GaugeViewResponse getGaugeView() {
+    public GaugeViewResponse gaugeView() {
         return this.gaugeView;
     }
 
@@ -38,7 +38,7 @@ public final class ScorecardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sparkChartView", required=true)
       private final SparkChartViewResponse sparkChartView;
 
-    public SparkChartViewResponse getSparkChartView() {
+    public SparkChartViewResponse sparkChartView() {
         return this.sparkChartView;
     }
 
@@ -49,7 +49,7 @@ public final class ScorecardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="thresholds", required=true)
       private final List<ThresholdResponse> thresholds;
 
-    public List<ThresholdResponse> getThresholds() {
+    public List<ThresholdResponse> thresholds() {
         return this.thresholds;
     }
 
@@ -60,7 +60,7 @@ public final class ScorecardResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    public TimeSeriesQueryResponse getTimeSeriesQuery() {
+    public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 

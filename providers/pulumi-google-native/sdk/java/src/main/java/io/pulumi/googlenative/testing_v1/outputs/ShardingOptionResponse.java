@@ -33,14 +33,14 @@ public final class ShardingOptionResponse {
      * Shards test cases into the specified groups of packages, classes, and/or methods.
      * 
     */
-    public ManualShardingResponse getManualSharding() {
+    public ManualShardingResponse manualSharding() {
         return this.manualSharding;
     }
     /**
      * Uniformly shards test cases given a total number of shards.
      * 
     */
-    public UniformShardingResponse getUniformSharding() {
+    public UniformShardingResponse uniformSharding() {
         return this.uniformSharding;
     }
 

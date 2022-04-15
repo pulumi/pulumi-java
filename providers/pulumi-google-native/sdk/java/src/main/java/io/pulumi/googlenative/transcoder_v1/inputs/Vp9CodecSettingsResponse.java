@@ -25,7 +25,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
 
-    public Integer getBitrateBps() {
+    public Integer bitrateBps() {
         return this.bitrateBps;
     }
 
@@ -36,7 +36,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="crfLevel", required=true)
       private final Integer crfLevel;
 
-    public Integer getCrfLevel() {
+    public Integer crfLevel() {
         return this.crfLevel;
     }
 
@@ -47,7 +47,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="frameRate", required=true)
       private final Double frameRate;
 
-    public Double getFrameRate() {
+    public Double frameRate() {
         return this.frameRate;
     }
 
@@ -58,7 +58,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="gopDuration", required=true)
       private final String gopDuration;
 
-    public String getGopDuration() {
+    public String gopDuration() {
         return this.gopDuration;
     }
 
@@ -69,7 +69,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="gopFrameCount", required=true)
       private final Integer gopFrameCount;
 
-    public Integer getGopFrameCount() {
+    public Integer gopFrameCount() {
         return this.gopFrameCount;
     }
 
@@ -80,7 +80,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="heightPixels", required=true)
       private final Integer heightPixels;
 
-    public Integer getHeightPixels() {
+    public Integer heightPixels() {
         return this.heightPixels;
     }
 
@@ -91,7 +91,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="pixelFormat", required=true)
       private final String pixelFormat;
 
-    public String getPixelFormat() {
+    public String pixelFormat() {
         return this.pixelFormat;
     }
 
@@ -102,7 +102,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="profile", required=true)
       private final String profile;
 
-    public String getProfile() {
+    public String profile() {
         return this.profile;
     }
 
@@ -113,7 +113,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rateControlMode", required=true)
       private final String rateControlMode;
 
-    public String getRateControlMode() {
+    public String rateControlMode() {
         return this.rateControlMode;
     }
 
@@ -124,7 +124,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="widthPixels", required=true)
       private final Integer widthPixels;
 
-    public Integer getWidthPixels() {
+    public Integer widthPixels() {
         return this.widthPixels;
     }
 

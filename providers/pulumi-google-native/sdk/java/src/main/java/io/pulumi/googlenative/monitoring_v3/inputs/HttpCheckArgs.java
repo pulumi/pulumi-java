@@ -32,7 +32,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authInfo")
       private final @Nullable Output<BasicAuthenticationArgs> authInfo;
 
-    public Output<BasicAuthenticationArgs> getAuthInfo() {
+    public Output<BasicAuthenticationArgs> authInfo() {
         return this.authInfo == null ? Codegen.empty() : this.authInfo;
     }
 
@@ -43,7 +43,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -54,7 +54,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<HttpCheckContentType> contentType;
 
-    public Output<HttpCheckContentType> getContentType() {
+    public Output<HttpCheckContentType> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -65,7 +65,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -76,7 +76,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maskHeaders")
       private final @Nullable Output<Boolean> maskHeaders;
 
-    public Output<Boolean> getMaskHeaders() {
+    public Output<Boolean> maskHeaders() {
         return this.maskHeaders == null ? Codegen.empty() : this.maskHeaders;
     }
 
@@ -87,7 +87,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -98,7 +98,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -109,7 +109,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestMethod")
       private final @Nullable Output<HttpCheckRequestMethod> requestMethod;
 
-    public Output<HttpCheckRequestMethod> getRequestMethod() {
+    public Output<HttpCheckRequestMethod> requestMethod() {
         return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
@@ -120,7 +120,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useSsl")
       private final @Nullable Output<Boolean> useSsl;
 
-    public Output<Boolean> getUseSsl() {
+    public Output<Boolean> useSsl() {
         return this.useSsl == null ? Codegen.empty() : this.useSsl;
     }
 
@@ -131,7 +131,7 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateSsl")
       private final @Nullable Output<Boolean> validateSsl;
 
-    public Output<Boolean> getValidateSsl() {
+    public Output<Boolean> validateSsl() {
         return this.validateSsl == null ? Codegen.empty() : this.validateSsl;
     }
 

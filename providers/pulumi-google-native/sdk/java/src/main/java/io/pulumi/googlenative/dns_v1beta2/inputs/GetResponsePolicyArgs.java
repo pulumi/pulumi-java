@@ -17,21 +17,21 @@ public final class GetResponsePolicyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="clientOperationId")
       private final @Nullable String clientOperationId;
 
-    public Optional<String> getClientOperationId() {
+    public Optional<String> clientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="responsePolicy", required=true)
       private final String responsePolicy;
 
-    public String getResponsePolicy() {
+    public String responsePolicy() {
         return this.responsePolicy;
     }
 

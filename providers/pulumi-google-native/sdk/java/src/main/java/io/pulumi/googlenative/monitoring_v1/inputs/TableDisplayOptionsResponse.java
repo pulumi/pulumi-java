@@ -24,7 +24,7 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
     @Import(name="shownColumns", required=true)
       private final List<String> shownColumns;
 
-    public List<String> getShownColumns() {
+    public List<String> shownColumns() {
         return this.shownColumns;
     }
 

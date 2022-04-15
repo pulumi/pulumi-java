@@ -33,14 +33,14 @@ public final class AccessSelectorResponse {
      * Optional. The permissions to appear in result.
      * 
     */
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
     /**
      * Optional. The roles to appear in result.
      * 
     */
-    public List<String> getRoles() {
+    public List<String> roles() {
         return this.roles;
     }
 

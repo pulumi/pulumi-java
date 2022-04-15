@@ -24,14 +24,14 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adaptiveProtectionConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
+    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
     }
 
     @Import(name="advancedOptionsConfig")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
+    public Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig() {
         return this.advancedOptionsConfig == null ? Codegen.empty() : this.advancedOptionsConfig;
     }
 
@@ -42,7 +42,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,28 +53,28 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="recaptchaOptionsConfig")
       private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
-    public Output<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
+    public Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig() {
         return this.recaptchaOptionsConfig == null ? Codegen.empty() : this.recaptchaOptionsConfig;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -85,7 +85,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
-    public Output<List<SecurityPolicyRuleArgs>> getRules() {
+    public Output<List<SecurityPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -96,7 +96,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<SecurityPolicyType> type;
 
-    public Output<SecurityPolicyType> getType() {
+    public Output<SecurityPolicyType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

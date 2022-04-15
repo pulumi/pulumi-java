@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="cardContent", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> getCardContent() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent() {
         return this.cardContent;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="cardOrientation", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> getCardOrientation() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation() {
         return this.cardOrientation;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="thumbnailImageAlignment")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> getThumbnailImageAlignment() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment() {
         return this.thumbnailImageAlignment == null ? Codegen.empty() : this.thumbnailImageAlignment;
     }
 

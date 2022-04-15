@@ -27,7 +27,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -38,14 +38,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,7 +56,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,14 +67,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phraseMatchRuleGroups")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
-    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> getPhraseMatchRuleGroups() {
+    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups() {
         return this.phraseMatchRuleGroups == null ? Codegen.empty() : this.phraseMatchRuleGroups;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -85,7 +85,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleMatch")
       private final @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
 
-    public Output<PhraseMatcherRoleMatch> getRoleMatch() {
+    public Output<PhraseMatcherRoleMatch> roleMatch() {
         return this.roleMatch == null ? Codegen.empty() : this.roleMatch;
     }
 
@@ -96,7 +96,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<PhraseMatcherType> type;
 
-    public Output<PhraseMatcherType> getType() {
+    public Output<PhraseMatcherType> type() {
         return this.type;
     }
 
@@ -107,7 +107,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionTag")
       private final @Nullable Output<String> versionTag;
 
-    public Output<String> getVersionTag() {
+    public Output<String> versionTag() {
         return this.versionTag == null ? Codegen.empty() : this.versionTag;
     }
 

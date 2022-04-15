@@ -30,7 +30,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="edgeCluster")
       private final @Nullable Output<EdgeClusterArgs> edgeCluster;
 
-    public Output<EdgeClusterArgs> getEdgeCluster() {
+    public Output<EdgeClusterArgs> edgeCluster() {
         return this.edgeCluster == null ? Codegen.empty() : this.edgeCluster;
     }
 
@@ -41,7 +41,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gkeCluster")
       private final @Nullable Output<GkeClusterArgs> gkeCluster;
 
-    public Output<GkeClusterArgs> getGkeCluster() {
+    public Output<GkeClusterArgs> gkeCluster() {
         return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
     }
 
@@ -52,7 +52,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kubernetesResource")
       private final @Nullable Output<KubernetesResourceArgs> kubernetesResource;
 
-    public Output<KubernetesResourceArgs> getKubernetesResource() {
+    public Output<KubernetesResourceArgs> kubernetesResource() {
         return this.kubernetesResource == null ? Codegen.empty() : this.kubernetesResource;
     }
 
@@ -63,7 +63,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="multiCloudCluster")
       private final @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
 
-    public Output<MultiCloudClusterArgs> getMultiCloudCluster() {
+    public Output<MultiCloudClusterArgs> multiCloudCluster() {
         return this.multiCloudCluster == null ? Codegen.empty() : this.multiCloudCluster;
     }
 
@@ -74,7 +74,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     @Import(name="onPremCluster")
       private final @Nullable Output<OnPremClusterArgs> onPremCluster;
 
-    public Output<OnPremClusterArgs> getOnPremCluster() {
+    public Output<OnPremClusterArgs> onPremCluster() {
         return this.onPremCluster == null ? Codegen.empty() : this.onPremCluster;
     }
 

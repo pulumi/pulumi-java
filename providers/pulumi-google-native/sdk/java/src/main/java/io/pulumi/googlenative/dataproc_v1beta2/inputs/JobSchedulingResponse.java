@@ -23,7 +23,7 @@ public final class JobSchedulingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="maxFailuresPerHour", required=true)
       private final Integer maxFailuresPerHour;
 
-    public Integer getMaxFailuresPerHour() {
+    public Integer maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
@@ -34,7 +34,7 @@ public final class JobSchedulingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="maxFailuresTotal", required=true)
       private final Integer maxFailuresTotal;
 
-    public Integer getMaxFailuresTotal() {
+    public Integer maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 

@@ -26,7 +26,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="artifacts", required=true)
       private final List<SoftwareRecipeArtifactResponse> artifacts;
 
-    public List<SoftwareRecipeArtifactResponse> getArtifacts() {
+    public List<SoftwareRecipeArtifactResponse> artifacts() {
         return this.artifacts;
     }
 
@@ -37,7 +37,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="desiredState", required=true)
       private final String desiredState;
 
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
 
@@ -48,7 +48,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="installSteps", required=true)
       private final List<SoftwareRecipeStepResponse> installSteps;
 
-    public List<SoftwareRecipeStepResponse> getInstallSteps() {
+    public List<SoftwareRecipeStepResponse> installSteps() {
         return this.installSteps;
     }
 
@@ -59,7 +59,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -70,7 +70,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="updateSteps", required=true)
       private final List<SoftwareRecipeStepResponse> updateSteps;
 
-    public List<SoftwareRecipeStepResponse> getUpdateSteps() {
+    public List<SoftwareRecipeStepResponse> updateSteps() {
         return this.updateSteps;
     }
 
@@ -81,7 +81,7 @@ public final class SoftwareRecipeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

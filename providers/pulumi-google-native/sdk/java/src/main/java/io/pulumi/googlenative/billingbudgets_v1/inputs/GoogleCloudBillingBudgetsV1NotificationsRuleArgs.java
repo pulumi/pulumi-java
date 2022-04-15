@@ -28,7 +28,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends io.p
     @Import(name="disableDefaultIamRecipients")
       private final @Nullable Output<Boolean> disableDefaultIamRecipients;
 
-    public Output<Boolean> getDisableDefaultIamRecipients() {
+    public Output<Boolean> disableDefaultIamRecipients() {
         return this.disableDefaultIamRecipients == null ? Codegen.empty() : this.disableDefaultIamRecipients;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends io.p
     @Import(name="monitoringNotificationChannels")
       private final @Nullable Output<List<String>> monitoringNotificationChannels;
 
-    public Output<List<String>> getMonitoringNotificationChannels() {
+    public Output<List<String>> monitoringNotificationChannels() {
         return this.monitoringNotificationChannels == null ? Codegen.empty() : this.monitoringNotificationChannels;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends io.p
     @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends io.p
     @Import(name="schemaVersion")
       private final @Nullable Output<String> schemaVersion;
 
-    public Output<String> getSchemaVersion() {
+    public Output<String> schemaVersion() {
         return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
     }
 

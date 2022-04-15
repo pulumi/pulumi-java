@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
     @Import(name="fixedLikelihood", required=true)
       private final String fixedLikelihood;
 
-    public String getFixedLikelihood() {
+    public String fixedLikelihood() {
         return this.fixedLikelihood;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
     @Import(name="relativeLikelihood", required=true)
       private final Integer relativeLikelihood;
 
-    public Integer getRelativeLikelihood() {
+    public Integer relativeLikelihood() {
         return this.relativeLikelihood;
     }
 

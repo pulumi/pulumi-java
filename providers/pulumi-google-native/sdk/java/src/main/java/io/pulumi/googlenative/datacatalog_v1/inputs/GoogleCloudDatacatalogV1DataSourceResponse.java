@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

@@ -23,7 +23,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="identityProvider", required=true)
       private final String identityProvider;
 
-    public String getIdentityProvider() {
+    public String identityProvider() {
         return this.identityProvider;
     }
 
@@ -34,7 +34,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -45,7 +45,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oidcJwks", required=true)
       private final String oidcJwks;
 
-    public String getOidcJwks() {
+    public String oidcJwks() {
         return this.oidcJwks;
     }
 
@@ -56,7 +56,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workloadIdentityPool", required=true)
       private final String workloadIdentityPool;
 
-    public String getWorkloadIdentityPool() {
+    public String workloadIdentityPool() {
         return this.workloadIdentityPool;
     }
 

@@ -30,7 +30,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return ID of the API proxy that will have its trace configuration overridden.
      * 
      */
-    public Output<String> getApiProxy() {
+    public Output<String> apiProxy() {
         return this.apiProxy;
     }
     /**
@@ -44,7 +44,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return ID of the trace configuration override specified as a system-generated UUID.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * @return Trace configuration to override.
      * 
      */
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> getSamplingConfig() {
+    public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> samplingConfig() {
         return this.samplingConfig;
     }
 

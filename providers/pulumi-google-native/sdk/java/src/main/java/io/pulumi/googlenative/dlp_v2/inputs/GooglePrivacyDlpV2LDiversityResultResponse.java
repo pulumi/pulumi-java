@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse extends io.pulumi.
     @Import(name="sensitiveValueFrequencyHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
-    public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> getSensitiveValueFrequencyHistogramBuckets() {
+    public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;
     }
 

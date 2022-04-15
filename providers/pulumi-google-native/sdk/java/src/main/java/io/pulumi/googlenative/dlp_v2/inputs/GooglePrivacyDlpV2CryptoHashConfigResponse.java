@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends io.pulumi.
     @Import(name="cryptoKey", required=true)
       private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
-    public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
+    public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
 

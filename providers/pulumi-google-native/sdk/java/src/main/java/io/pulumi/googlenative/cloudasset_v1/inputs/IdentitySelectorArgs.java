@@ -25,7 +25,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity", required=true)
       private final Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
 

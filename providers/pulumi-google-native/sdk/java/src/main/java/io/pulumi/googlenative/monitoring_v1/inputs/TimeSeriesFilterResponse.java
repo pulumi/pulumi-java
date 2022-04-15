@@ -25,7 +25,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
     @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
 
-    public AggregationResponse getAggregation() {
+    public AggregationResponse aggregation() {
         return this.aggregation;
     }
 
@@ -36,7 +36,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -47,7 +47,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
     @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
-    public PickTimeSeriesFilterResponse getPickTimeSeriesFilter() {
+    public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
 
@@ -58,7 +58,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
     @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;
 
-    public AggregationResponse getSecondaryAggregation() {
+    public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
 

@@ -22,7 +22,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
     @Import(name="instances", required=true)
       private final List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
 
-    public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> getInstances() {
+    public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances() {
         return this.instances;
     }
 
@@ -33,7 +33,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
     @Import(name="subnetworks", required=true)
       private final List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
 
-    public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> getSubnetworks() {
+    public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks() {
         return this.subnetworks;
     }
 
@@ -44,7 +44,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 

@@ -33,14 +33,14 @@ public final class ApigatewayAuditLogConfigResponse {
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
     */
-    public List<String> getExemptedMembers() {
+    public List<String> exemptedMembers() {
         return this.exemptedMembers;
     }
     /**
      * The log type that this config enables.
      * 
     */
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

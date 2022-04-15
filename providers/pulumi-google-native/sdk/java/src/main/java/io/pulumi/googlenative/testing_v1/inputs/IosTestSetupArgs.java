@@ -29,7 +29,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalIpas")
       private final @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
-    public Output<List<FileReferenceArgs>> getAdditionalIpas() {
+    public Output<List<FileReferenceArgs>> additionalIpas() {
         return this.additionalIpas == null ? Codegen.empty() : this.additionalIpas;
     }
 
@@ -40,7 +40,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
       private final @Nullable Output<String> networkProfile;
 
-    public Output<String> getNetworkProfile() {
+    public Output<String> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -51,7 +51,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullDirectories")
       private final @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
-    public Output<List<IosDeviceFileArgs>> getPullDirectories() {
+    public Output<List<IosDeviceFileArgs>> pullDirectories() {
         return this.pullDirectories == null ? Codegen.empty() : this.pullDirectories;
     }
 
@@ -62,7 +62,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pushFiles")
       private final @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
-    public Output<List<IosDeviceFileArgs>> getPushFiles() {
+    public Output<List<IosDeviceFileArgs>> pushFiles() {
         return this.pushFiles == null ? Codegen.empty() : this.pushFiles;
     }
 

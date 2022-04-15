@@ -24,7 +24,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="exemptedMembers", required=true)
       private final List<String> exemptedMembers;
 
-    public List<String> getExemptedMembers() {
+    public List<String> exemptedMembers() {
         return this.exemptedMembers;
     }
 
@@ -35,7 +35,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="logType", required=true)
       private final String logType;
 
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

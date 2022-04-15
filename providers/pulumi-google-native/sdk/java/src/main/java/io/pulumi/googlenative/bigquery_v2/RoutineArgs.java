@@ -31,14 +31,14 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> getArguments() {
+    public Output<List<ArgumentArgs>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -49,7 +49,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definitionBody", required=true)
       private final Output<String> definitionBody;
 
-    public Output<String> getDefinitionBody() {
+    public Output<String> definitionBody() {
         return this.definitionBody;
     }
 
@@ -60,7 +60,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="determinismLevel")
       private final @Nullable Output<RoutineDeterminismLevel> determinismLevel;
 
-    public Output<RoutineDeterminismLevel> getDeterminismLevel() {
+    public Output<RoutineDeterminismLevel> determinismLevel() {
         return this.determinismLevel == null ? Codegen.empty() : this.determinismLevel;
     }
 
@@ -82,7 +82,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importedLibraries")
       private final @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> getImportedLibraries() {
+    public Output<List<String>> importedLibraries() {
         return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
     }
 
@@ -93,14 +93,14 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="language")
       private final @Nullable Output<RoutineLanguage> language;
 
-    public Output<RoutineLanguage> getLanguage() {
+    public Output<RoutineLanguage> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="returnTableType")
       private final @Nullable Output<StandardSqlTableTypeArgs> returnTableType;
 
-    public Output<StandardSqlTableTypeArgs> getReturnTableType() {
+    public Output<StandardSqlTableTypeArgs> returnTableType() {
         return this.returnTableType == null ? Codegen.empty() : this.returnTableType;
     }
 
@@ -122,7 +122,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="returnType")
       private final @Nullable Output<StandardSqlDataTypeArgs> returnType;
 
-    public Output<StandardSqlDataTypeArgs> getReturnType() {
+    public Output<StandardSqlDataTypeArgs> returnType() {
         return this.returnType == null ? Codegen.empty() : this.returnType;
     }
 
@@ -133,7 +133,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routineReference", required=true)
       private final Output<RoutineReferenceArgs> routineReference;
 
-    public Output<RoutineReferenceArgs> getRoutineReference() {
+    public Output<RoutineReferenceArgs> routineReference() {
         return this.routineReference;
     }
 
@@ -144,7 +144,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routineType", required=true)
       private final Output<RoutineRoutineType> routineType;
 
-    public Output<RoutineRoutineType> getRoutineType() {
+    public Output<RoutineRoutineType> routineType() {
         return this.routineType;
     }
 
@@ -155,7 +155,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strictMode")
       private final @Nullable Output<Boolean> strictMode;
 
-    public Output<Boolean> getStrictMode() {
+    public Output<Boolean> strictMode() {
         return this.strictMode == null ? Codegen.empty() : this.strictMode;
     }
 

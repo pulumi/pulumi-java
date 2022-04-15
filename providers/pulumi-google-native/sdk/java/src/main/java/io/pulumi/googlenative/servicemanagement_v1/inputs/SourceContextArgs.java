@@ -26,7 +26,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 

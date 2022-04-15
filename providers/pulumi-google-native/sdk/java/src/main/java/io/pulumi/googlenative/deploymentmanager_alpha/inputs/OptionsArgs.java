@@ -30,7 +30,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asyncOptions")
       private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
-    public Output<List<AsyncOptionsArgs>> getAsyncOptions() {
+    public Output<List<AsyncOptionsArgs>> asyncOptions() {
         return this.asyncOptions == null ? Codegen.empty() : this.asyncOptions;
     }
 
@@ -41,7 +41,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputMappings")
       private final @Nullable Output<List<InputMappingArgs>> inputMappings;
 
-    public Output<List<InputMappingArgs>> getInputMappings() {
+    public Output<List<InputMappingArgs>> inputMappings() {
         return this.inputMappings == null ? Codegen.empty() : this.inputMappings;
     }
 
@@ -52,7 +52,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameProperty")
       private final @Nullable Output<String> nameProperty;
 
-    public Output<String> getNameProperty() {
+    public Output<String> nameProperty() {
         return this.nameProperty == null ? Codegen.empty() : this.nameProperty;
     }
 
@@ -63,7 +63,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationOptions")
       private final @Nullable Output<ValidationOptionsArgs> validationOptions;
 
-    public Output<ValidationOptionsArgs> getValidationOptions() {
+    public Output<ValidationOptionsArgs> validationOptions() {
         return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 

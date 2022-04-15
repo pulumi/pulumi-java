@@ -17,35 +17,35 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="agentId", required=true)
       private final String agentId;
 
-    public String getAgentId() {
+    public String agentId() {
         return this.agentId;
     }
 
     @Import(name="flowId", required=true)
       private final String flowId;
 
-    public String getFlowId() {
+    public String flowId() {
         return this.flowId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="versionId", required=true)
       private final String versionId;
 
-    public String getVersionId() {
+    public String versionId() {
         return this.versionId;
     }
 

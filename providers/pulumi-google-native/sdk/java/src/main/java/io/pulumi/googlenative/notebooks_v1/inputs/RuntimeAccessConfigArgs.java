@@ -27,7 +27,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="accessType")
       private final @Nullable Output<RuntimeAccessConfigAccessType> accessType;
 
-    public Output<RuntimeAccessConfigAccessType> getAccessType() {
+    public Output<RuntimeAccessConfigAccessType> accessType() {
         return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
@@ -38,7 +38,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="runtimeOwner")
       private final @Nullable Output<String> runtimeOwner;
 
-    public Output<String> getRuntimeOwner() {
+    public Output<String> runtimeOwner() {
         return this.runtimeOwner == null ? Codegen.empty() : this.runtimeOwner;
     }
 

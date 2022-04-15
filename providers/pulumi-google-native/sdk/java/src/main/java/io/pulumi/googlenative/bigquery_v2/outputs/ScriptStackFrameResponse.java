@@ -61,42 +61,42 @@ public final class ScriptStackFrameResponse {
      * One-based end column.
      * 
     */
-    public Integer getEndColumn() {
+    public Integer endColumn() {
         return this.endColumn;
     }
     /**
      * One-based end line.
      * 
     */
-    public Integer getEndLine() {
+    public Integer endLine() {
         return this.endLine;
     }
     /**
      * Name of the active procedure, empty if in a top-level script.
      * 
     */
-    public String getProcedureId() {
+    public String procedureId() {
         return this.procedureId;
     }
     /**
      * One-based start column.
      * 
     */
-    public Integer getStartColumn() {
+    public Integer startColumn() {
         return this.startColumn;
     }
     /**
      * One-based start line.
      * 
     */
-    public Integer getStartLine() {
+    public Integer startLine() {
         return this.startLine;
     }
     /**
      * Text of the current statement/expression.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

@@ -28,7 +28,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
 
-    public Output<List<String>> getAllowedValues() {
+    public Output<List<String>> allowedValues() {
         return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="policy")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> getPolicy() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

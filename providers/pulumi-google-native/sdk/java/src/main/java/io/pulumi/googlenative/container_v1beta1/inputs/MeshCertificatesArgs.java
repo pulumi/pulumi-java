@@ -26,7 +26,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enableCertificates")
       private final @Nullable Output<Boolean> enableCertificates;
 
-    public Output<Boolean> getEnableCertificates() {
+    public Output<Boolean> enableCertificates() {
         return this.enableCertificates == null ? Codegen.empty() : this.enableCertificates;
     }
 

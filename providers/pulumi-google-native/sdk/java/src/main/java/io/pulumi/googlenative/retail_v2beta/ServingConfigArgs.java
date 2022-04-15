@@ -25,14 +25,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boostControlIds")
       private final @Nullable Output<List<String>> boostControlIds;
 
-    public Output<List<String>> getBoostControlIds() {
+    public Output<List<String>> boostControlIds() {
         return this.boostControlIds == null ? Codegen.empty() : this.boostControlIds;
     }
 
     @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -43,7 +43,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -54,7 +54,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diversityLevel")
       private final @Nullable Output<String> diversityLevel;
 
-    public Output<String> getDiversityLevel() {
+    public Output<String> diversityLevel() {
         return this.diversityLevel == null ? Codegen.empty() : this.diversityLevel;
     }
 
@@ -65,7 +65,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="doNotAssociateControlIds")
       private final @Nullable Output<List<String>> doNotAssociateControlIds;
 
-    public Output<List<String>> getDoNotAssociateControlIds() {
+    public Output<List<String>> doNotAssociateControlIds() {
         return this.doNotAssociateControlIds == null ? Codegen.empty() : this.doNotAssociateControlIds;
     }
 
@@ -76,7 +76,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamicFacetSpec")
       private final @Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec;
 
-    public Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> getDynamicFacetSpec() {
+    public Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec() {
         return this.dynamicFacetSpec == null ? Codegen.empty() : this.dynamicFacetSpec;
     }
 
@@ -87,7 +87,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableCategoryFilterLevel")
       private final @Nullable Output<String> enableCategoryFilterLevel;
 
-    public Output<String> getEnableCategoryFilterLevel() {
+    public Output<String> enableCategoryFilterLevel() {
         return this.enableCategoryFilterLevel == null ? Codegen.empty() : this.enableCategoryFilterLevel;
     }
 
@@ -98,7 +98,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="facetControlIds")
       private final @Nullable Output<List<String>> facetControlIds;
 
-    public Output<List<String>> getFacetControlIds() {
+    public Output<List<String>> facetControlIds() {
         return this.facetControlIds == null ? Codegen.empty() : this.facetControlIds;
     }
 
@@ -109,7 +109,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterControlIds")
       private final @Nullable Output<List<String>> filterControlIds;
 
-    public Output<List<String>> getFilterControlIds() {
+    public Output<List<String>> filterControlIds() {
         return this.filterControlIds == null ? Codegen.empty() : this.filterControlIds;
     }
 
@@ -120,14 +120,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreControlIds")
       private final @Nullable Output<List<String>> ignoreControlIds;
 
-    public Output<List<String>> getIgnoreControlIds() {
+    public Output<List<String>> ignoreControlIds() {
         return this.ignoreControlIds == null ? Codegen.empty() : this.ignoreControlIds;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -138,7 +138,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modelId")
       private final @Nullable Output<String> modelId;
 
-    public Output<String> getModelId() {
+    public Output<String> modelId() {
         return this.modelId == null ? Codegen.empty() : this.modelId;
     }
 
@@ -149,7 +149,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -160,7 +160,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onewaySynonymsControlIds")
       private final @Nullable Output<List<String>> onewaySynonymsControlIds;
 
-    public Output<List<String>> getOnewaySynonymsControlIds() {
+    public Output<List<String>> onewaySynonymsControlIds() {
         return this.onewaySynonymsControlIds == null ? Codegen.empty() : this.onewaySynonymsControlIds;
     }
 
@@ -171,14 +171,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priceRerankingLevel")
       private final @Nullable Output<String> priceRerankingLevel;
 
-    public Output<String> getPriceRerankingLevel() {
+    public Output<String> priceRerankingLevel() {
         return this.priceRerankingLevel == null ? Codegen.empty() : this.priceRerankingLevel;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -189,7 +189,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redirectControlIds")
       private final @Nullable Output<List<String>> redirectControlIds;
 
-    public Output<List<String>> getRedirectControlIds() {
+    public Output<List<String>> redirectControlIds() {
         return this.redirectControlIds == null ? Codegen.empty() : this.redirectControlIds;
     }
 
@@ -200,14 +200,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replacementControlIds")
       private final @Nullable Output<List<String>> replacementControlIds;
 
-    public Output<List<String>> getReplacementControlIds() {
+    public Output<List<String>> replacementControlIds() {
         return this.replacementControlIds == null ? Codegen.empty() : this.replacementControlIds;
     }
 
     @Import(name="servingConfigId", required=true)
       private final Output<String> servingConfigId;
 
-    public Output<String> getServingConfigId() {
+    public Output<String> servingConfigId() {
         return this.servingConfigId;
     }
 
@@ -218,7 +218,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="solutionTypes", required=true)
       private final Output<List<ServingConfigSolutionTypesItem>> solutionTypes;
 
-    public Output<List<ServingConfigSolutionTypesItem>> getSolutionTypes() {
+    public Output<List<ServingConfigSolutionTypesItem>> solutionTypes() {
         return this.solutionTypes;
     }
 
@@ -229,7 +229,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="twowaySynonymsControlIds")
       private final @Nullable Output<List<String>> twowaySynonymsControlIds;
 
-    public Output<List<String>> getTwowaySynonymsControlIds() {
+    public Output<List<String>> twowaySynonymsControlIds() {
         return this.twowaySynonymsControlIds == null ? Codegen.empty() : this.twowaySynonymsControlIds;
     }
 

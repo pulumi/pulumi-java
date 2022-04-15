@@ -41,21 +41,21 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
      * Configuration of findings limit given for specified infoTypes.
      * 
     */
-    public List<GooglePrivacyDlpV2InfoTypeLimitResponse> getMaxFindingsPerInfoType() {
+    public List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType() {
         return this.maxFindingsPerInfoType;
     }
     /**
      * Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
      * 
     */
-    public Integer getMaxFindingsPerItem() {
+    public Integer maxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
     /**
      * Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
      * 
     */
-    public Integer getMaxFindingsPerRequest() {
+    public Integer maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 

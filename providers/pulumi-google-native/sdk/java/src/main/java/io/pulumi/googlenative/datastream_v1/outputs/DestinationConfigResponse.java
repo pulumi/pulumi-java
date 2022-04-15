@@ -33,14 +33,14 @@ public final class DestinationConfigResponse {
      * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
      * 
     */
-    public String getDestinationConnectionProfile() {
+    public String destinationConnectionProfile() {
         return this.destinationConnectionProfile;
     }
     /**
      * A configuration for how data should be loaded to Cloud Storage.
      * 
     */
-    public GcsDestinationConfigResponse getGcsDestinationConfig() {
+    public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
 

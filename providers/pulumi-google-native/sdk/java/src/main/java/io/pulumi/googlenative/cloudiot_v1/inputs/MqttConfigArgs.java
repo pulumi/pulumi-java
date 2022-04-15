@@ -26,7 +26,7 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mqttEnabledState")
       private final @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
 
-    public Output<MqttConfigMqttEnabledState> getMqttEnabledState() {
+    public Output<MqttConfigMqttEnabledState> mqttEnabledState() {
         return this.mqttEnabledState == null ? Codegen.empty() : this.mqttEnabledState;
     }
 

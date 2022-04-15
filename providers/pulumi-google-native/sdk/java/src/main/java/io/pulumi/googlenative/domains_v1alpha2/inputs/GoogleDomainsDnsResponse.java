@@ -25,7 +25,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dsRecords", required=true)
       private final List<DsRecordResponse> dsRecords;
 
-    public List<DsRecordResponse> getDsRecords() {
+    public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dsState", required=true)
       private final String dsState;
 
-    public String getDsState() {
+    public String dsState() {
         return this.dsState;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nameServers", required=true)
       private final List<String> nameServers;
 
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
 

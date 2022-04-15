@@ -25,7 +25,7 @@ public final class IapTestServiceAccountInfoArgs extends io.pulumi.resources.Res
     @Import(name="targetAudienceClientId", required=true)
       private final Output<String> targetAudienceClientId;
 
-    public Output<String> getTargetAudienceClientId() {
+    public Output<String> targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 

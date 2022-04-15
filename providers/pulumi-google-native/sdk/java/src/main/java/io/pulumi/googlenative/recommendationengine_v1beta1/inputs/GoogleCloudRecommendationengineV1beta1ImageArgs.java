@@ -27,7 +27,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
     @Import(name="height")
       private final @Nullable Output<Integer> height;
 
-    public Output<Integer> getHeight() {
+    public Output<Integer> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
     @Import(name="width")
       private final @Nullable Output<Integer> width;
 
-    public Output<Integer> getWidth() {
+    public Output<Integer> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

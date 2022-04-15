@@ -23,7 +23,7 @@ public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeA
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

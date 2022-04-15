@@ -24,7 +24,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,28 +35,28 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="resourceRequirements")
       private final @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
 
-    public Output<LicenseResourceRequirementsArgs> getResourceRequirements() {
+    public Output<LicenseResourceRequirementsArgs> resourceRequirements() {
         return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
     }
 
@@ -67,7 +67,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferable")
       private final @Nullable Output<Boolean> transferable;
 
-    public Output<Boolean> getTransferable() {
+    public Output<Boolean> transferable() {
         return this.transferable == null ? Codegen.empty() : this.transferable;
     }
 

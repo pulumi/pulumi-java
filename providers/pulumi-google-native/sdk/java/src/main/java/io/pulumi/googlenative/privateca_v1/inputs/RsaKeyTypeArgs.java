@@ -26,7 +26,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxModulusSize")
       private final @Nullable Output<String> maxModulusSize;
 
-    public Output<String> getMaxModulusSize() {
+    public Output<String> maxModulusSize() {
         return this.maxModulusSize == null ? Codegen.empty() : this.maxModulusSize;
     }
 
@@ -37,7 +37,7 @@ public final class RsaKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minModulusSize")
       private final @Nullable Output<String> minModulusSize;
 
-    public Output<String> getMinModulusSize() {
+    public Output<String> minModulusSize() {
         return this.minModulusSize == null ? Codegen.empty() : this.minModulusSize;
     }
 

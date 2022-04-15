@@ -30,7 +30,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @return Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -44,7 +44,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @return Time when the attestor was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -72,7 +72,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @return A Drydock ATTESTATION_AUTHORITY Note, created by the user.
      * 
      */
-    public Output<UserOwnedDrydockNoteResponse> getUserOwnedDrydockNote() {
+    public Output<UserOwnedDrydockNoteResponse> userOwnedDrydockNote() {
         return this.userOwnedDrydockNote;
     }
 

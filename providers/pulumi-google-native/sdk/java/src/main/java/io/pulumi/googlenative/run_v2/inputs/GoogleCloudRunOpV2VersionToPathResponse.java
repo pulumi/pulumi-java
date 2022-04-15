@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends io.pulumi.res
     @Import(name="mode", required=true)
       private final Integer mode;
 
-    public Integer getMode() {
+    public Integer mode() {
         return this.mode;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends io.pulumi.res
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends io.pulumi.res
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -62,42 +62,42 @@ public final class SubjectDescriptionResponse {
      * The serial number encoded in lowercase hexadecimal.
      * 
     */
-    public String getHexSerialNumber() {
+    public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
     /**
      * For convenience, the actual lifetime of an issued certificate.
      * 
     */
-    public String getLifetime() {
+    public String lifetime() {
         return this.lifetime;
     }
     /**
      * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
      * 
     */
-    public String getNotAfterTime() {
+    public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
      * The time at which the certificate becomes valid.
      * 
     */
-    public String getNotBeforeTime() {
+    public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
      * Contains distinguished name fields such as the common name, location and / organization.
      * 
     */
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
     /**
      * The subject alternative name fields.
      * 
     */
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

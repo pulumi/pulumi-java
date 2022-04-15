@@ -21,7 +21,7 @@ public final class RouterNatRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="action", required=true)
       private final RouterNatRuleActionResponse action;
 
-    public RouterNatRuleActionResponse getAction() {
+    public RouterNatRuleActionResponse action() {
         return this.action;
     }
 
@@ -32,7 +32,7 @@ public final class RouterNatRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -43,7 +43,7 @@ public final class RouterNatRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="match", required=true)
       private final String match;
 
-    public String getMatch() {
+    public String match() {
         return this.match;
     }
 
@@ -54,7 +54,7 @@ public final class RouterNatRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ruleNumber", required=true)
       private final Integer ruleNumber;
 
-    public Integer getRuleNumber() {
+    public Integer ruleNumber() {
         return this.ruleNumber;
     }
 

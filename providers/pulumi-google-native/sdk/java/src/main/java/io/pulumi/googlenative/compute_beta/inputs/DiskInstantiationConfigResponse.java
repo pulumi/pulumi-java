@@ -24,7 +24,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -35,7 +35,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
     @Import(name="customImage", required=true)
       private final String customImage;
 
-    public String getCustomImage() {
+    public String customImage() {
         return this.customImage;
     }
 
@@ -46,7 +46,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -57,7 +57,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
     @Import(name="instantiateFrom", required=true)
       private final String instantiateFrom;
 
-    public String getInstantiateFrom() {
+    public String instantiateFrom() {
         return this.instantiateFrom;
     }
 

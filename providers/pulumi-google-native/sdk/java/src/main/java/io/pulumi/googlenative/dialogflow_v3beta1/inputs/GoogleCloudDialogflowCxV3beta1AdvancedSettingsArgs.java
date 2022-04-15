@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends io
     @Import(name="loggingSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> getLoggingSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings() {
         return this.loggingSettings == null ? Codegen.empty() : this.loggingSettings;
     }
 

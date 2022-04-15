@@ -23,7 +23,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
     @Import(name="osArchitecture", required=true)
       private final String osArchitecture;
 
-    public String getOsArchitecture() {
+    public String osArchitecture() {
         return this.osArchitecture;
     }
 
@@ -34,7 +34,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
     @Import(name="osShortName", required=true)
       private final String osShortName;
 
-    public String getOsShortName() {
+    public String osShortName() {
         return this.osShortName;
     }
 
@@ -45,7 +45,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
     @Import(name="osVersion", required=true)
       private final String osVersion;
 
-    public String getOsVersion() {
+    public String osVersion() {
         return this.osVersion;
     }
 

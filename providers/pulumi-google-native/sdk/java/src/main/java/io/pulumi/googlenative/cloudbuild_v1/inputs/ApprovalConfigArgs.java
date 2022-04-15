@@ -26,7 +26,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvalRequired")
       private final @Nullable Output<Boolean> approvalRequired;
 
-    public Output<Boolean> getApprovalRequired() {
+    public Output<Boolean> approvalRequired() {
         return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
     }
 

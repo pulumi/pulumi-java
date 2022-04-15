@@ -26,7 +26,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="pubsubTopicName")
       private final @Nullable Output<String> pubsubTopicName;
 
-    public Output<String> getPubsubTopicName() {
+    public Output<String> pubsubTopicName() {
         return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
     }
 
@@ -37,7 +37,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="subfolderMatches")
       private final @Nullable Output<String> subfolderMatches;
 
-    public Output<String> getSubfolderMatches() {
+    public Output<String> subfolderMatches() {
         return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
     }
 

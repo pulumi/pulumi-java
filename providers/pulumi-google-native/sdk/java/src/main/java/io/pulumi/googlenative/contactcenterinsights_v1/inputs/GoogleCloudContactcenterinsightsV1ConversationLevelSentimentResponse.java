@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     @Import(name="channelTag", required=true)
       private final Integer channelTag;
 
-    public Integer getChannelTag() {
+    public Integer channelTag() {
         return this.channelTag;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     @Import(name="sentimentData", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
-    public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
+    public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
 

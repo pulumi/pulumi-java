@@ -23,7 +23,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="matchedIpRange", required=true)
       private final String matchedIpRange;
 
-    public String getMatchedIpRange() {
+    public String matchedIpRange() {
         return this.matchedIpRange;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

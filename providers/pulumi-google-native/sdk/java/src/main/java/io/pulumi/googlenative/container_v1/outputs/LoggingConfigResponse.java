@@ -24,7 +24,7 @@ public final class LoggingConfigResponse {
      * Logging components configuration
      * 
     */
-    public LoggingComponentConfigResponse getComponentConfig() {
+    public LoggingComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 

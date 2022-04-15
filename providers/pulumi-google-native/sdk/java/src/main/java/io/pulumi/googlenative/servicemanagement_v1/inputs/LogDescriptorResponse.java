@@ -25,7 +25,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="labels", required=true)
       private final List<LabelDescriptorResponse> labels;
 
-    public List<LabelDescriptorResponse> getLabels() {
+    public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
 
@@ -58,7 +58,7 @@ public final class LogDescriptorResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

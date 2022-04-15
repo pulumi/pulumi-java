@@ -24,7 +24,7 @@ public final class ColumnLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="columns", required=true)
       private final List<ColumnResponse> columns;
 
-    public List<ColumnResponse> getColumns() {
+    public List<ColumnResponse> columns() {
         return this.columns;
     }
 

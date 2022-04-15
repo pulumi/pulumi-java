@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
     @Import(name="endUserSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> getEndUserSuggestionConfig() {
+    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig() {
         return this.endUserSuggestionConfig == null ? Codegen.empty() : this.endUserSuggestionConfig;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
     @Import(name="humanAgentSuggestionConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> getHumanAgentSuggestionConfig() {
+    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig == null ? Codegen.empty() : this.humanAgentSuggestionConfig;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
     @Import(name="messageAnalysisConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
-    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> getMessageAnalysisConfig() {
+    public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig() {
         return this.messageAnalysisConfig == null ? Codegen.empty() : this.messageAnalysisConfig;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
     @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 
-    public Output<GoogleCloudDialogflowV2NotificationConfigArgs> getNotificationConfig() {
+    public Output<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 

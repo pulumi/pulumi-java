@@ -31,7 +31,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key status.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -45,7 +45,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Specifies the algorithm (and possibly key size) for the key.
      * 
      */
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
     /**
@@ -59,7 +59,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key origin.
      * 
      */
-    public Output<String> getKeyOrigin() {
+    public Output<String> keyOrigin() {
         return this.keyOrigin;
     }
     /**
@@ -73,7 +73,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key type.
      * 
      */
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType;
     }
     /**
@@ -87,7 +87,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
      * 
      */
-    public Output<String> getPrivateKeyData() {
+    public Output<String> privateKeyData() {
         return this.privateKeyData;
     }
     /**
@@ -115,7 +115,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
      * 
      */
-    public Output<String> getPrivateKeyType() {
+    public Output<String> privateKeyType() {
         return this.privateKeyType;
     }
     /**
@@ -129,7 +129,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The public key data. Only provided in `GetServiceAccountKey` responses.
      * 
      */
-    public Output<String> getPublicKeyData() {
+    public Output<String> publicKeyData() {
         return this.publicKeyData;
     }
     /**
@@ -143,7 +143,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key can be used after this timestamp.
      * 
      */
-    public Output<String> getValidAfterTime() {
+    public Output<String> validAfterTime() {
         return this.validAfterTime;
     }
     /**
@@ -157,7 +157,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
      * 
      */
-    public Output<String> getValidBeforeTime() {
+    public Output<String> validBeforeTime() {
         return this.validBeforeTime;
     }
 

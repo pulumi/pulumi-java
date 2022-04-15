@@ -46,28 +46,28 @@ public final class ClusterStatusResponse {
      * Optional details of cluster's state.
      * 
     */
-    public String getDetail() {
+    public String detail() {
         return this.detail;
     }
     /**
      * The cluster's state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
     */
-    public String getStateStartTime() {
+    public String stateStartTime() {
         return this.stateStartTime;
     }
     /**
      * Additional state information that includes status reported by the agent.
      * 
     */
-    public String getSubstate() {
+    public String substate() {
         return this.substate;
     }
 

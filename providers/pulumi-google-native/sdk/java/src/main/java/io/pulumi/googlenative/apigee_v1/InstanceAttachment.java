@@ -30,7 +30,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * @return Time the attachment was created in milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -44,7 +44,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the attached environment.
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -58,7 +58,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the attachment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

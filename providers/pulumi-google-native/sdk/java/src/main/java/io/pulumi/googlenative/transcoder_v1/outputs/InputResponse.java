@@ -40,21 +40,21 @@ public final class InputResponse {
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Preprocessing configurations.
      * 
     */
-    public PreprocessingConfigResponse getPreprocessingConfig() {
+    public PreprocessingConfigResponse preprocessingConfig() {
         return this.preprocessingConfig;
     }
     /**
      * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

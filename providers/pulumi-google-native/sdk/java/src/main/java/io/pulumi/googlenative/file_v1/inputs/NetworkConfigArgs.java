@@ -29,7 +29,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectMode")
       private final @Nullable Output<NetworkConfigConnectMode> connectMode;
 
-    public Output<NetworkConfigConnectMode> getConnectMode() {
+    public Output<NetworkConfigConnectMode> connectMode() {
         return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modes")
       private final @Nullable Output<List<NetworkConfigModesItem>> modes;
 
-    public Output<List<NetworkConfigModesItem>> getModes() {
+    public Output<List<NetworkConfigModesItem>> modes() {
         return this.modes == null ? Codegen.empty() : this.modes;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 

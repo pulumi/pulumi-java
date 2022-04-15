@@ -32,14 +32,14 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
      * The name of the repository.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The url of the repository.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

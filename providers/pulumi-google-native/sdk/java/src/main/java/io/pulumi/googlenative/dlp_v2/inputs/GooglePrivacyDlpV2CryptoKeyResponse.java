@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
     @Import(name="kmsWrapped", required=true)
       private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
-    public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
+    public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped() {
         return this.kmsWrapped;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
     @Import(name="transient", required=true)
       private final GooglePrivacyDlpV2TransientCryptoKeyResponse transient_;
 
-    public GooglePrivacyDlpV2TransientCryptoKeyResponse getTransient_() {
+    public GooglePrivacyDlpV2TransientCryptoKeyResponse transient_() {
         return this.transient_;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
     @Import(name="unwrapped", required=true)
       private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
-    public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {
+    public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped() {
         return this.unwrapped;
     }
 

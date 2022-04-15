@@ -27,7 +27,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
     @Import(name="dataLocations")
       private final @Nullable Output<List<String>> dataLocations;
 
-    public Output<List<String>> getDataLocations() {
+    public Output<List<String>> dataLocations() {
         return this.dataLocations == null ? Codegen.empty() : this.dataLocations;
     }
 

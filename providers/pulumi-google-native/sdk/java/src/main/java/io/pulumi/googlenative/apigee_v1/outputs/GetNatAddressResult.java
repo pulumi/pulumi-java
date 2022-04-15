@@ -39,21 +39,21 @@ public final class GetNatAddressResult {
      * The static IPV4 address.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * Resource ID of the NAT address.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the nat address.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

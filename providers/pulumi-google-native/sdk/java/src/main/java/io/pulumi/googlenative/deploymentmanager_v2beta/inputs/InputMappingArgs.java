@@ -27,7 +27,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
 
-    public Output<String> getFieldName() {
+    public Output<String> fieldName() {
         return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 
@@ -38,7 +38,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<InputMappingLocation> location;
 
-    public Output<InputMappingLocation> getLocation() {
+    public Output<InputMappingLocation> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
-    public Output<String> getMethodMatch() {
+    public Output<String> methodMatch() {
         return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
     }
 
@@ -60,7 +60,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

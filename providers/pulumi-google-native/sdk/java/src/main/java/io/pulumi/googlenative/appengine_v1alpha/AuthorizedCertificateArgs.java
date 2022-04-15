@@ -19,7 +19,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -30,7 +30,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="certificateRawData")
       private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
-    public Output<CertificateRawDataArgs> getCertificateRawData() {
+    public Output<CertificateRawDataArgs> certificateRawData() {
         return this.certificateRawData == null ? Codegen.empty() : this.certificateRawData;
     }
 
@@ -41,7 +41,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 

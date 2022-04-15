@@ -35,7 +35,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return The template metadata describing the template name, available parameters, etc.
      * 
      */
-    public Output<TemplateMetadataResponse> getMetadata() {
+    public Output<TemplateMetadataResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -49,7 +49,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return Describes the runtime metadata with SDKInfo and available parameters.
      * 
      */
-    public Output<RuntimeMetadataResponse> getRuntimeMetadata() {
+    public Output<RuntimeMetadataResponse> runtimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
@@ -63,7 +63,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
      */
-    public Output<StatusResponse> getStatus() {
+    public Output<StatusResponse> status() {
         return this.status;
     }
     /**
@@ -77,7 +77,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return Template Type.
      * 
      */
-    public Output<String> getTemplateType() {
+    public Output<String> templateType() {
         return this.templateType;
     }
 

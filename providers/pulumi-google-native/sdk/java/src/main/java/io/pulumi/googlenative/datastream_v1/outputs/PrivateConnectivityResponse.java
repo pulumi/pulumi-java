@@ -24,7 +24,7 @@ public final class PrivateConnectivityResponse {
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
      * 
     */
-    public String getPrivateConnection() {
+    public String privateConnection() {
         return this.privateConnection;
     }
 

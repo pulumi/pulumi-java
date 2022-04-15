@@ -32,14 +32,14 @@ public final class LibraryResponse {
      * Name of the library. Example: "django".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Version of the library to select, or "latest".
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

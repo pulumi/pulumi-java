@@ -23,7 +23,7 @@ public final class CertificateProviderInstanceResponse extends io.pulumi.resourc
     @Import(name="pluginInstance", required=true)
       private final String pluginInstance;
 
-    public String getPluginInstance() {
+    public String pluginInstance() {
         return this.pluginInstance;
     }
 
