@@ -18,7 +18,7 @@ public final class ServiceTaskSpecContainerSpecMountBindOptions {
         this.propagation = propagation;
     }
 
-    public Optional<String> getPropagation() {
+    public Optional<String> propagation() {
         return Optional.ofNullable(this.propagation);
     }
 

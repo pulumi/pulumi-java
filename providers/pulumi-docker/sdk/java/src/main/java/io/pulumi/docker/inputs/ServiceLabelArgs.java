@@ -17,14 +17,14 @@ public final class ServiceLabelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label", required=true)
       private final Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

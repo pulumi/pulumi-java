@@ -40,28 +40,28 @@ public final class RegistryImageBuildAuthConfig {
         this.userName = userName;
     }
 
-    public Optional<String> getAuth() {
+    public Optional<String> auth() {
         return Optional.ofNullable(this.auth);
     }
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
-    public Optional<String> getIdentityToken() {
+    public Optional<String> identityToken() {
         return Optional.ofNullable(this.identityToken);
     }
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
-    public Optional<String> getRegistryToken() {
+    public Optional<String> registryToken() {
         return Optional.ofNullable(this.registryToken);
     }
-    public Optional<String> getServerAddress() {
+    public Optional<String> serverAddress() {
         return Optional.ofNullable(this.serverAddress);
     }
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

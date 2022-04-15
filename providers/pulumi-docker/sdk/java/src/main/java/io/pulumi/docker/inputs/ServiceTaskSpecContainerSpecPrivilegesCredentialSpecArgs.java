@@ -18,14 +18,14 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
     @Import(name="file")
       private final @Nullable Output<String> file;
 
-    public Output<String> getFile() {
+    public Output<String> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
     @Import(name="registry")
       private final @Nullable Output<String> registry;
 
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry == null ? Codegen.empty() : this.registry;
     }
 

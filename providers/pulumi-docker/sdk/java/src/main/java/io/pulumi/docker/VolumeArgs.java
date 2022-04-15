@@ -26,7 +26,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver == null ? Codegen.empty() : this.driver;
     }
 
@@ -37,7 +37,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="driverOpts")
       private final @Nullable Output<Map<String,Object>> driverOpts;
 
-    public Output<Map<String,Object>> getDriverOpts() {
+    public Output<Map<String,Object>> driverOpts() {
         return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
@@ -48,7 +48,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<VolumeLabelArgs>> labels;
 
-    public Output<List<VolumeLabelArgs>> getLabels() {
+    public Output<List<VolumeLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -59,7 +59,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

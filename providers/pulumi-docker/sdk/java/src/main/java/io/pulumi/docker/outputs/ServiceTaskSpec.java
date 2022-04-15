@@ -47,28 +47,28 @@ public final class ServiceTaskSpec {
         this.runtime = runtime;
     }
 
-    public ServiceTaskSpecContainerSpec getContainerSpec() {
+    public ServiceTaskSpecContainerSpec containerSpec() {
         return this.containerSpec;
     }
-    public Optional<Integer> getForceUpdate() {
+    public Optional<Integer> forceUpdate() {
         return Optional.ofNullable(this.forceUpdate);
     }
-    public Optional<ServiceTaskSpecLogDriver> getLogDriver() {
+    public Optional<ServiceTaskSpecLogDriver> logDriver() {
         return Optional.ofNullable(this.logDriver);
     }
-    public List<String> getNetworks() {
+    public List<String> networks() {
         return this.networks == null ? List.of() : this.networks;
     }
-    public Optional<ServiceTaskSpecPlacement> getPlacement() {
+    public Optional<ServiceTaskSpecPlacement> placement() {
         return Optional.ofNullable(this.placement);
     }
-    public Optional<ServiceTaskSpecResources> getResources() {
+    public Optional<ServiceTaskSpecResources> resources() {
         return Optional.ofNullable(this.resources);
     }
-    public Optional<ServiceTaskSpecRestartPolicy> getRestartPolicy() {
+    public Optional<ServiceTaskSpecRestartPolicy> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
-    public Optional<String> getRuntime() {
+    public Optional<String> runtime() {
         return Optional.ofNullable(this.runtime);
     }
 

@@ -23,10 +23,10 @@ public final class ServiceMode {
         this.replicated = replicated;
     }
 
-    public Optional<Boolean> getGlobal() {
+    public Optional<Boolean> global() {
         return Optional.ofNullable(this.global);
     }
-    public Optional<ServiceModeReplicated> getReplicated() {
+    public Optional<ServiceModeReplicated> replicated() {
         return Optional.ofNullable(this.replicated);
     }
 
