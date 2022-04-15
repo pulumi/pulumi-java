@@ -35,22 +35,22 @@ public final class ServiceTaskSpecContainerSpecConfig {
         this.fileUid = fileUid;
     }
 
-    public String getConfigId() {
+    public String configId() {
         return this.configId;
     }
-    public Optional<String> getConfigName() {
+    public Optional<String> configName() {
         return Optional.ofNullable(this.configName);
     }
-    public Optional<String> getFileGid() {
+    public Optional<String> fileGid() {
         return Optional.ofNullable(this.fileGid);
     }
-    public Optional<Integer> getFileMode() {
+    public Optional<Integer> fileMode() {
         return Optional.ofNullable(this.fileMode);
     }
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
-    public Optional<String> getFileUid() {
+    public Optional<String> fileUid() {
         return Optional.ofNullable(this.fileUid);
     }
 

@@ -18,7 +18,7 @@ public final class ContainerMountBindOptions {
         this.propagation = propagation;
     }
 
-    public Optional<String> getPropagation() {
+    public Optional<String> propagation() {
         return Optional.ofNullable(this.propagation);
     }
 

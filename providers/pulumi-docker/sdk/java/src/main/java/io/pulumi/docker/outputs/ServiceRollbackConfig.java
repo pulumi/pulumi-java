@@ -35,22 +35,22 @@ public final class ServiceRollbackConfig {
         this.parallelism = parallelism;
     }
 
-    public Optional<String> getDelay() {
+    public Optional<String> delay() {
         return Optional.ofNullable(this.delay);
     }
-    public Optional<String> getFailureAction() {
+    public Optional<String> failureAction() {
         return Optional.ofNullable(this.failureAction);
     }
-    public Optional<String> getMaxFailureRatio() {
+    public Optional<String> maxFailureRatio() {
         return Optional.ofNullable(this.maxFailureRatio);
     }
-    public Optional<String> getMonitor() {
+    public Optional<String> monitor() {
         return Optional.ofNullable(this.monitor);
     }
-    public Optional<String> getOrder() {
+    public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }
-    public Optional<Integer> getParallelism() {
+    public Optional<Integer> parallelism() {
         return Optional.ofNullable(this.parallelism);
     }
 

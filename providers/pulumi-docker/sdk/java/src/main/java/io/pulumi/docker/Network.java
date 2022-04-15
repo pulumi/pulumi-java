@@ -90,7 +90,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Enable manual container attachment to the network.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAttachable() {
+    public Output</* @Nullable */ Boolean> attachable() {
         return this.attachable;
     }
     /**
@@ -104,7 +104,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Requests daemon to check for networks with same name.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCheckDuplicate() {
+    public Output</* @Nullable */ Boolean> checkDuplicate() {
         return this.checkDuplicate;
     }
     /**
@@ -120,7 +120,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * docs](https://docs.docker.com/network/#network-drivers) for more details.
      * 
      */
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
     /**
@@ -134,7 +134,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Create swarm routing-mesh network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIngress() {
+    public Output</* @Nullable */ Boolean> ingress() {
         return this.ingress;
     }
     /**
@@ -148,7 +148,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Whether the network is internal.
      * 
      */
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal;
     }
     /**
@@ -162,7 +162,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The IPAM configuration options
      * 
      */
-    public Output<List<NetworkIpamConfig>> getIpamConfigs() {
+    public Output<List<NetworkIpamConfig>> ipamConfigs() {
         return this.ipamConfigs;
     }
     /**
@@ -176,7 +176,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Driver used by the custom IP scheme of the network. Defaults to `default`
      * 
      */
-    public Output</* @Nullable */ String> getIpamDriver() {
+    public Output</* @Nullable */ String> ipamDriver() {
         return this.ipamDriver;
     }
     /**
@@ -190,7 +190,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Enable IPv6 networking. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIpv6() {
+    public Output</* @Nullable */ Boolean> ipv6() {
         return this.ipv6;
     }
     /**
@@ -204,7 +204,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<NetworkLabel>> getLabels() {
+    public Output</* @Nullable */ List<NetworkLabel>> labels() {
         return this.labels;
     }
     /**
@@ -218,7 +218,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The name of the Docker network.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -234,7 +234,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * 
      */
-    public Output<Map<String,Object>> getOptions() {
+    public Output<Map<String,Object>> options() {
         return this.options;
     }
     /**
@@ -248,7 +248,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Scope of the network. One of `swarm`, `global`, or `local`.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

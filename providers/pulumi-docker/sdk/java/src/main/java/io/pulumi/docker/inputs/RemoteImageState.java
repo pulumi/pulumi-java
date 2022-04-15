@@ -26,7 +26,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<RemoteImageBuildGetArgs> build;
 
-    public Output<RemoteImageBuildGetArgs> getBuild() {
+    public Output<RemoteImageBuildGetArgs> build() {
         return this.build == null ? Codegen.empty() : this.build;
     }
 
@@ -37,7 +37,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> getForceRemove() {
+    public Output<Boolean> forceRemove() {
         return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
@@ -49,7 +49,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepLocally")
       private final @Nullable Output<Boolean> keepLocally;
 
-    public Output<Boolean> getKeepLocally() {
+    public Output<Boolean> keepLocally() {
         return this.keepLocally == null ? Codegen.empty() : this.keepLocally;
     }
 
@@ -65,7 +65,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> latest;
 
     @Deprecated /* Use repo_digest instead */
-    public Output<String> getLatest() {
+    public Output<String> latest() {
         return this.latest == null ? Codegen.empty() : this.latest;
     }
 
@@ -76,7 +76,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> output;
 
     @Deprecated /* Is unused and will be removed. */
-    public Output<String> getOutput() {
+    public Output<String> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -106,7 +106,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pullTrigger;
 
     @Deprecated /* Use field pull_triggers instead */
-    public Output<String> getPullTrigger() {
+    public Output<String> pullTrigger() {
         return this.pullTrigger == null ? Codegen.empty() : this.pullTrigger;
     }
 
@@ -118,7 +118,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullTriggers")
       private final @Nullable Output<List<String>> pullTriggers;
 
-    public Output<List<String>> getPullTriggers() {
+    public Output<List<String>> pullTriggers() {
         return this.pullTriggers == null ? Codegen.empty() : this.pullTriggers;
     }
 
@@ -129,7 +129,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoDigest")
       private final @Nullable Output<String> repoDigest;
 
-    public Output<String> getRepoDigest() {
+    public Output<String> repoDigest() {
         return this.repoDigest == null ? Codegen.empty() : this.repoDigest;
     }
 

@@ -18,7 +18,7 @@ public final class ServiceModeReplicatedGetArgs extends io.pulumi.resources.Reso
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 

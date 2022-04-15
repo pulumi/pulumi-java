@@ -37,16 +37,16 @@ public final class GetRegistryImageResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getInsecureSkipVerify() {
+    public Optional<Boolean> insecureSkipVerify() {
         return Optional.ofNullable(this.insecureSkipVerify);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getSha256Digest() {
+    public String sha256Digest() {
         return this.sha256Digest;
     }
 

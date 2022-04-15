@@ -20,14 +20,14 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="ports")
       private final @Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports;
 
-    public Output<List<ServiceEndpointSpecPortGetArgs>> getPorts() {
+    public Output<List<ServiceEndpointSpecPortGetArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

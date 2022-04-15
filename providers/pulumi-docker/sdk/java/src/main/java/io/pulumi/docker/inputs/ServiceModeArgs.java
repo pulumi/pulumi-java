@@ -19,14 +19,14 @@ public final class ServiceModeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="global")
       private final @Nullable Output<Boolean> global;
 
-    public Output<Boolean> getGlobal() {
+    public Output<Boolean> global() {
         return this.global == null ? Codegen.empty() : this.global;
     }
 
     @Import(name="replicated")
       private final @Nullable Output<ServiceModeReplicatedArgs> replicated;
 
-    public Output<ServiceModeReplicatedArgs> getReplicated() {
+    public Output<ServiceModeReplicatedArgs> replicated() {
         return this.replicated == null ? Codegen.empty() : this.replicated;
     }
 

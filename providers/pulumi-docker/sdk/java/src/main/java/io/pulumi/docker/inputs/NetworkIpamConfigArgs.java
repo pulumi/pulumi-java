@@ -20,28 +20,28 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="auxAddress")
       private final @Nullable Output<Map<String,Object>> auxAddress;
 
-    public Output<Map<String,Object>> getAuxAddress() {
+    public Output<Map<String,Object>> auxAddress() {
         return this.auxAddress == null ? Codegen.empty() : this.auxAddress;
     }
 
     @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

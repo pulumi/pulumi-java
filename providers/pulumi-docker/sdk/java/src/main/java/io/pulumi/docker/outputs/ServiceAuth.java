@@ -25,13 +25,13 @@ public final class ServiceAuth {
         this.username = username;
     }
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
-    public String getServerAddress() {
+    public String serverAddress() {
         return this.serverAddress;
     }
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 
