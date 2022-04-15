@@ -41,21 +41,21 @@ public final class MobilityServiceUpdateResponse {
      * The OS type.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The reboot status of the update - whether it is required or not.
      * 
     */
-    public Optional<String> getRebootStatus() {
+    public Optional<String> rebootStatus() {
         return Optional.ofNullable(this.rebootStatus);
     }
     /**
      * The version of the latest update.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

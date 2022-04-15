@@ -19,7 +19,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
     @Import(name="opid", required=true)
       private final String opid;
 
-    public String getOpid() {
+    public String opid() {
         return this.opid;
     }
 
@@ -30,7 +30,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends io.pulumi.resour
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

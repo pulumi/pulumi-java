@@ -23,7 +23,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
     @Import(name="dataManagementPublicIpId", required=true)
       private final String dataManagementPublicIpId;
 
-    public String getDataManagementPublicIpId() {
+    public String dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
     @Import(name="enginePublicIpId", required=true)
       private final String enginePublicIpId;
 
-    public String getEnginePublicIpId() {
+    public String enginePublicIpId() {
         return this.enginePublicIpId;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

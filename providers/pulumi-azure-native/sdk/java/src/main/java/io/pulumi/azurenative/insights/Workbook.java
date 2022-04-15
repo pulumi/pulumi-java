@@ -44,7 +44,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Workbook category, as defined by the user at creation time.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -58,7 +58,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return The user-defined name (display name) of the workbook.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +72,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getEtag() {
+    public Output</* @Nullable */ Map<String,String>> etag() {
         return this.etag;
     }
     /**
@@ -86,7 +86,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Identity used for BYOS
      * 
      */
-    public Output</* @Nullable */ WorkbookManagedIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ WorkbookManagedIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -100,7 +100,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return The kind of workbook. Choices are user and shared.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -114,7 +114,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -128,7 +128,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -142,7 +142,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Configuration of this particular workbook. Configuration data is a string containing valid JSON
      * 
      */
-    public Output<String> getSerializedData() {
+    public Output<String> serializedData() {
         return this.serializedData;
     }
     /**
@@ -156,7 +156,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return ResourceId for a source resource.
      * 
      */
-    public Output</* @Nullable */ String> getSourceId() {
+    public Output</* @Nullable */ String> sourceId() {
         return this.sourceId;
     }
     /**
@@ -170,7 +170,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return BYOS Storage Account URI
      * 
      */
-    public Output</* @Nullable */ String> getStorageUri() {
+    public Output</* @Nullable */ String> storageUri() {
         return this.storageUri;
     }
     /**
@@ -184,7 +184,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -198,7 +198,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Date and time in UTC of the last modification that was made to this workbook definition.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -212,7 +212,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -226,7 +226,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Unique user id of the specific user that owns this workbook.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
     /**
@@ -240,7 +240,7 @@ public class Workbook extends io.pulumi.resources.CustomResource {
      * @return Workbook version
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

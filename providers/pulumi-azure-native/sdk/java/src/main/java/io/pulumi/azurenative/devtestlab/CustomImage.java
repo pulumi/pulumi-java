@@ -48,7 +48,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The author of the custom image.
      * 
      */
-    public Output</* @Nullable */ String> getAuthor() {
+    public Output</* @Nullable */ String> author() {
         return this.author;
     }
     /**
@@ -62,7 +62,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The creation date of the custom image.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -76,7 +76,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return Storage information about the plan related to this custom image
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> getCustomImagePlan() {
+    public Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> customImagePlan() {
         return this.customImagePlan;
     }
     /**
@@ -90,7 +90,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return Storage information about the data disks present in the custom image
      * 
      */
-    public Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> getDataDiskStorageInfo() {
+    public Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> dataDiskStorageInfo() {
         return this.dataDiskStorageInfo;
     }
     /**
@@ -104,7 +104,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The description of the custom image.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -118,7 +118,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsPlanAuthorized() {
+    public Output</* @Nullable */ Boolean> isPlanAuthorized() {
         return this.isPlanAuthorized;
     }
     /**
@@ -132,7 +132,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -146,7 +146,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The Managed Image Id backing the custom image.
      * 
      */
-    public Output</* @Nullable */ String> getManagedImageId() {
+    public Output</* @Nullable */ String> managedImageId() {
         return this.managedImageId;
     }
     /**
@@ -160,7 +160,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The Managed Snapshot Id backing the custom image.
      * 
      */
-    public Output</* @Nullable */ String> getManagedSnapshotId() {
+    public Output</* @Nullable */ String> managedSnapshotId() {
         return this.managedSnapshotId;
     }
     /**
@@ -174,7 +174,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -188,7 +188,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -202,7 +202,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +216,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -230,7 +230,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -244,7 +244,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The VHD from which the image is to be created.
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesCustomResponse> getVhd() {
+    public Output</* @Nullable */ CustomImagePropertiesCustomResponse> vhd() {
         return this.vhd;
     }
     /**
@@ -258,7 +258,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * @return The virtual machine from which the image is to be created.
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesFromVmResponse> getVm() {
+    public Output</* @Nullable */ CustomImagePropertiesFromVmResponse> vm() {
         return this.vm;
     }
 

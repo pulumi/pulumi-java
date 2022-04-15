@@ -45,7 +45,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The author of the formula.
      * 
      */
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author;
     }
     /**
@@ -59,7 +59,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The creation date of the formula.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -73,7 +73,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The description of the formula.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The content of the formula.
      * 
      */
-    public Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> getFormulaContent() {
+    public Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> formulaContent() {
         return this.formulaContent;
     }
     /**
@@ -101,7 +101,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The OS type of the formula.
      * 
      */
-    public Output</* @Nullable */ String> getOsType() {
+    public Output</* @Nullable */ String> osType() {
         return this.osType;
     }
     /**
@@ -143,7 +143,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -157,7 +157,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -171,7 +171,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -185,7 +185,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -199,7 +199,7 @@ public class Formula extends io.pulumi.resources.CustomResource {
      * @return Information about a VM from which a formula is to be created.
      * 
      */
-    public Output</* @Nullable */ FormulaPropertiesFromVmResponse> getVm() {
+    public Output</* @Nullable */ FormulaPropertiesFromVmResponse> vm() {
         return this.vm;
     }
 

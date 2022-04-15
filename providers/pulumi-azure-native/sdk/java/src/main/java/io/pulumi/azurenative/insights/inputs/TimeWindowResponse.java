@@ -25,7 +25,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="end", required=true)
       private final String end;
 
-    public String getEnd() {
+    public String end() {
         return this.end;
     }
 
@@ -36,7 +36,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="start", required=true)
       private final String start;
 
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 
@@ -47,7 +47,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

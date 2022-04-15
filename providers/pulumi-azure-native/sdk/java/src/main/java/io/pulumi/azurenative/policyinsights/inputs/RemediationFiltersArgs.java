@@ -27,7 +27,7 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 

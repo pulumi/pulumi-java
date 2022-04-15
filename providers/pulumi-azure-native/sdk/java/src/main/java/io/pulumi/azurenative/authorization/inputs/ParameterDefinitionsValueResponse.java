@@ -28,7 +28,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
     @Import(name="allowedValues")
       private final @Nullable List<Object> allowedValues;
 
-    public List<Object> getAllowedValues() {
+    public List<Object> allowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
 
@@ -39,7 +39,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -50,7 +50,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
     @Import(name="metadata")
       private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
 
-    public Optional<ParameterDefinitionsValueResponseMetadata> getMetadata() {
+    public Optional<ParameterDefinitionsValueResponseMetadata> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
@@ -61,7 +61,7 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

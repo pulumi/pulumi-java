@@ -58,35 +58,35 @@ public final class EmailChannelResponse {
      * Expected value is 'EmailChannel'.
      * 
     */
-    public String getChannelName() {
+    public String channelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to email channel resource
      * 
     */
-    public Optional<EmailChannelPropertiesResponse> getProperties() {
+    public Optional<EmailChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

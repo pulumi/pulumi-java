@@ -56,35 +56,35 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
      * The oldest backup copy available for this item in the service.
      * 
     */
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
     */
-    public Optional<String> getPolicyState() {
+    public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of available backup copies associated with this backup item.
      * 
     */
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
      * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The resource state sync time for this backup item.
      * 
     */
-    public String getResourceStateSyncTime() {
+    public String resourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }
 

@@ -26,7 +26,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
     @Import(name="certificate")
       private final @Nullable CertificateInformationResponse certificate;
 
-    public Optional<CertificateInformationResponse> getCertificate() {
+    public Optional<CertificateInformationResponse> certificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
     }
 
@@ -37,7 +37,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
     @Import(name="certificatePassword")
       private final @Nullable String certificatePassword;
 
-    public Optional<String> getCertificatePassword() {
+    public Optional<String> certificatePassword() {
         return this.certificatePassword == null ? Optional.empty() : Optional.ofNullable(this.certificatePassword);
     }
 
@@ -48,7 +48,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
     @Import(name="encodedCertificate")
       private final @Nullable String encodedCertificate;
 
-    public Optional<String> getEncodedCertificate() {
+    public Optional<String> encodedCertificate() {
         return this.encodedCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedCertificate);
     }
 
@@ -59,7 +59,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
     @Import(name="storeName", required=true)
       private final String storeName;
 
-    public String getStoreName() {
+    public String storeName() {
         return this.storeName;
     }
 

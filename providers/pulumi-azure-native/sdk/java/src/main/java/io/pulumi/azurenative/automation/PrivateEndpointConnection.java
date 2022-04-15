@@ -44,7 +44,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Private endpoint which the connection belongs to.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointPropertyResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointPropertyResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Connection State of the Private Endpoint Connection.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

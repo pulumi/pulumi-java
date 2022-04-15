@@ -26,7 +26,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
     @Import(name="logs")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
-    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
+    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 

@@ -85,59 +85,59 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
      * Optional. Whether or not this application reports health.
      * 
     */
-    public Optional<Boolean> getEnableHealthCheck() {
+    public Optional<Boolean> enableHealthCheck() {
         return Optional.ofNullable(this.enableHealthCheck);
     }
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
     */
-    public Optional<String> getEndOfLifeDate() {
+    public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
      * 
     */
-    public Optional<Boolean> getExcludeFromLatest() {
+    public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
-    public Optional<UserArtifactManageResponse> getManageActions() {
+    public Optional<UserArtifactManageResponse> manageActions() {
         return Optional.ofNullable(this.manageActions);
     }
     /**
      * The timestamp for when the gallery image version is published.
      * 
     */
-    public String getPublishedDate() {
+    public String publishedDate() {
         return this.publishedDate;
     }
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
     */
-    public Optional<Integer> getReplicaCount() {
+    public Optional<Integer> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
      * The source image from which the Image Version is going to be created.
      * 
     */
-    public UserArtifactSourceResponse getSource() {
+    public UserArtifactSourceResponse source() {
         return this.source;
     }
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
     */
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
     */
-    public List<TargetRegionResponse> getTargetRegions() {
+    public List<TargetRegionResponse> targetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;
     }
 

@@ -31,7 +31,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="categoryPattern")
       private final @Nullable Output<String> categoryPattern;
 
-    public Output<String> getCategoryPattern() {
+    public Output<String> categoryPattern() {
         return this.categoryPattern == null ? Codegen.empty() : this.categoryPattern;
     }
 
@@ -46,7 +46,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
-    public Output<String> getEventPattern() {
+    public Output<String> eventPattern() {
         return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
@@ -61,7 +61,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hubPattern")
       private final @Nullable Output<String> hubPattern;
 
-    public Output<String> getHubPattern() {
+    public Output<String> hubPattern() {
         return this.hubPattern == null ? Codegen.empty() : this.hubPattern;
     }
 
@@ -73,7 +73,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 

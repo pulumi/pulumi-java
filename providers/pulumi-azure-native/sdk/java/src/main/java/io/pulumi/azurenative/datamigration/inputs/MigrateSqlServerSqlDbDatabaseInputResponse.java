@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
     @Import(name="makeSourceDbReadOnly")
       private final @Nullable Boolean makeSourceDbReadOnly;
 
-    public Optional<Boolean> getMakeSourceDbReadOnly() {
+    public Optional<Boolean> makeSourceDbReadOnly() {
         return this.makeSourceDbReadOnly == null ? Optional.empty() : Optional.ofNullable(this.makeSourceDbReadOnly);
     }
 
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
     @Import(name="tableMap")
       private final @Nullable Map<String,String> tableMap;
 
-    public Map<String,String> getTableMap() {
+    public Map<String,String> tableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
 
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
     @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
-    public Optional<String> getTargetDatabaseName() {
+    public Optional<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
     }
 

@@ -42,21 +42,21 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
      * Last time when the agent data synced to service.
      * 
     */
-    public Optional<String> getLastRefreshedAt() {
+    public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
     /**
      * The oldest backup copy available.
      * 
     */
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Number of backup copies associated with the backup item.
      * 
     */
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
 

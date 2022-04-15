@@ -26,7 +26,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="assessmentActivityId", required=true)
       private final String assessmentActivityId;
 
-    public String getAssessmentActivityId() {
+    public String assessmentActivityId() {
         return this.assessmentActivityId;
     }
 
@@ -37,7 +37,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="criticalAndSecurityPatchCount", required=true)
       private final Integer criticalAndSecurityPatchCount;
 
-    public Integer getCriticalAndSecurityPatchCount() {
+    public Integer criticalAndSecurityPatchCount() {
         return this.criticalAndSecurityPatchCount;
     }
 
@@ -48,7 +48,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="error", required=true)
       private final ApiErrorResponse error;
 
-    public ApiErrorResponse getError() {
+    public ApiErrorResponse error() {
         return this.error;
     }
 
@@ -59,7 +59,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -70,7 +70,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="otherPatchCount", required=true)
       private final Integer otherPatchCount;
 
-    public Integer getOtherPatchCount() {
+    public Integer otherPatchCount() {
         return this.otherPatchCount;
     }
 
@@ -81,7 +81,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="rebootPending", required=true)
       private final Boolean rebootPending;
 
-    public Boolean getRebootPending() {
+    public Boolean rebootPending() {
         return this.rebootPending;
     }
 
@@ -92,7 +92,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -103,7 +103,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

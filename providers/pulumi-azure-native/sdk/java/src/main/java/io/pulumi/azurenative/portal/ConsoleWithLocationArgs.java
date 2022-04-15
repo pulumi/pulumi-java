@@ -22,7 +22,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
 
-    public Output<String> getConsoleName() {
+    public Output<String> consoleName() {
         return this.consoleName == null ? Codegen.empty() : this.consoleName;
     }
 
@@ -33,7 +33,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 

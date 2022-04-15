@@ -26,7 +26,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
-    public Output<Object> getParameters() {
+    public Output<Object> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -37,7 +37,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -48,7 +48,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 

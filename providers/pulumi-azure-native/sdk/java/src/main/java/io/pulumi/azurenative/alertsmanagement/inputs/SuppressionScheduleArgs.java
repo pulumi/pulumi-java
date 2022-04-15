@@ -28,7 +28,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
+    public Output<String> endDate() {
         return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
@@ -39,7 +39,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -50,7 +50,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     @Import(name="recurrenceValues")
       private final @Nullable Output<List<Integer>> recurrenceValues;
 
-    public Output<List<Integer>> getRecurrenceValues() {
+    public Output<List<Integer>> recurrenceValues() {
         return this.recurrenceValues == null ? Codegen.empty() : this.recurrenceValues;
     }
 
@@ -61,7 +61,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
@@ -72,7 +72,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

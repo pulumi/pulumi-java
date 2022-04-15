@@ -27,7 +27,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integrationAccountName")
       private final @Nullable Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName == null ? Codegen.empty() : this.integrationAccountName;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sku")
       private final @Nullable Output<IntegrationAccountSkuArgs> sku;
 
-    public Output<IntegrationAccountSkuArgs> getSku() {
+    public Output<IntegrationAccountSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -82,7 +82,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> getState() {
+    public Output<Either<String,WorkflowState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -93,7 +93,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

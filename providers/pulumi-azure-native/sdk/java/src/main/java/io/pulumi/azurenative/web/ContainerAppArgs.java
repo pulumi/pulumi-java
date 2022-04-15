@@ -25,7 +25,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<ConfigurationArgs> configuration;
 
-    public Output<ConfigurationArgs> getConfiguration() {
+    public Output<ConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -36,7 +36,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeEnvironmentId")
       private final @Nullable Output<String> kubeEnvironmentId;
 
-    public Output<String> getKubeEnvironmentId() {
+    public Output<String> kubeEnvironmentId() {
         return this.kubeEnvironmentId == null ? Codegen.empty() : this.kubeEnvironmentId;
     }
 
@@ -58,7 +58,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<TemplateArgs> template;
 
-    public Output<TemplateArgs> getTemplate() {
+    public Output<TemplateArgs> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 

@@ -27,7 +27,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemServiceType", required=true)
       private final Output<Either<String,SystemServiceType>> systemServiceType;
 
-    public Output<Either<String,SystemServiceType>> getSystemServiceType() {
+    public Output<Either<String,SystemServiceType>> systemServiceType() {
         return this.systemServiceType;
     }
 

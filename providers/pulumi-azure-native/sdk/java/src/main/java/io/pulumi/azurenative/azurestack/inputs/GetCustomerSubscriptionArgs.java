@@ -19,7 +19,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
     @Import(name="customerSubscriptionName", required=true)
       private final String customerSubscriptionName;
 
-    public String getCustomerSubscriptionName() {
+    public String customerSubscriptionName() {
         return this.customerSubscriptionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
     @Import(name="registrationName", required=true)
       private final String registrationName;
 
-    public String getRegistrationName() {
+    public String registrationName() {
         return this.registrationName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

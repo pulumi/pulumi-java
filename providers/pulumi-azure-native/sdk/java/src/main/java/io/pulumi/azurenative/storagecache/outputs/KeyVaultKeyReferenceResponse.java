@@ -33,14 +33,14 @@ public final class KeyVaultKeyReferenceResponse {
      * The URL referencing a key encryption key in Key Vault.
      * 
     */
-    public String getKeyUrl() {
+    public String keyUrl() {
         return this.keyUrl;
     }
     /**
      * Describes a resource Id to source Key Vault.
      * 
     */
-    public KeyVaultKeyReferenceResponseSourceVault getSourceVault() {
+    public KeyVaultKeyReferenceResponseSourceVault sourceVault() {
         return this.sourceVault;
     }
 

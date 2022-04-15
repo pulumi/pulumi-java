@@ -77,56 +77,56 @@ public final class ApiReferenceResponse {
      * Brand color
      * 
     */
-    public Optional<String> getBrandColor() {
+    public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
      * The custom API description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The icon URI
      * 
     */
-    public Optional<String> getIconUri() {
+    public Optional<String> iconUri() {
         return Optional.ofNullable(this.iconUri);
     }
     /**
      * Resource reference id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the API
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The JSON representation of the swagger
      * 
     */
-    public Optional<Object> getSwagger() {
+    public Optional<Object> swagger() {
         return Optional.ofNullable(this.swagger);
     }
     /**
      * Resource reference type
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

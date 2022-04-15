@@ -27,7 +27,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="certificate")
       private final @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> getCertificate() {
+    public Output<CertificateInformationArgs> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="certificatePassword")
       private final @Nullable Output<String> certificatePassword;
 
-    public Output<String> getCertificatePassword() {
+    public Output<String> certificatePassword() {
         return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="encodedCertificate")
       private final @Nullable Output<String> encodedCertificate;
 
-    public Output<String> getEncodedCertificate() {
+    public Output<String> encodedCertificate() {
         return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="storeName", required=true)
       private final Output<String> storeName;
 
-    public Output<String> getStoreName() {
+    public Output<String> storeName() {
         return this.storeName;
     }
 

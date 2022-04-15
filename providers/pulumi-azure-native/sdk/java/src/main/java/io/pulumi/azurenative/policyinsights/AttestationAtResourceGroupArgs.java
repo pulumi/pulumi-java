@@ -26,7 +26,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="attestationName")
       private final @Nullable Output<String> attestationName;
 
-    public Output<String> getAttestationName() {
+    public Output<String> attestationName() {
         return this.attestationName == null ? Codegen.empty() : this.attestationName;
     }
 
@@ -37,7 +37,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="comments")
       private final @Nullable Output<String> comments;
 
-    public Output<String> getComments() {
+    public Output<String> comments() {
         return this.comments == null ? Codegen.empty() : this.comments;
     }
 
@@ -48,7 +48,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="complianceState")
       private final @Nullable Output<Either<String,ComplianceState>> complianceState;
 
-    public Output<Either<String,ComplianceState>> getComplianceState() {
+    public Output<Either<String,ComplianceState>> complianceState() {
         return this.complianceState == null ? Codegen.empty() : this.complianceState;
     }
 
@@ -59,7 +59,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="evidence")
       private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
-    public Output<List<AttestationEvidenceArgs>> getEvidence() {
+    public Output<List<AttestationEvidenceArgs>> evidence() {
         return this.evidence == null ? Codegen.empty() : this.evidence;
     }
 
@@ -70,7 +70,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
-    public Output<String> getExpiresOn() {
+    public Output<String> expiresOn() {
         return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
@@ -81,7 +81,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -92,7 +92,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
 
-    public Output<String> getPolicyAssignmentId() {
+    public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
 
@@ -103,7 +103,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
+    public Output<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 
@@ -114,7 +114,7 @@ public final class AttestationAtResourceGroupArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

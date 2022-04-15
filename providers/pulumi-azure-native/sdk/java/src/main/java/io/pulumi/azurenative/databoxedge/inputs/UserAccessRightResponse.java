@@ -23,7 +23,7 @@ public final class UserAccessRightResponse extends io.pulumi.resources.InvokeArg
     @Import(name="accessType", required=true)
       private final String accessType;
 
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
 
@@ -34,7 +34,7 @@ public final class UserAccessRightResponse extends io.pulumi.resources.InvokeArg
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

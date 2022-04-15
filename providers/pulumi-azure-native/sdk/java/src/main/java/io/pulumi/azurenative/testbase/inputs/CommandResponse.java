@@ -27,7 +27,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -38,7 +38,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alwaysRun")
       private final @Nullable Boolean alwaysRun;
 
-    public Optional<Boolean> getAlwaysRun() {
+    public Optional<Boolean> alwaysRun() {
         return this.alwaysRun == null ? Optional.empty() : Optional.ofNullable(this.alwaysRun);
     }
 
@@ -49,7 +49,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="applyUpdateBefore")
       private final @Nullable Boolean applyUpdateBefore;
 
-    public Optional<Boolean> getApplyUpdateBefore() {
+    public Optional<Boolean> applyUpdateBefore() {
         return this.applyUpdateBefore == null ? Optional.empty() : Optional.ofNullable(this.applyUpdateBefore);
     }
 
@@ -60,7 +60,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -71,7 +71,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -82,7 +82,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxRunTime")
       private final @Nullable Integer maxRunTime;
 
-    public Optional<Integer> getMaxRunTime() {
+    public Optional<Integer> maxRunTime() {
         return this.maxRunTime == null ? Optional.empty() : Optional.ofNullable(this.maxRunTime);
     }
 
@@ -93,7 +93,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -104,7 +104,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="restartAfter")
       private final @Nullable Boolean restartAfter;
 
-    public Optional<Boolean> getRestartAfter() {
+    public Optional<Boolean> restartAfter() {
         return this.restartAfter == null ? Optional.empty() : Optional.ofNullable(this.restartAfter);
     }
 
@@ -115,7 +115,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runAsInteractive")
       private final @Nullable Boolean runAsInteractive;
 
-    public Optional<Boolean> getRunAsInteractive() {
+    public Optional<Boolean> runAsInteractive() {
         return this.runAsInteractive == null ? Optional.empty() : Optional.ofNullable(this.runAsInteractive);
     }
 
@@ -126,7 +126,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runElevated")
       private final @Nullable Boolean runElevated;
 
-    public Optional<Boolean> getRunElevated() {
+    public Optional<Boolean> runElevated() {
         return this.runElevated == null ? Optional.empty() : Optional.ofNullable(this.runElevated);
     }
 

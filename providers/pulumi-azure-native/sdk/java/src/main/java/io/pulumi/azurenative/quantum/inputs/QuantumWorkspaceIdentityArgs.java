@@ -28,7 +28,7 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<Either<String,ResourceIdentityType>> type;
 
-    public Output<Either<String,ResourceIdentityType>> getType() {
+    public Output<Either<String,ResourceIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

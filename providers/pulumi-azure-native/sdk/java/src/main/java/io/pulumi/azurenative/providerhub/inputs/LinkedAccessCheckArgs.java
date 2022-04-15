@@ -18,35 +18,35 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName == null ? Codegen.empty() : this.actionName;
     }
 
     @Import(name="linkedAction")
       private final @Nullable Output<String> linkedAction;
 
-    public Output<String> getLinkedAction() {
+    public Output<String> linkedAction() {
         return this.linkedAction == null ? Codegen.empty() : this.linkedAction;
     }
 
     @Import(name="linkedActionVerb")
       private final @Nullable Output<String> linkedActionVerb;
 
-    public Output<String> getLinkedActionVerb() {
+    public Output<String> linkedActionVerb() {
         return this.linkedActionVerb == null ? Codegen.empty() : this.linkedActionVerb;
     }
 
     @Import(name="linkedProperty")
       private final @Nullable Output<String> linkedProperty;
 
-    public Output<String> getLinkedProperty() {
+    public Output<String> linkedProperty() {
         return this.linkedProperty == null ? Codegen.empty() : this.linkedProperty;
     }
 
     @Import(name="linkedType")
       private final @Nullable Output<String> linkedType;
 
-    public Output<String> getLinkedType() {
+    public Output<String> linkedType() {
         return this.linkedType == null ? Codegen.empty() : this.linkedType;
     }
 

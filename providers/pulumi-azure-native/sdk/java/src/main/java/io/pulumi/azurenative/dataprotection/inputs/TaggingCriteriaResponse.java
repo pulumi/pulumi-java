@@ -29,7 +29,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="criteria")
       private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
 
-    public List<ScheduleBasedBackupCriteriaResponse> getCriteria() {
+    public List<ScheduleBasedBackupCriteriaResponse> criteria() {
         return this.criteria == null ? List.of() : this.criteria;
     }
 
@@ -40,7 +40,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="isDefault", required=true)
       private final Boolean isDefault;
 
-    public Boolean getIsDefault() {
+    public Boolean isDefault() {
         return this.isDefault;
     }
 
@@ -51,7 +51,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tagInfo", required=true)
       private final RetentionTagResponse tagInfo;
 
-    public RetentionTagResponse getTagInfo() {
+    public RetentionTagResponse tagInfo() {
         return this.tagInfo;
     }
 
@@ -62,7 +62,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="taggingPriority", required=true)
       private final Double taggingPriority;
 
-    public Double getTaggingPriority() {
+    public Double taggingPriority() {
         return this.taggingPriority;
     }
 

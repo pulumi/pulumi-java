@@ -26,7 +26,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
@@ -37,7 +37,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 

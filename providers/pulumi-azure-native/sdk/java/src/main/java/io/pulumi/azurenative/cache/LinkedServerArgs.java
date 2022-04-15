@@ -23,7 +23,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheId", required=true)
       private final Output<String> linkedRedisCacheId;
 
-    public Output<String> getLinkedRedisCacheId() {
+    public Output<String> linkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
 
@@ -34,7 +34,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheLocation", required=true)
       private final Output<String> linkedRedisCacheLocation;
 
-    public Output<String> getLinkedRedisCacheLocation() {
+    public Output<String> linkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
 
@@ -45,7 +45,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServerName")
       private final @Nullable Output<String> linkedServerName;
 
-    public Output<String> getLinkedServerName() {
+    public Output<String> linkedServerName() {
         return this.linkedServerName == null ? Codegen.empty() : this.linkedServerName;
     }
 
@@ -56,7 +56,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverRole", required=true)
       private final Output<ReplicationRole> serverRole;
 
-    public Output<ReplicationRole> getServerRole() {
+    public Output<ReplicationRole> serverRole() {
         return this.serverRole;
     }
 

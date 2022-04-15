@@ -30,7 +30,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> getCompressionProperties() {
+    public Output<Object> compressionProperties() {
         return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
@@ -41,7 +41,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> getSkipLineCount() {
+    public Output<Object> skipLineCount() {
         return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
     }
 
@@ -53,7 +53,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

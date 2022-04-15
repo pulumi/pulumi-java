@@ -36,14 +36,14 @@ public final class WebPubSubHubPropertiesResponse {
      * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
      * 
     */
-    public Optional<String> getAnonymousConnectPolicy() {
+    public Optional<String> anonymousConnectPolicy() {
         return Optional.ofNullable(this.anonymousConnectPolicy);
     }
     /**
      * Event handler of a hub.
      * 
     */
-    public List<EventHandlerResponse> getEventHandlers() {
+    public List<EventHandlerResponse> eventHandlers() {
         return this.eventHandlers == null ? List.of() : this.eventHandlers;
     }
 

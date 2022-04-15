@@ -32,105 +32,105 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     @Import(name="capabilities")
       private final @Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities;
 
-    public Output<List<ResourceProviderCapabilitiesArgs>> getCapabilities() {
+    public Output<List<ResourceProviderCapabilitiesArgs>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
 
-    public Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> getFeaturesRule() {
+    public Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule() {
         return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="management")
       private final @Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management;
 
-    public Output<ResourceProviderManifestPropertiesManagementArgs> getManagement() {
+    public Output<ResourceProviderManifestPropertiesManagementArgs> management() {
         return this.management == null ? Codegen.empty() : this.management;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     @Import(name="providerAuthentication")
       private final @Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
 
-    public Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> getProviderAuthentication() {
+    public Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication() {
         return this.providerAuthentication == null ? Codegen.empty() : this.providerAuthentication;
     }
 
     @Import(name="providerAuthorizations")
       private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
+    public Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations() {
         return this.providerAuthorizations == null ? Codegen.empty() : this.providerAuthorizations;
     }
 
     @Import(name="providerHubMetadata")
       private final @Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
 
-    public Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> getProviderHubMetadata() {
+    public Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata() {
         return this.providerHubMetadata == null ? Codegen.empty() : this.providerHubMetadata;
     }
 
     @Import(name="providerType")
       private final @Nullable Output<Either<String,ResourceProviderType>> providerType;
 
-    public Output<Either<String,ResourceProviderType>> getProviderType() {
+    public Output<Either<String,ResourceProviderType>> providerType() {
         return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     @Import(name="providerVersion")
       private final @Nullable Output<String> providerVersion;
 
-    public Output<String> getProviderVersion() {
+    public Output<String> providerVersion() {
         return this.providerVersion == null ? Codegen.empty() : this.providerVersion;
     }
 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="requestHeaderOptions")
       private final @Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
-    public Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
+    public Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions() {
         return this.requestHeaderOptions == null ? Codegen.empty() : this.requestHeaderOptions;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
-    public Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
+    public Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Codegen.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @Import(name="templateDeploymentOptions")
       private final @Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
-    public Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
+    public Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions() {
         return this.templateDeploymentOptions == null ? Codegen.empty() : this.templateDeploymentOptions;
     }
 

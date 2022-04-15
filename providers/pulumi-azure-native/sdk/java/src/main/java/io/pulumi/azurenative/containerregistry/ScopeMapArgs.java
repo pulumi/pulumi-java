@@ -25,7 +25,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
@@ -36,7 +36,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -58,7 +58,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopeMapName")
       private final @Nullable Output<String> scopeMapName;
 
-    public Output<String> getScopeMapName() {
+    public Output<String> scopeMapName() {
         return this.scopeMapName == null ? Codegen.empty() : this.scopeMapName;
     }
 

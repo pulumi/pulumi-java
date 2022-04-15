@@ -19,7 +19,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
     @Import(name="networkMappingName", required=true)
       private final String networkMappingName;
 
-    public String getNetworkMappingName() {
+    public String networkMappingName() {
         return this.networkMappingName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
     @Import(name="networkName", required=true)
       private final String networkName;
 
-    public String getNetworkName() {
+    public String networkName() {
         return this.networkName;
     }
 
@@ -52,7 +52,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

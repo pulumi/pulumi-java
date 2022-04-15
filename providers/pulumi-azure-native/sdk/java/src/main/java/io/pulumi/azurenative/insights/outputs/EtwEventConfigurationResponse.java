@@ -26,13 +26,13 @@ public final class EtwEventConfigurationResponse {
         this.name = name;
     }
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -25,7 +25,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

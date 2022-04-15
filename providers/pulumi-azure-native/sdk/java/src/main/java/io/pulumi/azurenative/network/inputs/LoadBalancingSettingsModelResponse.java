@@ -26,7 +26,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="additionalLatencyMilliseconds")
       private final @Nullable Integer additionalLatencyMilliseconds;
 
-    public Optional<Integer> getAdditionalLatencyMilliseconds() {
+    public Optional<Integer> additionalLatencyMilliseconds() {
         return this.additionalLatencyMilliseconds == null ? Optional.empty() : Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
 
@@ -37,7 +37,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -70,7 +70,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="sampleSize")
       private final @Nullable Integer sampleSize;
 
-    public Optional<Integer> getSampleSize() {
+    public Optional<Integer> sampleSize() {
         return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
     }
 
@@ -81,7 +81,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="successfulSamplesRequired")
       private final @Nullable Integer successfulSamplesRequired;
 
-    public Optional<Integer> getSuccessfulSamplesRequired() {
+    public Optional<Integer> successfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Optional.empty() : Optional.ofNullable(this.successfulSamplesRequired);
     }
 
@@ -92,7 +92,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

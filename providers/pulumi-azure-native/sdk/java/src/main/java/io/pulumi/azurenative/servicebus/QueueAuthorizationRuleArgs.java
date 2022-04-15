@@ -24,7 +24,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> getAuthorizationRuleName() {
+    public Output<String> authorizationRuleName() {
         return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
@@ -35,7 +35,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -46,7 +46,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
     @Import(name="queueName", required=true)
       private final Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName;
     }
 
@@ -57,7 +57,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class QueueAuthorizationRuleArgs extends io.pulumi.resources.Resour
     @Import(name="rights", required=true)
       private final Output<List<AccessRights>> rights;
 
-    public Output<List<AccessRights>> getRights() {
+    public Output<List<AccessRights>> rights() {
         return this.rights;
     }
 

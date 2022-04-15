@@ -26,7 +26,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

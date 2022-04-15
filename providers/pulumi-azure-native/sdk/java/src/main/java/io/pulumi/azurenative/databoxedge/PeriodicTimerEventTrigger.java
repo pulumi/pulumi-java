@@ -45,7 +45,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
      */
-    public Output</* @Nullable */ String> getCustomContextTag() {
+    public Output</* @Nullable */ String> customContextTag() {
         return this.customContextTag;
     }
     /**
@@ -61,7 +61,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * Expected value is 'PeriodicTimerEvent'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +75,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return Role Sink information.
      * 
      */
-    public Output<RoleSinkInfoResponse> getSinkInfo() {
+    public Output<RoleSinkInfoResponse> sinkInfo() {
         return this.sinkInfo;
     }
     /**
@@ -103,7 +103,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return Periodic timer details.
      * 
      */
-    public Output<PeriodicTimerSourceInfoResponse> getSourceInfo() {
+    public Output<PeriodicTimerSourceInfoResponse> sourceInfo() {
         return this.sourceInfo;
     }
     /**
@@ -117,7 +117,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return Trigger in DataBoxEdge Resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -131,7 +131,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

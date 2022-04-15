@@ -32,7 +32,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> getRetentionDuration() {
+    public Output<RetentionDurationArgs> retentionDuration() {
         return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
     }
 
@@ -43,7 +43,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
     @Import(name="retentionScheduleDaily")
       private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
-    public Output<DailyRetentionFormatArgs> getRetentionScheduleDaily() {
+    public Output<DailyRetentionFormatArgs> retentionScheduleDaily() {
         return this.retentionScheduleDaily == null ? Codegen.empty() : this.retentionScheduleDaily;
     }
 
@@ -54,7 +54,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
     @Import(name="retentionScheduleFormatType")
       private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
-    public Output<Either<String,RetentionScheduleFormat>> getRetentionScheduleFormatType() {
+    public Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType() {
         return this.retentionScheduleFormatType == null ? Codegen.empty() : this.retentionScheduleFormatType;
     }
 
@@ -65,7 +65,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
     @Import(name="retentionScheduleWeekly")
       private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
-    public Output<WeeklyRetentionFormatArgs> getRetentionScheduleWeekly() {
+    public Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly() {
         return this.retentionScheduleWeekly == null ? Codegen.empty() : this.retentionScheduleWeekly;
     }
 
@@ -76,7 +76,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
     @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> getRetentionTimes() {
+    public Output<List<String>> retentionTimes() {
         return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
     }
 

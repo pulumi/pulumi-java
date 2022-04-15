@@ -18,21 +18,21 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
     @Import(name="extensionCategories")
       private final @Nullable List<String> extensionCategories;
 
-    public List<String> getExtensionCategories() {
+    public List<String> extensionCategories() {
         return this.extensionCategories == null ? List.of() : this.extensionCategories;
     }
 
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

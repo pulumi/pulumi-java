@@ -60,35 +60,35 @@ public final class GetConnectorResult {
      * Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
     */
-    public Optional<Object> getAuthenticationDetails() {
+    public Optional<Object> authenticationDetails() {
         return Optional.ofNullable(this.authenticationDetails);
     }
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
     */
-    public Optional<HybridComputeSettingsPropertiesResponse> getHybridComputeSettings() {
+    public Optional<HybridComputeSettingsPropertiesResponse> hybridComputeSettings() {
         return Optional.ofNullable(this.hybridComputeSettings);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

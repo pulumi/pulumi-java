@@ -29,7 +29,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -40,7 +40,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
@@ -62,7 +62,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="publicIPAddress", required=true)
       private final Output<SubResourceArgs> publicIPAddress;
 
-    public Output<SubResourceArgs> getPublicIPAddress() {
+    public Output<SubResourceArgs> publicIPAddress() {
         return this.publicIPAddress;
     }
 
@@ -73,7 +73,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="subnet", required=true)
       private final Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
+    public Output<SubResourceArgs> subnet() {
         return this.subnet;
     }
 

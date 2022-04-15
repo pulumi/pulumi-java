@@ -26,7 +26,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="emailRecipient")
       private final @Nullable String emailRecipient;
 
-    public Optional<String> getEmailRecipient() {
+    public Optional<String> emailRecipient() {
         return this.emailRecipient == null ? Optional.empty() : Optional.ofNullable(this.emailRecipient);
     }
 
@@ -37,7 +37,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="notificationLocale")
       private final @Nullable String notificationLocale;
 
-    public Optional<String> getNotificationLocale() {
+    public Optional<String> notificationLocale() {
         return this.notificationLocale == null ? Optional.empty() : Optional.ofNullable(this.notificationLocale);
     }
 
@@ -48,7 +48,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -59,7 +59,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="timeInMinutes")
       private final @Nullable Integer timeInMinutes;
 
-    public Optional<Integer> getTimeInMinutes() {
+    public Optional<Integer> timeInMinutes() {
         return this.timeInMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeInMinutes);
     }
 
@@ -70,7 +70,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="webhookUrl")
       private final @Nullable String webhookUrl;
 
-    public Optional<String> getWebhookUrl() {
+    public Optional<String> webhookUrl() {
         return this.webhookUrl == null ? Optional.empty() : Optional.ofNullable(this.webhookUrl);
     }
 

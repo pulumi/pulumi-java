@@ -51,21 +51,21 @@ public final class DataBoxHeavyJobSecretsResponse {
      * Contains the list of secret objects for a databox heavy job.
      * 
     */
-    public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
+    public List<DataBoxHeavySecretResponse> cabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
     /**
      * Dc Access Security Code for Customer Managed Shipping
      * 
     */
-    public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
+    public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Error while fetching the secrets.
      * 
     */
-    public CloudErrorResponse getError() {
+    public CloudErrorResponse error() {
         return this.error;
     }
     /**
@@ -73,7 +73,7 @@ public final class DataBoxHeavyJobSecretsResponse {
      * Expected value is 'DataBoxHeavy'.
      * 
     */
-    public String getJobSecretsType() {
+    public String jobSecretsType() {
         return this.jobSecretsType;
     }
 

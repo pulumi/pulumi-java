@@ -23,7 +23,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="labelName", required=true)
       private final String labelName;
 
-    public String getLabelName() {
+    public String labelName() {
         return this.labelName;
     }
 
@@ -34,7 +34,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="labelType", required=true)
       private final String labelType;
 
-    public String getLabelType() {
+    public String labelType() {
         return this.labelType;
     }
 

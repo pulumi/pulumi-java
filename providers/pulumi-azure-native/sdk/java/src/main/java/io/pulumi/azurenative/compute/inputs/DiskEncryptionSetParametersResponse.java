@@ -25,7 +25,7 @@ public final class DiskEncryptionSetParametersResponse extends io.pulumi.resourc
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 

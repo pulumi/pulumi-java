@@ -27,7 +27,7 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -38,7 +38,7 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
-    public Map<String,UserAssignedManagedIdentityResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

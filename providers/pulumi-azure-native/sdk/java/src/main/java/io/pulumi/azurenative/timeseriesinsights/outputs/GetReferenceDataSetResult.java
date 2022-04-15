@@ -86,63 +86,63 @@ public final class GetReferenceDataSetResult {
      * The time the resource was created.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
      * 
     */
-    public Optional<String> getDataStringComparisonBehavior() {
+    public Optional<String> dataStringComparisonBehavior() {
         return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The list of key properties for the reference data set.
      * 
     */
-    public List<ReferenceDataSetKeyPropertyResponse> getKeyProperties() {
+    public List<ReferenceDataSetKeyPropertyResponse> keyProperties() {
         return this.keyProperties;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

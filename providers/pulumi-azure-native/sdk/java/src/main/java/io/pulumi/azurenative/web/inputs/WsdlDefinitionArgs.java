@@ -29,7 +29,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -40,7 +40,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importMethod")
       private final @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
-    public Output<Either<String,WsdlImportMethod>> getImportMethod() {
+    public Output<Either<String,WsdlImportMethod>> importMethod() {
         return this.importMethod == null ? Codegen.empty() : this.importMethod;
     }
 
@@ -51,7 +51,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<WsdlServiceArgs> service;
 
-    public Output<WsdlServiceArgs> getService() {
+    public Output<WsdlServiceArgs> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -62,7 +62,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -26,7 +26,7 @@ public final class ConfigurationServiceSettingsResponse {
      * Property of git environment.
      * 
     */
-    public Optional<ConfigurationServiceGitPropertyResponse> getGitProperty() {
+    public Optional<ConfigurationServiceGitPropertyResponse> gitProperty() {
         return Optional.ofNullable(this.gitProperty);
     }
 

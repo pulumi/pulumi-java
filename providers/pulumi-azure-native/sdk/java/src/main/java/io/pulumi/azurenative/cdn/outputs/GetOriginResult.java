@@ -149,126 +149,126 @@ public final class GetOriginResult {
      * Origin is enabled for load balancing or not
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
     */
-    public Optional<Integer> getHttpPort() {
+    public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
     */
-    public Optional<Integer> getHttpsPort() {
+    public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
     */
-    public Optional<String> getOriginHostHeader() {
+    public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The approval status for the connection to the Private Link
      * 
     */
-    public String getPrivateEndpointStatus() {
+    public String privateEndpointStatus() {
         return this.privateEndpointStatus;
     }
     /**
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
     */
-    public Optional<String> getPrivateLinkAlias() {
+    public Optional<String> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
     /**
      * A custom message to be included in the approval request to connect to the Private Link.
      * 
     */
-    public Optional<String> getPrivateLinkApprovalMessage() {
+    public Optional<String> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
     */
-    public Optional<String> getPrivateLinkLocation() {
+    public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
     */
-    public Optional<String> getPrivateLinkResourceId() {
+    public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * Provisioning status of the origin.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the origin.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

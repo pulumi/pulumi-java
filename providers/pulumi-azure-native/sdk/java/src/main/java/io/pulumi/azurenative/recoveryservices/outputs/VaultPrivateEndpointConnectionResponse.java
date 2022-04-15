@@ -41,21 +41,21 @@ public final class VaultPrivateEndpointConnectionResponse {
      * The Private Endpoint network resource that is linked to the Private Endpoint connection.
      * 
     */
-    public PrivateEndpointResponse getPrivateEndpoint() {
+    public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Gets or sets private link service connection state.
      * 
     */
-    public VaultPrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Gets or sets provisioning state of the private endpoint connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

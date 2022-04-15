@@ -36,14 +36,14 @@ public final class CanonicalProfileDefinitionResponse {
      * Canonical profile ID.
      * 
     */
-    public Optional<Integer> getCanonicalProfileId() {
+    public Optional<Integer> canonicalProfileId() {
         return Optional.ofNullable(this.canonicalProfileId);
     }
     /**
      * Properties of the canonical profile.
      * 
     */
-    public List<CanonicalProfileDefinitionResponseProperties> getProperties() {
+    public List<CanonicalProfileDefinitionResponseProperties> properties() {
         return this.properties == null ? List.of() : this.properties;
     }
 

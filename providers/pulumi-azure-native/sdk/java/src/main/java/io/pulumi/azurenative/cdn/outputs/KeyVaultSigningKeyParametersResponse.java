@@ -52,42 +52,42 @@ public final class KeyVaultSigningKeyParametersResponse {
         this.vaultName = vaultName;
     }
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Resource group of the user's Key Vault containing the secret
      * 
     */
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * The name of secret in Key Vault.
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
     /**
      * The version(GUID) of secret in Key Vault.
      * 
     */
-    public String getSecretVersion() {
+    public String secretVersion() {
         return this.secretVersion;
     }
     /**
      * Subscription Id of the user's Key Vault containing the secret
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * The name of the user's Key Vault containing the secret
      * 
     */
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
 

@@ -27,7 +27,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     @Import(name="dhcpRanges")
       private final @Nullable Output<List<String>> dhcpRanges;
 
-    public Output<List<String>> getDhcpRanges() {
+    public Output<List<String>> dhcpRanges() {
         return this.dhcpRanges == null ? Codegen.empty() : this.dhcpRanges;
     }
 
@@ -38,7 +38,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     @Import(name="gatewayAddress")
       private final @Nullable Output<String> gatewayAddress;
 
-    public Output<String> getGatewayAddress() {
+    public Output<String> gatewayAddress() {
         return this.gatewayAddress == null ? Codegen.empty() : this.gatewayAddress;
     }
 

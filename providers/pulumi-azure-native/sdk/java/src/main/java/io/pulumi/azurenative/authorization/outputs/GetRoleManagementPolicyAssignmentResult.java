@@ -70,49 +70,49 @@ public final class GetRoleManagementPolicyAssignmentResult {
      * The role management policy Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The role management policy name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Additional properties of scope, role definition and policy
      * 
     */
-    public PolicyAssignmentPropertiesResponse getPolicyAssignmentProperties() {
+    public PolicyAssignmentPropertiesResponse policyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
     /**
      * The policy id role management policy assignment.
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * The role definition of management policy assignment.
      * 
     */
-    public Optional<String> getRoleDefinitionId() {
+    public Optional<String> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
      * The role management policy scope.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The role management policy type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

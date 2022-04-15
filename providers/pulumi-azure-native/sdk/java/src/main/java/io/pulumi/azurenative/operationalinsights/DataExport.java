@@ -43,7 +43,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return The latest data export rule modification time.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedDate() {
+    public Output</* @Nullable */ String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -57,7 +57,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return The data export rule ID.
      * 
      */
-    public Output</* @Nullable */ String> getDataExportId() {
+    public Output</* @Nullable */ String> dataExportId() {
         return this.dataExportId;
     }
     /**
@@ -71,7 +71,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return Active when enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnable() {
+    public Output</* @Nullable */ Boolean> enable() {
         return this.enable;
     }
     /**
@@ -85,7 +85,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
      */
-    public Output</* @Nullable */ String> getEventHubName() {
+    public Output</* @Nullable */ String> eventHubName() {
         return this.eventHubName;
     }
     /**
@@ -99,7 +99,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return Date and time when the export was last modified.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedDate() {
+    public Output</* @Nullable */ String> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -113,7 +113,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -141,7 +141,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
      */
-    public Output<List<String>> getTableNames() {
+    public Output<List<String>> tableNames() {
         return this.tableNames;
     }
     /**
@@ -155,7 +155,7 @@ public class DataExport extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

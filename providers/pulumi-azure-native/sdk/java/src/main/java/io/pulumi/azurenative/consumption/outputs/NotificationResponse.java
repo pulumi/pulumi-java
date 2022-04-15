@@ -79,56 +79,56 @@ public final class NotificationResponse {
      * Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
      * 
     */
-    public List<String> getContactEmails() {
+    public List<String> contactEmails() {
         return this.contactEmails;
     }
     /**
      * Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
      * 
     */
-    public List<String> getContactGroups() {
+    public List<String> contactGroups() {
         return this.contactGroups == null ? List.of() : this.contactGroups;
     }
     /**
      * Contact roles to send the budget notification to when the threshold is exceeded.
      * 
     */
-    public List<String> getContactRoles() {
+    public List<String> contactRoles() {
         return this.contactRoles == null ? List.of() : this.contactRoles;
     }
     /**
      * The notification is enabled or not.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Language in which the recipient will receive the notification
      * 
     */
-    public Optional<String> getLocale() {
+    public Optional<String> locale() {
         return Optional.ofNullable(this.locale);
     }
     /**
      * The comparison operator.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
      * 
     */
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
     /**
      * The type of threshold
      * 
     */
-    public Optional<String> getThresholdType() {
+    public Optional<String> thresholdType() {
         return Optional.ofNullable(this.thresholdType);
     }
 

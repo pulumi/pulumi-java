@@ -26,7 +26,7 @@ public final class ListTransactionNodeApiKeysResult {
      * Gets or sets the collection of API key.
      * 
     */
-    public List<ApiKeyResponse> getKeys() {
+    public List<ApiKeyResponse> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 

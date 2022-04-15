@@ -25,7 +25,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

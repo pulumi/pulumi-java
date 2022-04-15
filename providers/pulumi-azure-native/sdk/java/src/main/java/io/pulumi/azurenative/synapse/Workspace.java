@@ -52,7 +52,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The ADLA resource ID.
      * 
      */
-    public Output<String> getAdlaResourceId() {
+    public Output<String> adlaResourceId() {
         return this.adlaResourceId;
     }
     /**
@@ -66,7 +66,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Connectivity endpoints
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConnectivityEndpoints() {
+    public Output</* @Nullable */ Map<String,String>> connectivityEndpoints() {
         return this.connectivityEndpoints;
     }
     /**
@@ -80,7 +80,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace default data lake storage account details
      * 
      */
-    public Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> getDefaultDataLakeStorage() {
+    public Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage() {
         return this.defaultDataLakeStorage;
     }
     /**
@@ -94,7 +94,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The encryption details of the workspace
      * 
      */
-    public Output</* @Nullable */ EncryptionDetailsResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionDetailsResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -108,7 +108,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace level configs and feature flags
      * 
      */
-    public Output<Map<String,Object>> getExtraProperties() {
+    public Output<Map<String,Object>> extraProperties() {
         return this.extraProperties;
     }
     /**
@@ -122,7 +122,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Identity of the workspace
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -136,7 +136,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -150,7 +150,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
      * 
      */
-    public Output</* @Nullable */ String> getManagedResourceGroupName() {
+    public Output</* @Nullable */ String> managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
@@ -164,7 +164,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
-    public Output</* @Nullable */ String> getManagedVirtualNetwork() {
+    public Output</* @Nullable */ String> managedVirtualNetwork() {
         return this.managedVirtualNetwork;
     }
     /**
@@ -178,7 +178,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Managed Virtual Network Settings
      * 
      */
-    public Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> getManagedVirtualNetworkSettings() {
+    public Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings() {
         return this.managedVirtualNetworkSettings;
     }
     /**
@@ -192,7 +192,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -206,7 +206,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Private endpoint connections to the workspace
      * 
      */
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -220,7 +220,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Resource provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -234,7 +234,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Enable or Disable public network access to workspace
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -248,7 +248,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Purview Configuration
      * 
      */
-    public Output</* @Nullable */ PurviewConfigurationResponse> getPurviewConfiguration() {
+    public Output</* @Nullable */ PurviewConfigurationResponse> purviewConfiguration() {
         return this.purviewConfiguration;
     }
     /**
@@ -262,7 +262,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Login for workspace SQL active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> getSqlAdministratorLogin() {
+    public Output</* @Nullable */ String> sqlAdministratorLogin() {
         return this.sqlAdministratorLogin;
     }
     /**
@@ -276,7 +276,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return SQL administrator login password
      * 
      */
-    public Output</* @Nullable */ String> getSqlAdministratorLoginPassword() {
+    public Output</* @Nullable */ String> sqlAdministratorLoginPassword() {
         return this.sqlAdministratorLoginPassword;
     }
     /**
@@ -290,7 +290,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -304,7 +304,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -318,7 +318,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Virtual Network profile
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
+    public Output</* @Nullable */ VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return this.virtualNetworkProfile;
     }
     /**
@@ -332,7 +332,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Git integration settings
      * 
      */
-    public Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> getWorkspaceRepositoryConfiguration() {
+    public Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration() {
         return this.workspaceRepositoryConfiguration;
     }
     /**
@@ -346,7 +346,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The workspace unique identifier
      * 
      */
-    public Output<String> getWorkspaceUID() {
+    public Output<String> workspaceUID() {
         return this.workspaceUID;
     }
 

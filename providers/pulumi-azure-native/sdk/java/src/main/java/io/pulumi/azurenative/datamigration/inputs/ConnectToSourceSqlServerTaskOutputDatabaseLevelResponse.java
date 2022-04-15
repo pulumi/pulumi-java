@@ -26,7 +26,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="compatibilityLevel", required=true)
       private final String compatibilityLevel;
 
-    public String getCompatibilityLevel() {
+    public String compatibilityLevel() {
         return this.compatibilityLevel;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="databaseFiles", required=true)
       private final List<DatabaseFileInfoResponse> databaseFiles;
 
-    public List<DatabaseFileInfoResponse> getDatabaseFiles() {
+    public List<DatabaseFileInfoResponse> databaseFiles() {
         return this.databaseFiles;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="databaseState", required=true)
       private final String databaseState;
 
-    public String getDatabaseState() {
+    public String databaseState() {
         return this.databaseState;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -70,7 +70,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -93,7 +93,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
-    public Double getSizeMB() {
+    public Double sizeMB() {
         return this.sizeMB;
     }
 

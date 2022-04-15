@@ -27,7 +27,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="goal", required=true)
       private final Output<Either<String,Goal>> goal;
 
-    public Output<Either<String,Goal>> getGoal() {
+    public Output<Either<String,Goal>> goal() {
         return this.goal;
     }
 
@@ -38,7 +38,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryMetric", required=true)
       private final Output<String> primaryMetric;
 
-    public Output<String> getPrimaryMetric() {
+    public Output<String> primaryMetric() {
         return this.primaryMetric;
     }
 

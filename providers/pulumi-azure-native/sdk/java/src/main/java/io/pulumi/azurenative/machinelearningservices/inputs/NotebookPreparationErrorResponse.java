@@ -18,14 +18,14 @@ public final class NotebookPreparationErrorResponse extends io.pulumi.resources.
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
     @Import(name="statusCode")
       private final @Nullable Integer statusCode;
 
-    public Optional<Integer> getStatusCode() {
+    public Optional<Integer> statusCode() {
         return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
     }
 

@@ -33,14 +33,14 @@ public final class SkuResponse {
      * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
      * 
     */
-    public Integer getCapacity() {
+    public Integer capacity() {
         return this.capacity;
     }
     /**
      * The name of this SKU.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

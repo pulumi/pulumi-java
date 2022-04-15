@@ -70,35 +70,35 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse {
      * Array of command properties.
      * 
     */
-    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
+    public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
     */
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Task input
      * 
     */
-    public Optional<GetUserTablesSqlSyncTaskInputResponse> getInput() {
+    public Optional<GetUserTablesSqlSyncTaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
     */
-    public List<GetUserTablesSqlSyncTaskOutputResponse> getOutput() {
+    public List<GetUserTablesSqlSyncTaskOutputResponse> output() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
@@ -106,7 +106,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse {
      * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
      * 
     */
-    public String getTaskType() {
+    public String taskType() {
         return this.taskType;
     }
 

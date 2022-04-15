@@ -27,7 +27,7 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
     @Import(name="columns")
       private final @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
 
-    public List<SyncGroupSchemaTableColumnResponse> getColumns() {
+    public List<SyncGroupSchemaTableColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 
@@ -38,7 +38,7 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
     @Import(name="quotedName")
       private final @Nullable String quotedName;
 
-    public Optional<String> getQuotedName() {
+    public Optional<String> quotedName() {
         return this.quotedName == null ? Optional.empty() : Optional.ofNullable(this.quotedName);
     }
 

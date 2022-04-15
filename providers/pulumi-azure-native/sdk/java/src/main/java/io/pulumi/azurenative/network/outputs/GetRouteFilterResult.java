@@ -94,70 +94,70 @@ public final class GetRouteFilterResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A collection of references to express route circuit ipv6 peerings.
      * 
     */
-    public List<ExpressRouteCircuitPeeringResponse> getIpv6Peerings() {
+    public List<ExpressRouteCircuitPeeringResponse> ipv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A collection of references to express route circuit peerings.
      * 
     */
-    public List<ExpressRouteCircuitPeeringResponse> getPeerings() {
+    public List<ExpressRouteCircuitPeeringResponse> peerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the route filter resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Collection of RouteFilterRules contained within a route filter.
      * 
     */
-    public List<RouteFilterRuleResponse> getRules() {
+    public List<RouteFilterRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

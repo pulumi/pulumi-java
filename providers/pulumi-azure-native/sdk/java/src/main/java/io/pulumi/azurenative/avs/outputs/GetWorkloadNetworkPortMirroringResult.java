@@ -91,70 +91,70 @@ public final class GetWorkloadNetworkPortMirroringResult {
      * Destination VM Group.
      * 
     */
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * Direction of port mirroring profile.
      * 
     */
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Display name of the port mirroring profile.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
      * 
     */
-    public Optional<Double> getRevision() {
+    public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Source VM Group.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Port Mirroring Status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

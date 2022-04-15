@@ -32,7 +32,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     @Import(name="action")
       private final @Nullable FirewallPolicyFilterRuleActionResponse action;
 
-    public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
+    public Optional<FirewallPolicyFilterRuleActionResponse> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -43,7 +43,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -54,7 +54,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -65,7 +65,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     @Import(name="ruleConditions")
       private final @Nullable List<Object> ruleConditions;
 
-    public List<Object> getRuleConditions() {
+    public List<Object> ruleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
     }
 
@@ -77,7 +77,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 

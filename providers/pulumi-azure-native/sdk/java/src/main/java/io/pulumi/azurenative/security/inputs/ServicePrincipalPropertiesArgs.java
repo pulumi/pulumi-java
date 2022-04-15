@@ -26,7 +26,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

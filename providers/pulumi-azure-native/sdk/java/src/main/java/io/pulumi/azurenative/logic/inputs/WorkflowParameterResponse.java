@@ -26,7 +26,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="metadata")
       private final @Nullable Object metadata;
 
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
@@ -48,7 +48,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -59,7 +59,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

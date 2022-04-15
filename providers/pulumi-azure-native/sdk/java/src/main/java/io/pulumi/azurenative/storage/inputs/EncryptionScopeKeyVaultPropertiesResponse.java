@@ -25,7 +25,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
     @Import(name="currentVersionedKeyIdentifier", required=true)
       private final String currentVersionedKeyIdentifier;
 
-    public String getCurrentVersionedKeyIdentifier() {
+    public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
 
@@ -36,7 +36,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
     @Import(name="keyUri")
       private final @Nullable String keyUri;
 
-    public Optional<String> getKeyUri() {
+    public Optional<String> keyUri() {
         return this.keyUri == null ? Optional.empty() : Optional.ofNullable(this.keyUri);
     }
 
@@ -47,7 +47,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
     @Import(name="lastKeyRotationTimestamp", required=true)
       private final String lastKeyRotationTimestamp;
 
-    public String getLastKeyRotationTimestamp() {
+    public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
 

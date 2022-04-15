@@ -36,14 +36,14 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
      * Workbook galleries supported by the template.
      * 
     */
-    public List<WorkbookTemplateGalleryResponse> getGalleries() {
+    public List<WorkbookTemplateGalleryResponse> galleries() {
         return this.galleries == null ? List.of() : this.galleries;
     }
     /**
      * Valid JSON object containing workbook template payload.
      * 
     */
-    public Optional<Object> getTemplateData() {
+    public Optional<Object> templateData() {
         return Optional.ofNullable(this.templateData);
     }
 

@@ -43,7 +43,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The Name of the alert rule template used to create this rule.
      * 
      */
-    public Output<String> getAlertRuleTemplateName() {
+    public Output<String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
@@ -57,7 +57,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The description of the alert rule.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The display name for alerts created by this alert rule.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +85,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return Determines whether this alert rule is enabled or disabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -99,7 +99,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -115,7 +115,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Fusion'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -129,7 +129,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The last time that this alert has been modified.
      * 
      */
-    public Output<String> getLastModifiedUtc() {
+    public Output<String> lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
@@ -143,7 +143,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +157,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The severity for alerts created by this alert rule.
      * 
      */
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity;
     }
     /**
@@ -171,7 +171,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return The tactics of the alert rule
      * 
      */
-    public Output<List<String>> getTactics() {
+    public Output<List<String>> tactics() {
         return this.tactics;
     }
     /**
@@ -185,7 +185,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -30,7 +30,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -41,7 +41,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="common")
       private final @Nullable Output<Boolean> common;
 
-    public Output<Boolean> getCommon() {
+    public Output<Boolean> common() {
         return this.common == null ? Codegen.empty() : this.common;
     }
 
@@ -52,7 +52,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="configurationStatus")
       private final @Nullable Output<String> configurationStatus;
 
-    public Output<String> getConfigurationStatus() {
+    public Output<String> configurationStatus() {
         return this.configurationStatus == null ? Codegen.empty() : this.configurationStatus;
     }
 
@@ -63,7 +63,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fileType")
       private final @Nullable Output<String> fileType;
 
-    public Output<String> getFileType() {
+    public Output<String> fileType() {
         return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
@@ -74,7 +74,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -85,7 +85,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publisherInfo")
       private final @Nullable Output<PublisherInfoArgs> publisherInfo;
 
-    public Output<PublisherInfoArgs> getPublisherInfo() {
+    public Output<PublisherInfoArgs> publisherInfo() {
         return this.publisherInfo == null ? Codegen.empty() : this.publisherInfo;
     }
 
@@ -96,21 +96,21 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="userSids")
       private final @Nullable Output<List<String>> userSids;
 
-    public Output<List<String>> getUserSids() {
+    public Output<List<String>> userSids() {
         return this.userSids == null ? Codegen.empty() : this.userSids;
     }
 
     @Import(name="usernames")
       private final @Nullable Output<List<UserRecommendationArgs>> usernames;
 
-    public Output<List<UserRecommendationArgs>> getUsernames() {
+    public Output<List<UserRecommendationArgs>> usernames() {
         return this.usernames == null ? Codegen.empty() : this.usernames;
     }
 

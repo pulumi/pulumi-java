@@ -59,35 +59,35 @@ public final class ImmutabilityPolicyPropertiesResponse {
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
     */
-    public Optional<Boolean> getAllowProtectedAppendWrites() {
+    public Optional<Boolean> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
     /**
      * ImmutabilityPolicy Etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
     */
-    public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
+    public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
     /**
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The ImmutabilityPolicy update history of the blob container.
      * 
     */
-    public List<UpdateHistoryPropertyResponse> getUpdateHistory() {
+    public List<UpdateHistoryPropertyResponse> updateHistory() {
         return this.updateHistory;
     }
 

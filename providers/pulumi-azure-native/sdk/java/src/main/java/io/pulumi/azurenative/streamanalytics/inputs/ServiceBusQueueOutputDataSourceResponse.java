@@ -26,7 +26,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="propertyColumns")
       private final @Nullable List<String> propertyColumns;
 
-    public List<String> getPropertyColumns() {
+    public List<String> propertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="queueName")
       private final @Nullable String queueName;
 
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 
@@ -48,7 +48,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="serviceBusNamespace")
       private final @Nullable String serviceBusNamespace;
 
-    public Optional<String> getServiceBusNamespace() {
+    public Optional<String> serviceBusNamespace() {
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
     }
 
@@ -59,7 +59,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable String sharedAccessPolicyKey;
 
-    public Optional<String> getSharedAccessPolicyKey() {
+    public Optional<String> sharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
@@ -70,7 +70,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="sharedAccessPolicyName")
       private final @Nullable String sharedAccessPolicyName;
 
-    public Optional<String> getSharedAccessPolicyName() {
+    public Optional<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
@@ -82,7 +82,7 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

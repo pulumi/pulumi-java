@@ -35,7 +35,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="aggregation")
       private final @Nullable Output<Map<String,ReportConfigAggregationArgs>> aggregation;
 
-    public Output<Map<String,ReportConfigAggregationArgs>> getAggregation() {
+    public Output<Map<String,ReportConfigAggregationArgs>> aggregation() {
         return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
@@ -46,7 +46,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="configuration")
       private final @Nullable Output<ReportConfigDatasetConfigurationArgs> configuration;
 
-    public Output<ReportConfigDatasetConfigurationArgs> getConfiguration() {
+    public Output<ReportConfigDatasetConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -57,7 +57,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="filter")
       private final @Nullable Output<ReportConfigFilterArgs> filter;
 
-    public Output<ReportConfigFilterArgs> getFilter() {
+    public Output<ReportConfigFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -68,7 +68,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="granularity")
       private final @Nullable Output<Either<String,ReportGranularityType>> granularity;
 
-    public Output<Either<String,ReportGranularityType>> getGranularity() {
+    public Output<Either<String,ReportGranularityType>> granularity() {
         return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
@@ -79,7 +79,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="grouping")
       private final @Nullable Output<List<ReportConfigGroupingArgs>> grouping;
 
-    public Output<List<ReportConfigGroupingArgs>> getGrouping() {
+    public Output<List<ReportConfigGroupingArgs>> grouping() {
         return this.grouping == null ? Codegen.empty() : this.grouping;
     }
 
@@ -90,7 +90,7 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="sorting")
       private final @Nullable Output<List<ReportConfigSortingArgs>> sorting;
 
-    public Output<List<ReportConfigSortingArgs>> getSorting() {
+    public Output<List<ReportConfigSortingArgs>> sorting() {
         return this.sorting == null ? Codegen.empty() : this.sorting;
     }
 

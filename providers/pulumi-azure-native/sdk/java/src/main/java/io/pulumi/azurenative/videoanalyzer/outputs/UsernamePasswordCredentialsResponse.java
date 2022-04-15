@@ -40,7 +40,7 @@ public final class UsernamePasswordCredentialsResponse {
      * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
@@ -48,14 +48,14 @@ public final class UsernamePasswordCredentialsResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username to be presented as part of the credentials.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

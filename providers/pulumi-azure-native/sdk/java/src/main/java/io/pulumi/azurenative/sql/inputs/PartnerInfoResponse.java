@@ -23,7 +23,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -45,7 +45,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="replicationRole", required=true)
       private final String replicationRole;
 
-    public String getReplicationRole() {
+    public String replicationRole() {
         return this.replicationRole;
     }
 

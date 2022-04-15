@@ -48,7 +48,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the activity count of the module.
      * 
      */
-    public Output</* @Nullable */ Integer> getActivityCount() {
+    public Output</* @Nullable */ Integer> activityCount() {
         return this.activityCount;
     }
     /**
@@ -62,7 +62,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the contentLink of the module.
      * 
      */
-    public Output</* @Nullable */ ContentLinkResponse> getContentLink() {
+    public Output</* @Nullable */ ContentLinkResponse> contentLink() {
         return this.contentLink;
     }
     /**
@@ -76,7 +76,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -90,7 +90,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the error info of the module.
      * 
      */
-    public Output</* @Nullable */ ModuleErrorInfoResponse> getError() {
+    public Output</* @Nullable */ ModuleErrorInfoResponse> error() {
         return this.error;
     }
     /**
@@ -118,7 +118,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -132,7 +132,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets type of module, if its composite or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsComposite() {
+    public Output</* @Nullable */ Boolean> isComposite() {
         return this.isComposite;
     }
     /**
@@ -146,7 +146,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the isGlobal flag of the module.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsGlobal() {
+    public Output</* @Nullable */ Boolean> isGlobal() {
         return this.isGlobal;
     }
     /**
@@ -160,7 +160,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -174,7 +174,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -188,7 +188,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -202,7 +202,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state of the module.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -216,7 +216,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the size in bytes of the module.
      * 
      */
-    public Output</* @Nullable */ Double> getSizeInBytes() {
+    public Output</* @Nullable */ Double> sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
@@ -230,7 +230,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -244,7 +244,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -258,7 +258,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the version of the module.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

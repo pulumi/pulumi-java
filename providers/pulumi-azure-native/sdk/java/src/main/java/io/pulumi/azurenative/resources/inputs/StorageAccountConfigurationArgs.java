@@ -26,7 +26,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     @Import(name="storageAccountKey")
       private final @Nullable Output<String> storageAccountKey;
 
-    public Output<String> getStorageAccountKey() {
+    public Output<String> storageAccountKey() {
         return this.storageAccountKey == null ? Codegen.empty() : this.storageAccountKey;
     }
 
@@ -37,7 +37,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 

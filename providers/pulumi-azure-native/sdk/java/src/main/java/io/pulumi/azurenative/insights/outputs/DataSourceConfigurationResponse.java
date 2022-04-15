@@ -43,21 +43,21 @@ public final class DataSourceConfigurationResponse {
      * Windows event logs configuration.
      * 
     */
-    public List<EventLogConfigurationResponse> getEventLogs() {
+    public List<EventLogConfigurationResponse> eventLogs() {
         return this.eventLogs == null ? List.of() : this.eventLogs;
     }
     /**
      * Performance counter configuration
      * 
     */
-    public List<PerformanceCounterConfigurationResponse> getPerfCounters() {
+    public List<PerformanceCounterConfigurationResponse> perfCounters() {
         return this.perfCounters == null ? List.of() : this.perfCounters;
     }
     /**
      * ETW providers configuration
      * 
     */
-    public List<EtwProviderConfigurationResponse> getProviders() {
+    public List<EtwProviderConfigurationResponse> providers() {
         return this.providers == null ? List.of() : this.providers;
     }
 

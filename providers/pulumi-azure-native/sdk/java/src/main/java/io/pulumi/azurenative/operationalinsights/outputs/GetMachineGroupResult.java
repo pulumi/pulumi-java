@@ -87,35 +87,35 @@ public final class GetMachineGroupResult {
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * User defined name for the group
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ETAG.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Type of the machine group
      * 
     */
-    public Optional<String> getGroupType() {
+    public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
      * Resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -123,28 +123,28 @@ public final class GetMachineGroupResult {
      * Expected value is 'machineGroup'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
     */
-    public List<MachineReferenceWithHintsResponse> getMachines() {
+    public List<MachineReferenceWithHintsResponse> machines() {
         return this.machines == null ? List.of() : this.machines;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

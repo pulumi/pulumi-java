@@ -43,21 +43,21 @@ public final class PolicyAssignmentPropertiesResponse {
      * Details of the policy
      * 
     */
-    public Optional<PolicyAssignmentPropertiesResponsePolicy> getPolicy() {
+    public Optional<PolicyAssignmentPropertiesResponsePolicy> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Details of role definition
      * 
     */
-    public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> getRoleDefinition() {
+    public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> roleDefinition() {
         return Optional.ofNullable(this.roleDefinition);
     }
     /**
      * Details of the resource scope
      * 
     */
-    public Optional<PolicyAssignmentPropertiesResponseScope> getScope() {
+    public Optional<PolicyAssignmentPropertiesResponseScope> scope() {
         return Optional.ofNullable(this.scope);
     }
 

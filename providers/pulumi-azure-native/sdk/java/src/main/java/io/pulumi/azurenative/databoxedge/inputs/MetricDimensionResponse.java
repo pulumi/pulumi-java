@@ -23,7 +23,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sourceName", required=true)
       private final String sourceName;
 
-    public String getSourceName() {
+    public String sourceName() {
         return this.sourceName;
     }
 
@@ -34,7 +34,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sourceType", required=true)
       private final String sourceType;
 
-    public String getSourceType() {
+    public String sourceType() {
         return this.sourceType;
     }
 

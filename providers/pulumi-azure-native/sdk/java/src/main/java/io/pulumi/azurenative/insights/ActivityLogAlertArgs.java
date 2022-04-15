@@ -27,7 +27,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="actions", required=true)
       private final Output<ActionListArgs> actions;
 
-    public Output<ActionListArgs> getActions() {
+    public Output<ActionListArgs> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="activityLogAlertName")
       private final @Nullable Output<String> activityLogAlertName;
 
-    public Output<String> getActivityLogAlertName() {
+    public Output<String> activityLogAlertName() {
         return this.activityLogAlertName == null ? Codegen.empty() : this.activityLogAlertName;
     }
 
@@ -49,7 +49,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition", required=true)
       private final Output<AlertRuleAllOfConditionArgs> condition;
 
-    public Output<AlertRuleAllOfConditionArgs> getCondition() {
+    public Output<AlertRuleAllOfConditionArgs> condition() {
         return this.condition;
     }
 
@@ -60,7 +60,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -82,7 +82,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
 
@@ -115,7 +115,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

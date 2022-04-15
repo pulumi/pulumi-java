@@ -25,7 +25,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="backupType", required=true)
       private final Output<String> backupType;
 
-    public Output<String> getBackupType() {
+    public Output<String> backupType() {
         return this.backupType;
     }
 
@@ -37,7 +37,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

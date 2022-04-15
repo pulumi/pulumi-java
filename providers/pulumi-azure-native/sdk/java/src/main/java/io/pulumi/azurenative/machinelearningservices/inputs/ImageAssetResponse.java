@@ -26,7 +26,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mimeType")
       private final @Nullable String mimeType;
 
-    public Optional<String> getMimeType() {
+    public Optional<String> mimeType() {
         return this.mimeType == null ? Optional.empty() : Optional.ofNullable(this.mimeType);
     }
 
@@ -48,7 +48,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="unpack")
       private final @Nullable Boolean unpack;
 
-    public Optional<Boolean> getUnpack() {
+    public Optional<Boolean> unpack() {
         return this.unpack == null ? Optional.empty() : Optional.ofNullable(this.unpack);
     }
 
@@ -59,7 +59,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

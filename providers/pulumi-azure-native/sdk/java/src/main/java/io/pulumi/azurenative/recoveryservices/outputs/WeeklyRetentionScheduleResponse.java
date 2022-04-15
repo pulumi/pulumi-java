@@ -43,21 +43,21 @@ public final class WeeklyRetentionScheduleResponse {
      * List of days of week for weekly retention policy.
      * 
     */
-    public List<String> getDaysOfTheWeek() {
+    public List<String> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
     /**
      * Retention duration of retention Policy.
      * 
     */
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Retention times of retention policy.
      * 
     */
-    public List<String> getRetentionTimes() {
+    public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
 

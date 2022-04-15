@@ -23,7 +23,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -34,7 +34,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Output<MonitoringTagRulesPropertiesArgs> getProperties() {
+    public Output<MonitoringTagRulesPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 

@@ -23,7 +23,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
 
-    public Output<String> getLinkName() {
+    public Output<String> linkName() {
         return this.linkName == null ? Codegen.empty() : this.linkName;
     }
 
@@ -34,7 +34,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<LinkedWorkspacePropsArgs> properties;
 
-    public Output<LinkedWorkspacePropsArgs> getProperties() {
+    public Output<LinkedWorkspacePropsArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

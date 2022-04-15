@@ -34,14 +34,14 @@ public final class AbsoluteClipTimeResponse {
      * Expected value is '#Microsoft.Media.AbsoluteClipTime'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
      * 
     */
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

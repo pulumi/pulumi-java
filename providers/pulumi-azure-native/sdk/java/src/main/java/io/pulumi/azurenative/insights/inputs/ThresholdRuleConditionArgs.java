@@ -32,7 +32,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="dataSource")
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -44,7 +44,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -55,7 +55,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="operator", required=true)
       private final Output<ConditionOperator> operator;
 
-    public Output<ConditionOperator> getOperator() {
+    public Output<ConditionOperator> operator() {
         return this.operator;
     }
 
@@ -66,7 +66,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold;
     }
 
@@ -77,7 +77,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="timeAggregation")
       private final @Nullable Output<TimeAggregationOperator> timeAggregation;
 
-    public Output<TimeAggregationOperator> getTimeAggregation() {
+    public Output<TimeAggregationOperator> timeAggregation() {
         return this.timeAggregation == null ? Codegen.empty() : this.timeAggregation;
     }
 
@@ -88,7 +88,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
-    public Output<String> getWindowSize() {
+    public Output<String> windowSize() {
         return this.windowSize == null ? Codegen.empty() : this.windowSize;
     }
 

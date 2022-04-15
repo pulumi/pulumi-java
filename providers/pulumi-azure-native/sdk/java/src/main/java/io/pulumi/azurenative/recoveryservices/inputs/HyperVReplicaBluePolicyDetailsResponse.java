@@ -26,7 +26,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="allowedAuthenticationType")
       private final @Nullable Integer allowedAuthenticationType;
 
-    public Optional<Integer> getAllowedAuthenticationType() {
+    public Optional<Integer> allowedAuthenticationType() {
         return this.allowedAuthenticationType == null ? Optional.empty() : Optional.ofNullable(this.allowedAuthenticationType);
     }
 
@@ -37,7 +37,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
-    public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
+    public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
@@ -48,7 +48,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="compression")
       private final @Nullable String compression;
 
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
@@ -59,7 +59,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="initialReplicationMethod")
       private final @Nullable String initialReplicationMethod;
 
-    public Optional<String> getInitialReplicationMethod() {
+    public Optional<String> initialReplicationMethod() {
         return this.initialReplicationMethod == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationMethod);
     }
 
@@ -71,7 +71,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -82,7 +82,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="offlineReplicationExportPath")
       private final @Nullable String offlineReplicationExportPath;
 
-    public Optional<String> getOfflineReplicationExportPath() {
+    public Optional<String> offlineReplicationExportPath() {
         return this.offlineReplicationExportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationExportPath);
     }
 
@@ -93,7 +93,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="offlineReplicationImportPath")
       private final @Nullable String offlineReplicationImportPath;
 
-    public Optional<String> getOfflineReplicationImportPath() {
+    public Optional<String> offlineReplicationImportPath() {
         return this.offlineReplicationImportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationImportPath);
     }
 
@@ -104,7 +104,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="onlineReplicationStartTime")
       private final @Nullable String onlineReplicationStartTime;
 
-    public Optional<String> getOnlineReplicationStartTime() {
+    public Optional<String> onlineReplicationStartTime() {
         return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
@@ -115,7 +115,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="recoveryPoints")
       private final @Nullable Integer recoveryPoints;
 
-    public Optional<Integer> getRecoveryPoints() {
+    public Optional<Integer> recoveryPoints() {
         return this.recoveryPoints == null ? Optional.empty() : Optional.ofNullable(this.recoveryPoints);
     }
 
@@ -126,7 +126,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="replicaDeletionOption")
       private final @Nullable String replicaDeletionOption;
 
-    public Optional<String> getReplicaDeletionOption() {
+    public Optional<String> replicaDeletionOption() {
         return this.replicaDeletionOption == null ? Optional.empty() : Optional.ofNullable(this.replicaDeletionOption);
     }
 
@@ -137,7 +137,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="replicationFrequencyInSeconds")
       private final @Nullable Integer replicationFrequencyInSeconds;
 
-    public Optional<Integer> getReplicationFrequencyInSeconds() {
+    public Optional<Integer> replicationFrequencyInSeconds() {
         return this.replicationFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.replicationFrequencyInSeconds);
     }
 
@@ -148,7 +148,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends io.pulumi.reso
     @Import(name="replicationPort")
       private final @Nullable Integer replicationPort;
 
-    public Optional<Integer> getReplicationPort() {
+    public Optional<Integer> replicationPort() {
         return this.replicationPort == null ? Optional.empty() : Optional.ofNullable(this.replicationPort);
     }
 

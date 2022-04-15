@@ -28,7 +28,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedRegions")
       private final @Nullable Output<List<String>> allowedRegions;
 
-    public Output<List<String>> getAllowedRegions() {
+    public Output<List<String>> allowedRegions() {
         return this.allowedRegions == null ? Codegen.empty() : this.allowedRegions;
     }
 
@@ -39,7 +39,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAutoShutdownProfile")
       private final @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
-    public Output<AutoShutdownProfileArgs> getDefaultAutoShutdownProfile() {
+    public Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile() {
         return this.defaultAutoShutdownProfile == null ? Codegen.empty() : this.defaultAutoShutdownProfile;
     }
 
@@ -50,7 +50,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultConnectionProfile")
       private final @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
 
-    public Output<ConnectionProfileArgs> getDefaultConnectionProfile() {
+    public Output<ConnectionProfileArgs> defaultConnectionProfile() {
         return this.defaultConnectionProfile == null ? Codegen.empty() : this.defaultConnectionProfile;
     }
 
@@ -61,7 +61,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultNetworkProfile")
       private final @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
-    public Output<LabPlanNetworkProfileArgs> getDefaultNetworkProfile() {
+    public Output<LabPlanNetworkProfileArgs> defaultNetworkProfile() {
         return this.defaultNetworkProfile == null ? Codegen.empty() : this.defaultNetworkProfile;
     }
 
@@ -72,7 +72,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labPlanName")
       private final @Nullable Output<String> labPlanName;
 
-    public Output<String> getLabPlanName() {
+    public Output<String> labPlanName() {
         return this.labPlanName == null ? Codegen.empty() : this.labPlanName;
     }
 
@@ -83,7 +83,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedLmsInstance")
       private final @Nullable Output<String> linkedLmsInstance;
 
-    public Output<String> getLinkedLmsInstance() {
+    public Output<String> linkedLmsInstance() {
         return this.linkedLmsInstance == null ? Codegen.empty() : this.linkedLmsInstance;
     }
 
@@ -94,7 +94,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -105,7 +105,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,7 +116,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedGalleryId")
       private final @Nullable Output<String> sharedGalleryId;
 
-    public Output<String> getSharedGalleryId() {
+    public Output<String> sharedGalleryId() {
         return this.sharedGalleryId == null ? Codegen.empty() : this.sharedGalleryId;
     }
 
@@ -127,7 +127,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportInfo")
       private final @Nullable Output<SupportInfoArgs> supportInfo;
 
-    public Output<SupportInfoArgs> getSupportInfo() {
+    public Output<SupportInfoArgs> supportInfo() {
         return this.supportInfo == null ? Codegen.empty() : this.supportInfo;
     }
 
@@ -138,7 +138,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

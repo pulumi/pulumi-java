@@ -26,7 +26,7 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
     @Import(name="allOf", required=true)
       private final Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
-    public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> getAllOf() {
+    public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf() {
         return this.allOf;
     }
 

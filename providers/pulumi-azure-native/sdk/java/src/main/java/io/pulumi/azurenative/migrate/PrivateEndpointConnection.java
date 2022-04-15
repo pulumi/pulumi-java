@@ -43,7 +43,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Name of the private endpoint endpoint connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Properties of the private endpoint endpoint connection.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

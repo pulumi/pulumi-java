@@ -31,7 +31,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -42,7 +42,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath;
     }
 
@@ -64,7 +64,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedService", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedService() {
+    public Output<LinkedServiceReferenceArgs> linkedService() {
         return this.linkedService;
     }
 
@@ -75,7 +75,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
 
-    public Output<Integer> getMaxConcurrency() {
+    public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -86,7 +86,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
         return this.pipelines == null ? Codegen.empty() : this.pipelines;
     }
 
@@ -98,7 +98,7 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

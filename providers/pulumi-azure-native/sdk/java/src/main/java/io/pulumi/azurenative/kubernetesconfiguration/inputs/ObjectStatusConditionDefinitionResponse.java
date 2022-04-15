@@ -25,7 +25,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
     @Import(name="lastTransitionTime")
       private final @Nullable String lastTransitionTime;
 
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return this.lastTransitionTime == null ? Optional.empty() : Optional.ofNullable(this.lastTransitionTime);
     }
 
@@ -36,7 +36,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -47,7 +47,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
     @Import(name="reason")
       private final @Nullable String reason;
 
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
     }
 
@@ -58,7 +58,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -69,7 +69,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

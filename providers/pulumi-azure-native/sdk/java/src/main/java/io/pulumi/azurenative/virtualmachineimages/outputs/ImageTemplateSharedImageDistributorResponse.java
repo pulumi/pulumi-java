@@ -73,42 +73,42 @@ public final class ImageTemplateSharedImageDistributorResponse {
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
     */
-    public Map<String,String> getArtifactTags() {
+    public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
      * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
      * 
     */
-    public Optional<Boolean> getExcludeFromLatest() {
+    public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
     /**
      * Resource Id of the Shared Image Gallery image
      * 
     */
-    public String getGalleryImageId() {
+    public String galleryImageId() {
         return this.galleryImageId;
     }
     /**
      * A list of regions that the image will be replicated to
      * 
     */
-    public List<String> getReplicationRegions() {
+    public List<String> replicationRegions() {
         return this.replicationRegions;
     }
     /**
      * The name to be used for the associated RunOutput.
      * 
     */
-    public String getRunOutputName() {
+    public String runOutputName() {
         return this.runOutputName;
     }
     /**
      * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
      * 
     */
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
@@ -116,7 +116,7 @@ public final class ImageTemplateSharedImageDistributorResponse {
      * Expected value is 'SharedImage'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

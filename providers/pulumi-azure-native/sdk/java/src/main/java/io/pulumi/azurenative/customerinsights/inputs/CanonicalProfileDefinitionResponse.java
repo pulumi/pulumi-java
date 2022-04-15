@@ -27,7 +27,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
     @Import(name="canonicalProfileId")
       private final @Nullable Integer canonicalProfileId;
 
-    public Optional<Integer> getCanonicalProfileId() {
+    public Optional<Integer> canonicalProfileId() {
         return this.canonicalProfileId == null ? Optional.empty() : Optional.ofNullable(this.canonicalProfileId);
     }
 
@@ -38,7 +38,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
     @Import(name="properties")
       private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
-    public List<CanonicalProfileDefinitionResponseProperties> getProperties() {
+    public List<CanonicalProfileDefinitionResponseProperties> properties() {
         return this.properties == null ? List.of() : this.properties;
     }
 

@@ -33,7 +33,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="administratorLogin", required=true)
       private final Output<String> administratorLogin;
 
-    public Output<String> getAdministratorLogin() {
+    public Output<String> administratorLogin() {
         return this.administratorLogin;
     }
 
@@ -44,7 +44,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="administratorLoginPassword", required=true)
       private final Output<String> administratorLoginPassword;
 
-    public Output<String> getAdministratorLoginPassword() {
+    public Output<String> administratorLoginPassword() {
         return this.administratorLoginPassword;
     }
 
@@ -56,7 +56,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
 
-    public Output<String> getCreateMode() {
+    public Output<String> createMode() {
         return this.createMode;
     }
 
@@ -67,7 +67,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
-    public Output<Either<String,InfrastructureEncryption>> getInfrastructureEncryption() {
+    public Output<Either<String,InfrastructureEncryption>> infrastructureEncryption() {
         return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
     }
 
@@ -78,7 +78,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
+    public Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion() {
         return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
@@ -89,7 +89,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -100,7 +100,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Output<SslEnforcementEnum> getSslEnforcement() {
+    public Output<SslEnforcementEnum> sslEnforcement() {
         return this.sslEnforcement == null ? Codegen.empty() : this.sslEnforcement;
     }
 
@@ -111,7 +111,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -122,7 +122,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Output<Either<String,ServerVersion>> getVersion() {
+    public Output<Either<String,ServerVersion>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

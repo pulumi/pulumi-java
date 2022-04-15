@@ -83,59 +83,59 @@ public final class UserFacingErrorResponse {
      * Unique code for this error
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Additional related Errors
      * 
     */
-    public List<UserFacingErrorResponse> getDetails() {
+    public List<UserFacingErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * Inner Error
      * 
     */
-    public Optional<InnerErrorResponse> getInnerError() {
+    public Optional<InnerErrorResponse> innerError() {
         return Optional.ofNullable(this.innerError);
     }
     /**
      * Whether the operation will be retryable or not
      * 
     */
-    public Optional<Boolean> getIsRetryable() {
+    public Optional<Boolean> isRetryable() {
         return Optional.ofNullable(this.isRetryable);
     }
     /**
      * Whether the operation is due to a user error or service error
      * 
     */
-    public Optional<Boolean> getIsUserError() {
+    public Optional<Boolean> isUserError() {
         return Optional.ofNullable(this.isUserError);
     }
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Any key value pairs that can be injected inside error object
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * RecommendedAction � localized.
      * 
     */
-    public List<String> getRecommendedAction() {
+    public List<String> recommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
     /**
      * Target of the error.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
 

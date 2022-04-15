@@ -41,14 +41,14 @@ public final class CredentialsResponse {
      * the value of the item will be the registry credentials for accessing the registry.
      * 
     */
-    public Map<String,CustomRegistryCredentialsResponse> getCustomRegistries() {
+    public Map<String,CustomRegistryCredentialsResponse> customRegistries() {
         return this.customRegistries == null ? Map.of() : this.customRegistries;
     }
     /**
      * Describes the credential parameters for accessing the source registry.
      * 
     */
-    public Optional<SourceRegistryCredentialsResponse> getSourceRegistry() {
+    public Optional<SourceRegistryCredentialsResponse> sourceRegistry() {
         return Optional.ofNullable(this.sourceRegistry);
     }
 

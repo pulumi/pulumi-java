@@ -76,56 +76,56 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse {
      * Method used to authenticate against the service bus topic endpoint
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The connection string of the service bus topic endpoint.
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The url of the service bus topic endpoint. It must include the protocol sb://
      * 
     */
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
      * Queue name on the service bus topic
      * 
     */
-    public Optional<String> getEntityPath() {
+    public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
      * Id of the service bus topic endpoint
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the resource group of the service bus topic endpoint.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The subscription identifier of the service bus topic endpoint.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 

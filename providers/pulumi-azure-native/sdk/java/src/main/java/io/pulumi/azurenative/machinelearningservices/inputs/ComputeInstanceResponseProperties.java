@@ -35,7 +35,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="applicationSharingPolicy")
       private final @Nullable String applicationSharingPolicy;
 
-    public Optional<String> getApplicationSharingPolicy() {
+    public Optional<String> applicationSharingPolicy() {
         return this.applicationSharingPolicy == null ? Optional.empty() : Optional.ofNullable(this.applicationSharingPolicy);
     }
 
@@ -46,7 +46,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="applications", required=true)
       private final List<ComputeInstanceApplicationResponse> applications;
 
-    public List<ComputeInstanceApplicationResponse> getApplications() {
+    public List<ComputeInstanceApplicationResponse> applications() {
         return this.applications;
     }
 
@@ -57,7 +57,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="computeInstanceAuthorizationType")
       private final @Nullable String computeInstanceAuthorizationType;
 
-    public Optional<String> getComputeInstanceAuthorizationType() {
+    public Optional<String> computeInstanceAuthorizationType() {
         return this.computeInstanceAuthorizationType == null ? Optional.empty() : Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
 
@@ -68,7 +68,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="connectivityEndpoints", required=true)
       private final ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
 
-    public ComputeInstanceConnectivityEndpointsResponse getConnectivityEndpoints() {
+    public ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints() {
         return this.connectivityEndpoints;
     }
 
@@ -79,7 +79,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="createdBy", required=true)
       private final ComputeInstanceCreatedByResponse createdBy;
 
-    public ComputeInstanceCreatedByResponse getCreatedBy() {
+    public ComputeInstanceCreatedByResponse createdBy() {
         return this.createdBy;
     }
 
@@ -90,7 +90,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="errors", required=true)
       private final List<MachineLearningServiceErrorResponse> errors;
 
-    public List<MachineLearningServiceErrorResponse> getErrors() {
+    public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
     }
 
@@ -101,7 +101,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="lastOperation", required=true)
       private final ComputeInstanceLastOperationResponse lastOperation;
 
-    public ComputeInstanceLastOperationResponse getLastOperation() {
+    public ComputeInstanceLastOperationResponse lastOperation() {
         return this.lastOperation;
     }
 
@@ -112,7 +112,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="personalComputeInstanceSettings")
       private final @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
 
-    public Optional<PersonalComputeInstanceSettingsResponse> getPersonalComputeInstanceSettings() {
+    public Optional<PersonalComputeInstanceSettingsResponse> personalComputeInstanceSettings() {
         return this.personalComputeInstanceSettings == null ? Optional.empty() : Optional.ofNullable(this.personalComputeInstanceSettings);
     }
 
@@ -123,7 +123,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="setupScripts")
       private final @Nullable SetupScriptsResponse setupScripts;
 
-    public Optional<SetupScriptsResponse> getSetupScripts() {
+    public Optional<SetupScriptsResponse> setupScripts() {
         return this.setupScripts == null ? Optional.empty() : Optional.ofNullable(this.setupScripts);
     }
 
@@ -134,7 +134,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="sshSettings")
       private final @Nullable ComputeInstanceSshSettingsResponse sshSettings;
 
-    public Optional<ComputeInstanceSshSettingsResponse> getSshSettings() {
+    public Optional<ComputeInstanceSshSettingsResponse> sshSettings() {
         return this.sshSettings == null ? Optional.empty() : Optional.ofNullable(this.sshSettings);
     }
 
@@ -145,7 +145,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -156,7 +156,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="subnet")
       private final @Nullable ResourceIdResponse subnet;
 
-    public Optional<ResourceIdResponse> getSubnet() {
+    public Optional<ResourceIdResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -167,7 +167,7 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     @Import(name="vmSize")
       private final @Nullable String vmSize;
 
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 

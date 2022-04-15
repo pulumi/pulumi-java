@@ -63,7 +63,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile of Azure Active Directory configuration.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterAADProfileResponse> getAadProfile() {
+    public Output</* @Nullable */ ManagedClusterAADProfileResponse> aadProfile() {
         return this.aadProfile;
     }
     /**
@@ -77,7 +77,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile of managed cluster add-on.
      * 
      */
-    public Output</* @Nullable */ Map<String,ManagedClusterAddonProfileResponse>> getAddonProfiles() {
+    public Output</* @Nullable */ Map<String,ManagedClusterAddonProfileResponse>> addonProfiles() {
         return this.addonProfiles;
     }
     /**
@@ -91,7 +91,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Properties of the agent pool.
      * 
      */
-    public Output</* @Nullable */ List<ManagedClusterAgentPoolProfileResponse>> getAgentPoolProfiles() {
+    public Output</* @Nullable */ List<ManagedClusterAgentPoolProfileResponse>> agentPoolProfiles() {
         return this.agentPoolProfiles;
     }
     /**
@@ -105,7 +105,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Access profile for managed cluster API server.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterAPIServerAccessProfileResponse> getApiServerAccessProfile() {
+    public Output</* @Nullable */ ManagedClusterAPIServerAccessProfileResponse> apiServerAccessProfile() {
         return this.apiServerAccessProfile;
     }
     /**
@@ -119,7 +119,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Parameters to be applied to the cluster-autoscaler when enabled
      * 
      */
-    public Output</* @Nullable */ ManagedClusterPropertiesResponseAutoScalerProfile> getAutoScalerProfile() {
+    public Output</* @Nullable */ ManagedClusterPropertiesResponseAutoScalerProfile> autoScalerProfile() {
         return this.autoScalerProfile;
     }
     /**
@@ -133,7 +133,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile of auto upgrade configuration.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterAutoUpgradeProfileResponse> getAutoUpgradeProfile() {
+    public Output</* @Nullable */ ManagedClusterAutoUpgradeProfileResponse> autoUpgradeProfile() {
         return this.autoUpgradeProfile;
     }
     /**
@@ -147,7 +147,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return FQDN for the master pool which used by proxy config.
      * 
      */
-    public Output<String> getAzurePortalFQDN() {
+    public Output<String> azurePortalFQDN() {
         return this.azurePortalFQDN;
     }
     /**
@@ -161,7 +161,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableLocalAccounts() {
+    public Output</* @Nullable */ Boolean> disableLocalAccounts() {
         return this.disableLocalAccounts;
     }
     /**
@@ -175,7 +175,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
-    public Output</* @Nullable */ String> getDiskEncryptionSetID() {
+    public Output</* @Nullable */ String> diskEncryptionSetID() {
         return this.diskEncryptionSetID;
     }
     /**
@@ -189,7 +189,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return DNS prefix specified when creating the managed cluster.
      * 
      */
-    public Output</* @Nullable */ String> getDnsPrefix() {
+    public Output</* @Nullable */ String> dnsPrefix() {
         return this.dnsPrefix;
     }
     /**
@@ -203,7 +203,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePodSecurityPolicy() {
+    public Output</* @Nullable */ Boolean> enablePodSecurityPolicy() {
         return this.enablePodSecurityPolicy;
     }
     /**
@@ -217,7 +217,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Whether to enable Kubernetes Role-Based Access Control.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableRBAC() {
+    public Output</* @Nullable */ Boolean> enableRBAC() {
         return this.enableRBAC;
     }
     /**
@@ -231,7 +231,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The extended location of the Virtual Machine.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -245,7 +245,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return FQDN for the master pool.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -259,7 +259,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return FQDN subdomain specified when creating private cluster with custom private dns zone.
      * 
      */
-    public Output</* @Nullable */ String> getFqdnSubdomain() {
+    public Output</* @Nullable */ String> fqdnSubdomain() {
         return this.fqdnSubdomain;
     }
     /**
@@ -273,7 +273,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Configurations for provisioning the cluster with HTTP proxy servers.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterHTTPProxyConfigResponse> getHttpProxyConfig() {
+    public Output</* @Nullable */ ManagedClusterHTTPProxyConfigResponse> httpProxyConfig() {
         return this.httpProxyConfig;
     }
     /**
@@ -287,7 +287,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The identity of the managed cluster, if configured.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedClusterIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -301,7 +301,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Identities associated with the cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,ManagedClusterPropertiesResponseIdentityProfile>> getIdentityProfile() {
+    public Output</* @Nullable */ Map<String,ManagedClusterPropertiesResponseIdentityProfile>> identityProfile() {
         return this.identityProfile;
     }
     /**
@@ -315,7 +315,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Version of Kubernetes specified when creating the managed cluster.
      * 
      */
-    public Output</* @Nullable */ String> getKubernetesVersion() {
+    public Output</* @Nullable */ String> kubernetesVersion() {
         return this.kubernetesVersion;
     }
     /**
@@ -329,7 +329,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile for Linux VMs in the container service cluster.
      * 
      */
-    public Output</* @Nullable */ ContainerServiceLinuxProfileResponse> getLinuxProfile() {
+    public Output</* @Nullable */ ContainerServiceLinuxProfileResponse> linuxProfile() {
         return this.linuxProfile;
     }
     /**
@@ -343,7 +343,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -357,7 +357,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The max number of agent pools for the managed cluster.
      * 
      */
-    public Output<Integer> getMaxAgentPools() {
+    public Output<Integer> maxAgentPools() {
         return this.maxAgentPools;
     }
     /**
@@ -371,7 +371,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -385,7 +385,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile of network configuration.
      * 
      */
-    public Output</* @Nullable */ ContainerServiceNetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ ContainerServiceNetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -399,7 +399,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Name of the resource group containing agent pool nodes.
      * 
      */
-    public Output</* @Nullable */ String> getNodeResourceGroup() {
+    public Output</* @Nullable */ String> nodeResourceGroup() {
         return this.nodeResourceGroup;
     }
     /**
@@ -413,7 +413,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile of managed cluster pod identity.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterPodIdentityProfileResponse> getPodIdentityProfile() {
+    public Output</* @Nullable */ ManagedClusterPodIdentityProfileResponse> podIdentityProfile() {
         return this.podIdentityProfile;
     }
     /**
@@ -427,7 +427,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Represents the Power State of the cluster
      * 
      */
-    public Output<PowerStateResponse> getPowerState() {
+    public Output<PowerStateResponse> powerState() {
         return this.powerState;
     }
     /**
@@ -441,7 +441,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return FQDN of private cluster.
      * 
      */
-    public Output<String> getPrivateFQDN() {
+    public Output<String> privateFQDN() {
         return this.privateFQDN;
     }
     /**
@@ -455,7 +455,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Private link resources associated with the cluster.
      * 
      */
-    public Output</* @Nullable */ List<PrivateLinkResourceResponse>> getPrivateLinkResources() {
+    public Output</* @Nullable */ List<PrivateLinkResourceResponse>> privateLinkResources() {
         return this.privateLinkResources;
     }
     /**
@@ -469,7 +469,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -483,7 +483,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Information about a service principal identity for the cluster to use for manipulating Azure APIs.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterServicePrincipalProfileResponse> getServicePrincipalProfile() {
+    public Output</* @Nullable */ ManagedClusterServicePrincipalProfileResponse> servicePrincipalProfile() {
         return this.servicePrincipalProfile;
     }
     /**
@@ -497,7 +497,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The managed cluster SKU.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterSKUResponse> getSku() {
+    public Output</* @Nullable */ ManagedClusterSKUResponse> sku() {
         return this.sku;
     }
     /**
@@ -511,7 +511,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -525,7 +525,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -539,7 +539,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Profile for Windows VMs in the container service cluster.
      * 
      */
-    public Output</* @Nullable */ ManagedClusterWindowsProfileResponse> getWindowsProfile() {
+    public Output</* @Nullable */ ManagedClusterWindowsProfileResponse> windowsProfile() {
         return this.windowsProfile;
     }
 

@@ -42,7 +42,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * @return The IP Filter Action
      * 
      */
-    public Output</* @Nullable */ String> getAction() {
+    public Output</* @Nullable */ String> action() {
         return this.action;
     }
     /**
@@ -56,7 +56,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * @return IP Filter name
      * 
      */
-    public Output</* @Nullable */ String> getFilterName() {
+    public Output</* @Nullable */ String> filterName() {
         return this.filterName;
     }
     /**
@@ -70,7 +70,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * @return IP Mask
      * 
      */
-    public Output</* @Nullable */ String> getIpMask() {
+    public Output</* @Nullable */ String> ipMask() {
         return this.ipMask;
     }
     /**
@@ -84,7 +84,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

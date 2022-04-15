@@ -27,7 +27,7 @@ public final class KafkaRestPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="clientGroupInfo")
       private final @Nullable ClientGroupInfoResponse clientGroupInfo;
 
-    public Optional<ClientGroupInfoResponse> getClientGroupInfo() {
+    public Optional<ClientGroupInfoResponse> clientGroupInfo() {
         return this.clientGroupInfo == null ? Optional.empty() : Optional.ofNullable(this.clientGroupInfo);
     }
 
@@ -38,7 +38,7 @@ public final class KafkaRestPropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="configurationOverride")
       private final @Nullable Map<String,String> configurationOverride;
 
-    public Map<String,String> getConfigurationOverride() {
+    public Map<String,String> configurationOverride() {
         return this.configurationOverride == null ? Map.of() : this.configurationOverride;
     }
 

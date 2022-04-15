@@ -44,7 +44,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDependsOn() {
+    public Output</* @Nullable */ List<String>> dependsOn() {
         return this.dependsOn;
     }
     /**
@@ -58,7 +58,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +88,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * Expected value is 'policyAssignment'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -102,7 +102,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Parameter values for the policy definition.
      * 
      */
-    public Output<Map<String,ParameterValueResponse>> getParameters() {
+    public Output<Map<String,ParameterValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -130,7 +130,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Azure resource ID of the policy definition.
      * 
      */
-    public Output<String> getPolicyDefinitionId() {
+    public Output<String> policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
@@ -144,7 +144,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Name of the resource group placeholder to which the policy will be assigned.
      * 
      */
-    public Output</* @Nullable */ String> getResourceGroup() {
+    public Output</* @Nullable */ String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -158,7 +158,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

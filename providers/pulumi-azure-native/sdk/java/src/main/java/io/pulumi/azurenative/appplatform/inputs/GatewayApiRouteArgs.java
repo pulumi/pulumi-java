@@ -29,7 +29,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> getFilters() {
+    public Output<List<String>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 
@@ -51,7 +51,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -62,7 +62,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="predicates")
       private final @Nullable Output<List<String>> predicates;
 
-    public Output<List<String>> getPredicates() {
+    public Output<List<String>> predicates() {
         return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
@@ -73,7 +73,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ssoEnabled")
       private final @Nullable Output<Boolean> ssoEnabled;
 
-    public Output<Boolean> getSsoEnabled() {
+    public Output<Boolean> ssoEnabled() {
         return this.ssoEnabled == null ? Codegen.empty() : this.ssoEnabled;
     }
 
@@ -84,7 +84,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -95,7 +95,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -106,7 +106,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tokenRelay")
       private final @Nullable Output<Boolean> tokenRelay;
 
-    public Output<Boolean> getTokenRelay() {
+    public Output<Boolean> tokenRelay() {
         return this.tokenRelay == null ? Codegen.empty() : this.tokenRelay;
     }
 
@@ -117,7 +117,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

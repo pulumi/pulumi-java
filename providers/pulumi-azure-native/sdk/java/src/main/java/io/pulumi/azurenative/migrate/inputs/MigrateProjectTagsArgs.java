@@ -22,7 +22,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="additionalProperties")
       private final @Nullable Output<String> additionalProperties;
 
-    public Output<String> getAdditionalProperties() {
+    public Output<String> additionalProperties() {
         return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
     }
 

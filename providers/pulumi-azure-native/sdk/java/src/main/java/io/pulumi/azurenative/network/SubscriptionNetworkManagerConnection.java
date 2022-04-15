@@ -43,7 +43,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return A description of the scope connection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return Network Manager Id.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkManagerId() {
+    public Output</* @Nullable */ String> networkManagerId() {
         return this.networkManagerId;
     }
     /**
@@ -99,7 +99,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -113,7 +113,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

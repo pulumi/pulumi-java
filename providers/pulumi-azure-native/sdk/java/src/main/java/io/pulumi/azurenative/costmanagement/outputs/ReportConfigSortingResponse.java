@@ -34,14 +34,14 @@ public final class ReportConfigSortingResponse {
      * Direction of sort.
      * 
     */
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * The name of the column to sort.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

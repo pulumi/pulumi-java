@@ -24,7 +24,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auxiliaryTenantIds", json=true)
       private final @Nullable Output<List<String>> auxiliaryTenantIds;
 
-    public Output<List<String>> getAuxiliaryTenantIds() {
+    public Output<List<String>> auxiliaryTenantIds() {
         return this.auxiliaryTenantIds == null ? Codegen.empty() : this.auxiliaryTenantIds;
     }
 
@@ -35,7 +35,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificatePassword")
       private final @Nullable Output<String> clientCertificatePassword;
 
-    public Output<String> getClientCertificatePassword() {
+    public Output<String> clientCertificatePassword() {
         return this.clientCertificatePassword == null ? Codegen.empty() : this.clientCertificatePassword;
     }
 
@@ -46,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificatePath")
       private final @Nullable Output<String> clientCertificatePath;
 
-    public Output<String> getClientCertificatePath() {
+    public Output<String> clientCertificatePath() {
         return this.clientCertificatePath == null ? Codegen.empty() : this.clientCertificatePath;
     }
 
@@ -57,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -68,7 +68,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -79,7 +79,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disablePulumiPartnerId", json=true)
       private final @Nullable Output<Boolean> disablePulumiPartnerId;
 
-    public Output<Boolean> getDisablePulumiPartnerId() {
+    public Output<Boolean> disablePulumiPartnerId() {
         return this.disablePulumiPartnerId == null ? Codegen.empty() : this.disablePulumiPartnerId;
     }
 
@@ -90,7 +90,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -101,7 +101,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msiEndpoint")
       private final @Nullable Output<String> msiEndpoint;
 
-    public Output<String> getMsiEndpoint() {
+    public Output<String> msiEndpoint() {
         return this.msiEndpoint == null ? Codegen.empty() : this.msiEndpoint;
     }
 
@@ -112,7 +112,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;
 
-    public Output<String> getPartnerId() {
+    public Output<String> partnerId() {
         return this.partnerId == null ? Codegen.empty() : this.partnerId;
     }
 
@@ -123,7 +123,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -134,7 +134,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -145,7 +145,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="useMsi", json=true)
       private final @Nullable Output<Boolean> useMsi;
 
-    public Output<Boolean> getUseMsi() {
+    public Output<Boolean> useMsi() {
         return this.useMsi == null ? Codegen.empty() : this.useMsi;
     }
 

@@ -19,7 +19,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryPackName", required=true)
       private final String queryPackName;
 
-    public String getQueryPackName() {
+    public String queryPackName() {
         return this.queryPackName;
     }
 
@@ -30,7 +30,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

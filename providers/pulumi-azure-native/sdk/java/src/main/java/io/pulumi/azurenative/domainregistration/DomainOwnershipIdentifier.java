@@ -40,7 +40,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -54,7 +54,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @return Ownership Id.
      * 
      */
-    public Output</* @Nullable */ String> getOwnershipId() {
+    public Output</* @Nullable */ String> ownershipId() {
         return this.ownershipId;
     }
     /**
@@ -82,7 +82,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -96,7 +96,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

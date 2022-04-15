@@ -94,70 +94,70 @@ public final class GetExportResult {
      * Has the definition for the export.
      * 
     */
-    public ExportDefinitionResponse getDefinition() {
+    public ExportDefinitionResponse definition() {
         return this.definition;
     }
     /**
      * Has delivery information for the export.
      * 
     */
-    public ExportDeliveryInfoResponse getDeliveryInfo() {
+    public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * If the export has an active schedule, provides an estimate of the next execution time.
      * 
     */
-    public String getNextRunTimeEstimate() {
+    public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
     /**
      * If requested, has the most recent execution history for the export.
      * 
     */
-    public Optional<ExportExecutionListResultResponse> getRunHistory() {
+    public Optional<ExportExecutionListResultResponse> runHistory() {
         return Optional.ofNullable(this.runHistory);
     }
     /**
      * Has schedule information for the export.
      * 
     */
-    public Optional<ExportScheduleResponse> getSchedule() {
+    public Optional<ExportScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

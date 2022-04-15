@@ -128,42 +128,42 @@ public final class GetIoTHubEventSourceResult {
      * The name of the iot hub's consumer group that holds the partitions from which events will be read.
      * 
     */
-    public String getConsumerGroupName() {
+    public String consumerGroupName() {
         return this.consumerGroupName;
     }
     /**
      * The time the resource was created.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The resource id of the event source in Azure Resource Manager.
      * 
     */
-    public String getEventSourceResourceId() {
+    public String eventSourceResourceId() {
         return this.eventSourceResourceId;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the iot hub.
      * 
     */
-    public String getIotHubName() {
+    public String iotHubName() {
         return this.iotHubName;
     }
     /**
      * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
@@ -171,63 +171,63 @@ public final class GetIoTHubEventSourceResult {
      * Expected value is 'Microsoft.IoTHub'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
     */
-    public Optional<LocalTimestampResponse> getLocalTimestamp() {
+    public Optional<LocalTimestampResponse> localTimestamp() {
         return Optional.ofNullable(this.localTimestamp);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
      * 
     */
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
     /**
      * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
     */
-    public Optional<String> getTimestampPropertyName() {
+    public Optional<String> timestampPropertyName() {
         return Optional.ofNullable(this.timestampPropertyName);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -41,21 +41,21 @@ public final class RelationshipLinkFieldMappingResponse {
      * The field name on the Interaction Type.
      * 
     */
-    public String getInteractionFieldName() {
+    public String interactionFieldName() {
         return this.interactionFieldName;
     }
     /**
      * Link type.
      * 
     */
-    public Optional<String> getLinkType() {
+    public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      * The field name on the Relationship metadata.
      * 
     */
-    public String getRelationshipFieldName() {
+    public String relationshipFieldName() {
         return this.relationshipFieldName;
     }
 

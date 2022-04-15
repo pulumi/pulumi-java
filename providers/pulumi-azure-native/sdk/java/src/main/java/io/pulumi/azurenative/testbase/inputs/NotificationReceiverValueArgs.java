@@ -28,7 +28,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
     @Import(name="distributionGroupListReceiverValue")
       private final @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
 
-    public Output<DistributionGroupListReceiverValueArgs> getDistributionGroupListReceiverValue() {
+    public Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue() {
         return this.distributionGroupListReceiverValue == null ? Codegen.empty() : this.distributionGroupListReceiverValue;
     }
 
@@ -39,7 +39,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
     @Import(name="subscriptionReceiverValue")
       private final @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
 
-    public Output<SubscriptionReceiverValueArgs> getSubscriptionReceiverValue() {
+    public Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue() {
         return this.subscriptionReceiverValue == null ? Codegen.empty() : this.subscriptionReceiverValue;
     }
 
@@ -50,7 +50,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
     @Import(name="userObjectReceiverValue")
       private final @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
 
-    public Output<UserObjectReceiverValueArgs> getUserObjectReceiverValue() {
+    public Output<UserObjectReceiverValueArgs> userObjectReceiverValue() {
         return this.userObjectReceiverValue == null ? Codegen.empty() : this.userObjectReceiverValue;
     }
 

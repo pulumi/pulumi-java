@@ -35,14 +35,14 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
      * Mapping from certificate name to base 64 encoded format.
      * 
     */
-    public Map<String,List<String>> getBase64EncodedCertificates() {
+    public Map<String,List<String>> base64EncodedCertificates() {
         return this.base64EncodedCertificates;
     }
     /**
      * Validation errors
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

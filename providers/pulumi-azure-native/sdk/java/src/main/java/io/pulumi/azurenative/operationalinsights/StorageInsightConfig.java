@@ -45,7 +45,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The names of the blob containers that the workspace should read
      * 
      */
-    public Output</* @Nullable */ List<String>> getContainers() {
+    public Output</* @Nullable */ List<String>> containers() {
         return this.containers;
     }
     /**
@@ -59,7 +59,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The ETag of the storage insight.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -73,7 +73,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The status of the storage insight
      * 
      */
-    public Output<StorageInsightStatusResponse> getStatus() {
+    public Output<StorageInsightStatusResponse> status() {
         return this.status;
     }
     /**
@@ -101,7 +101,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The storage account connection details
      * 
      */
-    public Output<StorageAccountResponse> getStorageAccount() {
+    public Output<StorageAccountResponse> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -115,7 +115,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The names of the Azure tables that the workspace should read
      * 
      */
-    public Output</* @Nullable */ List<String>> getTables() {
+    public Output</* @Nullable */ List<String>> tables() {
         return this.tables;
     }
     /**
@@ -129,7 +129,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

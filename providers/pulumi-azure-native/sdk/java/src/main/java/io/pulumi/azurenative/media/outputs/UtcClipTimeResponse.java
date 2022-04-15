@@ -34,14 +34,14 @@ public final class UtcClipTimeResponse {
      * Expected value is '#Microsoft.Media.UtcClipTime'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The time position on the timeline of the input media based on Utc time.
      * 
     */
-    public String getTime() {
+    public String time() {
         return this.time;
     }
 

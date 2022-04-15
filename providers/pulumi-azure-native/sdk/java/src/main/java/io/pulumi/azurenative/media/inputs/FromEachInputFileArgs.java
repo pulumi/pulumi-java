@@ -34,7 +34,7 @@ public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="includedTracks")
       private final @Nullable Output<List<Object>> includedTracks;
 
-    public Output<List<Object>> getIncludedTracks() {
+    public Output<List<Object>> includedTracks() {
         return this.includedTracks == null ? Codegen.empty() : this.includedTracks;
     }
 
@@ -46,7 +46,7 @@ public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

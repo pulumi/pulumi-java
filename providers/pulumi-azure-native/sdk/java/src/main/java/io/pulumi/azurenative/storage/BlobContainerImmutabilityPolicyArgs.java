@@ -24,7 +24,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="allowProtectedAppendWrites")
       private final @Nullable Output<Boolean> allowProtectedAppendWrites;
 
-    public Output<Boolean> getAllowProtectedAppendWrites() {
+    public Output<Boolean> allowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites == null ? Codegen.empty() : this.allowProtectedAppendWrites;
     }
 
@@ -46,7 +46,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -57,7 +57,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="immutabilityPeriodSinceCreationInDays")
       private final @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays;
 
-    public Output<Integer> getImmutabilityPeriodSinceCreationInDays() {
+    public Output<Integer> immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays == null ? Codegen.empty() : this.immutabilityPeriodSinceCreationInDays;
     }
 
@@ -68,7 +68,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="immutabilityPolicyName")
       private final @Nullable Output<String> immutabilityPolicyName;
 
-    public Output<String> getImmutabilityPolicyName() {
+    public Output<String> immutabilityPolicyName() {
         return this.immutabilityPolicyName == null ? Codegen.empty() : this.immutabilityPolicyName;
     }
 
@@ -79,7 +79,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

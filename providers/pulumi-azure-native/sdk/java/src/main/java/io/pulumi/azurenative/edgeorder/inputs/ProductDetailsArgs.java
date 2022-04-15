@@ -25,7 +25,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hierarchyInformation", required=true)
       private final Output<HierarchyInformationArgs> hierarchyInformation;
 
-    public Output<HierarchyInformationArgs> getHierarchyInformation() {
+    public Output<HierarchyInformationArgs> hierarchyInformation() {
         return this.hierarchyInformation;
     }
 

@@ -43,7 +43,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The error message for validation state
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -57,7 +57,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The list of events for peering service prefix
      * 
      */
-    public Output<List<PeeringServicePrefixEventResponse>> getEvents() {
+    public Output<List<PeeringServicePrefixEventResponse>> events() {
         return this.events;
     }
     /**
@@ -71,7 +71,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The prefix learned type
      * 
      */
-    public Output<String> getLearnedType() {
+    public Output<String> learnedType() {
         return this.learnedType;
     }
     /**
@@ -85,7 +85,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The peering service prefix key
      * 
      */
-    public Output</* @Nullable */ String> getPeeringServicePrefixKey() {
+    public Output</* @Nullable */ String> peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
@@ -113,7 +113,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The prefix from which your traffic originates.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
     /**
@@ -127,7 +127,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The prefix validation state
      * 
      */
-    public Output<String> getPrefixValidationState() {
+    public Output<String> prefixValidationState() {
         return this.prefixValidationState;
     }
     /**
@@ -141,7 +141,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +155,7 @@ public class Prefix extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     @Import(name="widevineTemplate", required=true)
       private final Output<String> widevineTemplate;
 
-    public Output<String> getWidevineTemplate() {
+    public Output<String> widevineTemplate() {
         return this.widevineTemplate;
     }
 

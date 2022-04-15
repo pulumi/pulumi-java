@@ -25,7 +25,7 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
     @Import(name="targetId")
       private final @Nullable String targetId;
 
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
     }
 

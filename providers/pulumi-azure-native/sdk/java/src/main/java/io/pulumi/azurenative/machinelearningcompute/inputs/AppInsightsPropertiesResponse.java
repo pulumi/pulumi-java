@@ -25,7 +25,7 @@ public final class AppInsightsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

@@ -35,14 +35,14 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
      * Value that indicates whether to ignore missing VNet Service Endpoint
      * 
     */
-    public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * Subnet properties
      * 
     */
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

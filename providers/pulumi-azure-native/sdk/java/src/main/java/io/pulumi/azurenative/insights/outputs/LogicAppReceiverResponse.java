@@ -49,28 +49,28 @@ public final class LogicAppReceiverResponse {
      * The callback url where http request sent to.
      * 
     */
-    public String getCallbackUrl() {
+    public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
      * The name of the logic app receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The azure resource id of the logic app receiver.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * Indicates whether to use common alert schema.
      * 
     */
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
 

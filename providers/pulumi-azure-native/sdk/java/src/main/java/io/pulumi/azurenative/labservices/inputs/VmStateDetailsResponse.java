@@ -23,7 +23,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lastKnownPowerState", required=true)
       private final String lastKnownPowerState;
 
-    public String getLastKnownPowerState() {
+    public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
 
@@ -34,7 +34,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="powerState", required=true)
       private final String powerState;
 
-    public String getPowerState() {
+    public String powerState() {
         return this.powerState;
     }
 
@@ -45,7 +45,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
-    public String getRdpAuthority() {
+    public String rdpAuthority() {
         return this.rdpAuthority;
     }
 
@@ -56,7 +56,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
-    public String getSshAuthority() {
+    public String sshAuthority() {
         return this.sshAuthority;
     }
 

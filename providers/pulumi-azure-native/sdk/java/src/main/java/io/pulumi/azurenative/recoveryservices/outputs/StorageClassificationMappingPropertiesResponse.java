@@ -26,7 +26,7 @@ public final class StorageClassificationMappingPropertiesResponse {
      * Target storage object Id.
      * 
     */
-    public Optional<String> getTargetStorageClassificationId() {
+    public Optional<String> targetStorageClassificationId() {
         return Optional.ofNullable(this.targetStorageClassificationId);
     }
 

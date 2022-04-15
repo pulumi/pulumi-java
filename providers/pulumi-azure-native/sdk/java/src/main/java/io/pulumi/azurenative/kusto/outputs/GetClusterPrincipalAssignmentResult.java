@@ -90,70 +90,70 @@ public final class GetClusterPrincipalAssignmentResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The principal name
      * 
     */
-    public String getPrincipalName() {
+    public String principalName() {
         return this.principalName;
     }
     /**
      * Principal type.
      * 
     */
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Cluster principal role.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The tenant id of the principal
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The tenant name of the principal
      * 
     */
-    public String getTenantName() {
+    public String tenantName() {
         return this.tenantName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

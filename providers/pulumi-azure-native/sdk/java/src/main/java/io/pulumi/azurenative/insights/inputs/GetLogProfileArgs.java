@@ -19,7 +19,7 @@ public final class GetLogProfileArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="logProfileName", required=true)
       private final String logProfileName;
 
-    public String getLogProfileName() {
+    public String logProfileName() {
         return this.logProfileName;
     }
 

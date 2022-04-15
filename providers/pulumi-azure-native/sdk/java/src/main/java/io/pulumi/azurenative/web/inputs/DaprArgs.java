@@ -30,7 +30,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -41,7 +41,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appPort")
       private final @Nullable Output<Integer> appPort;
 
-    public Output<Integer> getAppPort() {
+    public Output<Integer> appPort() {
         return this.appPort == null ? Codegen.empty() : this.appPort;
     }
 
@@ -52,7 +52,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="components")
       private final @Nullable Output<List<DaprComponentArgs>> components;
 
-    public Output<List<DaprComponentArgs>> getComponents() {
+    public Output<List<DaprComponentArgs>> components() {
         return this.components == null ? Codegen.empty() : this.components;
     }
 
@@ -63,7 +63,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

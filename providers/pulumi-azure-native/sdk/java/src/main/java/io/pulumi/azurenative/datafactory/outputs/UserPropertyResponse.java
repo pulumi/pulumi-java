@@ -33,14 +33,14 @@ public final class UserPropertyResponse {
      * User property name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * User property value. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

@@ -26,7 +26,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
     @Import(name="lockDurationAsIso8601")
       private final @Nullable String lockDurationAsIso8601;
 
-    public Optional<String> getLockDurationAsIso8601() {
+    public Optional<String> lockDurationAsIso8601() {
         return this.lockDurationAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.lockDurationAsIso8601);
     }
 
@@ -37,7 +37,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
     @Import(name="maxDeliveryCount")
       private final @Nullable Integer maxDeliveryCount;
 
-    public Optional<Integer> getMaxDeliveryCount() {
+    public Optional<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
     }
 
@@ -48,7 +48,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
     @Import(name="ttlAsIso8601")
       private final @Nullable String ttlAsIso8601;
 
-    public Optional<String> getTtlAsIso8601() {
+    public Optional<String> ttlAsIso8601() {
         return this.ttlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.ttlAsIso8601);
     }
 

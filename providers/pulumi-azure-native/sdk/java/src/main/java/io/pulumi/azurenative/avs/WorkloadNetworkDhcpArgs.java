@@ -25,7 +25,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="dhcpId")
       private final @Nullable Output<String> dhcpId;
 
-    public Output<String> getDhcpId() {
+    public Output<String> dhcpId() {
         return this.dhcpId == null ? Codegen.empty() : this.dhcpId;
     }
 
@@ -36,7 +36,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="dhcpType", required=true)
       private final Output<Either<String,DhcpTypeEnum>> dhcpType;
 
-    public Output<Either<String,DhcpTypeEnum>> getDhcpType() {
+    public Output<Either<String,DhcpTypeEnum>> dhcpType() {
         return this.dhcpType;
     }
 
@@ -47,7 +47,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -69,7 +69,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 

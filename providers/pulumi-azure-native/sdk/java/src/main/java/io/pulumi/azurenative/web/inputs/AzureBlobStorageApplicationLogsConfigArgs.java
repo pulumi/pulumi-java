@@ -28,7 +28,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
+    public Output<LogLevel> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -41,7 +41,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -52,7 +52,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="sasUrl")
       private final @Nullable Output<String> sasUrl;
 
-    public Output<String> getSasUrl() {
+    public Output<String> sasUrl() {
         return this.sasUrl == null ? Codegen.empty() : this.sasUrl;
     }
 

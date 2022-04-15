@@ -25,7 +25,7 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
     @Import(name="request")
       private final @Nullable HttpMessageDiagnosticResponse request;
 
-    public Optional<HttpMessageDiagnosticResponse> getRequest() {
+    public Optional<HttpMessageDiagnosticResponse> request() {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
     }
 
@@ -36,7 +36,7 @@ public final class PipelineDiagnosticSettingsResponse extends io.pulumi.resource
     @Import(name="response")
       private final @Nullable HttpMessageDiagnosticResponse response;
 
-    public Optional<HttpMessageDiagnosticResponse> getResponse() {
+    public Optional<HttpMessageDiagnosticResponse> response() {
         return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
     }
 

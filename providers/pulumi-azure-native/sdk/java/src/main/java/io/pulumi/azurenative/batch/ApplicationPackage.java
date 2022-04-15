@@ -42,7 +42,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The ETag of the resource, used for concurrency statements.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +56,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The format of the application package, if the package is active.
      * 
      */
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
     /**
@@ -70,7 +70,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The time at which the package was last activated, if the package is active.
      * 
      */
-    public Output<String> getLastActivationTime() {
+    public Output<String> lastActivationTime() {
         return this.lastActivationTime;
     }
     /**
@@ -84,7 +84,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The current state of the application package.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -112,7 +112,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The URL for the application package in Azure Storage.
      * 
      */
-    public Output<String> getStorageUrl() {
+    public Output<String> storageUrl() {
         return this.storageUrl;
     }
     /**
@@ -126,7 +126,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The UTC time at which the Azure Storage URL will expire.
      * 
      */
-    public Output<String> getStorageUrlExpiry() {
+    public Output<String> storageUrlExpiry() {
         return this.storageUrlExpiry;
     }
     /**
@@ -140,7 +140,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

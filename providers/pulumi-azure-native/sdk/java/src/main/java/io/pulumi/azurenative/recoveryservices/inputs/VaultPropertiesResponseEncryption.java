@@ -27,7 +27,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
     @Import(name="infrastructureEncryption")
       private final @Nullable String infrastructureEncryption;
 
-    public Optional<String> getInfrastructureEncryption() {
+    public Optional<String> infrastructureEncryption() {
         return this.infrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.infrastructureEncryption);
     }
 
@@ -38,7 +38,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
     @Import(name="kekIdentity")
       private final @Nullable CmkKekIdentityResponse kekIdentity;
 
-    public Optional<CmkKekIdentityResponse> getKekIdentity() {
+    public Optional<CmkKekIdentityResponse> kekIdentity() {
         return this.kekIdentity == null ? Optional.empty() : Optional.ofNullable(this.kekIdentity);
     }
 
@@ -49,7 +49,7 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
     @Import(name="keyVaultProperties")
       private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
-    public Optional<CmkKeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<CmkKeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
     }
 

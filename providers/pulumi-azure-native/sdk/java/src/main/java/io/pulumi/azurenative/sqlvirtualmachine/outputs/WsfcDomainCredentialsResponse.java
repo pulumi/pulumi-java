@@ -41,21 +41,21 @@ public final class WsfcDomainCredentialsResponse {
      * Cluster bootstrap account password.
      * 
     */
-    public Optional<String> getClusterBootstrapAccountPassword() {
+    public Optional<String> clusterBootstrapAccountPassword() {
         return Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
     /**
      * Cluster operator account password.
      * 
     */
-    public Optional<String> getClusterOperatorAccountPassword() {
+    public Optional<String> clusterOperatorAccountPassword() {
         return Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
     /**
      * SQL service account password.
      * 
     */
-    public Optional<String> getSqlServiceAccountPassword() {
+    public Optional<String> sqlServiceAccountPassword() {
         return Optional.ofNullable(this.sqlServiceAccountPassword);
     }
 

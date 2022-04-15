@@ -26,7 +26,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     @Import(name="partnerManagedInstanceId")
       private final @Nullable Output<String> partnerManagedInstanceId;
 
-    public Output<String> getPartnerManagedInstanceId() {
+    public Output<String> partnerManagedInstanceId() {
         return this.partnerManagedInstanceId == null ? Codegen.empty() : this.partnerManagedInstanceId;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedInstancePairInfoArgs extends io.pulumi.resources.Resou
     @Import(name="primaryManagedInstanceId")
       private final @Nullable Output<String> primaryManagedInstanceId;
 
-    public Output<String> getPrimaryManagedInstanceId() {
+    public Output<String> primaryManagedInstanceId() {
         return this.primaryManagedInstanceId == null ? Codegen.empty() : this.primaryManagedInstanceId;
     }
 

@@ -25,7 +25,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> getCors() {
+    public Output<CorsRulesArgs> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -47,7 +47,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="fileServicesName")
       private final @Nullable Output<String> fileServicesName;
 
-    public Output<String> getFileServicesName() {
+    public Output<String> fileServicesName() {
         return this.fileServicesName == null ? Codegen.empty() : this.fileServicesName;
     }
 
@@ -58,7 +58,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="protocolSettings")
       private final @Nullable Output<ProtocolSettingsArgs> protocolSettings;
 
-    public Output<ProtocolSettingsArgs> getProtocolSettings() {
+    public Output<ProtocolSettingsArgs> protocolSettings() {
         return this.protocolSettings == null ? Codegen.empty() : this.protocolSettings;
     }
 
@@ -69,7 +69,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="shareDeleteRetentionPolicy")
       private final @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 
-    public Output<DeleteRetentionPolicyArgs> getShareDeleteRetentionPolicy() {
+    public Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy() {
         return this.shareDeleteRetentionPolicy == null ? Codegen.empty() : this.shareDeleteRetentionPolicy;
     }
 

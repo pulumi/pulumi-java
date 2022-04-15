@@ -43,21 +43,21 @@ public final class ActionResponse {
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
      * 
     */
-    public Optional<Integer> getCompatibilityLevel() {
+    public Optional<Integer> compatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
     /**
      * Value that indicates whether the rule action requires preprocessing.
      * 
     */
-    public Optional<Boolean> getRequiresPreprocessing() {
+    public Optional<Boolean> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
      * SQL expression. e.g. MyProperty='ABC'
      * 
     */
-    public Optional<String> getSqlExpression() {
+    public Optional<String> sqlExpression() {
         return Optional.ofNullable(this.sqlExpression);
     }
 

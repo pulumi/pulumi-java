@@ -28,7 +28,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
@@ -39,7 +39,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
     @Import(name="parameters", required=true)
       private final List<ArmTemplateParameterResponse> parameters;
 
-    public List<ArmTemplateParameterResponse> getParameters() {
+    public List<ArmTemplateParameterResponse> parameters() {
         return this.parameters;
     }
 
@@ -50,7 +50,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
     @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
 
-    public String getParentResourceType() {
+    public String parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -61,7 +61,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -72,7 +72,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
     @Import(name="template", required=true)
       private final Object template;
 
-    public Object getTemplate() {
+    public Object template() {
         return this.template;
     }
 

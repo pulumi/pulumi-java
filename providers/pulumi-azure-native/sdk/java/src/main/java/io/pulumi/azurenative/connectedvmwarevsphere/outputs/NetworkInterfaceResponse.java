@@ -101,56 +101,56 @@ public final class NetworkInterfaceResponse {
      * Gets or sets the device key value.
      * 
     */
-    public Optional<Integer> getDeviceKey() {
+    public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
     /**
      * Gets or sets the nic ip addresses.
      * 
     */
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
     /**
      * Gets or sets the ipsettings.
      * 
     */
-    public Optional<NicIPSettingsResponse> getIpSettings() {
+    public Optional<NicIPSettingsResponse> ipSettings() {
         return Optional.ofNullable(this.ipSettings);
     }
     /**
      * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * Gets or sets the NIC MAC address.
      * 
     */
-    public String getMacAddress() {
+    public String macAddress() {
         return this.macAddress;
     }
     /**
      * Gets or sets the name of the network interface.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the ARM Id of the network resource to connect the virtual machine.
      * 
     */
-    public Optional<String> getNetworkId() {
+    public Optional<String> networkId() {
         return Optional.ofNullable(this.networkId);
     }
     /**
      * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
      * 
     */
-    public String getNetworkMoName() {
+    public String networkMoName() {
         return this.networkMoName;
     }
     /**
@@ -158,21 +158,21 @@ public final class NetworkInterfaceResponse {
      * that the nic is connected to.
      * 
     */
-    public String getNetworkMoRefId() {
+    public String networkMoRefId() {
         return this.networkMoRefId;
     }
     /**
      * NIC type
      * 
     */
-    public Optional<String> getNicType() {
+    public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
      * Gets or sets the power on boot.
      * 
     */
-    public Optional<String> getPowerOnBoot() {
+    public Optional<String> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
 

@@ -28,7 +28,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     @Import(name="header")
       private final @Nullable Output<Either<String,Header>> header;
 
-    public Output<Either<String,Header>> getHeader() {
+    public Output<Either<String,Header>> header() {
         return this.header == null ? Codegen.empty() : this.header;
     }
 
@@ -39,7 +39,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     @Import(name="includePath")
       private final @Nullable Output<Boolean> includePath;
 
-    public Output<Boolean> getIncludePath() {
+    public Output<Boolean> includePath() {
         return this.includePath == null ? Codegen.empty() : this.includePath;
     }
 
@@ -50,21 +50,21 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     @Import(name="partitionFormat")
       private final @Nullable Output<String> partitionFormat;
 
-    public Output<String> getPartitionFormat() {
+    public Output<String> partitionFormat() {
         return this.partitionFormat == null ? Codegen.empty() : this.partitionFormat;
     }
 
     @Import(name="path")
       private final @Nullable Output<DatasetCreateRequestPathArgs> path;
 
-    public Output<DatasetCreateRequestPathArgs> getPath() {
+    public Output<DatasetCreateRequestPathArgs> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="query")
       private final @Nullable Output<DatasetCreateRequestQueryArgs> query;
 
-    public Output<DatasetCreateRequestQueryArgs> getQuery() {
+    public Output<DatasetCreateRequestQueryArgs> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -75,7 +75,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     @Import(name="separator")
       private final @Nullable Output<String> separator;
 
-    public Output<String> getSeparator() {
+    public Output<String> separator() {
         return this.separator == null ? Codegen.empty() : this.separator;
     }
 
@@ -86,7 +86,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
-    public Output<Either<String,SourceType>> getSourceType() {
+    public Output<Either<String,SourceType>> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 

@@ -24,7 +24,7 @@ public final class X12OneWayAgreementResponse extends io.pulumi.resources.Invoke
     @Import(name="protocolSettings", required=true)
       private final X12ProtocolSettingsResponse protocolSettings;
 
-    public X12ProtocolSettingsResponse getProtocolSettings() {
+    public X12ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
 
@@ -35,7 +35,7 @@ public final class X12OneWayAgreementResponse extends io.pulumi.resources.Invoke
     @Import(name="receiverBusinessIdentity", required=true)
       private final BusinessIdentityResponse receiverBusinessIdentity;
 
-    public BusinessIdentityResponse getReceiverBusinessIdentity() {
+    public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
 
@@ -46,7 +46,7 @@ public final class X12OneWayAgreementResponse extends io.pulumi.resources.Invoke
     @Import(name="senderBusinessIdentity", required=true)
       private final BusinessIdentityResponse senderBusinessIdentity;
 
-    public BusinessIdentityResponse getSenderBusinessIdentity() {
+    public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 

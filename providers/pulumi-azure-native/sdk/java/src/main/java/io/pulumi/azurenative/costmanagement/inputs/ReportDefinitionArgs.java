@@ -31,7 +31,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataset")
       private final @Nullable Output<ReportDatasetArgs> dataset;
 
-    public Output<ReportDatasetArgs> getDataset() {
+    public Output<ReportDatasetArgs> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -42,7 +42,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timePeriod")
       private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
-    public Output<ReportTimePeriodArgs> getTimePeriod() {
+    public Output<ReportTimePeriodArgs> timePeriod() {
         return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
@@ -53,7 +53,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
 
-    public Output<Either<String,TimeframeType>> getTimeframe() {
+    public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
     }
 
@@ -64,7 +64,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
 
-    public Output<Either<String,ReportType>> getType() {
+    public Output<Either<String,ReportType>> type() {
         return this.type;
     }
 

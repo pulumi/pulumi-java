@@ -26,7 +26,7 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -37,7 +37,7 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
     @Import(name="userAssignedIdentities")
       private final @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
-    public Optional<WorkbookUserAssignedIdentitiesResponse> getUserAssignedIdentities() {
+    public Optional<WorkbookUserAssignedIdentitiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentities);
     }
 

@@ -23,7 +23,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="sasKey")
       private final @Nullable Output<String> sasKey;
 
-    public Output<String> getSasKey() {
+    public Output<String> sasKey() {
         return this.sasKey == null ? Codegen.empty() : this.sasKey;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="sasKeyName")
       private final @Nullable Output<String> sasKeyName;
 
-    public Output<String> getSasKeyName() {
+    public Output<String> sasKeyName() {
         return this.sasKeyName == null ? Codegen.empty() : this.sasKeyName;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<ServiceBusAuthenticationType> type;
 
-    public Output<ServiceBusAuthenticationType> getType() {
+    public Output<ServiceBusAuthenticationType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

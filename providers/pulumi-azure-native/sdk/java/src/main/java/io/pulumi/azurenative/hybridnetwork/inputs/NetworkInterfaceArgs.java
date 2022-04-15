@@ -30,7 +30,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
+    public Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
 
-    public Output<String> getMacAddress() {
+    public Output<String> macAddress() {
         return this.macAddress == null ? Codegen.empty() : this.macAddress;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkInterfaceName")
       private final @Nullable Output<String> networkInterfaceName;
 
-    public Output<String> getNetworkInterfaceName() {
+    public Output<String> networkInterfaceName() {
         return this.networkInterfaceName == null ? Codegen.empty() : this.networkInterfaceName;
     }
 
@@ -63,7 +63,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vmSwitchType")
       private final @Nullable Output<Either<String,VMSwitchType>> vmSwitchType;
 
-    public Output<Either<String,VMSwitchType>> getVmSwitchType() {
+    public Output<Either<String,VMSwitchType>> vmSwitchType() {
         return this.vmSwitchType == null ? Codegen.empty() : this.vmSwitchType;
     }
 

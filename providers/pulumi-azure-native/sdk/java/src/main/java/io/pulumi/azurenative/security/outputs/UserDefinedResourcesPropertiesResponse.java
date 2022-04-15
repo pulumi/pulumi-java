@@ -33,14 +33,14 @@ public final class UserDefinedResourcesPropertiesResponse {
      * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * List of Azure subscription ids on which the user defined resources query should be executed.
      * 
     */
-    public List<String> getQuerySubscriptions() {
+    public List<String> querySubscriptions() {
         return this.querySubscriptions;
     }
 

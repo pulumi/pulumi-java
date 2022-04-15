@@ -23,7 +23,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
     @Import(name="status", required=true)
       private final Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
+    public Output<Either<String,TriggerStatus>> status() {
         return this.status;
     }
 

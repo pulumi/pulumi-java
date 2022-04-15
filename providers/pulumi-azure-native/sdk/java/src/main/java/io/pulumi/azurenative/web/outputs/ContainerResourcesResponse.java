@@ -35,14 +35,14 @@ public final class ContainerResourcesResponse {
      * Required CPU in cores, e.g. 0.5
      * 
     */
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Required memory, e.g. "250Mb"
      * 
     */
-    public Optional<String> getMemory() {
+    public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }
 

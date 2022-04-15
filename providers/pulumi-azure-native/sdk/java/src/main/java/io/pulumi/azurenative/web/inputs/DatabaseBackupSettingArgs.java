@@ -28,7 +28,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -40,7 +40,7 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionStringName")
       private final @Nullable Output<String> connectionStringName;
 
-    public Output<String> getConnectionStringName() {
+    public Output<String> connectionStringName() {
         return this.connectionStringName == null ? Codegen.empty() : this.connectionStringName;
     }
 
@@ -51,14 +51,14 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     @Import(name="databaseType", required=true)
       private final Output<Either<String,DatabaseType>> databaseType;
 
-    public Output<Either<String,DatabaseType>> getDatabaseType() {
+    public Output<Either<String,DatabaseType>> databaseType() {
         return this.databaseType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

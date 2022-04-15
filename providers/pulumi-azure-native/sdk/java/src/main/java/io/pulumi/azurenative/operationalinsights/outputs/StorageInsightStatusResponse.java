@@ -34,14 +34,14 @@ public final class StorageInsightStatusResponse {
      * Description of the state of the storage insight.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The state of the storage insight connection to the workspace
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

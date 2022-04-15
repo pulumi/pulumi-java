@@ -26,7 +26,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -48,7 +48,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
     @Import(name="isRequired")
       private final @Nullable Boolean isRequired;
 
-    public Optional<Boolean> getIsRequired() {
+    public Optional<Boolean> isRequired() {
         return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
     }
 
@@ -59,7 +59,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -70,7 +70,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
     @Import(name="visibility")
       private final @Nullable String visibility;
 
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
     }
 

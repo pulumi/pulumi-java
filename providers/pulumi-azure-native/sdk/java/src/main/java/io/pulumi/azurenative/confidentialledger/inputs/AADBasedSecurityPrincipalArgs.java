@@ -28,7 +28,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
     @Import(name="ledgerRoleName")
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
-    public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
+    public Output<Either<String,LedgerRoleName>> ledgerRoleName() {
         return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
     }
 
@@ -39,7 +39,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -50,7 +50,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

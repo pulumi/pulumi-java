@@ -26,7 +26,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hash")
       private final @Nullable ContentHashResponse hash;
 
-    public Optional<ContentHashResponse> getHash() {
+    public Optional<ContentHashResponse> hash() {
         return this.hash == null ? Optional.empty() : Optional.ofNullable(this.hash);
     }
 
@@ -37,7 +37,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -48,7 +48,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
@@ -59,7 +59,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

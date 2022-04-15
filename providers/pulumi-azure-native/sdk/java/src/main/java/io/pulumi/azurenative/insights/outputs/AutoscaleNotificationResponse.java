@@ -44,21 +44,21 @@ public final class AutoscaleNotificationResponse {
      * the email notification.
      * 
     */
-    public Optional<EmailNotificationResponse> getEmail() {
+    public Optional<EmailNotificationResponse> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * the operation associated with the notification and its value must be "scale"
      * 
     */
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
     /**
      * the collection of webhook notifications.
      * 
     */
-    public List<WebhookNotificationResponse> getWebhooks() {
+    public List<WebhookNotificationResponse> webhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
     }
 

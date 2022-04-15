@@ -32,14 +32,14 @@ public final class SkuResponse {
      * The name of the SKU, in standard format (such as S0).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the sku tier. This is based on the SKU name.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

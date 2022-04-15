@@ -27,7 +27,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -38,7 +38,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
       private final @Nullable Output<String> fileSystem;
 
-    public Output<String> getFileSystem() {
+    public Output<String> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
@@ -49,7 +49,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileshare")
       private final @Nullable Output<String> fileshare;
 
-    public Output<String> getFileshare() {
+    public Output<String> fileshare() {
         return this.fileshare == null ? Codegen.empty() : this.fileshare;
     }
 
@@ -60,7 +60,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
@@ -71,7 +71,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -82,7 +82,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
 
-    public Output<String> getMsiResourceId() {
+    public Output<String> msiResourceId() {
         return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
@@ -93,7 +93,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -115,7 +115,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="saskey")
       private final @Nullable Output<String> saskey;
 
-    public Output<String> getSaskey() {
+    public Output<String> saskey() {
         return this.saskey == null ? Codegen.empty() : this.saskey;
     }
 

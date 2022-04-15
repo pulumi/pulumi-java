@@ -27,7 +27,7 @@ public final class ImageTemplateIdentityResponse extends io.pulumi.resources.Inv
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateIdentityResponse extends io.pulumi.resources.Inv
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    public Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
+    public Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

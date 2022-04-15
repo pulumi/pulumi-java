@@ -99,77 +99,77 @@ public final class VCenterPropertiesResponse {
      * The VCenter discovery status.
      * 
     */
-    public Optional<String> getDiscoveryStatus() {
+    public Optional<String> discoveryStatus() {
         return Optional.ofNullable(this.discoveryStatus);
     }
     /**
      * The ARM resource name of the fabric containing this VCenter.
      * 
     */
-    public Optional<String> getFabricArmResourceName() {
+    public Optional<String> fabricArmResourceName() {
         return Optional.ofNullable(this.fabricArmResourceName);
     }
     /**
      * Friendly name of the vCenter.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The health errors for this VCenter.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The infrastructure Id of vCenter.
      * 
     */
-    public Optional<String> getInfrastructureId() {
+    public Optional<String> infrastructureId() {
         return Optional.ofNullable(this.infrastructureId);
     }
     /**
      * VCenter internal ID.
      * 
     */
-    public Optional<String> getInternalId() {
+    public Optional<String> internalId() {
         return Optional.ofNullable(this.internalId);
     }
     /**
      * The IP address of the vCenter.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The time when the last heartbeat was received by vCenter.
      * 
     */
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The port number for discovery.
      * 
     */
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The process server Id.
      * 
     */
-    public Optional<String> getProcessServerId() {
+    public Optional<String> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
      * The account Id which has privileges to discover the vCenter.
      * 
     */
-    public Optional<String> getRunAsAccountId() {
+    public Optional<String> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }
 

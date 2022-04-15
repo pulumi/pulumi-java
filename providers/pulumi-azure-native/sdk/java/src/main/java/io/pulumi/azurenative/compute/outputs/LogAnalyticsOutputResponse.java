@@ -24,7 +24,7 @@ public final class LogAnalyticsOutputResponse {
      * Output file Uri path to blob container.
      * 
     */
-    public String getOutput() {
+    public String output() {
         return this.output;
     }
 

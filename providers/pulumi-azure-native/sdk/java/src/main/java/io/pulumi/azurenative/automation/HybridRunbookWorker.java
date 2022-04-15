@@ -43,7 +43,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the assigned machine IP address.
      * 
      */
-    public Output</* @Nullable */ String> getIp() {
+    public Output</* @Nullable */ String> ip() {
         return this.ip;
     }
     /**
@@ -57,7 +57,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Last Heartbeat from the Worker
      * 
      */
-    public Output</* @Nullable */ String> getLastSeenDateTime() {
+    public Output</* @Nullable */ String> lastSeenDateTime() {
         return this.lastSeenDateTime;
     }
     /**
@@ -71,7 +71,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the registration time of the worker machine.
      * 
      */
-    public Output</* @Nullable */ String> getRegisteredDateTime() {
+    public Output</* @Nullable */ String> registeredDateTime() {
         return this.registeredDateTime;
     }
     /**
@@ -99,7 +99,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Resource system metadata.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -113,7 +113,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -127,7 +127,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager Id for a virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getVmResourceId() {
+    public Output</* @Nullable */ String> vmResourceId() {
         return this.vmResourceId;
     }
     /**
@@ -141,7 +141,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Name of the HybridWorker.
      * 
      */
-    public Output</* @Nullable */ String> getWorkerName() {
+    public Output</* @Nullable */ String> workerName() {
         return this.workerName;
     }
     /**
@@ -155,7 +155,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * @return Type of the HybridWorker.
      * 
      */
-    public Output</* @Nullable */ String> getWorkerType() {
+    public Output</* @Nullable */ String> workerType() {
         return this.workerType;
     }
 

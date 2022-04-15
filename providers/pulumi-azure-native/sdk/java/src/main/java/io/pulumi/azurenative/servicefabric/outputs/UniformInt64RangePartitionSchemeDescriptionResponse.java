@@ -50,7 +50,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * The number of partitions.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
@@ -58,7 +58,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * should be split between the partition ‘count’
      * 
     */
-    public String getHighKey() {
+    public String highKey() {
         return this.highKey;
     }
     /**
@@ -66,7 +66,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * should be split between the partition ‘count’
      * 
     */
-    public String getLowKey() {
+    public String lowKey() {
         return this.lowKey;
     }
     /**
@@ -74,7 +74,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * Expected value is 'UniformInt64Range'.
      * 
     */
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

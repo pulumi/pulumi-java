@@ -27,7 +27,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="dataset")
       private final @Nullable ReportDatasetResponse dataset;
 
-    public Optional<ReportDatasetResponse> getDataset() {
+    public Optional<ReportDatasetResponse> dataset() {
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
     }
 
@@ -38,7 +38,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="timePeriod")
       private final @Nullable ReportTimePeriodResponse timePeriod;
 
-    public Optional<ReportTimePeriodResponse> getTimePeriod() {
+    public Optional<ReportTimePeriodResponse> timePeriod() {
         return this.timePeriod == null ? Optional.empty() : Optional.ofNullable(this.timePeriod);
     }
 
@@ -49,7 +49,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="timeframe", required=true)
       private final String timeframe;
 
-    public String getTimeframe() {
+    public String timeframe() {
         return this.timeframe;
     }
 
@@ -60,7 +60,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

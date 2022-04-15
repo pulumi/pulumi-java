@@ -53,35 +53,35 @@ public final class GetSyncGroupResult {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Sync group status
      * 
     */
-    public String getSyncGroupStatus() {
+    public String syncGroupStatus() {
         return this.syncGroupStatus;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Unique Id
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
 

@@ -26,7 +26,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="defaultLoad")
       private final @Nullable Integer defaultLoad;
 
-    public Optional<Integer> getDefaultLoad() {
+    public Optional<Integer> defaultLoad() {
         return this.defaultLoad == null ? Optional.empty() : Optional.ofNullable(this.defaultLoad);
     }
 
@@ -37,7 +37,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="primaryDefaultLoad")
       private final @Nullable Integer primaryDefaultLoad;
 
-    public Optional<Integer> getPrimaryDefaultLoad() {
+    public Optional<Integer> primaryDefaultLoad() {
         return this.primaryDefaultLoad == null ? Optional.empty() : Optional.ofNullable(this.primaryDefaultLoad);
     }
 
@@ -59,7 +59,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="secondaryDefaultLoad")
       private final @Nullable Integer secondaryDefaultLoad;
 
-    public Optional<Integer> getSecondaryDefaultLoad() {
+    public Optional<Integer> secondaryDefaultLoad() {
         return this.secondaryDefaultLoad == null ? Optional.empty() : Optional.ofNullable(this.secondaryDefaultLoad);
     }
 
@@ -70,7 +70,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="weight")
       private final @Nullable String weight;
 
-    public Optional<String> getWeight() {
+    public Optional<String> weight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
     }
 

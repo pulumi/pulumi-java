@@ -29,7 +29,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="eventHubs")
       private final @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
 
-    public List<RoutingEventHubPropertiesResponse> getEventHubs() {
+    public List<RoutingEventHubPropertiesResponse> eventHubs() {
         return this.eventHubs == null ? List.of() : this.eventHubs;
     }
 
@@ -40,7 +40,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serviceBusQueues")
       private final @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
 
-    public List<RoutingServiceBusQueueEndpointPropertiesResponse> getServiceBusQueues() {
+    public List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues() {
         return this.serviceBusQueues == null ? List.of() : this.serviceBusQueues;
     }
 
@@ -51,7 +51,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serviceBusTopics")
       private final @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
 
-    public List<RoutingServiceBusTopicEndpointPropertiesResponse> getServiceBusTopics() {
+    public List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics() {
         return this.serviceBusTopics == null ? List.of() : this.serviceBusTopics;
     }
 
@@ -62,7 +62,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="storageContainers")
       private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 
-    public List<RoutingStorageContainerPropertiesResponse> getStorageContainers() {
+    public List<RoutingStorageContainerPropertiesResponse> storageContainers() {
         return this.storageContainers == null ? List.of() : this.storageContainers;
     }
 

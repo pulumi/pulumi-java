@@ -23,7 +23,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="properties", required=true)
       private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
-    public Output<CreateRecoveryPlanInputPropertiesArgs> getProperties() {
+    public Output<CreateRecoveryPlanInputPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="recoveryPlanName")
       private final @Nullable Output<String> recoveryPlanName;
 
-    public Output<String> getRecoveryPlanName() {
+    public Output<String> recoveryPlanName() {
         return this.recoveryPlanName == null ? Codegen.empty() : this.recoveryPlanName;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

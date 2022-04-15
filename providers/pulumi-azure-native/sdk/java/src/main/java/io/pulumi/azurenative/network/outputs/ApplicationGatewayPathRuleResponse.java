@@ -99,77 +99,77 @@ public final class ApplicationGatewayPathRuleResponse {
      * Backend address pool resource of URL path map path rule.
      * 
     */
-    public Optional<SubResourceResponse> getBackendAddressPool() {
+    public Optional<SubResourceResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
      * Backend http settings resource of URL path map path rule.
      * 
     */
-    public Optional<SubResourceResponse> getBackendHttpSettings() {
+    public Optional<SubResourceResponse> backendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Reference to the FirewallPolicy resource.
      * 
     */
-    public Optional<SubResourceResponse> getFirewallPolicy() {
+    public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the path rule that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rules of URL path map.
      * 
     */
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
      * The provisioning state of the path rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Redirect configuration resource of URL path map path rule.
      * 
     */
-    public Optional<SubResourceResponse> getRedirectConfiguration() {
+    public Optional<SubResourceResponse> redirectConfiguration() {
         return Optional.ofNullable(this.redirectConfiguration);
     }
     /**
      * Rewrite rule set resource of URL path map path rule.
      * 
     */
-    public Optional<SubResourceResponse> getRewriteRuleSet() {
+    public Optional<SubResourceResponse> rewriteRuleSet() {
         return Optional.ofNullable(this.rewriteRuleSet);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

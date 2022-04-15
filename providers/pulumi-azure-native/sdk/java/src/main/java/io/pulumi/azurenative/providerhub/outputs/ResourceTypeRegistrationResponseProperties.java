@@ -122,91 +122,91 @@ public final class ResourceTypeRegistrationResponseProperties {
         this.throttlingRules = throttlingRules;
     }
 
-    public List<String> getAllowedUnauthorizedActions() {
+    public List<String> allowedUnauthorizedActions() {
         return this.allowedUnauthorizedActions == null ? List.of() : this.allowedUnauthorizedActions;
     }
-    public List<AuthorizationActionMappingResponse> getAuthorizationActionMappings() {
+    public List<AuthorizationActionMappingResponse> authorizationActionMappings() {
         return this.authorizationActionMappings == null ? List.of() : this.authorizationActionMappings;
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications> getCheckNameAvailabilitySpecifications() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications> checkNameAvailabilitySpecifications() {
         return Optional.ofNullable(this.checkNameAvailabilitySpecifications);
     }
-    public Optional<String> getDefaultApiVersion() {
+    public Optional<String> defaultApiVersion() {
         return Optional.ofNullable(this.defaultApiVersion);
     }
-    public List<String> getDisallowedActionVerbs() {
+    public List<String> disallowedActionVerbs() {
         return this.disallowedActionVerbs == null ? List.of() : this.disallowedActionVerbs;
     }
-    public Optional<Boolean> getEnableAsyncOperation() {
+    public Optional<Boolean> enableAsyncOperation() {
         return Optional.ofNullable(this.enableAsyncOperation);
     }
-    public Optional<Boolean> getEnableThirdPartyS2S() {
+    public Optional<Boolean> enableThirdPartyS2S() {
         return Optional.ofNullable(this.enableThirdPartyS2S);
     }
-    public List<ResourceTypeEndpointResponse> getEndpoints() {
+    public List<ResourceTypeEndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
-    public List<ExtendedLocationOptionsResponse> getExtendedLocations() {
+    public List<ExtendedLocationOptionsResponse> extendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseExtensionOptions> getExtensionOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseExtensionOptions> extensionOptions() {
         return Optional.ofNullable(this.extensionOptions);
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseFeaturesRule> getFeaturesRule() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseFeaturesRule> featuresRule() {
         return Optional.ofNullable(this.featuresRule);
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseIdentityManagement> getIdentityManagement() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseIdentityManagement> identityManagement() {
         return Optional.ofNullable(this.identityManagement);
     }
-    public Optional<Boolean> getIsPureProxy() {
+    public Optional<Boolean> isPureProxy() {
         return Optional.ofNullable(this.isPureProxy);
     }
-    public List<LinkedAccessCheckResponse> getLinkedAccessChecks() {
+    public List<LinkedAccessCheckResponse> linkedAccessChecks() {
         return this.linkedAccessChecks == null ? List.of() : this.linkedAccessChecks;
     }
-    public List<LoggingRuleResponse> getLoggingRules() {
+    public List<LoggingRuleResponse> loggingRules() {
         return this.loggingRules == null ? List.of() : this.loggingRules;
     }
-    public Optional<String> getMarketplaceType() {
+    public Optional<String> marketplaceType() {
         return Optional.ofNullable(this.marketplaceType);
     }
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-    public Optional<String> getRegionality() {
+    public Optional<String> regionality() {
         return Optional.ofNullable(this.regionality);
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions> getRequestHeaderOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions> requestHeaderOptions() {
         return Optional.ofNullable(this.requestHeaderOptions);
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
-    public Optional<String> getResourceDeletionPolicy() {
+    public Optional<String> resourceDeletionPolicy() {
         return Optional.ofNullable(this.resourceDeletionPolicy);
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseResourceMovePolicy> getResourceMovePolicy() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseResourceMovePolicy> resourceMovePolicy() {
         return Optional.ofNullable(this.resourceMovePolicy);
     }
-    public Optional<String> getRoutingType() {
+    public Optional<String> routingType() {
         return Optional.ofNullable(this.routingType);
     }
-    public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
+    public List<ServiceTreeInfoResponse> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> getSubscriptionLifecycleNotificationSpecifications() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> subscriptionLifecycleNotificationSpecifications() {
         return Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
-    public List<SubscriptionStateRuleResponse> getSubscriptionStateRules() {
+    public List<SubscriptionStateRuleResponse> subscriptionStateRules() {
         return this.subscriptionStateRules == null ? List.of() : this.subscriptionStateRules;
     }
-    public List<SwaggerSpecificationResponse> getSwaggerSpecifications() {
+    public List<SwaggerSpecificationResponse> swaggerSpecifications() {
         return this.swaggerSpecifications == null ? List.of() : this.swaggerSpecifications;
     }
-    public Optional<ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions> getTemplateDeploymentOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions> templateDeploymentOptions() {
         return Optional.ofNullable(this.templateDeploymentOptions);
     }
-    public List<ThrottlingRuleResponse> getThrottlingRules() {
+    public List<ThrottlingRuleResponse> throttlingRules() {
         return this.throttlingRules == null ? List.of() : this.throttlingRules;
     }
 

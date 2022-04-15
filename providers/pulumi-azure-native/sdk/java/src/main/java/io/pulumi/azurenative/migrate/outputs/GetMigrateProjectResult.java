@@ -71,49 +71,49 @@ public final class GetMigrateProjectResult {
      * Gets or sets the eTag for concurrency control.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Gets the relative URL to get this migrate project.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the Azure location in which migrate project is created.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the name of the migrate project.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the nested properties.
      * 
     */
-    public MigrateProjectPropertiesResponse getProperties() {
+    public MigrateProjectPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
      * 
     */
-    public Optional<MigrateProjectResponseTags> getTags() {
+    public Optional<MigrateProjectResponseTags> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

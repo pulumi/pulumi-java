@@ -25,7 +25,7 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -36,7 +36,7 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
     @Import(name="keyVaultUri", required=true)
       private final String keyVaultUri;
 
-    public String getKeyVaultUri() {
+    public String keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -47,7 +47,7 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
@@ -58,7 +58,7 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
     @Import(name="userAssignedIdentity", required=true)
       private final String userAssignedIdentity;
 
-    public String getUserAssignedIdentity() {
+    public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 

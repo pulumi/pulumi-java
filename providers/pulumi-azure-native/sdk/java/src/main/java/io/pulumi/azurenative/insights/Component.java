@@ -47,7 +47,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Application Insights Unique ID for your Application.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -61,7 +61,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -75,7 +75,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Type of application being monitored.
      * 
      */
-    public Output<String> getApplicationType() {
+    public Output<String> applicationType() {
         return this.applicationType;
     }
     /**
@@ -89,7 +89,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Application Insights component connection string.
      * 
      */
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
     /**
@@ -103,7 +103,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Creation Date for the Application Insights component, in ISO 8601 format.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -117,7 +117,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Disable IP masking.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableIpMasking() {
+    public Output</* @Nullable */ Boolean> disableIpMasking() {
         return this.disableIpMasking;
     }
     /**
@@ -131,7 +131,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
      * 
      */
-    public Output</* @Nullable */ String> getFlowType() {
+    public Output</* @Nullable */ String> flowType() {
         return this.flowType;
     }
     /**
@@ -145,7 +145,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
      * 
      */
-    public Output</* @Nullable */ String> getHockeyAppId() {
+    public Output</* @Nullable */ String> hockeyAppId() {
         return this.hockeyAppId;
     }
     /**
@@ -159,7 +159,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Token used to authenticate communications with between Application Insights and HockeyApp.
      * 
      */
-    public Output<String> getHockeyAppToken() {
+    public Output<String> hockeyAppToken() {
         return this.hockeyAppToken;
     }
     /**
@@ -173,7 +173,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Purge data immediately after 30 days.
      * 
      */
-    public Output</* @Nullable */ Boolean> getImmediatePurgeDataOn30Days() {
+    public Output</* @Nullable */ Boolean> immediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days;
     }
     /**
@@ -187,7 +187,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Indicates the flow of the ingestion.
      * 
      */
-    public Output</* @Nullable */ String> getIngestionMode() {
+    public Output</* @Nullable */ String> ingestionMode() {
         return this.ingestionMode;
     }
     /**
@@ -201,7 +201,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
      * 
      */
-    public Output<String> getInstrumentationKey() {
+    public Output<String> instrumentationKey() {
         return this.instrumentationKey;
     }
     /**
@@ -215,7 +215,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -229,7 +229,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -243,7 +243,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -257,7 +257,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return List of linked private link scope resources.
      * 
      */
-    public Output<List<PrivateLinkScopedResourceResponse>> getPrivateLinkScopedResources() {
+    public Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
@@ -271,7 +271,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -285,7 +285,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
      * 
      */
-    public Output</* @Nullable */ String> getRequestSource() {
+    public Output</* @Nullable */ String> requestSource() {
         return this.requestSource;
     }
     /**
@@ -299,7 +299,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Retention period in days.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionInDays() {
+    public Output</* @Nullable */ Integer> retentionInDays() {
         return this.retentionInDays;
     }
     /**
@@ -313,7 +313,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
      * 
      */
-    public Output</* @Nullable */ Double> getSamplingPercentage() {
+    public Output</* @Nullable */ Double> samplingPercentage() {
         return this.samplingPercentage;
     }
     /**
@@ -327,7 +327,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -341,7 +341,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Azure Tenant Id.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -355,7 +355,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

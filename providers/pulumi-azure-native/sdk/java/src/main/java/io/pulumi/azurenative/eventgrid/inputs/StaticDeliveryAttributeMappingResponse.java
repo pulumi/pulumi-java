@@ -26,7 +26,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
 
-    public Optional<Boolean> getIsSecret() {
+    public Optional<Boolean> isSecret() {
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
     }
 
@@ -37,7 +37,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -49,7 +49,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -60,7 +60,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

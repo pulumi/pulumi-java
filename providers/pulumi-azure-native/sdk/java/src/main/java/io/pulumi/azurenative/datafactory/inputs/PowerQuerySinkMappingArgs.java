@@ -28,7 +28,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     @Import(name="dataflowSinks")
       private final @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
 
-    public Output<List<PowerQuerySinkArgs>> getDataflowSinks() {
+    public Output<List<PowerQuerySinkArgs>> dataflowSinks() {
         return this.dataflowSinks == null ? Codegen.empty() : this.dataflowSinks;
     }
 
@@ -39,7 +39,7 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     @Import(name="queryName")
       private final @Nullable Output<String> queryName;
 
-    public Output<String> getQueryName() {
+    public Output<String> queryName() {
         return this.queryName == null ? Codegen.empty() : this.queryName;
     }
 

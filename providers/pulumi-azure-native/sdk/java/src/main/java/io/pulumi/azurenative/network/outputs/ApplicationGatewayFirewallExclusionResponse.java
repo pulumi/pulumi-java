@@ -39,21 +39,21 @@ public final class ApplicationGatewayFirewallExclusionResponse {
      * The variable to be excluded.
      * 
     */
-    public String getMatchVariable() {
+    public String matchVariable() {
         return this.matchVariable;
     }
     /**
      * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
      * 
     */
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
     /**
      * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
      * 
     */
-    public String getSelectorMatchOperator() {
+    public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 

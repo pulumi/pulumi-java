@@ -35,14 +35,14 @@ public final class SuppressionConfigResponse {
      * Specifies when the suppression should be applied
      * 
     */
-    public String getRecurrenceType() {
+    public String recurrenceType() {
         return this.recurrenceType;
     }
     /**
      * suppression schedule configuration
      * 
     */
-    public Optional<SuppressionScheduleResponse> getSchedule() {
+    public Optional<SuppressionScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 

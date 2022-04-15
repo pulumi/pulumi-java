@@ -34,14 +34,14 @@ public final class ContentPathMapResponse {
      * Content type.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The path to the content.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
 

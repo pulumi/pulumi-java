@@ -28,7 +28,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="bgpSettings")
       private final @Nullable BgpSettingsResponse bgpSettings;
 
-    public Optional<BgpSettingsResponse> getBgpSettings() {
+    public Optional<BgpSettingsResponse> bgpSettings() {
         return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
     }
 
@@ -39,7 +39,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -61,7 +61,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="gatewayIpAddress")
       private final @Nullable String gatewayIpAddress;
 
-    public Optional<String> getGatewayIpAddress() {
+    public Optional<String> gatewayIpAddress() {
         return this.gatewayIpAddress == null ? Optional.empty() : Optional.ofNullable(this.gatewayIpAddress);
     }
 
@@ -72,7 +72,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -83,7 +83,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="localNetworkAddressSpace")
       private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
 
-    public Optional<AddressSpaceResponse> getLocalNetworkAddressSpace() {
+    public Optional<AddressSpaceResponse> localNetworkAddressSpace() {
         return this.localNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.localNetworkAddressSpace);
     }
 
@@ -94,7 +94,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -105,7 +105,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -116,7 +116,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -127,7 +127,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -138,7 +138,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -149,7 +149,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="defaultBackendAddressPool")
       private final @Nullable SubResourceResponse defaultBackendAddressPool;
 
-    public Optional<SubResourceResponse> getDefaultBackendAddressPool() {
+    public Optional<SubResourceResponse> defaultBackendAddressPool() {
         return this.defaultBackendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendAddressPool);
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="defaultBackendHttpSettings")
       private final @Nullable SubResourceResponse defaultBackendHttpSettings;
 
-    public Optional<SubResourceResponse> getDefaultBackendHttpSettings() {
+    public Optional<SubResourceResponse> defaultBackendHttpSettings() {
         return this.defaultBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendHttpSettings);
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="defaultRedirectConfiguration")
       private final @Nullable SubResourceResponse defaultRedirectConfiguration;
 
-    public Optional<SubResourceResponse> getDefaultRedirectConfiguration() {
+    public Optional<SubResourceResponse> defaultRedirectConfiguration() {
         return this.defaultRedirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectConfiguration);
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="defaultRewriteRuleSet")
       private final @Nullable SubResourceResponse defaultRewriteRuleSet;
 
-    public Optional<SubResourceResponse> getDefaultRewriteRuleSet() {
+    public Optional<SubResourceResponse> defaultRewriteRuleSet() {
         return this.defaultRewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.defaultRewriteRuleSet);
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="pathRules")
       private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
 
-    public List<ApplicationGatewayPathRuleResponse> getPathRules() {
+    public List<ApplicationGatewayPathRuleResponse> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
 
@@ -116,7 +116,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -127,7 +127,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

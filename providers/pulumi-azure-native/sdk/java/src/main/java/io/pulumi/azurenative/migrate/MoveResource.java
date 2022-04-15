@@ -43,7 +43,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * @return Defines the move resource properties.
      * 
      */
-    public Output<MoveResourcePropertiesResponse> getProperties() {
+    public Output<MoveResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

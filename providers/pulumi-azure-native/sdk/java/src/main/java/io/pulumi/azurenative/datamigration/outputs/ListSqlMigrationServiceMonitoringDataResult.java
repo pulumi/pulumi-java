@@ -34,14 +34,14 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
      * The name of Integration Runtime.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Integration Runtime node monitoring data.
      * 
     */
-    public List<NodeMonitoringDataResponse> getNodes() {
+    public List<NodeMonitoringDataResponse> nodes() {
         return this.nodes;
     }
 

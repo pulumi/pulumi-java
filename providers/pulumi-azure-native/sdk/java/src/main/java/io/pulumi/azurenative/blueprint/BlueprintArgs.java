@@ -28,7 +28,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintName")
       private final @Nullable Output<String> blueprintName;
 
-    public Output<String> getBlueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName == null ? Codegen.empty() : this.blueprintName;
     }
 
@@ -39,7 +39,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionArgs>> getParameters() {
+    public Output<Map<String,ParameterDefinitionArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -72,7 +72,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroups")
       private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
-    public Output<Map<String,ResourceGroupDefinitionArgs>> getResourceGroups() {
+    public Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups() {
         return this.resourceGroups == null ? Codegen.empty() : this.resourceGroups;
     }
 
@@ -83,7 +83,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -94,7 +94,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetScope", required=true)
       private final Output<Either<String,BlueprintTargetScope>> targetScope;
 
-    public Output<Either<String,BlueprintTargetScope>> getTargetScope() {
+    public Output<Either<String,BlueprintTargetScope>> targetScope() {
         return this.targetScope;
     }
 
@@ -105,7 +105,7 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versions")
       private final @Nullable Output<Object> versions;
 
-    public Output<Object> getVersions() {
+    public Output<Object> versions() {
         return this.versions == null ? Codegen.empty() : this.versions;
     }
 

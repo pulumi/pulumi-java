@@ -26,7 +26,7 @@ public final class ManagementLockOwnerResponse {
      * The application ID of the lock owner.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 

@@ -77,56 +77,56 @@ public final class StaticSiteBuildPropertiesResponse {
      * A custom command to run during deployment of the Azure Functions API application.
      * 
     */
-    public Optional<String> getApiBuildCommand() {
+    public Optional<String> apiBuildCommand() {
         return Optional.ofNullable(this.apiBuildCommand);
     }
     /**
      * The path to the api code within the repository.
      * 
     */
-    public Optional<String> getApiLocation() {
+    public Optional<String> apiLocation() {
         return Optional.ofNullable(this.apiLocation);
     }
     /**
      * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
      * 
     */
-    public Optional<String> getAppArtifactLocation() {
+    public Optional<String> appArtifactLocation() {
         return Optional.ofNullable(this.appArtifactLocation);
     }
     /**
      * A custom command to run during deployment of the static content application.
      * 
     */
-    public Optional<String> getAppBuildCommand() {
+    public Optional<String> appBuildCommand() {
         return Optional.ofNullable(this.appBuildCommand);
     }
     /**
      * The path to the app code within the repository.
      * 
     */
-    public Optional<String> getAppLocation() {
+    public Optional<String> appLocation() {
         return Optional.ofNullable(this.appLocation);
     }
     /**
      * Github Action secret name override.
      * 
     */
-    public Optional<String> getGithubActionSecretNameOverride() {
+    public Optional<String> githubActionSecretNameOverride() {
         return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
     /**
      * The output path of the app after building.
      * 
     */
-    public Optional<String> getOutputLocation() {
+    public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
     /**
      * Skip Github Action workflow generation.
      * 
     */
-    public Optional<Boolean> getSkipGithubActionWorkflowGeneration() {
+    public Optional<Boolean> skipGithubActionWorkflowGeneration() {
         return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
 

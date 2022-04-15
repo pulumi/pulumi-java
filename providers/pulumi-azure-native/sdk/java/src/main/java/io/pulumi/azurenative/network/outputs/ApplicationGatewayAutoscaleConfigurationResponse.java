@@ -34,14 +34,14 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
      * Upper bound on number of Application Gateway capacity.
      * 
     */
-    public Optional<Integer> getMaxCapacity() {
+    public Optional<Integer> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
      * Lower bound on number of Application Gateway capacity.
      * 
     */
-    public Integer getMinCapacity() {
+    public Integer minCapacity() {
         return this.minCapacity;
     }
 

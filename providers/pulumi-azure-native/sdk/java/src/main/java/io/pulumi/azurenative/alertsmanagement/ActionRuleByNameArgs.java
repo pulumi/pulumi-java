@@ -27,7 +27,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="actionRuleName")
       private final @Nullable Output<String> actionRuleName;
 
-    public Output<String> getActionRuleName() {
+    public Output<String> actionRuleName() {
         return this.actionRuleName == null ? Codegen.empty() : this.actionRuleName;
     }
 
@@ -38,7 +38,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -60,7 +60,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

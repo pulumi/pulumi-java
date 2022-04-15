@@ -32,14 +32,14 @@ public final class ReturnShippingResponse {
      * The customer's account number with the carrier.
      * 
     */
-    public String getCarrierAccountNumber() {
+    public String carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
     /**
      * The carrier's name.
      * 
     */
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
 

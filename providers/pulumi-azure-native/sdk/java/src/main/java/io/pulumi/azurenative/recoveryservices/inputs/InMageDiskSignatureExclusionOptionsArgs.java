@@ -26,7 +26,7 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
     @Import(name="diskSignature")
       private final @Nullable Output<String> diskSignature;
 
-    public Output<String> getDiskSignature() {
+    public Output<String> diskSignature() {
         return this.diskSignature == null ? Codegen.empty() : this.diskSignature;
     }
 

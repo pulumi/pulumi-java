@@ -27,7 +27,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -38,7 +38,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
-    public Output<String> getQueueName() {
+    public Output<String> queueName() {
         return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
@@ -49,7 +49,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

@@ -25,7 +25,7 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
     @Import(name="value", required=true)
       private final Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value;
     }
 

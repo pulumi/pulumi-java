@@ -48,28 +48,28 @@ public final class ExpressRouteCircuitStatsResponse {
      * The Primary BytesIn of the peering.
      * 
     */
-    public Optional<Double> getPrimarybytesIn() {
+    public Optional<Double> primarybytesIn() {
         return Optional.ofNullable(this.primarybytesIn);
     }
     /**
      * The primary BytesOut of the peering.
      * 
     */
-    public Optional<Double> getPrimarybytesOut() {
+    public Optional<Double> primarybytesOut() {
         return Optional.ofNullable(this.primarybytesOut);
     }
     /**
      * The secondary BytesIn of the peering.
      * 
     */
-    public Optional<Double> getSecondarybytesIn() {
+    public Optional<Double> secondarybytesIn() {
         return Optional.ofNullable(this.secondarybytesIn);
     }
     /**
      * The secondary BytesOut of the peering.
      * 
     */
-    public Optional<Double> getSecondarybytesOut() {
+    public Optional<Double> secondarybytesOut() {
         return Optional.ofNullable(this.secondarybytesOut);
     }
 

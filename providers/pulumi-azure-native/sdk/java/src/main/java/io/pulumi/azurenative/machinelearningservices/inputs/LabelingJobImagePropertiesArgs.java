@@ -25,7 +25,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="annotationType")
       private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
-    public Output<Either<String,ImageAnnotationType>> getAnnotationType() {
+    public Output<Either<String,ImageAnnotationType>> annotationType() {
         return this.annotationType == null ? Codegen.empty() : this.annotationType;
     }
 
@@ -36,7 +36,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="mediaType", required=true)
       private final Output<Either<String,MediaType>> mediaType;
 
-    public Output<Either<String,MediaType>> getMediaType() {
+    public Output<Either<String,MediaType>> mediaType() {
         return this.mediaType;
     }
 

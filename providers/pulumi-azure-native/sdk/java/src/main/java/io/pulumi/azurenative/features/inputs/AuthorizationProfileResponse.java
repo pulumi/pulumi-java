@@ -23,7 +23,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     @Import(name="approvedTime", required=true)
       private final String approvedTime;
 
-    public String getApprovedTime() {
+    public String approvedTime() {
         return this.approvedTime;
     }
 
@@ -34,7 +34,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     @Import(name="approver", required=true)
       private final String approver;
 
-    public String getApprover() {
+    public String approver() {
         return this.approver;
     }
 
@@ -45,7 +45,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     @Import(name="requestedTime", required=true)
       private final String requestedTime;
 
-    public String getRequestedTime() {
+    public String requestedTime() {
         return this.requestedTime;
     }
 
@@ -56,7 +56,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     @Import(name="requester", required=true)
       private final String requester;
 
-    public String getRequester() {
+    public String requester() {
         return this.requester;
     }
 
@@ -67,7 +67,7 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     @Import(name="requesterObjectId", required=true)
       private final String requesterObjectId;
 
-    public String getRequesterObjectId() {
+    public String requesterObjectId() {
         return this.requesterObjectId;
     }
 

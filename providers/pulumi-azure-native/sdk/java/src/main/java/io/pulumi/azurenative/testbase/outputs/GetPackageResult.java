@@ -159,133 +159,133 @@ public final class GetPackageResult {
      * Application name
      * 
     */
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
     /**
      * The file path of the package.
      * 
     */
-    public String getBlobPath() {
+    public String blobPath() {
         return this.blobPath;
     }
     /**
      * Resource Etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The flighting ring for feature update.
      * 
     */
-    public String getFlightingRing() {
+    public String flightingRing() {
         return this.flightingRing;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The UTC timestamp when the package was last modified.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The status of the package.
      * 
     */
-    public String getPackageStatus() {
+    public String packageStatus() {
         return this.packageStatus;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata relating to this resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the target OSs of specific OS Update types.
      * 
     */
-    public List<TargetOSInfoResponse> getTargetOSList() {
+    public List<TargetOSInfoResponse> targetOSList() {
         return this.targetOSList;
     }
     /**
      * OOB, functional or both. Mapped to the data in 'tests' property.
      * 
     */
-    public List<String> getTestTypes() {
+    public List<String> testTypes() {
         return this.testTypes;
     }
     /**
      * The detailed test information.
      * 
     */
-    public List<TestResponse> getTests() {
+    public List<TestResponse> tests() {
         return this.tests;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The validation results. There's validation on package when it's created or updated.
      * 
     */
-    public List<PackageValidationResultResponse> getValidationResults() {
+    public List<PackageValidationResultResponse> validationResults() {
         return this.validationResults;
     }
     /**
      * Application version
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

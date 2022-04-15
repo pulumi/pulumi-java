@@ -24,7 +24,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order")
       private final @Nullable Output<Either<String,CompositePathSortOrder>> order;
 
-    public Output<Either<String,CompositePathSortOrder>> getOrder() {
+    public Output<Either<String,CompositePathSortOrder>> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -35,7 +35,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

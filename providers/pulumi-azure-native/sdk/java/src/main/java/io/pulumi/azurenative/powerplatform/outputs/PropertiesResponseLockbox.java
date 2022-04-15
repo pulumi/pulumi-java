@@ -26,7 +26,7 @@ public final class PropertiesResponseLockbox {
      * lockbox configuration
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

@@ -36,14 +36,14 @@ public final class GetBastionShareableLinkResult {
      * The URL to get the next set of results.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of Bastion Shareable Links for the request.
      * 
     */
-    public List<BastionShareableLinkResponse> getValue() {
+    public List<BastionShareableLinkResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

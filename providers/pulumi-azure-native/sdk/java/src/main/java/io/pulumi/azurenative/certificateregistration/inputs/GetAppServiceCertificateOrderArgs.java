@@ -19,7 +19,7 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
     @Import(name="certificateOrderName", required=true)
       private final String certificateOrderName;
 
-    public String getCertificateOrderName() {
+    public String certificateOrderName() {
         return this.certificateOrderName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAppServiceCertificateOrderArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

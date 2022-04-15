@@ -26,7 +26,7 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -37,7 +37,7 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

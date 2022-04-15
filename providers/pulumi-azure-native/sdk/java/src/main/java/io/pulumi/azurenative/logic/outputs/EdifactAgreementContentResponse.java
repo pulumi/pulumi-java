@@ -32,14 +32,14 @@ public final class EdifactAgreementContentResponse {
      * The EDIFACT one-way receive agreement.
      * 
     */
-    public EdifactOneWayAgreementResponse getReceiveAgreement() {
+    public EdifactOneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
     /**
      * The EDIFACT one-way send agreement.
      * 
     */
-    public EdifactOneWayAgreementResponse getSendAgreement() {
+    public EdifactOneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 

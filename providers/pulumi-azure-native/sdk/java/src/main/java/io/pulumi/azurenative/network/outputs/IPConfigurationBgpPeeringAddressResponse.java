@@ -49,28 +49,28 @@ public final class IPConfigurationBgpPeeringAddressResponse {
      * The list of custom BGP peering addresses which belong to IP configuration.
      * 
     */
-    public List<String> getCustomBgpIpAddresses() {
+    public List<String> customBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
     }
     /**
      * The list of default BGP peering addresses which belong to IP configuration.
      * 
     */
-    public List<String> getDefaultBgpIpAddresses() {
+    public List<String> defaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
     }
     /**
      * The ID of IP configuration which belongs to gateway.
      * 
     */
-    public Optional<String> getIpconfigurationId() {
+    public Optional<String> ipconfigurationId() {
         return Optional.ofNullable(this.ipconfigurationId);
     }
     /**
      * The list of tunnel public IP addresses which belong to IP configuration.
      * 
     */
-    public List<String> getTunnelIpAddresses() {
+    public List<String> tunnelIpAddresses() {
         return this.tunnelIpAddresses;
     }
 

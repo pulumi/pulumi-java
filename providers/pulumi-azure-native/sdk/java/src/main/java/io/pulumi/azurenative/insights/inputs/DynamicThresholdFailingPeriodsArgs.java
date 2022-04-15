@@ -25,7 +25,7 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
     @Import(name="minFailingPeriodsToAlert", required=true)
       private final Output<Double> minFailingPeriodsToAlert;
 
-    public Output<Double> getMinFailingPeriodsToAlert() {
+    public Output<Double> minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
 
@@ -36,7 +36,7 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
     @Import(name="numberOfEvaluationPeriods", required=true)
       private final Output<Double> numberOfEvaluationPeriods;
 
-    public Output<Double> getNumberOfEvaluationPeriods() {
+    public Output<Double> numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
 

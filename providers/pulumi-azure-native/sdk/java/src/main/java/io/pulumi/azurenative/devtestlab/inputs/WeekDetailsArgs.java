@@ -27,7 +27,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 
@@ -38,7 +38,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weekdays")
       private final @Nullable Output<List<String>> weekdays;
 
-    public Output<List<String>> getWeekdays() {
+    public Output<List<String>> weekdays() {
         return this.weekdays == null ? Codegen.empty() : this.weekdays;
     }
 

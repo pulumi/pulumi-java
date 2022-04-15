@@ -41,21 +41,21 @@ public final class SaasPropertiesResponseTerm {
      * The end date of the current term
      * 
     */
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The start date of the current term
      * 
     */
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * The unit indicating Monthly / Yearly
      * 
     */
-    public Optional<String> getTermUnit() {
+    public Optional<String> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }
 

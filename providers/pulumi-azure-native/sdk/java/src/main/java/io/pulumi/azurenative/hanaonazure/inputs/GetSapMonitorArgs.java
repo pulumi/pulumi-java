@@ -19,7 +19,7 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sapMonitorName", required=true)
       private final String sapMonitorName;
 
-    public String getSapMonitorName() {
+    public String sapMonitorName() {
         return this.sapMonitorName;
     }
 

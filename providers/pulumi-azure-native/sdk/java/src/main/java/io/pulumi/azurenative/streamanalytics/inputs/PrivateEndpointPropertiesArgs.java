@@ -27,7 +27,7 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
+    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
     }
 

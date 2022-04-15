@@ -28,7 +28,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
 
-    public Output<Integer> getCompatibilityLevel() {
+    public Output<Integer> compatibilityLevel() {
         return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
     }
 
@@ -39,7 +39,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Output<Boolean> getRequiresPreprocessing() {
+    public Output<Boolean> requiresPreprocessing() {
         return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
     }
 
@@ -50,7 +50,7 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sqlExpression")
       private final @Nullable Output<String> sqlExpression;
 
-    public Output<String> getSqlExpression() {
+    public Output<String> sqlExpression() {
         return this.sqlExpression == null ? Codegen.empty() : this.sqlExpression;
     }
 

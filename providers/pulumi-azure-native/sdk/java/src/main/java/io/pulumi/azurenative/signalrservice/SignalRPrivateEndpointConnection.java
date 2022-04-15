@@ -44,7 +44,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @return Private endpoint associated with the private endpoint connection
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @return Connection state
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @return Provisioning state of the private endpoint connection
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

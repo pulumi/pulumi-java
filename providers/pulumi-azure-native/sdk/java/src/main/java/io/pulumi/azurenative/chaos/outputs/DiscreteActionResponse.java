@@ -49,21 +49,21 @@ public final class DiscreteActionResponse {
      * String that represents a Capability URN.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of key value pairs.
      * 
     */
-    public List<KeyValuePairResponse> getParameters() {
+    public List<KeyValuePairResponse> parameters() {
         return this.parameters;
     }
     /**
      * String that represents a selector.
      * 
     */
-    public String getSelectorId() {
+    public String selectorId() {
         return this.selectorId;
     }
     /**
@@ -71,7 +71,7 @@ public final class DiscreteActionResponse {
      * Expected value is 'discrete'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

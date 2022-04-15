@@ -26,7 +26,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="days", required=true)
       private final Output<List<Either<String,DayOfWeek>>> days;
 
-    public Output<List<Either<String,DayOfWeek>>> getDays() {
+    public Output<List<Either<String,DayOfWeek>>> days() {
         return this.days;
     }
 
@@ -37,7 +37,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -48,7 +48,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
 
-    public Output<Integer> getRateInMbps() {
+    public Output<Integer> rateInMbps() {
         return this.rateInMbps;
     }
 
@@ -70,7 +70,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -92,7 +92,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="stop", required=true)
       private final Output<String> stop;
 
-    public Output<String> getStop() {
+    public Output<String> stop() {
         return this.stop;
     }
 

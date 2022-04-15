@@ -36,14 +36,14 @@ public final class KPIResourceHealthDetailsResponse {
      * Resource Health Status
      * 
     */
-    public List<ResourceHealthDetailsResponse> getResourceHealthDetails() {
+    public List<ResourceHealthDetailsResponse> resourceHealthDetails() {
         return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
     }
     /**
      * Resource Health Status
      * 
     */
-    public Optional<String> getResourceHealthStatus() {
+    public Optional<String> resourceHealthStatus() {
         return Optional.ofNullable(this.resourceHealthStatus);
     }
 

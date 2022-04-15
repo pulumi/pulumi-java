@@ -22,7 +22,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -44,7 +44,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -55,7 +55,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
+    public Output<String> dataSetMappingName() {
         return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
@@ -67,7 +67,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -78,7 +78,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 
@@ -89,7 +89,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -100,7 +100,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,7 +111,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -122,7 +122,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -133,7 +133,7 @@ public final class BlobFolderDataSetMappingArgs extends io.pulumi.resources.Reso
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 

@@ -27,7 +27,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -38,7 +38,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="dev")
       private final @Nullable Boolean dev;
 
-    public Optional<Boolean> getDev() {
+    public Optional<Boolean> dev() {
         return this.dev == null ? Optional.empty() : Optional.ofNullable(this.dev);
     }
 
@@ -49,7 +49,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
@@ -60,7 +60,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -71,7 +71,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -82,7 +82,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

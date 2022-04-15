@@ -22,7 +22,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     @Import(name="customEntityStoreAssignmentName")
       private final @Nullable Output<String> customEntityStoreAssignmentName;
 
-    public Output<String> getCustomEntityStoreAssignmentName() {
+    public Output<String> customEntityStoreAssignmentName() {
         return this.customEntityStoreAssignmentName == null ? Codegen.empty() : this.customEntityStoreAssignmentName;
     }
 
@@ -33,7 +33,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -44,7 +44,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

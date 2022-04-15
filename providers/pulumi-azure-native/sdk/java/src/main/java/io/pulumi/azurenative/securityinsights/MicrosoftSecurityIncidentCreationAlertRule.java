@@ -43,7 +43,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return The Name of the alert rule template used to create this rule.
      * 
      */
-    public Output</* @Nullable */ String> getAlertRuleTemplateName() {
+    public Output</* @Nullable */ String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
@@ -57,7 +57,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return The description of the alert rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return The display name for alerts created by this alert rule.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +85,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return the alerts' displayNames on which the cases will not be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisplayNamesExcludeFilter() {
+    public Output</* @Nullable */ List<String>> displayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter;
     }
     /**
@@ -99,7 +99,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return the alerts' displayNames on which the cases will be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisplayNamesFilter() {
+    public Output</* @Nullable */ List<String>> displayNamesFilter() {
         return this.displayNamesFilter;
     }
     /**
@@ -113,7 +113,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return Determines whether this alert rule is enabled or disabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -127,7 +127,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -143,7 +143,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -157,7 +157,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return The last time that this alert has been modified.
      * 
      */
-    public Output<String> getLastModifiedUtc() {
+    public Output<String> lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
@@ -171,7 +171,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -185,7 +185,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return The alerts' productName on which the cases will be generated
      * 
      */
-    public Output<String> getProductFilter() {
+    public Output<String> productFilter() {
         return this.productFilter;
     }
     /**
@@ -199,7 +199,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return the alerts' severities on which the cases will be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> getSeveritiesFilter() {
+    public Output</* @Nullable */ List<String>> severitiesFilter() {
         return this.severitiesFilter;
     }
     /**
@@ -213,7 +213,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

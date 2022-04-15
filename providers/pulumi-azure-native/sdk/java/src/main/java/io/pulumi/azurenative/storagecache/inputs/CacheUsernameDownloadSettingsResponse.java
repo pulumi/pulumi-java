@@ -27,7 +27,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="autoDownloadCertificate")
       private final @Nullable Boolean autoDownloadCertificate;
 
-    public Optional<Boolean> getAutoDownloadCertificate() {
+    public Optional<Boolean> autoDownloadCertificate() {
         return this.autoDownloadCertificate == null ? Optional.empty() : Optional.ofNullable(this.autoDownloadCertificate);
     }
 
@@ -38,7 +38,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="caCertificateURI")
       private final @Nullable String caCertificateURI;
 
-    public Optional<String> getCaCertificateURI() {
+    public Optional<String> caCertificateURI() {
         return this.caCertificateURI == null ? Optional.empty() : Optional.ofNullable(this.caCertificateURI);
     }
 
@@ -49,7 +49,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="credentials")
       private final @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
 
-    public Optional<CacheUsernameDownloadSettingsResponseCredentials> getCredentials() {
+    public Optional<CacheUsernameDownloadSettingsResponseCredentials> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -60,7 +60,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="encryptLdapConnection")
       private final @Nullable Boolean encryptLdapConnection;
 
-    public Optional<Boolean> getEncryptLdapConnection() {
+    public Optional<Boolean> encryptLdapConnection() {
         return this.encryptLdapConnection == null ? Optional.empty() : Optional.ofNullable(this.encryptLdapConnection);
     }
 
@@ -71,7 +71,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="extendedGroups")
       private final @Nullable Boolean extendedGroups;
 
-    public Optional<Boolean> getExtendedGroups() {
+    public Optional<Boolean> extendedGroups() {
         return this.extendedGroups == null ? Optional.empty() : Optional.ofNullable(this.extendedGroups);
     }
 
@@ -82,7 +82,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="groupFileURI")
       private final @Nullable String groupFileURI;
 
-    public Optional<String> getGroupFileURI() {
+    public Optional<String> groupFileURI() {
         return this.groupFileURI == null ? Optional.empty() : Optional.ofNullable(this.groupFileURI);
     }
 
@@ -93,7 +93,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="ldapBaseDN")
       private final @Nullable String ldapBaseDN;
 
-    public Optional<String> getLdapBaseDN() {
+    public Optional<String> ldapBaseDN() {
         return this.ldapBaseDN == null ? Optional.empty() : Optional.ofNullable(this.ldapBaseDN);
     }
 
@@ -104,7 +104,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="ldapServer")
       private final @Nullable String ldapServer;
 
-    public Optional<String> getLdapServer() {
+    public Optional<String> ldapServer() {
         return this.ldapServer == null ? Optional.empty() : Optional.ofNullable(this.ldapServer);
     }
 
@@ -115,7 +115,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="requireValidCertificate")
       private final @Nullable Boolean requireValidCertificate;
 
-    public Optional<Boolean> getRequireValidCertificate() {
+    public Optional<Boolean> requireValidCertificate() {
         return this.requireValidCertificate == null ? Optional.empty() : Optional.ofNullable(this.requireValidCertificate);
     }
 
@@ -126,7 +126,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="userFileURI")
       private final @Nullable String userFileURI;
 
-    public Optional<String> getUserFileURI() {
+    public Optional<String> userFileURI() {
         return this.userFileURI == null ? Optional.empty() : Optional.ofNullable(this.userFileURI);
     }
 
@@ -137,7 +137,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="usernameDownloaded", required=true)
       private final String usernameDownloaded;
 
-    public String getUsernameDownloaded() {
+    public String usernameDownloaded() {
         return this.usernameDownloaded;
     }
 
@@ -148,7 +148,7 @@ public final class CacheUsernameDownloadSettingsResponse extends io.pulumi.resou
     @Import(name="usernameSource")
       private final @Nullable String usernameSource;
 
-    public Optional<String> getUsernameSource() {
+    public Optional<String> usernameSource() {
         return this.usernameSource == null ? Optional.empty() : Optional.ofNullable(this.usernameSource);
     }
 

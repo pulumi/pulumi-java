@@ -43,21 +43,21 @@ public final class ScheduledSourceSynchronizationSettingResponse {
      * Expected value is 'ScheduleBased'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Recurrence Interval
      * 
     */
-    public Optional<String> getRecurrenceInterval() {
+    public Optional<String> recurrenceInterval() {
         return Optional.ofNullable(this.recurrenceInterval);
     }
     /**
      * Synchronization time
      * 
     */
-    public Optional<String> getSynchronizationTime() {
+    public Optional<String> synchronizationTime() {
         return Optional.ofNullable(this.synchronizationTime);
     }
 

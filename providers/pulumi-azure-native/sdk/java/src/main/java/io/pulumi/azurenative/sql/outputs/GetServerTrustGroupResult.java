@@ -55,35 +55,35 @@ public final class GetServerTrustGroupResult {
      * Group members information for the server trust group.
      * 
     */
-    public List<ServerInfoResponse> getGroupMembers() {
+    public List<ServerInfoResponse> groupMembers() {
         return this.groupMembers;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Trust scope of the server trust group.
      * 
     */
-    public List<String> getTrustScopes() {
+    public List<String> trustScopes() {
         return this.trustScopes;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

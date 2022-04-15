@@ -26,7 +26,7 @@ public final class UnknownTargetResponse {
      * Dictionary of string->string pairs containing information about the Storage Target.
      * 
     */
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
 

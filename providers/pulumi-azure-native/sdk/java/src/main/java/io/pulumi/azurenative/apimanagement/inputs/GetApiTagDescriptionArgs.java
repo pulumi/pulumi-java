@@ -19,7 +19,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="apiId", required=true)
       private final String apiId;
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
 
@@ -30,7 +30,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
     @Import(name="tagDescriptionId", required=true)
       private final String tagDescriptionId;
 
-    public String getTagDescriptionId() {
+    public String tagDescriptionId() {
         return this.tagDescriptionId;
     }
 

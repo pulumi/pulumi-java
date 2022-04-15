@@ -27,7 +27,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="quarantinePolicy")
       private final @Nullable QuarantinePolicyResponse quarantinePolicy;
 
-    public Optional<QuarantinePolicyResponse> getQuarantinePolicy() {
+    public Optional<QuarantinePolicyResponse> quarantinePolicy() {
         return this.quarantinePolicy == null ? Optional.empty() : Optional.ofNullable(this.quarantinePolicy);
     }
 
@@ -38,7 +38,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
       private final @Nullable RetentionPolicyResponse retentionPolicy;
 
-    public Optional<RetentionPolicyResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 
@@ -49,7 +49,7 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trustPolicy")
       private final @Nullable TrustPolicyResponse trustPolicy;
 
-    public Optional<TrustPolicyResponse> getTrustPolicy() {
+    public Optional<TrustPolicyResponse> trustPolicy() {
         return this.trustPolicy == null ? Optional.empty() : Optional.ofNullable(this.trustPolicy);
     }
 

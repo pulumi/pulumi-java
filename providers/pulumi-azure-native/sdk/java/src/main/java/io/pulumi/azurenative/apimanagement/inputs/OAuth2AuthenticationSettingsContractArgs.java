@@ -26,7 +26,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
     @Import(name="authorizationServerId")
       private final @Nullable Output<String> authorizationServerId;
 
-    public Output<String> getAuthorizationServerId() {
+    public Output<String> authorizationServerId() {
         return this.authorizationServerId == null ? Codegen.empty() : this.authorizationServerId;
     }
 
@@ -37,7 +37,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

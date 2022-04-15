@@ -47,7 +47,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Layout view of the blueprint definition for UI reference.
      * 
      */
-    public Output<Object> getLayout() {
+    public Output<Object> layout() {
         return this.layout;
     }
     /**
@@ -89,7 +89,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Parameters required by this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -117,7 +117,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Resource group placeholders defined by this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> getResourceGroups() {
+    public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups() {
         return this.resourceGroups;
     }
     /**
@@ -131,7 +131,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Status of the blueprint. This field is readonly.
      * 
      */
-    public Output<BlueprintStatusResponse> getStatus() {
+    public Output<BlueprintStatusResponse> status() {
         return this.status;
     }
     /**
@@ -145,7 +145,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return The scope where this blueprint definition can be assigned.
      * 
      */
-    public Output<String> getTargetScope() {
+    public Output<String> targetScope() {
         return this.targetScope;
     }
     /**
@@ -159,7 +159,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -173,7 +173,7 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
      * @return Published versions of this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Object> getVersions() {
+    public Output</* @Nullable */ Object> versions() {
         return this.versions;
     }
 

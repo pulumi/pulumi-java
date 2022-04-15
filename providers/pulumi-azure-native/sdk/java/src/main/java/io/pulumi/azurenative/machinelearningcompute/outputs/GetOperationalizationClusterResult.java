@@ -140,112 +140,112 @@ public final class GetOperationalizationClusterResult {
      * AppInsights configuration.
      * 
     */
-    public Optional<AppInsightsPropertiesResponse> getAppInsights() {
+    public Optional<AppInsightsPropertiesResponse> appInsights() {
         return Optional.ofNullable(this.appInsights);
     }
     /**
      * The cluster type.
      * 
     */
-    public String getClusterType() {
+    public String clusterType() {
         return this.clusterType;
     }
     /**
      * Container Registry properties.
      * 
     */
-    public Optional<ContainerRegistryPropertiesResponse> getContainerRegistry() {
+    public Optional<ContainerRegistryPropertiesResponse> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
      * Parameters for the Azure Container Service cluster.
      * 
     */
-    public Optional<AcsClusterPropertiesResponse> getContainerService() {
+    public Optional<AcsClusterPropertiesResponse> containerService() {
         return Optional.ofNullable(this.containerService);
     }
     /**
      * The date and time when the cluster was created.
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * The description of the cluster.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Contains global configuration for the web services in the cluster.
      * 
     */
-    public Optional<GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
+    public Optional<GlobalServiceConfigurationResponse> globalServiceConfiguration() {
         return Optional.ofNullable(this.globalServiceConfiguration);
     }
     /**
      * Specifies the resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The date and time when the cluster was last modified.
      * 
     */
-    public String getModifiedOn() {
+    public String modifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Specifies the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of provisioning errors reported by the resource provider.
      * 
     */
-    public List<ErrorResponseWrapperResponse> getProvisioningErrors() {
+    public List<ErrorResponseWrapperResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Storage Account properties.
      * 
     */
-    public Optional<StorageAccountPropertiesResponse> getStorageAccount() {
+    public Optional<StorageAccountPropertiesResponse> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -46,7 +46,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return The time the resource was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -60,7 +60,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    public Output<String> getDataAccessFqdn() {
+    public Output<String> dataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
@@ -74,7 +74,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    public Output<String> getDataAccessId() {
+    public Output<String> dataAccessId() {
         return this.dataAccessId;
     }
     /**
@@ -88,7 +88,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
      * 
      */
-    public Output<String> getDataRetentionTime() {
+    public Output<String> dataRetentionTime() {
         return this.dataRetentionTime;
     }
     /**
@@ -104,7 +104,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Expected value is 'Gen1'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -118,7 +118,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -132,7 +132,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
      */
-    public Output</* @Nullable */ List<TimeSeriesIdPropertyResponse>> getPartitionKeyProperties() {
+    public Output</* @Nullable */ List<TimeSeriesIdPropertyResponse>> partitionKeyProperties() {
         return this.partitionKeyProperties;
     }
     /**
@@ -160,7 +160,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -174,7 +174,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -188,7 +188,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
      */
-    public Output<EnvironmentStatusResponse> getStatus() {
+    public Output<EnvironmentStatusResponse> status() {
         return this.status;
     }
     /**
@@ -202,7 +202,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
-    public Output</* @Nullable */ String> getStorageLimitExceededBehavior() {
+    public Output</* @Nullable */ String> storageLimitExceededBehavior() {
         return this.storageLimitExceededBehavior;
     }
     /**
@@ -216,7 +216,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -230,7 +230,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

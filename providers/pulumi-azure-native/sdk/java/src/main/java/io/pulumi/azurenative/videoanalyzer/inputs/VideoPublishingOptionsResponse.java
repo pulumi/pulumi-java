@@ -25,7 +25,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
     @Import(name="disableArchive")
       private final @Nullable String disableArchive;
 
-    public Optional<String> getDisableArchive() {
+    public Optional<String> disableArchive() {
         return this.disableArchive == null ? Optional.empty() : Optional.ofNullable(this.disableArchive);
     }
 
@@ -36,7 +36,7 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
     @Import(name="disableRtspPublishing")
       private final @Nullable String disableRtspPublishing;
 
-    public Optional<String> getDisableRtspPublishing() {
+    public Optional<String> disableRtspPublishing() {
         return this.disableRtspPublishing == null ? Optional.empty() : Optional.ofNullable(this.disableRtspPublishing);
     }
 

@@ -23,7 +23,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable String allowedSourceAddressPrefix;
 
-    public Optional<String> getAllowedSourceAddressPrefix() {
+    public Optional<String> allowedSourceAddressPrefix() {
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
@@ -34,7 +34,7 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable List<String> allowedSourceAddressPrefixes;
 
-    public List<String> getAllowedSourceAddressPrefixes() {
+    public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
 
@@ -45,21 +45,21 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
     @Import(name="maxRequestAccessDuration", required=true)
       private final String maxRequestAccessDuration;
 
-    public String getMaxRequestAccessDuration() {
+    public String maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
     @Import(name="number", required=true)
       private final Integer number;
 
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

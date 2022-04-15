@@ -114,91 +114,91 @@ public final class GetIpAllocationResult {
      * IpAllocation tags.
      * 
     */
-    public Map<String,String> getAllocationTags() {
+    public Map<String,String> allocationTags() {
         return this.allocationTags == null ? Map.of() : this.allocationTags;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IPAM allocation ID.
      * 
     */
-    public Optional<String> getIpamAllocationId() {
+    public Optional<String> ipamAllocationId() {
         return Optional.ofNullable(this.ipamAllocationId);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The address prefix for the IpAllocation.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The address prefix length for the IpAllocation.
      * 
     */
-    public Optional<Integer> getPrefixLength() {
+    public Optional<Integer> prefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
     /**
      * The address prefix Type for the IpAllocation.
      * 
     */
-    public Optional<String> getPrefixType() {
+    public Optional<String> prefixType() {
         return Optional.ofNullable(this.prefixType);
     }
     /**
      * The Subnet that using the prefix of this IpAllocation resource.
      * 
     */
-    public SubResourceResponse getSubnet() {
+    public SubResourceResponse subnet() {
         return this.subnet;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The VirtualNetwork that using the prefix of this IpAllocation resource.
      * 
     */
-    public SubResourceResponse getVirtualNetwork() {
+    public SubResourceResponse virtualNetwork() {
         return this.virtualNetwork;
     }
 

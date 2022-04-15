@@ -19,7 +19,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="metricsSourceName", required=true)
       private final String metricsSourceName;
 
-    public String getMetricsSourceName() {
+    public String metricsSourceName() {
         return this.metricsSourceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

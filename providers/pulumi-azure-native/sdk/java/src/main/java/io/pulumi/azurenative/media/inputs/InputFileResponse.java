@@ -33,7 +33,7 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filename")
       private final @Nullable String filename;
 
-    public Optional<String> getFilename() {
+    public Optional<String> filename() {
         return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
     }
 
@@ -44,7 +44,7 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="includedTracks")
       private final @Nullable List<Object> includedTracks;
 
-    public List<Object> getIncludedTracks() {
+    public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
 
@@ -56,7 +56,7 @@ public final class InputFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

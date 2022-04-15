@@ -43,7 +43,7 @@ public class EdgeModule extends io.pulumi.resources.CustomResource {
      * @return Internal ID generated for the instance of the Video Analyzer edge module.
      * 
      */
-    public Output<String> getEdgeModuleId() {
+    public Output<String> edgeModuleId() {
         return this.edgeModuleId;
     }
     /**
@@ -57,7 +57,7 @@ public class EdgeModule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class EdgeModule extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -85,7 +85,7 @@ public class EdgeModule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

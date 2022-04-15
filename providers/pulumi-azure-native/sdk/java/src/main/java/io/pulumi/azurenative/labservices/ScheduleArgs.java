@@ -23,7 +23,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -34,7 +34,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes == null ? Codegen.empty() : this.notes;
     }
 
@@ -45,7 +45,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrencePattern")
       private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
-    public Output<RecurrencePatternArgs> getRecurrencePattern() {
+    public Output<RecurrencePatternArgs> recurrencePattern() {
         return this.recurrencePattern == null ? Codegen.empty() : this.recurrencePattern;
     }
 
@@ -56,7 +56,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
 
-    public Output<String> getScheduleName() {
+    public Output<String> scheduleName() {
         return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
     }
 
@@ -78,7 +78,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startAt")
       private final @Nullable Output<String> startAt;
 
-    public Output<String> getStartAt() {
+    public Output<String> startAt() {
         return this.startAt == null ? Codegen.empty() : this.startAt;
     }
 
@@ -89,7 +89,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stopAt", required=true)
       private final Output<String> stopAt;
 
-    public Output<String> getStopAt() {
+    public Output<String> stopAt() {
         return this.stopAt;
     }
 
@@ -100,7 +100,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZoneId", required=true)
       private final Output<String> timeZoneId;
 
-    public Output<String> getTimeZoneId() {
+    public Output<String> timeZoneId() {
         return this.timeZoneId;
     }
 

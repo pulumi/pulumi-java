@@ -35,14 +35,14 @@ public final class SqlConnectivityUpdateSettingsResponse {
      * SQL Server connectivity option.
      * 
     */
-    public Optional<String> getConnectivityType() {
+    public Optional<String> connectivityType() {
         return Optional.ofNullable(this.connectivityType);
     }
     /**
      * SQL Server port.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

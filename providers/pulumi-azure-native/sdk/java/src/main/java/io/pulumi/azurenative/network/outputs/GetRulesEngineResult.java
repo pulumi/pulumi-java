@@ -56,35 +56,35 @@ public final class GetRulesEngineResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource status.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * A list of rules that define a particular Rules Engine Configuration.
      * 
     */
-    public List<RulesEngineRuleResponse> getRules() {
+    public List<RulesEngineRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class ListTopicSharedAccessKeysArgs extends io.pulumi.resources.Inv
     @Import(name="topicName", required=true)
       private final String topicName;
 
-    public String getTopicName() {
+    public String topicName() {
         return this.topicName;
     }
 

@@ -23,7 +23,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
     @Import(name="agreementName", required=true)
       private final String agreementName;
 
-    public String getAgreementName() {
+    public String agreementName() {
         return this.agreementName;
     }
 
@@ -34,7 +34,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -45,7 +45,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> getKeyType() {
+    public Either<String,KeyType> keyType() {
         return this.keyType == null ? null : this.keyType;
     }
 
@@ -56,7 +56,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
     @Import(name="notAfter")
       private final @Nullable String notAfter;
 
-    public Optional<String> getNotAfter() {
+    public Optional<String> notAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
@@ -67,7 +67,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

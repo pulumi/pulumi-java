@@ -27,7 +27,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
     @Import(name="servicePrincipalSecretMetadata")
       private final @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 
-    public Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> getServicePrincipalSecretMetadata() {
+    public Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata() {
         return this.servicePrincipalSecretMetadata == null ? Codegen.empty() : this.servicePrincipalSecretMetadata;
     }
 

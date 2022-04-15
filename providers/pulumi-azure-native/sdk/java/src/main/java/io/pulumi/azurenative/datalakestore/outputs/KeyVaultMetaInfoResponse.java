@@ -39,21 +39,21 @@ public final class KeyVaultMetaInfoResponse {
      * The name of the user managed encryption key.
      * 
     */
-    public String getEncryptionKeyName() {
+    public String encryptionKeyName() {
         return this.encryptionKeyName;
     }
     /**
      * The version of the user managed encryption key.
      * 
     */
-    public String getEncryptionKeyVersion() {
+    public String encryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
     /**
      * The resource identifier for the user managed Key Vault being used to encrypt.
      * 
     */
-    public String getKeyVaultResourceId() {
+    public String keyVaultResourceId() {
         return this.keyVaultResourceId;
     }
 

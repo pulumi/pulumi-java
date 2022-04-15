@@ -19,7 +19,7 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
     @Import(name="offerId", required=true)
       private final String offerId;
 
-    public String getOfferId() {
+    public String offerId() {
         return this.offerId;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;
 
-    public String getPrivateStoreId() {
+    public String privateStoreId() {
         return this.privateStoreId;
     }
 

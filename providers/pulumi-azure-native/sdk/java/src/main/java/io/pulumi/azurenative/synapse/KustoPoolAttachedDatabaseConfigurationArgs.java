@@ -25,7 +25,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
-    public Output<String> getAttachedDatabaseConfigurationName() {
+    public Output<String> attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName == null ? Codegen.empty() : this.attachedDatabaseConfigurationName;
     }
 
@@ -36,7 +36,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -47,7 +47,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
-    public Output<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
+    public Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
 
@@ -58,7 +58,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -69,7 +69,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="kustoPoolResourceId", required=true)
       private final Output<String> kustoPoolResourceId;
 
-    public Output<String> getKustoPoolResourceId() {
+    public Output<String> kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
 
@@ -80,7 +80,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -91,7 +91,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
-    public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
+    public Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties() {
         return this.tableLevelSharingProperties == null ? Codegen.empty() : this.tableLevelSharingProperties;
     }
 
@@ -113,7 +113,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -27,7 +27,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowlistRules")
       private final @Nullable Output<List<AllowlistCustomAlertRuleArgs>> allowlistRules;
 
-    public Output<List<AllowlistCustomAlertRuleArgs>> getAllowlistRules() {
+    public Output<List<AllowlistCustomAlertRuleArgs>> allowlistRules() {
         return this.allowlistRules == null ? Codegen.empty() : this.allowlistRules;
     }
 
@@ -38,7 +38,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="denylistRules")
       private final @Nullable Output<List<DenylistCustomAlertRuleArgs>> denylistRules;
 
-    public Output<List<DenylistCustomAlertRuleArgs>> getDenylistRules() {
+    public Output<List<DenylistCustomAlertRuleArgs>> denylistRules() {
         return this.denylistRules == null ? Codegen.empty() : this.denylistRules;
     }
 
@@ -49,7 +49,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="deviceSecurityGroupName")
       private final @Nullable Output<String> deviceSecurityGroupName;
 
-    public Output<String> getDeviceSecurityGroupName() {
+    public Output<String> deviceSecurityGroupName() {
         return this.deviceSecurityGroupName == null ? Codegen.empty() : this.deviceSecurityGroupName;
     }
 
@@ -60,7 +60,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -71,7 +71,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="thresholdRules")
       private final @Nullable Output<List<ThresholdCustomAlertRuleArgs>> thresholdRules;
 
-    public Output<List<ThresholdCustomAlertRuleArgs>> getThresholdRules() {
+    public Output<List<ThresholdCustomAlertRuleArgs>> thresholdRules() {
         return this.thresholdRules == null ? Codegen.empty() : this.thresholdRules;
     }
 
@@ -82,7 +82,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     @Import(name="timeWindowRules")
       private final @Nullable Output<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules;
 
-    public Output<List<TimeWindowCustomAlertRuleArgs>> getTimeWindowRules() {
+    public Output<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules() {
         return this.timeWindowRules == null ? Codegen.empty() : this.timeWindowRules;
     }
 

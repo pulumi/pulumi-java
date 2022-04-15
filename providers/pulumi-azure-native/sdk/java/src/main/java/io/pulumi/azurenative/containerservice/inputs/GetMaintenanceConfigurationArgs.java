@@ -19,7 +19,7 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
     @Import(name="configName", required=true)
       private final String configName;
 
-    public String getConfigName() {
+    public String configName() {
         return this.configName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

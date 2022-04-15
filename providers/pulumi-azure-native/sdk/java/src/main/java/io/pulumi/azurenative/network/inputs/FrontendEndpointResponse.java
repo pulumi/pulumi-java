@@ -28,7 +28,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="customHttpsConfiguration", required=true)
       private final CustomHttpsConfigurationResponse customHttpsConfiguration;
 
-    public CustomHttpsConfigurationResponse getCustomHttpsConfiguration() {
+    public CustomHttpsConfigurationResponse customHttpsConfiguration() {
         return this.customHttpsConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="customHttpsProvisioningState", required=true)
       private final String customHttpsProvisioningState;
 
-    public String getCustomHttpsProvisioningState() {
+    public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
 
@@ -50,7 +50,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="customHttpsProvisioningSubstate", required=true)
       private final String customHttpsProvisioningSubstate;
 
-    public String getCustomHttpsProvisioningSubstate() {
+    public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
 
@@ -61,7 +61,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -72,7 +72,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -83,7 +83,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -94,7 +94,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -105,7 +105,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sessionAffinityEnabledState")
       private final @Nullable String sessionAffinityEnabledState;
 
-    public Optional<String> getSessionAffinityEnabledState() {
+    public Optional<String> sessionAffinityEnabledState() {
         return this.sessionAffinityEnabledState == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityEnabledState);
     }
 
@@ -116,7 +116,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Integer sessionAffinityTtlSeconds;
 
-    public Optional<Integer> getSessionAffinityTtlSeconds() {
+    public Optional<Integer> sessionAffinityTtlSeconds() {
         return this.sessionAffinityTtlSeconds == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
 
@@ -127,7 +127,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -138,7 +138,7 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
+    public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 

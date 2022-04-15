@@ -20,14 +20,14 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     @Import(name="action", required=true)
       private final Output<Either<String,SubscriptionNotificationOperation>> action;
 
-    public Output<Either<String,SubscriptionNotificationOperation>> getAction() {
+    public Output<Either<String,SubscriptionNotificationOperation>> action() {
         return this.action;
     }
 
     @Import(name="state", required=true)
       private final Output<Either<String,SubscriptionTransitioningState>> state;
 
-    public Output<Either<String,SubscriptionTransitioningState>> getState() {
+    public Output<Either<String,SubscriptionTransitioningState>> state() {
         return this.state;
     }
 

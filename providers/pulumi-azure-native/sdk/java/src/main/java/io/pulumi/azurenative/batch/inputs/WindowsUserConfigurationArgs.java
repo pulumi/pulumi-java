@@ -22,7 +22,7 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="loginMode")
       private final @Nullable Output<LoginMode> loginMode;
 
-    public Output<LoginMode> getLoginMode() {
+    public Output<LoginMode> loginMode() {
         return this.loginMode == null ? Codegen.empty() : this.loginMode;
     }
 

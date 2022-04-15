@@ -158,126 +158,126 @@ public final class GetCacheResult {
      * The size of this Cache, in GB.
      * 
     */
-    public Optional<Integer> getCacheSizeGB() {
+    public Optional<Integer> cacheSizeGB() {
         return Optional.ofNullable(this.cacheSizeGB);
     }
     /**
      * Specifies Directory Services settings of the cache.
      * 
     */
-    public Optional<CacheDirectorySettingsResponse> getDirectoryServicesSettings() {
+    public Optional<CacheDirectorySettingsResponse> directoryServicesSettings() {
         return Optional.ofNullable(this.directoryServicesSettings);
     }
     /**
      * Specifies encryption settings of the cache.
      * 
     */
-    public Optional<CacheEncryptionSettingsResponse> getEncryptionSettings() {
+    public Optional<CacheEncryptionSettingsResponse> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
     /**
      * Health of the Cache.
      * 
     */
-    public CacheHealthResponse getHealth() {
+    public CacheHealthResponse health() {
         return this.health;
     }
     /**
      * Resource ID of the Cache.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the cache, if configured.
      * 
     */
-    public Optional<CacheIdentityResponse> getIdentity() {
+    public Optional<CacheIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Region name string.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Array of IP addresses that can be used by clients mounting this Cache.
      * 
     */
-    public List<String> getMountAddresses() {
+    public List<String> mountAddresses() {
         return this.mountAddresses;
     }
     /**
      * Name of Cache.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies network settings of the cache.
      * 
     */
-    public Optional<CacheNetworkSettingsResponse> getNetworkSettings() {
+    public Optional<CacheNetworkSettingsResponse> networkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies security settings of the cache.
      * 
     */
-    public Optional<CacheSecuritySettingsResponse> getSecuritySettings() {
+    public Optional<CacheSecuritySettingsResponse> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
     /**
      * SKU for the Cache.
      * 
     */
-    public Optional<CacheResponseSku> getSku() {
+    public Optional<CacheResponseSku> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Subnet used for the Cache.
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The system meta data relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the Cache; Microsoft.StorageCache/Cache
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Upgrade status of the Cache.
      * 
     */
-    public Optional<CacheUpgradeStatusResponse> getUpgradeStatus() {
+    public Optional<CacheUpgradeStatusResponse> upgradeStatus() {
         return Optional.ofNullable(this.upgradeStatus);
     }
 

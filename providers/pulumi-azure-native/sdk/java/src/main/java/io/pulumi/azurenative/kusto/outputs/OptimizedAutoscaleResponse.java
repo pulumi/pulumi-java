@@ -47,28 +47,28 @@ public final class OptimizedAutoscaleResponse {
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * Maximum allowed instances count.
      * 
     */
-    public Integer getMaximum() {
+    public Integer maximum() {
         return this.maximum;
     }
     /**
      * Minimum allowed instances count.
      * 
     */
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
     /**
      * The version of the template defined, for instance 1.
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

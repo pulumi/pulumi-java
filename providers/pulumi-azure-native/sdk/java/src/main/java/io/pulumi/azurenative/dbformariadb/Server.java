@@ -47,7 +47,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
-    public Output</* @Nullable */ String> getAdministratorLogin() {
+    public Output</* @Nullable */ String> administratorLogin() {
         return this.administratorLogin;
     }
     /**
@@ -61,7 +61,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Earliest restore point creation time (ISO8601 format)
      * 
      */
-    public Output</* @Nullable */ String> getEarliestRestoreDate() {
+    public Output</* @Nullable */ String> earliestRestoreDate() {
         return this.earliestRestoreDate;
     }
     /**
@@ -75,7 +75,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of a server.
      * 
      */
-    public Output</* @Nullable */ String> getFullyQualifiedDomainName() {
+    public Output</* @Nullable */ String> fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
@@ -89,7 +89,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The master server id of a replica server.
      * 
      */
-    public Output</* @Nullable */ String> getMasterServerId() {
+    public Output</* @Nullable */ String> masterServerId() {
         return this.masterServerId;
     }
     /**
@@ -117,7 +117,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Enforce a minimal Tls version for the server.
      * 
      */
-    public Output</* @Nullable */ String> getMinimalTlsVersion() {
+    public Output</* @Nullable */ String> minimalTlsVersion() {
         return this.minimalTlsVersion;
     }
     /**
@@ -131,7 +131,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connections on a server
      * 
      */
-    public Output<List<ServerPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -159,7 +159,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -173,7 +173,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The maximum number of replicas that a master server can have.
      * 
      */
-    public Output</* @Nullable */ Integer> getReplicaCapacity() {
+    public Output</* @Nullable */ Integer> replicaCapacity() {
         return this.replicaCapacity;
     }
     /**
@@ -187,7 +187,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The replication role of the server.
      * 
      */
-    public Output</* @Nullable */ String> getReplicationRole() {
+    public Output</* @Nullable */ String> replicationRole() {
         return this.replicationRole;
     }
     /**
@@ -201,7 +201,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The SKU (pricing tier) of the server.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -215,7 +215,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Enable ssl enforcement or not when connect to server.
      * 
      */
-    public Output</* @Nullable */ String> getSslEnforcement() {
+    public Output</* @Nullable */ String> sslEnforcement() {
         return this.sslEnforcement;
     }
     /**
@@ -229,7 +229,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Storage profile of a server.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> getStorageProfile() {
+    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
         return this.storageProfile;
     }
     /**
@@ -243,7 +243,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -257,7 +257,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -271,7 +271,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return A state of a server that is visible to user.
      * 
      */
-    public Output</* @Nullable */ String> getUserVisibleState() {
+    public Output</* @Nullable */ String> userVisibleState() {
         return this.userVisibleState;
     }
     /**
@@ -285,7 +285,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Server version.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

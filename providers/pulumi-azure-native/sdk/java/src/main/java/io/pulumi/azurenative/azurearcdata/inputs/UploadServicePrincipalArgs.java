@@ -26,7 +26,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
+    public Output<String> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -37,7 +37,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -48,7 +48,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -59,7 +59,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

@@ -28,7 +28,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId == null ? Codegen.empty() : this.artifactId;
     }
 
@@ -39,7 +39,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="artifactTitle")
       private final @Nullable Output<String> artifactTitle;
 
-    public Output<String> getArtifactTitle() {
+    public Output<String> artifactTitle() {
         return this.artifactTitle == null ? Codegen.empty() : this.artifactTitle;
     }
 
@@ -50,7 +50,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="deploymentStatusMessage")
       private final @Nullable Output<String> deploymentStatusMessage;
 
-    public Output<String> getDeploymentStatusMessage() {
+    public Output<String> deploymentStatusMessage() {
         return this.deploymentStatusMessage == null ? Codegen.empty() : this.deploymentStatusMessage;
     }
 
@@ -61,7 +61,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="installTime")
       private final @Nullable Output<String> installTime;
 
-    public Output<String> getInstallTime() {
+    public Output<String> installTime() {
         return this.installTime == null ? Codegen.empty() : this.installTime;
     }
 
@@ -72,7 +72,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArtifactParameterPropertiesArgs>> getParameters() {
+    public Output<List<ArtifactParameterPropertiesArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -83,7 +83,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -94,7 +94,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="vmExtensionStatusMessage")
       private final @Nullable Output<String> vmExtensionStatusMessage;
 
-    public Output<String> getVmExtensionStatusMessage() {
+    public Output<String> vmExtensionStatusMessage() {
         return this.vmExtensionStatusMessage == null ? Codegen.empty() : this.vmExtensionStatusMessage;
     }
 

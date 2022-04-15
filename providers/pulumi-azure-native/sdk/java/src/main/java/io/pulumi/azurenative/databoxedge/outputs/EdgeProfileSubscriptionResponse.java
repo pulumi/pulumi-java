@@ -60,38 +60,38 @@ public final class EdgeProfileSubscriptionResponse {
      * ARM ID of the subscription
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLocationPlacementId() {
+    public Optional<String> locationPlacementId() {
         return Optional.ofNullable(this.locationPlacementId);
     }
-    public Optional<String> getQuotaId() {
+    public Optional<String> quotaId() {
         return Optional.ofNullable(this.quotaId);
     }
-    public List<SubscriptionRegisteredFeaturesResponse> getRegisteredFeatures() {
+    public List<SubscriptionRegisteredFeaturesResponse> registeredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
-    public Optional<String> getRegistrationDate() {
+    public Optional<String> registrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
     /**
      * Edge Subscription Registration ID
      * 
     */
-    public Optional<String> getRegistrationId() {
+    public Optional<String> registrationId() {
         return Optional.ofNullable(this.registrationId);
     }
-    public Optional<String> getSerializedDetails() {
+    public Optional<String> serializedDetails() {
         return Optional.ofNullable(this.serializedDetails);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

@@ -26,7 +26,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
     @Import(name="children")
       private final @Nullable List<ManagementGroupChildInfoResponse> children;
 
-    public List<ManagementGroupChildInfoResponse> getChildren() {
+    public List<ManagementGroupChildInfoResponse> children() {
         return this.children == null ? List.of() : this.children;
     }
 
@@ -37,7 +37,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -48,7 +48,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class ManagementGroupChildInfoResponse extends io.pulumi.resources.
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

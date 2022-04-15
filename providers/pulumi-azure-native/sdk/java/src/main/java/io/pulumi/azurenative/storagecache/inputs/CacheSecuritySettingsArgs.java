@@ -27,7 +27,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
     @Import(name="accessPolicies")
       private final @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
-    public Output<List<NfsAccessPolicyArgs>> getAccessPolicies() {
+    public Output<List<NfsAccessPolicyArgs>> accessPolicies() {
         return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 

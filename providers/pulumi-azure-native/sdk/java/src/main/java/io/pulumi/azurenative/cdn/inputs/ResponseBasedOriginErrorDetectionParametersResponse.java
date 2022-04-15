@@ -28,7 +28,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
     @Import(name="httpErrorRanges")
       private final @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges;
 
-    public List<HttpErrorRangeParametersResponse> getHttpErrorRanges() {
+    public List<HttpErrorRangeParametersResponse> httpErrorRanges() {
         return this.httpErrorRanges == null ? List.of() : this.httpErrorRanges;
     }
 
@@ -39,7 +39,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
     @Import(name="responseBasedDetectedErrorTypes")
       private final @Nullable String responseBasedDetectedErrorTypes;
 
-    public Optional<String> getResponseBasedDetectedErrorTypes() {
+    public Optional<String> responseBasedDetectedErrorTypes() {
         return this.responseBasedDetectedErrorTypes == null ? Optional.empty() : Optional.ofNullable(this.responseBasedDetectedErrorTypes);
     }
 
@@ -50,7 +50,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
     @Import(name="responseBasedFailoverThresholdPercentage")
       private final @Nullable Integer responseBasedFailoverThresholdPercentage;
 
-    public Optional<Integer> getResponseBasedFailoverThresholdPercentage() {
+    public Optional<Integer> responseBasedFailoverThresholdPercentage() {
         return this.responseBasedFailoverThresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.responseBasedFailoverThresholdPercentage);
     }
 

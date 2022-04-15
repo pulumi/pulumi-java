@@ -27,7 +27,7 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="associatedRouteTable")
       private final @Nullable SubResourceResponse associatedRouteTable;
 
-    public Optional<SubResourceResponse> getAssociatedRouteTable() {
+    public Optional<SubResourceResponse> associatedRouteTable() {
         return this.associatedRouteTable == null ? Optional.empty() : Optional.ofNullable(this.associatedRouteTable);
     }
 
@@ -38,7 +38,7 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="propagatedRouteTables")
       private final @Nullable PropagatedRouteTableResponse propagatedRouteTables;
 
-    public Optional<PropagatedRouteTableResponse> getPropagatedRouteTables() {
+    public Optional<PropagatedRouteTableResponse> propagatedRouteTables() {
         return this.propagatedRouteTables == null ? Optional.empty() : Optional.ofNullable(this.propagatedRouteTables);
     }
 
@@ -49,7 +49,7 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="vnetRoutes")
       private final @Nullable VnetRouteResponse vnetRoutes;
 
-    public Optional<VnetRouteResponse> getVnetRoutes() {
+    public Optional<VnetRouteResponse> vnetRoutes() {
         return this.vnetRoutes == null ? Optional.empty() : Optional.ofNullable(this.vnetRoutes);
     }
 

@@ -33,14 +33,14 @@ public final class PackageStoreResponse {
      * The name of the package store
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The package store linked service reference.
      * 
     */
-    public EntityReferenceResponse getPackageStoreLinkedService() {
+    public EntityReferenceResponse packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
 

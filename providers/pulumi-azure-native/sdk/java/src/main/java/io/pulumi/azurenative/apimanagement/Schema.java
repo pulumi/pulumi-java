@@ -42,7 +42,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Free-form schema entity description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Schema Type. Immutable.
      * 
      */
-    public Output<String> getSchemaType() {
+    public Output<String> schemaType() {
         return this.schemaType;
     }
     /**
@@ -84,7 +84,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +98,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Json-encoded string for non json-based schema.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 

@@ -59,35 +59,35 @@ public final class SimpleSchedulePolicyResponse {
      * Expected value is 'SimpleSchedulePolicy'.
      * 
     */
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
     /**
      * List of days of week this schedule has to be run.
      * 
     */
-    public List<String> getScheduleRunDays() {
+    public List<String> scheduleRunDays() {
         return this.scheduleRunDays == null ? List.of() : this.scheduleRunDays;
     }
     /**
      * Frequency of the schedule operation of this policy.
      * 
     */
-    public Optional<String> getScheduleRunFrequency() {
+    public Optional<String> scheduleRunFrequency() {
         return Optional.ofNullable(this.scheduleRunFrequency);
     }
     /**
      * List of times of day this schedule has to be run.
      * 
     */
-    public List<String> getScheduleRunTimes() {
+    public List<String> scheduleRunTimes() {
         return this.scheduleRunTimes == null ? List.of() : this.scheduleRunTimes;
     }
     /**
      * At every number weeks this schedule has to be run.
      * 
     */
-    public Optional<Integer> getScheduleWeeklyFrequency() {
+    public Optional<Integer> scheduleWeeklyFrequency() {
         return Optional.ofNullable(this.scheduleWeeklyFrequency);
     }
 

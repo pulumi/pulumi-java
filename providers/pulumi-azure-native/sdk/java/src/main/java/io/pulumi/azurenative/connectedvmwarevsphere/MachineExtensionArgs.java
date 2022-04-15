@@ -25,7 +25,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
@@ -36,7 +36,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="extensionName")
       private final @Nullable Output<String> extensionName;
 
-    public Output<String> getExtensionName() {
+    public Output<String> extensionName() {
         return this.extensionName == null ? Codegen.empty() : this.extensionName;
     }
 
@@ -47,7 +47,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -58,7 +58,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
+    public Output<Object> protectedSettings() {
         return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
@@ -91,7 +91,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -102,7 +102,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
+    public Output<Object> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -124,7 +124,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -135,7 +135,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -146,7 +146,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 

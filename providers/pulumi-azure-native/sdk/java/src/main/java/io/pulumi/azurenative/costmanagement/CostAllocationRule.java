@@ -43,7 +43,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * @return Name of the rule. This is a read only value.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * @return Cost allocation rule properties
      * 
      */
-    public Output<CostAllocationRulePropertiesResponse> getProperties() {
+    public Output<CostAllocationRulePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * @return Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

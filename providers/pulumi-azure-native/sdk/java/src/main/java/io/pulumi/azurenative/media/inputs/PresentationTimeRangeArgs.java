@@ -27,7 +27,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="endTimestamp")
       private final @Nullable Output<Double> endTimestamp;
 
-    public Output<Double> getEndTimestamp() {
+    public Output<Double> endTimestamp() {
         return this.endTimestamp == null ? Codegen.empty() : this.endTimestamp;
     }
 
@@ -38,7 +38,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="forceEndTimestamp")
       private final @Nullable Output<Boolean> forceEndTimestamp;
 
-    public Output<Boolean> getForceEndTimestamp() {
+    public Output<Boolean> forceEndTimestamp() {
         return this.forceEndTimestamp == null ? Codegen.empty() : this.forceEndTimestamp;
     }
 
@@ -49,7 +49,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="liveBackoffDuration")
       private final @Nullable Output<Double> liveBackoffDuration;
 
-    public Output<Double> getLiveBackoffDuration() {
+    public Output<Double> liveBackoffDuration() {
         return this.liveBackoffDuration == null ? Codegen.empty() : this.liveBackoffDuration;
     }
 
@@ -60,7 +60,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="presentationWindowDuration")
       private final @Nullable Output<Double> presentationWindowDuration;
 
-    public Output<Double> getPresentationWindowDuration() {
+    public Output<Double> presentationWindowDuration() {
         return this.presentationWindowDuration == null ? Codegen.empty() : this.presentationWindowDuration;
     }
 
@@ -71,7 +71,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="startTimestamp")
       private final @Nullable Output<Double> startTimestamp;
 
-    public Output<Double> getStartTimestamp() {
+    public Output<Double> startTimestamp() {
         return this.startTimestamp == null ? Codegen.empty() : this.startTimestamp;
     }
 
@@ -82,7 +82,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     @Import(name="timescale")
       private final @Nullable Output<Double> timescale;
 
-    public Output<Double> getTimescale() {
+    public Output<Double> timescale() {
         return this.timescale == null ? Codegen.empty() : this.timescale;
     }
 

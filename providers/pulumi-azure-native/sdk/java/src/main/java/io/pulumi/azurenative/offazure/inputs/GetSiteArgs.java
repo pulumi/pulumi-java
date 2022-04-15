@@ -19,7 +19,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="siteName", required=true)
       private final String siteName;
 
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
 

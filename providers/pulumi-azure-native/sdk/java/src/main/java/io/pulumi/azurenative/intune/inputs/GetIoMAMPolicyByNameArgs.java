@@ -21,7 +21,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -32,7 +32,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
     @Import(name="policyName", required=true)
       private final String policyName;
 
-    public String getPolicyName() {
+    public String policyName() {
         return this.policyName;
     }
 
@@ -43,7 +43,7 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
     @Import(name="select")
       private final @Nullable String select;
 
-    public Optional<String> getSelect() {
+    public Optional<String> select() {
         return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
     }
 

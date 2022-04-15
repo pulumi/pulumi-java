@@ -34,14 +34,14 @@ public final class ListRegistryBuildSourceUploadUrlResult {
      * The relative path to the source. This is used to submit the subsequent queue build request.
      * 
     */
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * The URL where the client can upload the source.
      * 
     */
-    public Optional<String> getUploadUrl() {
+    public Optional<String> uploadUrl() {
         return Optional.ofNullable(this.uploadUrl);
     }
 

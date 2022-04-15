@@ -26,7 +26,7 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     @Import(name="conditionProperties", required=true)
       private final Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
 
-    public Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> getConditionProperties() {
+    public Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties() {
         return this.conditionProperties;
     }
 
@@ -38,7 +38,7 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
-    public Output<String> getConditionType() {
+    public Output<String> conditionType() {
         return this.conditionType;
     }
 

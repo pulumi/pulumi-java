@@ -28,7 +28,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="schedule")
       private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
-    public Output<List<AutoscaleScheduleArgs>> getSchedule() {
+    public Output<List<AutoscaleScheduleArgs>> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -39,7 +39,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

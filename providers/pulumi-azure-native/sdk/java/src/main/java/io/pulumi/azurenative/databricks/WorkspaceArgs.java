@@ -27,7 +27,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizations")
       private final @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
-    public Output<List<WorkspaceProviderAuthorizationArgs>> getAuthorizations() {
+    public Output<List<WorkspaceProviderAuthorizationArgs>> authorizations() {
         return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
@@ -38,7 +38,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceGroupId", required=true)
       private final Output<String> managedResourceGroupId;
 
-    public Output<String> getManagedResourceGroupId() {
+    public Output<String> managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
 
@@ -60,7 +60,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<WorkspaceCustomParametersArgs> parameters;
 
-    public Output<WorkspaceCustomParametersArgs> getParameters() {
+    public Output<WorkspaceCustomParametersArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -71,7 +71,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -93,7 +93,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uiDefinitionUri")
       private final @Nullable Output<String> uiDefinitionUri;
 
-    public Output<String> getUiDefinitionUri() {
+    public Output<String> uiDefinitionUri() {
         return this.uiDefinitionUri == null ? Codegen.empty() : this.uiDefinitionUri;
     }
 
@@ -115,7 +115,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 

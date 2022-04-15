@@ -28,7 +28,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="anonymousConnectPolicy")
       private final @Nullable Output<String> anonymousConnectPolicy;
 
-    public Output<String> getAnonymousConnectPolicy() {
+    public Output<String> anonymousConnectPolicy() {
         return this.anonymousConnectPolicy == null ? Codegen.empty() : this.anonymousConnectPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="eventHandlers")
       private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
-    public Output<List<EventHandlerArgs>> getEventHandlers() {
+    public Output<List<EventHandlerArgs>> eventHandlers() {
         return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
     }
 

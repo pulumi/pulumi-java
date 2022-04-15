@@ -30,7 +30,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
       private final @Nullable Output<Either<String,RecurrenceType>> recurrence;
 
-    public Output<Either<String,RecurrenceType>> getRecurrence() {
+    public Output<Either<String,RecurrenceType>> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
@@ -41,7 +41,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recurrencePeriod")
       private final @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
 
-    public Output<ExportRecurrencePeriodArgs> getRecurrencePeriod() {
+    public Output<ExportRecurrencePeriodArgs> recurrencePeriod() {
         return this.recurrencePeriod == null ? Codegen.empty() : this.recurrencePeriod;
     }
 
@@ -52,7 +52,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,StatusType>> status;
 
-    public Output<Either<String,StatusType>> getStatus() {
+    public Output<Either<String,StatusType>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

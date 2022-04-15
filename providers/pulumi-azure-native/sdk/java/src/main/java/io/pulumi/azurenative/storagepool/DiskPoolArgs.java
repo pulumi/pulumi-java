@@ -27,7 +27,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalCapabilities")
       private final @Nullable Output<List<String>> additionalCapabilities;
 
-    public Output<List<String>> getAdditionalCapabilities() {
+    public Output<List<String>> additionalCapabilities() {
         return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
     }
 
@@ -38,7 +38,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones", required=true)
       private final Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
 
@@ -49,7 +49,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskPoolName")
       private final @Nullable Output<String> diskPoolName;
 
-    public Output<String> getDiskPoolName() {
+    public Output<String> diskPoolName() {
         return this.diskPoolName == null ? Codegen.empty() : this.diskPoolName;
     }
 
@@ -60,7 +60,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disks")
       private final @Nullable Output<List<DiskArgs>> disks;
 
-    public Output<List<DiskArgs>> getDisks() {
+    public Output<List<DiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -71,7 +71,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -104,7 +104,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
       private final Output<Either<String,DiskPoolTier>> tier;
 
-    public Output<Either<String,DiskPoolTier>> getTier() {
+    public Output<Either<String,DiskPoolTier>> tier() {
         return this.tier;
     }
 

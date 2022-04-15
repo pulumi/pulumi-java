@@ -27,7 +27,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="addressValidationStatus", required=true)
       private final String addressValidationStatus;
 
-    public String getAddressValidationStatus() {
+    public String addressValidationStatus() {
         return this.addressValidationStatus;
     }
 
@@ -38,7 +38,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="contactDetails", required=true)
       private final ContactDetailsResponse contactDetails;
 
-    public ContactDetailsResponse getContactDetails() {
+    public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
 
@@ -49,7 +49,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="shippingAddress")
       private final @Nullable ShippingAddressResponse shippingAddress;
 
-    public Optional<ShippingAddressResponse> getShippingAddress() {
+    public Optional<ShippingAddressResponse> shippingAddress() {
         return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
     }
 

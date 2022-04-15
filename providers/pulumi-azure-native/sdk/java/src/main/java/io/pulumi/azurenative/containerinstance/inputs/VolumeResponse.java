@@ -29,7 +29,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="azureFile")
       private final @Nullable AzureFileVolumeResponse azureFile;
 
-    public Optional<AzureFileVolumeResponse> getAzureFile() {
+    public Optional<AzureFileVolumeResponse> azureFile() {
         return this.azureFile == null ? Optional.empty() : Optional.ofNullable(this.azureFile);
     }
 
@@ -40,7 +40,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="emptyDir")
       private final @Nullable Object emptyDir;
 
-    public Optional<Object> getEmptyDir() {
+    public Optional<Object> emptyDir() {
         return this.emptyDir == null ? Optional.empty() : Optional.ofNullable(this.emptyDir);
     }
 
@@ -51,7 +51,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gitRepo")
       private final @Nullable GitRepoVolumeResponse gitRepo;
 
-    public Optional<GitRepoVolumeResponse> getGitRepo() {
+    public Optional<GitRepoVolumeResponse> gitRepo() {
         return this.gitRepo == null ? Optional.empty() : Optional.ofNullable(this.gitRepo);
     }
 
@@ -62,7 +62,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -73,7 +73,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secret")
       private final @Nullable Map<String,String> secret;
 
-    public Map<String,String> getSecret() {
+    public Map<String,String> secret() {
         return this.secret == null ? Map.of() : this.secret;
     }
 

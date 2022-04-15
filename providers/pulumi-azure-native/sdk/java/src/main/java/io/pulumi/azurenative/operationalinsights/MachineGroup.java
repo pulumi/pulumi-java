@@ -44,7 +44,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
      */
-    public Output</* @Nullable */ Integer> getCount() {
+    public Output</* @Nullable */ Integer> count() {
         return this.count;
     }
     /**
@@ -58,7 +58,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return User defined name for the group
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +72,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource ETAG.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -86,7 +86,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return Type of the machine group
      * 
      */
-    public Output</* @Nullable */ String> getGroupType() {
+    public Output</* @Nullable */ String> groupType() {
         return this.groupType;
     }
     /**
@@ -102,7 +102,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * Expected value is 'machineGroup'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -116,7 +116,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
      */
-    public Output</* @Nullable */ List<MachineReferenceWithHintsResponse>> getMachines() {
+    public Output</* @Nullable */ List<MachineReferenceWithHintsResponse>> machines() {
         return this.machines;
     }
     /**
@@ -130,7 +130,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

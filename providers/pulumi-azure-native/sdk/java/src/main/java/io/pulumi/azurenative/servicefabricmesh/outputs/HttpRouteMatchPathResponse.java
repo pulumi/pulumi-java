@@ -41,21 +41,21 @@ public final class HttpRouteMatchPathResponse {
      * replacement string for matched part of the Uri.
      * 
     */
-    public Optional<String> getRewrite() {
+    public Optional<String> rewrite() {
         return Optional.ofNullable(this.rewrite);
     }
     /**
      * how to match value in the Uri
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Uri path to match for request.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -79,56 +79,56 @@ public final class GetIntegrationAccountResult {
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The integration service environment.
      * 
     */
-    public Optional<ResourceReferenceResponse> getIntegrationServiceEnvironment() {
+    public Optional<ResourceReferenceResponse> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The sku.
      * 
     */
-    public Optional<IntegrationAccountSkuResponse> getSku() {
+    public Optional<IntegrationAccountSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The workflow state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

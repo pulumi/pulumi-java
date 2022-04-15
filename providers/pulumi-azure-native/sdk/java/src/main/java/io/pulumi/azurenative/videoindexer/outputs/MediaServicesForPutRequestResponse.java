@@ -34,14 +34,14 @@ public final class MediaServicesForPutRequestResponse {
      * The media services resource id
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The user assigned identity to be used to grant permissions
      * 
     */
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
 

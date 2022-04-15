@@ -43,20 +43,20 @@ public final class PrivateEndpointConnectionResponseProperties {
      * The list of group ids for the private endpoint connection.
      * 
     */
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
-    public Optional<ConnectionPropertiesResponsePrivateEndpoint> getPrivateEndpoint() {
+    public Optional<ConnectionPropertiesResponsePrivateEndpoint> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
-    public Optional<ConnectionPropertiesResponsePrivateLinkServiceConnectionState> getPrivateLinkServiceConnectionState() {
+    public Optional<ConnectionPropertiesResponsePrivateLinkServiceConnectionState> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -28,7 +28,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Output<Object> getDeleteFilesAfterCompletion() {
+    public Output<Object> deleteFilesAfterCompletion() {
         return this.deleteFilesAfterCompletion == null ? Codegen.empty() : this.deleteFilesAfterCompletion;
     }
 
@@ -39,7 +39,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -50,7 +50,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> getEnablePartitionDiscovery() {
+    public Output<Boolean> enablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
     }
 
@@ -61,7 +61,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="fileListPath")
       private final @Nullable Output<Object> fileListPath;
 
-    public Output<Object> getFileListPath() {
+    public Output<Object> fileListPath() {
         return this.fileListPath == null ? Codegen.empty() : this.fileListPath;
     }
 
@@ -72,7 +72,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="listAfter")
       private final @Nullable Output<Object> listAfter;
 
-    public Output<Object> getListAfter() {
+    public Output<Object> listAfter() {
         return this.listAfter == null ? Codegen.empty() : this.listAfter;
     }
 
@@ -83,7 +83,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="listBefore")
       private final @Nullable Output<Object> listBefore;
 
-    public Output<Object> getListBefore() {
+    public Output<Object> listBefore() {
         return this.listBefore == null ? Codegen.empty() : this.listBefore;
     }
 
@@ -94,7 +94,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -105,7 +105,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> getModifiedDatetimeEnd() {
+    public Output<Object> modifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
     }
 
@@ -116,7 +116,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> getModifiedDatetimeStart() {
+    public Output<Object> modifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
     }
 
@@ -127,7 +127,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> getPartitionRootPath() {
+    public Output<Object> partitionRootPath() {
         return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
     }
 
@@ -138,7 +138,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
-    public Output<Object> getRecursive() {
+    public Output<Object> recursive() {
         return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
@@ -150,7 +150,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -161,7 +161,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="wildcardFileName")
       private final @Nullable Output<Object> wildcardFileName;
 
-    public Output<Object> getWildcardFileName() {
+    public Output<Object> wildcardFileName() {
         return this.wildcardFileName == null ? Codegen.empty() : this.wildcardFileName;
     }
 
@@ -172,7 +172,7 @@ public final class AzureDataLakeStoreReadSettingsArgs extends io.pulumi.resource
     @Import(name="wildcardFolderPath")
       private final @Nullable Output<Object> wildcardFolderPath;
 
-    public Output<Object> getWildcardFolderPath() {
+    public Output<Object> wildcardFolderPath() {
         return this.wildcardFolderPath == null ? Codegen.empty() : this.wildcardFolderPath;
     }
 

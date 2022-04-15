@@ -49,14 +49,14 @@ public final class CmdkeySetupResponse {
      * The password of data source access.
      * 
     */
-    public SecureStringResponse getPassword() {
+    public SecureStringResponse password() {
         return this.password;
     }
     /**
      * The server name of data source access.
      * 
     */
-    public Object getTargetName() {
+    public Object targetName() {
         return this.targetName;
     }
     /**
@@ -64,14 +64,14 @@ public final class CmdkeySetupResponse {
      * Expected value is 'CmdkeySetup'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The user name of data source access.
      * 
     */
-    public Object getUserName() {
+    public Object userName() {
         return this.userName;
     }
 

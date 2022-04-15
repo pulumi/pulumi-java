@@ -25,7 +25,7 @@ public final class ContainerServiceSshConfigurationResponse {
      * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
      * 
     */
-    public List<ContainerServiceSshPublicKeyResponse> getPublicKeys() {
+    public List<ContainerServiceSshPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }
 

@@ -26,7 +26,7 @@ public final class LanguageExtensionsListResponse extends io.pulumi.resources.In
     @Import(name="value")
       private final @Nullable List<LanguageExtensionResponse> value;
 
-    public List<LanguageExtensionResponse> getValue() {
+    public List<LanguageExtensionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

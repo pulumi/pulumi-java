@@ -27,7 +27,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="actionAfterReboot")
       private final @Nullable String actionAfterReboot;
 
-    public Optional<String> getActionAfterReboot() {
+    public Optional<String> actionAfterReboot() {
         return this.actionAfterReboot == null ? Optional.empty() : Optional.ofNullable(this.actionAfterReboot);
     }
 
@@ -38,7 +38,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="allowModuleOverwrite")
       private final @Nullable Boolean allowModuleOverwrite;
 
-    public Optional<Boolean> getAllowModuleOverwrite() {
+    public Optional<Boolean> allowModuleOverwrite() {
         return this.allowModuleOverwrite == null ? Optional.empty() : Optional.ofNullable(this.allowModuleOverwrite);
     }
 
@@ -49,7 +49,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="configurationMode")
       private final @Nullable String configurationMode;
 
-    public Optional<String> getConfigurationMode() {
+    public Optional<String> configurationMode() {
         return this.configurationMode == null ? Optional.empty() : Optional.ofNullable(this.configurationMode);
     }
 
@@ -60,7 +60,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="configurationModeFrequencyMins")
       private final @Nullable Double configurationModeFrequencyMins;
 
-    public Optional<Double> getConfigurationModeFrequencyMins() {
+    public Optional<Double> configurationModeFrequencyMins() {
         return this.configurationModeFrequencyMins == null ? Optional.empty() : Optional.ofNullable(this.configurationModeFrequencyMins);
     }
 
@@ -71,7 +71,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="rebootIfNeeded")
       private final @Nullable Boolean rebootIfNeeded;
 
-    public Optional<Boolean> getRebootIfNeeded() {
+    public Optional<Boolean> rebootIfNeeded() {
         return this.rebootIfNeeded == null ? Optional.empty() : Optional.ofNullable(this.rebootIfNeeded);
     }
 
@@ -82,7 +82,7 @@ public final class ConfigurationSettingResponse extends io.pulumi.resources.Invo
     @Import(name="refreshFrequencyMins")
       private final @Nullable Double refreshFrequencyMins;
 
-    public Optional<Double> getRefreshFrequencyMins() {
+    public Optional<Double> refreshFrequencyMins() {
         return this.refreshFrequencyMins == null ? Optional.empty() : Optional.ofNullable(this.refreshFrequencyMins);
     }
 

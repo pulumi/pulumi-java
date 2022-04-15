@@ -24,7 +24,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -35,7 +35,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="importMethod")
       private final @Nullable Either<String,WsdlImportMethod> importMethod;
 
-    public Either<String,WsdlImportMethod> getImportMethod() {
+    public Either<String,WsdlImportMethod> importMethod() {
         return this.importMethod == null ? null : this.importMethod;
     }
 
@@ -46,7 +46,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -57,7 +57,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="service")
       private final @Nullable WsdlService service;
 
-    public Optional<WsdlService> getService() {
+    public Optional<WsdlService> service() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 
@@ -68,7 +68,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
@@ -79,7 +79,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

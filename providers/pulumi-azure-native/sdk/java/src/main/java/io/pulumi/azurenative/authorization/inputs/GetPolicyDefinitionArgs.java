@@ -19,7 +19,7 @@ public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArg
     @Import(name="policyDefinitionName", required=true)
       private final String policyDefinitionName;
 
-    public String getPolicyDefinitionName() {
+    public String policyDefinitionName() {
         return this.policyDefinitionName;
     }
 

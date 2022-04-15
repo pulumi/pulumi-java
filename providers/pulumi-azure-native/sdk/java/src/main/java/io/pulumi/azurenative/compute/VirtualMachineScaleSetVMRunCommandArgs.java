@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="asyncExecution")
       private final @Nullable Output<Boolean> asyncExecution;
 
-    public Output<Boolean> getAsyncExecution() {
+    public Output<Boolean> asyncExecution() {
         return this.asyncExecution == null ? Codegen.empty() : this.asyncExecution;
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="errorBlobUri")
       private final @Nullable Output<String> errorBlobUri;
 
-    public Output<String> getErrorBlobUri() {
+    public Output<String> errorBlobUri() {
         return this.errorBlobUri == null ? Codegen.empty() : this.errorBlobUri;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -61,7 +61,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,7 +72,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="outputBlobUri")
       private final @Nullable Output<String> outputBlobUri;
 
-    public Output<String> getOutputBlobUri() {
+    public Output<String> outputBlobUri() {
         return this.outputBlobUri == null ? Codegen.empty() : this.outputBlobUri;
     }
 
@@ -83,7 +83,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="parameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
-    public Output<List<RunCommandInputParameterArgs>> getParameters() {
+    public Output<List<RunCommandInputParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -94,7 +94,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="protectedParameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
-    public Output<List<RunCommandInputParameterArgs>> getProtectedParameters() {
+    public Output<List<RunCommandInputParameterArgs>> protectedParameters() {
         return this.protectedParameters == null ? Codegen.empty() : this.protectedParameters;
     }
 
@@ -105,7 +105,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,7 +116,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="runAsPassword")
       private final @Nullable Output<String> runAsPassword;
 
-    public Output<String> getRunAsPassword() {
+    public Output<String> runAsPassword() {
         return this.runAsPassword == null ? Codegen.empty() : this.runAsPassword;
     }
 
@@ -127,7 +127,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="runAsUser")
       private final @Nullable Output<String> runAsUser;
 
-    public Output<String> getRunAsUser() {
+    public Output<String> runAsUser() {
         return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
@@ -138,7 +138,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="runCommandName")
       private final @Nullable Output<String> runCommandName;
 
-    public Output<String> getRunCommandName() {
+    public Output<String> runCommandName() {
         return this.runCommandName == null ? Codegen.empty() : this.runCommandName;
     }
 
@@ -149,7 +149,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="source")
       private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
-    public Output<VirtualMachineRunCommandScriptSourceArgs> getSource() {
+    public Output<VirtualMachineRunCommandScriptSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -160,7 +160,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -171,7 +171,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
@@ -182,7 +182,7 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;
 
-    public Output<String> getVmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 

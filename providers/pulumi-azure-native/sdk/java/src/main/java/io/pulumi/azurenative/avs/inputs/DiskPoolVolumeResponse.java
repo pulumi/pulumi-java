@@ -26,7 +26,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="endpoints")
       private final @Nullable List<String> endpoints;
 
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
@@ -37,7 +37,7 @@ public final class DiskPoolVolumeResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lunName")
       private final @Nullable String lunName;
 
-    public Optional<String> getLunName() {
+    public Optional<String> lunName() {
         return this.lunName == null ? Optional.empty() : Optional.ofNullable(this.lunName);
     }
 

@@ -45,7 +45,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of the Maps Account, which is unique within a Resource Group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The map account properties.
      * 
      */
-    public Output<MapsAccountPropertiesResponse> getProperties() {
+    public Output<MapsAccountPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +87,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The SKU of this account.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +101,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

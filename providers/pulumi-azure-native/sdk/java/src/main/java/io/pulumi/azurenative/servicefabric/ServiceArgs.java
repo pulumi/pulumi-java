@@ -35,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="correlationScheme")
       private final @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
-    public Output<List<ServiceCorrelationDescriptionArgs>> getCorrelationScheme() {
+    public Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme() {
         return this.correlationScheme == null ? Codegen.empty() : this.correlationScheme;
     }
 
@@ -68,7 +68,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultMoveCost")
       private final @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
 
-    public Output<Either<String,MoveCost>> getDefaultMoveCost() {
+    public Output<Either<String,MoveCost>> defaultMoveCost() {
         return this.defaultMoveCost == null ? Codegen.empty() : this.defaultMoveCost;
     }
 
@@ -79,7 +79,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -90,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionDescription")
       private final @Nullable Output<Object> partitionDescription;
 
-    public Output<Object> getPartitionDescription() {
+    public Output<Object> partitionDescription() {
         return this.partitionDescription == null ? Codegen.empty() : this.partitionDescription;
     }
 
@@ -101,7 +101,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
       private final @Nullable Output<String> placementConstraints;
 
-    public Output<String> getPlacementConstraints() {
+    public Output<String> placementConstraints() {
         return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
@@ -112,7 +112,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,7 +123,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceDnsName")
       private final @Nullable Output<String> serviceDnsName;
 
-    public Output<String> getServiceDnsName() {
+    public Output<String> serviceDnsName() {
         return this.serviceDnsName == null ? Codegen.empty() : this.serviceDnsName;
     }
 
@@ -134,7 +134,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceKind", required=true)
       private final Output<Either<String,ServiceKind>> serviceKind;
 
-    public Output<Either<String,ServiceKind>> getServiceKind() {
+    public Output<Either<String,ServiceKind>> serviceKind() {
         return this.serviceKind;
     }
 
@@ -145,7 +145,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLoadMetrics")
       private final @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
-    public Output<List<ServiceLoadMetricDescriptionArgs>> getServiceLoadMetrics() {
+    public Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics() {
         return this.serviceLoadMetrics == null ? Codegen.empty() : this.serviceLoadMetrics;
     }
 
@@ -156,7 +156,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -167,7 +167,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePackageActivationMode")
       private final @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
-    public Output<Either<String,ArmServicePackageActivationMode>> getServicePackageActivationMode() {
+    public Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode() {
         return this.servicePackageActivationMode == null ? Codegen.empty() : this.servicePackageActivationMode;
     }
 
@@ -178,7 +178,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePlacementPolicies")
       private final @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
-    public Output<List<ServicePlacementPolicyDescriptionArgs>> getServicePlacementPolicies() {
+    public Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies() {
         return this.servicePlacementPolicies == null ? Codegen.empty() : this.servicePlacementPolicies;
     }
 
@@ -189,7 +189,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceTypeName")
       private final @Nullable Output<String> serviceTypeName;
 
-    public Output<String> getServiceTypeName() {
+    public Output<String> serviceTypeName() {
         return this.serviceTypeName == null ? Codegen.empty() : this.serviceTypeName;
     }
 
@@ -200,7 +200,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

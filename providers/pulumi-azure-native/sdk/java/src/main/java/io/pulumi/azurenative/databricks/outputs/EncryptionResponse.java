@@ -48,28 +48,28 @@ public final class EncryptionResponse {
      * The name of KeyVault key.
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
      * 
     */
-    public Optional<String> getKeySource() {
+    public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * The Uri of KeyVault.
      * 
     */
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * The version of KeyVault key.
      * 
     */
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
 

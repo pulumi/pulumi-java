@@ -35,14 +35,14 @@ public final class ConnectionMonitorSuccessThresholdResponse {
      * The maximum percentage of failed checks permitted for a test to evaluate as successful.
      * 
     */
-    public Optional<Integer> getChecksFailedPercent() {
+    public Optional<Integer> checksFailedPercent() {
         return Optional.ofNullable(this.checksFailedPercent);
     }
     /**
      * The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
      * 
     */
-    public Optional<Double> getRoundTripTimeMs() {
+    public Optional<Double> roundTripTimeMs() {
         return Optional.ofNullable(this.roundTripTimeMs);
     }
 

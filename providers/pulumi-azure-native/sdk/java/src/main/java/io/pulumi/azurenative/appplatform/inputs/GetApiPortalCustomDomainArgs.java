@@ -19,7 +19,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
     @Import(name="apiPortalName", required=true)
       private final String apiPortalName;
 
-    public String getApiPortalName() {
+    public String apiPortalName() {
         return this.apiPortalName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -41,7 +41,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

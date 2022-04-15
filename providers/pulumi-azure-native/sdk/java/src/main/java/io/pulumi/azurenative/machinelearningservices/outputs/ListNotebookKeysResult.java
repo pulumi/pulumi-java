@@ -20,10 +20,10 @@ public final class ListNotebookKeysResult {
         this.secondaryAccessKey = secondaryAccessKey;
     }
 
-    public String getPrimaryAccessKey() {
+    public String primaryAccessKey() {
         return this.primaryAccessKey;
     }
-    public String getSecondaryAccessKey() {
+    public String secondaryAccessKey() {
         return this.secondaryAccessKey;
     }
 

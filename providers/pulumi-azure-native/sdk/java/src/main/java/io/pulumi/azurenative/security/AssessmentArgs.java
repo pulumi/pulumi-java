@@ -30,7 +30,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalData")
       private final @Nullable Output<Map<String,String>> additionalData;
 
-    public Output<Map<String,String>> getAdditionalData() {
+    public Output<Map<String,String>> additionalData() {
         return this.additionalData == null ? Codegen.empty() : this.additionalData;
     }
 
@@ -41,7 +41,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assessmentName")
       private final @Nullable Output<String> assessmentName;
 
-    public Output<String> getAssessmentName() {
+    public Output<String> assessmentName() {
         return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
     }
 
@@ -52,7 +52,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
-    public Output<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
+    public Output<SecurityAssessmentMetadataPropertiesArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -63,7 +63,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnersData")
       private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
-    public Output<SecurityAssessmentPartnerDataArgs> getPartnersData() {
+    public Output<SecurityAssessmentPartnerDataArgs> partnersData() {
         return this.partnersData == null ? Codegen.empty() : this.partnersData;
     }
 
@@ -74,7 +74,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceDetails", required=true)
       private final Output<Object> resourceDetails;
 
-    public Output<Object> getResourceDetails() {
+    public Output<Object> resourceDetails() {
         return this.resourceDetails;
     }
 
@@ -85,7 +85,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -96,7 +96,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<AssessmentStatusArgs> status;
 
-    public Output<AssessmentStatusArgs> getStatus() {
+    public Output<AssessmentStatusArgs> status() {
         return this.status;
     }
 

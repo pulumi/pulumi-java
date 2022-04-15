@@ -35,14 +35,14 @@ public final class CmkKekIdentityResponse {
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
      * 
     */
-    public Optional<Boolean> getUseSystemAssignedIdentity() {
+    public Optional<Boolean> useSystemAssignedIdentity() {
         return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
     /**
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
      * 
     */
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
 

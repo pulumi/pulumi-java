@@ -97,72 +97,72 @@ public final class GetAdaptiveApplicationControlResult {
      * The configuration status of the machines group or machine or rule
      * 
     */
-    public String getConfigurationStatus() {
+    public String configurationStatus() {
         return this.configurationStatus;
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
      * 
     */
-    public Optional<String> getEnforcementMode() {
+    public Optional<String> enforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<AdaptiveApplicationControlIssueSummaryResponse> getIssues() {
+    public List<AdaptiveApplicationControlIssueSummaryResponse> issues() {
         return this.issues;
     }
     /**
      * Location where the resource is stored
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<PathRecommendationResponse> getPathRecommendations() {
+    public List<PathRecommendationResponse> pathRecommendations() {
         return this.pathRecommendations == null ? List.of() : this.pathRecommendations;
     }
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
     */
-    public Optional<ProtectionModeResponse> getProtectionMode() {
+    public Optional<ProtectionModeResponse> protectionMode() {
         return Optional.ofNullable(this.protectionMode);
     }
     /**
      * The initial recommendation status of the machine group or machine
      * 
     */
-    public String getRecommendationStatus() {
+    public String recommendationStatus() {
         return this.recommendationStatus;
     }
     /**
      * The source type of the machine group
      * 
     */
-    public String getSourceSystem() {
+    public String sourceSystem() {
         return this.sourceSystem;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public List<VmRecommendationResponse> getVmRecommendations() {
+    public List<VmRecommendationResponse> vmRecommendations() {
         return this.vmRecommendations == null ? List.of() : this.vmRecommendations;
     }
 

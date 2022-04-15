@@ -26,7 +26,7 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

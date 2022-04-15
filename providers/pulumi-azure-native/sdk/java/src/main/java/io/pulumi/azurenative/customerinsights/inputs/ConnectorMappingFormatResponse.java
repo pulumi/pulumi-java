@@ -25,7 +25,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -36,7 +36,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="arraySeparator")
       private final @Nullable String arraySeparator;
 
-    public Optional<String> getArraySeparator() {
+    public Optional<String> arraySeparator() {
         return this.arraySeparator == null ? Optional.empty() : Optional.ofNullable(this.arraySeparator);
     }
 
@@ -47,7 +47,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="columnDelimiter")
       private final @Nullable String columnDelimiter;
 
-    public Optional<String> getColumnDelimiter() {
+    public Optional<String> columnDelimiter() {
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
     }
 
@@ -58,7 +58,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="formatType", required=true)
       private final String formatType;
 
-    public String getFormatType() {
+    public String formatType() {
         return this.formatType;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="quoteCharacter")
       private final @Nullable String quoteCharacter;
 
-    public Optional<String> getQuoteCharacter() {
+    public Optional<String> quoteCharacter() {
         return this.quoteCharacter == null ? Optional.empty() : Optional.ofNullable(this.quoteCharacter);
     }
 
@@ -80,7 +80,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
     @Import(name="quoteEscapeCharacter")
       private final @Nullable String quoteEscapeCharacter;
 
-    public Optional<String> getQuoteEscapeCharacter() {
+    public Optional<String> quoteEscapeCharacter() {
         return this.quoteEscapeCharacter == null ? Optional.empty() : Optional.ofNullable(this.quoteEscapeCharacter);
     }
 

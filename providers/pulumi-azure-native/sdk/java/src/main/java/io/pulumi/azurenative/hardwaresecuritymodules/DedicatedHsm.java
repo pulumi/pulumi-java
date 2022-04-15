@@ -45,7 +45,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The supported Azure location where the dedicated HSM should be created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The name of the dedicated HSM.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Specifies the network interfaces of the dedicated hsm.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -87,7 +87,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +101,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return SKU details
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -115,7 +115,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return This field will be used when RP does not support Availability zones.
      * 
      */
-    public Output</* @Nullable */ String> getStampId() {
+    public Output</* @Nullable */ String> stampId() {
         return this.stampId;
     }
     /**
@@ -129,7 +129,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource Status Message.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -143,7 +143,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The resource type of the dedicated HSM.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -171,7 +171,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @return The Dedicated Hsm zones.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

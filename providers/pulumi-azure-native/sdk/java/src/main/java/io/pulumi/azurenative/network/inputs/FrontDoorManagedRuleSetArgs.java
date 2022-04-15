@@ -31,7 +31,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
+    public Output<List<ManagedRuleExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -42,7 +42,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ruleGroupOverrides")
       private final @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
-    public Output<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
+    public Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? Codegen.empty() : this.ruleGroupOverrides;
     }
 
@@ -53,7 +53,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ruleSetAction")
       private final @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
-    public Output<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
+    public Output<Either<String,ManagedRuleSetActionType>> ruleSetAction() {
         return this.ruleSetAction == null ? Codegen.empty() : this.ruleSetAction;
     }
 
@@ -64,7 +64,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
-    public Output<String> getRuleSetType() {
+    public Output<String> ruleSetType() {
         return this.ruleSetType;
     }
 
@@ -75,7 +75,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
-    public Output<String> getRuleSetVersion() {
+    public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

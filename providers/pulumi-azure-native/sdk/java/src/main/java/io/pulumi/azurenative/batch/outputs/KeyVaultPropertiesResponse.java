@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesResponse {
      *  The KeyVault has soft-delete and purge protection enabled
      * 
     */
-    public Optional<String> getKeyIdentifier() {
+    public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
 

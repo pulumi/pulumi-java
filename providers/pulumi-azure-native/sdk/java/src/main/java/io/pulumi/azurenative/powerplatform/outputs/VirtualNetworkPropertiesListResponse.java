@@ -36,14 +36,14 @@ public final class VirtualNetworkPropertiesListResponse {
      * Next page link if any.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Array of virtual networks.
      * 
     */
-    public List<VirtualNetworkPropertiesResponse> getValue() {
+    public List<VirtualNetworkPropertiesResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

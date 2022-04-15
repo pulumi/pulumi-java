@@ -43,7 +43,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return Represents if region selection is enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabledRegionSelection() {
+    public Output</* @Nullable */ Boolean> enabledRegionSelection() {
         return this.enabledRegionSelection;
     }
     /**
@@ -57,7 +57,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -71,7 +71,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -85,7 +85,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return Represents the size configuration under the lab account
      * 
      */
-    public Output<SizeConfigurationPropertiesResponse> getSizeConfiguration() {
+    public Output<SizeConfigurationPropertiesResponse> sizeConfiguration() {
         return this.sizeConfiguration;
     }
     /**
@@ -127,7 +127,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +155,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

@@ -192,161 +192,161 @@ public final class GetWorkspaceResult {
      * The ADLA resource ID.
      * 
     */
-    public String getAdlaResourceId() {
+    public String adlaResourceId() {
         return this.adlaResourceId;
     }
     /**
      * Connectivity endpoints
      * 
     */
-    public Map<String,String> getConnectivityEndpoints() {
+    public Map<String,String> connectivityEndpoints() {
         return this.connectivityEndpoints == null ? Map.of() : this.connectivityEndpoints;
     }
     /**
      * Workspace default data lake storage account details
      * 
     */
-    public Optional<DataLakeStorageAccountDetailsResponse> getDefaultDataLakeStorage() {
+    public Optional<DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage() {
         return Optional.ofNullable(this.defaultDataLakeStorage);
     }
     /**
      * The encryption details of the workspace
      * 
     */
-    public Optional<EncryptionDetailsResponse> getEncryption() {
+    public Optional<EncryptionDetailsResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Workspace level configs and feature flags
      * 
     */
-    public Map<String,Object> getExtraProperties() {
+    public Map<String,Object> extraProperties() {
         return this.extraProperties;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity of the workspace
      * 
     */
-    public Optional<ManagedIdentityResponse> getIdentity() {
+    public Optional<ManagedIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
      * 
     */
-    public Optional<String> getManagedResourceGroupName() {
+    public Optional<String> managedResourceGroupName() {
         return Optional.ofNullable(this.managedResourceGroupName);
     }
     /**
      * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
     */
-    public Optional<String> getManagedVirtualNetwork() {
+    public Optional<String> managedVirtualNetwork() {
         return Optional.ofNullable(this.managedVirtualNetwork);
     }
     /**
      * Managed Virtual Network Settings
      * 
     */
-    public Optional<ManagedVirtualNetworkSettingsResponse> getManagedVirtualNetworkSettings() {
+    public Optional<ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings() {
         return Optional.ofNullable(this.managedVirtualNetworkSettings);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Private endpoint connections to the workspace
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Resource provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Enable or Disable public network access to workspace
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Purview Configuration
      * 
     */
-    public Optional<PurviewConfigurationResponse> getPurviewConfiguration() {
+    public Optional<PurviewConfigurationResponse> purviewConfiguration() {
         return Optional.ofNullable(this.purviewConfiguration);
     }
     /**
      * Login for workspace SQL active directory administrator
      * 
     */
-    public Optional<String> getSqlAdministratorLogin() {
+    public Optional<String> sqlAdministratorLogin() {
         return Optional.ofNullable(this.sqlAdministratorLogin);
     }
     /**
      * SQL administrator login password
      * 
     */
-    public Optional<String> getSqlAdministratorLoginPassword() {
+    public Optional<String> sqlAdministratorLoginPassword() {
         return Optional.ofNullable(this.sqlAdministratorLoginPassword);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Virtual Network profile
      * 
     */
-    public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
+    public Optional<VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
     /**
      * Git integration settings
      * 
     */
-    public Optional<WorkspaceRepositoryConfigurationResponse> getWorkspaceRepositoryConfiguration() {
+    public Optional<WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration() {
         return Optional.ofNullable(this.workspaceRepositoryConfiguration);
     }
     /**
      * The workspace unique identifier
      * 
     */
-    public String getWorkspaceUID() {
+    public String workspaceUID() {
         return this.workspaceUID;
     }
 

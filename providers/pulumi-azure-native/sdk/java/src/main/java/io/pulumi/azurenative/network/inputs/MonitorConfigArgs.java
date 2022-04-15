@@ -33,7 +33,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customHeaders")
       private final @Nullable Output<List<MonitorConfigCustomHeadersArgs>> customHeaders;
 
-    public Output<List<MonitorConfigCustomHeadersArgs>> getCustomHeaders() {
+    public Output<List<MonitorConfigCustomHeadersArgs>> customHeaders() {
         return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
@@ -44,7 +44,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedStatusCodeRanges")
       private final @Nullable Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges;
 
-    public Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> getExpectedStatusCodeRanges() {
+    public Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges() {
         return this.expectedStatusCodeRanges == null ? Codegen.empty() : this.expectedStatusCodeRanges;
     }
 
@@ -55,7 +55,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Double> intervalInSeconds;
 
-    public Output<Double> getIntervalInSeconds() {
+    public Output<Double> intervalInSeconds() {
         return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
@@ -66,7 +66,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -77,7 +77,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Double> port;
 
-    public Output<Double> getPort() {
+    public Output<Double> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -88,7 +88,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileMonitorStatus")
       private final @Nullable Output<Either<String,ProfileMonitorStatus>> profileMonitorStatus;
 
-    public Output<Either<String,ProfileMonitorStatus>> getProfileMonitorStatus() {
+    public Output<Either<String,ProfileMonitorStatus>> profileMonitorStatus() {
         return this.profileMonitorStatus == null ? Codegen.empty() : this.profileMonitorStatus;
     }
 
@@ -99,7 +99,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<Either<String,MonitorProtocol>> protocol;
 
-    public Output<Either<String,MonitorProtocol>> getProtocol() {
+    public Output<Either<String,MonitorProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -110,7 +110,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Double> timeoutInSeconds;
 
-    public Output<Double> getTimeoutInSeconds() {
+    public Output<Double> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
@@ -121,7 +121,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toleratedNumberOfFailures")
       private final @Nullable Output<Double> toleratedNumberOfFailures;
 
-    public Output<Double> getToleratedNumberOfFailures() {
+    public Output<Double> toleratedNumberOfFailures() {
         return this.toleratedNumberOfFailures == null ? Codegen.empty() : this.toleratedNumberOfFailures;
     }
 

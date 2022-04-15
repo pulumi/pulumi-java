@@ -29,7 +29,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -40,7 +40,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -51,7 +51,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -65,7 +65,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
+    public Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

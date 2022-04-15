@@ -24,7 +24,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
 
-    public Output<DeploymentPropertiesArgs> getProperties() {
+    public Output<DeploymentPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

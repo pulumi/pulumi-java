@@ -25,7 +25,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -47,7 +47,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="iconUrl")
       private final @Nullable String iconUrl;
 
-    public Optional<String> getIconUrl() {
+    public Optional<String> iconUrl() {
         return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
     }
 
@@ -58,7 +58,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="releaseTag")
       private final @Nullable String releaseTag;
 
-    public Optional<String> getReleaseTag() {
+    public Optional<String> releaseTag() {
         return this.releaseTag == null ? Optional.empty() : Optional.ofNullable(this.releaseTag);
     }
 
@@ -69,7 +69,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="termsOfUseUrl")
       private final @Nullable String termsOfUseUrl;
 
-    public Optional<String> getTermsOfUseUrl() {
+    public Optional<String> termsOfUseUrl() {
         return this.termsOfUseUrl == null ? Optional.empty() : Optional.ofNullable(this.termsOfUseUrl);
     }
 
@@ -80,7 +80,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

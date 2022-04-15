@@ -65,42 +65,42 @@ public final class ManagedPrivateEndpointResponse {
      * The managed private endpoint connection state
      * 
     */
-    public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
+    public Optional<ConnectionStatePropertiesResponse> connectionState() {
         return Optional.ofNullable(this.connectionState);
     }
     /**
      * Fully qualified domain names
      * 
     */
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * The groupId to which the managed private endpoint is created
      * 
     */
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * Denotes whether the managed private endpoint is reserved
      * 
     */
-    public Boolean getIsReserved() {
+    public Boolean isReserved() {
         return this.isReserved;
     }
     /**
      * The ARM resource ID of the resource to which the managed private endpoint is created
      * 
     */
-    public Optional<String> getPrivateLinkResourceId() {
+    public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
      * The managed private endpoint provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

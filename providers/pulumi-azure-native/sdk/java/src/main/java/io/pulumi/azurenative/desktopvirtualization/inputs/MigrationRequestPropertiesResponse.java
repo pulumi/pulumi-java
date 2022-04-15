@@ -25,7 +25,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
     @Import(name="migrationPath")
       private final @Nullable String migrationPath;
 
-    public Optional<String> getMigrationPath() {
+    public Optional<String> migrationPath() {
         return this.migrationPath == null ? Optional.empty() : Optional.ofNullable(this.migrationPath);
     }
 
@@ -36,7 +36,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
     @Import(name="operation")
       private final @Nullable String operation;
 
-    public Optional<String> getOperation() {
+    public Optional<String> operation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
     }
 

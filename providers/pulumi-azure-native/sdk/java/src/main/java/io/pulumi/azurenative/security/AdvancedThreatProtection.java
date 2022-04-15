@@ -43,7 +43,7 @@ public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource
      * @return Indicates whether Advanced Threat Protection is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -57,7 +57,7 @@ public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

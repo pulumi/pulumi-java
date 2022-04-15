@@ -34,7 +34,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
-    public Output<List<String>> getAllowedExternalRedirectUrls() {
+    public Output<List<String>> allowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? Codegen.empty() : this.allowedExternalRedirectUrls;
     }
 
@@ -45,7 +45,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cookieExpiration")
       private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
-    public Output<CookieExpirationArgs> getCookieExpiration() {
+    public Output<CookieExpirationArgs> cookieExpiration() {
         return this.cookieExpiration == null ? Codegen.empty() : this.cookieExpiration;
     }
 
@@ -56,7 +56,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nonce")
       private final @Nullable Output<NonceArgs> nonce;
 
-    public Output<NonceArgs> getNonce() {
+    public Output<NonceArgs> nonce() {
         return this.nonce == null ? Codegen.empty() : this.nonce;
     }
 
@@ -67,7 +67,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveUrlFragmentsForLogins")
       private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
-    public Output<Boolean> getPreserveUrlFragmentsForLogins() {
+    public Output<Boolean> preserveUrlFragmentsForLogins() {
         return this.preserveUrlFragmentsForLogins == null ? Codegen.empty() : this.preserveUrlFragmentsForLogins;
     }
 
@@ -78,7 +78,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<LoginRoutesArgs> routes;
 
-    public Output<LoginRoutesArgs> getRoutes() {
+    public Output<LoginRoutesArgs> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 
@@ -89,7 +89,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenStore")
       private final @Nullable Output<TokenStoreArgs> tokenStore;
 
-    public Output<TokenStoreArgs> getTokenStore() {
+    public Output<TokenStoreArgs> tokenStore() {
         return this.tokenStore == null ? Codegen.empty() : this.tokenStore;
     }
 

@@ -32,14 +32,14 @@ public final class SasPolicyResponse {
      * The SAS expiration action. Can only be Log.
      * 
     */
-    public String getExpirationAction() {
+    public String expirationAction() {
         return this.expirationAction;
     }
     /**
      * The SAS expiration period, DD.HH:MM:SS.
      * 
     */
-    public String getSasExpirationPeriod() {
+    public String sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
 

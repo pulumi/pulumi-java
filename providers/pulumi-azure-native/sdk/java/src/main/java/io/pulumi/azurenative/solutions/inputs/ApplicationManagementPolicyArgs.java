@@ -28,7 +28,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
     @Import(name="mode")
       private final @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
-    public Output<Either<String,ApplicationManagementMode>> getMode() {
+    public Output<Either<String,ApplicationManagementMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

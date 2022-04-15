@@ -56,35 +56,35 @@ public final class GetSaasSubscriptionLevelResult {
      * The resource uri
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * saas properties
      * 
     */
-    public SaasResourceResponseProperties getProperties() {
+    public SaasResourceResponseProperties properties() {
         return this.properties;
     }
     /**
      * the resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

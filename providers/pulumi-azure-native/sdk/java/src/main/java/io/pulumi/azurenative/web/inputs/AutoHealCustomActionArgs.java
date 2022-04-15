@@ -27,7 +27,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
     @Import(name="exe")
       private final @Nullable Output<String> exe;
 
-    public Output<String> getExe() {
+    public Output<String> exe() {
         return this.exe == null ? Codegen.empty() : this.exe;
     }
 
@@ -38,7 +38,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

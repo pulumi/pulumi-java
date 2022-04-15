@@ -18,14 +18,14 @@ public final class NotificationEndpointResponse extends io.pulumi.resources.Invo
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
     @Import(name="notificationDestination")
       private final @Nullable String notificationDestination;
 
-    public Optional<String> getNotificationDestination() {
+    public Optional<String> notificationDestination() {
         return this.notificationDestination == null ? Optional.empty() : Optional.ofNullable(this.notificationDestination);
     }
 

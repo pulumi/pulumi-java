@@ -25,7 +25,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputArgs extends io.pulumi.
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 

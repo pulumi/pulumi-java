@@ -41,21 +41,21 @@ public final class IPv4FirewallRuleResponse {
      * The rule name.
      * 
     */
-    public Optional<String> getFirewallRuleName() {
+    public Optional<String> firewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
     /**
      * The end range of IPv4.
      * 
     */
-    public Optional<String> getRangeEnd() {
+    public Optional<String> rangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
     /**
      * The start range of IPv4.
      * 
     */
-    public Optional<String> getRangeStart() {
+    public Optional<String> rangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }
 

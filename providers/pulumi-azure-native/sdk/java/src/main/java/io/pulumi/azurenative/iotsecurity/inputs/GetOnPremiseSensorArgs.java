@@ -19,7 +19,7 @@ public final class GetOnPremiseSensorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="onPremiseSensorName", required=true)
       private final String onPremiseSensorName;
 
-    public String getOnPremiseSensorName() {
+    public String onPremiseSensorName() {
         return this.onPremiseSensorName;
     }
 

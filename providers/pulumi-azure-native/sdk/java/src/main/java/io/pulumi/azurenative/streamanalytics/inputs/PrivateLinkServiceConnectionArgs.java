@@ -27,7 +27,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
+    public Output<List<String>> groupIds() {
         return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="privateLinkServiceId")
       private final @Nullable Output<String> privateLinkServiceId;
 
-    public Output<String> getPrivateLinkServiceId() {
+    public Output<String> privateLinkServiceId() {
         return this.privateLinkServiceId == null ? Codegen.empty() : this.privateLinkServiceId;
     }
 
@@ -49,7 +49,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 

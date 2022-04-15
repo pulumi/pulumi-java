@@ -21,7 +21,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
-    public String getConfigStoreName() {
+    public String configStoreName() {
         return this.configStoreName;
     }
 
@@ -32,7 +32,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -43,7 +43,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -54,7 +54,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

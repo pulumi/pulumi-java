@@ -34,14 +34,14 @@ public final class NetworkInterfaceResponse {
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Private Ip address of the interface
      * 
     */
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
 

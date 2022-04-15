@@ -19,7 +19,7 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTableServicePropertiesArgs extends io.pulumi.resources.Inv
     @Import(name="tableServiceName", required=true)
       private final String tableServiceName;
 
-    public String getTableServiceName() {
+    public String tableServiceName() {
         return this.tableServiceName;
     }
 

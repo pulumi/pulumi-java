@@ -41,21 +41,21 @@ public final class CurrentScenarioDetailsResponse {
      * ARM Id of the job being executed.
      * 
     */
-    public Optional<String> getJobId() {
+    public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * Scenario name.
      * 
     */
-    public Optional<String> getScenarioName() {
+    public Optional<String> scenarioName() {
         return Optional.ofNullable(this.scenarioName);
     }
     /**
      * Start time of the workflow.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

@@ -26,7 +26,7 @@ public final class AzureStaticWebAppsRegistrationResponse {
      * The Client ID of the app used for login.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
 

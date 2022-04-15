@@ -25,7 +25,7 @@ public final class EncryptionInTransitPropertiesResponse extends io.pulumi.resou
     @Import(name="isEncryptionInTransitEnabled")
       private final @Nullable Boolean isEncryptionInTransitEnabled;
 
-    public Optional<Boolean> getIsEncryptionInTransitEnabled() {
+    public Optional<Boolean> isEncryptionInTransitEnabled() {
         return this.isEncryptionInTransitEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEncryptionInTransitEnabled);
     }
 

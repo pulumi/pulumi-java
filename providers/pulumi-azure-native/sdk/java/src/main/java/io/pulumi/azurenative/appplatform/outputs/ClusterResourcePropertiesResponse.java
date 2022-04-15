@@ -50,28 +50,28 @@ public final class ClusterResourcePropertiesResponse {
      * Network profile of the Service
      * 
     */
-    public Optional<NetworkProfileResponse> getNetworkProfile() {
+    public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Provisioning state of the Service
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * ServiceInstanceEntity GUID which uniquely identifies a created resource
      * 
     */
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
     /**
      * Version of the Service
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

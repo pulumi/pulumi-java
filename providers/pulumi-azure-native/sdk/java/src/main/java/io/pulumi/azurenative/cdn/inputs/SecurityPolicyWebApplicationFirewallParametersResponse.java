@@ -28,7 +28,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="associations")
       private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
-    public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
+    public List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations() {
         return this.associations == null ? List.of() : this.associations;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     @Import(name="wafPolicy")
       private final @Nullable ResourceReferenceResponse wafPolicy;
 
-    public Optional<ResourceReferenceResponse> getWafPolicy() {
+    public Optional<ResourceReferenceResponse> wafPolicy() {
         return this.wafPolicy == null ? Optional.empty() : Optional.ofNullable(this.wafPolicy);
     }
 

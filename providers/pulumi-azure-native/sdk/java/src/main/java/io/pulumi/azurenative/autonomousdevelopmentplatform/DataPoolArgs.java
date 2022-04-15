@@ -24,7 +24,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataPoolName")
       private final @Nullable Output<String> dataPoolName;
 
-    public Output<String> getDataPoolName() {
+    public Output<String> dataPoolName() {
         return this.dataPoolName == null ? Codegen.empty() : this.dataPoolName;
     }
 
@@ -46,7 +46,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<DataPoolLocationArgs>> locations;
 
-    public Output<List<DataPoolLocationArgs>> getLocations() {
+    public Output<List<DataPoolLocationArgs>> locations() {
         return this.locations;
     }
 
@@ -57,7 +57,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

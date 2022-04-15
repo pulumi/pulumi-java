@@ -62,42 +62,42 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
      * The activation Mode of the service package
      * 
     */
-    public Optional<String> getFailureAction() {
+    public Optional<String> failureAction() {
         return Optional.ofNullable(this.failureAction);
     }
     /**
      * The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
     */
-    public Optional<String> getHealthCheckRetryTimeout() {
+    public Optional<String> healthCheckRetryTimeout() {
         return Optional.ofNullable(this.healthCheckRetryTimeout);
     }
     /**
      * The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
     */
-    public Optional<String> getHealthCheckStableDuration() {
+    public Optional<String> healthCheckStableDuration() {
         return Optional.ofNullable(this.healthCheckStableDuration);
     }
     /**
      * The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
     */
-    public Optional<String> getHealthCheckWaitDuration() {
+    public Optional<String> healthCheckWaitDuration() {
         return Optional.ofNullable(this.healthCheckWaitDuration);
     }
     /**
      * The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
     */
-    public Optional<String> getUpgradeDomainTimeout() {
+    public Optional<String> upgradeDomainTimeout() {
         return Optional.ofNullable(this.upgradeDomainTimeout);
     }
     /**
      * The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
      * 
     */
-    public Optional<String> getUpgradeTimeout() {
+    public Optional<String> upgradeTimeout() {
         return Optional.ofNullable(this.upgradeTimeout);
     }
 

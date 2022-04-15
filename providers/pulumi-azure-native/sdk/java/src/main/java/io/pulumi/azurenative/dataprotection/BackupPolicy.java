@@ -44,7 +44,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name associated with the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return BaseBackupPolicyResource properties
      * 
      */
-    public Output<BackupPolicyResponse> getProperties() {
+    public Output<BackupPolicyResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

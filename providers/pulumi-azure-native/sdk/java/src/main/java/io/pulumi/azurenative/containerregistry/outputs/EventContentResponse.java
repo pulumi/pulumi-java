@@ -73,49 +73,49 @@ public final class EventContentResponse {
      * The action that encompasses the provided event.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
      * 
     */
-    public Optional<ActorResponse> getActor() {
+    public Optional<ActorResponse> actor() {
         return Optional.ofNullable(this.actor);
     }
     /**
      * The event ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The request that generated the event.
      * 
     */
-    public Optional<RequestResponse> getRequest() {
+    public Optional<RequestResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
      * 
     */
-    public Optional<SourceResponse> getSource() {
+    public Optional<SourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The target of the event.
      * 
     */
-    public Optional<TargetResponse> getTarget() {
+    public Optional<TargetResponse> target() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The time at which the event occurred.
      * 
     */
-    public Optional<String> getTimestamp() {
+    public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
 

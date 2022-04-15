@@ -56,35 +56,35 @@ public final class GetAssessmentResult {
      * For optimistic concurrency control.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Unique name of an assessment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the assessment.
      * 
     */
-    public AssessmentPropertiesResponse getProperties() {
+    public AssessmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

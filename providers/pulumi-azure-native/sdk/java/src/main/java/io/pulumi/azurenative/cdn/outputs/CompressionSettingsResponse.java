@@ -36,14 +36,14 @@ public final class CompressionSettingsResponse {
      * List of content types on which compression applies. The value should be a valid MIME type.
      * 
     */
-    public List<String> getContentTypesToCompress() {
+    public List<String> contentTypesToCompress() {
         return this.contentTypesToCompress == null ? List.of() : this.contentTypesToCompress;
     }
     /**
      * Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
      * 
     */
-    public Optional<Boolean> getIsCompressionEnabled() {
+    public Optional<Boolean> isCompressionEnabled() {
         return Optional.ofNullable(this.isCompressionEnabled);
     }
 

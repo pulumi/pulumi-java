@@ -34,14 +34,14 @@ public final class MCASDataConnectorDataTypesResponse {
      * Alerts data type connection.
      * 
     */
-    public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
+    public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }
     /**
      * Discovery log data type connection.
      * 
     */
-    public Optional<DataConnectorDataTypeCommonResponse> getDiscoveryLogs() {
+    public Optional<DataConnectorDataTypeCommonResponse> discoveryLogs() {
         return Optional.ofNullable(this.discoveryLogs);
     }
 

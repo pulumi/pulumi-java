@@ -27,7 +27,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -38,7 +38,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
     @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
 
-    public Output<SubResourceArgs> getPublicIPAddress() {
+    public Output<SubResourceArgs> publicIPAddress() {
         return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
@@ -49,7 +49,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
+    public Output<SubResourceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

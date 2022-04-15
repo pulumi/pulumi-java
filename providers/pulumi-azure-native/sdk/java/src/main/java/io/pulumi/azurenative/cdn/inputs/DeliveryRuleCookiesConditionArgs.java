@@ -27,7 +27,7 @@ public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.
     @Import(name="parameters", required=true)
       private final Output<CookiesMatchConditionParametersArgs> parameters;
 
-    public Output<CookiesMatchConditionParametersArgs> getParameters() {
+    public Output<CookiesMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

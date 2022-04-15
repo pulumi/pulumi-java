@@ -24,7 +24,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringServiceLocation")
       private final @Nullable Output<String> peeringServiceLocation;
 
-    public Output<String> getPeeringServiceLocation() {
+    public Output<String> peeringServiceLocation() {
         return this.peeringServiceLocation == null ? Codegen.empty() : this.peeringServiceLocation;
     }
 
@@ -46,7 +46,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringServiceName")
       private final @Nullable Output<String> peeringServiceName;
 
-    public Output<String> getPeeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName == null ? Codegen.empty() : this.peeringServiceName;
     }
 
@@ -57,7 +57,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringServiceProvider")
       private final @Nullable Output<String> peeringServiceProvider;
 
-    public Output<String> getPeeringServiceProvider() {
+    public Output<String> peeringServiceProvider() {
         return this.peeringServiceProvider == null ? Codegen.empty() : this.peeringServiceProvider;
     }
 
@@ -68,7 +68,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerBackupPeeringLocation")
       private final @Nullable Output<String> providerBackupPeeringLocation;
 
-    public Output<String> getProviderBackupPeeringLocation() {
+    public Output<String> providerBackupPeeringLocation() {
         return this.providerBackupPeeringLocation == null ? Codegen.empty() : this.providerBackupPeeringLocation;
     }
 
@@ -79,7 +79,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerPrimaryPeeringLocation")
       private final @Nullable Output<String> providerPrimaryPeeringLocation;
 
-    public Output<String> getProviderPrimaryPeeringLocation() {
+    public Output<String> providerPrimaryPeeringLocation() {
         return this.providerPrimaryPeeringLocation == null ? Codegen.empty() : this.providerPrimaryPeeringLocation;
     }
 
@@ -90,7 +90,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<PeeringServiceSkuArgs> sku;
 
-    public Output<PeeringServiceSkuArgs> getSku() {
+    public Output<PeeringServiceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -112,7 +112,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

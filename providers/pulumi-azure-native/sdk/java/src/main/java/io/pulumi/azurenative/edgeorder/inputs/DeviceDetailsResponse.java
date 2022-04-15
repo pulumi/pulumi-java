@@ -23,7 +23,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="managementResourceId", required=true)
       private final String managementResourceId;
 
-    public String getManagementResourceId() {
+    public String managementResourceId() {
         return this.managementResourceId;
     }
 
@@ -34,7 +34,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="managementResourceTenantId", required=true)
       private final String managementResourceTenantId;
 
-    public String getManagementResourceTenantId() {
+    public String managementResourceTenantId() {
         return this.managementResourceTenantId;
     }
 
@@ -45,7 +45,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 

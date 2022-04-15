@@ -86,56 +86,56 @@ public final class DiagnosticsResponse {
      * conditions on which alerts will be filtered
      * 
     */
-    public Optional<ConditionsResponse> getConditions() {
+    public Optional<ConditionsResponse> conditions() {
         return Optional.ofNullable(this.conditions);
     }
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Created by user name.
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * Description of action rule
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last modified by user name.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * scope on which action rule will apply
      * 
     */
-    public Optional<ScopeResponse> getScope() {
+    public Optional<ScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Indicates if the given action rule is enabled or disabled
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
@@ -143,7 +143,7 @@ public final class DiagnosticsResponse {
      * Expected value is 'Diagnostics'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

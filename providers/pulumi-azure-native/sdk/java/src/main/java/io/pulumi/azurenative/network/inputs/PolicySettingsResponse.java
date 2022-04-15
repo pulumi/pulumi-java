@@ -27,7 +27,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Integer fileUploadLimitInMb;
 
-    public Optional<Integer> getFileUploadLimitInMb() {
+    public Optional<Integer> fileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Optional.empty() : Optional.ofNullable(this.fileUploadLimitInMb);
     }
 
@@ -38,7 +38,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Integer maxRequestBodySizeInKb;
 
-    public Optional<Integer> getMaxRequestBodySizeInKb() {
+    public Optional<Integer> maxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
 
@@ -49,7 +49,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -60,7 +60,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="requestBodyCheck")
       private final @Nullable Boolean requestBodyCheck;
 
-    public Optional<Boolean> getRequestBodyCheck() {
+    public Optional<Boolean> requestBodyCheck() {
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
     }
 
@@ -71,7 +71,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

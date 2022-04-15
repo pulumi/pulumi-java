@@ -34,7 +34,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aadAuthEnabled")
       private final @Nullable Output<Boolean> aadAuthEnabled;
 
-    public Output<Boolean> getAadAuthEnabled() {
+    public Output<Boolean> aadAuthEnabled() {
         return this.aadAuthEnabled == null ? Codegen.empty() : this.aadAuthEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> getAppInsightsEnabled() {
+    public Output<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
@@ -56,7 +56,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
-    public Output<Boolean> getAuthEnabled() {
+    public Output<Boolean> authEnabled() {
         return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
@@ -67,7 +67,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoScaler")
       private final @Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
 
-    public Output<AKSServiceCreateRequestAutoScalerArgs> getAutoScaler() {
+    public Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler() {
         return this.autoScaler == null ? Codegen.empty() : this.autoScaler;
     }
 
@@ -78,7 +78,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeName")
       private final @Nullable Output<String> computeName;
 
-    public Output<String> getComputeName() {
+    public Output<String> computeName() {
         return this.computeName == null ? Codegen.empty() : this.computeName;
     }
 
@@ -90,7 +90,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -101,7 +101,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
+    public Output<ContainerResourceRequirementsArgs> containerResourceRequirements() {
         return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
     }
 
@@ -112,7 +112,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCollection")
       private final @Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
 
-    public Output<AKSServiceCreateRequestDataCollectionArgs> getDataCollection() {
+    public Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection() {
         return this.dataCollection == null ? Codegen.empty() : this.dataCollection;
     }
 
@@ -123,7 +123,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -134,7 +134,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
+    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
         return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
     }
 
@@ -145,7 +145,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
@@ -156,7 +156,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> getKeys() {
+    public Output<CreateServiceRequestKeysArgs> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -167,7 +167,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
+    public Output<Map<String,String>> kvTags() {
         return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
@@ -178,7 +178,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="livenessProbeRequirements")
       private final @Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
 
-    public Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> getLivenessProbeRequirements() {
+    public Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements() {
         return this.livenessProbeRequirements == null ? Codegen.empty() : this.livenessProbeRequirements;
     }
 
@@ -189,7 +189,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -200,7 +200,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentRequestsPerContainer")
       private final @Nullable Output<Integer> maxConcurrentRequestsPerContainer;
 
-    public Output<Integer> getMaxConcurrentRequestsPerContainer() {
+    public Output<Integer> maxConcurrentRequestsPerContainer() {
         return this.maxConcurrentRequestsPerContainer == null ? Codegen.empty() : this.maxConcurrentRequestsPerContainer;
     }
 
@@ -211,7 +211,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxQueueWaitMs")
       private final @Nullable Output<Integer> maxQueueWaitMs;
 
-    public Output<Integer> getMaxQueueWaitMs() {
+    public Output<Integer> maxQueueWaitMs() {
         return this.maxQueueWaitMs == null ? Codegen.empty() : this.maxQueueWaitMs;
     }
 
@@ -222,7 +222,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -233,7 +233,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numReplicas")
       private final @Nullable Output<Integer> numReplicas;
 
-    public Output<Integer> getNumReplicas() {
+    public Output<Integer> numReplicas() {
         return this.numReplicas == null ? Codegen.empty() : this.numReplicas;
     }
 
@@ -244,7 +244,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -255,7 +255,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -266,7 +266,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scoringTimeoutMs")
       private final @Nullable Output<Integer> scoringTimeoutMs;
 
-    public Output<Integer> getScoringTimeoutMs() {
+    public Output<Integer> scoringTimeoutMs() {
         return this.scoringTimeoutMs == null ? Codegen.empty() : this.scoringTimeoutMs;
     }
 
@@ -277,7 +277,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -288,7 +288,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
 
-    public Output<Double> getTrafficPercentile() {
+    public Output<Double> trafficPercentile() {
         return this.trafficPercentile == null ? Codegen.empty() : this.trafficPercentile;
     }
 
@@ -299,7 +299,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
 
-    public Output<Either<String,VariantType>> getType() {
+    public Output<Either<String,VariantType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -310,7 +310,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

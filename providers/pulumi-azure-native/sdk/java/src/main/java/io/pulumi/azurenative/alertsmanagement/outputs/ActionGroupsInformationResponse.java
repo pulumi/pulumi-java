@@ -42,21 +42,21 @@ public final class ActionGroupsInformationResponse {
      * An optional custom email subject to use in email notifications.
      * 
     */
-    public Optional<String> getCustomEmailSubject() {
+    public Optional<String> customEmailSubject() {
         return Optional.ofNullable(this.customEmailSubject);
     }
     /**
      * An optional custom web-hook payload to use in web-hook notifications.
      * 
     */
-    public Optional<String> getCustomWebhookPayload() {
+    public Optional<String> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
      * The Action Group resource IDs.
      * 
     */
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds;
     }
 

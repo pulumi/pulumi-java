@@ -23,7 +23,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     @Import(name="isTrusted")
       private final @Nullable Output<Boolean> isTrusted;
 
-    public Output<Boolean> getIsTrusted() {
+    public Output<Boolean> isTrusted() {
         return this.isTrusted == null ? Codegen.empty() : this.isTrusted;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

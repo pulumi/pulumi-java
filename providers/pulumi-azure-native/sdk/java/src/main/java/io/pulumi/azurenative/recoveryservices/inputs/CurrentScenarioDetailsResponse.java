@@ -25,7 +25,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
     @Import(name="jobId")
       private final @Nullable String jobId;
 
-    public Optional<String> getJobId() {
+    public Optional<String> jobId() {
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
     }
 
@@ -36,7 +36,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
     @Import(name="scenarioName")
       private final @Nullable String scenarioName;
 
-    public Optional<String> getScenarioName() {
+    public Optional<String> scenarioName() {
         return this.scenarioName == null ? Optional.empty() : Optional.ofNullable(this.scenarioName);
     }
 
@@ -47,7 +47,7 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

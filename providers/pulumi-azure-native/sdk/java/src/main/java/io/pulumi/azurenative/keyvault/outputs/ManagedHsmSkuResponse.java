@@ -32,14 +32,14 @@ public final class ManagedHsmSkuResponse {
      * SKU Family of the managed HSM Pool
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
     /**
      * SKU of the managed HSM Pool
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

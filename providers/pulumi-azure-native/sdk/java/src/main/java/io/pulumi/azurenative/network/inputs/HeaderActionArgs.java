@@ -28,7 +28,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerActionType", required=true)
       private final Output<Either<String,HeaderActionType>> headerActionType;
 
-    public Output<Either<String,HeaderActionType>> getHeaderActionType() {
+    public Output<Either<String,HeaderActionType>> headerActionType() {
         return this.headerActionType;
     }
 
@@ -39,7 +39,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -50,7 +50,7 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

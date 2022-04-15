@@ -25,7 +25,7 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
@@ -36,7 +36,7 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="addressPrefixType")
       private final @Nullable String addressPrefixType;
 
-    public Optional<String> getAddressPrefixType() {
+    public Optional<String> addressPrefixType() {
         return this.addressPrefixType == null ? Optional.empty() : Optional.ofNullable(this.addressPrefixType);
     }
 

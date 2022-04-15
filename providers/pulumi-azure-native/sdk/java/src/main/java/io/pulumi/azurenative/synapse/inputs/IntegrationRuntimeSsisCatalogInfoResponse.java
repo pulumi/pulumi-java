@@ -26,7 +26,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
     @Import(name="catalogAdminPassword")
       private final @Nullable SecureStringResponse catalogAdminPassword;
 
-    public Optional<SecureStringResponse> getCatalogAdminPassword() {
+    public Optional<SecureStringResponse> catalogAdminPassword() {
         return this.catalogAdminPassword == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminPassword);
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
     @Import(name="catalogAdminUserName")
       private final @Nullable String catalogAdminUserName;
 
-    public Optional<String> getCatalogAdminUserName() {
+    public Optional<String> catalogAdminUserName() {
         return this.catalogAdminUserName == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminUserName);
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
     @Import(name="catalogPricingTier")
       private final @Nullable String catalogPricingTier;
 
-    public Optional<String> getCatalogPricingTier() {
+    public Optional<String> catalogPricingTier() {
         return this.catalogPricingTier == null ? Optional.empty() : Optional.ofNullable(this.catalogPricingTier);
     }
 
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
     @Import(name="catalogServerEndpoint")
       private final @Nullable String catalogServerEndpoint;
 
-    public Optional<String> getCatalogServerEndpoint() {
+    public Optional<String> catalogServerEndpoint() {
         return this.catalogServerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.catalogServerEndpoint);
     }
 

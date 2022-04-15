@@ -34,14 +34,14 @@ public final class ListWorkspaceKeysResult {
      * Primary authorization key for this workspace.
      * 
     */
-    public Optional<String> getPrimaryToken() {
+    public Optional<String> primaryToken() {
         return Optional.ofNullable(this.primaryToken);
     }
     /**
      * Secondary authorization key for this workspace.
      * 
     */
-    public Optional<String> getSecondaryToken() {
+    public Optional<String> secondaryToken() {
         return Optional.ofNullable(this.secondaryToken);
     }
 

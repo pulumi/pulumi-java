@@ -26,7 +26,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
     @Import(name="azureSubscriptionId")
       private final @Nullable String azureSubscriptionId;
 
-    public Optional<String> getAzureSubscriptionId() {
+    public Optional<String> azureSubscriptionId() {
         return this.azureSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.azureSubscriptionId);
     }
 
@@ -37,7 +37,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
     @Import(name="partnerTopicName")
       private final @Nullable String partnerTopicName;
 
-    public Optional<String> getPartnerTopicName() {
+    public Optional<String> partnerTopicName() {
         return this.partnerTopicName == null ? Optional.empty() : Optional.ofNullable(this.partnerTopicName);
     }
 
@@ -49,7 +49,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 

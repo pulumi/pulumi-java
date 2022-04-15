@@ -30,7 +30,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="certificateType", required=true)
       private final Output<Either<String,AfdCertificateType>> certificateType;
 
-    public Output<Either<String,AfdCertificateType>> getCertificateType() {
+    public Output<Either<String,AfdCertificateType>> certificateType() {
         return this.certificateType;
     }
 
@@ -41,7 +41,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
 
-    public Output<AfdMinimumTlsVersion> getMinimumTlsVersion() {
+    public Output<AfdMinimumTlsVersion> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
@@ -52,7 +52,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     @Import(name="secret")
       private final @Nullable Output<ResourceReferenceArgs> secret;
 
-    public Output<ResourceReferenceArgs> getSecret() {
+    public Output<ResourceReferenceArgs> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 

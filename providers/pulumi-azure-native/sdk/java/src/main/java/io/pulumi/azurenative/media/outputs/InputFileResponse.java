@@ -50,14 +50,14 @@ public final class InputFileResponse {
      * Name of the file that this input definition applies to.
      * 
     */
-    public Optional<String> getFilename() {
+    public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
     /**
      * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
     */
-    public List<Object> getIncludedTracks() {
+    public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
     /**
@@ -65,7 +65,7 @@ public final class InputFileResponse {
      * Expected value is '#Microsoft.Media.InputFile'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

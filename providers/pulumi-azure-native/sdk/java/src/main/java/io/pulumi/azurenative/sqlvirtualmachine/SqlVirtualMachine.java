@@ -50,7 +50,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Auto backup settings for SQL Server.
      * 
      */
-    public Output</* @Nullable */ AutoBackupSettingsResponse> getAutoBackupSettings() {
+    public Output</* @Nullable */ AutoBackupSettingsResponse> autoBackupSettings() {
         return this.autoBackupSettings;
     }
     /**
@@ -64,7 +64,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
      */
-    public Output</* @Nullable */ AutoPatchingSettingsResponse> getAutoPatchingSettings() {
+    public Output</* @Nullable */ AutoPatchingSettingsResponse> autoPatchingSettings() {
         return this.autoPatchingSettings;
     }
     /**
@@ -78,7 +78,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -92,7 +92,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Key vault credential settings.
      * 
      */
-    public Output</* @Nullable */ KeyVaultCredentialSettingsResponse> getKeyVaultCredentialSettings() {
+    public Output</* @Nullable */ KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings() {
         return this.keyVaultCredentialSettings;
     }
     /**
@@ -106,7 +106,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -120,7 +120,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -134,7 +134,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Provisioning state to track the async operation status.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -148,7 +148,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return SQL Server configuration management settings.
      * 
      */
-    public Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> getServerConfigurationsManagementSettings() {
+    public Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings() {
         return this.serverConfigurationsManagementSettings;
     }
     /**
@@ -162,7 +162,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    public Output</* @Nullable */ String> getSqlImageOffer() {
+    public Output</* @Nullable */ String> sqlImageOffer() {
         return this.sqlImageOffer;
     }
     /**
@@ -176,7 +176,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return SQL Server edition type.
      * 
      */
-    public Output</* @Nullable */ String> getSqlImageSku() {
+    public Output</* @Nullable */ String> sqlImageSku() {
         return this.sqlImageSku;
     }
     /**
@@ -190,7 +190,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return SQL Server Management type.
      * 
      */
-    public Output</* @Nullable */ String> getSqlManagement() {
+    public Output</* @Nullable */ String> sqlManagement() {
         return this.sqlManagement;
     }
     /**
@@ -204,7 +204,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return SQL Server license type.
      * 
      */
-    public Output</* @Nullable */ String> getSqlServerLicenseType() {
+    public Output</* @Nullable */ String> sqlServerLicenseType() {
         return this.sqlServerLicenseType;
     }
     /**
@@ -218,7 +218,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
      */
-    public Output</* @Nullable */ String> getSqlVirtualMachineGroupResourceId() {
+    public Output</* @Nullable */ String> sqlVirtualMachineGroupResourceId() {
         return this.sqlVirtualMachineGroupResourceId;
     }
     /**
@@ -232,7 +232,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Storage Configuration Settings.
      * 
      */
-    public Output</* @Nullable */ StorageConfigurationSettingsResponse> getStorageConfigurationSettings() {
+    public Output</* @Nullable */ StorageConfigurationSettingsResponse> storageConfigurationSettings() {
         return this.storageConfigurationSettings;
     }
     /**
@@ -246,7 +246,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -260,7 +260,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -274,7 +274,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
      */
-    public Output</* @Nullable */ String> getVirtualMachineResourceId() {
+    public Output</* @Nullable */ String> virtualMachineResourceId() {
         return this.virtualMachineResourceId;
     }
     /**
@@ -288,7 +288,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
      */
-    public Output</* @Nullable */ WsfcDomainCredentialsResponse> getWsfcDomainCredentials() {
+    public Output</* @Nullable */ WsfcDomainCredentialsResponse> wsfcDomainCredentials() {
         return this.wsfcDomainCredentials;
     }
 

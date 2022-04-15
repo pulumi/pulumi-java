@@ -30,7 +30,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="apiMetadataProperties")
       private final @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
-    public Output<GatewayApiMetadataPropertiesArgs> getApiMetadataProperties() {
+    public Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties() {
         return this.apiMetadataProperties == null ? Codegen.empty() : this.apiMetadataProperties;
     }
 
@@ -41,7 +41,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="corsProperties")
       private final @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
 
-    public Output<GatewayCorsPropertiesArgs> getCorsProperties() {
+    public Output<GatewayCorsPropertiesArgs> corsProperties() {
         return this.corsProperties == null ? Codegen.empty() : this.corsProperties;
     }
 
@@ -52,7 +52,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
+    public Output<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
@@ -63,7 +63,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> getPublic_() {
+    public Output<Boolean> public_() {
         return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
@@ -74,7 +74,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceRequests")
       private final @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
 
-    public Output<GatewayResourceRequestsArgs> getResourceRequests() {
+    public Output<GatewayResourceRequestsArgs> resourceRequests() {
         return this.resourceRequests == null ? Codegen.empty() : this.resourceRequests;
     }
 
@@ -85,7 +85,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Output<SsoPropertiesArgs> getSsoProperties() {
+    public Output<SsoPropertiesArgs> ssoProperties() {
         return this.ssoProperties == null ? Codegen.empty() : this.ssoProperties;
     }
 

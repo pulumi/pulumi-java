@@ -24,14 +24,14 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Boolean autoUpgradeMinorVersion;
 
-    public Optional<Boolean> getAutoUpgradeMinorVersion() {
+    public Optional<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -42,7 +42,7 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protectedSettings")
       private final @Nullable Object protectedSettings;
 
-    public Optional<Object> getProtectedSettings() {
+    public Optional<Object> protectedSettings() {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
     }
 
@@ -53,35 +53,35 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisionAfterExtensions")
       private final @Nullable List<String> provisionAfterExtensions;
 
-    public List<String> getProvisionAfterExtensions() {
+    public List<String> provisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
 
     @Import(name="publisher", required=true)
       private final String publisher;
 
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 
     @Import(name="settings")
       private final @Nullable Object settings;
 
-    public Optional<Object> getSettings() {
+    public Optional<Object> settings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
     @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
-    public Optional<String> getTypeHandlerVersion() {
+    public Optional<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
     }
 

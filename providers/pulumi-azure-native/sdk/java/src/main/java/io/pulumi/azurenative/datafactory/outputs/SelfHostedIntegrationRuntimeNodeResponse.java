@@ -147,126 +147,126 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
      * The integration runtime capabilities dictionary
      * 
     */
-    public Map<String,String> getCapabilities() {
+    public Map<String,String> capabilities() {
         return this.capabilities;
     }
     /**
      * Maximum concurrent jobs on the integration runtime node.
      * 
     */
-    public Integer getConcurrentJobsLimit() {
+    public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
     /**
      * The time at which the integration runtime will expire in ISO8601 format.
      * 
     */
-    public String getExpiryTime() {
+    public String expiryTime() {
         return this.expiryTime;
     }
     /**
      * URI for the host machine of the integration runtime.
      * 
     */
-    public String getHostServiceUri() {
+    public String hostServiceUri() {
         return this.hostServiceUri;
     }
     /**
      * Indicates whether this node is the active dispatcher for integration runtime requests.
      * 
     */
-    public Boolean getIsActiveDispatcher() {
+    public Boolean isActiveDispatcher() {
         return this.isActiveDispatcher;
     }
     /**
      * The most recent time at which the integration runtime was connected in ISO8601 format.
      * 
     */
-    public String getLastConnectTime() {
+    public String lastConnectTime() {
         return this.lastConnectTime;
     }
     /**
      * The last time for the integration runtime node update end.
      * 
     */
-    public String getLastEndUpdateTime() {
+    public String lastEndUpdateTime() {
         return this.lastEndUpdateTime;
     }
     /**
      * The time the node last started up.
      * 
     */
-    public String getLastStartTime() {
+    public String lastStartTime() {
         return this.lastStartTime;
     }
     /**
      * The last time for the integration runtime node update start.
      * 
     */
-    public String getLastStartUpdateTime() {
+    public String lastStartUpdateTime() {
         return this.lastStartUpdateTime;
     }
     /**
      * The integration runtime node last stop time.
      * 
     */
-    public String getLastStopTime() {
+    public String lastStopTime() {
         return this.lastStopTime;
     }
     /**
      * The result of the last integration runtime node update.
      * 
     */
-    public String getLastUpdateResult() {
+    public String lastUpdateResult() {
         return this.lastUpdateResult;
     }
     /**
      * Machine name of the integration runtime node.
      * 
     */
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
     /**
      * The maximum concurrent jobs in this integration runtime.
      * 
     */
-    public Integer getMaxConcurrentJobs() {
+    public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
     /**
      * Name of the integration runtime node.
      * 
     */
-    public String getNodeName() {
+    public String nodeName() {
         return this.nodeName;
     }
     /**
      * The time at which the integration runtime node was registered in ISO8601 format.
      * 
     */
-    public String getRegisterTime() {
+    public String registerTime() {
         return this.registerTime;
     }
     /**
      * Status of the integration runtime node.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Version of the integration runtime node.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * Status of the integration runtime node version.
      * 
     */
-    public String getVersionStatus() {
+    public String versionStatus() {
         return this.versionStatus;
     }
 

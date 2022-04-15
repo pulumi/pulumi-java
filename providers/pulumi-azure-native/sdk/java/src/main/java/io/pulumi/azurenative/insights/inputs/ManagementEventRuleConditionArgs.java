@@ -30,7 +30,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     @Import(name="aggregation")
       private final @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
 
-    public Output<ManagementEventAggregationConditionArgs> getAggregation() {
+    public Output<ManagementEventAggregationConditionArgs> aggregation() {
         return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
@@ -41,7 +41,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     @Import(name="dataSource")
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -53,7 +53,7 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

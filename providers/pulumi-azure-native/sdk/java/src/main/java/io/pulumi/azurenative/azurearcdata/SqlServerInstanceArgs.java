@@ -24,7 +24,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties")
       private final @Nullable Output<SqlServerInstancePropertiesArgs> properties;
 
-    public Output<SqlServerInstancePropertiesArgs> getProperties() {
+    public Output<SqlServerInstancePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -46,7 +46,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sqlServerInstanceName")
       private final @Nullable Output<String> sqlServerInstanceName;
 
-    public Output<String> getSqlServerInstanceName() {
+    public Output<String> sqlServerInstanceName() {
         return this.sqlServerInstanceName == null ? Codegen.empty() : this.sqlServerInstanceName;
     }
 
@@ -68,7 +68,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

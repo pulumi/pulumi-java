@@ -49,21 +49,21 @@ public final class SelectVideoTrackByAttributeResponse {
      * The TrackAttribute to filter the tracks by.
      * 
     */
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
     /**
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.
      * 
     */
-    public Optional<String> getFilterValue() {
+    public Optional<String> filterValue() {
         return Optional.ofNullable(this.filterValue);
     }
     /**
@@ -71,7 +71,7 @@ public final class SelectVideoTrackByAttributeResponse {
      * Expected value is '#Microsoft.Media.SelectVideoTrackByAttribute'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

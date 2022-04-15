@@ -27,7 +27,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="metricTrigger")
       private final @Nullable LogMetricTriggerResponse metricTrigger;
 
-    public Optional<LogMetricTriggerResponse> getMetricTrigger() {
+    public Optional<LogMetricTriggerResponse> metricTrigger() {
         return this.metricTrigger == null ? Optional.empty() : Optional.ofNullable(this.metricTrigger);
     }
 
@@ -38,7 +38,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 
@@ -49,7 +49,7 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="thresholdOperator", required=true)
       private final String thresholdOperator;
 
-    public String getThresholdOperator() {
+    public String thresholdOperator() {
         return this.thresholdOperator;
     }
 

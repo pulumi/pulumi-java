@@ -108,84 +108,84 @@ public final class GetJobDefinitionResult {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
     */
-    public List<CustomerSecretResponse> getCustomerSecrets() {
+    public List<CustomerSecretResponse> customerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
     /**
      * A generic json used differently by each data service type.
      * 
     */
-    public Optional<Object> getDataServiceInput() {
+    public Optional<Object> dataServiceInput() {
         return Optional.ofNullable(this.dataServiceInput);
     }
     /**
      * Data Sink Id associated to the job definition.
      * 
     */
-    public String getDataSinkId() {
+    public String dataSinkId() {
         return this.dataSinkId;
     }
     /**
      * Data Source Id associated to the job definition.
      * 
     */
-    public String getDataSourceId() {
+    public String dataSourceId() {
         return this.dataSourceId;
     }
     /**
      * Id of the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Last modified time of the job definition.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * This is the preferred geo location for the job to run.
      * 
     */
-    public Optional<String> getRunLocation() {
+    public Optional<String> runLocation() {
         return Optional.ofNullable(this.runLocation);
     }
     /**
      * Schedule for running the job definition
      * 
     */
-    public List<ScheduleResponse> getSchedules() {
+    public List<ScheduleResponse> schedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
     /**
      * State of the job definition.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
     */
-    public Optional<String> getUserConfirmation() {
+    public Optional<String> userConfirmation() {
         return Optional.ofNullable(this.userConfirmation);
     }
 

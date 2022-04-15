@@ -304,266 +304,266 @@ public final class GetStorageAccountResult {
      * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
      * 
     */
-    public String getAccessTier() {
+    public String accessTier() {
         return this.accessTier;
     }
     /**
      * Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
      * 
     */
-    public Optional<Boolean> getAllowBlobPublicAccess() {
+    public Optional<Boolean> allowBlobPublicAccess() {
         return Optional.ofNullable(this.allowBlobPublicAccess);
     }
     /**
      * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
      * 
     */
-    public Optional<Boolean> getAllowSharedKeyAccess() {
+    public Optional<Boolean> allowSharedKeyAccess() {
         return Optional.ofNullable(this.allowSharedKeyAccess);
     }
     /**
      * Provides the identity based authentication settings for Azure Files.
      * 
     */
-    public Optional<AzureFilesIdentityBasedAuthenticationResponse> getAzureFilesIdentityBasedAuthentication() {
+    public Optional<AzureFilesIdentityBasedAuthenticationResponse> azureFilesIdentityBasedAuthentication() {
         return Optional.ofNullable(this.azureFilesIdentityBasedAuthentication);
     }
     /**
      * Blob restore status
      * 
     */
-    public BlobRestoreStatusResponse getBlobRestoreStatus() {
+    public BlobRestoreStatusResponse blobRestoreStatus() {
         return this.blobRestoreStatus;
     }
     /**
      * Gets the creation date and time of the storage account in UTC.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Gets the custom domain the user assigned to this storage account.
      * 
     */
-    public CustomDomainResponse getCustomDomain() {
+    public CustomDomainResponse customDomain() {
         return this.customDomain;
     }
     /**
      * Allows https traffic only to storage service if sets to true.
      * 
     */
-    public Optional<Boolean> getEnableHttpsTrafficOnly() {
+    public Optional<Boolean> enableHttpsTrafficOnly() {
         return Optional.ofNullable(this.enableHttpsTrafficOnly);
     }
     /**
      * NFS 3.0 protocol support enabled if set to true.
      * 
     */
-    public Optional<Boolean> getEnableNfsV3() {
+    public Optional<Boolean> enableNfsV3() {
         return Optional.ofNullable(this.enableNfsV3);
     }
     /**
      * Gets the encryption settings on the account. If unspecified, the account is unencrypted.
      * 
     */
-    public EncryptionResponse getEncryption() {
+    public EncryptionResponse encryption() {
         return this.encryption;
     }
     /**
      * The extendedLocation of the resource.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * If the failover is in progress, the value will be true, otherwise, it will be null.
      * 
     */
-    public Boolean getFailoverInProgress() {
+    public Boolean failoverInProgress() {
         return this.failoverInProgress;
     }
     /**
      * Geo Replication Stats
      * 
     */
-    public GeoReplicationStatsResponse getGeoReplicationStats() {
+    public GeoReplicationStatsResponse geoReplicationStats() {
         return this.geoReplicationStats;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Account HierarchicalNamespace enabled if sets to true.
      * 
     */
-    public Optional<Boolean> getIsHnsEnabled() {
+    public Optional<Boolean> isHnsEnabled() {
         return Optional.ofNullable(this.isHnsEnabled);
     }
     /**
      * Storage account keys creation time.
      * 
     */
-    public KeyCreationTimeResponse getKeyCreationTime() {
+    public KeyCreationTimeResponse keyCreationTime() {
         return this.keyCreationTime;
     }
     /**
      * KeyPolicy assigned to the storage account.
      * 
     */
-    public KeyPolicyResponse getKeyPolicy() {
+    public KeyPolicyResponse keyPolicy() {
         return this.keyPolicy;
     }
     /**
      * Gets the Kind.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
      * 
     */
-    public Optional<String> getLargeFileSharesState() {
+    public Optional<String> largeFileSharesState() {
         return Optional.ofNullable(this.largeFileSharesState);
     }
     /**
      * Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
     */
-    public String getLastGeoFailoverTime() {
+    public String lastGeoFailoverTime() {
         return this.lastGeoFailoverTime;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
      * 
     */
-    public Optional<String> getMinimumTlsVersion() {
+    public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network rule set
      * 
     */
-    public NetworkRuleSetResponse getNetworkRuleSet() {
+    public NetworkRuleSetResponse networkRuleSet() {
         return this.networkRuleSet;
     }
     /**
      * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
      * 
     */
-    public EndpointsResponse getPrimaryEndpoints() {
+    public EndpointsResponse primaryEndpoints() {
         return this.primaryEndpoints;
     }
     /**
      * Gets the location of the primary data center for the storage account.
      * 
     */
-    public String getPrimaryLocation() {
+    public String primaryLocation() {
         return this.primaryLocation;
     }
     /**
      * List of private endpoint connection associated with the specified storage account
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Gets the status of the storage account at the time the operation was called.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Maintains information about the network routing choice opted by the user for data transfer
      * 
     */
-    public Optional<RoutingPreferenceResponse> getRoutingPreference() {
+    public Optional<RoutingPreferenceResponse> routingPreference() {
         return Optional.ofNullable(this.routingPreference);
     }
     /**
      * SasPolicy assigned to the storage account.
      * 
     */
-    public SasPolicyResponse getSasPolicy() {
+    public SasPolicyResponse sasPolicy() {
         return this.sasPolicy;
     }
     /**
      * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.
      * 
     */
-    public EndpointsResponse getSecondaryEndpoints() {
+    public EndpointsResponse secondaryEndpoints() {
         return this.secondaryEndpoints;
     }
     /**
      * Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
     */
-    public String getSecondaryLocation() {
+    public String secondaryLocation() {
         return this.secondaryLocation;
     }
     /**
      * Gets the SKU.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * Gets the status indicating whether the primary location of the storage account is available or unavailable.
      * 
     */
-    public String getStatusOfPrimary() {
+    public String statusOfPrimary() {
         return this.statusOfPrimary;
     }
     /**
      * Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
      * 
     */
-    public String getStatusOfSecondary() {
+    public String statusOfSecondary() {
         return this.statusOfSecondary;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

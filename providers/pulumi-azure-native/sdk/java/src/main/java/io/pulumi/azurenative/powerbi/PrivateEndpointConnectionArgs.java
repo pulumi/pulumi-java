@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="azureResourceName", required=true)
       private final Output<String> azureResourceName;
 
-    public Output<String> getAzureResourceName() {
+    public Output<String> azureResourceName() {
         return this.azureResourceName;
     }
 
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> getPrivateEndpoint() {
+    public Output<PrivateEndpointArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
@@ -48,7 +48,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
-    public Output<String> getPrivateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName == null ? Codegen.empty() : this.privateEndpointName;
     }
 
@@ -59,7 +59,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<ConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -70,7 +70,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
-    public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ResourceProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -81,7 +81,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

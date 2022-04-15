@@ -25,7 +25,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sasUri", required=true)
       private final Output<String> sasUri;
 
-    public Output<String> getSasUri() {
+    public Output<String> sasUri() {
         return this.sasUri;
     }
 
@@ -37,7 +37,7 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

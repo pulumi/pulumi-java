@@ -49,7 +49,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace creation date.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -63,7 +63,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return This is a read-only property. Represents the ID associated with the workspace.
      * 
      */
-    public Output<String> getCustomerId() {
+    public Output<String> customerId() {
         return this.customerId;
     }
     /**
@@ -77,7 +77,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The ETag of the workspace.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -91,7 +91,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace features.
      * 
      */
-    public Output</* @Nullable */ WorkspaceFeaturesResponse> getFeatures() {
+    public Output</* @Nullable */ WorkspaceFeaturesResponse> features() {
         return this.features;
     }
     /**
@@ -105,7 +105,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Indicates whether customer managed storage is mandatory for query management.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceCmkForQuery() {
+    public Output</* @Nullable */ Boolean> forceCmkForQuery() {
         return this.forceCmkForQuery;
     }
     /**
@@ -119,7 +119,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -133,7 +133,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace modification date.
      * 
      */
-    public Output<String> getModifiedDate() {
+    public Output<String> modifiedDate() {
         return this.modifiedDate;
     }
     /**
@@ -147,7 +147,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +161,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return List of linked private link scope resources.
      * 
      */
-    public Output<List<PrivateLinkScopedResourceResponse>> getPrivateLinkScopedResources() {
+    public Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
@@ -175,7 +175,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the workspace.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -189,7 +189,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The network access type for accessing Log Analytics ingestion.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccessForIngestion() {
+    public Output</* @Nullable */ String> publicNetworkAccessForIngestion() {
         return this.publicNetworkAccessForIngestion;
     }
     /**
@@ -203,7 +203,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The network access type for accessing Log Analytics query.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccessForQuery() {
+    public Output</* @Nullable */ String> publicNetworkAccessForQuery() {
         return this.publicNetworkAccessForQuery;
     }
     /**
@@ -217,7 +217,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionInDays() {
+    public Output</* @Nullable */ Integer> retentionInDays() {
         return this.retentionInDays;
     }
     /**
@@ -231,7 +231,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The SKU of the workspace.
      * 
      */
-    public Output</* @Nullable */ WorkspaceSkuResponse> getSku() {
+    public Output</* @Nullable */ WorkspaceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -245,7 +245,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -259,7 +259,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -273,7 +273,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The daily volume cap for ingestion.
      * 
      */
-    public Output</* @Nullable */ WorkspaceCappingResponse> getWorkspaceCapping() {
+    public Output</* @Nullable */ WorkspaceCappingResponse> workspaceCapping() {
         return this.workspaceCapping;
     }
 

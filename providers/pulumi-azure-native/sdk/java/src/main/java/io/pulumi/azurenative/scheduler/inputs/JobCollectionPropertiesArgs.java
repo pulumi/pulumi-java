@@ -24,7 +24,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="quota")
       private final @Nullable Output<JobCollectionQuotaArgs> quota;
 
-    public Output<JobCollectionQuotaArgs> getQuota() {
+    public Output<JobCollectionQuotaArgs> quota() {
         return this.quota == null ? Codegen.empty() : this.quota;
     }
 
@@ -35,7 +35,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -46,7 +46,7 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="state")
       private final @Nullable Output<JobCollectionState> state;
 
-    public Output<JobCollectionState> getState() {
+    public Output<JobCollectionState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

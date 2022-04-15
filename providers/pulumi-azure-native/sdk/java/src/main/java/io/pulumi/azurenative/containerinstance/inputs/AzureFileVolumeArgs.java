@@ -27,7 +27,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -49,7 +49,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountKey")
       private final @Nullable Output<String> storageAccountKey;
 
-    public Output<String> getStorageAccountKey() {
+    public Output<String> storageAccountKey() {
         return this.storageAccountKey == null ? Codegen.empty() : this.storageAccountKey;
     }
 
@@ -60,7 +60,7 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 

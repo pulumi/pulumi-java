@@ -25,7 +25,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="denylistValues", required=true)
       private final List<String> denylistValues;
 
-    public List<String> getDenylistValues() {
+    public List<String> denylistValues() {
         return this.denylistValues;
     }
 
@@ -36,7 +36,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -47,7 +47,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -70,7 +70,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="ruleType", required=true)
       private final String ruleType;
 
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 
@@ -81,7 +81,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
     @Import(name="valueType", required=true)
       private final String valueType;
 
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

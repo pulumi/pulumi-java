@@ -28,7 +28,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -39,7 +39,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
-    public Output<String> getExpiry() {
+    public Output<String> expiry() {
         return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
@@ -50,7 +50,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,TokenPasswordName>> name;
 
-    public Output<Either<String,TokenPasswordName>> getName() {
+    public Output<Either<String,TokenPasswordName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

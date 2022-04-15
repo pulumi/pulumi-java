@@ -24,7 +24,7 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -35,7 +35,7 @@ public final class UserDefinedResourcesPropertiesResponse extends io.pulumi.reso
     @Import(name="querySubscriptions", required=true)
       private final List<String> querySubscriptions;
 
-    public List<String> getQuerySubscriptions() {
+    public List<String> querySubscriptions() {
         return this.querySubscriptions;
     }
 

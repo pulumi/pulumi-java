@@ -56,35 +56,35 @@ public final class PredictionDistributionDefinitionResponseDistributions {
      * Number of negatives.
      * 
     */
-    public Optional<Double> getNegatives() {
+    public Optional<Double> negatives() {
         return Optional.ofNullable(this.negatives);
     }
     /**
      * Number of negatives above threshold.
      * 
     */
-    public Optional<Double> getNegativesAboveThreshold() {
+    public Optional<Double> negativesAboveThreshold() {
         return Optional.ofNullable(this.negativesAboveThreshold);
     }
     /**
      * Number of positives.
      * 
     */
-    public Optional<Double> getPositives() {
+    public Optional<Double> positives() {
         return Optional.ofNullable(this.positives);
     }
     /**
      * Number of positives above threshold.
      * 
     */
-    public Optional<Double> getPositivesAboveThreshold() {
+    public Optional<Double> positivesAboveThreshold() {
         return Optional.ofNullable(this.positivesAboveThreshold);
     }
     /**
      * Score threshold.
      * 
     */
-    public Optional<Integer> getScoreThreshold() {
+    public Optional<Integer> scoreThreshold() {
         return Optional.ofNullable(this.scoreThreshold);
     }
 

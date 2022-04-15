@@ -26,7 +26,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="customerVisibleFqdns")
       private final @Nullable List<String> customerVisibleFqdns;
 
-    public List<String> getCustomerVisibleFqdns() {
+    public List<String> customerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
 
@@ -37,7 +37,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -48,7 +48,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="internalFqdn", required=true)
       private final String internalFqdn;
 
-    public String getInternalFqdn() {
+    public String internalFqdn() {
         return this.internalFqdn;
     }
 
@@ -59,7 +59,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="memberName", required=true)
       private final String memberName;
 
-    public String getMemberName() {
+    public String memberName() {
         return this.memberName;
     }
 
@@ -70,7 +70,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="privateLinkServiceArmRegion")
       private final @Nullable String privateLinkServiceArmRegion;
 
-    public Optional<String> getPrivateLinkServiceArmRegion() {
+    public Optional<String> privateLinkServiceArmRegion() {
         return this.privateLinkServiceArmRegion == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
 
@@ -81,7 +81,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
     @Import(name="redirectMapId")
       private final @Nullable String redirectMapId;
 
-    public Optional<String> getRedirectMapId() {
+    public Optional<String> redirectMapId() {
         return this.redirectMapId == null ? Optional.empty() : Optional.ofNullable(this.redirectMapId);
     }
 

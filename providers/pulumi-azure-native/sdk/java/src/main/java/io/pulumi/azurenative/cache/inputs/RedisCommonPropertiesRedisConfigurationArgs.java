@@ -26,7 +26,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="aofStorageConnectionString0")
       private final @Nullable Output<String> aofStorageConnectionString0;
 
-    public Output<String> getAofStorageConnectionString0() {
+    public Output<String> aofStorageConnectionString0() {
         return this.aofStorageConnectionString0 == null ? Codegen.empty() : this.aofStorageConnectionString0;
     }
 
@@ -37,7 +37,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="aofStorageConnectionString1")
       private final @Nullable Output<String> aofStorageConnectionString1;
 
-    public Output<String> getAofStorageConnectionString1() {
+    public Output<String> aofStorageConnectionString1() {
         return this.aofStorageConnectionString1 == null ? Codegen.empty() : this.aofStorageConnectionString1;
     }
 
@@ -48,7 +48,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="maxfragmentationmemoryReserved")
       private final @Nullable Output<String> maxfragmentationmemoryReserved;
 
-    public Output<String> getMaxfragmentationmemoryReserved() {
+    public Output<String> maxfragmentationmemoryReserved() {
         return this.maxfragmentationmemoryReserved == null ? Codegen.empty() : this.maxfragmentationmemoryReserved;
     }
 
@@ -59,7 +59,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="maxmemoryDelta")
       private final @Nullable Output<String> maxmemoryDelta;
 
-    public Output<String> getMaxmemoryDelta() {
+    public Output<String> maxmemoryDelta() {
         return this.maxmemoryDelta == null ? Codegen.empty() : this.maxmemoryDelta;
     }
 
@@ -70,7 +70,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="maxmemoryPolicy")
       private final @Nullable Output<String> maxmemoryPolicy;
 
-    public Output<String> getMaxmemoryPolicy() {
+    public Output<String> maxmemoryPolicy() {
         return this.maxmemoryPolicy == null ? Codegen.empty() : this.maxmemoryPolicy;
     }
 
@@ -81,7 +81,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="maxmemoryReserved")
       private final @Nullable Output<String> maxmemoryReserved;
 
-    public Output<String> getMaxmemoryReserved() {
+    public Output<String> maxmemoryReserved() {
         return this.maxmemoryReserved == null ? Codegen.empty() : this.maxmemoryReserved;
     }
 
@@ -92,7 +92,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="rdbBackupEnabled")
       private final @Nullable Output<String> rdbBackupEnabled;
 
-    public Output<String> getRdbBackupEnabled() {
+    public Output<String> rdbBackupEnabled() {
         return this.rdbBackupEnabled == null ? Codegen.empty() : this.rdbBackupEnabled;
     }
 
@@ -103,7 +103,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="rdbBackupFrequency")
       private final @Nullable Output<String> rdbBackupFrequency;
 
-    public Output<String> getRdbBackupFrequency() {
+    public Output<String> rdbBackupFrequency() {
         return this.rdbBackupFrequency == null ? Codegen.empty() : this.rdbBackupFrequency;
     }
 
@@ -114,7 +114,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="rdbBackupMaxSnapshotCount")
       private final @Nullable Output<String> rdbBackupMaxSnapshotCount;
 
-    public Output<String> getRdbBackupMaxSnapshotCount() {
+    public Output<String> rdbBackupMaxSnapshotCount() {
         return this.rdbBackupMaxSnapshotCount == null ? Codegen.empty() : this.rdbBackupMaxSnapshotCount;
     }
 
@@ -125,7 +125,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     @Import(name="rdbStorageConnectionString")
       private final @Nullable Output<String> rdbStorageConnectionString;
 
-    public Output<String> getRdbStorageConnectionString() {
+    public Output<String> rdbStorageConnectionString() {
         return this.rdbStorageConnectionString == null ? Codegen.empty() : this.rdbStorageConnectionString;
     }
 

@@ -46,7 +46,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Conflict logging retention period.
      * 
      */
-    public Output</* @Nullable */ Integer> getConflictLoggingRetentionInDays() {
+    public Output</* @Nullable */ Integer> conflictLoggingRetentionInDays() {
         return this.conflictLoggingRetentionInDays;
     }
     /**
@@ -60,7 +60,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Conflict resolution policy of the sync group.
      * 
      */
-    public Output</* @Nullable */ String> getConflictResolutionPolicy() {
+    public Output</* @Nullable */ String> conflictResolutionPolicy() {
         return this.conflictResolutionPolicy;
     }
     /**
@@ -74,7 +74,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return If conflict logging is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableConflictLogging() {
+    public Output</* @Nullable */ Boolean> enableConflictLogging() {
         return this.enableConflictLogging;
     }
     /**
@@ -88,7 +88,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return User name for the sync group hub database credential.
      * 
      */
-    public Output</* @Nullable */ String> getHubDatabaseUserName() {
+    public Output</* @Nullable */ String> hubDatabaseUserName() {
         return this.hubDatabaseUserName;
     }
     /**
@@ -102,7 +102,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Sync interval of the sync group.
      * 
      */
-    public Output</* @Nullable */ Integer> getInterval() {
+    public Output</* @Nullable */ Integer> interval() {
         return this.interval;
     }
     /**
@@ -116,7 +116,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Last sync time of the sync group.
      * 
      */
-    public Output<String> getLastSyncTime() {
+    public Output<String> lastSyncTime() {
         return this.lastSyncTime;
     }
     /**
@@ -130,7 +130,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Private endpoint name of the sync group if use private link connection is enabled.
      * 
      */
-    public Output<String> getPrivateEndpointName() {
+    public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
     /**
@@ -158,7 +158,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Sync schema of the sync group.
      * 
      */
-    public Output</* @Nullable */ SyncGroupSchemaResponse> getSchema() {
+    public Output</* @Nullable */ SyncGroupSchemaResponse> schema() {
         return this.schema;
     }
     /**
@@ -172,7 +172,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return The name and capacity of the SKU.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -186,7 +186,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync database in the sync group.
      * 
      */
-    public Output</* @Nullable */ String> getSyncDatabaseId() {
+    public Output</* @Nullable */ String> syncDatabaseId() {
         return this.syncDatabaseId;
     }
     /**
@@ -200,7 +200,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Sync state of the sync group.
      * 
      */
-    public Output<String> getSyncState() {
+    public Output<String> syncState() {
         return this.syncState;
     }
     /**
@@ -214,7 +214,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -228,7 +228,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return If use private link connection is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUsePrivateLinkConnection() {
+    public Output</* @Nullable */ Boolean> usePrivateLinkConnection() {
         return this.usePrivateLinkConnection;
     }
 

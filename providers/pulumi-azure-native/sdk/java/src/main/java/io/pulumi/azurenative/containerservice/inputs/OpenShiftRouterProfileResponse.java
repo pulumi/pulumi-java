@@ -25,7 +25,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
     @Import(name="fqdn", required=true)
       private final String fqdn;
 
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
 
@@ -36,7 +36,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -47,7 +47,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
     @Import(name="publicSubdomain", required=true)
       private final String publicSubdomain;
 
-    public String getPublicSubdomain() {
+    public String publicSubdomain() {
         return this.publicSubdomain;
     }
 

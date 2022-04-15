@@ -100,77 +100,77 @@ public final class FrontendEndpointResponse {
      * The configuration specifying how to enable HTTPS
      * 
     */
-    public CustomHttpsConfigurationResponse getCustomHttpsConfiguration() {
+    public CustomHttpsConfigurationResponse customHttpsConfiguration() {
         return this.customHttpsConfiguration;
     }
     /**
      * Provisioning status of Custom Https of the frontendEndpoint.
      * 
     */
-    public String getCustomHttpsProvisioningState() {
+    public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
     */
-    public String getCustomHttpsProvisioningSubstate() {
+    public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
      * The host name of the frontendEndpoint. Must be a domain name.
      * 
     */
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource status.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getSessionAffinityEnabledState() {
+    public Optional<String> sessionAffinityEnabledState() {
         return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
     /**
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
     */
-    public Optional<Integer> getSessionAffinityTtlSeconds() {
+    public Optional<Integer> sessionAffinityTtlSeconds() {
         return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Defines the Web Application Firewall policy for each host (if applicable)
      * 
     */
-    public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
+    public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 

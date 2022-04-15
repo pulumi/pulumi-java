@@ -37,7 +37,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="acknowledgementSettings", required=true)
       private final Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
 
-    public Output<EdifactAcknowledgementSettingsArgs> getAcknowledgementSettings() {
+    public Output<EdifactAcknowledgementSettingsArgs> acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="edifactDelimiterOverrides")
       private final @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
 
-    public Output<List<EdifactDelimiterOverrideArgs>> getEdifactDelimiterOverrides() {
+    public Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? Codegen.empty() : this.edifactDelimiterOverrides;
     }
 
@@ -59,7 +59,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="envelopeOverrides")
       private final @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
 
-    public Output<List<EdifactEnvelopeOverrideArgs>> getEnvelopeOverrides() {
+    public Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides() {
         return this.envelopeOverrides == null ? Codegen.empty() : this.envelopeOverrides;
     }
 
@@ -70,7 +70,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="envelopeSettings", required=true)
       private final Output<EdifactEnvelopeSettingsArgs> envelopeSettings;
 
-    public Output<EdifactEnvelopeSettingsArgs> getEnvelopeSettings() {
+    public Output<EdifactEnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -81,7 +81,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="framingSettings", required=true)
       private final Output<EdifactFramingSettingsArgs> framingSettings;
 
-    public Output<EdifactFramingSettingsArgs> getFramingSettings() {
+    public Output<EdifactFramingSettingsArgs> framingSettings() {
         return this.framingSettings;
     }
 
@@ -92,7 +92,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="messageFilter", required=true)
       private final Output<EdifactMessageFilterArgs> messageFilter;
 
-    public Output<EdifactMessageFilterArgs> getMessageFilter() {
+    public Output<EdifactMessageFilterArgs> messageFilter() {
         return this.messageFilter;
     }
 
@@ -103,7 +103,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="messageFilterList")
       private final @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList;
 
-    public Output<List<EdifactMessageIdentifierArgs>> getMessageFilterList() {
+    public Output<List<EdifactMessageIdentifierArgs>> messageFilterList() {
         return this.messageFilterList == null ? Codegen.empty() : this.messageFilterList;
     }
 
@@ -114,7 +114,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="processingSettings", required=true)
       private final Output<EdifactProcessingSettingsArgs> processingSettings;
 
-    public Output<EdifactProcessingSettingsArgs> getProcessingSettings() {
+    public Output<EdifactProcessingSettingsArgs> processingSettings() {
         return this.processingSettings;
     }
 
@@ -125,7 +125,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="schemaReferences", required=true)
       private final Output<List<EdifactSchemaReferenceArgs>> schemaReferences;
 
-    public Output<List<EdifactSchemaReferenceArgs>> getSchemaReferences() {
+    public Output<List<EdifactSchemaReferenceArgs>> schemaReferences() {
         return this.schemaReferences;
     }
 
@@ -136,7 +136,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="validationOverrides")
       private final @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides;
 
-    public Output<List<EdifactValidationOverrideArgs>> getValidationOverrides() {
+    public Output<List<EdifactValidationOverrideArgs>> validationOverrides() {
         return this.validationOverrides == null ? Codegen.empty() : this.validationOverrides;
     }
 
@@ -147,7 +147,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="validationSettings", required=true)
       private final Output<EdifactValidationSettingsArgs> validationSettings;
 
-    public Output<EdifactValidationSettingsArgs> getValidationSettings() {
+    public Output<EdifactValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
     }
 

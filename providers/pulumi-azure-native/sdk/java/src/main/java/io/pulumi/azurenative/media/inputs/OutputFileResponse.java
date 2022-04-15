@@ -24,7 +24,7 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final List<String> labels;
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels;
     }
 

@@ -31,7 +31,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
     @Import(name="binding")
       private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
-    public Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> getBinding() {
+    public Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding() {
         return this.binding == null ? null : this.binding;
     }
 
@@ -42,7 +42,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -53,7 +53,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
     @Import(name="inputs")
       private final @Nullable List<FunctionInputResponse> inputs;
 
-    public List<FunctionInputResponse> getInputs() {
+    public List<FunctionInputResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
 
@@ -64,7 +64,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
     @Import(name="output")
       private final @Nullable FunctionOutputResponse output;
 
-    public Optional<FunctionOutputResponse> getOutput() {
+    public Optional<FunctionOutputResponse> output() {
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
     }
 
@@ -76,7 +76,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

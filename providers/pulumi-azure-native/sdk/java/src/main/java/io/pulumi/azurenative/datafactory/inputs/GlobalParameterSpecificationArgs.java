@@ -28,7 +28,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<Either<String,GlobalParameterType>> type;
 
-    public Output<Either<String,GlobalParameterType>> getType() {
+    public Output<Either<String,GlobalParameterType>> type() {
         return this.type;
     }
 
@@ -39,7 +39,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     @Import(name="value", required=true)
       private final Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value;
     }
 

@@ -26,7 +26,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     @Import(name="killChainName")
       private final @Nullable Output<String> killChainName;
 
-    public Output<String> getKillChainName() {
+    public Output<String> killChainName() {
         return this.killChainName == null ? Codegen.empty() : this.killChainName;
     }
 
@@ -37,7 +37,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     @Import(name="phaseName")
       private final @Nullable Output<String> phaseName;
 
-    public Output<String> getPhaseName() {
+    public Output<String> phaseName() {
         return this.phaseName == null ? Codegen.empty() : this.phaseName;
     }
 

@@ -26,7 +26,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gid")
       private final @Nullable Output<String> gid;
 
-    public Output<String> getGid() {
+    public Output<String> gid() {
         return this.gid == null ? Codegen.empty() : this.gid;
     }
 
@@ -37,7 +37,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sid")
       private final @Nullable Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid == null ? Codegen.empty() : this.sid;
     }
 
@@ -48,7 +48,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -59,7 +59,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

@@ -103,77 +103,77 @@ public final class GetAvailabilitySetResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Fault Domain count.
      * 
     */
-    public Optional<Integer> getPlatformFaultDomainCount() {
+    public Optional<Integer> platformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
     /**
      * Update Domain count.
      * 
     */
-    public Optional<Integer> getPlatformUpdateDomainCount() {
+    public Optional<Integer> platformUpdateDomainCount() {
         return Optional.ofNullable(this.platformUpdateDomainCount);
     }
     /**
      * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
     */
-    public Optional<SubResourceResponse> getProximityPlacementGroup() {
+    public Optional<SubResourceResponse> proximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
     /**
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines in the availability set.
      * 
     */
-    public List<SubResourceResponse> getVirtualMachines() {
+    public List<SubResourceResponse> virtualMachines() {
         return this.virtualMachines == null ? List.of() : this.virtualMachines;
     }
 

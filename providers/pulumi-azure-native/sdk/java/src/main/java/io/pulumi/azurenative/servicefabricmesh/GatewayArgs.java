@@ -27,7 +27,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationNetwork", required=true)
       private final Output<NetworkRefArgs> destinationNetwork;
 
-    public Output<NetworkRefArgs> getDestinationNetwork() {
+    public Output<NetworkRefArgs> destinationNetwork() {
         return this.destinationNetwork;
     }
 
@@ -49,7 +49,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayResourceName")
       private final @Nullable Output<String> gatewayResourceName;
 
-    public Output<String> getGatewayResourceName() {
+    public Output<String> gatewayResourceName() {
         return this.gatewayResourceName == null ? Codegen.empty() : this.gatewayResourceName;
     }
 
@@ -60,7 +60,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http")
       private final @Nullable Output<List<HttpConfigArgs>> http;
 
-    public Output<List<HttpConfigArgs>> getHttp() {
+    public Output<List<HttpConfigArgs>> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -71,7 +71,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceNetwork", required=true)
       private final Output<NetworkRefArgs> sourceNetwork;
 
-    public Output<NetworkRefArgs> getSourceNetwork() {
+    public Output<NetworkRefArgs> sourceNetwork() {
         return this.sourceNetwork;
     }
 
@@ -104,7 +104,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcp")
       private final @Nullable Output<List<TcpConfigArgs>> tcp;
 
-    public Output<List<TcpConfigArgs>> getTcp() {
+    public Output<List<TcpConfigArgs>> tcp() {
         return this.tcp == null ? Codegen.empty() : this.tcp;
     }
 

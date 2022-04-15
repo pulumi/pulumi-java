@@ -29,7 +29,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bandwidthInGbps")
       private final @Nullable Output<Integer> bandwidthInGbps;
 
-    public Output<Integer> getBandwidthInGbps() {
+    public Output<Integer> bandwidthInGbps() {
         return this.bandwidthInGbps == null ? Codegen.empty() : this.bandwidthInGbps;
     }
 
@@ -40,7 +40,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encapsulation")
       private final @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
-    public Output<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
+    public Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation() {
         return this.encapsulation == null ? Codegen.empty() : this.encapsulation;
     }
 
@@ -51,7 +51,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expressRoutePortName")
       private final @Nullable Output<String> expressRoutePortName;
 
-    public Output<String> getExpressRoutePortName() {
+    public Output<String> expressRoutePortName() {
         return this.expressRoutePortName == null ? Codegen.empty() : this.expressRoutePortName;
     }
 
@@ -62,7 +62,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -73,7 +73,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -84,7 +84,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="links")
       private final @Nullable Output<List<ExpressRouteLinkArgs>> links;
 
-    public Output<List<ExpressRouteLinkArgs>> getLinks() {
+    public Output<List<ExpressRouteLinkArgs>> links() {
         return this.links == null ? Codegen.empty() : this.links;
     }
 
@@ -95,7 +95,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -106,7 +106,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
 
-    public Output<String> getPeeringLocation() {
+    public Output<String> peeringLocation() {
         return this.peeringLocation == null ? Codegen.empty() : this.peeringLocation;
     }
 
@@ -117,7 +117,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,7 +128,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

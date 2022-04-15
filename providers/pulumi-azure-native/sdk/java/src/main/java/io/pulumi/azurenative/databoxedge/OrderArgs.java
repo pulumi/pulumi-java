@@ -26,7 +26,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactInformation", required=true)
       private final Output<ContactDetailsArgs> contactInformation;
 
-    public Output<ContactDetailsArgs> getContactInformation() {
+    public Output<ContactDetailsArgs> contactInformation() {
         return this.contactInformation;
     }
 
@@ -37,7 +37,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -48,7 +48,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shipmentType")
       private final @Nullable Output<Either<String,ShipmentType>> shipmentType;
 
-    public Output<Either<String,ShipmentType>> getShipmentType() {
+    public Output<Either<String,ShipmentType>> shipmentType() {
         return this.shipmentType == null ? Codegen.empty() : this.shipmentType;
     }
 
@@ -70,7 +70,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shippingAddress")
       private final @Nullable Output<AddressArgs> shippingAddress;
 
-    public Output<AddressArgs> getShippingAddress() {
+    public Output<AddressArgs> shippingAddress() {
         return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 

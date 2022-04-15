@@ -26,7 +26,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="azureTableDefaultPartitionKeyValue")
       private final @Nullable Object azureTableDefaultPartitionKeyValue;
 
-    public Optional<Object> getAzureTableDefaultPartitionKeyValue() {
+    public Optional<Object> azureTableDefaultPartitionKeyValue() {
         return this.azureTableDefaultPartitionKeyValue == null ? Optional.empty() : Optional.ofNullable(this.azureTableDefaultPartitionKeyValue);
     }
 
@@ -37,7 +37,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="azureTableInsertType")
       private final @Nullable Object azureTableInsertType;
 
-    public Optional<Object> getAzureTableInsertType() {
+    public Optional<Object> azureTableInsertType() {
         return this.azureTableInsertType == null ? Optional.empty() : Optional.ofNullable(this.azureTableInsertType);
     }
 
@@ -48,7 +48,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="azureTablePartitionKeyName")
       private final @Nullable Object azureTablePartitionKeyName;
 
-    public Optional<Object> getAzureTablePartitionKeyName() {
+    public Optional<Object> azureTablePartitionKeyName() {
         return this.azureTablePartitionKeyName == null ? Optional.empty() : Optional.ofNullable(this.azureTablePartitionKeyName);
     }
 
@@ -59,7 +59,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="azureTableRowKeyName")
       private final @Nullable Object azureTableRowKeyName;
 
-    public Optional<Object> getAzureTableRowKeyName() {
+    public Optional<Object> azureTableRowKeyName() {
         return this.azureTableRowKeyName == null ? Optional.empty() : Optional.ofNullable(this.azureTableRowKeyName);
     }
 
@@ -70,7 +70,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -81,7 +81,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -92,7 +92,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -103,7 +103,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -115,7 +115,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -126,7 +126,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -137,7 +137,7 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 

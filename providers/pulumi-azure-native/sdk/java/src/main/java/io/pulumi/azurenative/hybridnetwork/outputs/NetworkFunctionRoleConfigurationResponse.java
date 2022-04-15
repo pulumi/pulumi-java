@@ -89,63 +89,63 @@ public final class NetworkFunctionRoleConfigurationResponse {
      * Specifies the custom settings for the virtual machine.
      * 
     */
-    public Optional<CustomProfileResponse> getCustomProfile() {
+    public Optional<CustomProfileResponse> customProfile() {
         return Optional.ofNullable(this.customProfile);
     }
     /**
      * The network interface configurations.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
      * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
      * 
     */
-    public Optional<OsProfileResponse> getOsProfile() {
+    public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * The name of the network function role.
      * 
     */
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * Role type.
      * 
     */
-    public Optional<String> getRoleType() {
+    public Optional<String> roleType() {
         return Optional.ofNullable(this.roleType);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
      * 
     */
-    public Optional<StorageProfileResponse> getStorageProfile() {
+    public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
      * 
     */
-    public Optional<Object> getUserDataParameters() {
+    public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }
     /**
      * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
      * 
     */
-    public Optional<Object> getUserDataTemplate() {
+    public Optional<Object> userDataTemplate() {
         return Optional.ofNullable(this.userDataTemplate);
     }
     /**
      * The size of the virtual machine.
      * 
     */
-    public Optional<String> getVirtualMachineSize() {
+    public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
 

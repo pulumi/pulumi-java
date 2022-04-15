@@ -44,7 +44,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,13 +58,13 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * @return The name of the ARM resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="resource", type=SqlStoredProcedureGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlStoredProcedureGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ SqlStoredProcedureGetPropertiesResponseResource> getResource() {
+    public Output</* @Nullable */ SqlStoredProcedureGetPropertiesResponseResource> resource() {
         return this.resource;
     }
     /**
@@ -78,7 +78,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -92,7 +92,7 @@ public class SqlResourceSqlStoredProcedure extends io.pulumi.resources.CustomRes
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

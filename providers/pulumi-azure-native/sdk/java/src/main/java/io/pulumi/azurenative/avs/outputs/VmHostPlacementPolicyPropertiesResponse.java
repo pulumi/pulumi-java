@@ -71,35 +71,35 @@ public final class VmHostPlacementPolicyPropertiesResponse {
      * placement policy affinity type
      * 
     */
-    public String getAffinityType() {
+    public String affinityType() {
         return this.affinityType;
     }
     /**
      * Display name of the placement policy
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Host members list
      * 
     */
-    public List<String> getHostMembers() {
+    public List<String> hostMembers() {
         return this.hostMembers;
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether the placement policy is enabled or disabled
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
@@ -107,14 +107,14 @@ public final class VmHostPlacementPolicyPropertiesResponse {
      * Expected value is 'VmHost'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Virtual machine members list
      * 
     */
-    public List<String> getVmMembers() {
+    public List<String> vmMembers() {
         return this.vmMembers;
     }
 

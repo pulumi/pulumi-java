@@ -23,7 +23,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
-    public Output<String> getColumnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="informationType")
       private final @Nullable Output<String> informationType;
 
-    public Output<String> getInformationType() {
+    public Output<String> informationType() {
         return this.informationType == null ? Codegen.empty() : this.informationType;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="informationTypeId")
       private final @Nullable Output<String> informationTypeId;
 
-    public Output<String> getInformationTypeId() {
+    public Output<String> informationTypeId() {
         return this.informationTypeId == null ? Codegen.empty() : this.informationTypeId;
     }
 
@@ -67,7 +67,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="labelId")
       private final @Nullable Output<String> labelId;
 
-    public Output<String> getLabelId() {
+    public Output<String> labelId() {
         return this.labelId == null ? Codegen.empty() : this.labelId;
     }
 
@@ -78,7 +78,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="labelName")
       private final @Nullable Output<String> labelName;
 
-    public Output<String> getLabelName() {
+    public Output<String> labelName() {
         return this.labelName == null ? Codegen.empty() : this.labelName;
     }
 
@@ -89,14 +89,14 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
     @Import(name="rank")
       private final @Nullable Output<SensitivityLabelRank> rank;
 
-    public Output<SensitivityLabelRank> getRank() {
+    public Output<SensitivityLabelRank> rank() {
         return this.rank == null ? Codegen.empty() : this.rank;
     }
 
@@ -107,7 +107,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,7 +118,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -129,7 +129,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="sensitivityLabelSource")
       private final @Nullable Output<String> sensitivityLabelSource;
 
-    public Output<String> getSensitivityLabelSource() {
+    public Output<String> sensitivityLabelSource() {
         return this.sensitivityLabelSource == null ? Codegen.empty() : this.sensitivityLabelSource;
     }
 
@@ -140,7 +140,7 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

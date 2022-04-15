@@ -34,14 +34,14 @@ public final class ReportRecurrencePeriodResponse {
      * The start date of recurrence.
      * 
     */
-    public String getFrom() {
+    public String from() {
         return this.from;
     }
     /**
      * The end date of recurrence.
      * 
     */
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
 

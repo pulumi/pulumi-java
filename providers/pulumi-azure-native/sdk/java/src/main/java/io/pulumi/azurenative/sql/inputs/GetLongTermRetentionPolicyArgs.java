@@ -19,7 +19,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
     @Import(name="policyName", required=true)
       private final String policyName;
 
-    public String getPolicyName() {
+    public String policyName() {
         return this.policyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

@@ -19,7 +19,7 @@ public final class GetEnterprisePolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="enterprisePolicyName", required=true)
       private final String enterprisePolicyName;
 
-    public String getEnterprisePolicyName() {
+    public String enterprisePolicyName() {
         return this.enterprisePolicyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEnterprisePolicyArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -19,7 +19,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
     @Import(name="kustoPoolName", required=true)
       private final String kustoPoolName;
 
-    public String getKustoPoolName() {
+    public String kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
     @Import(name="principalAssignmentName", required=true)
       private final String principalAssignmentName;
 
-    public String getPrincipalAssignmentName() {
+    public String principalAssignmentName() {
         return this.principalAssignmentName;
     }
 
@@ -52,7 +52,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,7 +63,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

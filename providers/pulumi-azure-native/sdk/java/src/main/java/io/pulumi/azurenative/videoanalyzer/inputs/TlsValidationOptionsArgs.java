@@ -26,7 +26,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
     @Import(name="ignoreHostname")
       private final @Nullable Output<String> ignoreHostname;
 
-    public Output<String> getIgnoreHostname() {
+    public Output<String> ignoreHostname() {
         return this.ignoreHostname == null ? Codegen.empty() : this.ignoreHostname;
     }
 
@@ -37,7 +37,7 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
     @Import(name="ignoreSignature")
       private final @Nullable Output<String> ignoreSignature;
 
-    public Output<String> getIgnoreSignature() {
+    public Output<String> ignoreSignature() {
         return this.ignoreSignature == null ? Codegen.empty() : this.ignoreSignature;
     }
 

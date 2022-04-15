@@ -62,42 +62,42 @@ public final class ApiResourceGeneralInformationResponse {
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The icon url.
      * 
     */
-    public Optional<String> getIconUrl() {
+    public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
      * The release tag.
      * 
     */
-    public Optional<String> getReleaseTag() {
+    public Optional<String> releaseTag() {
         return Optional.ofNullable(this.releaseTag);
     }
     /**
      * The terms of use url.
      * 
     */
-    public Optional<String> getTermsOfUseUrl() {
+    public Optional<String> termsOfUseUrl() {
         return Optional.ofNullable(this.termsOfUseUrl);
     }
     /**
      * The tier.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

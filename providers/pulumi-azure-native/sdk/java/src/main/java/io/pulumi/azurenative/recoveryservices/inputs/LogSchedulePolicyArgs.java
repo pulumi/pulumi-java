@@ -27,7 +27,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scheduleFrequencyInMins")
       private final @Nullable Output<Integer> scheduleFrequencyInMins;
 
-    public Output<Integer> getScheduleFrequencyInMins() {
+    public Output<Integer> scheduleFrequencyInMins() {
         return this.scheduleFrequencyInMins == null ? Codegen.empty() : this.scheduleFrequencyInMins;
     }
 
@@ -39,7 +39,7 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;
 
-    public Output<String> getSchedulePolicyType() {
+    public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
 

@@ -25,7 +25,7 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulu
     @Import(name="partnerName", required=true)
       private final String partnerName;
 
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
 
@@ -36,7 +36,7 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulu
     @Import(name="productName")
       private final @Nullable String productName;
 
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
     }
 
@@ -47,7 +47,7 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulu
     @Import(name="secret", required=true)
       private final String secret;
 
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

@@ -26,7 +26,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullSecret")
       private final @Nullable Output<String> pullSecret;
 
-    public Output<String> getPullSecret() {
+    public Output<String> pullSecret() {
         return this.pullSecret == null ? Codegen.empty() : this.pullSecret;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupId")
       private final @Nullable Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
     }
 
@@ -59,7 +59,7 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

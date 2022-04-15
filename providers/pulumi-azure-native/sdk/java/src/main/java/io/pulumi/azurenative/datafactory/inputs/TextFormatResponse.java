@@ -26,7 +26,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="columnDelimiter")
       private final @Nullable Object columnDelimiter;
 
-    public Optional<Object> getColumnDelimiter() {
+    public Optional<Object> columnDelimiter() {
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
     }
 
@@ -37,7 +37,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deserializer")
       private final @Nullable Object deserializer;
 
-    public Optional<Object> getDeserializer() {
+    public Optional<Object> deserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
     }
 
@@ -48,7 +48,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
 
-    public Optional<Object> getEncodingName() {
+    public Optional<Object> encodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
     }
 
@@ -59,7 +59,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="escapeChar")
       private final @Nullable Object escapeChar;
 
-    public Optional<Object> getEscapeChar() {
+    public Optional<Object> escapeChar() {
         return this.escapeChar == null ? Optional.empty() : Optional.ofNullable(this.escapeChar);
     }
 
@@ -70,7 +70,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="firstRowAsHeader")
       private final @Nullable Object firstRowAsHeader;
 
-    public Optional<Object> getFirstRowAsHeader() {
+    public Optional<Object> firstRowAsHeader() {
         return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
     }
 
@@ -81,7 +81,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nullValue")
       private final @Nullable Object nullValue;
 
-    public Optional<Object> getNullValue() {
+    public Optional<Object> nullValue() {
         return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
     }
 
@@ -92,7 +92,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="quoteChar")
       private final @Nullable Object quoteChar;
 
-    public Optional<Object> getQuoteChar() {
+    public Optional<Object> quoteChar() {
         return this.quoteChar == null ? Optional.empty() : Optional.ofNullable(this.quoteChar);
     }
 
@@ -103,7 +103,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rowDelimiter")
       private final @Nullable Object rowDelimiter;
 
-    public Optional<Object> getRowDelimiter() {
+    public Optional<Object> rowDelimiter() {
         return this.rowDelimiter == null ? Optional.empty() : Optional.ofNullable(this.rowDelimiter);
     }
 
@@ -114,7 +114,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serializer")
       private final @Nullable Object serializer;
 
-    public Optional<Object> getSerializer() {
+    public Optional<Object> serializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 
@@ -125,7 +125,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="skipLineCount")
       private final @Nullable Object skipLineCount;
 
-    public Optional<Object> getSkipLineCount() {
+    public Optional<Object> skipLineCount() {
         return this.skipLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipLineCount);
     }
 
@@ -136,7 +136,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="treatEmptyAsNull")
       private final @Nullable Object treatEmptyAsNull;
 
-    public Optional<Object> getTreatEmptyAsNull() {
+    public Optional<Object> treatEmptyAsNull() {
         return this.treatEmptyAsNull == null ? Optional.empty() : Optional.ofNullable(this.treatEmptyAsNull);
     }
 
@@ -148,7 +148,7 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

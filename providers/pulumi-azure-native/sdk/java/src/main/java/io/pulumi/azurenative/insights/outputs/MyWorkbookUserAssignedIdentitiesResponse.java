@@ -32,14 +32,14 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
      * The principal ID of resource identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

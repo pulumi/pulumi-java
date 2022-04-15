@@ -58,35 +58,35 @@ public final class LiveEventInputResponse {
      * Access control for live event input.
      * 
     */
-    public Optional<LiveEventInputAccessControlResponse> getAccessControl() {
+    public Optional<LiveEventInputAccessControlResponse> accessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
      * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
      * 
     */
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The input endpoints for the live event.
      * 
     */
-    public List<LiveEventEndpointResponse> getEndpoints() {
+    public List<LiveEventEndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
      * 
     */
-    public Optional<String> getKeyFrameIntervalDuration() {
+    public Optional<String> keyFrameIntervalDuration() {
         return Optional.ofNullable(this.keyFrameIntervalDuration);
     }
     /**
      * The input protocol for the live event. This is specified at creation time and cannot be updated.
      * 
     */
-    public String getStreamingProtocol() {
+    public String streamingProtocol() {
         return this.streamingProtocol;
     }
 

@@ -25,7 +25,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
     @Import(name="certificateCommonName", required=true)
       private final Output<String> certificateCommonName;
 
-    public Output<String> getCertificateCommonName() {
+    public Output<String> certificateCommonName() {
         return this.certificateCommonName;
     }
 
@@ -36,7 +36,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
     @Import(name="certificateIssuerThumbprint", required=true)
       private final Output<String> certificateIssuerThumbprint;
 
-    public Output<String> getCertificateIssuerThumbprint() {
+    public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 

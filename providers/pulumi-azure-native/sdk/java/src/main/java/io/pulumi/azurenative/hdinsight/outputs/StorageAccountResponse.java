@@ -84,63 +84,63 @@ public final class StorageAccountResponse {
      * The container in the storage account, only to be specified for WASB storage accounts.
      * 
     */
-    public Optional<String> getContainer() {
+    public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
     /**
      * The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
      * 
     */
-    public Optional<String> getFileSystem() {
+    public Optional<String> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
      * The file share name.
      * 
     */
-    public Optional<String> getFileshare() {
+    public Optional<String> fileshare() {
         return Optional.ofNullable(this.fileshare);
     }
     /**
      * Whether or not the storage account is the default storage account.
      * 
     */
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * The storage account access key.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
     */
-    public Optional<String> getMsiResourceId() {
+    public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
      * The name of the storage account.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The shared access signature key.
      * 
     */
-    public Optional<String> getSaskey() {
+    public Optional<String> saskey() {
         return Optional.ofNullable(this.saskey);
     }
 

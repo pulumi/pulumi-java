@@ -32,7 +32,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="error")
       private final @Nullable ErrorEntityResponse error;
 
-    public Optional<ErrorEntityResponse> getError() {
+    public Optional<ErrorEntityResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -45,7 +45,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -56,7 +56,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="identity")
       private final @Nullable ManagedServiceIdentityResponse identity;
 
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
@@ -67,7 +67,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -78,7 +78,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -89,7 +89,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="plan")
       private final @Nullable ArmPlanResponse plan;
 
-    public Optional<ArmPlanResponse> getPlan() {
+    public Optional<ArmPlanResponse> plan() {
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
     }
 
@@ -100,7 +100,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="properties")
       private final @Nullable RemotePrivateEndpointConnectionResponse properties;
 
-    public Optional<RemotePrivateEndpointConnectionResponse> getProperties() {
+    public Optional<RemotePrivateEndpointConnectionResponse> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
@@ -111,7 +111,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="sku")
       private final @Nullable SkuDescriptionResponse sku;
 
-    public Optional<SkuDescriptionResponse> getSku() {
+    public Optional<SkuDescriptionResponse> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -122,7 +122,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -133,7 +133,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -144,7 +144,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -155,7 +155,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

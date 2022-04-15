@@ -95,70 +95,70 @@ public final class GetImportPipelineResult {
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the import pipeline.
      * 
     */
-    public Optional<IdentityPropertiesResponse> getIdentity() {
+    public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the import pipeline.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of all options configured for the pipeline.
      * 
     */
-    public List<String> getOptions() {
+    public List<String> options() {
         return this.options == null ? List.of() : this.options;
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The source properties of the import pipeline.
      * 
     */
-    public ImportPipelineSourcePropertiesResponse getSource() {
+    public ImportPipelineSourcePropertiesResponse source() {
         return this.source;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The properties that describe the trigger of the import pipeline.
      * 
     */
-    public Optional<PipelineTriggerPropertiesResponse> getTrigger() {
+    public Optional<PipelineTriggerPropertiesResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

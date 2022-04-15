@@ -44,7 +44,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Email address.
      * 
      */
-    public Output</* @Nullable */ String> getEmail() {
+    public Output</* @Nullable */ String> email() {
         return this.email;
     }
     /**
@@ -58,7 +58,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return First name.
      * 
      */
-    public Output</* @Nullable */ String> getFirstName() {
+    public Output</* @Nullable */ String> firstName() {
         return this.firstName;
     }
     /**
@@ -72,7 +72,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Collection of groups user is part of.
      * 
      */
-    public Output<List<GroupContractPropertiesResponse>> getGroups() {
+    public Output<List<GroupContractPropertiesResponse>> groups() {
         return this.groups;
     }
     /**
@@ -86,7 +86,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Collection of user identities.
      * 
      */
-    public Output</* @Nullable */ List<UserIdentityContractResponse>> getIdentities() {
+    public Output</* @Nullable */ List<UserIdentityContractResponse>> identities() {
         return this.identities;
     }
     /**
@@ -100,7 +100,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Last name.
      * 
      */
-    public Output</* @Nullable */ String> getLastName() {
+    public Output</* @Nullable */ String> lastName() {
         return this.lastName;
     }
     /**
@@ -114,7 +114,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Optional note about a user set by the administrator.
      * 
      */
-    public Output</* @Nullable */ String> getNote() {
+    public Output</* @Nullable */ String> note() {
         return this.note;
     }
     /**
@@ -142,7 +142,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getRegistrationDate() {
+    public Output</* @Nullable */ String> registrationDate() {
         return this.registrationDate;
     }
     /**
@@ -156,7 +156,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -170,7 +170,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -21,7 +21,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -32,7 +32,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="storeLocation")
       private final @Nullable Output<CertificateStoreLocation> storeLocation;
 
-    public Output<CertificateStoreLocation> getStoreLocation() {
+    public Output<CertificateStoreLocation> storeLocation() {
         return this.storeLocation == null ? Codegen.empty() : this.storeLocation;
     }
 
@@ -43,14 +43,14 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="storeName")
       private final @Nullable Output<String> storeName;
 
-    public Output<String> getStoreName() {
+    public Output<String> storeName() {
         return this.storeName == null ? Codegen.empty() : this.storeName;
     }
 
     @Import(name="visibility")
       private final @Nullable Output<List<CertificateVisibility>> visibility;
 
-    public Output<List<CertificateVisibility>> getVisibility() {
+    public Output<List<CertificateVisibility>> visibility() {
         return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 

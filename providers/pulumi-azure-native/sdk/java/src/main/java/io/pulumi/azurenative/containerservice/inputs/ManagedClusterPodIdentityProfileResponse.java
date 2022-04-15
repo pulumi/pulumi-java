@@ -24,7 +24,7 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
     @Import(name="allowNetworkPluginKubenet")
       private final @Nullable Boolean allowNetworkPluginKubenet;
 
-    public Optional<Boolean> getAllowNetworkPluginKubenet() {
+    public Optional<Boolean> allowNetworkPluginKubenet() {
         return this.allowNetworkPluginKubenet == null ? Optional.empty() : Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
 
@@ -35,7 +35,7 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -46,7 +46,7 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
     @Import(name="userAssignedIdentities")
       private final @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
 
-    public List<ManagedClusterPodIdentityResponse> getUserAssignedIdentities() {
+    public List<ManagedClusterPodIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
     }
 
@@ -57,7 +57,7 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
     @Import(name="userAssignedIdentityExceptions")
       private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
-    public List<ManagedClusterPodIdentityExceptionResponse> getUserAssignedIdentityExceptions() {
+    public List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions() {
         return this.userAssignedIdentityExceptions == null ? List.of() : this.userAssignedIdentityExceptions;
     }
 

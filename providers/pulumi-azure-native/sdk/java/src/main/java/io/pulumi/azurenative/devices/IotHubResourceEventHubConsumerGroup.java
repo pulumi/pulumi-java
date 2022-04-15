@@ -43,7 +43,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The Event Hub-compatible consumer group name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return The tags.
      * 
      */
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
      * @return the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

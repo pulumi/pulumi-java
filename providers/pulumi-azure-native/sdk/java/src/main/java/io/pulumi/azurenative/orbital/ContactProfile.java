@@ -46,7 +46,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Auto track configuration.
      * 
      */
-    public Output</* @Nullable */ String> getAutoTrackingConfiguration() {
+    public Output</* @Nullable */ String> autoTrackingConfiguration() {
         return this.autoTrackingConfiguration;
     }
     /**
@@ -60,7 +60,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -74,7 +74,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return The URI of the Event Hub used for telemetry
      * 
      */
-    public Output</* @Nullable */ String> getEventHubUri() {
+    public Output</* @Nullable */ String> eventHubUri() {
         return this.eventHubUri;
     }
     /**
@@ -88,7 +88,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Links of the Contact Profile
      * 
      */
-    public Output<List<ContactProfileLinkResponse>> getLinks() {
+    public Output<List<ContactProfileLinkResponse>> links() {
         return this.links;
     }
     /**
@@ -102,7 +102,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +116,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Minimum viable elevation for the contact in decimal degrees.
      * 
      */
-    public Output</* @Nullable */ Double> getMinimumElevationDegrees() {
+    public Output</* @Nullable */ Double> minimumElevationDegrees() {
         return this.minimumElevationDegrees;
     }
     /**
@@ -130,7 +130,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Minimum viable contact duration in ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> getMinimumViableContactDuration() {
+    public Output</* @Nullable */ String> minimumViableContactDuration() {
         return this.minimumViableContactDuration;
     }
     /**
@@ -144,7 +144,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +158,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -172,7 +172,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -186,7 +186,7 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

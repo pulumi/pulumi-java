@@ -26,7 +26,7 @@ public final class ListDeviceFailoverSetsResult {
      * The list of failover sets.
      * 
     */
-    public List<FailoverSetResponse> getValue() {
+    public List<FailoverSetResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

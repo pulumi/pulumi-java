@@ -26,7 +26,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -37,7 +37,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
+    public Output<List<SubResourceArgs>> registrationVirtualNetworks() {
         return this.registrationVirtualNetworks == null ? Codegen.empty() : this.registrationVirtualNetworks;
     }
 
@@ -48,7 +48,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolutionVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> getResolutionVirtualNetworks() {
+    public Output<List<SubResourceArgs>> resolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks == null ? Codegen.empty() : this.resolutionVirtualNetworks;
     }
 
@@ -59,7 +59,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneName")
       private final @Nullable Output<String> zoneName;
 
-    public Output<String> getZoneName() {
+    public Output<String> zoneName() {
         return this.zoneName == null ? Codegen.empty() : this.zoneName;
     }
 
@@ -92,7 +92,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneType")
       private final @Nullable Output<ZoneType> zoneType;
 
-    public Output<ZoneType> getZoneType() {
+    public Output<ZoneType> zoneType() {
         return this.zoneType == null ? Codegen.empty() : this.zoneType;
     }
 

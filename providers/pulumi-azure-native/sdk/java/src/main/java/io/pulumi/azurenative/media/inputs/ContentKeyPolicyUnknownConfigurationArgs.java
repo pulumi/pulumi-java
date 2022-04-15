@@ -26,7 +26,7 @@ public final class ContentKeyPolicyUnknownConfigurationArgs extends io.pulumi.re
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

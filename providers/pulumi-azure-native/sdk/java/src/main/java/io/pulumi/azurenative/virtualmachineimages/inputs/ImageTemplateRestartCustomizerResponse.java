@@ -25,7 +25,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     @Import(name="restartCheckCommand")
       private final @Nullable String restartCheckCommand;
 
-    public Optional<String> getRestartCheckCommand() {
+    public Optional<String> restartCheckCommand() {
         return this.restartCheckCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCheckCommand);
     }
 
@@ -47,7 +47,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     @Import(name="restartCommand")
       private final @Nullable String restartCommand;
 
-    public Optional<String> getRestartCommand() {
+    public Optional<String> restartCommand() {
         return this.restartCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCommand);
     }
 
@@ -58,7 +58,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     @Import(name="restartTimeout")
       private final @Nullable String restartTimeout;
 
-    public Optional<String> getRestartTimeout() {
+    public Optional<String> restartTimeout() {
         return this.restartTimeout == null ? Optional.empty() : Optional.ofNullable(this.restartTimeout);
     }
 
@@ -70,7 +70,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

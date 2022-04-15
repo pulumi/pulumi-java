@@ -28,7 +28,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -39,7 +39,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource")
       private final @Nullable Output<PrivilegeResourceArgs> resource;
 
-    public Output<PrivilegeResourceArgs> getResource() {
+    public Output<PrivilegeResourceArgs> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 

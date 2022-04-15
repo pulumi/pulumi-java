@@ -48,28 +48,28 @@ public final class ConnectivityGroupItemResponse {
      * Group connectivity type.
      * 
     */
-    public Optional<String> getGroupConnectivity() {
+    public Optional<String> groupConnectivity() {
         return Optional.ofNullable(this.groupConnectivity);
     }
     /**
      * Flag if global is supported.
      * 
     */
-    public Optional<String> getIsGlobal() {
+    public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Network group Id.
      * 
     */
-    public Optional<String> getNetworkGroupId() {
+    public Optional<String> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
     /**
      * Flag if need to use hub gateway.
      * 
     */
-    public Optional<String> getUseHubGateway() {
+    public Optional<String> useHubGateway() {
         return Optional.ofNullable(this.useHubGateway);
     }
 

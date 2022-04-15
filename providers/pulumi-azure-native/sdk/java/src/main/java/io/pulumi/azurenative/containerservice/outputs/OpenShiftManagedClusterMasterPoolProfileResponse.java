@@ -56,35 +56,35 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
      * Number of masters (VMs) to host docker containers. The default value is 3.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Unique name of the master pool profile in the context of the subscription and resource group.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Subnet CIDR for the peering.
      * 
     */
-    public Optional<String> getSubnetCidr() {
+    public Optional<String> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
     /**
      * Size of agent VMs.
      * 
     */
-    public String getVmSize() {
+    public String vmSize() {
         return this.vmSize;
     }
 

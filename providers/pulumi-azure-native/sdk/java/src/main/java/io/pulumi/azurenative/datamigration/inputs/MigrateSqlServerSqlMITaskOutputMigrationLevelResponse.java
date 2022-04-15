@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="agentJobs", required=true)
       private final Map<String,String> agentJobs;
 
-    public Map<String,String> getAgentJobs() {
+    public Map<String,String> agentJobs() {
         return this.agentJobs;
     }
 
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="databases", required=true)
       private final Map<String,String> databases;
 
-    public Map<String,String> getDatabases() {
+    public Map<String,String> databases() {
         return this.databases;
     }
 
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
 
@@ -68,7 +68,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -79,7 +79,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="logins", required=true)
       private final Map<String,String> logins;
 
-    public Map<String,String> getLogins() {
+    public Map<String,String> logins() {
         return this.logins;
     }
 
@@ -90,7 +90,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -101,7 +101,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="orphanedUsersInfo", required=true)
       private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
 
-    public List<OrphanedUserInfoResponse> getOrphanedUsersInfo() {
+    public List<OrphanedUserInfoResponse> orphanedUsersInfo() {
         return this.orphanedUsersInfo;
     }
 
@@ -113,7 +113,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -124,7 +124,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="serverRoleResults", required=true)
       private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
 
-    public Map<String,StartMigrationScenarioServerRoleResultResponse> getServerRoleResults() {
+    public Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults() {
         return this.serverRoleResults;
     }
 
@@ -135,7 +135,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
 
@@ -146,7 +146,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
 
@@ -157,7 +157,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -168,7 +168,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -179,7 +179,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -190,7 +190,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -201,7 +201,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

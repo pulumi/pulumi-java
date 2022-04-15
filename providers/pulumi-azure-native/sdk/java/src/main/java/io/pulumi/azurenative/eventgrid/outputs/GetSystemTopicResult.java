@@ -100,77 +100,77 @@ public final class GetSystemTopicResult {
      * Fully qualified identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity information for the resource.
      * 
     */
-    public Optional<IdentityInfoResponse> getIdentity() {
+    public Optional<IdentityInfoResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Metric resource id for the system topic.
      * 
     */
-    public String getMetricResourceId() {
+    public String metricResourceId() {
         return this.metricResourceId;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the system topic.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Source for the system topic.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The system metadata relating to System Topic resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * TopicType for the system topic.
      * 
     */
-    public Optional<String> getTopicType() {
+    public Optional<String> topicType() {
         return Optional.ofNullable(this.topicType);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="allowCredentials")
       private final @Nullable Boolean allowCredentials;
 
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
     }
 
@@ -39,7 +39,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="allowedHeaders")
       private final @Nullable List<String> allowedHeaders;
 
-    public List<String> getAllowedHeaders() {
+    public List<String> allowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
 
@@ -50,7 +50,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="allowedMethods")
       private final @Nullable List<String> allowedMethods;
 
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
     }
 
@@ -61,7 +61,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
 
@@ -72,7 +72,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="exposedHeaders")
       private final @Nullable List<String> exposedHeaders;
 
-    public List<String> getExposedHeaders() {
+    public List<String> exposedHeaders() {
         return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
     }
 
@@ -83,7 +83,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="maxAge")
       private final @Nullable Integer maxAge;
 
-    public Optional<Integer> getMaxAge() {
+    public Optional<Integer> maxAge() {
         return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
     }
 

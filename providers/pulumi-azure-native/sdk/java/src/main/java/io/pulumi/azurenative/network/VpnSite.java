@@ -50,7 +50,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The AddressSpace that contains an array of IP address ranges.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
+    public Output</* @Nullable */ AddressSpaceResponse> addressSpace() {
         return this.addressSpace;
     }
     /**
@@ -64,7 +64,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The set of bgp properties.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> getBgpProperties() {
+    public Output</* @Nullable */ BgpSettingsResponse> bgpProperties() {
         return this.bgpProperties;
     }
     /**
@@ -78,7 +78,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The device properties.
      * 
      */
-    public Output</* @Nullable */ DevicePropertiesResponse> getDeviceProperties() {
+    public Output</* @Nullable */ DevicePropertiesResponse> deviceProperties() {
         return this.deviceProperties;
     }
     /**
@@ -92,7 +92,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -106,7 +106,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The ip-address for the vpn-site.
      * 
      */
-    public Output</* @Nullable */ String> getIpAddress() {
+    public Output</* @Nullable */ String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -120,7 +120,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return IsSecuritySite flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsSecuritySite() {
+    public Output</* @Nullable */ Boolean> isSecuritySite() {
         return this.isSecuritySite;
     }
     /**
@@ -134,7 +134,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -148,7 +148,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -162,7 +162,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return Office365 Policy.
      * 
      */
-    public Output</* @Nullable */ O365PolicyPropertiesResponse> getO365Policy() {
+    public Output</* @Nullable */ O365PolicyPropertiesResponse> o365Policy() {
         return this.o365Policy;
     }
     /**
@@ -176,7 +176,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the VPN site resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -190,7 +190,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The key for vpn-site that can be used for connections.
      * 
      */
-    public Output</* @Nullable */ String> getSiteKey() {
+    public Output</* @Nullable */ String> siteKey() {
         return this.siteKey;
     }
     /**
@@ -204,7 +204,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -218,7 +218,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -232,7 +232,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return The VirtualWAN to which the vpnSite belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualWan() {
+    public Output</* @Nullable */ SubResourceResponse> virtualWan() {
         return this.virtualWan;
     }
     /**
@@ -246,7 +246,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * @return List of all vpn site links.
      * 
      */
-    public Output</* @Nullable */ List<VpnSiteLinkResponse>> getVpnSiteLinks() {
+    public Output</* @Nullable */ List<VpnSiteLinkResponse>> vpnSiteLinks() {
         return this.vpnSiteLinks;
     }
 

@@ -28,7 +28,7 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
 
-    public Output<Either<String,SnapshotStorageAccountTypes>> getName() {
+    public Output<Either<String,SnapshotStorageAccountTypes>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

@@ -19,7 +19,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="streamingPolicyName", required=true)
       private final String streamingPolicyName;
 
-    public String getStreamingPolicyName() {
+    public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
 

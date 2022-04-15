@@ -25,7 +25,7 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
     @Import(name="parameters", required=true)
       private final UrlFileExtensionMatchConditionParametersResponse parameters;
 
-    public UrlFileExtensionMatchConditionParametersResponse getParameters() {
+    public UrlFileExtensionMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

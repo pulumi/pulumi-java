@@ -36,14 +36,14 @@ public final class ListListTenantConfigurationViolationResult {
      * The URL to use for getting the next set of results.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The array of violations.
      * 
     */
-    public List<ViolationResponse> getValue() {
+    public List<ViolationResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

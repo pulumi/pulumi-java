@@ -26,7 +26,7 @@ public final class ImageRepositoryCredentialResponse extends io.pulumi.resources
     @Import(name="imageRepositoryUrl", required=true)
       private final String imageRepositoryUrl;
 
-    public String getImageRepositoryUrl() {
+    public String imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
 
@@ -37,7 +37,7 @@ public final class ImageRepositoryCredentialResponse extends io.pulumi.resources
     @Import(name="password")
       private final @Nullable AsymmetricEncryptedSecretResponse password;
 
-    public Optional<AsymmetricEncryptedSecretResponse> getPassword() {
+    public Optional<AsymmetricEncryptedSecretResponse> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -48,7 +48,7 @@ public final class ImageRepositoryCredentialResponse extends io.pulumi.resources
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

@@ -26,7 +26,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="dnsServiceIP")
       private final @Nullable Output<String> dnsServiceIP;
 
-    public Output<String> getDnsServiceIP() {
+    public Output<String> dnsServiceIP() {
         return this.dnsServiceIP == null ? Codegen.empty() : this.dnsServiceIP;
     }
 
@@ -37,7 +37,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="dockerBridgeCidr")
       private final @Nullable Output<String> dockerBridgeCidr;
 
-    public Output<String> getDockerBridgeCidr() {
+    public Output<String> dockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Codegen.empty() : this.dockerBridgeCidr;
     }
 
@@ -48,7 +48,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
-    public Output<String> getServiceCidr() {
+    public Output<String> serviceCidr() {
         return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
     }
 
@@ -59,7 +59,7 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

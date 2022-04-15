@@ -29,7 +29,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityReservationLevel")
       private final @Nullable Output<Integer> capacityReservationLevel;
 
-    public Output<Integer> getCapacityReservationLevel() {
+    public Output<Integer> capacityReservationLevel() {
         return this.capacityReservationLevel == null ? Codegen.empty() : this.capacityReservationLevel;
     }
 
@@ -40,7 +40,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,WorkspaceSkuNameEnum>> name;
 
-    public Output<Either<String,WorkspaceSkuNameEnum>> getName() {
+    public Output<Either<String,WorkspaceSkuNameEnum>> name() {
         return this.name;
     }
 

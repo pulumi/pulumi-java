@@ -24,7 +24,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
     @Import(name="databases", required=true)
       private final Map<String,String> databases;
 
-    public Map<String,String> getDatabases() {
+    public Map<String,String> databases() {
         return this.databases;
     }
 
@@ -35,7 +35,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -57,7 +57,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

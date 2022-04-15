@@ -25,7 +25,7 @@ public final class DeliveryRuleRemoteAddressConditionResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleRemoteAddressConditionResponse extends io.pulumi.
     @Import(name="parameters", required=true)
       private final RemoteAddressMatchConditionParametersResponse parameters;
 
-    public RemoteAddressMatchConditionParametersResponse getParameters() {
+    public RemoteAddressMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

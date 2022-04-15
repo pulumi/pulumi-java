@@ -31,7 +31,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<Object>> actions;
 
-    public Output<List<Object>> getActions() {
+    public Output<List<Object>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -42,7 +42,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationName")
       private final @Nullable Output<String> automationName;
 
-    public Output<String> getAutomationName() {
+    public Output<String> automationName() {
         return this.automationName == null ? Codegen.empty() : this.automationName;
     }
 
@@ -53,7 +53,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -75,7 +75,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -86,7 +86,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -97,7 +97,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,7 +108,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<AutomationScopeArgs>> scopes;
 
-    public Output<List<AutomationScopeArgs>> getScopes() {
+    public Output<List<AutomationScopeArgs>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
@@ -119,7 +119,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sources")
       private final @Nullable Output<List<AutomationSourceArgs>> sources;
 
-    public Output<List<AutomationSourceArgs>> getSources() {
+    public Output<List<AutomationSourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
@@ -130,7 +130,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

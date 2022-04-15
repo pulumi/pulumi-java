@@ -64,42 +64,42 @@ public final class GetJobCollectionResult {
      * Gets the job collection resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the storage account location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets the job collection resource name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the job collection properties.
      * 
     */
-    public JobCollectionPropertiesResponse getProperties() {
+    public JobCollectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the job collection resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

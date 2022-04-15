@@ -42,21 +42,21 @@ public final class InboundNatRuleResponse {
      * The port to which the external traffic will be redirected.
      * 
     */
-    public Optional<Integer> getBackendPort() {
+    public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
      * The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
      * 
     */
-    public Optional<Integer> getFrontendPort() {
+    public Optional<Integer> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
     /**
      * The transport protocol for the endpoint.
      * 
     */
-    public Optional<String> getTransportProtocol() {
+    public Optional<String> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
 

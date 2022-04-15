@@ -22,7 +22,7 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -159,126 +159,126 @@ public final class IotHubPropertiesResponse {
      * The shared access policies you can use to secure a connection to the IoT hub.
      * 
     */
-    public List<SharedAccessSignatureAuthorizationRuleResponse> getAuthorizationPolicies() {
+    public List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
     /**
      * The IoT hub cloud-to-device messaging properties.
      * 
     */
-    public Optional<CloudToDevicePropertiesResponse> getCloudToDevice() {
+    public Optional<CloudToDevicePropertiesResponse> cloudToDevice() {
         return Optional.ofNullable(this.cloudToDevice);
     }
     /**
      * IoT hub comments.
      * 
     */
-    public Optional<String> getComments() {
+    public Optional<String> comments() {
         return Optional.ofNullable(this.comments);
     }
     /**
      * If True, file upload notifications are enabled.
      * 
     */
-    public Optional<Boolean> getEnableFileUploadNotifications() {
+    public Optional<Boolean> enableFileUploadNotifications() {
         return Optional.ofNullable(this.enableFileUploadNotifications);
     }
     /**
      * The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
      * 
     */
-    public Map<String,EventHubPropertiesResponse> getEventHubEndpoints() {
+    public Map<String,EventHubPropertiesResponse> eventHubEndpoints() {
         return this.eventHubEndpoints == null ? Map.of() : this.eventHubEndpoints;
     }
     /**
      * The capabilities and features enabled for the IoT hub.
      * 
     */
-    public Optional<String> getFeatures() {
+    public Optional<String> features() {
         return Optional.ofNullable(this.features);
     }
     /**
      * The name of the host.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * The IP filter rules.
      * 
     */
-    public List<IpFilterRuleResponse> getIpFilterRules() {
+    public List<IpFilterRuleResponse> ipFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
     /**
      * Primary and secondary location for iot hub
      * 
     */
-    public List<IotHubLocationDescriptionResponse> getLocations() {
+    public List<IotHubLocationDescriptionResponse> locations() {
         return this.locations;
     }
     /**
      * The messaging endpoint properties for the file upload notification queue.
      * 
     */
-    public Map<String,MessagingEndpointPropertiesResponse> getMessagingEndpoints() {
+    public Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints() {
         return this.messagingEndpoints == null ? Map.of() : this.messagingEndpoints;
     }
     /**
      * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
      * 
     */
-    public Optional<String> getMinTlsVersion() {
+    public Optional<String> minTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
     /**
      * Network Rule Set Properties of IotHub
      * 
     */
-    public Optional<NetworkRuleSetPropertiesResponse> getNetworkRuleSets() {
+    public Optional<NetworkRuleSetPropertiesResponse> networkRuleSets() {
         return Optional.ofNullable(this.networkRuleSets);
     }
     /**
      * Private endpoint connections created on this IotHub
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether requests from Public Network are allowed
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
      * 
     */
-    public Optional<RoutingPropertiesResponse> getRouting() {
+    public Optional<RoutingPropertiesResponse> routing() {
         return Optional.ofNullable(this.routing);
     }
     /**
      * The hub state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
      * 
     */
-    public Map<String,StorageEndpointPropertiesResponse> getStorageEndpoints() {
+    public Map<String,StorageEndpointPropertiesResponse> storageEndpoints() {
         return this.storageEndpoints == null ? Map.of() : this.storageEndpoints;
     }
 

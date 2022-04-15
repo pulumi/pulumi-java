@@ -45,7 +45,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Entity Tag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Required. Gets or sets the Kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +73,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return The set of properties specific to an Enterprise Channel resource.
      * 
      */
-    public Output<EnterpriseChannelPropertiesResponse> getProperties() {
+    public Output<EnterpriseChannelPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -115,7 +115,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -129,7 +129,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

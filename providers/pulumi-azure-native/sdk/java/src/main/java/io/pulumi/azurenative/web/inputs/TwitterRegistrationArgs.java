@@ -28,7 +28,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="consumerKey")
       private final @Nullable Output<String> consumerKey;
 
-    public Output<String> getConsumerKey() {
+    public Output<String> consumerKey() {
         return this.consumerKey == null ? Codegen.empty() : this.consumerKey;
     }
 
@@ -40,7 +40,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="consumerSecretSettingName")
       private final @Nullable Output<String> consumerSecretSettingName;
 
-    public Output<String> getConsumerSecretSettingName() {
+    public Output<String> consumerSecretSettingName() {
         return this.consumerSecretSettingName == null ? Codegen.empty() : this.consumerSecretSettingName;
     }
 

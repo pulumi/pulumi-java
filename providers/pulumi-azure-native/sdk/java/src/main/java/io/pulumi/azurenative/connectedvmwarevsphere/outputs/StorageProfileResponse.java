@@ -35,14 +35,14 @@ public final class StorageProfileResponse {
      * Gets or sets the list of virtual disks associated with the virtual machine.
      * 
     */
-    public List<VirtualDiskResponse> getDisks() {
+    public List<VirtualDiskResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
      * 
     */
-    public List<VirtualSCSIControllerResponse> getScsiControllers() {
+    public List<VirtualSCSIControllerResponse> scsiControllers() {
         return this.scsiControllers;
     }
 

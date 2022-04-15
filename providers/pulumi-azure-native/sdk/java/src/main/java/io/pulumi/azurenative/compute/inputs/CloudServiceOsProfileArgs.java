@@ -27,7 +27,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
     @Import(name="secrets")
       private final @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
-    public Output<List<CloudServiceVaultSecretGroupArgs>> getSecrets() {
+    public Output<List<CloudServiceVaultSecretGroupArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 

@@ -25,7 +25,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="source")
       private final @Nullable String source;
 
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -36,7 +36,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -47,7 +47,7 @@ public final class JobStepActionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

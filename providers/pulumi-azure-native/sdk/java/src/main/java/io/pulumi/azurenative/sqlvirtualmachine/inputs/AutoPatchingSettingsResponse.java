@@ -27,7 +27,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="dayOfWeek")
       private final @Nullable String dayOfWeek;
 
-    public Optional<String> getDayOfWeek() {
+    public Optional<String> dayOfWeek() {
         return this.dayOfWeek == null ? Optional.empty() : Optional.ofNullable(this.dayOfWeek);
     }
 
@@ -38,7 +38,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="enable")
       private final @Nullable Boolean enable;
 
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
     }
 
@@ -49,7 +49,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="maintenanceWindowDuration")
       private final @Nullable Integer maintenanceWindowDuration;
 
-    public Optional<Integer> getMaintenanceWindowDuration() {
+    public Optional<Integer> maintenanceWindowDuration() {
         return this.maintenanceWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowDuration);
     }
 
@@ -60,7 +60,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
     @Import(name="maintenanceWindowStartingHour")
       private final @Nullable Integer maintenanceWindowStartingHour;
 
-    public Optional<Integer> getMaintenanceWindowStartingHour() {
+    public Optional<Integer> maintenanceWindowStartingHour() {
         return this.maintenanceWindowStartingHour == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
 

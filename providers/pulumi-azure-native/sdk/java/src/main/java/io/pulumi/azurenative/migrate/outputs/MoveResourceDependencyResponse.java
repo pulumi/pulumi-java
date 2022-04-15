@@ -71,49 +71,49 @@ public final class MoveResourceDependencyResponse {
      * Defines the properties for automatic resolution.
      * 
     */
-    public Optional<AutomaticResolutionPropertiesResponse> getAutomaticResolution() {
+    public Optional<AutomaticResolutionPropertiesResponse> automaticResolution() {
         return Optional.ofNullable(this.automaticResolution);
     }
     /**
      * Defines the dependency type.
      * 
     */
-    public Optional<String> getDependencyType() {
+    public Optional<String> dependencyType() {
         return Optional.ofNullable(this.dependencyType);
     }
     /**
      * Gets the source ARM ID of the dependent resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets or sets a value indicating whether the dependency is optional.
      * 
     */
-    public Optional<String> getIsOptional() {
+    public Optional<String> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
     /**
      * Defines the properties for manual resolution.
      * 
     */
-    public Optional<ManualResolutionPropertiesResponse> getManualResolution() {
+    public Optional<ManualResolutionPropertiesResponse> manualResolution() {
         return Optional.ofNullable(this.manualResolution);
     }
     /**
      * Gets the dependency resolution status.
      * 
     */
-    public Optional<String> getResolutionStatus() {
+    public Optional<String> resolutionStatus() {
         return Optional.ofNullable(this.resolutionStatus);
     }
     /**
      * Defines the resolution type.
      * 
     */
-    public Optional<String> getResolutionType() {
+    public Optional<String> resolutionType() {
         return Optional.ofNullable(this.resolutionType);
     }
 

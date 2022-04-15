@@ -19,7 +19,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="applicationName", required=true)
       private final String applicationName;
 
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

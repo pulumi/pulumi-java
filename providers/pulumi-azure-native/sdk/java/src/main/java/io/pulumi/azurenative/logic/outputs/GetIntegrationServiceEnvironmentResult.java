@@ -80,56 +80,56 @@ public final class GetIntegrationServiceEnvironmentResult {
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Managed service identity properties.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The integration service environment properties.
      * 
     */
-    public IntegrationServiceEnvironmentPropertiesResponse getProperties() {
+    public IntegrationServiceEnvironmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The sku.
      * 
     */
-    public Optional<IntegrationServiceEnvironmentSkuResponse> getSku() {
+    public Optional<IntegrationServiceEnvironmentSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

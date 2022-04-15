@@ -28,7 +28,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="and")
       private final @Nullable Output<List<BudgetFilterPropertiesArgs>> and;
 
-    public Output<List<BudgetFilterPropertiesArgs>> getAnd() {
+    public Output<List<BudgetFilterPropertiesArgs>> and() {
         return this.and == null ? Codegen.empty() : this.and;
     }
 
@@ -39,7 +39,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
-    public Output<BudgetComparisonExpressionArgs> getDimensions() {
+    public Output<BudgetComparisonExpressionArgs> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -50,7 +50,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="not")
       private final @Nullable Output<BudgetFilterPropertiesArgs> not;
 
-    public Output<BudgetFilterPropertiesArgs> getNot() {
+    public Output<BudgetFilterPropertiesArgs> not() {
         return this.not == null ? Codegen.empty() : this.not;
     }
 
@@ -61,7 +61,7 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
-    public Output<BudgetComparisonExpressionArgs> getTags() {
+    public Output<BudgetComparisonExpressionArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

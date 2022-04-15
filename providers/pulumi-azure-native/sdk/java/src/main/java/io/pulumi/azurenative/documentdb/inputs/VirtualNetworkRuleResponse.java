@@ -26,7 +26,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="ignoreMissingVNetServiceEndpoint")
       private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
-    public Optional<Boolean> getIgnoreMissingVNetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVNetServiceEndpoint() {
         return this.ignoreMissingVNetServiceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
 

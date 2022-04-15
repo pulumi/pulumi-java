@@ -30,7 +30,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<Either<String,DataType>> dataType;
 
-    public Output<Either<String,DataType>> getDataType() {
+    public Output<Either<String,DataType>> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -41,7 +41,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,IndexKind>> kind;
 
-    public Output<Either<String,IndexKind>> getKind() {
+    public Output<Either<String,IndexKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -52,7 +52,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="precision")
       private final @Nullable Output<Integer> precision;
 
-    public Output<Integer> getPrecision() {
+    public Output<Integer> precision() {
         return this.precision == null ? Codegen.empty() : this.precision;
     }
 

@@ -71,49 +71,49 @@ public final class GetPropertyResult {
      * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
     */
-    public Optional<Boolean> getSecret() {
+    public Optional<Boolean> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Optional tags that when provided can be used to filter the property list.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

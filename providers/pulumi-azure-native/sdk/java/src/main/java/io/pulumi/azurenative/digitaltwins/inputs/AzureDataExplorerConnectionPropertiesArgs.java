@@ -26,7 +26,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="adxDatabaseName", required=true)
       private final Output<String> adxDatabaseName;
 
-    public Output<String> getAdxDatabaseName() {
+    public Output<String> adxDatabaseName() {
         return this.adxDatabaseName;
     }
 
@@ -37,7 +37,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="adxEndpointUri", required=true)
       private final Output<String> adxEndpointUri;
 
-    public Output<String> getAdxEndpointUri() {
+    public Output<String> adxEndpointUri() {
         return this.adxEndpointUri;
     }
 
@@ -48,7 +48,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="adxResourceId", required=true)
       private final Output<String> adxResourceId;
 
-    public Output<String> getAdxResourceId() {
+    public Output<String> adxResourceId() {
         return this.adxResourceId;
     }
 
@@ -59,7 +59,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="adxTableName")
       private final @Nullable Output<String> adxTableName;
 
-    public Output<String> getAdxTableName() {
+    public Output<String> adxTableName() {
         return this.adxTableName == null ? Codegen.empty() : this.adxTableName;
     }
 
@@ -71,7 +71,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="connectionType", required=true)
       private final Output<String> connectionType;
 
-    public Output<String> getConnectionType() {
+    public Output<String> connectionType() {
         return this.connectionType;
     }
 
@@ -82,7 +82,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubConsumerGroup")
       private final @Nullable Output<String> eventHubConsumerGroup;
 
-    public Output<String> getEventHubConsumerGroup() {
+    public Output<String> eventHubConsumerGroup() {
         return this.eventHubConsumerGroup == null ? Codegen.empty() : this.eventHubConsumerGroup;
     }
 
@@ -93,7 +93,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubEndpointUri", required=true)
       private final Output<String> eventHubEndpointUri;
 
-    public Output<String> getEventHubEndpointUri() {
+    public Output<String> eventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
 
@@ -104,7 +104,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubEntityPath", required=true)
       private final Output<String> eventHubEntityPath;
 
-    public Output<String> getEventHubEntityPath() {
+    public Output<String> eventHubEntityPath() {
         return this.eventHubEntityPath;
     }
 
@@ -115,7 +115,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     @Import(name="eventHubNamespaceResourceId", required=true)
       private final Output<String> eventHubNamespaceResourceId;
 
-    public Output<String> getEventHubNamespaceResourceId() {
+    public Output<String> eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
 

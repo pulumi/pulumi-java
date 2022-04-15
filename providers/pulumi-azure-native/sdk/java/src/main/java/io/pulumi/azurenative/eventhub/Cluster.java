@@ -44,7 +44,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The UTC time when the Event Hubs Cluster was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -58,7 +58,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
      * 
      */
-    public Output<String> getMetricId() {
+    public Output<String> metricId() {
         return this.metricId;
     }
     /**
@@ -86,7 +86,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Properties of the cluster SKU.
      * 
      */
-    public Output</* @Nullable */ ClusterSkuResponse> getSku() {
+    public Output</* @Nullable */ ClusterSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -114,7 +114,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Status of the Cluster resource
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -128,7 +128,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -156,7 +156,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The UTC time when the Event Hubs Cluster was last updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

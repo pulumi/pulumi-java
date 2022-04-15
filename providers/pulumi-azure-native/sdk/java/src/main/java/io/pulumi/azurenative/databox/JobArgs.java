@@ -33,7 +33,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo")
       private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
-    public Output<JobDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<JobDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo == null ? Codegen.empty() : this.deliveryInfo;
     }
 
@@ -44,7 +44,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryType")
       private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
-    public Output<Either<String,JobDeliveryType>> getDeliveryType() {
+    public Output<Either<String,JobDeliveryType>> deliveryType() {
         return this.deliveryType == null ? Codegen.empty() : this.deliveryType;
     }
 
@@ -55,7 +55,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="details")
       private final @Nullable Output<Object> details;
 
-    public Output<Object> getDetails() {
+    public Output<Object> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -66,7 +66,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
+    public Output<ResourceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -77,7 +77,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
@@ -88,7 +88,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -99,7 +99,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -121,7 +121,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -132,7 +132,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferType", required=true)
       private final Output<Either<String,TransferType>> transferType;
 
-    public Output<Either<String,TransferType>> getTransferType() {
+    public Output<Either<String,TransferType>> transferType() {
         return this.transferType;
     }
 

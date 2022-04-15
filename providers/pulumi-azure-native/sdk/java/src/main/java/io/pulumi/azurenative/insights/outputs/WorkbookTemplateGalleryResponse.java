@@ -56,35 +56,35 @@ public final class WorkbookTemplateGalleryResponse {
      * Category for the gallery.
      * 
     */
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
      * Name of the workbook template in the gallery.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Order of the template within the gallery.
      * 
     */
-    public Optional<Integer> getOrder() {
+    public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
      * Azure resource type supported by the gallery.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * Type of workbook supported by the workbook template.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

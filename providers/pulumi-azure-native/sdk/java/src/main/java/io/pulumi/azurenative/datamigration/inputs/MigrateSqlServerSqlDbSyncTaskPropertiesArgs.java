@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
     @Import(name="input")
       private final @Nullable Output<MigrateSqlServerSqlDbSyncTaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlDbSyncTaskInputArgs> getInput() {
+    public Output<MigrateSqlServerSqlDbSyncTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends io.pulumi
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

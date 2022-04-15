@@ -93,70 +93,70 @@ public final class GetprivateLinkForAzureAdResult {
      * Flag indicating whether all tenants are allowed
      * 
     */
-    public Optional<Boolean> getAllTenants() {
+    public Optional<Boolean> allTenants() {
         return Optional.ofNullable(this.allTenants);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of this resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Guid of the owner tenant
      * 
     */
-    public Optional<String> getOwnerTenantId() {
+    public Optional<String> ownerTenantId() {
         return Optional.ofNullable(this.ownerTenantId);
     }
     /**
      * Name of the resource group
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Name of the private link policy resource
      * 
     */
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * Subscription Identifier
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The list of tenantIds.
      * 
     */
-    public List<String> getTenants() {
+    public List<String> tenants() {
         return this.tenants == null ? List.of() : this.tenants;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -101,21 +101,21 @@ public final class GetReadWriteDatabaseResult {
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
     */
-    public Optional<String> getHotCachePeriod() {
+    public Optional<String> hotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Indicates whether the database is followed.
      * 
     */
-    public Boolean getIsFollowed() {
+    public Boolean isFollowed() {
         return this.isFollowed;
     }
     /**
@@ -123,56 +123,56 @@ public final class GetReadWriteDatabaseResult {
      * Expected value is 'ReadWrite'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
     */
-    public Optional<String> getSoftDeletePeriod() {
+    public Optional<String> softDeletePeriod() {
         return Optional.ofNullable(this.softDeletePeriod);
     }
     /**
      * The statistics of the database.
      * 
     */
-    public DatabaseStatisticsResponse getStatistics() {
+    public DatabaseStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

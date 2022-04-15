@@ -25,7 +25,7 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contentVersion")
       private final @Nullable String contentVersion;
 
-    public Optional<String> getContentVersion() {
+    public Optional<String> contentVersion() {
         return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
     }
 
@@ -36,7 +36,7 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -47,7 +47,7 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queryString")
       private final @Nullable String queryString;
 
-    public Optional<String> getQueryString() {
+    public Optional<String> queryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
@@ -58,7 +58,7 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="relativePath")
       private final @Nullable String relativePath;
 
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
     }
 
@@ -69,7 +69,7 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

@@ -20,21 +20,21 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
     @Import(name="metrics", required=true)
       private final Output<List<ThrottlingMetricArgs>> metrics;
 
-    public Output<List<ThrottlingMetricArgs>> getMetrics() {
+    public Output<List<ThrottlingMetricArgs>> metrics() {
         return this.metrics;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 

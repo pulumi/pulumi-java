@@ -65,35 +65,35 @@ public final class TaskRunRequestResponse {
      * The dedicated agent pool for the run.
      * 
     */
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
      * The value that indicates whether archiving is enabled for the run or not.
      * 
     */
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
      * 
     */
-    public Optional<String> getLogTemplate() {
+    public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
      * Set of overridable parameters that can be passed when running a Task.
      * 
     */
-    public Optional<OverrideTaskStepPropertiesResponse> getOverrideTaskStepProperties() {
+    public Optional<OverrideTaskStepPropertiesResponse> overrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
     /**
      * The resource ID of task against which run has to be queued.
      * 
     */
-    public String getTaskId() {
+    public String taskId() {
         return this.taskId;
     }
     /**
@@ -101,7 +101,7 @@ public final class TaskRunRequestResponse {
      * Expected value is 'TaskRunRequest'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -42,7 +42,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
      */
-    public Output</* @Nullable */ String> getEndIpAddress() {
+    public Output</* @Nullable */ String> endIpAddress() {
         return this.endIpAddress;
     }
     /**
@@ -56,7 +56,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return Resource provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -84,7 +84,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv4 format
      * 
      */
-    public Output</* @Nullable */ String> getStartIpAddress() {
+    public Output</* @Nullable */ String> startIpAddress() {
         return this.startIpAddress;
     }
     /**
@@ -98,7 +98,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

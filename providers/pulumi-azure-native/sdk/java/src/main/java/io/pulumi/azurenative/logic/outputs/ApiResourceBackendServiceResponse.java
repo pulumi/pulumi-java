@@ -26,7 +26,7 @@ public final class ApiResourceBackendServiceResponse {
      * The service URL.
      * 
     */
-    public Optional<String> getServiceUrl() {
+    public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
 

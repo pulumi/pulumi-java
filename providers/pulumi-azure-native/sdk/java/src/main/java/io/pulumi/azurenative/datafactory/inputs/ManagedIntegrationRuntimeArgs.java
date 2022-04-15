@@ -30,7 +30,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
-    public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
+    public Output<IntegrationRuntimeComputePropertiesArgs> computeProperties() {
         return this.computeProperties == null ? Codegen.empty() : this.computeProperties;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="customerVirtualNetwork")
       private final @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
 
-    public Output<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
+    public Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork() {
         return this.customerVirtualNetwork == null ? Codegen.empty() : this.customerVirtualNetwork;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="managedVirtualNetwork")
       private final @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
 
-    public Output<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
+    public Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork() {
         return this.managedVirtualNetwork == null ? Codegen.empty() : this.managedVirtualNetwork;
     }
 
@@ -74,7 +74,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
-    public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
+    public Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties() {
         return this.ssisProperties == null ? Codegen.empty() : this.ssisProperties;
     }
 
@@ -86,7 +86,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

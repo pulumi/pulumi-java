@@ -21,7 +21,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataControllerName")
       private final @Nullable Output<String> dataControllerName;
 
-    public Output<String> getDataControllerName() {
+    public Output<String> dataControllerName() {
         return this.dataControllerName == null ? Codegen.empty() : this.dataControllerName;
     }
 
@@ -32,7 +32,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -43,7 +43,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -54,7 +54,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<DataControllerPropertiesArgs> properties;
 
-    public Output<DataControllerPropertiesArgs> getProperties() {
+    public Output<DataControllerPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -65,7 +65,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +76,7 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

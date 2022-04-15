@@ -28,7 +28,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="migrationPath")
       private final @Nullable Output<String> migrationPath;
 
-    public Output<String> getMigrationPath() {
+    public Output<String> migrationPath() {
         return this.migrationPath == null ? Codegen.empty() : this.migrationPath;
     }
 
@@ -39,7 +39,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="operation")
       private final @Nullable Output<Either<String,Operation>> operation;
 
-    public Output<Either<String,Operation>> getOperation() {
+    public Output<Either<String,Operation>> operation() {
         return this.operation == null ? Codegen.empty() : this.operation;
     }
 

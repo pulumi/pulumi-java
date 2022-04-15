@@ -25,7 +25,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -36,7 +36,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 

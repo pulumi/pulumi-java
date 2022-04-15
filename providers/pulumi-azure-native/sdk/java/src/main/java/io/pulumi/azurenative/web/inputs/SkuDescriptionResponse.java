@@ -29,7 +29,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="capabilities")
       private final @Nullable List<CapabilityResponse> capabilities;
 
-    public List<CapabilityResponse> getCapabilities() {
+    public List<CapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
@@ -40,7 +40,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -51,7 +51,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
@@ -62,7 +62,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
@@ -73,7 +73,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -84,7 +84,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -95,7 +95,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="skuCapacity")
       private final @Nullable SkuCapacityResponse skuCapacity;
 
-    public Optional<SkuCapacityResponse> getSkuCapacity() {
+    public Optional<SkuCapacityResponse> skuCapacity() {
         return this.skuCapacity == null ? Optional.empty() : Optional.ofNullable(this.skuCapacity);
     }
 
@@ -106,7 +106,7 @@ public final class SkuDescriptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

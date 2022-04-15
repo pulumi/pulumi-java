@@ -78,49 +78,49 @@ public final class JsonFormatResponse {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getDeserializer() {
+    public Optional<Object> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
      * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncodingName() {
+    public Optional<Object> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
     /**
      * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
      * 
     */
-    public Optional<Object> getFilePattern() {
+    public Optional<Object> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
     /**
      * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getJsonNodeReference() {
+    public Optional<Object> jsonNodeReference() {
         return Optional.ofNullable(this.jsonNodeReference);
     }
     /**
      * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
      * 
     */
-    public Optional<Object> getJsonPathDefinition() {
+    public Optional<Object> jsonPathDefinition() {
         return Optional.ofNullable(this.jsonPathDefinition);
     }
     /**
      * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getNestingSeparator() {
+    public Optional<Object> nestingSeparator() {
         return Optional.ofNullable(this.nestingSeparator);
     }
     /**
      * Serializer. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSerializer() {
+    public Optional<Object> serializer() {
         return Optional.ofNullable(this.serializer);
     }
     /**
@@ -128,7 +128,7 @@ public final class JsonFormatResponse {
      * Expected value is 'JsonFormat'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

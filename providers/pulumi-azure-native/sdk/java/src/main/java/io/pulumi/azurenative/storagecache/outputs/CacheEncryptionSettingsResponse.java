@@ -26,7 +26,7 @@ public final class CacheEncryptionSettingsResponse {
      * Specifies the location of the key encryption key in Key Vault.
      * 
     */
-    public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
+    public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
 

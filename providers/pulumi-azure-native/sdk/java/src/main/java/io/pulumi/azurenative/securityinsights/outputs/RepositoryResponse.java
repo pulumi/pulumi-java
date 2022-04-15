@@ -57,35 +57,35 @@ public final class RepositoryResponse {
      * Branch name of repository.
      * 
     */
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * Url to access repository action logs.
      * 
     */
-    public Optional<String> getDeploymentLogsUrl() {
+    public Optional<String> deploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
     /**
      * Display url of repository.
      * 
     */
-    public Optional<String> getDisplayUrl() {
+    public Optional<String> displayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
     /**
      * Dictionary of source control content type and path mapping.
      * 
     */
-    public List<ContentPathMapResponse> getPathMapping() {
+    public List<ContentPathMapResponse> pathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
     }
     /**
      * Url of repository.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

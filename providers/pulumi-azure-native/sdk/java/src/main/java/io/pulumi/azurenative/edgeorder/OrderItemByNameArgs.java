@@ -25,7 +25,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="addressDetails", required=true)
       private final Output<AddressDetailsArgs> addressDetails;
 
-    public Output<AddressDetailsArgs> getAddressDetails() {
+    public Output<AddressDetailsArgs> addressDetails() {
         return this.addressDetails;
     }
 
@@ -36,7 +36,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="orderId", required=true)
       private final Output<String> orderId;
 
-    public Output<String> getOrderId() {
+    public Output<String> orderId() {
         return this.orderId;
     }
 
@@ -58,7 +58,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="orderItemDetails", required=true)
       private final Output<OrderItemDetailsArgs> orderItemDetails;
 
-    public Output<OrderItemDetailsArgs> getOrderItemDetails() {
+    public Output<OrderItemDetailsArgs> orderItemDetails() {
         return this.orderItemDetails;
     }
 
@@ -69,7 +69,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="orderItemName")
       private final @Nullable Output<String> orderItemName;
 
-    public Output<String> getOrderItemName() {
+    public Output<String> orderItemName() {
         return this.orderItemName == null ? Codegen.empty() : this.orderItemName;
     }
 
@@ -80,7 +80,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

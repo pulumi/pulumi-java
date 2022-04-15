@@ -32,14 +32,14 @@ public final class ListAdminKeyResult {
      * The primary admin API key of the search service.
      * 
     */
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
     /**
      * The secondary admin API key of the search service.
      * 
     */
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

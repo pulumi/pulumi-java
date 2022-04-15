@@ -50,7 +50,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Cross-Origin Resource Sharing (CORS) settings.
      * 
      */
-    public Output</* @Nullable */ SignalRCorsSettingsResponse> getCors() {
+    public Output</* @Nullable */ SignalRCorsSettingsResponse> cors() {
         return this.cors;
     }
     /**
@@ -64,7 +64,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The publicly accessible IP of the SignalR service.
      * 
      */
-    public Output<String> getExternalIP() {
+    public Output<String> externalIP() {
         return this.externalIP;
     }
     /**
@@ -88,7 +88,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    public Output</* @Nullable */ List<SignalRFeatureResponse>> getFeatures() {
+    public Output</* @Nullable */ List<SignalRFeatureResponse>> features() {
         return this.features;
     }
     /**
@@ -102,7 +102,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return FQDN of the SignalR service instance. Format: xxx.service.signalr.net
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -118,7 +118,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
      * 
      */
-    public Output<String> getHostNamePrefix() {
+    public Output<String> hostNamePrefix() {
         return this.hostNamePrefix;
     }
     /**
@@ -132,7 +132,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -146,7 +146,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -160,7 +160,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -174,7 +174,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Network ACLs
      * 
      */
-    public Output</* @Nullable */ SignalRNetworkACLsResponse> getNetworkACLs() {
+    public Output</* @Nullable */ SignalRNetworkACLsResponse> networkACLs() {
         return this.networkACLs;
     }
     /**
@@ -188,7 +188,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Private endpoint connections to the SignalR resource.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -202,7 +202,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -216,7 +216,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The publicly accessible port of the SignalR service which is designed for browser/client side usage.
      * 
      */
-    public Output<Integer> getPublicPort() {
+    public Output<Integer> publicPort() {
         return this.publicPort;
     }
     /**
@@ -230,7 +230,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The publicly accessible port of the SignalR service which is designed for customer server side usage.
      * 
      */
-    public Output<Integer> getServerPort() {
+    public Output<Integer> serverPort() {
         return this.serverPort;
     }
     /**
@@ -244,7 +244,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> getSku() {
+    public Output</* @Nullable */ ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -258,7 +258,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -272,7 +272,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -286,7 +286,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Upstream settings when the Azure SignalR is in server-less mode.
      * 
      */
-    public Output</* @Nullable */ ServerlessUpstreamSettingsResponse> getUpstream() {
+    public Output</* @Nullable */ ServerlessUpstreamSettingsResponse> upstream() {
         return this.upstream;
     }
     /**
@@ -300,7 +300,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @return Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

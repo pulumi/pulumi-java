@@ -26,7 +26,7 @@ public final class MedianStoppingPolicyResponse extends io.pulumi.resources.Invo
     @Import(name="delayEvaluation")
       private final @Nullable Integer delayEvaluation;
 
-    public Optional<Integer> getDelayEvaluation() {
+    public Optional<Integer> delayEvaluation() {
         return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
     }
 
@@ -37,7 +37,7 @@ public final class MedianStoppingPolicyResponse extends io.pulumi.resources.Invo
     @Import(name="evaluationInterval")
       private final @Nullable Integer evaluationInterval;
 
-    public Optional<Integer> getEvaluationInterval() {
+    public Optional<Integer> evaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
     }
 
@@ -48,7 +48,7 @@ public final class MedianStoppingPolicyResponse extends io.pulumi.resources.Invo
     @Import(name="policyType", required=true)
       private final String policyType;
 
-    public String getPolicyType() {
+    public String policyType() {
         return this.policyType;
     }
 

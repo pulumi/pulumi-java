@@ -28,7 +28,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     @Import(name="definition", required=true)
       private final ExportDefinitionResponse definition;
 
-    public ExportDefinitionResponse getDefinition() {
+    public ExportDefinitionResponse definition() {
         return this.definition;
     }
 
@@ -39,7 +39,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     @Import(name="deliveryInfo", required=true)
       private final ExportDeliveryInfoResponse deliveryInfo;
 
-    public ExportDeliveryInfoResponse getDeliveryInfo() {
+    public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -50,7 +50,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -61,7 +61,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     @Import(name="nextRunTimeEstimate", required=true)
       private final String nextRunTimeEstimate;
 
-    public String getNextRunTimeEstimate() {
+    public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
 
@@ -72,7 +72,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     @Import(name="runHistory")
       private final @Nullable ExportExecutionListResultResponse runHistory;
 
-    public Optional<ExportExecutionListResultResponse> getRunHistory() {
+    public Optional<ExportExecutionListResultResponse> runHistory() {
         return this.runHistory == null ? Optional.empty() : Optional.ofNullable(this.runHistory);
     }
 

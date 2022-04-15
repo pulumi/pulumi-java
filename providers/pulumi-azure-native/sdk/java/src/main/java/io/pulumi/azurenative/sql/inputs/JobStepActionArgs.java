@@ -29,7 +29,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<Either<String,JobStepActionSource>> source;
 
-    public Output<Either<String,JobStepActionSource>> getSource() {
+    public Output<Either<String,JobStepActionSource>> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -40,7 +40,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,JobStepActionType>> type;
 
-    public Output<Either<String,JobStepActionType>> getType() {
+    public Output<Either<String,JobStepActionType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -51,7 +51,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

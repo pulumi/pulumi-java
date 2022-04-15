@@ -48,28 +48,28 @@ public final class LinkedServicePropsResponse {
      * The creation time of the linked service.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Type of the link target.
      * 
     */
-    public Optional<String> getLinkType() {
+    public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
      * ResourceId of the link target of the linked service.
      * 
     */
-    public String getLinkedServiceResourceId() {
+    public String linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
     /**
      * The last modified time of the linked service.
      * 
     */
-    public Optional<String> getModifiedTime() {
+    public Optional<String> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
 

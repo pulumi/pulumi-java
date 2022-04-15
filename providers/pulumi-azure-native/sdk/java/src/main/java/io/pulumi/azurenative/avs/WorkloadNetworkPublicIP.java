@@ -43,7 +43,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return Display name of the Public IP Block.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -57,7 +57,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return Number of Public IPs requested.
      * 
      */
-    public Output</* @Nullable */ Double> getNumberOfPublicIPs() {
+    public Output</* @Nullable */ Double> numberOfPublicIPs() {
         return this.numberOfPublicIPs;
     }
     /**
@@ -85,7 +85,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +99,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return CIDR Block of the Public IP Block.
      * 
      */
-    public Output<String> getPublicIPBlock() {
+    public Output<String> publicIPBlock() {
         return this.publicIPBlock;
     }
     /**
@@ -113,7 +113,7 @@ public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

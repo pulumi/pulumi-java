@@ -46,7 +46,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Configuration used to bootstrap the Pipeline.
      * 
      */
-    public Output<BootstrapConfigurationResponse> getBootstrapConfiguration() {
+    public Output<BootstrapConfigurationResponse> bootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
     /**
@@ -60,7 +60,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the Pipeline
      * 
      */
-    public Output<Integer> getPipelineId() {
+    public Output<Integer> pipelineId() {
         return this.pipelineId;
     }
     /**
@@ -102,7 +102,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
      */
-    public Output<String> getPipelineType() {
+    public Output<String> pipelineType() {
         return this.pipelineType;
     }
     /**
@@ -116,7 +116,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The system metadata pertaining to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -130,7 +130,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -73,35 +73,35 @@ public final class EncodedTaskStepResponse {
      * List of base image dependencies for a step.
      * 
     */
-    public List<BaseImageDependencyResponse> getBaseImageDependencies() {
+    public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
     */
-    public Optional<String> getContextAccessToken() {
+    public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
     /**
      * The URL(absolute or relative) of the source context for the task step.
      * 
     */
-    public Optional<String> getContextPath() {
+    public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
      * Base64 encoded value of the template/definition file content.
      * 
     */
-    public String getEncodedTaskContent() {
+    public String encodedTaskContent() {
         return this.encodedTaskContent;
     }
     /**
      * Base64 encoded value of the parameters/values file content.
      * 
     */
-    public Optional<String> getEncodedValuesContent() {
+    public Optional<String> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
     /**
@@ -109,14 +109,14 @@ public final class EncodedTaskStepResponse {
      * Expected value is 'EncodedTask'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The collection of overridable values that can be passed when running a task.
      * 
     */
-    public List<SetValueResponse> getValues() {
+    public List<SetValueResponse> values() {
         return this.values == null ? List.of() : this.values;
     }
 

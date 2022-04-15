@@ -43,7 +43,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return Additional properties of scope, role definition and policy
      * 
      */
-    public Output<PolicyAssignmentPropertiesResponse> getPolicyAssignmentProperties() {
+    public Output<PolicyAssignmentPropertiesResponse> policyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
     /**
@@ -71,7 +71,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The policy id role management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyId() {
+    public Output</* @Nullable */ String> policyId() {
         return this.policyId;
     }
     /**
@@ -85,7 +85,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role definition of management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> getRoleDefinitionId() {
+    public Output</* @Nullable */ String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -99,7 +99,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy scope.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -113,7 +113,7 @@ public class RoleManagementPolicyAssignment extends io.pulumi.resources.CustomRe
      * @return The role management policy type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

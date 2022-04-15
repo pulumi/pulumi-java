@@ -46,14 +46,14 @@ public final class ManagementEventRuleConditionResponse {
      * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
      * 
     */
-    public Optional<ManagementEventAggregationConditionResponse> getAggregation() {
+    public Optional<ManagementEventAggregationConditionResponse> aggregation() {
         return Optional.ofNullable(this.aggregation);
     }
     /**
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
     */
-    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> getDataSource() {
+    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
@@ -61,7 +61,7 @@ public final class ManagementEventRuleConditionResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

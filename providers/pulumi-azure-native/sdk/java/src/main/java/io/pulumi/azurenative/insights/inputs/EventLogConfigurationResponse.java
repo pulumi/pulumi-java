@@ -17,14 +17,14 @@ public final class EventLogConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
     @Import(name="logName", required=true)
       private final String logName;
 
-    public String getLogName() {
+    public String logName() {
         return this.logName;
     }
 

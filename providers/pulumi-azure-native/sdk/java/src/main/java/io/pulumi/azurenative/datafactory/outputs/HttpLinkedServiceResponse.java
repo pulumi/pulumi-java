@@ -127,77 +127,77 @@ public final class HttpLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
     */
-    public Optional<Object> getAuthHeaders() {
+    public Optional<Object> authHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
     /**
      * The authentication type to be used to connect to the HTTP server.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getCertThumbprint() {
+    public Optional<Object> certThumbprint() {
         return Optional.ofNullable(this.certThumbprint);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEmbeddedCertData() {
+    public Optional<Object> embeddedCertData() {
         return Optional.ofNullable(this.embeddedCertData);
     }
     /**
      * If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableServerCertificateValidation() {
+    public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -205,21 +205,21 @@ public final class HttpLinkedServiceResponse {
      * Expected value is 'HttpServer'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
     /**
      * User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
 

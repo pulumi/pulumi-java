@@ -38,7 +38,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
-    public Output<String> getCodeId() {
+    public Output<String> codeId() {
         return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
@@ -49,7 +49,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command", required=true)
       private final Output<String> command;
 
-    public Output<String> getCommand() {
+    public Output<String> command() {
         return this.command;
     }
 
@@ -60,7 +60,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
 
-    public Output<ComputeConfigurationArgs> getCompute() {
+    public Output<ComputeConfigurationArgs> compute() {
         return this.compute;
     }
 
@@ -71,7 +71,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
 
-    public Output<Object> getDistribution() {
+    public Output<Object> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -93,7 +93,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -104,7 +104,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -115,7 +115,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
+    public Output<String> experimentName() {
         return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
@@ -127,7 +127,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
-    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
+    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -138,7 +138,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
-    public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
+    public Output<Map<String,InputDataBindingArgs>> inputDataBindings() {
         return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
     }
 
@@ -150,7 +150,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType;
     }
 
@@ -161,7 +161,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
-    public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
+    public Output<Map<String,OutputDataBindingArgs>> outputDataBindings() {
         return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
     }
 
@@ -173,7 +173,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -184,7 +184,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -195,7 +195,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -206,7 +206,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

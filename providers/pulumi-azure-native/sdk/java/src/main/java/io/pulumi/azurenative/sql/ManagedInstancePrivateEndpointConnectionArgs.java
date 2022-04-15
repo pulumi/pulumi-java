@@ -24,7 +24,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -35,14 +35,14 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="privateEndpoint")
       private final @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
-    public Output<ManagedInstancePrivateEndpointPropertyArgs> getPrivateEndpoint() {
+    public Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint() {
         return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
@@ -53,7 +53,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
-    public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
+    public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -64,7 +64,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

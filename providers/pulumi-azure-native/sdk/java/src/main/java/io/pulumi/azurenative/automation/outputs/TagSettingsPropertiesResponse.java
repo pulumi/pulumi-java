@@ -36,14 +36,14 @@ public final class TagSettingsPropertiesResponse {
      * Filter VMs by Any or All specified tags.
      * 
     */
-    public Optional<String> getFilterOperator() {
+    public Optional<String> filterOperator() {
         return Optional.ofNullable(this.filterOperator);
     }
     /**
      * Dictionary of tags with its list of values.
      * 
     */
-    public Map<String,List<String>> getTags() {
+    public Map<String,List<String>> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

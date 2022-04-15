@@ -28,7 +28,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
     @Import(name="properties", required=true)
       private final Output<Map<String,TableSpecificationArgs>> properties;
 
-    public Output<Map<String,TableSpecificationArgs>> getProperties() {
+    public Output<Map<String,TableSpecificationArgs>> properties() {
         return this.properties;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -61,7 +61,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

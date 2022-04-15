@@ -24,7 +24,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobState", required=true)
       private final String jobState;
 
-    public String getJobState() {
+    public String jobState() {
         return this.jobState;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="streamingUnits", required=true)
       private final Integer streamingUnits;
 
-    public Integer getStreamingUnits() {
+    public Integer streamingUnits() {
         return this.streamingUnits;
     }
 

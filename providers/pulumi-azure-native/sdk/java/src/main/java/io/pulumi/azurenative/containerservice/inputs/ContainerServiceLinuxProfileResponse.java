@@ -24,7 +24,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
     @Import(name="adminUsername", required=true)
       private final String adminUsername;
 
-    public String getAdminUsername() {
+    public String adminUsername() {
         return this.adminUsername;
     }
 
@@ -35,7 +35,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
     @Import(name="ssh", required=true)
       private final ContainerServiceSshConfigurationResponse ssh;
 
-    public ContainerServiceSshConfigurationResponse getSsh() {
+    public ContainerServiceSshConfigurationResponse ssh() {
         return this.ssh;
     }
 

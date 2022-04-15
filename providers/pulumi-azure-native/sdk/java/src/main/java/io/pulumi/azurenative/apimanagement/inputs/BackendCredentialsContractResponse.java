@@ -28,7 +28,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
     @Import(name="authorization")
       private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
 
-    public Optional<BackendAuthorizationHeaderCredentialsResponse> getAuthorization() {
+    public Optional<BackendAuthorizationHeaderCredentialsResponse> authorization() {
         return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
     }
 
@@ -39,7 +39,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
     @Import(name="certificate")
       private final @Nullable List<String> certificate;
 
-    public List<String> getCertificate() {
+    public List<String> certificate() {
         return this.certificate == null ? List.of() : this.certificate;
     }
 
@@ -50,7 +50,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
     @Import(name="certificateIds")
       private final @Nullable List<String> certificateIds;
 
-    public List<String> getCertificateIds() {
+    public List<String> certificateIds() {
         return this.certificateIds == null ? List.of() : this.certificateIds;
     }
 
@@ -61,7 +61,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
     @Import(name="header")
       private final @Nullable Map<String,List<String>> header;
 
-    public Map<String,List<String>> getHeader() {
+    public Map<String,List<String>> header() {
         return this.header == null ? Map.of() : this.header;
     }
 
@@ -72,7 +72,7 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
     @Import(name="query")
       private final @Nullable Map<String,List<String>> query;
 
-    public Map<String,List<String>> getQuery() {
+    public Map<String,List<String>> query() {
         return this.query == null ? Map.of() : this.query;
     }
 

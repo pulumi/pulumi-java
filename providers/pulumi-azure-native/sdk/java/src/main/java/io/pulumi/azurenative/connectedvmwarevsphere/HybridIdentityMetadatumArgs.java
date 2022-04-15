@@ -22,7 +22,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
-    public Output<String> getMetadataName() {
+    public Output<String> metadataName() {
         return this.metadataName == null ? Codegen.empty() : this.metadataName;
     }
 
@@ -33,7 +33,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -44,7 +44,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
-    public Output<String> getVirtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -66,7 +66,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
-    public Output<String> getVmId() {
+    public Output<String> vmId() {
         return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 

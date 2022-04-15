@@ -34,7 +34,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregation")
       private final @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
 
-    public Output<Map<String,ReportAggregationArgs>> getAggregation() {
+    public Output<Map<String,ReportAggregationArgs>> aggregation() {
         return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
@@ -45,7 +45,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<ReportDatasetConfigurationArgs> configuration;
 
-    public Output<ReportDatasetConfigurationArgs> getConfiguration() {
+    public Output<ReportDatasetConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -56,7 +56,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<ReportFilterArgs> filter;
 
-    public Output<ReportFilterArgs> getFilter() {
+    public Output<ReportFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -67,7 +67,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
-    public Output<Either<String,GranularityType>> getGranularity() {
+    public Output<Either<String,GranularityType>> granularity() {
         return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
@@ -78,7 +78,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grouping")
       private final @Nullable Output<List<ReportGroupingArgs>> grouping;
 
-    public Output<List<ReportGroupingArgs>> getGrouping() {
+    public Output<List<ReportGroupingArgs>> grouping() {
         return this.grouping == null ? Codegen.empty() : this.grouping;
     }
 

@@ -25,7 +25,7 @@ public final class UserAssignedPropertiesResponse extends io.pulumi.resources.In
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

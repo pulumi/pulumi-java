@@ -26,7 +26,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="activateDate", required=true)
       private final String activateDate;
 
-    public String getActivateDate() {
+    public String activateDate() {
         return this.activateDate;
     }
 
@@ -37,7 +37,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="certVersion")
       private final @Nullable String certVersion;
 
-    public Optional<String> getCertVersion() {
+    public Optional<String> certVersion() {
         return this.certVersion == null ? Optional.empty() : Optional.ofNullable(this.certVersion);
     }
 
@@ -48,7 +48,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="dnsNames", required=true)
       private final List<String> dnsNames;
 
-    public List<String> getDnsNames() {
+    public List<String> dnsNames() {
         return this.dnsNames;
     }
 
@@ -59,7 +59,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
 
@@ -70,7 +70,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="issuedDate", required=true)
       private final String issuedDate;
 
-    public String getIssuedDate() {
+    public String issuedDate() {
         return this.issuedDate;
     }
 
@@ -81,7 +81,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -92,7 +92,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="keyVaultCertName", required=true)
       private final String keyVaultCertName;
 
-    public String getKeyVaultCertName() {
+    public String keyVaultCertName() {
         return this.keyVaultCertName;
     }
 
@@ -103,7 +103,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="subjectName", required=true)
       private final String subjectName;
 
-    public String getSubjectName() {
+    public String subjectName() {
         return this.subjectName;
     }
 
@@ -114,7 +114,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 
@@ -125,7 +125,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="vaultUri", required=true)
       private final String vaultUri;
 
-    public String getVaultUri() {
+    public String vaultUri() {
         return this.vaultUri;
     }
 

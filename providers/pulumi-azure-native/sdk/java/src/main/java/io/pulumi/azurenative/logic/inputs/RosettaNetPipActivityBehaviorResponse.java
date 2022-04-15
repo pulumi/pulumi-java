@@ -25,7 +25,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -36,7 +36,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="isAuthorizationRequired", required=true)
       private final Boolean isAuthorizationRequired;
 
-    public Boolean getIsAuthorizationRequired() {
+    public Boolean isAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
 
@@ -47,7 +47,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="isSecuredTransportRequired", required=true)
       private final Boolean isSecuredTransportRequired;
 
-    public Boolean getIsSecuredTransportRequired() {
+    public Boolean isSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
 
@@ -58,7 +58,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="nonRepudiationOfOriginAndContent", required=true)
       private final Boolean nonRepudiationOfOriginAndContent;
 
-    public Boolean getNonRepudiationOfOriginAndContent() {
+    public Boolean nonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
 
@@ -69,7 +69,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="persistentConfidentialityScope", required=true)
       private final String persistentConfidentialityScope;
 
-    public String getPersistentConfidentialityScope() {
+    public String persistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
 
@@ -80,7 +80,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="responseType", required=true)
       private final String responseType;
 
-    public String getResponseType() {
+    public String responseType() {
         return this.responseType;
     }
 
@@ -91,7 +91,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="retryCount", required=true)
       private final Integer retryCount;
 
-    public Integer getRetryCount() {
+    public Integer retryCount() {
         return this.retryCount;
     }
 
@@ -102,7 +102,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     @Import(name="timeToPerformInSeconds", required=true)
       private final Integer timeToPerformInSeconds;
 
-    public Integer getTimeToPerformInSeconds() {
+    public Integer timeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
 

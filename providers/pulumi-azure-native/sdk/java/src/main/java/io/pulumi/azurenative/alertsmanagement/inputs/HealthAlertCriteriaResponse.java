@@ -26,7 +26,7 @@ public final class HealthAlertCriteriaResponse extends io.pulumi.resources.Invok
     @Import(name="allOf")
       private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
-    public List<VmGuestHealthAlertCriterionResponse> getAllOf() {
+    public List<VmGuestHealthAlertCriterionResponse> allOf() {
         return this.allOf == null ? List.of() : this.allOf;
     }
 

@@ -99,77 +99,77 @@ public final class ExpressRouteCircuitConnectionResponse {
      * /29 IP address space to carve out Customer addresses for tunnels.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * The authorization key.
      * 
     */
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * Express Route Circuit connection state.
      * 
     */
-    public String getCircuitConnectionStatus() {
+    public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
     */
-    public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
+    public Optional<SubResourceResponse> expressRouteCircuitPeering() {
         return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
      * 
     */
-    public Optional<Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
+    public Optional<Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig() {
         return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
     */
-    public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
+    public Optional<SubResourceResponse> peerExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
     /**
      * The provisioning state of the express route circuit connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

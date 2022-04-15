@@ -21,7 +21,7 @@ public final class NFSMountConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="mountOptions")
       private final @Nullable String mountOptions;
 
-    public Optional<String> getMountOptions() {
+    public Optional<String> mountOptions() {
         return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
     }
 
@@ -32,14 +32,14 @@ public final class NFSMountConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="relativeMountPath", required=true)
       private final String relativeMountPath;
 
-    public String getRelativeMountPath() {
+    public String relativeMountPath() {
         return this.relativeMountPath;
     }
 
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

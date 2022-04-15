@@ -70,49 +70,49 @@ public final class GetVirtualApplianceSiteResult {
      * Address Prefix.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the virtual appliance site.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Office 365 Policy.
      * 
     */
-    public Optional<Office365PolicyPropertiesResponse> getO365Policy() {
+    public Optional<Office365PolicyPropertiesResponse> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Site type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

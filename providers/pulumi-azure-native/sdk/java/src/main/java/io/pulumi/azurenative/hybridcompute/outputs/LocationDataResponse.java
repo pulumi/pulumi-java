@@ -48,28 +48,28 @@ public final class LocationDataResponse {
      * The city or locality where the resource is located.
      * 
     */
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country or region where the resource is located
      * 
     */
-    public Optional<String> getCountryOrRegion() {
+    public Optional<String> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
      * The district, state, or province where the resource is located.
      * 
     */
-    public Optional<String> getDistrict() {
+    public Optional<String> district() {
         return Optional.ofNullable(this.district);
     }
     /**
      * A canonical name for the geographic or physical location.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -19,7 +19,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
     @Import(name="guestConfigurationAssignmentName", required=true)
       private final String guestConfigurationAssignmentName;
 
-    public String getGuestConfigurationAssignmentName() {
+    public String guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
     @Import(name="machineName", required=true)
       private final String machineName;
 
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

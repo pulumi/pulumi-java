@@ -30,7 +30,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentCount")
       private final @Nullable Integer agentCount;
 
-    public Optional<Integer> getAgentCount() {
+    public Optional<Integer> agentCount() {
         return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
     }
 
@@ -41,7 +41,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="agentVmSize")
       private final @Nullable String agentVmSize;
 
-    public Optional<String> getAgentVmSize() {
+    public Optional<String> agentVmSize() {
         return this.agentVmSize == null ? Optional.empty() : Optional.ofNullable(this.agentVmSize);
     }
 
@@ -52,7 +52,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="aksNetworkingConfiguration")
       private final @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
 
-    public Optional<AksNetworkingConfigurationResponse> getAksNetworkingConfiguration() {
+    public Optional<AksNetworkingConfigurationResponse> aksNetworkingConfiguration() {
         return this.aksNetworkingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aksNetworkingConfiguration);
     }
 
@@ -63,7 +63,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="clusterFqdn")
       private final @Nullable String clusterFqdn;
 
-    public Optional<String> getClusterFqdn() {
+    public Optional<String> clusterFqdn() {
         return this.clusterFqdn == null ? Optional.empty() : Optional.ofNullable(this.clusterFqdn);
     }
 
@@ -74,7 +74,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="clusterPurpose")
       private final @Nullable String clusterPurpose;
 
-    public Optional<String> getClusterPurpose() {
+    public Optional<String> clusterPurpose() {
         return this.clusterPurpose == null ? Optional.empty() : Optional.ofNullable(this.clusterPurpose);
     }
 
@@ -85,7 +85,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="sslConfiguration")
       private final @Nullable SslConfigurationResponse sslConfiguration;
 
-    public Optional<SslConfigurationResponse> getSslConfiguration() {
+    public Optional<SslConfigurationResponse> sslConfiguration() {
         return this.sslConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sslConfiguration);
     }
 
@@ -96,7 +96,7 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
     @Import(name="systemServices", required=true)
       private final List<SystemServiceResponse> systemServices;
 
-    public List<SystemServiceResponse> getSystemServices() {
+    public List<SystemServiceResponse> systemServices() {
         return this.systemServices;
     }
 

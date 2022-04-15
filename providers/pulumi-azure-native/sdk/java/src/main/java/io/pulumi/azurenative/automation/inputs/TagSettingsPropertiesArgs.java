@@ -29,7 +29,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="filterOperator")
       private final @Nullable Output<TagOperators> filterOperator;
 
-    public Output<TagOperators> getFilterOperator() {
+    public Output<TagOperators> filterOperator() {
         return this.filterOperator == null ? Codegen.empty() : this.filterOperator;
     }
 
@@ -40,7 +40,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,List<String>>> tags;
 
-    public Output<Map<String,List<String>>> getTags() {
+    public Output<Map<String,List<String>>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

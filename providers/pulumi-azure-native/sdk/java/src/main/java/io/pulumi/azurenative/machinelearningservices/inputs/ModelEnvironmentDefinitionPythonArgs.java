@@ -24,7 +24,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="baseCondaEnvironment")
       private final @Nullable Output<String> baseCondaEnvironment;
 
-    public Output<String> getBaseCondaEnvironment() {
+    public Output<String> baseCondaEnvironment() {
         return this.baseCondaEnvironment == null ? Codegen.empty() : this.baseCondaEnvironment;
     }
 
@@ -35,7 +35,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="condaDependencies")
       private final @Nullable Output<Object> condaDependencies;
 
-    public Output<Object> getCondaDependencies() {
+    public Output<Object> condaDependencies() {
         return this.condaDependencies == null ? Codegen.empty() : this.condaDependencies;
     }
 
@@ -46,7 +46,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="interpreterPath")
       private final @Nullable Output<String> interpreterPath;
 
-    public Output<String> getInterpreterPath() {
+    public Output<String> interpreterPath() {
         return this.interpreterPath == null ? Codegen.empty() : this.interpreterPath;
     }
 
@@ -57,7 +57,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="userManagedDependencies")
       private final @Nullable Output<Boolean> userManagedDependencies;
 
-    public Output<Boolean> getUserManagedDependencies() {
+    public Output<Boolean> userManagedDependencies() {
         return this.userManagedDependencies == null ? Codegen.empty() : this.userManagedDependencies;
     }
 

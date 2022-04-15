@@ -27,7 +27,7 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
@@ -38,7 +38,7 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;
 
-    public Output<Boolean> getIsValidated() {
+    public Output<Boolean> isValidated() {
         return this.isValidated == null ? Codegen.empty() : this.isValidated;
     }
 
@@ -60,7 +60,7 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

@@ -22,7 +22,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="customerSubscriptionName")
       private final @Nullable Output<String> customerSubscriptionName;
 
-    public Output<String> getCustomerSubscriptionName() {
+    public Output<String> customerSubscriptionName() {
         return this.customerSubscriptionName == null ? Codegen.empty() : this.customerSubscriptionName;
     }
 
@@ -33,7 +33,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="registrationName", required=true)
       private final Output<String> registrationName;
 
-    public Output<String> getRegistrationName() {
+    public Output<String> registrationName() {
         return this.registrationName;
     }
 
@@ -44,7 +44,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -55,7 +55,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

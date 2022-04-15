@@ -19,7 +19,7 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
 
-    public String getFirewallPolicyName() {
+    public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends io.pulumi.re
     @Import(name="ruleCollectionGroupName", required=true)
       private final String ruleCollectionGroupName;
 
-    public String getRuleCollectionGroupName() {
+    public String ruleCollectionGroupName() {
         return this.ruleCollectionGroupName;
     }
 

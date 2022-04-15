@@ -25,7 +25,7 @@ public final class LabelingJobInstructionsResponse extends io.pulumi.resources.I
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

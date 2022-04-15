@@ -28,7 +28,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="enablePowerBIService")
       private final @Nullable Output<Boolean> enablePowerBIService;
 
-    public Output<Boolean> getEnablePowerBIService() {
+    public Output<Boolean> enablePowerBIService() {
         return this.enablePowerBIService == null ? Codegen.empty() : this.enablePowerBIService;
     }
 
@@ -39,7 +39,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="firewallRules")
       private final @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
 
-    public Output<List<IPv4FirewallRuleArgs>> getFirewallRules() {
+    public Output<List<IPv4FirewallRuleArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 

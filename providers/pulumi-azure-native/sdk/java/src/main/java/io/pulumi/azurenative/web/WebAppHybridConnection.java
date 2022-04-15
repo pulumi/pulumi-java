@@ -40,7 +40,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The hostname of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -54,7 +54,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -68,7 +68,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +82,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The port of the endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -96,7 +96,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The ARM URI to the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> getRelayArmUri() {
+    public Output</* @Nullable */ String> relayArmUri() {
         return this.relayArmUri;
     }
     /**
@@ -110,7 +110,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> getRelayName() {
+    public Output</* @Nullable */ String> relayName() {
         return this.relayName;
     }
     /**
@@ -124,7 +124,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
      */
-    public Output</* @Nullable */ String> getSendKeyName() {
+    public Output</* @Nullable */ String> sendKeyName() {
         return this.sendKeyName;
     }
     /**
@@ -140,7 +140,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * normally, use the POST /listKeys API instead.
      * 
      */
-    public Output</* @Nullable */ String> getSendKeyValue() {
+    public Output</* @Nullable */ String> sendKeyValue() {
         return this.sendKeyValue;
     }
     /**
@@ -154,7 +154,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The name of the Service Bus namespace.
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusNamespace() {
+    public Output</* @Nullable */ String> serviceBusNamespace() {
         return this.serviceBusNamespace;
     }
     /**
@@ -168,7 +168,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusSuffix() {
+    public Output</* @Nullable */ String> serviceBusSuffix() {
         return this.serviceBusSuffix;
     }
     /**
@@ -182,7 +182,7 @@ public class WebAppHybridConnection extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

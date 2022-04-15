@@ -55,35 +55,35 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * Intended audience for the service principal.
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * AAD Authority URL which was used to request the token for the service principal.
      * 
     */
-    public Optional<String> getAuthority() {
+    public Optional<String> authority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

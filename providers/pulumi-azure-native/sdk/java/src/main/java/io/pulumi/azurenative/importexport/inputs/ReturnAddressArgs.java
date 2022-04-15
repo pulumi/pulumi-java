@@ -26,7 +26,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="city", required=true)
       private final Output<String> city;
 
-    public Output<String> getCity() {
+    public Output<String> city() {
         return this.city;
     }
 
@@ -37,7 +37,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="countryOrRegion", required=true)
       private final Output<String> countryOrRegion;
 
-    public Output<String> getCountryOrRegion() {
+    public Output<String> countryOrRegion() {
         return this.countryOrRegion;
     }
 
@@ -48,7 +48,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -59,7 +59,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 
@@ -70,7 +70,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postalCode", required=true)
       private final Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
+    public Output<String> postalCode() {
         return this.postalCode;
     }
 
@@ -81,7 +81,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipientName", required=true)
       private final Output<String> recipientName;
 
-    public Output<String> getRecipientName() {
+    public Output<String> recipientName() {
         return this.recipientName;
     }
 
@@ -92,7 +92,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stateOrProvince")
       private final @Nullable Output<String> stateOrProvince;
 
-    public Output<String> getStateOrProvince() {
+    public Output<String> stateOrProvince() {
         return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
     }
 
@@ -103,7 +103,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress1", required=true)
       private final Output<String> streetAddress1;
 
-    public Output<String> getStreetAddress1() {
+    public Output<String> streetAddress1() {
         return this.streetAddress1;
     }
 
@@ -114,7 +114,7 @@ public final class ReturnAddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streetAddress2")
       private final @Nullable Output<String> streetAddress2;
 
-    public Output<String> getStreetAddress2() {
+    public Output<String> streetAddress2() {
         return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
     }
 

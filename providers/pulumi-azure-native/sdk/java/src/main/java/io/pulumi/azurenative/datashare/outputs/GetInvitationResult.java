@@ -121,70 +121,70 @@ public final class GetInvitationResult {
      * The expiration date for the invitation and share subscription.
      * 
     */
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * unique invitation id
      * 
     */
-    public String getInvitationId() {
+    public String invitationId() {
         return this.invitationId;
     }
     /**
      * The status of the invitation.
      * 
     */
-    public String getInvitationStatus() {
+    public String invitationStatus() {
         return this.invitationStatus;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The time the recipient responded to the invitation.
      * 
     */
-    public String getRespondedAt() {
+    public String respondedAt() {
         return this.respondedAt;
     }
     /**
      * Gets the time at which the invitation was sent.
      * 
     */
-    public String getSentAt() {
+    public String sentAt() {
         return this.sentAt;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The target Azure AD Id. Can't be combined with email.
      * 
     */
-    public Optional<String> getTargetActiveDirectoryId() {
+    public Optional<String> targetActiveDirectoryId() {
         return Optional.ofNullable(this.targetActiveDirectoryId);
     }
     /**
      * The email the invitation is directed to.
      * 
     */
-    public Optional<String> getTargetEmail() {
+    public Optional<String> targetEmail() {
         return Optional.ofNullable(this.targetEmail);
     }
     /**
@@ -193,28 +193,28 @@ public final class GetInvitationResult {
      * invitations to specific users or applications in an AD tenant.
      * 
     */
-    public Optional<String> getTargetObjectId() {
+    public Optional<String> targetObjectId() {
         return Optional.ofNullable(this.targetObjectId);
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
      * 
     */
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

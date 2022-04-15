@@ -27,7 +27,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="convention")
       private final @Nullable Output<ForwardProxyConvention> convention;
 
-    public Output<ForwardProxyConvention> getConvention() {
+    public Output<ForwardProxyConvention> convention() {
         return this.convention == null ? Codegen.empty() : this.convention;
     }
 
@@ -38,7 +38,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customHostHeaderName")
       private final @Nullable Output<String> customHostHeaderName;
 
-    public Output<String> getCustomHostHeaderName() {
+    public Output<String> customHostHeaderName() {
         return this.customHostHeaderName == null ? Codegen.empty() : this.customHostHeaderName;
     }
 
@@ -49,7 +49,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customProtoHeaderName")
       private final @Nullable Output<String> customProtoHeaderName;
 
-    public Output<String> getCustomProtoHeaderName() {
+    public Output<String> customProtoHeaderName() {
         return this.customProtoHeaderName == null ? Codegen.empty() : this.customProtoHeaderName;
     }
 

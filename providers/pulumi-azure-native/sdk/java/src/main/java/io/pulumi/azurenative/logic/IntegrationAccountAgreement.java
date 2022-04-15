@@ -46,7 +46,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The agreement type.
      * 
      */
-    public Output<String> getAgreementType() {
+    public Output<String> agreementType() {
         return this.agreementType;
     }
     /**
@@ -60,7 +60,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -74,7 +74,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The agreement content.
      * 
      */
-    public Output<AgreementContentResponse> getContent() {
+    public Output<AgreementContentResponse> content() {
         return this.content;
     }
     /**
@@ -88,7 +88,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -102,7 +102,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The business identity of the guest partner.
      * 
      */
-    public Output<BusinessIdentityResponse> getGuestIdentity() {
+    public Output<BusinessIdentityResponse> guestIdentity() {
         return this.guestIdentity;
     }
     /**
@@ -116,7 +116,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The integration account partner that is set as guest partner for this agreement.
      * 
      */
-    public Output<String> getGuestPartner() {
+    public Output<String> guestPartner() {
         return this.guestPartner;
     }
     /**
@@ -130,7 +130,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The business identity of the host partner.
      * 
      */
-    public Output<BusinessIdentityResponse> getHostIdentity() {
+    public Output<BusinessIdentityResponse> hostIdentity() {
         return this.hostIdentity;
     }
     /**
@@ -144,7 +144,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The integration account partner that is set as host partner for this agreement.
      * 
      */
-    public Output<String> getHostPartner() {
+    public Output<String> hostPartner() {
         return this.hostPartner;
     }
     /**
@@ -158,7 +158,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -172,7 +172,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -186,7 +186,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -200,7 +200,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -214,7 +214,7 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

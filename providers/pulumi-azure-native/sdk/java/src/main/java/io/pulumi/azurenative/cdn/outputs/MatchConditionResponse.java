@@ -64,42 +64,42 @@ public final class MatchConditionResponse {
      * List of possible match values.
      * 
     */
-    public List<String> getMatchValue() {
+    public List<String> matchValue() {
         return this.matchValue;
     }
     /**
      * Match variable to compare against.
      * 
     */
-    public String getMatchVariable() {
+    public String matchVariable() {
         return this.matchVariable;
     }
     /**
      * Describes if the result of this condition should be negated.
      * 
     */
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
      * Describes operator to be matched
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
     */
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms.
      * 
     */
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

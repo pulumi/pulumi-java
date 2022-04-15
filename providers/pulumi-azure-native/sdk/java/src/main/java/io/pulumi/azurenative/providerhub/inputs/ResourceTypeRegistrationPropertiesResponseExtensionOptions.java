@@ -17,7 +17,7 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions ex
     @Import(name="resourceCreationBegin")
       private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
-    public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> getResourceCreationBegin() {
+    public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> resourceCreationBegin() {
         return this.resourceCreationBegin == null ? Optional.empty() : Optional.ofNullable(this.resourceCreationBegin);
     }
 

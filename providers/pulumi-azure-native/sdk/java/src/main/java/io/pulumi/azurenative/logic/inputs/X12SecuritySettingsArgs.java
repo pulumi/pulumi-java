@@ -26,7 +26,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="authorizationQualifier", required=true)
       private final Output<String> authorizationQualifier;
 
-    public Output<String> getAuthorizationQualifier() {
+    public Output<String> authorizationQualifier() {
         return this.authorizationQualifier;
     }
 
@@ -37,7 +37,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="authorizationValue")
       private final @Nullable Output<String> authorizationValue;
 
-    public Output<String> getAuthorizationValue() {
+    public Output<String> authorizationValue() {
         return this.authorizationValue == null ? Codegen.empty() : this.authorizationValue;
     }
 
@@ -48,7 +48,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="passwordValue")
       private final @Nullable Output<String> passwordValue;
 
-    public Output<String> getPasswordValue() {
+    public Output<String> passwordValue() {
         return this.passwordValue == null ? Codegen.empty() : this.passwordValue;
     }
 
@@ -59,7 +59,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="securityQualifier", required=true)
       private final Output<String> securityQualifier;
 
-    public Output<String> getSecurityQualifier() {
+    public Output<String> securityQualifier() {
         return this.securityQualifier;
     }
 

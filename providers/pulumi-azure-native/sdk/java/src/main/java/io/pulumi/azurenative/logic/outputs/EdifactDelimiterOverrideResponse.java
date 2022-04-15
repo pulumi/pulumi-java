@@ -105,84 +105,84 @@ public final class EdifactDelimiterOverrideResponse {
      * The component separator.
      * 
     */
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
     */
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The decimal point indicator.
      * 
     */
-    public String getDecimalPointIndicator() {
+    public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
      * The message association assigned code.
      * 
     */
-    public Optional<String> getMessageAssociationAssignedCode() {
+    public Optional<String> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
     /**
      * The message id.
      * 
     */
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * The message release.
      * 
     */
-    public Optional<String> getMessageRelease() {
+    public Optional<String> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
     /**
      * The message version.
      * 
     */
-    public Optional<String> getMessageVersion() {
+    public Optional<String> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
     /**
      * The release indicator.
      * 
     */
-    public Integer getReleaseIndicator() {
+    public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
     /**
      * The repetition separator.
      * 
     */
-    public Integer getRepetitionSeparator() {
+    public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
      * The segment terminator.
      * 
     */
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The segment terminator suffix.
      * 
     */
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
      * The target namespace on which this delimiter settings has to be applied.
      * 
     */
-    public Optional<String> getTargetNamespace() {
+    public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
 
