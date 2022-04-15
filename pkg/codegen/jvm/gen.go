@@ -562,17 +562,15 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	return nil
 }
-
+func (pt *plainType) isJumbo() bool {
+	return len(pt.properties) > 250
+}
 func (pt *plainType) genInputType(ctx *classFileContext) error {
 	w := ctx.writer
 	fprintf(w, "\n")
 
 	// TODO: Converter support for jumbo constructors [pulumi/pulumi-jvm#390]
 	props := pt.properties
-	isJumbo := false
-	if len(props) > 250 {
-		isJumbo = true
-	}
 
 	// Open the class.
 	if pt.comment != "" {
@@ -588,7 +586,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Declare each input property.
 	for _, p := range props {
-		if isJumbo {
+		if pt.isJumbo() {
 			if err := pt.genInputProperty(ctx, p, false); err != nil {
 				return err
 			}
@@ -601,7 +599,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, "\n")
 	}
 
-	if !isJumbo {
+	if !pt.isJumbo() {
 		// If can construct all args constructor
 		// Generate the constructor.
 		fprintf(w, "    public %s(", pt.name)
@@ -765,7 +763,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		Indent:     "    ",
 		Name:       "Builder",
 		IsFinal:    true,
-		IsJumbo:    isJumbo,
+		IsJumbo:    pt.isJumbo(),
 		Fields:     builderFields,
 		Setters:    builderSetters,
 		ResultType: pt.name,
@@ -786,11 +784,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	const indent = "    "
 
 	props := pt.properties
-
-	isJumbo := false
-	if len(props) > 250 {
-		isJumbo = true
-	}
 
 	// Open the class and annotate it appropriately.
 	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
@@ -822,7 +815,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			fprintf(w, "     */\n")
 		}
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
-		if isJumbo {
+		if pt.isJumbo() {
 			fprintf(w, "    private %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
 		} else {
 			fprintf(w, "    private final %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
@@ -832,7 +825,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		fprintf(w, "\n")
 	}
 
-	if !isJumbo {
+	if !pt.isJumbo() {
 		// If can construct all args constructor
 		// Generate an appropriately-attributed constructor that will set this types' fields.
 		fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
@@ -1005,7 +998,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		Indent:     indent,
 		Name:       "Builder",
 		IsFinal:    true,
-		IsJumbo:    isJumbo,
+		IsJumbo:    pt.isJumbo(),
 		Fields:     builderFields,
 		Setters:    builderSetters,
 		ResultType: pt.name,
